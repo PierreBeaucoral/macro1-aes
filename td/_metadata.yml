@@ -1,0 +1,25 @@
+# Métadonnées communes à tous les dossiers de TD
+author:
+  - name: "Pierre Beaucoral"
+    affiliation: "ATER, Université Clermont Auvergne · L2 AES (Semestre 1)"
+date: last-modified
+date-format: "MMMM YYYY"
+lang: fr
+
+# Double format : page web (html) + PDF imprimable/cliquable (typst, intégré à Quarto,
+# aucune installation LaTeX requise). Quarto affiche automatiquement un lien de
+# téléchargement du PDF dans la marge de la page web.
+format:
+  html:
+    toc: true
+  typst:
+    papersize: a4
+    margin:
+      x: 2cm
+      y: 2cm
+    mainfont: "Helvetica"
+    fontsize: 11pt
+    section-numbering: "1.1.a"
+
+# Affiche le lien « Autres formats » (PDF) sur la page HTML
+format-links: [typst]

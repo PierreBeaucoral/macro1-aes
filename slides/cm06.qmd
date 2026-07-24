@@ -1,0 +1,532 @@
+---
+title: "CM 6 : Le chômage vu par Keynes : demande effective et loi d'Okun"
+subtitle: "Chapitre II, Partie 2, §II.1-4 : De la critique du néoclassique à la relation croissance-chômage"
+description: "Critique keynésienne du marché du travail, demande effective, chômage involontaire et loi d'Okun."
+---
+
+## Plan
+
+1. Une autre lecture du marché du travail : la critique keynésienne
+2. La demande effective et le chômage involontaire
+3. Le salaire : un coût pour l'entreprise, un revenu pour le ménage
+4. Implications de politique économique
+5. La loi d'Okun : croissance et chômage
+
+::: {.source}
+Chapitre II, Partie 2, §II.1-4 : d'après les cours de M. Ouedraogo (2025-2026).
+:::
+
+## Objectifs
+
+À l'issue de cette séance, vous saurez :
+
+- Expliquer pourquoi Keynes rejette la lecture néoclassique du marché du travail (offre, demande, ajustement)
+- Définir la **demande effective** et son rôle dans les décisions d'embauche
+- Distinguer chômage **volontaire** (néoclassique) et chômage **involontaire** (keynésien)
+- Justifier pourquoi baisser les salaires n'est pas une solution au chômage chez Keynes
+- Énoncer et lire graphiquement la **loi d'Okun**
+
+## Rappel du CM précédent
+
+::: {.cle}
+Pour les néoclassiques (CM 5), le chômage observé est **volontaire** : il résulte d'un salaire réel maintenu au-dessus du salaire d'équilibre (SMIC, conventions collectives, rigidités). La solution est alors de **baisser le coût du travail**.
+:::
+
+. . .
+
+Keynes conteste ce diagnostic sur deux plans : la **nature** de l'offre et de la demande de travail, et le **niveau d'analyse** (macroéconomique, non partiel).
+
+## Keynes change le niveau d'analyse : du marché au système économique
+
+::: {.incremental}
+- L'approche néoclassique raisonne en **équilibre partiel** : elle isole le marché du travail des autres marchés.
+- L'analyse keynésienne adopte une **vision macroéconomique** : une variation du salaire agit sur l'ensemble de l'économie (via la consommation), pas seulement sur l'embauche.
+:::
+
+. . .
+
+::: {.def}
+**Conséquence.** Le marché du travail n'est pas autonome : son équilibre ne peut résulter que d'un **équilibre général** portant sur l'ensemble des marchés (biens et services, capitaux, monnaie, travail).
+:::
+
+## Première critique : l'offre de travail pourrait être décroissante
+
+::: {.incremental}
+- Hypothèse néoclassique : l'offre de travail $L^s$ croît avec le salaire réel $w$.
+- Pour Keynes, la plupart des salariés n'ont **que leur travail** comme source de revenu.
+- Une **baisse** du salaire peut donc pousser les ménages à **offrir davantage** de travail pour compenser la perte de revenu, et non moins.
+:::
+
+. . .
+
+::: {.cle}
+Si l'offre de travail est décroissante avec $w$, une baisse des salaires **accroît** l'offre de travail, et donc, toutes choses égales par ailleurs, **aggrave** le chômage au lieu de le résorber.
+:::
+
+## Seconde critique : à court terme, l'offre de travail est rigide
+
+::: {.incremental}
+- Les rigidités nominales (contrats, conventions collectives) rendent l'offre de travail largement **inélastique** au salaire à court terme.
+- L'ajustement ne se fait donc pas par le salaire, mais par le **volume d'emploi** que les entreprises décident d'offrir.
+- Conséquence : une baisse des salaires ne relance pas l'embauche : elle ne fait qu'accroître le nombre de travailleurs disponibles au salaire en vigueur.
+:::
+
+## Troisième critique : la demande de travail est une demande dérivée
+
+::: {.columns}
+::: {.column width="50%"}
+**Lecture néoclassique**
+
+La productivité marginale et le coût du travail déterminent l'offre des entreprises, qui maximise leur profit. L'offre trouve toujours sa demande (loi des débouchés de Say).
+:::
+
+::: {.column width="50%"}
+**Lecture keynésienne**
+
+La demande de travail $L^d$ n'est qu'une **demande dérivée** : elle dépend des débouchés que les entreprises **anticipent** sur le marché des biens et services, pas d'un pur calcul technique.
+:::
+:::
+
+## La demande effective gouverne l'embauche, pas le coût du travail
+
+::: {.def}
+**Demande effective.** Demande anticipée par les entreprises sur le marché des biens et services (consommation des ménages + investissement des entreprises), qui détermine leurs décisions de production et donc d'embauche.
+:::
+
+. . .
+
+Ce n'est pas le coût du travail mais l'état de la **conjoncture économique**, via la demande effective, qui gouverne les décisions d'embauche des entreprises.
+
+## La demande effective enclenche toute la chaîne keynésienne
+
+```{mermaid}
+%%| fig-cap: "La consommation des ménages et l'investissement des entreprises forment la demande effective anticipée, qui détermine la production puis l'embauche : c'est cette chaîne, et non le coût du travail, qui gouverne l'emploi chez Keynes."
+flowchart LR
+    A[Consommation des menages] --> C[Demande effective anticipee]
+    B[Investissement des entreprises] --> C
+    C --> D[Decision de production]
+    D --> E[Decision d embauche]
+    E --> F[Emploi ou chomage involontaire]
+```
+
+. . .
+
+::: {.cle}
+Deux décisions indépendantes, la consommation des ménages et l'investissement des entreprises, déterminent, via la demande effective anticipée, le niveau de production et donc d'embauche.
+:::
+
+## Épargne et investissement : deux décisions indépendantes
+
+::: {.incremental}
+- Chez les néoclassiques, l'épargne se transforme automatiquement en investissement, via l'ajustement du taux d'intérêt (marché des fonds prêtables).
+- Chez Keynes :
+  - la décision d'**épargne** des ménages dépend de leur **revenu courant** (loi psychologique fondamentale : la consommation croît avec le revenu, mais moins vite que lui) ;
+  - la décision d'**investissement** des entreprises dépend de leurs **anticipations de demande**.
+- Ces deux décisions sont prises **indépendamment** : rien ne garantit qu'elles coïncident.
+:::
+
+## Un équilibre de sous-emploi est possible
+
+::: {.cle}
+Si la demande effective anticipée est faible, l'investissement et l'embauche le sont aussi. L'économie peut alors se stabiliser dans un **équilibre de sous-emploi** : offre et demande de biens s'égalisent, mais à un niveau de production **trop faible** pour assurer le plein emploi.
+:::
+
+. . .
+
+Aucun mécanisme de marché, ni la flexibilité des prix, ni celle des salaires, ne ramène spontanément l'économie au plein emploi.
+
+## Le chômage involontaire : vouloir travailler sans trouver d'emploi
+
+::: {.def}
+**Chômage involontaire.** Situation d'individus qui souhaitent travailler au salaire en vigueur sur le marché du travail, mais qui, faute d'embauches suffisantes de la part des entreprises, ne trouvent pas d'emploi.
+:::
+
+. . .
+
+À la différence du chômage volontaire néoclassique (refus de travailler au salaire d'équilibre), le chômage involontaire résulte d'une **insuffisance de la demande globale**, non d'un dysfonctionnement du marché du travail lui-même.
+
+## À retenir : quatre ruptures avec l'analyse néoclassique
+
+::: {.cle}
+::: {.incremental}
+1. Le marché livré à lui-même n'aboutit pas nécessairement au plein emploi : un équilibre durable de sous-emploi est possible $\Rightarrow$ l'intervention de l'État est légitime.
+2. Le marché du travail n'est pas autonome : son équilibre dépend de l'équilibre général de l'économie.
+3. Les anticipations et l'incertitude jouent un rôle central (contre l'information parfaite néoclassique).
+4. La monnaie n'est pas neutre : la préférence pour la liquidité invalide la loi des débouchés de Say.
+:::
+:::
+
+## Le salaire est à la fois un coût et un revenu
+
+::: {.columns}
+::: {.column width="50%"}
+**Pour l'entreprise**
+
+Le salaire est un **coût de production** : c'est la seule dimension retenue par l'analyse néoclassique.
+:::
+
+::: {.column width="50%"}
+**Pour le ménage**
+
+Le salaire est aussi un **revenu**, source de consommation, donc, in fine, une source de **demande** adressée aux entreprises.
+:::
+:::
+
+. . .
+
+::: {.cle}
+En ignorant la seconde dimension, la politique de baisse des salaires se retourne contre elle-même : elle réduit le coût du travail, mais aussi la demande effective qui détermine l'embauche.
+:::
+
+## Baisser les salaires ne relance pas l'emploi chez Keynes
+
+Contrairement à la recommandation néoclassique, une baisse générale des salaires :
+
+::: {.incremental}
+- déprime la demande effective (le salaire est aussi un revenu) ;
+- réduit donc le niveau global de production ;
+- réduit en retour la demande de travail elle-même.
+:::
+
+. . .
+
+::: {.cle}
+La baisse des salaires ne résout pas le chômage involontaire : elle peut l'aggraver, dans une logique de spirale déflationniste (crise des années 1930).
+:::
+
+## Baisser les salaires enclenche une spirale, pas une reprise
+
+```{mermaid}
+%%| fig-cap: "Une baisse des salaires déprime le revenu des ménages, donc la demande effective, donc la production et l'embauche - qui alimente à son tour de nouvelles pressions à la baisse sur les salaires : le cercle vicieux keynésien, à l'opposé du mécanisme néoclassique attendu."
+flowchart LR
+    A[Baisse des salaires] --> B[Baisse du revenu des menages]
+    B --> C[Baisse de la demande effective]
+    C --> D[Baisse de la production]
+    D --> E[Baisse de l embauche]
+    E --> A
+```
+
+. . .
+
+::: {.cle}
+La flèche de retour illustre le caractère **auto-entretenu** de la spirale déflationniste : sans relance de la demande, rien ne l'arrête spontanément.
+:::
+
+## Il faut relancer la demande effective, pas le coût du travail
+
+Pour sortir l'économie de l'équilibre de sous-emploi, il faut des **politiques budgétaires et monétaires expansives** :
+
+::: {.incremental}
+- baisse des taux directeurs par la banque centrale ;
+- investissement public ;
+- politiques fiscales et sociales redistributives ciblant les ménages à forte **propension marginale à consommer**.
+:::
+
+::: {.source}
+D'après Chapitre II, Partie 2, §II.3.b : implications de politique économique.
+:::
+
+## Le chômage suit le cycle : de la théorie à l'observation
+
+::: {.incremental}
+- La critique keynésienne prédit un chômage lié à la **conjoncture** : il baisse en expansion, augmente en récession.
+- Cette prédiction se vérifie empiriquement depuis la Seconde Guerre mondiale dans la plupart des économies développées.
+- Arthur Okun (1962) formalise cette relation pour les États-Unis.
+:::
+
+## Le chômage grimpe nettement lors des récessions, en France comme aux États-Unis {.smaller}
+
+```{r}
+#| label: fig-cycle-chomage-cm06
+#| fig-cap: "Taux de chômage annuel et croissance du PIB réel, France et États-Unis, 2000-2023 (bandes grises : récessions de 2008-2009 et 2020). Le chômage se retourne nettement à la hausse chaque fois que la croissance devient négative, et sa hausse est plus brutale et rapide aux États-Unis, où l'ajustement de l'emploi est plus flexible. Sources : Bureau of Labor Statistics (États-Unis) ; Banque mondiale, WDI, indicateurs SL.UEM.TOTL.NE.ZS (chômage, estimation nationale) et NY.GDP.MKTP.KD.ZG (croissance du PIB réel)."
+#| fig-width: 7.5
+#| fig-height: 5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(patchwork)
+
+# Données figées : taux de chômage annuel (%, sens BIT/harmonise) et
+# croissance du PIB reel (%), Etats-Unis et France. Base 1990 conservee
+# pour les Etats-Unis afin de permettre le calcul de la variation du
+# chomage des 1991. Pour la France, la serie de chomage suit exactement
+# la sous-serie canonique Banque mondiale (WDI, SL.UEM.TOTL.NE.ZS),
+# disponible a partir de 1991 : la fenetre France demarre donc en 1991
+# (33 valeurs), une annee plus tard que les Etats-Unis. Vecteurs
+# reutilises par le nuage d'Okun, diapo "Le nuage d'Okun", plus loin dans
+# ce fichier : memes vecteurs, memes sources, un seul jeu de donnees pour
+# tout le CM.
+annee_us <- 1990:2023
+croissance_us <- c(1.9, -0.1, 3.5, 2.8, 4.0, 2.7, 3.8, 4.5, 4.5, 4.8,
+                    4.1, 1.0, 1.7, 2.9, 3.8, 3.5, 2.9, 1.9, -0.1, -2.5,
+                    2.6, 1.6, 2.3, 2.1, 2.5, 3.1, 1.7, 2.3, 3.0, 2.5,
+                    -2.8, 5.9, 2.1, 2.5)
+chomage_us <- c(5.6, 6.8, 7.5, 6.9, 6.1, 5.6, 5.4, 4.9, 4.5, 4.2,
+                4.0, 4.7, 5.8, 6.0, 5.5, 5.1, 4.6, 4.6, 5.8, 9.3,
+                9.6, 8.9, 8.1, 7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7,
+                8.1, 5.3, 3.6, 3.6)
+
+annee_fr <- 1991:2023
+croissance_fr <- c(1.2, 1.5, -0.4, 2.4, 2.3, 1.4, 2.5, 3.5, 3.4,
+                    4.1, 1.9, 1.1, 1.0, 2.9, 1.9, 2.7, 2.5, 0.4, -2.9,
+                    2.0, 2.4, 0.2, 0.8, 1.0, 1.1, 0.9, 2.1, 1.7, 1.8,
+                    -7.5, 6.9, 2.6, 0.9)
+# Chômage France : sous-série canonique Banque mondiale (WDI,
+# SL.UEM.TOTL.NE.ZS, estimation nationale), 1991-2023.
+chomage_fr <- c(9.1, 10.2, 11.3, 12.6, 11.8, 12.4, 12.6, 12.1, 12.0,
+                10.2, 8.6, 8.7, 8.3, 8.9, 8.9, 8.8, 8.0, 7.4, 9.1,
+                9.3, 9.2, 9.8, 9.9, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
+                8.0, 7.9, 7.3, 7.3)
+
+# Sous-échantillon 2000-2023 pour la lecture "cycle" de cette diapo.
+# Indices calcules separement par pays : les fenetres annee_us (1990-2023)
+# et annee_fr (1991-2023) n'ont plus la meme longueur, un indice booleen
+# unique base sur annee_us desalignerait la France d'une position.
+idx_2000_us <- annee_us >= 2000
+idx_2000_fr <- annee_fr >= 2000
+df_chomage <- data.frame(
+  annee   = c(annee_us[idx_2000_us], annee_fr[idx_2000_fr]),
+  pays    = rep(c("États-Unis", "France"), times = c(sum(idx_2000_us), sum(idx_2000_fr))),
+  chomage = c(chomage_us[idx_2000_us], chomage_fr[idx_2000_fr])
+)
+df_chomage$pays <- factor(df_chomage$pays, levels = c("États-Unis", "France"))
+
+df_croissance <- data.frame(
+  annee      = c(annee_us[idx_2000_us], annee_fr[idx_2000_fr]),
+  pays       = rep(c("États-Unis", "France"), times = c(sum(idx_2000_us), sum(idx_2000_fr))),
+  croissance = c(croissance_us[idx_2000_us], croissance_fr[idx_2000_fr])
+)
+df_croissance$pays <- factor(df_croissance$pays, levels = c("États-Unis", "France"))
+
+recessions <- data.frame(debut = c(2008, 2020), fin = c(2009, 2020))
+
+p_chomage <- ggplot() +
+  geom_rect(data = recessions, aes(xmin = debut - .5, xmax = fin + .5, ymin = -Inf, ymax = Inf),
+            fill = "grey55", alpha = .15) +
+  geom_line(data = df_chomage, aes(x = annee, y = chomage, color = pays), linewidth = 1) +
+  geom_point(data = df_chomage, aes(x = annee, y = chomage, color = pays), size = 1.6) +
+  scale_color_manual(values = c("États-Unis" = macro_pal[["bleu2"]], "France" = macro_pal[["rouge"]]), name = NULL) +
+  scale_x_continuous(breaks = seq(2000, 2023, 4), limits = c(1999.3, 2023.7)) +
+  scale_y_continuous(limits = c(0, 11), breaks = seq(0, 10, 2)) +
+  labs(x = NULL, y = "Taux de chômage (%)") +
+  theme_macro() +
+  theme(axis.text.x = element_blank(), legend.position = "none",
+        plot.margin = margin(6, 10, 12, 6))
+
+p_croissance <- ggplot() +
+  geom_rect(data = recessions, aes(xmin = debut - .5, xmax = fin + .5, ymin = -Inf, ymax = Inf),
+            fill = "grey55", alpha = .15) +
+  geom_hline(yintercept = 0, color = "grey60", linewidth = .4) +
+  geom_col(data = df_croissance, aes(x = annee, y = croissance, fill = pays),
+           position = position_dodge(width = .7), width = .6) +
+  scale_fill_manual(values = c("États-Unis" = macro_pal[["bleu2"]], "France" = macro_pal[["rouge"]]), name = NULL) +
+  scale_x_continuous(breaks = seq(2000, 2023, 4), limits = c(1999.3, 2023.7)) +
+  labs(x = "Année", y = "Croissance du PIB (%)") +
+  theme_macro() +
+  theme(legend.position = "bottom", axis.text.x = element_text(angle = 0),
+        plot.margin = margin(12, 10, 6, 6))
+
+p_chomage / p_croissance + plot_layout(heights = c(2, 1.4))
+```
+
+## La loi d'Okun : une relation empirique croissance-chômage
+
+::: {.def}
+**Loi d'Okun.** Relation empirique de corrélation négative entre le taux de croissance économique et la variation du taux de chômage.
+$$
+\Delta u = -\beta\,(g - \bar g)
+$$
+où $u$ est le taux de chômage, $g$ le taux de croissance du PIB réel, $\bar g$ le taux de croissance nécessaire pour stabiliser le chômage, et $\beta > 0$ le **coefficient d'Okun**.
+:::
+
+## Le nuage d'Okun : voir la relation avant d'en lire la pente {.smaller}
+
+Cliquez pour faire apparaître le nuage, puis la droite de régression, puis les années de récession.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-okun-nuage-cm06-1
+#| fig-width: 7
+#| fig-height: 4.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Reutilise les vecteurs annee_us/croissance_us/chomage_us et
+# annee_fr/croissance_fr/chomage_fr deja definis dans la diapo "Le chomage
+# grimpe nettement lors des recessions" (memes donnees, memes sources :
+# BLS pour les Etats-Unis, Banque mondiale WDI SL.UEM.TOTL.NE.ZS pour la
+# France). La variation annuelle du chomage necessite une annee de base,
+# d'ou le calcul par diff() : la serie Etats-Unis demarre en 1990, ce qui
+# donne des points a partir de 1991 ; la serie France (canonique WDI)
+# demarre en 1991, ce qui donne des points a partir de 1992 seulement.
+construire_okun <- function(pays, annee, croissance, chomage) {
+  data.frame(
+    pays       = pays,
+    annee      = annee[-1],
+    croissance = croissance[-1],
+    delta_u    = diff(chomage)
+  )
+}
+
+df_okun_nuage <- rbind(
+  construire_okun("États-Unis", annee_us, croissance_us, chomage_us),
+  construire_okun("France",     annee_fr, croissance_fr, chomage_fr)
+)
+df_okun_nuage$pays      <- factor(df_okun_nuage$pays, levels = c("États-Unis", "France"))
+df_okun_nuage$recession <- df_okun_nuage$croissance < 0
+
+# Construit le nuage etape par etape : etape 1 = points bruts (une seule
+# couleur) ; etape 2 = ajoute la droite de regression lineaire (pente =
+# -coefficient d'Okun) ; etape 3 = colore les annees de recession
+# (croissance negative) pour montrer les points a fort effet de levier.
+plot_okun_nuage <- function(etape) {
+  p <- ggplot(df_okun_nuage, aes(x = croissance, y = delta_u)) +
+    geom_hline(yintercept = 0, color = "grey75", linewidth = .4) +
+    geom_vline(xintercept = 0, color = "grey75", linewidth = .4)
+
+  if (etape >= 3) {
+    p <- p +
+      geom_point(aes(color = recession), size = 2.4, alpha = .9) +
+      scale_color_manual(values = c(`FALSE` = macro_pal[["bleu2"]], `TRUE` = macro_pal[["rouge"]]),
+                          labels = c(`FALSE` = "Expansion", `TRUE` = "Récession (croissance < 0)"),
+                          name = NULL)
+  } else {
+    p <- p + geom_point(color = macro_pal[["bleu"]], size = 2.4, alpha = .8)
+  }
+
+  if (etape >= 2) {
+    p <- p + geom_smooth(method = "lm", se = FALSE, color = macro_pal[["or"]], linewidth = 1)
+  }
+
+  p +
+    facet_wrap(~pays) +
+    scale_x_continuous(limits = c(-9, 7.5), breaks = seq(-8, 6, 2)) +
+    scale_y_continuous(limits = c(-3.4, 4.8), breaks = seq(-3, 4, 1)) +
+    labs(x = "Croissance du PIB réel (%, annuelle)",
+         y = "Variation du taux de chômage (points)") +
+    theme_macro() +
+    theme(strip.text = element_text(face = "bold", color = "#1f4e79"))
+}
+
+plot_okun_nuage(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-okun-nuage-cm06-2
+#| fig-width: 7
+#| fig-height: 4.6
+plot_okun_nuage(2)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-okun-nuage-cm06-3
+#| fig-width: 7
+#| fig-height: 4.6
+plot_okun_nuage(3)
+```
+:::
+
+:::
+
+::: {.source}
+Chaque point est une année : 1991-2023 pour les États-Unis, 1992-2023 pour la France (la variation du taux de chômage nécessite une année de base, disponible un an plus tard pour la France). Croissance du PIB réel en abscisse, variation du taux de chômage en ordonnée. La pente de la droite (en or) est une estimation du coefficient d'Okun négatif ($-\beta$) : nettement plus raide aux États-Unis qu'en France. Sources : Bureau of Labor Statistics (États-Unis) ; Banque mondiale, WDI, indicateurs SL.UEM.TOTL.NE.ZS (chômage, estimation nationale) et NY.GDP.MKTP.KD.ZG (croissance du PIB réel).
+:::
+
+## Le coefficient d'Okun n'est pas le même partout : les chiffres réels
+
+```{r}
+#| label: fig-okun-cm06
+#| fig-cap: "Le coefficient d'Okun (valeur absolue, |β|) pour cinq pays sur deux sous-périodes, 1961-1980 et 1981-2016 : les économies à contrats plus flexibles (États-Unis, Royaume-Uni) ajustent davantage l'emploi. Source : Blanchard et Cohen (2017), *Macroéconomie*, tableau des coefficients d'Okun par pays (repris par CORE, *The Economy*, 2018)."
+#| fig-width: 6.5
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+df_okun <- data.frame(
+  pays = factor(rep(c("États-Unis", "France", "Royaume-Uni", "Allemagne", "Japon"), each = 2),
+                levels = c("États-Unis", "France", "Royaume-Uni", "Allemagne", "Japon")),
+  periode = factor(rep(c("1961-1980", "1981-2016"), 5), levels = c("1961-1980", "1981-2016")),
+  coefficient = c(0.38, 0.42,
+                  0.13, 0.28,
+                  0.12, 0.37,
+                  0.20, 0.20,
+                  0.02, 0.07)
+)
+
+ggplot(df_okun, aes(x = pays, y = coefficient, fill = periode)) +
+  geom_col(position = position_dodge(width = 0.7), width = 0.6) +
+  scale_fill_manual(values = c("1961-1980" = macro_pal[["bleu2"]], "1981-2016" = macro_pal[["rouge"]])) +
+  labs(x = NULL, y = "Coefficient d'Okun (|β|)") +
+  theme_macro() +
+  theme(plot.margin = margin(14, 10, 6, 6))
+```
+
+::: {.source}
+Blanchard et Cohen (2017), *Macroéconomie* : coefficients d'Okun estimés par pays et sous-période, 1961-1980 et 1981-2016 (repris par CORE, 2018).
+:::
+
+## Aux États-Unis, un point de croissance en plus réduit le chômage d'environ 0,38 point
+
+::: {.incremental}
+- Sur la période 1961-2013, une hausse de 1 point du taux de croissance du PIB réel est associée en moyenne à une **baisse d'environ 0,38 point** du taux de chômage ($\beta \approx 0{,}38$).
+- Ce coefficient mesure la **sensibilité** du chômage aux fluctuations de l'activité.
+:::
+
+::: {.source}
+D'après Blanchard et Cohen (2017), Chapitre II, Partie 2, §II.4.
+:::
+
+## Le coefficient d'Okun dépend des institutions du marché du travail
+
+::: {.cle}
+Le coefficient d'Okun n'est pas universel : il dépend de la façon dont les entreprises **ajustent l'emploi** aux variations de la production, donc de la structure des économies (flexibilité des contrats, législation sur l'embauche et le licenciement).
+:::
+
+. . .
+
+::: {.incremental}
+- Une économie où les contrats sont très flexibles ajuste rapidement l'emploi $\Rightarrow$ coefficient d'Okun plus élevé.
+- Une économie où l'emploi est plus protégé amortit les chocs de production sur l'emploi $\Rightarrow$ coefficient d'Okun plus faible.
+- Cette hétérogénéité entre pays sera approfondie avec le modèle **WS-PS** (CM 8).
+:::
+
+## Rendez-vous en TD 6
+
+::: {.callout-note}
+## Pour aller plus loin
+La séance de **TD 6** reprend la critique keynésienne et la loi d'Okun avec des données réelles par pays, et propose la **correction du CC1** (évalué en séance 4).
+:::
+
+. . .
+
+Préparez vos questions sur la demande effective et le calcul du coefficient d'Okun avant la séance.
+
+## À retenir
+
+::: {.cle}
+::: {.incremental}
+- Keynes raisonne en **équilibre général** : le marché du travail n'est pas autonome.
+- La **demande effective**, pas le coût du travail, détermine l'embauche.
+- Un **équilibre de sous-emploi** est possible ; le chômage qui en résulte est **involontaire**.
+- Le salaire est à la fois un **coût** (entreprise) et un **revenu** (ménage) : baisser les salaires déprime la demande effective.
+- La politique adaptée est une **relance budgétaire et monétaire**, pas une baisse du coût du travail.
+- La **loi d'Okun** ($\Delta u = -\beta(g - \bar g)$) relie empiriquement croissance et variation du chômage.
+:::
+:::
+
+## Pour la prochaine fois
+
+::: {.incremental}
+- Relire §II.1-4 du Chapitre II, Partie 2 (résumé : `cours/chap2.qmd`)
+- Préparer le **TD 6** : exercices sur la critique keynésienne et le calcul du coefficient d'Okun, et correction du **CC1**
+- CM 7 : la **courbe de Phillips**, du compromis inflation-chômage au NAIRU et aux anticipations rationnelles
+:::
+
+::: {.source}
+Sources : Chapitre II, Partie 2, §II.1-4 (Ouedraogo, 2025-26) ; Blanchard & Cohen (2017), *Macroéconomie*.
+:::

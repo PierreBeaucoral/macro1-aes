@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Pierre Beaucoral">
+  <title>Macroéconomie 1 : Les Politiques Économiques – CM 1 : Rappels, faits marquants, horizons temporels</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8728e8b7a3650ae65bab8afcc05e5e8e.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">CM 1 : Rappels, faits marquants, horizons temporels</h1>
+  <p class="subtitle">Chapitre I, §1-3 : Mesurer et situer la croissance économique</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Pierre Beaucoral 
+</div>
+        <p class="quarto-title-affiliation">
+            L2 AES : Semestre 1
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="plan-de-la-séance" class="slide level2 smaller">
+<h2>Plan de la séance</h2>
+<div class="cle">
+<ol type="1">
+<li>Rappels sur le PIB (nominal/réel, croissance, cycles)</li>
+<li>Cinq faits marquants de l’histoire de la croissance</li>
+<li>Les trois horizons temporels de la macroéconomie (CT/MT/LT)</li>
+</ol>
+</div>
+<p>Aujourd’hui, on pose les fondations mesurables du cours : comment évalue-t-on la richesse produite, que nous apprend l’histoire longue de la croissance, et à quel horizon se situe-t-on quand on parle de « croissance » ?</p>
+<div class="source">
+<p>Source : Ouedraogo (2025-2026), Chapitre I ; Mathonnat (2018-2019), Introduction.</p>
+</div>
+</section>
+<section id="objectifs-de-la-séance" class="slide level2 smaller">
+<h2>Objectifs de la séance</h2>
+<p>À l’issue de cette séance, vous saurez :</p>
+<ul>
+<li>Distinguer PIB nominal et PIB réel, et calculer un taux de croissance.</li>
+<li>Différencier expansion, récession et dépression.</li>
+<li>Restituer les cinq faits marquants de la croissance économique.</li>
+<li>Distinguer les horizons court terme, moyen terme et long terme, et les déterminants dominants à chaque horizon.</li>
+</ul>
+</section>
+<section id="deux-indicateurs-pour-commencer" class="slide level2 smaller">
+<h2>Deux indicateurs pour commencer</h2>
+<p>La France a-t-elle vécu, depuis 2008, une succession de crises ou une <strong>stagnation prolongée</strong> ?</p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-france-accroche" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-france-accroche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-france-accroche-1.png" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-france-accroche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Croissance du PIB réel et taux de chômage en France, 1980-2024. Source : Banque mondiale, World Development Indicators (séries NY.GDP.MKTP.KD.ZG et SL.UEM.TOTL.NE.ZS, d’après les comptes nationaux et l’enquête Emploi de l’Insee).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Ligne verticale : déclenchement de la crise financière de 2008. Idée à garder en tête pour tout le semestre : croissance faible + chômage élevé et persistant = hypothèse de « stagnation séculaire », débattue en introduction du cours de C. Mathonnat.</p>
+</div>
+</div>
+</section>
+<section id="rappels-sur-le-pib" class="slide level2 smaller">
+<h2>1. Rappels sur le PIB</h2>
+<div class="def">
+<p><strong>PIB (Produit intérieur brut)</strong> : mesure de la richesse, quantité de biens et de services, créée sur un territoire donné au cours d’une période donnée (trimestre ou année).</p>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>PIB nominal</strong></p>
+<p>Quantités produites × <strong>prix courants</strong>.</p>
+<p>Combine un effet volume et un effet prix.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>PIB réel</strong></p>
+<p>Quantités produites × <strong>prix constants</strong> (année de référence).</p>
+<p>Isole le seul effet volume : mesure pertinente pour comparer l’activité dans le temps.</p>
+</div></div>
+</div>
+</section>
+<section id="pib-nominal-pib-réel-la-logique-de-la-décomposition" class="slide level2 smaller">
+<h2>PIB nominal, PIB réel : la logique de la décomposition</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Quantites x Prix courants] --&gt; B[PIB nominal]
+    C[Quantites x Prix constants] --&gt; D[PIB reel]
+    B --&gt; E[Effet volume]
+    B --&gt; F[Effet prix]
+    D --&gt; G[Effet volume seul]
+</pre>
+</div>
+<p></p><figcaption> Le PIB nominal combine un effet volume et un effet prix ; en fixant les prix, le PIB réel isole le seul effet volume.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cle">
+<p>C’est cette décomposition qui justifie de toujours calculer un taux de croissance sur le PIB <strong>réel</strong> : le PIB nominal peut augmenter sans que la richesse produite augmente, si c’est l’effet prix qui domine.</p>
+</div>
+</div>
+</section>
+<section id="pib-nominal-pib-réel-le-coin-dinflation-dans-les-données-françaises" class="slide level2 smaller">
+<h2>PIB nominal, PIB réel : le coin d’inflation dans les données françaises</h2>
+
+<img data-src="cm01_files/figure-revealjs/fig-coin-inflation-1.png" width="729" class="r-stretch quarto-figure-center" id="fig-coin-inflation"><p class="caption">
+Figure&nbsp;2: PIB nominal et PIB réel, France, indices base 100 en 1990. L’écart croissant entre les deux courbes (zone grisée) est l’effet prix cumulé : c’est le « coin d’inflation ». Indice réel construit à partir des taux de croissance annuels du PIB réel ; indice nominal à partir des niveaux de PIB en valeur. Source : Banque mondiale, WDI (NY.GDP.MKTP.KD.ZG) et Insee, comptes nationaux annuels.
+</p><div class="source">
+<p>Le PIB nominal croît plus vite que le PIB réel sur toute la période (× 2,7 contre × 1,6 entre 1990 et 2023) : l’écart traduit l’inflation cumulée. C’est pour isoler la seule création de richesse que le taux de croissance se calcule toujours sur le PIB réel.</p>
+</div>
+</section>
+<section id="pib-par-habitant-et-pib-par-habitant-en-ppa" class="slide level2 smaller">
+<h2>PIB par habitant et PIB par habitant en PPA</h2>
+<div class="def">
+<p><strong>PIB par habitant (ou par tête)</strong> : PIB réel rapporté à la population, indicateur usuel de niveau de vie moyen.</p>
+<p><strong>PIB par habitant en PPA (parité de pouvoir d’achat)</strong> : PIB par habitant corrigé des écarts de coût de la vie entre pays, ce qui permet de comparer le pouvoir d’achat réel, pas seulement la valeur convertie au taux de change.</p>
+</div>
+<div class="fragment">
+<div class="cle">
+<p>Pourquoi cette distinction compte : deux pays au même PIB par habitant en dollars courants peuvent avoir un niveau de vie réel très différent si le coût de la vie diffère fortement entre eux.</p>
+</div>
+</div>
+</section>
+<section id="pib-par-habitant-taux-de-change-courant-contre-ppa-quatre-pays-en-2022" class="slide level2 smaller">
+<h2>PIB par habitant : taux de change courant contre PPA, quatre pays en 2022</h2>
+
+<img data-src="cm01_files/figure-revealjs/fig-ppa-pays-1.png" width="748" class="r-stretch quarto-figure-center" id="fig-ppa-pays"><p class="caption">
+Figure&nbsp;3: PIB par habitant en dollars courants, taux de change du marché contre parité de pouvoir d’achat (PPA), Chine, Inde, France et États-Unis, 2022. Source : Banque mondiale, World Development Indicators (WDI), indicateurs NY.GDP.PCAP.CD (taux de change courant) et NY.GDP.PCAP.PP.CD (PPA). Valeurs figées en dur.
+</p><div class="source">
+<p>La correction PPA rehausse fortement le niveau de vie mesuré de la Chine (+68 %) et surtout de l’Inde (+251 %), pays où le coût de la vie est bas, alors qu’elle change peu la position de la France et des États-Unis. C’est exactement l’exemple de la phrase-clé précédente, sur données réelles.</p>
+</div>
+</section>
+<section id="le-taux-de-croissance-mesure-le-rythme-de-variation-du-pib-réel" class="slide level2 smaller">
+<h2>Le taux de croissance mesure le rythme de variation du PIB réel</h2>
+<p><span class="math display">\[
+\text{Taux de croissance du PIB}_t = \frac{PIB_t - PIB_{t-1}}{PIB_{t-1}} \times 100
+\]</span></p>
+<div class="fragment">
+<div class="cle">
+<p>On calcule toujours le taux de croissance sur le PIB <strong>réel</strong>, jamais sur le PIB nominal, sinon on mesurerait en partie de l’inflation, pas de la richesse créée.</p>
+</div>
+</div>
+</section>
+<section id="expansion-récession-dépression-trois-régimes-du-cycle" class="slide level2 smaller">
+<h2>Expansion, récession, dépression : trois régimes du cycle</h2>
+<div class="def">
+<ul>
+<li><strong>Expansion</strong> : croissance du PIB positive.</li>
+<li><strong>Récession</strong> : croissance du PIB négative pendant <strong>au moins deux trimestres consécutifs</strong> (un simple ralentissement, par exemple de 3 % à 1 %, n’est <strong>pas</strong> une récession : le PIB augmente encore).</li>
+<li><strong>Dépression</strong> : baisse forte et prolongée de l’activité, une récession sévère et durable.</li>
+</ul>
+</div>
+
+<img data-src="cm01_files/figure-revealjs/fig-cycle-recessions-1.png" width="806" class="r-stretch quarto-figure-center" id="fig-cycle-recessions"><p class="caption">
+Figure&nbsp;4: Croissance trimestrielle du PIB réel en France (t/t-1, %, CVS-CJO), autour des deux récessions techniques les plus récentes. Bandes grisées : au moins deux trimestres consécutifs de croissance négative (règle de la diapo précédente). Source : Insee, comptes nationaux trimestriels, PIB en volume, CVS-CJO (série concordante avec Eurostat, namq_10_gdp, chain-linked volumes). Valeurs figées en dur.
+</p><div class="source">
+<p>2020T4, isolé entre deux trimestres positifs, n’est pas grisé : il ne remplit pas le critère des deux trimestres consécutifs.</p>
+</div>
+</section>
+<section id="cinq-faits-marquants-de-la-croissance" class="slide level2 smaller">
+<h2>2. Cinq faits marquants de la croissance</h2>
+<p>L’observation de longue période fait apparaître cinq régularités empiriques qui structurent la réflexion sur la croissance, et, en creux, sur le rôle de la politique économique.</p>
+<div class="cle">
+<ol type="1">
+<li class="fragment">La croissance soutenue est récente</li>
+<li class="fragment">Forte hausse du niveau de vie dans l’OCDE après 1950</li>
+<li class="fragment">Convergence inégale entre pays</li>
+<li class="fragment">Ralentissement depuis les années 1970</li>
+<li class="fragment">Inégalités : baisse entre pays, hausse au sein des pays</li>
+</ol>
+</div>
+</section>
+<section id="fait-1-la-croissance-soutenue-est-un-phénomène-historiquement-récent" class="slide level2 smaller">
+<h2>Fait 1 : La croissance soutenue est un phénomène historiquement récent</h2>
+<p>Cinq ruptures successives dessinent la trajectoire du PIB mondial : cliquez pour les faire apparaître, cumulativement.</p>
+<div class="r-stack">
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pib-monde-1" class="quarto-float quarto-figure quarto-figure-center" width="720">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pib-monde-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-pib-monde-1-1.png" id="fig-pib-monde-1" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-pib-monde-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pib-monde-2" class="quarto-float quarto-figure quarto-figure-center" width="720">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pib-monde-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-pib-monde-2-1.png" id="fig-pib-monde-2" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-pib-monde-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pib-monde-3" class="quarto-float quarto-figure quarto-figure-center" width="720">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pib-monde-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-pib-monde-3-1.png" id="fig-pib-monde-3" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-pib-monde-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pib-monde-4" class="quarto-float quarto-figure quarto-figure-center" width="720">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pib-monde-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-pib-monde-4-1.png" id="fig-pib-monde-4" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-pib-monde-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pib-monde-5" class="quarto-float quarto-figure quarto-figure-center" width="720">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pib-monde-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-pib-monde-5-1.png" id="fig-pib-monde-5" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-pib-monde-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Évolution du PIB mondial, an 1000-2023, échelle logarithmique. Avant la révolution industrielle (1760-1820), le PIB mondial croît très lentement pendant des siècles ; il explose ensuite de façon quasi verticale sur une échelle logarithmique. Source : Maddison Project Database (2023), via Our World in Data (ourworldindata.org/grapher/global-gdp-over-the-long-run).</p>
+</div>
+</section>
+<section id="fait-2-une-forte-hausse-du-niveau-de-vie-dans-locde-surtout-après-1950" class="slide level2 smaller">
+<h2>Fait 2 : Une forte hausse du niveau de vie dans l’OCDE, surtout après 1950</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Entre 1950 et 2022, le revenu par habitant a été multiplié par :</p>
+<p><strong>× 3,8</strong> États-Unis</p>
+<p><strong>× 4,7</strong> France</p>
+<p><strong>× 7,5</strong> Allemagne</p>
+<p><strong>× 12,5</strong> Japon</p>
+<p>. . .</p>
+<div class="cle">
+<p>Le phénomène est massif, mais très hétérogène, y compris entre pays pourtant tous développés dès 1950.</p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-fait2-carte" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fait2-carte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-fait2-carte-1.png" width="787">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fait2-carte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Multiplicateur du revenu par habitant entre 1950 et 2022, par pays. Source : Maddison Project Database (2023). Fond de carte : Natural Earth. Les pays en gris n’ont pas de données Maddison pour 1950 (notamment ex-URSS et ex-Yougoslavie).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Les quatre pays sont tous des économies développées dès 1950 : l’écart de multiplicateur (x 3,8 à x 12,5) montre que le rattrapage de niveau de vie après-guerre a été massif partout, mais très inégal, y compris au sein du monde développé.</p>
+</div>
+</div></div>
+</section>
+<section id="fait-3-une-convergence-inégale-entre-pays" class="slide level2 smaller">
+<h2>Fait 3 : Une convergence inégale entre pays</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="def">
+<p><strong>Convergence</strong> : phénomène par lequel les pays initialement moins riches connaissent une croissance plus forte, réduisant leur écart avec les pays les plus riches.</p>
+</div>
+<p><strong>Convergence observée</strong> : au sein de l’OCDE (rattrapage), et pour plusieurs pays asiatiques (Corée du Sud, Indonésie, Malaisie, Thaïlande, Chine).</p>
+<p><strong>Non-convergence</strong> : pour la plupart des pays d’Afrique subsaharienne, et une partie de l’Amérique latine.</p>
+</div><div class="column" style="width:58%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-fait3-convergence" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fait3-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-fait3-convergence-1.png" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fait3-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Convergence du PIB par habitant, 1990-2022. Chaque point est un pays : abscisse = PIB par habitant en 1990 (PPA, dollars constants, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant entre 1990 et 2022. Source : Banque mondiale / Maddison Project Database (2023).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Les pays convergents (Chine, Corée du Sud, Indonésie, Malaisie, Thaïlande) partaient d’un niveau bas en 1990 et affichent la croissance la plus forte : ils rattrapent les pays riches. À niveau initial comparable, les pays non convergents (RD Congo, Niger, Rép. centrafricaine, Madagascar, Mexique) stagnent ou reculent : l’écart se creuse. Au sein de l’OCDE, la relation négative entre niveau initial et croissance (rattrapage) est plus ténue.</p>
+</div>
+</div></div>
+</section>
+<section id="fait-4-un-ralentissement-du-taux-de-croissance-depuis-les-années-1970" class="slide level2 smaller">
+<h2>Fait 4 : Un ralentissement du taux de croissance depuis les années 1970</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="cle">
+<p>Dans les pays de l’OCDE, l’économie continue de croître, mais à un rythme moins soutenu qu’avant les chocs pétroliers.</p>
+</div>
+<p>. . .</p>
+<p>Principale explication : le <strong>ralentissement des gains de productivité</strong>, un thème que nous retrouverons au chapitre II à travers la loi d’Okun et, plus loin dans le cours, à travers le débat sur la stagnation séculaire (R. Gordon, L. Summers).</p>
+</div><div class="column" style="width:58%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-fait4-decennies" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fait4-decennies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-fait4-decennies-1.png" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fait4-decennies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Croissance annuelle moyenne du PIB réel, par décennie, agrégat OCDE. La décennie « 2020s » est incomplète (2020-2024) et marquée par la crise Covid-19 de 2020. Source : Banque mondiale, World Development Indicators (WDI), indicateur NY.GDP.MKTP.KD.ZG, pays agrégé « OECD members » (code OED) ; OCDE pour 2020-2024.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>La croissance de l’OCDE reste positive sur toute la période, mais son rythme se réduit fortement après les chocs pétroliers de 1973 et 1979 (5,3 % en moyenne dans les années 1960 contre 1,8 % dans les années 2000) : c’est la baisse tendancielle des gains de productivité qui explique l’essentiel de ce ralentissement. La décennie 2020s (incomplète, 2020-2024) reste marquée par le choc Covid-19 de 2020.</p>
+</div>
+</div></div>
+</section>
+<section id="fait-5-une-évolution-contrastée-des-inégalités" class="slide level2 smaller">
+<h2>Fait 5 : Une évolution contrastée des inégalités</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<p><strong>Entre pays</strong> : baisse des écarts de revenu entre pays, conséquence, notamment, de la convergence partielle (fait 3).</p>
+<p><strong>Au sein des pays</strong> : hausse des inégalités internes dans de nombreux pays de l’OCDE.</p>
+<div class="def">
+<p>Facteurs identifiés : mondialisation, changement technologique, évolution du rôle de l’État, financiarisation de l’économie.</p>
+</div>
+</div><div class="column" style="width:58%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-fait5-top10" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fait5-top10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-fait5-top10-1.png" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fait5-top10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Part du revenu national (avant impôts et transferts) détenue par les 10 % les plus riches, 1950-2023. La forme en U reflète un recul des inégalités jusqu’aux années 1980, suivi d’une forte remontée, surtout aux États-Unis. Source : World Inequality Lab, WID.world (série top 10 % income share, pretax national income).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Depuis 1980, la part du revenu national captée par les 10 % les plus riches augmente fortement aux États-Unis (34 % à 46 % environ) et, dans une moindre mesure, au Royaume-Uni (28 % à 36 % environ), alors qu’elle reste comparativement stable en France (autour de 32-33 %) : la hausse des inégalités internes n’est ni uniforme, ni inévitable, elle dépend des choix nationaux (fiscalité, négociation salariale, régulation).</p>
+</div>
+</div></div>
+</section>
+<section id="les-horizons-temporels-de-la-macroéconomie" class="slide level2 smaller">
+<h2>3. Les horizons temporels de la macroéconomie</h2>
+<p>Pourquoi distinguer des horizons ? Parce que <strong>les déterminants de l’activité économique ne sont pas les mêmes selon la durée considérée</strong>, et donc les politiques économiques pertinentes non plus.</p>
+<div class="fragment">
+<div class="cle">
+<p>CT → dominé par la <strong>demande</strong> · MT → retour vers le <strong>potentiel</strong> · LT → déterminé par l’<strong>offre</strong></p>
+</div>
+</div>
+<div class="fragment">
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Court terme&lt;br/&gt;Demande domine&lt;br/&gt;Capital et technologie fixes"] --&gt; B["Moyen terme&lt;br/&gt;Retour vers le potentiel&lt;br/&gt;Facteurs quasi fixes"]
+    B --&gt; C["Long terme&lt;br/&gt;Offre domine&lt;br/&gt;Tous les facteurs deviennent variables"]
+</pre>
+</div>
+<p></p><figcaption> À mesure que l’horizon s’allonge, davantage de facteurs cessent d’être fixes : à court terme seule la demande varie, à long terme tous les déterminants de l’offre deviennent variables.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="le-court-terme-des-fluctuations-tirées-par-la-demande" class="slide level2 smaller">
+<h2>Le court terme : des fluctuations tirées par la demande</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="def">
+<p><strong>Court terme (CT)</strong> : quelques années. Les fluctuations de l’activité (variations du PIB autour de sa tendance) sont dominées par la <strong>demande</strong> : confiance des consommateurs, taux d’intérêt, etc.</p>
+</div>
+<p>. . .</p>
+<div class="cle">
+<p>C’est l’horizon des politiques de <strong>stabilisation</strong> (chapitre I, §5) : agir sur la demande pour limiter l’écart entre production effective et production potentielle.</p>
+</div>
+</div><div class="column" style="width:58%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ct-fluctuations" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ct-fluctuations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-ct-fluctuations-1.png" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ct-fluctuations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Croissance annuelle du PIB par habitant, France, 1951-2022. Les récessions (croissance négative) sont marquées en rouge, avec les quatre chocs majeurs de la période. Source : Maddison Project Database (2023).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>D’une année sur l’autre, le PIB par habitant fluctue nettement autour de sa tendance : ces à-coups (récessions en rouge) sont dominés par des chocs de <strong>demande</strong> (confiance, investissement, commerce extérieur), l’horizon du court terme.</p>
+</div>
+</div></div>
+</section>
+<section id="le-moyen-terme-un-retour-vers-le-potentiel" class="slide level2 smaller">
+<h2>Le moyen terme : un retour vers le potentiel</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="def">
+<p><strong>Moyen terme (MT)</strong> : une décennie ou moins. L’activité tend à revenir vers son niveau <strong>potentiel</strong>, déterminé par des facteurs d’offre. Le stock de capital, la technologie, le travail disponible et les institutions sont supposés quasi fixes à cet horizon.</p>
+</div>
+</div><div class="column" style="width:58%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mt-cycles" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-mt-cycles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-mt-cycles-1.png" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mt-cycles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: PIB par habitant, France, 1985-2022, échelle logarithmique (zoom sur les décennies récentes pour faire ressortir les cycles). La courbe grise pointillée est la tendance de moyen-long terme (régression locale, loess, sur le log du PIB/hab) ; les écarts à cette tendance sont coloriés en vert (au-dessus du potentiel) ou en rouge (en dessous). Source : Maddison Project Database (2023).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Les écarts à la tendance, positifs en vert (expansion de la fin des années 1990 et du milieu des années 2000) ou négatifs en rouge (récession du début des années 1990, crise de 2009, Covid-19 en 2020), ne persistent pas : l’activité <strong>revient vers son niveau potentiel</strong> en quelques années, l’horizon du moyen terme.</p>
+</div>
+</div></div>
+</section>
+<section id="le-long-terme-une-croissance-tendancielle-tirée-par-loffre" class="slide level2 smaller">
+<h2>Le long terme : une croissance tendancielle tirée par l’offre</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="def">
+<p><strong>Long terme (LT)</strong> : plusieurs décennies. Tous les facteurs deviennent variables. La croissance de long terme s’explique par les facteurs d’<strong>offre</strong> : accumulation du capital, progrès technique, ressources humaines (quantité et qualité de la main-d’œuvre).</p>
+</div>
+<p>. . .</p>
+<div class="cle">
+<p>C’est l’horizon des politiques d’<strong>allocation</strong> (chapitre I, §5) : élever la trajectoire de croissance potentielle plutôt que de corriger un écart ponctuel.</p>
+</div>
+</div><div class="column" style="width:58%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-lt-tendance" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-lt-tendance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm01_files/figure-revealjs/fig-lt-tendance-1.png" width="720">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lt-tendance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: PIB par habitant, France, 1985-2022, échelle logarithmique (même fenêtre et même axe que la diapositive précédente). Trait fin gris : PIB/hab observé. Trait épais bleu : tendance de moyen-long terme (loess, même ajustement que la diapositive précédente). Source : Maddison Project Database (2023).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Sur la <strong>même fenêtre</strong> que la diapositive précédente, l’attention se déplace des cycles vers la <strong>tendance</strong> (en bleu) : sa pente, plus faible après les années 2000, reflète le ralentissement des gains de productivité (offre). À l’horizon long, ce sont ces déterminants d’offre, et non les écarts de moyen terme, qui comptent.</p>
+</div>
+</div></div>
+</section>
+<section id="à-retenir-et-pour-la-prochaine-fois" class="slide level2">
+<h2>À retenir, et pour la prochaine fois</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>À retenir</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment">Le PIB <strong>réel</strong> (prix constants) est la mesure de référence pour comparer l’activité dans le temps ; ses dérivés (par habitant, en PPA) servent aux comparaisons internationales.</li>
+<li class="fragment">Récession = croissance <strong>négative</strong> pendant au moins deux trimestres, pas un simple ralentissement.</li>
+<li class="fragment">Cinq faits marquants : croissance récente, hausse massive mais inégale du niveau de vie, convergence sélective, ralentissement post-1970, inégalités contrastées.</li>
+<li class="fragment">Trois horizons (CT/MT/LT) organisent l’analyse : demande à court terme, retour au potentiel à moyen terme, offre à long terme.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Pour la prochaine fois</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment">Relire le résumé du chapitre I, §1-3 (<code>cours/chap1.qmd</code>).</li>
+<li class="fragment">Réviser la politique économique et les distinctions normatif/positif, néoclassique/keynésien (chapitre I, §4).</li>
+<li class="fragment">TD 1 : préparer les objectifs et instruments de politique économique (règle de Tinbergen).</li>
+<li class="fragment">Prochain cours (CM 2) : politique économique, fonctions de Musgrave, modèle OA-DA et ses quatre chocs.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Macroéconomie 1, L2 AES</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1200,
+
+        height: 750,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/macro1-aes\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

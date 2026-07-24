@@ -1,0 +1,614 @@
+---
+title: "CM 3 : Marché du travail : définitions & mesures"
+subtitle: "Spécificités, modèles internationaux et mesures du chômage (Chapitre II, Partie 1 : § I-III)"
+description: "Pourquoi le marché du travail n'est pas un marché comme les autres, les trois modèles nationaux de régulation, et les deux façons de mesurer le chômage en France (INSEE/BIT vs France Travail)."
+---
+
+## Plan de la séance
+
+1. Un marché pas comme les autres : les spécificités du travail
+2. Trois modèles nationaux de régulation du marché du travail
+3. Mesurer l'offre de travail : population active, taux d'activité et d'emploi
+4. Deux mesures concurrentes du chômage : INSEE (BIT) vs France Travail
+5. Les limites du taux de chômage et le halo du chômage
+
+::: {.source}
+Séance adossée au Chapitre II, Partie 1, sections I à III du résumé de cours.
+:::
+
+## Objectifs de la séance
+
+::: {.cle}
+**À l'issue de cette séance, vous saurez :**
+
+- Expliquer pourquoi le marché du travail n'est pas un marché comme les autres.
+- Distinguer les trois modèles nationaux de régulation (flexibilité, sécurité, flexisécurité).
+- Calculer et interpréter la population active, le taux d'activité, le taux d'emploi et le taux de chômage.
+- Distinguer la mesure du chômage par l'INSEE (critères du BIT) de celle de France Travail (catégories A à E).
+- Expliquer pourquoi le taux de chômage seul peut être trompeur, et ce que recouvre le « halo du chômage ».
+:::
+
+::: {.source}
+D'après les cours de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026), CERDI, Université Clermont Auvergne.
+:::
+
+## Le marché du travail fait se rencontrer deux offres inversées
+
+::: {.def}
+**Marché du travail.** Lieu théorique de confrontation entre la **demande de travail** (les entreprises, qui offrent des emplois) et l'**offre de travail** (les ménages, qui offrent leur force de travail en demandant un emploi).
+:::
+
+Attention au vocabulaire, source de confusion fréquente :
+
+::: {.incremental}
+- celui qui **demande du travail** (l'entreprise) **offre de l'emploi** ;
+- celui qui **offre du travail** (l'individu) **demande de l'emploi**.
+:::
+
+## Le contrat de travail engage une personne, pas seulement une marchandise
+
+Ce qui s'échange sur le marché du travail, ce sont des **personnes**, pas des marchandises comme les autres.
+
+::: {.incremental}
+- Le contrat de travail engage la personne du salarié, sa **subordination** à un employeur et une partie de sa vie professionnelle, il n'est donc pas une simple variante du contrat commercial.
+- Le marché du travail est en outre **segmenté** par compétences et par secteurs, plutôt qu'unique et homogène : il n'existe pas un marché du travail, mais des marchés du travail.
+:::
+
+## L'information circule mal entre employeur et salarié
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.def}
+**Sélection adverse**
+
+*Avant* la signature du contrat : l'employeur ne connaît pas parfaitement les compétences et la motivation réelles des candidats.
+
+Un salaire trop bas peut dissuader les meilleurs profils de postuler.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.def}
+**Aléa moral**
+
+*Après* la signature du contrat : l'employeur ne peut observer parfaitement l'effort du salarié, une fois celui-ci protégé par son contrat.
+
+Un salarié en CDI peut être moins incité à fournir un effort maximal.
+:::
+:::
+:::
+
+. . .
+
+Ces deux asymétries d'information distinguent radicalement le marché du travail d'un marché de biens ordinaire.
+
+```{mermaid}
+%%| fig-cap: "Les deux asymétries d'information n'apparaissent pas au même moment : la sélection adverse joue avant la signature, l'aléa moral après."
+flowchart LR
+    A[Avant signature] --> SA[Selection adverse]
+    SA --> S[Signature du contrat]
+    S --> B[Apres signature]
+    B --> AM[Alea moral]
+```
+
+## Rien ne garantit un ajustement automatique vers le plein emploi
+
+::: {.incremental}
+- Contrairement à un marché de biens standard, **aucun mécanisme évident** n'assure que l'offre de travail rencontre exactement la demande.
+- Il n'existe pas de **théorie unifiée** du marché du travail, d'où la pluralité des cadres théoriques (néoclassique, keynésien, WS-PS, appariement) étudiés plus loin dans le chapitre.
+:::
+
+. . .
+
+::: {.cle}
+Comprendre ce marché est un enjeu de première importance : la sous-utilisation de la main-d'œuvre est un gaspillage de potentiel productif, le chômage nourrit tensions sociales et pauvreté, et le travail reste la première source de revenu des ménages.
+:::
+
+## Les pays à faible chômage ne partagent pas le même modèle
+
+Une comparaison internationale des taux de chômage fait apparaître des écarts durables entre pays :
+
+::: {.incremental}
+- chômage structurellement **faible** : États-Unis, Japon, Allemagne, Royaume-Uni, pays nordiques ;
+- chômage plus **élevé** : Europe du Sud (France, Espagne, Portugal, Italie, Grèce).
+:::
+
+. . .
+
+Ces pays à faible chômage ne partagent pourtant pas le même modèle institutionnel, d'où une typologie en **trois modèles**.
+
+## Des taux de chômage durablement différents selon les pays
+
+```{r}
+#| label: fig-chomage-international
+#| fig-cap: "Taux de chômage harmonisé, moyenne annuelle 2023 (% de la population active). Source : OCDE, Employment Outlook 2024 ; Eurostat, Labour Force Survey (taux de chômage harmonisé)."
+#| fig-width: 7.5
+#| fig-height: 5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux de chômage harmonisé, moyenne annuelle 2023 (%). Ordres de grandeur
+# bien établis. Source : OCDE (Employment Outlook 2024) / Eurostat (Labour
+# Force Survey, taux de chômage harmonisé, indicateur une_rt_a pour les
+# pays de l'UE).
+df_chom_intl <- data.frame(
+  pays = c("Japon", "Allemagne", "États-Unis", "Royaume-Uni", "Danemark",
+           "Portugal", "France", "Italie", "Suède", "Grèce", "Espagne"),
+  taux = c(2.6, 3.0, 3.6, 4.0, 4.9, 6.5, 7.3, 7.7, 7.7, 11.1, 12.2)
+)
+df_chom_intl <- df_chom_intl[order(-df_chom_intl$taux), ]
+df_chom_intl$pays <- factor(df_chom_intl$pays, levels = rev(df_chom_intl$pays))
+df_chom_intl$groupe <- ifelse(
+  df_chom_intl$pays == "France", "France",
+  ifelse(df_chom_intl$taux < 7, "Chômage faible", "Chômage élevé")
+)
+
+ggplot(df_chom_intl, aes(x = pays, y = taux, fill = groupe)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = scales::label_number(decimal.mark = ",", accuracy = 0.1, suffix = " %")(taux)),
+            hjust = -0.15, size = 3.8, color = "#1f4e79", fontface = "bold") +
+  scale_fill_manual(values = c("Chômage faible" = unname(macro_pal["bleu2"]),
+                                "Chômage élevé" = unname(macro_pal["rouge"]),
+                                "France" = unname(macro_pal["or"])),
+                     name = NULL) +
+  coord_flip(ylim = c(0, 14)) +
+  labs(x = NULL, y = "Taux de chômage harmonisé, 2023 (%)") +
+  theme_macro()
+```
+
+::: {.source}
+OCDE (Employment Outlook 2024) ; Eurostat (Labour Force Survey), moyennes annuelles 2023. Nuance à garder en tête : la Suède (7,7 %) et le Portugal (6,5 %) ne suivent pas exactement la partition Nord/Sud attendue, la réalité est plus continue que la typologie ne le suggère.
+:::
+
+## Le clivage Nord/Sud du chômage en Europe
+
+```{r}
+#| label: fig-carte-chomage-ue
+#| fig-cap: "Taux de chômage harmonisé par pays, Union européenne, moyenne annuelle 2023. Le gradient Nord/Sud est visible, mais pas parfaitement continu : l'Espagne (12,2 %) et la Grèce (11,1 %) se détachent nettement, tandis que le Portugal (6,5 %) se rapproche des niveaux d'Europe centrale. Source : Eurostat, Labour Force Survey (indicateur une_rt_a). Fond de carte : Natural Earth (rnaturalearth)."
+#| fig-width: 7.5
+#| fig-height: 5.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+
+# Fond de carte mondial (données du package rnaturalearthdata, sans appel réseau)
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Taux de chômage harmonisé, UE-27, moyenne annuelle 2023 (%). Ordres de
+# grandeur bien établis. Source : Eurostat, Labour Force Survey,
+# indicateur une_rt_a.
+df_ue <- data.frame(
+  adm0_a3 = c("AUT", "BEL", "BGR", "HRV", "CYP", "CZE", "DNK", "EST", "FIN",
+              "FRA", "DEU", "GRC", "HUN", "IRL", "ITA", "LVA", "LTU", "LUX",
+              "MLT", "NLD", "POL", "PRT", "ROU", "SVK", "SVN", "ESP", "SWE"),
+  taux = c(5.1, 5.5, 4.3, 6.1, 6.1, 2.6, 4.9, 6.4, 7.2,
+           7.3, 3.0, 11.1, 4.1, 4.3, 7.7, 6.5, 6.9, 4.8,
+           2.7, 3.6, 2.8, 6.5, 5.6, 5.8, 3.7, 12.2, 7.7)
+)
+world$taux <- df_ue$taux[match(world$adm0_a3, df_ue$adm0_a3)]
+
+ggplot(world) +
+  geom_sf(aes(fill = taux), color = "white", linewidth = .1) +
+  scale_fill_gradient(
+    low = unname(macro_pal["bleu2"]), high = unname(macro_pal["rouge"]),
+    na.value = "grey92", limits = c(2, 13), breaks = c(3, 6, 9, 12),
+    name = "Taux de chômage\n2023 (%)"
+  ) +
+  coord_sf(xlim = c(-11, 32), ylim = c(34, 71), expand = FALSE) +
+  labs(x = NULL, y = NULL) +
+  theme_macro() +
+  theme(
+    legend.title = element_text(size = 9),
+    axis.text = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Le modèle « flexibilité » ne protège ni les emplois ni les travailleurs
+
+::: {.def}
+**Flexibilité** (pays anglo-saxons). Faible protection de l'emploi, assurance chômage peu généreuse, faible accompagnement des chômeurs.
+:::
+
+. . .
+
+Ce modèle a permis de contenir le chômage, au prix d'une forte hausse des **inégalités de revenus** entre travailleurs qualifiés et peu qualifiés (emplois précaires et peu rémunérés) : c'est notamment le choix fait par le Royaume-Uni.
+
+## Le modèle « sécurité » protège à la fois les emplois et les travailleurs
+
+::: {.def}
+**Sécurité** (Europe continentale, dont la France). Protection de l'emploi élevée, assurance chômage généreuse, accompagnement limité des chômeurs.
+:::
+
+. . .
+
+Ce modèle limite la hausse des inégalités de revenus, mais au prix d'un **chômage de longue durée** plus élevé pour les travailleurs peu qualifiés.
+
+## Le modèle « flexisécurité » protège les travailleurs, pas les emplois
+
+::: {.def}
+**Flexisécurité** (pays nordiques, Danemark en particulier). Faible protection de l'emploi, mais assurance chômage généreuse et *conditionnelle* à la recherche active d'emploi, combinée à un accompagnement important des chômeurs.
+:::
+
+. . .
+
+Ce modèle cherche à combiner réallocation rapide de la main-d'œuvre et protection des **personnes** plutôt que des **postes**.
+
+. . .
+
+::: {.callout-tip}
+## Pour aller plus loin
+Le « triangle d'or » danois (flexibilité + sécurité sociale + politique active de l'emploi) sera détaillé au Chapitre III, consacré aux politiques de l'emploi.
+:::
+
+## Trois modèles, trois arbitrages différents
+
+| Modèle | Protection | Chômage global | Inégalités | Chômage de longue durée |
+|---|---|---|---|---|
+| **Flexibilité** | ni emplois, ni travailleurs | contenu | élevées | faible |
+| **Sécurité** | emplois **et** travailleurs | plus élevé | limitées | élevé (peu qualifiés) |
+| **Flexisécurité** | travailleurs, pas les emplois | contenu | limitées | faible |
+
+::: {.source}
+Typologie présentée en cours à partir de la comparaison internationale des taux de chômage.
+:::
+
+## L'arbre des trois modèles résume les arbitrages nationaux
+
+```{mermaid}
+%%| fig-cap: "Un même objectif de chômage structurellement faible peut être atteint par trois architectures institutionnelles très différentes."
+flowchart TD
+    Q[Chomage structurellement faible] --> M1[Flexibilite]
+    Q --> M2[Securite]
+    Q --> M3[Flexisecurite]
+    M1 --> R1[Faible protection emploi et chomeurs]
+    M2 --> R2[Forte protection emploi et chomeurs]
+    M3 --> R3[Protection des travailleurs pas des emplois]
+```
+
+::: {.source}
+Synthèse des trois modèles présentés dans les diapositives précédentes.
+:::
+
+## La population active additionne emplois et chômeurs
+
+Selon les critères de l'**Organisation Internationale du Travail (OIT)** :
+
+$$
+\text{Population active} = \text{Employés} + \text{Chômeurs}
+$$
+
+La population active représente **l'offre de travail** sur le marché. Ses déterminants principaux : taux d'activité des femmes, structure par âge de la population, flux migratoires, durée des études, âge de départ à la retraite.
+
+. . .
+
+::: {.cle}
+Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en emploi, ni activement à la recherche d'un emploi : chômeurs découragés, personnes malades ou en situation de handicap, personnes au foyer, étudiants, retraités.
+:::
+
+```{mermaid}
+%%| fig-cap: "La population en âge de travailler se scinde en actifs (population active) et inactifs ; les actifs se répartissent entre emploi et chômage."
+flowchart TD
+    A[Population en age de travailler] --> B[Population active]
+    A --> C[Inactifs]
+    B --> D[Emplois]
+    B --> E[Chomeurs]
+```
+
+## Trois taux résument l'état du marché du travail
+
+::: {.def}
+**Taux d'activité (ou de participation)** $= \dfrac{\text{Population active}}{\text{Population en âge de travailler}}$
+
+**Taux d'emploi** $= \dfrac{\text{Employés}}{\text{Population en âge de travailler}}$
+
+**Taux de chômage** $= \dfrac{\text{Chômeurs}}{\text{Population active}}$
+:::
+
+. . .
+
+Trois indicateurs complémentaires, pas un seul : le taux de chômage rapporte les chômeurs à la population **active**, le taux d'emploi les rapporte à la population **en âge de travailler**.
+
+## L'INSEE applique trois critères stricts du BIT
+
+Il n'existe pas une, mais **deux** mesures officielles du chômage en France : celle de l'**INSEE** (critères du BIT, enquête statistique) et celle de **France Travail** (décompte administratif des inscrits). Un chômeur, au sens du BIT, est une personne répondant **simultanément** à trois critères :
+
+::: {.incremental}
+1. être **sans emploi** au cours de la semaine de référence (n'avoir pas travaillé, ne serait-ce qu'une heure) ;
+2. être **disponible** pour travailler dans les deux semaines ;
+3. être **activement à la recherche** d'un emploi (avoir effectué des démarches spécifiques au cours des quatre dernières semaines).
+:::
+
+. . .
+
+::: {.cle}
+Le **chômage de longue durée** désigne une recherche d'emploi qui se prolonge au-delà de **12 mois**.
+:::
+
+## France Travail classe les demandeurs d'emploi en cinq catégories
+
+France Travail comptabilise les personnes **inscrites**, réparties selon leur situation :
+
+| Catégorie | Situation |
+|---|---|
+| **A** | Sans emploi, tenues de rechercher activement un emploi |
+| **B** | Activité réduite courte, tenues de rechercher un emploi |
+| **C** | Activité réduite longue, tenues de rechercher un emploi |
+| **D** | Sans emploi, non tenues de rechercher (formation, maladie…) |
+| **E** | En emploi (contrat aidé, création d'entreprise…), non tenues de rechercher |
+
+. . .
+
+Cette nomenclature vise notamment à distinguer les personnes en activité réduite qui continuent à chercher un emploi à temps plein, et celles inscrites mais n'effectuant aucune recherche active.
+
+::: {.source}
+France Travail (ex-Pôle Emploi) ; service-public.fr.
+:::
+
+## Deux mesures, deux logiques : le comparatif à retenir
+
+| Critère | INSEE (BIT) | France Travail |
+|---|---|---|
+| Nature | Enquête statistique | Fichier administratif |
+| Fondement | Trois critères du BIT | Inscription + catégories A-E |
+| Périodicité | Enquête Emploi (trimestrielle) | Mensuelle (fin de mois) |
+| Comparabilité internationale | Oui (Eurostat, OIT) | Non (nomenclature française) |
+| Sensibilité | Indépendante des règles administratives | Dépend des règles d'inscription/radiation |
+
+. . .
+
+::: {.cle}
+Les deux chiffres divergent **structurellement** : celui de France Travail dépend de choix administratifs, celui de l'INSEE d'une enquête standardisée internationalement comparable.
+:::
+
+## Deux logiques de mesure se déploient en parallèle
+
+```{mermaid}
+%%| fig-cap: "INSEE et France Travail mesurent le chômage à partir de critères différents, ce qui explique leurs écarts structurels."
+flowchart TD
+    C[Chomage en France] --> I[INSEE - criteres du BIT]
+    C --> F[France Travail - inscription]
+    I --> I1[Sans emploi]
+    I --> I2[Disponible sous deux semaines]
+    I --> I3[Recherche active]
+    F --> F1[Categorie A]
+    F --> F2[Categorie B]
+    F --> F3[Categorie C]
+    F --> F4[Categorie D]
+    F --> F5[Categorie E]
+```
+
+::: {.source}
+Synthèse des critères BIT (INSEE) et de la nomenclature France Travail présentés dans les diapositives précédentes.
+:::
+
+## Deux chiffres qui divergent : chômage BIT (Insee) contre demandeurs France Travail
+
+```{r}
+#| label: fig-bit-vs-france-travail
+#| fig-cap: "Nombre de chômeurs/demandeurs d'emploi en France, trois mesures, 2010-2024 (millions de personnes). Source : Insee, enquête Emploi (chômage au sens du BIT) ; Dares/France Travail, statistiques mensuelles du marché du travail (STMT, fin d'année, France entière)."
+#| fig-width: 8
+#| fig-height: 4.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Trois mesures du chômage en France, années repères 2010-2024 (millions de
+# personnes). On retient des années repères plutôt qu'une série mensuelle
+# complète pour rester sur des valeurs sûres.
+#
+# Chômeurs BIT (Insee, France hors Mayotte) : produit du taux de chômage BIT
+# (Insee/Banque mondiale, WDI, indicateur SL.UEM.TOTL.NE.ZS, déjà utilisé en
+# cm01.qmd) par une estimation de la population active (Insee, enquête
+# Emploi, environ 28,4 millions en 2010 à 30,7 millions en 2024).
+#
+# Catégories A et A+B+C (Dares/France Travail, STMT, fin d'année, France
+# entière) : ordres de grandeur bien établis, notamment les deux repères les
+# plus documentés, le pic du confinement de 2020 et le repassage de la
+# catégorie A sous les 3 millions en 2023.
+df_mesures <- data.frame(
+  annee = rep(c(2010, 2012, 2015, 2019, 2020, 2023, 2024), 3),
+  valeur = c(
+    2.6, 2.8, 3.0, 2.5, 2.4, 2.2, 2.3,            # Chômeurs BIT (Insee)
+    2.7, 3.1, 3.6, 3.3, 3.7, 3.0, 3.1,             # Catégorie A (France Travail)
+    4.0, 4.6, 5.7, 5.9, 6.4, 5.35, 5.45            # Catégories A+B+C (France Travail)
+  ),
+  indicateur = rep(c("Chômeurs BIT (Insee)",
+                      "Catégorie A (France Travail)",
+                      "Catégories A+B+C (France Travail)"), each = 7)
+)
+df_mesures$indicateur <- factor(
+  df_mesures$indicateur,
+  levels = c("Chômeurs BIT (Insee)", "Catégorie A (France Travail)",
+             "Catégories A+B+C (France Travail)")
+)
+
+ggplot(df_mesures, aes(x = annee, y = valeur, color = indicateur)) +
+  geom_vline(xintercept = 2020, color = "grey70", linetype = "dashed", linewidth = .4) +
+  annotate("text", x = 2020, y = 6.7, label = "Confinement",
+           hjust = .5, size = 3.1, color = "grey45", fontface = "italic") +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  scale_color_manual(values = c(
+    "Chômeurs BIT (Insee)" = unname(macro_pal["bleu"]),
+    "Catégorie A (France Travail)" = unname(macro_pal["or"]),
+    "Catégories A+B+C (France Travail)" = unname(macro_pal["rouge"])
+  ), name = NULL) +
+  scale_x_continuous(breaks = c(2010, 2012, 2015, 2019, 2020, 2023, 2024)) +
+  scale_y_continuous(limits = c(0, 7), breaks = seq(0, 7, 1)) +
+  labs(x = "Année", y = "Millions de personnes") +
+  theme_macro() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+::: {.source}
+Insee, enquête Emploi (chômeurs BIT, France hors Mayotte) ; Dares/France Travail, STMT (catégories A et A+B+C, France entière). Les trois courbes restent structurellement ordonnées (BIT < catégorie A < catégories A+B+C), preuve visuelle que les deux logiques de mesure ne comptent pas la même population.
+:::
+
+## Un même taux de chômage peut cacher deux marchés très différents
+
+Deux pays affichant un taux de chômage **quasi identique** peuvent avoir des taux d'emploi et d'activité très différents, selon le niveau de participation au marché du travail. Cas réel : Suède contre Italie, 2023. Cliquez pour révéler les indicateurs un à un.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-suede-italie-1
+#| fig-width: 7
+#| fig-height: 4.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Suède contre Italie, 2023 : deux marchés du travail très différents malgré
+# un taux de chômage quasi identique. Source : Eurostat, Labour Force Survey.
+# Taux de chômage harmonisé (indicateur une_rt_a) et taux d'emploi 20-64 ans
+# (indicateur lfsi_emp_a), valeurs figées, ordres de grandeur bien établis
+# (la Suède affiche l'un des tout premiers taux d'activité de l'UE, l'Italie
+# l'un des plus faibles). Taux d'activité 20-64 ans dérivé de la relation
+# comptable taux_activite = taux_emploi / (1 - taux_chomage), cohérente avec
+# les niveaux publiés par Eurostat pour les deux pays.
+indic_si <- data.frame(
+  id     = 1:3,
+  nom    = c("Taux de chômage", "Taux d'emploi\n(20-64 ans)", "Taux d'activité\n(20-64 ans)"),
+  Suede  = c(7.7, 80.7, 87.4),
+  Italie = c(7.7, 61.5, 66.6)
+)
+
+# Construit le graphe indicateur par indicateur : k = 1 révèle uniquement le
+# taux de chômage (quasi identique), k = 2 ajoute le taux d'emploi (écart
+# massif), k = 3 ajoute le taux d'activité (dérivé), qui explique l'écart.
+plot_marche <- function(k) {
+  df_k <- indic_si[seq_len(k), , drop = FALSE]
+  df_long <- data.frame(
+    nom    = rep(df_k$nom, 2),
+    pays   = rep(c("Suède", "Italie"), each = k),
+    valeur = c(df_k$Suede, df_k$Italie)
+  )
+  df_long$nom <- factor(df_long$nom, levels = indic_si$nom)
+
+  ggplot(df_long, aes(x = nom, y = valeur, fill = pays)) +
+    geom_col(position = position_dodge(width = .72), width = .65) +
+    geom_text(aes(label = scales::label_number(decimal.mark = ",", accuracy = 0.1)(valeur)),
+              position = position_dodge(width = .72), vjust = -.5, size = 3.6,
+              color = "#1f1f1f", fontface = "bold") +
+    scale_fill_manual(values = c("Suède" = unname(macro_pal["bleu2"]),
+                                  "Italie" = unname(macro_pal["rouge"])), name = NULL) +
+    scale_y_continuous(limits = c(0, 95), breaks = seq(0, 90, 15)) +
+    labs(x = NULL, y = "%") +
+    theme_macro()
+}
+
+plot_marche(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-suede-italie-2
+#| fig-width: 7
+#| fig-height: 4.6
+plot_marche(2)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-suede-italie-3
+#| fig-cap: "Taux de chômage, taux d'emploi et taux d'activité (20-64 ans), Suède et Italie, 2023. Le taux d'activité est estimé à partir du taux d'emploi et du taux de chômage."
+#| fig-width: 7
+#| fig-height: 4.6
+plot_marche(3)
+```
+:::
+
+:::
+
+::: {.source}
+Eurostat, Labour Force Survey : taux de chômage harmonisé et taux d'emploi 20-64 ans, moyennes annuelles 2023. Taux d'activité 20-64 ans dérivé de taux_activité = taux_emploi / (1 − taux_chômage).
+:::
+
+## Une baisse du chômage peut cacher un simple découragement
+
+::: {.cle}
+Autre piège : une baisse du taux de chômage peut résulter d'une baisse de la **population active** (chômeurs découragés qui cessent de chercher un emploi), plutôt que d'une reprise économique. Cas extrême : si tous les chômeurs cessaient de chercher un emploi, le taux de chômage tomberait à **zéro**, sans la moindre création d'emploi.
+:::
+
+## Le chômage n'est pas un stock à partager, mais un flux à canaliser
+
+Un même taux de chômage peut recouvrir des réalités très différentes selon l'intensité des **flux** sur le marché du travail :
+
+::: {.incremental}
+- un marché **dynamique** : beaucoup d'embauches, beaucoup de séparations, chômage de courte durée (cas américain) ;
+- un marché **peu mobile** : peu de mouvements, chômage de longue durée concentré sur une minorité (cas français).
+:::
+
+. . .
+
+::: {.cle}
+En France, environ **4 %** des personnes en emploi à un trimestre donné ne le sont plus au trimestre suivant, contre **40 %** des chômeurs qui sortent du chômage d'un trimestre à l'autre.
+:::
+
+## Le halo du chômage brouille les frontières entre emploi, chômage et inactivité
+
+::: {.def}
+**Halo du chômage.** Ensemble des situations dans lesquelles les frontières entre emploi, chômage et inactivité sont difficiles à établir, les critères INSEE/BIT étant stricts, de nombreuses situations intermédiaires échappent à la mesure officielle du chômage.
+:::
+
+. . .
+
+::: {.callout-note}
+Ce halo explique pourquoi les économistes surveillent aussi le **taux de non-emploi** (proportion de personnes sans emploi dans la population en âge de travailler), qui inclut les chômeurs BIT **et** une partie des inactifs proches du marché du travail.
+:::
+
+## Le sous-emploi et l'emploi temporaire peuplent le halo du chômage
+
+::: {.incremental}
+- **Le sous-emploi (temps partiel subi)** : personnes travaillant à temps partiel (moins de 35 heures/semaine en France) qui souhaiteraient travailler davantage. Concerne très majoritairement les **femmes** (environ 80 % des emplois à temps partiel) et les emplois peu qualifiés.
+- **L'emploi temporaire** : CDD, intérim, stages rémunérés, emplois aidés, statut d'actif de courte durée alternant emploi, chômage et inactivité. En France, les CDI restent la norme (environ 88 % des salariés hors intérim), mais la part des *recrutements* en CDD a fortement augmenté depuis les années 1980.
+:::
+
+::: {.source}
+INSEE, *Emploi, chômage, revenus du travail* (2017) ; DARES.
+:::
+
+## Le halo se déploie sur un continuum entre emploi et inactivité
+
+```{mermaid}
+%%| fig-cap: "Le halo du chômage occupe l'espace flou entre emploi, chômage au sens du BIT et inactivité stricte."
+flowchart LR
+    E[Emploi a temps plein] --> SE[Sous-emploi temps partiel subi]
+    SE --> H[Halo du chomage]
+    H --> CB[Chomage BIT]
+    H --> IN[Inactifs proches du marche]
+    IN --> I[Inactivite stricte]
+```
+
+::: {.source}
+Synthèse des notions de halo du chômage, sous-emploi et emploi temporaire présentées dans les diapositives précédentes.
+:::
+
+## À retenir
+
+::: {.callout-important}
+## À retenir
+::: {.incremental}
+- Le marché du travail n'est pas un marché comme les autres : il échange des personnes, souffre d'asymétries d'information et ne dispose d'aucun mécanisme automatique de retour au plein emploi.
+- Trois modèles nationaux organisent différemment l'arbitrage protection/flexibilité : flexibilité, sécurité, flexisécurité.
+- Population active = employés + chômeurs (OIT) ; trois taux complémentaires : activité, emploi, chômage.
+- L'INSEE (critères BIT) et France Travail (catégories A-E) mesurent le chômage différemment et donnent des chiffres structurellement différents.
+- Le taux de chômage seul peut être trompeur : il faut le croiser avec le taux d'activité, le taux d'emploi, les flux et le halo du chômage.
+:::
+:::
+
+## Pour la prochaine fois
+
+::: {.incremental}
+- Lire le Dossier de TD séance 2 : *Marché du travail : définitions & mesures* et préparer les exercices d'application (calcul des taux, lecture de données INSEE/France Travail).
+- Réviser les définitions clés de cette séance : population active, halo du chômage, trois modèles nationaux.
+- Le prochain CM (CM 4) abordera la **typologie des différentes formes de chômage** (frictionnel, classique, technologique, d'inadéquation, keynésien, technique) et le phénomène d'**hystérèse**.
+:::
+
+::: {.source}
+Chapitre II, Partie 1, sections IV-V.
+:::

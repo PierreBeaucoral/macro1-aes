@@ -1,0 +1,29 @@
+# --- Caches et intermédiaires Quarto/R ---
+/.quarto/
+/_sources/
+_freeze/
+.Rproj.user
+.Rhistory
+*_cache/
+.DS_Store
+**/*.quarto_ipynb
+
+# --- Artefacts de rendu EN PLACE (le site final est dans docs/) ---
+# On ne versionne que les sources .qmd et le dossier docs/ publié.
+# Les motifs couvrent aussi les variantes macOS « _files (1) », « _files (2) ».
+/cours/*.html
+/slides/*.html
+/td/*.html
+/td/*.pdf
+/*.html
+/Rplots.pdf
+carte*.png
+cours/*_files*
+slides/*_files*
+td/*_files*
+!docs/**
+
+# --- Corrigés (clés de réponses) : exclus pour ne PAS exposer les réponses
+# sur un dépôt public. Ils restent en local. Pour les versionner (dépôt privé
+# uniquement), supprimer la ligne ci-dessous. ---
+/td/corrections/

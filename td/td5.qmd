@@ -1,0 +1,200 @@
+---
+title: "TD 5 : Analyses théoriques du marché du travail : néoclassique & WS-PS"
+subtitle: "Offre et demande de travail, chômage volontaire, coût du travail, et chômage d'équilibre dans le modèle WS-PS"
+description: "Dossier de TD : QCM et définitions, lecture de graphique (salaire minimum et chômage classique), application chiffrée du modèle WS-PS, question de réflexion sur l'efficacité d'une baisse du coût du travail."
+---
+
+::: {.objectifs}
+Objectifs de la séance
+
+- Restituer les mécanismes de l'offre et de la demande de travail dans le modèle néoclassique (arbitrage travail/loisir, productivité marginale décroissante).
+- Expliquer pourquoi, chez les néoclassiques, tout le chômage à l'équilibre est qualifié de **volontaire**.
+- Lire un graphique offre-demande de travail et identifier le **chômage classique** provoqué par un salaire administré au-dessus de l'équilibre.
+- Résoudre analytiquement le modèle **WS-PS** (calcul du taux de chômage d'équilibre $u^*$ et du salaire réel d'équilibre) et représenter graphiquement le résultat.
+- Discuter, de façon argumentée, l'efficacité d'une baisse du coût du travail selon le cadre théorique mobilisé.
+:::
+
+**Pré-requis.** Ce TD s'appuie sur le CM 5 (analyse néoclassique) et le CM 8 (modèle WS-PS), ainsi que sur les notions vues en TD 3 (typologie des chômages : distinguer chômage volontaire, classique, structurel). Relisez avant la séance les définitions de **salaire réel** $w = W/P$, **salaire de réserve** $w_r$ et **taux de marge** $m$.
+
+::: {.callout-note}
+## Rappel express : deux modèles, deux logiques du chômage
+- **Néoclassique** (§I) : marché en concurrence pure et parfaite, salaires flexibles $\Rightarrow$ à l'équilibre, offre = demande, et tout chômage résiduel est **volontaire** (salaire de réserve supérieur au salaire de marché).
+- **WS-PS** (§III) : marchés en concurrence imparfaite, salaires négociés au-dessus du salaire de réserve $\Rightarrow$ le chômage d'équilibre $u^*$ est **involontaire** mais **structurel** (pas de force de rappel automatique vers le plein emploi).
+:::
+
+## Exercice 1 : Définitions et QCM (offre/demande de travail, chômage volontaire)
+
+**a) Définitions.** Donnez, en une phrase précise, la définition des notions suivantes :
+
+1. Salaire de réserve $w_r$.
+2. Chômage volontaire (au sens néoclassique).
+3. Coin fiscal (*tax wedge*).
+4. Salaire d'efficience.
+5. Taux de marge $m$ dans le modèle WS-PS.
+
+**b) QCM.** Une seule réponse est correcte pour chaque question.
+
+1. Dans le modèle néoclassique, l'offre agrégée de travail est une fonction :
+   a) décroissante du salaire réel
+   b) croissante du salaire réel
+   c) indépendante du salaire réel
+   d) croissante puis décroissante du salaire réel
+
+2. La demande de travail à court terme est déterminée par l'égalisation entre le salaire réel et :
+   a) le salaire de réserve
+   b) la productivité marginale du travail
+   c) le taux de marge des entreprises
+   d) le taux de chômage
+
+3. Selon l'analyse néoclassique, un individu au chômage dont le salaire de réserve est supérieur au salaire de marché est en situation de :
+   a) chômage conjoncturel
+   b) chômage involontaire
+   c) chômage volontaire
+   d) chômage frictionnel uniquement
+
+4. Un salaire minimum fixé au-dessus du salaire d'équilibre provoque, dans le cadre néoclassique :
+   a) une pénurie de travailleurs
+   b) un chômage classique (excédent d'offre de travail)
+   c) une baisse de la demande de travail à salaire inchangé
+   d) aucun effet, le marché s'ajuste par les quantités
+
+5. Dans le modèle WS-PS, la courbe PS (*price setting*) est :
+   a) croissante avec le taux de chômage
+   b) décroissante avec le taux de chômage
+   c) horizontale, indépendante du taux de chômage
+   d) verticale au niveau du chômage naturel
+
+6. Une hausse du taux de marge $m$ des entreprises (baisse de la concurrence) déplace la courbe PS :
+   a) vers le haut, ce qui réduit $u^*$
+   b) vers le bas, ce qui augmente $u^*$
+   c) vers la droite, sans effet sur le salaire réel
+   d) elle ne déplace pas la courbe PS, seulement la courbe WS
+
+## Exercice 2 : Lecture de graphique : salaire minimum et chômage classique
+
+Le graphique ci-dessous représente l'offre et la demande agrégées de travail dans une économie fictive, en concurrence pure et parfaite. Un salaire minimum légal $w_{min}$ est imposé au-dessus du salaire d'équilibre concurrentiel $w^*$.
+
+```{r}
+#| label: fig-td5-smic
+#| fig-cap: "Marché du travail néoclassique avec salaire minimum : offre et demande de travail, salaire d'équilibre concurrentiel et salaire minimum administré."
+#| fig-width: 6.5
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+L <- seq(0, 10, length.out = 200)
+w_offre   <- 1 + 0.5 * L
+w_demande <- 8.5 - 0.55 * L
+eq_L <- (8.5 - 1) / (0.5 + 0.55)
+eq_w <- 1 + 0.5 * eq_L
+
+w_min      <- eq_w + 1.3
+L_offerte  <- (w_min - 1) / 0.5
+L_demandee <- (8.5 - w_min) / 0.55
+
+df_od <- data.frame(
+  L = rep(L, 2),
+  w = c(w_offre, w_demande),
+  courbe = rep(c("Offre de travail (Ls)", "Demande de travail (Ld)"), each = length(L))
+)
+
+ggplot(df_od, aes(x = L, y = w, color = courbe)) +
+  geom_line(linewidth = 1.1) +
+  annotate("segment", x = 0, xend = 10, y = w_min, yend = w_min,
+           linetype = "dashed", color = macro_pal[["vert"]], linewidth = 0.6) +
+  annotate("text", x = 0.15, y = w_min + 0.32,
+           label = "Salaire minimum (w_min)", hjust = 0, size = 3.4, color = macro_pal[["vert"]]) +
+  annotate("segment", x = L_demandee, xend = L_offerte, y = w_min, yend = w_min,
+           color = macro_pal[["rouge"]], linewidth = 2.4, alpha = 0.5) +
+  annotate("point", x = eq_L, y = eq_w, size = 2.4, color = macro_pal[["gris"]]) +
+  annotate("text", x = eq_L + 0.2, y = eq_w - 0.55,
+           label = "(w*, L*)", hjust = 0, size = 3.2, color = macro_pal[["gris"]]) +
+  scale_color_manual(values = c("Offre de travail (Ls)" = macro_pal[["bleu"]],
+                                 "Demande de travail (Ld)" = macro_pal[["or"]]),
+                      name = NULL) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9), expand = FALSE) +
+  labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
+  theme_macro()
+```
+
+Répondez aux questions suivantes en vous appuyant sur le graphique :
+
+1. Repérez sur le graphique le salaire d'équilibre concurrentiel $w^*$ et l'emploi d'équilibre $L^*$. À quoi correspond, graphiquement, l'intersection des deux courbes ?
+2. Au niveau du salaire minimum $w_{min}$, lisez la quantité de travail offerte et la quantité de travail demandée. Comment se nomme l'écart entre les deux ?
+3. Ce chômage est-il volontaire ou involontaire au sens néoclassique ? Justifiez à partir de la définition du chômage volontaire.
+4. Deux mesures de politique économique sont envisagées pour réduire ce chômage sans toucher au salaire minimum légal : (i) une baisse des cotisations sociales employeur, (ii) une hausse de la productivité du travail. Pour chacune, indiquez la courbe affectée, le sens du déplacement, et l'effet attendu sur l'emploi. *(Indice : représentez mentalement, ou sur brouillon, le déplacement de la courbe concernée.)*
+
+## Exercice 3 : Exercice analytique : le chômage d'équilibre dans le modèle WS-PS
+
+Dans une économie décrite par le modèle WS-PS, la courbe de fixation des salaires (WS) est donnée par :
+$$
+\frac{W}{P} = 1 - 0{,}05\,u
+$$
+où $u$ est le taux de chômage (en points) et $W/P$ le salaire réel. La courbe de fixation des prix (PS) s'écrit :
+$$
+\frac{W}{P} = \frac{1}{1+m}
+$$
+Le taux de marge des entreprises est initialement $m_0 = 0{,}25$ (25 %).
+
+**a)** Calculez le salaire réel compatible avec la courbe PS, $\left(\dfrac{W}{P}\right)_0$.
+
+**b)** En déduire, par résolution de $1 - 0{,}05\,u^*_0 = \left(\dfrac{W}{P}\right)_0$, le taux de chômage d'équilibre $u^*_0$.
+
+**c)** Une vague de fusions-acquisitions réduit l'intensité concurrentielle sur les marchés de biens et services : le taux de marge passe à $m_1 = 0{,}60$ (60 %). Calculez la nouvelle courbe PS, $\left(\dfrac{W}{P}\right)_1$, puis le nouveau chômage d'équilibre $u^*_1$ et le nouveau salaire réel d'équilibre.
+
+**d)** Représentez graphiquement, sur un même repère (chômage $u$ en abscisse, salaire réel $W/P$ en ordonnée), la courbe WS, la courbe PS initiale et la courbe PS après la fusion. Situez les deux équilibres.
+
+```{r}
+#| label: fig-td5-wsps
+#| fig-cap: "Repère générique du modèle WS-PS (courbe WS décroissante, courbe PS horizontale) : à vous de tracer, dans ce type de repère, la courbe PS initiale, la courbe PS après la fusion, et de situer les deux équilibres calculés aux questions a) à c)."
+#| fig-width: 6.5
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+u_seq <- seq(0, 15, length.out = 200)
+ws <- 1 - 0.05 * u_seq
+ps_generic <- rep(0.75, length(u_seq))
+
+df_ws <- data.frame(u = u_seq, w = ws)
+df_ps <- data.frame(u = u_seq, w = ps_generic)
+
+ggplot() +
+  geom_line(data = df_ws, aes(x = u, y = w, color = "WS : fixation des salaires"), linewidth = 1.1) +
+  geom_line(data = df_ps, aes(x = u, y = w, color = "PS : fixation des prix"), linewidth = 1.1) +
+  scale_color_manual(values = c("WS : fixation des salaires" = macro_pal[["bleu"]],
+                                 "PS : fixation des prix" = macro_pal[["or"]]),
+                      name = NULL) +
+  coord_cartesian(xlim = c(0, 15), ylim = c(0, 1), expand = FALSE) +
+  labs(x = "Taux de chômage (u, points)", y = "Salaire réel (W/P)") +
+  theme_macro() +
+  theme(legend.position = "bottom", legend.text = element_text(size = 8))
+```
+
+**e)** Qualitativement, expliquez en deux ou trois phrases pourquoi une baisse de la concurrence sur les marchés de biens se traduit, dans ce modèle, par une hausse durable du chômage, alors qu'aucun salaire minimum légal n'intervient dans ce raisonnement.
+
+## Exercice 4 : Question de réflexion (dissertation courte, 300-400 mots)
+
+::: {.callout-important}
+## Sujet
+« Une baisse du coût du travail permet-elle toujours de réduire le chômage ? »
+:::
+
+Vous répondrez à cette question sous forme de mini-dissertation structurée (introduction avec définitions et annonce de plan, deux parties courtes, conclusion). Vous devrez notamment :
+
+- rappeler pourquoi, dans le modèle **néoclassique**, une baisse du coût du travail réduit le chômage classique ;
+- discuter si ce résultat se transpose telle quelle dans le modèle **WS-PS**, en particulier, quels leviers de baisse du coût du travail agissent sur quelle courbe (WS ou PS) ;
+- mobiliser la distinction entre chômage **volontaire**, **classique** et **d'équilibre (structurel)** vue en TD 3 ;
+- conclure sur les limites communes aux deux approches (rigidités institutionnelles, hétérogénéité du travail).
+
+## Pour aller plus loin
+
+::: {.callout-tip}
+## Ressources complémentaires
+- Vidéo : la théorie du **salaire d'efficience** : approfondit les fondements microéconomiques de la rigidité salariale à la baisse (asymétries d'information, aléa moral).
+- Vidéo : la théorie **insiders-outsiders** de Lindbeck & Snower (1986) : pourquoi les salariés en poste conservent un pouvoir de négociation même en présence d'un chômage élevé.
+- Vidéo : la théorie des **contrats implicites** d'Azariadis (1975) : un autre fondement microéconomique de la rigidité des salaires nominaux.
+- @layard1991, *Unemployment: Macroeconomic Performance and the Labour Market* : la référence fondatrice du modèle WS-PS.
+- @shapirostiglitz1984 sur le salaire d'efficience comme mécanisme disciplinaire (modèle *shirking*).
+- @cahuczylberberg2004, *Le marché du travail* : synthèse française des modèles présentés dans ce TD.
+:::

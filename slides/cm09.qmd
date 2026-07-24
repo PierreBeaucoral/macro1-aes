@@ -1,0 +1,504 @@
+---
+title: "Un même problème, le chômage, appelle trois modèles nationaux très différents"
+subtitle: "CM 9 : Politiques de l'emploi : cadres d'analyse et flexisécurité (Chapitre III, Section I)"
+---
+
+## Plan de la séance
+
+1. Politiques de l'emploi : deux logiques, **actives** et **passives**
+2. Trois modèles nationaux : flexibilité, sécurité, flexisécurité
+3. La flexisécurité danoise et son « triangle d'or »
+4. Les quatre formes de flexibilité
+5. Protéger les travailleurs plutôt que les emplois
+
+## Objectifs {.objectifs}
+
+**À l'issue de cette séance, vous saurez :**
+
+- Distinguer politiques de l'emploi **actives** et **passives**, et l'objectif poursuivi par chacune.
+- Caractériser les trois modèles, **flexibilité**, **sécurité**, **flexisécurité**, à partir de trois critères : protection de l'emploi, indemnisation, accompagnement.
+- Expliquer pourquoi la flexisécurité **découple** protection de l'emploi et protection des travailleurs.
+- Représenter et commenter le **triangle d'or** danois.
+- Distinguer les quatre formes de **flexibilité** (numérique externe, numérique interne, fonctionnelle, salariale) et les relier à des dispositifs concrets.
+
+# 1. Politiques actives et politiques passives
+
+## Deux façons de répondre au chômage
+
+::: {.def}
+**Politiques actives** : obtenir une croissance plus riche en emplois : allègements de charges pour inciter à l'embauche, emplois aidés, aide à la création d'entreprise, amélioration de la rencontre offre/demande (service public de l'emploi, formation), flexibilisation.
+
+**Politiques passives** : rendre le chômage supportable et réduire la population active : indemnisation du chômage, incitations au retrait d'activité, abaissement de l'âge de la retraite, partage du travail (réduction du temps de travail).
+:::
+
+## Ce que chaque logique cible
+
+| | Politiques actives | Politiques passives |
+|---|---|---|
+| **Cible** | Le volume d'emplois disponibles | Le niveau de vie des personnes sans emploi |
+| **Fonction de Musgrave mobilisée** | Allocation / stabilisation | Redistribution |
+| **Condition d'efficacité** | Diagnostic correct sur le type de chômage | Calibrage qui ne décourage pas le retour à l'emploi |
+| **Exemple** | Baisse du coût du travail, formation | Assurance chômage, RSA |
+
+. . .
+
+::: {.cle}
+Une politique active n'a d'effet que si le **diagnostic** est le bon : baisser le coût du travail suppose un chômage classique ; renforcer l'accompagnement suppose un chômage frictionnel (Chapitre II).
+:::
+
+## Le diagnostic conditionne la politique active
+
+```{mermaid}
+%%| fig-cap: "Le choix de la politique active depend du diagnostic pose sur le type de chomage : cout du travail pour un chomage classique, accompagnement pour un chomage frictionnel."
+flowchart TD
+    A[Diagnostic sur le type de chomage] --> B[Chomage classique]
+    A --> C[Chomage frictionnel]
+    B --> D[Baisser le cout du travail]
+    C --> E[Renforcer l accompagnement]
+```
+
+. . .
+
+::: {.cle}
+Une politique active mal ciblée, accompagnement renforcé face à un chômage classique, ou baisse du coût du travail face à un chômage frictionnel, a peu de chances de faire baisser le chômage.
+:::
+
+## Erreur fréquente {.callout-warning}
+
+::: {.callout-warning}
+## Erreur fréquente
+Ne pas confondre politique **active** et politique **efficace**, ni politique **passive** et politique **inutile**. Une indemnisation généreuse mais limitée dans le temps, couplée à un accompagnement, peut favoriser un retour à l'emploi de meilleure qualité : c'est précisément l'argument de la flexisécurité, présentée plus loin.
+:::
+
+. . .
+
+::: {.cle}
+En protégeant le revenu des personnes sans emploi, les politiques passives répondent à un objectif de **justice sociale**, mais mal calibrées, elles peuvent réduire les incitations au retour à l'emploi : c'est la **trappe à inactivité**, étudiée en détail au CM 10 (Chapitre III, Section II).
+:::
+
+# 2. Trois modèles nationaux de marché du travail
+
+## Au-delà des instruments : des modèles cohérents
+
+Un pays ne choisit pas ses instruments isolément : il combine un niveau de **protection de l'emploi**, d'**indemnisation du chômage** et d'**accompagnement** des chômeurs dans une configuration cohérente. Trois grandes configurations se dégagent dans les pays développés.
+
+::: {.def}
+::: {.incremental}
+- **Flexibilité** (modèle anglo-saxon : États-Unis, Royaume-Uni) : faible protection + assurance chômage peu généreuse + faible accompagnement.
+- **Sécurité** (Europe continentale : France) : protection élevée + assurance chômage généreuse + accompagnement limité.
+- **Flexisécurité** (pays nordiques : Danemark) : faible protection + assurance chômage généreuse mais **conditionnelle** + accompagnement fort.
+:::
+:::
+
+## Comparer les trois modèles
+
+| | Flexibilité | Sécurité | Flexisécurité |
+|---|---|---|---|
+| **Protection de l'emploi** | Faible | Forte | Faible |
+| **Indemnisation** | Faible, courte durée | Variable, longue durée | Forte, longue, conditionnelle |
+| **Accompagnement** | Faible | Faible en général | Fort |
+| **Logique** | Ni emplois ni travailleurs protégés | Emplois **et** travailleurs protégés | Travailleurs protégés, pas les emplois |
+
+::: {.source}
+Source : d'après Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2017) [@benassy2017].
+:::
+
+## Protéger l'emploi : ce que mesure vraiment l'indice de l'OCDE {.smaller}
+
+```{r}
+#| label: fig-epl-cm09
+#| fig-cap: "Indice OCDE de protection de l'emploi (EPL Database, version 4, 2019 ; échelle 0 = aucune protection, 6 = protection maximale). Sur l'indicateur agrégé de protection des CDI contre les licenciements individuels et collectifs (EPRC), le Danemark est nettement sous la France, proche du Royaume-Uni : c'est ce qui justifie l'étiquette « Faible » du tableau précédent. L'écart avec la France est plus marqué encore sur les seules dispositions propres aux licenciements collectifs (EPC) : c'est surtout par cette marge que passe la flexibilité danoise, la protection contre le licenciement individuel restant proche de celle du Royaume-Uni. Source : OCDE, Indicators of Employment Protection (EPL Database, version 4, 2019), sdmx.oecd.org, dataflow DSD_EPL, indicateurs EPRC (individual and collective dismissals, regular contracts) et EPC (additional provisions for collective dismissals)."
+#| fig-width: 7.5
+#| fig-height: 4.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Indice OCDE de protection de l'emploi, EPL Database version 4 (2019),
+# echelle 0-6. Valeurs figees en dur, extraites de sdmx.oecd.org
+# (OECD.ELS.JAI, dataflow DSD_EPL@DF_EPL) :
+#   - EPRC : protection des CDI contre licenciements individuels ET collectifs
+#   - EPC : dispositions additionnelles propres aux licenciements collectifs
+df_epl <- data.frame(
+  pays = rep(c("États-Unis", "Royaume-Uni", "Danemark", "France"), 2),
+  indicateur = rep(c("Licenciements individuels et collectifs (EPRC)",
+                      "Dispositions additionnelles, licenciements collectifs (EPC)"),
+                    each = 4),
+  valeur = c(0.75, 1.74, 1.84, 2.45,
+             0.81, 2.31, 2.18, 3.25)
+)
+df_epl$pays <- factor(df_epl$pays, levels = c("États-Unis", "Royaume-Uni", "Danemark", "France"))
+df_epl$indicateur <- factor(df_epl$indicateur, levels = c(
+  "Licenciements individuels et collectifs (EPRC)",
+  "Dispositions additionnelles, licenciements collectifs (EPC)"))
+
+ggplot(df_epl, aes(x = pays, y = valeur, fill = indicateur)) +
+  geom_col(position = position_dodge(width = 0.72), width = 0.65) +
+  scale_fill_manual(values = c(unname(macro_pal["bleu2"]), unname(macro_pal["bleu"])), name = NULL) +
+  coord_cartesian(ylim = c(0, 6)) +
+  labs(x = NULL, y = "Indice OCDE de protection de l'emploi (0-6)") +
+  theme_macro() +
+  theme(legend.position = "bottom", legend.text = element_text(size = 8.5)) +
+  guides(fill = guide_legend(nrow = 2))
+```
+
+## Le point-clé : deux notions de protection distinctes
+
+::: {.cle}
+**Protection de l'emploi** (coût du licenciement) et **protection des travailleurs** (revenu, employabilité) ne sont **pas la même chose**. Le modèle danois découple les deux : licenciements faciles, mais niveau de vie et accompagnement élevés pour ceux qui perdent leur emploi.
+:::
+
+. . .
+
+Ce découplage est la clé pour comprendre pourquoi la flexisécurité n'est pas une simple version « molle » du modèle de flexibilité pure.
+
+## Le découplage visualisé
+
+```{mermaid}
+%%| fig-cap: "La flexisecurite decouple les deux protections : protection de l emploi faible, protection des travailleurs forte - une combinaison que les modeles purs n atteignent pas."
+flowchart TD
+    A[Deux protections distinctes] --> B["Protection de l emploi<br/>cout du licenciement"]
+    A --> C["Protection des travailleurs<br/>revenu et employabilite"]
+    B --> B1[Securite - forte]
+    B --> B2[Flexibilite et Flexisecurite - faible]
+    C --> C1[Securite et Flexisecurite - fortes]
+    C --> C2[Flexibilite - faible]
+```
+
+. . .
+
+::: {.cle}
+Sécurité protège les deux à la fois ; flexibilité ne protège ni l'un ni l'autre ; flexisécurité **sépare** les deux : c'est cette combinaison inédite qui définit le modèle.
+:::
+
+# 3. La flexisécurité danoise et son « triangle d'or »
+
+## Une définition : protéger les personnes, pas les emplois
+
+::: {.def}
+**Flexisécurité** (contraction de *flexibilité* et *sécurité*) : modèle conjuguant flexibilité pour les employeurs et sécurité pour les chercheurs d'emploi. Principe directeur : **protéger les personnes plutôt que les emplois**.
+:::
+
+. . .
+
+Le terme naît des réformes menées aux **Pays-Bas et au Danemark en 1999**. Le modèle danois en est devenu la référence internationale, du fait de ses résultats.
+
+## Trois piliers qui se renforcent mutuellement
+
+Le modèle danois repose sur : une grande liberté de licenciement ; une forte mobilité de l'emploi ; une indemnisation très généreuse du chômage ; un effort important de formation ; des structures institutionnelles décentralisées (conseils régionaux, municipalités, *job centers*) pilotant finement l'accompagnement.
+
+. . .
+
+On résume cette logique par le **« triangle d'or »**, dont les trois sommets sont : flexibilité, indemnisation généreuse, activation.
+
+## Le triangle d'or danois {.smaller}
+
+Trois sommets qui se construisent, et se renforcent, ensemble : cliquez pour les faire apparaître un à un.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-triangle-or-cm09-1
+#| fig-width: 6.5
+#| fig-height: 5.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+sommets <- data.frame(
+  x = c(0, 1, 0.5),
+  y = c(0, 0, 0.87),
+  label = c("Flexibilité\n(licenciements aisés,\nmobilité élevée)",
+            "Indemnisation\ngénéreuse\n(niveau et durée)",
+            "Activation\n(accompagnement,\ncontrôle, formation)")
+)
+
+fleches <- data.frame(
+  x    = c(0.08, 0.92, 0.5),
+  y    = c(0.05, 0.10, 0.80),
+  xend = c(0.42, 0.58, 0.10),
+  yend = c(0.75, 0.75, 0.10)
+)
+
+# Construit le triangle d'or sommet par sommet : k = 1 revele la seule
+# flexibilite ; k = 2 ajoute l'indemnisation, reliee par un simple trait
+# pointille (deux piliers, pas encore de renforcement mutuel) ; k = 3 ajoute
+# l'activation, le polygone plein et les trois fleches de renforcement qui
+# bouclent le triangle d'or.
+plot_triangle <- function(k) {
+
+  p <- ggplot()
+
+  if (k >= 3) {
+    p <- p +
+      geom_polygon(data = sommets, aes(x, y), fill = macro_pal["bleu2"], alpha = 0.12,
+                   color = macro_pal["bleu"], linewidth = 0.9) +
+      geom_curve(data = fleches[1, ], aes(x = x, y = y, xend = xend, yend = yend),
+                 curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
+                 color = macro_pal["gris"], linewidth = 0.6) +
+      geom_curve(data = fleches[2, ], aes(x = x, y = y, xend = xend, yend = yend),
+                 curvature = -0.25, arrow = arrow(length = unit(0.22, "cm")),
+                 color = macro_pal["gris"], linewidth = 0.6) +
+      geom_curve(data = fleches[3, ], aes(x = x, y = y, xend = xend, yend = yend),
+                 curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
+                 color = macro_pal["gris"], linewidth = 0.6)
+  } else if (k == 2) {
+    p <- p +
+      geom_segment(aes(x = 0, y = 0, xend = 1, yend = 0), linetype = "dashed",
+                   color = macro_pal["gris"], linewidth = 0.5)
+  }
+
+  sommets_k <- sommets[seq_len(k), , drop = FALSE]
+  nudges    <- c(-0.09, -0.09, 0.11)[seq_len(k)]
+
+  p +
+    geom_point(data = sommets_k, aes(x, y), size = 4, color = macro_pal["bleu"]) +
+    geom_label(data = sommets_k, aes(x, y, label = label),
+               nudge_y = nudges,
+               size = 3.5, fontface = "bold", color = "#1f4e79",
+               linewidth = 0, fill = "white") +
+    coord_fixed(clip = "off") +
+    xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
+    theme_void() +
+    theme(plot.margin = margin(10, 10, 10, 10))
+}
+
+plot_triangle(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-triangle-or-cm09-2
+#| fig-width: 6.5
+#| fig-height: 5.6
+plot_triangle(2)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-triangle-or-cm09-3
+#| fig-width: 6.5
+#| fig-height: 5.6
+plot_triangle(3)
+```
+:::
+
+:::
+
+::: {.source}
+Le « triangle d'or » de la flexisécurité danoise : flexibilité, indemnisation généreuse et activation se renforcent mutuellement, les trois flèches bouclant le triangle une fois les trois sommets réunis.
+:::
+
+## Des résultats qui ont fait la réputation du modèle
+
+::: {.cle}
+En une dizaine d'années, le Danemark a fortement réduit son chômage, nettement sous le niveau français. Son taux de pauvreté reste également inférieur à celui de la France.
+:::
+
+. . .
+
+Ces résultats reposent sur des **prélèvements obligatoires élevés**, qui financent à la fois l'indemnisation généreuse et l'effort d'activation : le modèle a un coût budgétaire important.
+
+::: {.source}
+Attention à la mesure : le chiffre de 2,5-3 % parfois cité pour le Danemark est le taux **national** (« net unemployment », Danmarks Statistik, demandeurs d'emploi immédiatement disponibles) : il n'est pas comparable à la mesure harmonisée BIT/OCDE présentée à la diapo suivante, sur laquelle repose toute comparaison internationale.
+:::
+
+## Le Danemark reste sous la France : taux de chômage harmonisé, 2000-2024 {.smaller}
+
+```{r}
+#| label: fig-chomage-dk-fr-us-cm09
+#| fig-cap: "Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024. Le Danemark reste durablement sous la France, mais pas au niveau très bas (2,5-3 %) parfois cité pour la fin des années 2020 : ce chiffre est la mesure administrative nationale danoise (chômage « net » enregistré, Danmarks Statistik), non comparable à la série harmonisée reportée ici. Les États-Unis illustrent le modèle de flexibilité pure : chômage bas hors récession, mais sans le filet de l'activation danoise. Sources : OCDE/BIT, taux de chômage harmonisé annuel (séries LRHUTTTTFRA156S, LRHUTTTTDKA156S, LRHUTTTTUSA156S), via FRED, Federal Reserve Bank of St. Louis, d'après OCDE."
+#| fig-width: 8
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+annees <- 2000:2024
+
+# Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024.
+# Source : OCDE/BIT, series LRHUTTTTFRA156S / LRHUTTTTDKA156S / LRHUTTTTUSA156S,
+# via FRED (Federal Reserve Bank of St. Louis), consultees le 2026-07-10.
+france <- c(9.6, 8.7, 8.6, 8.5, 8.9, 8.9, 8.9, 8.0, 7.4, 9.1,
+            9.3, 9.2, 9.8, 10.3, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
+            8.0, 7.9, 7.3, 7.4, 7.5)
+danemark <- c(4.3, 4.5, 4.6, 5.4, 5.5, 4.8, 3.9, 3.8, 3.7, 6.4,
+              7.8, 7.8, 7.8, 7.4, 6.9, 6.3, 6.0, 5.8, 5.2, 5.0,
+              5.6, 5.1, 4.5, 5.1, 6.2)
+usa <- c(4.0, 4.7, 5.8, 6.0, 5.5, 5.1, 4.6, 4.6, 5.8, 9.3,
+         9.6, 9.0, 8.1, 7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7,
+         8.1, 5.4, 3.7, 3.6, 4.0)
+
+df_chomage <- data.frame(
+  annee = rep(annees, 3),
+  taux  = c(france, danemark, usa),
+  pays  = rep(c("France", "Danemark", "États-Unis"), each = length(annees))
+)
+df_chomage$pays <- factor(df_chomage$pays, levels = c("France", "Danemark", "États-Unis"))
+
+ggplot(df_chomage, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
+  geom_line() +
+  scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
+                                 "Danemark" = unname(macro_pal["vert"]),
+                                 "États-Unis" = unname(macro_pal["gris"])),
+                      name = NULL) +
+  scale_linewidth_manual(values = c("France" = 1.1, "Danemark" = 1.1, "États-Unis" = 0.7),
+                          guide = "none") +
+  scale_x_continuous(breaks = seq(2000, 2024, 4)) +
+  labs(x = "Année", y = "Taux de chômage harmonisé (%)") +
+  theme_macro()
+```
+
+## Le troisième sommet a un coût : dépenses de politiques actives {.smaller}
+
+```{r}
+#| label: fig-almp-cm09
+#| fig-cap: "Dépenses publiques de politiques actives de l'emploi, % du PIB, 2023 (service public de l'emploi et administration, formation, incitations à l'embauche, emploi protégé, création directe d'emplois, aide à la création d'entreprise). Le Danemark y consacre plus de 20 fois la part du PIB des États-Unis : la flexisécurité n'est pas une dérégulation gratuite, l'activation a un coût budgétaire assumé, cohérent avec les prélèvements obligatoires élevés mentionnés plus haut. Source : OCDE, Public expenditure and participants in labour market programmes (base LMP), sdmx.oecd.org, dataflow DSD_LMP, catégorie « Total active programmes » (LMP_10T70), % du PIB, 2023."
+#| fig-width: 6.5
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Depenses publiques de politiques actives de l'emploi (% du PIB), 2023.
+# Source : OCDE, base LMP (OECD.ELS.JAI, dataflow DSD_LMP@DF_LMP),
+# mesure EXP, programme LMP_10T70 (categories 1-7, actives),
+# unite PT_B1GQ (% du PIB), consultee le 2026-07-10.
+df_almp <- data.frame(
+  pays    = c("États-Unis", "Allemagne", "France", "Danemark"),
+  depense = c(0.07, 0.52, 0.78, 1.54)
+)
+df_almp$pays <- factor(df_almp$pays, levels = df_almp$pays)
+
+ggplot(df_almp, aes(x = pays, y = depense, fill = pays)) +
+  geom_col(width = 0.6, show.legend = FALSE) +
+  geom_text(aes(label = scales::label_number(decimal.mark = ",", accuracy = 0.01)(depense)),
+            vjust = -0.5, size = 4, color = "#1f4e79", fontface = "bold") +
+  scale_fill_manual(values = c(unname(macro_pal["gris"]), unname(macro_pal["bleu2"]),
+                                unname(macro_pal["or"]), unname(macro_pal["vert"]))) +
+  coord_cartesian(ylim = c(0, 1.75)) +
+  labs(x = NULL, y = "Dépenses de politiques actives (% du PIB)") +
+  theme_macro()
+```
+
+## À retenir : un triptyque, pas une dérégulation {.callout-important}
+
+::: {.callout-important}
+## À retenir
+La flexisécurité n'est pas une simple dérégulation : c'est un **triptyque équilibré**. Retirer un sommet, flexibiliser sans indemniser, ou indemniser sans activer, rapproche du modèle « flexibilité » pur, avec ses coûts sociaux. Cette cohérence explique la difficulté à « importer » le modèle tel quel ailleurs.
+:::
+
+# 4. Les quatre formes de flexibilité
+
+## « Flexibilité » recouvre quatre réalités différentes
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.def}
+**Numérique externe** : ajuster le **volume de travail** en faisant varier le nombre de travailleurs (intérim, CDD, temps partiel).
+
+**Numérique interne** : ajuster le volume de travail via les **heures travaillées** plutôt que l'effectif (heures supplémentaires, activité partielle).
+:::
+:::
+
+::: {.column width="50%"}
+::: {.def}
+**Fonctionnelle** (ou qualitative) : exploiter l'**organisation du travail** (polyvalence, rotation des tâches).
+
+**Salariale** : sensibilité des **salaires** à la conjoncture (cf. WS-PS, CM 8 : plus de flexibilité salariale rapproche du plein-emploi).
+:::
+:::
+:::
+
+## Relier chaque forme à des dispositifs concrets
+
+| Forme de flexibilité | Marge d'ajustement | Exemple de dispositif français |
+|---|---|---|
+| Numérique externe | Effectif | CDD, intérim, rupture conventionnelle |
+| Numérique interne | Heures travaillées | Heures supplémentaires, activité partielle |
+| Fonctionnelle | Organisation du travail | Polyvalence, rotation des tâches |
+| Salariale | Niveau du salaire | Négociation salariale décentralisée |
+
+. . .
+
+::: {.cle}
+Une même réforme peut relever de **plusieurs** formes à la fois : la rupture conventionnelle touche au numérique externe **et** à la sécurité des parcours professionnels.
+:::
+
+# 5. Protéger les travailleurs plutôt que les emplois
+
+## Quatre notions de sécurité à ne pas confondre
+
+::: {.def}
+**Sécurité de l'emploi** : garder un emploi donné dans une entreprise donnée. Se mesure par le **taux de rotation de la main-d'œuvre** :
+$$
+\dfrac{\text{embauches} + \text{sorties}}{\text{effectif en début de période}}
+$$
+
+**Sécurité de l'employabilité** : avoir *un* emploi, pas nécessairement chez le même employeur : la sécurité privilégiée par la flexisécurité.
+:::
+
+. . .
+
+::: {.def}
+**Sécurité des revenus** : obtenir un revenu tout au long de la vie, y compris hors emploi (protection sociale).
+
+**Sécurité de conciliation** : concilier activité rémunérée et autres activités (famille, formation, loisirs).
+:::
+
+. . .
+
+::: {.cle}
+La flexisécurité déplace l'objectif de la sécurité *de l'emploi* vers la sécurité *de la personne*, un fil directeur qui éclaire les réformes françaises étudiées au CM 10 (portabilité des droits, compte personnel de formation).
+:::
+
+## Flexisécurité : deux typologies qui se répondent
+
+```{mermaid}
+%%| fig-cap: "La flexisecurite s appuie sur deux typologies paralleles : quatre formes de flexibilite pour les employeurs, quatre notions de securite pour les travailleurs."
+flowchart TD
+    F[Flexisecurite] --> FL[Flexibilite - 4 formes]
+    F --> SE[Securite - 4 notions]
+    FL --> FL1[Numerique externe]
+    FL --> FL2[Numerique interne]
+    FL --> FL3[Fonctionnelle]
+    FL --> FL4[Salariale]
+    SE --> SE1[De l emploi]
+    SE --> SE2[De l employabilite]
+    SE --> SE3[Des revenus]
+    SE --> SE4[De conciliation]
+```
+
+. . .
+
+::: {.cle}
+Ces deux arbres se répondent terme à terme : c'est cette architecture à deux étages, flexibilité pour l'employeur, sécurité pour la personne, qui distingue la flexisécurité d'une simple dérégulation.
+:::
+
+# Synthèse
+
+## À retenir
+
+::: {.callout-important}
+## Synthèse de la séance
+::: {.incremental}
+- Les politiques de l'emploi se répartissent en deux logiques : **actives** (créer des emplois) et **passives** (gérer le chômage) : actif ≠ efficace, passif ≠ inutile.
+- Trois modèles nationaux cohérents : **flexibilité** (ni emplois ni travailleurs protégés), **sécurité** (les deux protégés, au prix de la rigidité), **flexisécurité** (travailleurs protégés, pas les emplois).
+- La flexisécurité repose sur un **triangle d'or** : flexibilité + indemnisation généreuse + activation, un triptyque **indissociable**.
+- La flexibilité recouvre quatre réalités distinctes : **numérique externe**, **numérique interne**, **fonctionnelle**, **salariale**.
+- La sécurité elle-même recouvre plusieurs notions : de l'**emploi**, de l'**employabilité**, des **revenus**, de **conciliation**.
+:::
+:::
+
+## Pour la prochaine fois
+
+::: {.def}
+**CM 10 : Chapitre III, Section II : les politiques de l'emploi en France**
+
+- Relire la Section I de ce CM (modèles, triangle d'or, formes de flexibilité).
+- Repérer, pour chaque réforme française que vous connaissez déjà, à laquelle des trois logiques (coût du travail, flexibilisation, activation) elle se rattache.
+- Préparer le TD 7 (appariement + trappe à inactivité) et le TD 8 (CC2 : flexisécurité, coût du travail, réformes françaises).
+:::
+
+::: {.source}
+Sources : Chapitre III, Section I (`cours/chap3.qmd`) ; Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2017) [@benassy2017].
+:::

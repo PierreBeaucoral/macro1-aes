@@ -1,0 +1,509 @@
+---
+title: "La courbe de Phillips : de l'arbitrage keynésien au NAIRU"
+subtitle: "Chapitre II, Partie 2, §II.4 : Inflation, chômage et anticipations"
+---
+
+## Plan de la séance
+
+1. Phillips (1958) : une corrélation empirique inflation-chômage
+2. L'interprétation keynésienne : un arbitrage exploitable par les gouvernements
+3. La critique de Friedman-Phelps : anticipations et NAIRU
+4. Les années 1970 : la stagflation fait disparaître la relation
+5. Les anticipations rationnelles : l'absence d'arbitrage, même à court terme
+
+::: {.source}
+Sources : @phillips1958 ; @friedman1968 ; *Chapitre II, Partie 2, section II*.
+:::
+
+## Objectifs
+
+::: {.cle}
+**À l'issue de cette séance, vous saurez :**
+
+- Reconstituer la relation empirique découverte par Phillips (1958) et son interprétation keynésienne.
+- Expliquer pourquoi cette relation s'est brisée après les chocs pétroliers des années 1970 (stagflation).
+- Distinguer courbe de Phillips de **court terme** (décroissante, anticipations données) et de **long terme** (verticale au NAIRU $u^n$).
+- Définir le NAIRU et l'équation de Phillips augmentée des anticipations $\pi = \pi^a - a\,(u-u^n)$.
+- Expliquer pourquoi les anticipations rationnelles suppriment tout arbitrage, même à court terme.
+:::
+
+# 1. Phillips (1958) : une découverte empirique {background-color="#1f4e79"}
+
+## Phillips met en évidence une relation inverse salaires-chômage
+
+::: {.def}
+**A. W. Phillips (1958)** étudie le Royaume-Uni sur 1861-1957 et documente une **corrélation négative** entre le taux de croissance des salaires nominaux et le taux de chômage [@phillips1958].
+:::
+
+. . .
+
+::: {.incremental}
+- Chômage élevé $\Rightarrow$ faible pression sur les salaires nominaux.
+- Chômage faible $\Rightarrow$ forte pression à la hausse sur les salaires nominaux.
+- **Samuelson et Solow (1960)** retrouvent une relation similaire aux États-Unis et l'étendent à l'**inflation** : les entreprises répercutant les hausses de salaires sur leurs prix de vente, chômage faible $\Leftrightarrow$ inflation élevée.
+:::
+
+::: {.source}
+Phillips (1958) ; Samuelson et Solow (1960).
+:::
+
+## L'interprétation keynésienne : le chômage explique l'inflation
+
+Dans cette lecture, la causalité va du marché du travail vers les prix :
+
+::: {.columns}
+::: {.column width="50%"}
+**Chômage faible (proche du plein emploi)**
+
+- Demande de travail des entreprises $>$ offre de travail
+- Hausse des salaires nominaux $W$
+- Hausse du niveau général des prix $P$
+:::
+::: {.column width="50%"}
+**Chômage élevé (récession)**
+
+- Offre de travail $>$ demande de travail
+- Stagnation, voire baisse de $W$
+- Ralentissement de la hausse de $P$
+:::
+:::
+
+. . .
+
+::: {.cle}
+La courbe de Phillips relâche l'hypothèse de rigidité des prix et des salaires : elle relie explicitement l'état du marché du travail à l'évolution de l'inflation.
+:::
+
+## Deux chaînes causales symétriques relient chômage et prix
+
+```{mermaid}
+%%| fig-cap: "Selon la lecture keynésienne, l'état du marché du travail détermine l'évolution des salaires nominaux, qui se répercute ensuite sur le niveau général des prix."
+flowchart TD
+    A[Etat du marche du travail] --> B[Chomage faible - pres du plein emploi]
+    A --> C[Chomage eleve - recession]
+    B --> B1[Demande de travail superieure a l offre]
+    B1 --> B2[Hausse des salaires nominaux W]
+    B2 --> B3[Hausse du niveau general des prix P]
+    C --> C1[Offre de travail superieure a la demande]
+    C1 --> C2[Stagnation ou baisse de W]
+    C2 --> C3[Ralentissement de la hausse de P]
+```
+
+## Dans les années 1950-1960, l'arbitrage semble un choix de politique économique
+
+::: {.incremental}
+- La relation inflation-chômage devient **centrale** dans la politique macroéconomique d'après-guerre.
+- Les gouvernements semblent pouvoir **choisir** un point sur la courbe : accepter un peu plus d'inflation pour obtenir un peu moins de chômage, ou l'inverse.
+- Cette lecture reste dominante jusqu'à la fin des années 1960.
+:::
+
+. . .
+
+::: {.def}
+**Arbitrage inflation-chômage** : l'idée qu'une politique de relance (monétaire ou budgétaire) permettrait de réduire durablement le chômage au prix d'une inflation plus élevée, et réciproquement.
+:::
+
+# 2. La critique de Friedman-Phelps : anticipations et NAIRU {background-color="#1f4e79"}
+
+## Friedman et Phelps inversent le sens de la causalité
+
+::: {.def}
+**Friedman (1968) et Phelps** réinterprètent la relation en plaçant la causalité dans l'autre sens : ce sont les **salaires et les prix** qui expliquent le chômage, via le rôle des anticipations d'inflation [@friedman1968].
+:::
+
+. . .
+
+::: {.incremental}
+- Vision néoclassique sous-jacente : pour une productivité donnée, l'emploi dépend du **salaire réel** $w = W/P$.
+- Une politique monétaire expansive fait monter $P$ ; si les salariés ne réagissent pas immédiatement, le salaire réel baisse $\Rightarrow$ le coût du travail baisse $\Rightarrow$ le chômage recule.
+- Cet effet ne dure que tant que les salariés **n'ont pas perçu** la baisse de leur pouvoir d'achat.
+:::
+
+## L'effet de l'inflation sur l'emploi n'est que transitoire
+
+::: {.def}
+**Anticipations adaptatives** : les agents forment leurs anticipations d'inflation à partir de l'évolution *passée* des prix, et corrigent progressivement leurs erreurs à mesure que de nouvelles observations arrivent.
+:::
+
+. . .
+
+::: {.incremental}
+- Dès que les salariés réalisent la baisse de leur salaire réel : ils réduisent leur offre de travail ou négocient une hausse de salaire nominal.
+- Dans les deux cas, le salaire réel (et le chômage) reviennent à leur niveau antérieur.
+- **Conséquence** : l'arbitrage inflation-chômage n'existe qu'à **court terme**, tant que l'inflation observée dépasse l'inflation anticipée.
+:::
+
+## Pourquoi l'effet sur le chômage n'est que transitoire
+
+```{mermaid}
+%%| fig-cap: "Une politique monétaire expansive ne réduit le chômage que le temps que les salariés ne perçoivent pas la baisse de leur salaire réel : dès qu'ils l'observent et négocient, le chômage revient à son niveau antérieur."
+flowchart LR
+    A[Politique monetaire expansive] --> B[Hausse du niveau general des prix P]
+    B --> C[Le salaire reel baisse a court terme]
+    C --> D[Cout du travail plus faible]
+    D --> E[Chomage recule temporairement]
+    E --> F[Salaries percoivent la baisse de leur pouvoir d achat]
+    F --> G[Salaire reel et chomage reviennent a leur niveau anterieur]
+```
+
+## Le NAIRU : le taux de chômage compatible avec une inflation stable
+
+::: {.def}
+**NAIRU** (*Non-Accelerating Inflation Rate of Unemployment*) : taux de chômage pour lequel l'inflation observée est égale à l'inflation anticipée ($\pi = \pi^a$), donc stable.
+
+**NAIRU = taux de chômage naturel $u^n$ = taux de chômage structurel.**
+:::
+
+. . .
+
+::: {.incremental}
+- Si $u < u^n$ : l'inflation **accélère**.
+- Si $u > u^n$ : l'inflation **décélère**.
+- Depuis les années 1970, le NAIRU est estimé à environ **6 %** aux États-Unis ; depuis les années 1990, autour de **9-10 %** dans plusieurs pays européens.
+:::
+
+## La courbe de Phillips de court terme et de long terme
+
+```{r}
+#| label: fig-phillips
+#| fig-cap: "Courbe de Phillips de court terme et de long terme : à long terme, le chômage revient au taux naturel uⁿ (NAIRU), quel que soit le niveau d'inflation anticipée."
+#| fig-width: 6
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+u <- seq(2, 12, length.out = 200)
+un <- 7
+a <- 1.1
+pi_a1 <- 2
+pi_a2 <- 5
+pi_ct1 <- pi_a1 - a * (u - un)
+pi_ct2 <- pi_a2 - a * (u - un)
+
+df_phil <- data.frame(
+  u = rep(u, 2),
+  pi = c(pi_ct1, pi_ct2),
+  courbe = rep(c("CT : anticipations basses (pi_a = 2%)",
+                 "CT : anticipations hautes (pi_a = 5%)"), each = length(u))
+)
+
+ggplot() +
+  geom_line(data = df_phil, aes(x = u, y = pi, color = courbe), linewidth = 1.1) +
+  geom_vline(xintercept = un, linetype = "dashed", color = macro_pal[["vert"]], linewidth = 0.7) +
+  annotate("text", x = un + 0.2, y = 9, label = "Long terme :\nu = un (NAIRU)",
+           hjust = 0, size = 3.4, color = macro_pal[["vert"]]) +
+  scale_color_manual(values = c("CT : anticipations basses (pi_a = 2%)" = macro_pal[["bleu"]],
+                                 "CT : anticipations hautes (pi_a = 5%)" = macro_pal[["rouge"]])) +
+  coord_cartesian(xlim = c(2, 12), ylim = c(-3, 10), expand = FALSE) +
+  labs(x = "Taux de chômage (u, %)", y = "Taux d'inflation (pi, %)") +
+  theme_macro()
+```
+
+## L'équation de Phillips augmentée des anticipations formalise ce mécanisme
+
+$$
+\pi = \pi^a - a\,(u - u^n)
+$$
+
+où $\pi$ est l'inflation observée, $\pi^a$ l'inflation anticipée, $u^n$ le taux de chômage naturel (NAIRU) et $a > 0$ un paramètre de sensibilité.
+
+. . .
+
+::: {.cle}
+::: {.incremental}
+- **Court terme** : $\pi^a$ est donné $\Rightarrow$ chaque droite (bleue ou rouge sur le graphique) reste **décroissante**.
+- **Long terme** : les anticipations s'ajustent ($\pi^a = \pi$) $\Rightarrow$ la relation devient **verticale** au niveau $u^n$.
+:::
+:::
+
+# 3. Les années 1970 : la disparition de la courbe {background-color="#1f4e79"}
+
+## Les chocs pétroliers provoquent une stagflation inédite
+
+::: {.def}
+**Stagflation** : coexistence d'une inflation élevée et d'un chômage élevé, situation que la courbe de Phillips initiale ne peut pas expliquer (elle prédit une relation *inverse* entre les deux).
+:::
+
+. . .
+
+::: {.incremental}
+- Chocs pétroliers de **1973** et **1979** : hausse des coûts de production dans un contexte de ralentissement des gains de productivité.
+- Indexation plus systématique des salaires sur l'inflation passée $\Rightarrow$ spirale prix-salaires.
+- À partir de 1970, la relation inflation-chômage se **brise** aux États-Unis comme en France.
+:::
+
+## Le nuage de Phillips réel : la relation existe (1960-1969), puis se brise (1970-1984) {.smaller}
+
+Les données confirment ce schéma théorique : chômage et inflation annuels aux États-Unis, cliquez pour faire apparaître la seconde période.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-phillips-reel-1
+#| fig-width: 7
+#| fig-height: 3.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux de chomage annuel moyen et inflation des prix a la consommation (IPC)
+# annuelle, Etats-Unis, 1960-1984. Valeurs figees en dur (25 points), source :
+# Bureau of Labor Statistics (BLS), series UNRATE (taux de chomage) et
+# CPIAUCSL (indice des prix a la consommation, variation annuelle en %),
+# via FRED, Federal Reserve Bank of St. Louis (valeurs bien etablies,
+# reprises notamment par Blanchard-Cohen, Macroeconomie).
+annee_phil <- 1960:1984
+u_phil <- c(5.5, 6.7, 5.5, 5.7, 5.2, 4.5, 3.8, 3.8, 3.6, 3.5,
+            4.9, 5.9, 5.6, 4.9, 5.6, 8.5, 7.7, 7.1, 6.1, 5.8,
+            7.1, 7.6, 9.7, 9.6, 7.5)
+pi_phil <- c(1.7, 1.0, 1.0, 1.3, 1.3, 1.6, 2.9, 3.1, 4.2, 5.5,
+             5.7, 4.4, 3.2, 6.2, 11.0, 9.1, 5.8, 6.5, 7.6, 11.3,
+             13.5, 10.3, 6.2, 3.2, 4.3)
+
+df_phil_reel <- data.frame(annee = annee_phil, u = u_phil, pi = pi_phil)
+df_phil_reel$periode <- ifelse(df_phil_reel$annee <= 1969,
+                                "1960-1969 : la relation tient",
+                                "1970-1984 : la relation se brise")
+df_phil_reel$periode <- factor(df_phil_reel$periode,
+                                levels = c("1960-1969 : la relation tient",
+                                           "1970-1984 : la relation se brise"))
+
+# Trace le nuage cumulatif : stage = 1 -> seule la decennie 1960 (relation
+# nette, decroissante) ; stage = 2 -> ajoute 1970-1984 (dispersion en boucles,
+# la relation stable disparait).
+plot_phillips_reel <- function(stage) {
+  df_stage <- if (stage == 1) subset(df_phil_reel, annee <= 1969) else df_phil_reel
+
+  ggplot(df_stage, aes(x = u, y = pi, color = periode)) +
+    geom_path(linewidth = 0.6, alpha = 0.6,
+              arrow = arrow(length = unit(0.15, "cm"), type = "open")) +
+    geom_point(size = 2.6) +
+    scale_color_manual(values = c("1960-1969 : la relation tient" = unname(macro_pal["bleu"]),
+                                   "1970-1984 : la relation se brise" = unname(macro_pal["rouge"])),
+                        drop = FALSE) +
+    coord_cartesian(xlim = c(3, 10.5), ylim = c(0, 14)) +
+    labs(x = "Taux de chômage (%)", y = "Inflation IPC (%)") +
+    theme_macro()
+}
+
+plot_phillips_reel(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-phillips-reel-2
+#| fig-width: 7
+#| fig-height: 3.5
+plot_phillips_reel(2)
+```
+:::
+
+:::
+
+::: {.source}
+Nuage de Phillips empirique, États-Unis, 1960-1984 (chômage en abscisse, inflation en ordonnée). En bleu (1960-1969) : la relation négative de Phillips (1958) est nettement visible. En rouge (1970-1984) : les chocs pétroliers et l'ancrage des anticipations d'inflation font disparaître la relation stable, qui dessine désormais des boucles plutôt qu'une courbe unique. Source : Bureau of Labor Statistics (BLS), séries UNRATE et CPIAUCSL, via FRED, Federal Reserve Bank of St. Louis.
+:::
+
+## La stagflation en direct : inflation et chômage montent ensemble (1968-1985) {.smaller}
+
+```{r}
+#| label: fig-stagflation-cm07
+#| fig-cap: "Taux de chômage annuel moyen et inflation des prix à la consommation (IPC), États-Unis, 1968-1985 (lignes verticales pointillées : chocs pétroliers de 1973 et 1979). Lors des deux chocs, chômage et inflation montent ensemble : c'est la stagflation, une configuration que la courbe de Phillips initiale (relation inverse) ne peut pas expliquer. Source : Bureau of Labor Statistics (BLS), séries UNRATE et CPIAUCSL, via FRED, Federal Reserve Bank of St. Louis."
+#| fig-width: 7.5
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Meme source que la figure precedente (BLS, series UNRATE / CPIAUCSL, via
+# FRED), etendue d'un an (1985) pour couvrir la sortie du second choc.
+annee_stagf <- 1968:1985
+u_stagf <- c(3.6, 3.5, 4.9, 5.9, 5.6, 4.9, 5.6, 8.5, 7.7, 7.1,
+             6.1, 5.8, 7.1, 7.6, 9.7, 9.6, 7.5, 7.2)
+pi_stagf <- c(4.2, 5.5, 5.7, 4.4, 3.2, 6.2, 11.0, 9.1, 5.8, 6.5,
+              7.6, 11.3, 13.5, 10.3, 6.2, 3.2, 4.3, 3.6)
+
+df_stagf <- data.frame(
+  annee  = rep(annee_stagf, 2),
+  valeur = c(u_stagf, pi_stagf),
+  serie  = rep(c("Taux de chômage", "Inflation (IPC)"), each = length(annee_stagf))
+)
+df_stagf$serie <- factor(df_stagf$serie, levels = c("Taux de chômage", "Inflation (IPC)"))
+
+ggplot(df_stagf, aes(x = annee, y = valeur, color = serie)) +
+  geom_vline(xintercept = c(1973, 1979), linetype = "dashed",
+             color = unname(macro_pal["gris"]), linewidth = 0.4) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 1.6) +
+  scale_color_manual(values = c("Taux de chômage" = unname(macro_pal["bleu"]),
+                                 "Inflation (IPC)" = unname(macro_pal["rouge"]))) +
+  scale_x_continuous(breaks = seq(1968, 1985, 2)) +
+  labs(x = "Année", y = "%") +
+  theme_macro()
+```
+
+## Deux explications concurrentes de la rupture
+
+::: {.columns}
+::: {.column width="50%"}
+**Approche par les chocs d'offre**
+
+Un choc d'offre négatif (coût du pétrole) déplace simultanément la production potentielle à la baisse et les prix à la hausse : chômage et inflation augmentent ensemble.
+:::
+::: {.column width="50%"}
+**Approche monétariste**
+
+L'accent est mis sur la réaction des agents à une politique monétaire expansive répétée : ils intègrent progressivement l'inflation dans leurs anticipations, ce qui déplace la courbe de Phillips de court terme vers la droite.
+:::
+:::
+
+. . .
+
+::: {.cle}
+Les deux lectures convergent sur un point : la courbe de Phillips de court terme n'est **pas stable**, elle se déplace avec les anticipations d'inflation.
+:::
+
+## À long terme, il n'existe plus aucun arbitrage inflation-chômage
+
+::: {.incremental}
+- Si un gouvernement tente de maintenir indéfiniment $u < u^n$ en tolérant plus d'inflation, les agents ajustent leurs anticipations : la courbe de Phillips de court terme se déplace vers la droite.
+- Le chômage revient alors à $u^n$, mais à un niveau d'inflation **plus élevé**.
+- À long terme, seul le niveau de production potentielle (quantité et qualité du travail, stock de capital, progrès technique) détermine le chômage, pas l'inflation.
+:::
+
+. . .
+
+::: {.cle}
+La politique monétaire ne peut réduire le chômage que **temporairement**. À long terme, elle n'a d'effet que sur les prix, pas sur l'emploi.
+:::
+
+# 4. Anticipations rationnelles : au-delà du NAIRU {background-color="#1f4e79"}
+
+## Les anticipations rationnelles suppriment l'arbitrage même à court terme
+
+::: {.def}
+**Anticipations rationnelles** (J. Muth, 1961) : les agents utilisent *toute* l'information disponible pour former leurs anticipations, de sorte qu'en moyenne l'inflation anticipée est égale à l'inflation observée.
+:::
+
+. . .
+
+::: {.incremental}
+- Une étape supplémentaire est franchie par la **Nouvelle Macroéconomie Classique** (Robert Lucas, Thomas Sargent, Neil Wallace).
+- Si les agents anticipent correctement une politique monétaire, ils l'intègrent immédiatement dans leurs décisions de salaire et de prix.
+- Le salaire réel n'est alors influencé **que par des déterminants réels** (productivité), pas par la politique monétaire anticipée.
+:::
+
+## Seule une politique monétaire surprise a un effet réel
+
+::: {.columns}
+::: {.column width="50%"}
+**Politique anticipée**
+
+Aucun effet réel, même à court terme : les prix et les salaires s'ajustent immédiatement, le chômage reste à $u^n$.
+:::
+::: {.column width="50%"}
+**Politique surprise**
+
+Effet transitoire possible sur l'emploi, tant que les agents n'ont pas encore révisé leurs anticipations.
+:::
+:::
+
+. . .
+
+::: {.cle}
+Avec les anticipations rationnelles, l'arbitrage keynésien initial disparaît complètement : même à court terme, une politique monétaire annoncée et crédible ne change pas l'emploi.
+:::
+
+## Depuis les années 1990, la relation inflation-chômage diverge selon les pays
+
+::: {.callout-tip}
+## Actualisation
+::: {.incremental}
+- États-Unis, Allemagne, pays nordiques : faible inflation **et** faible chômage.
+- France : faible inflation mais chômage **élevé**.
+:::
+
+Ce constat suggère que la position et la pente de la courbe de Phillips dépendent fortement des **institutions nationales** du marché du travail, un thème approfondi avec le modèle WS-PS (CM 8).
+:::
+
+## Depuis 1990, la relation diverge selon les institutions nationales {.smaller}
+
+```{r}
+#| label: fig-divergence-cm07
+#| fig-cap: "Taux de chômage (%), France, Allemagne, Danemark, États-Unis, années sélectionnées 1991-2023. France : série nationale BIT (Banque mondiale, WDI) ; comparaison indicative. L'Allemagne bascule d'un chômage élevé (environ 11 % en 2005) à l'un des plus bas d'Europe après les réformes Hartz (2003-2005) ; le Danemark reste durablement modéré depuis la flexicurité de 1994 ; les États-Unis fluctuent avec le cycle mais reviennent vite à un chômage bas ; la France reste seule à un niveau structurellement élevé. Source : France, Banque mondiale (WDI, SL.UEM.TOTL.NE.ZS) ; autres pays, OCDE/Eurostat, taux de chômage harmonisé (définition BIT), moyenne annuelle, années sélectionnées."
+#| fig-width: 7.5
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux de chomage, annees selectionnees 1991-2023, valeurs figees en dur.
+# France : serie nationale BIT (Banque mondiale, WDI, SL.UEM.TOTL.NE.ZS),
+# alignee sur la serie canonique du cours pour les annees communes. Autres
+# pays : OCDE/Eurostat, series de chomage harmonise (cf. FRED LRHUTTTT.. pour
+# la periode recente, deja utilisees en cm09 pour Danemark/Etats-Unis
+# 2000-2024 ; valeurs pre-2000 et serie Allemagne, valeurs bien etablies
+# reprises des publications OCDE/Eurostat sur le marche du travail).
+annees_div <- c(1991, 1995, 2000, 2005, 2010, 2015, 2019, 2023)
+df_div <- data.frame(
+  annee = rep(annees_div, 4),
+  taux  = c(9.1, 11.8, 10.2, 8.9, 9.3, 10.4, 8.4, 7.3,      # France (WDI SL.UEM.TOTL.NE.ZS)
+            5.6, 8.2, 7.5, 11.2, 6.9, 4.6, 3.1, 3.0,        # Allemagne
+            8.6, 7.2, 4.3, 4.8, 7.8, 6.3, 5.0, 5.1,         # Danemark
+            6.8, 5.6, 4.0, 5.1, 9.6, 5.3, 3.7, 3.6),        # Etats-Unis
+  pays  = rep(c("France", "Allemagne", "Danemark", "États-Unis"), each = length(annees_div))
+)
+df_div$pays <- factor(df_div$pays, levels = c("France", "Allemagne", "Danemark", "États-Unis"))
+
+ggplot(df_div, aes(x = annee, y = taux, color = pays)) +
+  geom_line(linewidth = 1.0) +
+  geom_point(size = 2) +
+  scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
+                                 "Allemagne" = unname(macro_pal["or"]),
+                                 "Danemark" = unname(macro_pal["vert"]),
+                                 "États-Unis" = unname(macro_pal["gris"])),
+                      name = NULL) +
+  scale_x_continuous(breaks = annees_div) +
+  labs(x = "Année", y = "Taux de chômage harmonisé (%)") +
+  theme_macro() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+## Cinq décennies de théorie : de Phillips aux anticipations rationnelles
+
+```{mermaid}
+%%| fig-cap: "Quatre ruptures théoriques jalonnent l'histoire de la courbe de Phillips : de la corrélation empirique de 1958 à la disparition complète de l'arbitrage avec les anticipations rationnelles."
+flowchart LR
+    A[Phillips 1958 - Correlation salaires-chomage] --> B[Lecture keynesienne - Arbitrage exploitable]
+    B --> C[Stagflation annees 1970 - La relation se brise]
+    C --> D[Friedman-Phelps - NAIRU et anticipations adaptatives]
+    D --> E[Anticipations rationnelles - Arbitrage disparait meme a court terme]
+```
+
+## Synthèse : trois lectures de la courbe de Phillips
+
+| | Relation CT/LT | Rôle des anticipations | Arbitrage politique |
+|---|---|---|---|
+| **Phillips (1958)** | Une seule courbe, stable | Absent | Exploitable, semble permanent |
+| **Friedman-Phelps** | CT décroissante, LT verticale en $u^n$ | Adaptatives (inflation passée) | Existe à CT seulement |
+| **Anticipations rationnelles** | LT verticale, CT verticale si anticipée | Rationnelles (toute l'info disponible) | Disparaît même à CT si la politique est anticipée |
+
+## À retenir
+
+::: {.cle}
+::: {.incremental}
+- Phillips (1958) documente une corrélation négative salaires/chômage, étendue par Samuelson-Solow à l'inflation ; l'interprétation keynésienne y voit un arbitrage exploitable.
+- La stagflation des années 1970 (chocs pétroliers) brise cette relation stable.
+- Friedman-Phelps réintroduisent les **anticipations** : la courbe de Phillips est décroissante à court terme mais **verticale au NAIRU $u^n$** à long terme, soit $\pi = \pi^a - a\,(u-u^n)$.
+- Avec les **anticipations rationnelles** (Lucas, Muth), l'arbitrage disparaît même à court terme si la politique est anticipée.
+- Depuis les années 1990, la relation diverge selon les institutions nationales du marché du travail.
+:::
+:::
+
+## Pour la prochaine fois
+
+::: {.incremental}
+- Relire la section II.4 du chapitre II (partie 2) et refaire l'équation de Phillips augmentée à partir du graphique.
+- Préparer le TD 6 (Keynes, Okun, Phillips) : correction du CC1 en séance.
+- Lecture conseillée : Blanchard et Cohen, *Macroéconomie*, chapitre sur la courbe de Phillips.
+- CM 8 : modèle Wage Setting–Price Setting (WS-PS), pourquoi le chômage d'équilibre diffère selon les pays.
+:::

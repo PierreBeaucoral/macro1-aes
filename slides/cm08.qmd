@@ -1,0 +1,590 @@
+---
+title: "Le chômage d'équilibre résulte des institutions du marché du travail"
+subtitle: "CM 8 : Le modèle WS-PS et la théorie de l'appariement (Chapitre II, Partie 2, §III-IV)"
+---
+
+## Plan de la séance
+
+1. Une nouvelle logique : le chômage **institutionnel**, ni classique ni keynésien
+2. La fixation des salaires (**WS**) : salaire d'efficience et pouvoir de négociation
+3. La fixation des prix (**PS**) et le chômage d'équilibre $u^*$
+4. Déterminants et politiques économiques dans le modèle WS-PS
+5. Passer des stocks aux **flux** : la courbe de Beveridge
+6. Le modèle **DMP** (Diamond-Mortensen-Pissarides) et la tension $\theta$
+7. Synthèse des quatre cadres théoriques du chômage
+
+## Objectifs
+
+::: {.objectifs}
+**À l'issue de cette séance, vous saurez :**
+
+- Expliquer pourquoi le modèle WS-PS produit un chômage **d'équilibre**, involontaire mais non keynésien.
+- Construire et lire le diagramme WS-PS (courbe WS décroissante, courbe PS horizontale) et calculer $u^*$.
+- Justifier pourquoi les salaires sont fixés au-dessus du salaire de réserve (salaire d'efficience, insiders-outsiders).
+- Passer d'une analyse en **stocks** à une analyse en **flux** et lire une courbe de Beveridge.
+- Définir la tension du marché du travail $\theta = v/u$ et situer l'apport du modèle DMP (Nobel 2010).
+:::
+
+## Deux limites des cadres précédents
+
+::: {.cle}
+Les modèles **néoclassique** et **keynésien** ne rendent pas compte de deux régularités empiriques majeures :
+
+::: {.incremental}
+- des écarts de chômage **durables** entre pays qui ne s'expliquent ni par un déséquilibre passager de la demande, ni par un simple excès de salaire réel ;
+- l'observation **simultanée** d'un chômage élevé et de nombreux emplois vacants non pourvus, un fait que l'analyse en stocks ne peut pas expliquer.
+:::
+:::
+
+. . .
+
+Le modèle **WS-PS** répond à la première limite ; la théorie de l'**appariement** répond à la seconde.
+
+## Le chômage se disperse durablement en Europe {.smaller}
+
+```{r}
+#| label: fig-carte-chomage-europe
+#| fig-cap: "Taux de chômage harmonisé (BIT), moyenne annuelle 2023. Source : Eurostat (une_rt_a), % de la population active 15-74 ans. France : série nationale BIT (Banque mondiale, WDI) ; comparaison indicative."
+#| fig-width: 7
+#| fig-height: 4.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Taux de chomage harmonise BIT, moyenne annuelle 2023 (%).
+# Valeurs figees en dur, ordres de grandeur bien etablis, Eurostat une_rt_a.
+# France : serie canonique WDI SL.UEM.TOTL.NE.ZS (Banque mondiale, chomage
+# national BIT), utilisee pour la France dans tout le cours, valeur 2023
+# = 7.3 ; comparaison indicative avec la serie harmonisee Eurostat des
+# autres pays.
+df_u_eur <- data.frame(
+  adm0_a3 = c("FRA","DEU","ITA","ESP","PRT","NLD","BEL","AUT","IRL","DNK",
+              "SWE","FIN","POL","CZE","SVK","HUN","ROU","BGR","HRV","SVN",
+              "GRC","GBR","NOR","CHE"),
+  u = c(7.3, 3.0, 7.7, 12.2, 6.5, 3.6, 5.5, 5.1, 4.3, 5.1,
+        7.7, 7.2, 2.8, 2.6, 5.8, 4.1, 5.6, 4.3, 6.1, 3.6,
+        11.1, 4.0, 3.6, 4.1)
+)
+world$u <- df_u_eur$u[match(world$adm0_a3, df_u_eur$adm0_a3)]
+
+ggplot(world) +
+  geom_sf(aes(fill = u), color = "white", linewidth = .1) +
+  scale_fill_gradient(low = "#fbe3c8", high = unname(macro_pal["rouge"]),
+                       na.value = "grey92", limits = c(2, 13),
+                       breaks = c(3, 6, 9, 12),
+                       name = "Taux de chômage\n(%, 2023)") +
+  coord_sf(xlim = c(-11, 31), ylim = c(34, 62), expand = FALSE) +
+  labs(x = NULL, y = NULL) +
+  theme_macro() +
+  theme(
+    legend.title = element_text(size = 9),
+    axis.text = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Un écart durable, pas conjoncturel
+
+::: {.cle}
+L'écart entre l'Espagne ou la Grèce (chômage à deux chiffres) et l'Allemagne, la Tchéquie ou la Pologne (chômage autour de 3 %) est **durable**, pas seulement conjoncturel : deux économies exposées à des chocs de demande comparables peuvent afficher un chômage structurel très différent. C'est ce que le modèle WS-PS cherche à expliquer.
+:::
+
+## Le modèle WS-PS : chômage institutionnel, pas conjoncturel
+
+::: {.def}
+**WS-PS** (Wage Setting–Price Setting), Layard, Nickell & Jackman [@layard1991]. Modèle du **chômage d'équilibre** : confrontation entre la politique de prix des entreprises et la dynamique des salaires. Comme chez Keynes, **aucune force de rappel automatique** ne ramène au plein emploi, mais ici le chômage vient de facteurs **institutionnels** (concurrence sur les marchés, négociation salariale, indemnisation chômage), pas d'une insuffisance conjoncturelle de la demande.
+:::
+
+. . .
+
+Deux niveaux : au niveau **micro**, chaque entreprise fixe $w$, $p$ et son embauche ; au niveau **macro**, l'agrégation de ces décisions fait émerger deux courbes, WS et PS, dont la confrontation détermine le salaire réel et l'emploi total.
+
+## Les décisions micro s'agrègent en deux courbes macro
+
+```{mermaid}
+%%| fig-cap: "Les décisions individuelles des entreprises se rejoignent au niveau macroéconomique dans les courbes WS et PS, dont la confrontation détermine le salaire réel et l'emploi total."
+flowchart TD
+    A[Chaque entreprise fixe salaire prix et embauche] --> B[Agregation macroeconomique]
+    B --> C[Courbe WS decroissante]
+    B --> D[Courbe PS horizontale]
+    C --> E[Confrontation WS-PS]
+    D --> E
+    E --> F[Salaire reel et emploi total]
+```
+
+. . .
+
+::: {.cle}
+Le passage du niveau **micro** (décisions individuelles des entreprises) au niveau **macro** (courbes WS et PS) est ce qui transforme des choix décentralisés en un chômage d'équilibre agrégé.
+:::
+
+## Pourquoi le salaire est-il fixé au-dessus du salaire de réserve ?
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.def}
+**Salaire d'efficience** (Leibenstein 1957 ; Shapiro & Stiglitz 1984 [@shapirostiglitz1984]). Un salaire supérieur au salaire d'équilibre incite les travailleurs à plus d'effort, ce qui accroît productivité et profits.
+
+Origines : anti-sélection, aléa moral, fidélisation de la main-d'œuvre (coûts de rotation).
+:::
+:::
+
+::: {.column width="50%"}
+::: {.def}
+**Pouvoir de négociation** (insiders-outsiders, Lindbeck & Snower 1986). Même sans négociation collective, les salariés négocient d'autant mieux que leur emploi est qualifié et que le chômage est bas.
+
+Les **insiders** (en poste) défendent leur salaire et leur emploi au détriment des **outsiders** (chômeurs).
+:::
+:::
+:::
+
+## Deux logiques convergent vers un salaire élevé
+
+```{mermaid}
+%%| fig-cap: "Salaire d'efficience et pouvoir de négociation des insiders sont deux logiques distinctes qui convergent vers un salaire réel supérieur au salaire de réserve, à l'origine de la pente négative de la courbe WS."
+flowchart TD
+    A[Salaire d efficience] --> C[Salaire superieur au salaire de reserve]
+    B[Pouvoir de negociation des insiders] --> C
+    C --> D[Courbe WS decroissante]
+```
+
+. . .
+
+::: {.cle}
+Ces deux mécanismes n'ont pas la même origine, l'un relève de la stratégie de l'entreprise, l'autre du rapport de force salarial, mais produisent le même résultat macroéconomique : un salaire réel négocié au-dessus du salaire de réserve.
+:::
+
+## L'équation de fixation des salaires
+
+$$
+W = P \cdot F(u, z)
+$$
+
+où $P$ (effet $+$) est le niveau général des prix, $u$ (effet $-$) le taux de chômage, et $z$ (effet $+$) une variable composite (indemnisation chômage, pouvoir syndical, salaire minimum...).
+
+. . .
+
+En divisant par $P$ :
+
+$$
+WS : \quad \frac{W}{P} = F(u, z)
+$$
+
+. . .
+
+::: {.cle}
+La courbe **WS est décroissante** : plus le chômage est élevé, plus le pouvoir de négociation des travailleurs est faible, plus le salaire réel négocié est bas.
+:::
+
+## Les entreprises appliquent un taux de marge sur leur coût
+
+Simplification : le travail est le seul facteur de production, de productivité $\lambda = 1$. En concurrence imparfaite, les entreprises appliquent un **taux de marge** $m > 0$ sur leur coût marginal :
+
+$$
+P = (1+m)\,W \quad\Longrightarrow\quad PS : \quad \frac{W}{P} = \frac{1}{1+m}
+$$
+
+. . .
+
+::: {.cle}
+Le salaire réel compatible avec le taux de marge ne dépend **pas** du taux de chômage : la courbe **PS est horizontale**. Sa position dépend de la concurrence sur les marchés (une hausse de $m$ abaisse la PS) et de la productivité du travail (une hausse de $\lambda$ relève la PS).
+:::
+
+## Le chômage d'équilibre $u^*$ {.smaller}
+
+Le taux de chômage d'équilibre égalise le salaire réel négocié (WS) et le salaire réel compatible avec le taux de marge (PS) :
+
+$$
+F(u^*, z) = \frac{1}{1+m}
+$$
+
+Construction pas à pas : cliquez pour ajouter la courbe PS, situer $u^*$, puis simuler une hausse du taux de marge $m$.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-wsps-cm08-1
+#| fig-width: 6.2
+#| fig-height: 3.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+u_seq <- seq(0, 15, length.out = 200)
+df_ws <- data.frame(u = u_seq, w = 0.75 - 0.02 * u_seq)
+
+m1 <- 0.43; ps1 <- 1 / (1 + m1); u_star1 <- (0.75 - ps1) / 0.02
+m2 <- 0.50; ps2 <- 1 / (1 + m2); u_star2 <- (0.75 - ps2) / 0.02
+df_ps1 <- data.frame(u = u_seq, w = rep(ps1, length(u_seq)))
+df_ps2 <- data.frame(u = u_seq, w = rep(ps2, length(u_seq)))
+
+cols_wsps <- c("WS : fixation des salaires" = macro_pal[["bleu"]],
+               "PS : fixation des prix (m = 0,43)" = macro_pal[["or"]],
+               "PS après hausse de m (m = 0,50)" = macro_pal[["rouge"]])
+
+# Construit le diagramme WS-PS etape par etape : k = 1 la seule courbe WS ;
+# k = 2 ajoute la courbe PS (m = 0,43) ; k = 3 marque u* a l'intersection ;
+# k = 4 simule une hausse du taux de marge (m = 0,50) : la PS baisse, un
+# nouveau u* plus eleve apparait, l'ancien equilibre reste visible en grise.
+plot_wsps <- function(k) {
+  p <- ggplot() +
+    geom_line(data = df_ws, aes(x = u, y = w, color = "WS : fixation des salaires"), linewidth = 1.1)
+
+  if (k >= 2) {
+    p <- p + geom_line(data = df_ps1, aes(x = u, y = w, color = "PS : fixation des prix (m = 0,43)"),
+                        linewidth = 1.1)
+  }
+
+  if (k == 4) {
+    p <- p +
+      geom_line(data = df_ps1, aes(x = u, y = w), color = macro_pal[["or"]], alpha = 0.30, linewidth = 1.1) +
+      geom_line(data = df_ps2, aes(x = u, y = w, color = "PS après hausse de m (m = 0,50)"), linewidth = 1.1) +
+      annotate("point", x = u_star1, y = ps1, size = 2.2, color = macro_pal[["gris"]], alpha = 0.6)
+  }
+
+  if (k >= 3) {
+    u_s     <- if (k == 4) u_star2 else u_star1
+    ps_s    <- if (k == 4) ps2 else ps1
+    lab     <- if (k == 4) "nouveau u* (chômage plus élevé)" else "u* (chômage d'équilibre)"
+    lab_dy  <- if (k == 4) -0.05 else 0.03
+    p <- p +
+      annotate("segment", x = u_s, xend = u_s, y = 0, yend = ps_s,
+               linetype = "dashed", color = macro_pal[["gris"]], linewidth = 0.4) +
+      annotate("point", x = u_s, y = ps_s, size = 2.6, color = macro_pal[["rouge"]]) +
+      annotate("text", x = u_s + 0.3, y = ps_s + lab_dy, label = lab,
+               hjust = 0, size = 3.4, color = macro_pal[["rouge"]])
+  }
+
+  p +
+    scale_color_manual(values = cols_wsps, name = NULL, breaks = names(cols_wsps)) +
+    coord_cartesian(xlim = c(0, 15), ylim = c(0, 0.8), expand = FALSE) +
+    labs(x = "Taux de chômage (u, %)", y = "Salaire réel (W/P)") +
+    theme_macro()
+}
+
+plot_wsps(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-wsps-cm08-2
+#| fig-width: 6.2
+#| fig-height: 3.2
+plot_wsps(2)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-wsps-cm08-3
+#| fig-width: 6.2
+#| fig-height: 3.2
+plot_wsps(3)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-wsps-cm08-4
+#| fig-width: 6.2
+#| fig-height: 3.2
+plot_wsps(4)
+```
+:::
+
+:::
+
+::: {.source}
+Construction du diagramme WS-PS : la courbe WS seule, puis la courbe PS, puis $u^*$ à leur intersection, puis une hausse du taux de marge ($m$ de 0,43 à 0,50) qui abaisse la PS et élève le chômage d'équilibre (ancien équilibre en gris).
+:::
+
+## Application numérique {.smaller}
+
+::: {.def}
+Soit $WS : \dfrac{W}{P} = 0{,}75 - 0{,}02\,u$ et $PS : \dfrac{W}{P} = \dfrac{1}{1+m}$ avec $m = 0{,}43$.
+
+$PS = \dfrac{1}{1{,}43} \approx 0{,}699$. En résolvant $0{,}75 - 0{,}02\,u^* = 0{,}699$ : $u^* \approx 2{,}5$ (unités du modèle), salaire réel d'équilibre $\approx 0{,}699$.
+:::
+
+. . .
+
+::: {.cle}
+Une hausse du taux de marge (fusion sectorielle, $m$ passant à $0{,}50$) **abaisse** la courbe PS ($PS = 1/1{,}5 \approx 0{,}667$) et **augmente** donc le chômage d'équilibre.
+:::
+
+## Terminologie à retenir
+
+::: {.cle}
+**Taux de chômage d'équilibre = taux de chômage structurel = taux de chômage naturel.**
+
+À ce taux, l'emploi et la production sont en phase avec les capacités productives de l'économie : comme le NAIRU vu au CM précédent, le modèle WS-PS est un cadre de **long terme**.
+:::
+
+. . .
+
+Dans ce modèle, le chômage est **involontaire mais non keynésien** : il ne provient pas d'une insuffisance de la demande globale, mais de l'absence de marchés parfaitement concurrentiels et du pouvoir de négociation des salariés.
+
+## Ce qui déplace WS ou PS, et donc $u^*$
+
+| Choc | Courbe affectée | Effet sur $u^*$ |
+|---|---|---|
+| Baisse de la concurrence (hausse de $m$) | PS $\downarrow$ | $u^*$ $\uparrow$ |
+| Hausse du pouvoir syndical / des indemnités chômage | WS $\uparrow$ | $u^*$ $\uparrow$ |
+| Subvention sur les salaires (baisse du coût du travail) | WS $\downarrow$ | $u^*$ $\downarrow$ |
+| Hausse de la productivité du travail | PS $\uparrow$ | Effet ambigu (partage salaire/profit) |
+| Baisse de la demande globale | Aucune | Chômage total $\uparrow$, **au-delà** de $u^*$ |
+
+::: {.source}
+Source : Layard, Nickell & Jackman (1991), synthèse du cours (Chapitre II, Partie 2, §III).
+:::
+
+## Les cadres statiques ont une limite commune
+
+::: {.cle}
+Néoclassique, keynésien et WS-PS raisonnent sur une structure **statique** : emploi et chômage y sont des **stocks**. Or même en période de chômage faible, environ **15 %** des emplois sont créés et détruits chaque année dans les pays développés, et il n'est pas rare d'observer *simultanément* un chômage élevé et de nombreux emplois vacants non pourvus.
+:::
+
+. . .
+
+Il faut donc analyser le marché du travail en **flux** : créations et destructions d'emploi, entrées et sorties du chômage, mouvements entre emploi, chômage et inactivité.
+
+## Trois flux relient emploi, chômage et inactivité
+
+```{mermaid}
+%%| fig-cap: "Trois flux relient en permanence emploi, chômage et inactivité : créations et destructions d'emploi, entrées et sorties du chômage, mouvements avec l'inactivité."
+flowchart TD
+    E[Emploi] -- destructions --> C[Chomage]
+    C -- creations --> E
+    C -- sorties du marche --> I[Inactivite]
+    I -- entrees sur le marche --> C
+    E -- depart --> I
+    I -- retour --> E
+```
+
+. . .
+
+::: {.cle}
+Un chômage stable en niveau peut cacher une **intense rotation** entre ces trois états : ce que l'analyse en stocks, seule, ne peut pas révéler.
+:::
+
+## La courbe de Beveridge
+
+::: {.def}
+**Courbe de Beveridge.** Relation **décroissante** entre le taux de chômage $u$ et le taux d'emplois vacants $v$. Au cours du cycle économique, l'économie se déplace *le long* de cette courbe : conjoncture favorable $\Rightarrow$ emplois vacants $\uparrow$ et chômage $\downarrow$.
+:::
+
+. . .
+
+Le croisement avec la droite de pente 45° ($u = v$) correspond à une situation de « plein emploi » au sens de Beveridge : chômeurs et emplois vacants sont en nombre égal, sans tension particulière : la probabilité de sortir du chômage égale la probabilité de pourvoir un poste vacant.
+
+## Représenter la courbe de Beveridge
+
+```{r}
+#| label: fig-beveridge-cm08
+#| fig-cap: "La courbe de Beveridge : relation décroissante entre taux de chômage et taux d'emplois vacants. Un déplacement vers l'extérieur (courbe rouge) traduit une détérioration du processus d'appariement (inadéquation des qualifications, hystérèse)."
+#| fig-width: 6.5
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+u5 <- seq(1, 12, length.out = 200)
+v_base <- 8 / u5
+v_shift <- 10 / u5
+
+df_bev <- data.frame(
+  u = rep(u5, 2),
+  v = c(v_base, v_shift),
+  courbe = rep(c("Avant (appariement efficace)", "Après (inadéquation accrue)"), each = length(u5))
+)
+
+ggplot() +
+  geom_line(data = df_bev, aes(x = u, y = v, color = courbe), linewidth = 1.1) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dotted", color = "grey50", linewidth = 0.5) +
+  annotate("text", x = 7.6, y = 6.6, label = "droite à 45°\n(u = v)",
+           hjust = 0, size = 3.2, color = "grey40") +
+  scale_color_manual(values = c("Avant (appariement efficace)" = macro_pal[["bleu"]],
+                                 "Après (inadéquation accrue)" = macro_pal[["rouge"]]),
+                      name = NULL) +
+  coord_cartesian(xlim = c(0, 12), ylim = c(0, 10), expand = FALSE) +
+  labs(x = "Taux de chômage (u, %)", y = "Taux d'emplois vacants (v, %)") +
+  theme_macro()
+```
+
+## Le cas français : boucle conjoncturelle et choc post-Covid {.smaller}
+
+```{r}
+#| label: fig-beveridge-france
+#| fig-cap: "Chômage (BIT) et taux d'emplois vacants en France, moyennes annuelles, 2013-2024 : avant 2020, l'économie se déplace le long d'une courbe à peu près stable ; à partir de 2020, la boucle se déplace vers l'extérieur, avec une tension record en 2022. Sources : chômage, série nationale BIT (Banque mondiale, WDI, SL.UEM.TOTL.NE.ZS) ; taux d'emplois vacants, Eurostat (jvs_q_nace2, indicateur JOBRATE, secteurs B-S), France, moyennes annuelles ; quelques points bien établis retenus plutôt qu'une série trimestrielle complète."
+#| fig-width: 6.2
+#| fig-height: 3.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Chomage : serie canonique WDI SL.UEM.TOTL.NE.ZS (Banque mondiale, chomage
+# national BIT), utilisee pour la France dans tout le cours. Taux d'emplois
+# vacants (Eurostat jvs_q_nace2, indicateur JOBRATE, secteurs B-S, %),
+# France. Valeurs figees en dur (ordres de grandeur bien etablis) ; peu de
+# points retenus plutot qu'une serie trimestrielle complete approximative.
+df_bev_fr <- data.frame(
+  annee   = c(2013, 2016, 2019, 2020, 2021, 2022, 2023, 2024),
+  chomage = c(9.9, 10.1, 8.4, 8.0, 7.9, 7.3, 7.3, 7.4),
+  vacance = c(1.0, 1.3, 1.7, 1.3, 2.2, 3.0, 2.7, 2.4),
+  periode = factor(rep(c("2013-2019", "2020-2024"), c(3, 5)),
+                    levels = c("2013-2019", "2020-2024"))
+)
+
+ggplot(df_bev_fr, aes(x = chomage, y = vacance)) +
+  geom_path(color = "grey55", linewidth = 0.5) +
+  geom_point(aes(color = periode), size = 3.2) +
+  geom_text(aes(label = annee), size = 2.8, color = "#333333",
+            fontface = "bold", nudge_y = 0.13) +
+  scale_color_manual(values = c("2013-2019" = macro_pal[["bleu"]],
+                                 "2020-2024" = macro_pal[["rouge"]]), name = NULL) +
+  coord_cartesian(xlim = c(6.5, 11), ylim = c(0.5, 3.4), expand = FALSE) +
+  labs(x = "Taux de chômage (BIT, %)", y = "Taux d'emplois vacants (%)") +
+  theme_macro()
+```
+
+::: {.cle}
+Avant 2020, la France se déplace **le long** d'une courbe à peu près stable au fil du cycle. À partir de 2020, la courbe se **déplace vers l'extérieur** : à chômage comparable, il faut désormais davantage d'emplois vacants, signe de tensions de recrutement accrues.
+:::
+
+## Deux mouvements à ne pas confondre
+
+::: {.cle}
+::: {.incremental}
+- **Le long de la courbe** : un choc de demande **positif** déplace l'économie vers le haut-gauche (plus de $v$, moins de $u$ : tension élevée) ; un choc **négatif** la déplace vers le bas-droite (peu de tension).
+- **La courbe elle-même se déplace** lorsque l'appariement se détériore : il faut alors davantage d'emplois vacants pour atteindre le même taux de chômage.
+:::
+:::
+
+. . .
+
+Ce déplacement vers l'extérieur a été observé en Europe depuis les années 1970 : mutations technologiques (destruction d'emplois, recherche de nouveaux profils) et **hystérèse** (déqualification des chômeurs de longue durée, moins « appariables »).
+
+## Diamond, Mortensen, Pissarides : Nobel d'économie 2010
+
+Les modèles d'appariement, développés par Peter Diamond, Dale Mortensen et Chris Pissarides [@diamond1982; @mortensenpissarides1994], distingués par le **prix Nobel d'économie 2010**, approfondissent la logique de la courbe de Beveridge en modélisant explicitement la **rencontre** entre chômeurs et emplois vacants.
+
+. . .
+
+::: {.def}
+**Tension sur le marché du travail** $\theta = v/u$ (emplois vacants sur chômeurs). Plus $\theta$ est élevé, plus le marché est « tendu » : nombreux postes pour peu de chômeurs $\Rightarrow$ probabilité de pourvoir un poste **faible** pour l'entreprise, mais probabilité de trouver un emploi **élevée** pour le chômeur.
+:::
+
+## L'équilibre du modèle DMP
+
+L'équilibre résulte de la confrontation de deux relations, toutes deux fonctions de $\theta$ et du salaire réel $w/p$ :
+
+. . .
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.cle}
+**Demande de travail des entreprises**
+
+Relation **décroissante** entre $\theta$ et $w/p$ : un salaire réel élevé réduit la demande de travail, donc le nombre de postes créés, donc $\theta$.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.cle}
+**Courbe des salaires**
+
+Relation **croissante** entre $\theta$ et $w/p$ : plus la probabilité de retrouver un emploi est élevée (marché tendu), plus le pouvoir de négociation des travailleurs, donc le salaire exigé, est fort.
+:::
+:::
+:::
+
+## Deux relations opposées déterminent la tension d'équilibre
+
+```{mermaid}
+%%| fig-cap: "La tension du marché du travail résulte de la rencontre entre la demande de travail des entreprises, décroissante avec le salaire réel, et la courbe des salaires, croissante avec le salaire réel."
+flowchart TD
+    T[Tension theta egale v sur u] --> D1[Demande de travail decroissante en salaire reel]
+    T --> D2[Courbe des salaires croissante en salaire reel]
+    D1 --> EQ[Equilibre theta etoile et salaire reel d equilibre]
+    D2 --> EQ
+```
+
+. . .
+
+::: {.cle}
+Les deux relations sont fonctions de la **même** variable $\theta$ mais varient en sens opposé avec le salaire réel : leur intersection fixe simultanément la tension d'équilibre $\theta^*$ et le salaire réel négocié.
+:::
+
+## Les déterminants du chômage dans le cadre DMP
+
+::: {.incremental}
+- L'**efficacité du processus d'appariement** (rapprochement offre-demande) ;
+- l'**intensité de l'effort de recherche** des chômeurs ;
+- le **taux de destruction des emplois** (séparation) ;
+- le **pouvoir de négociation** des travailleurs ;
+- le **niveau des revenus de remplacement** (indemnisation chômage) ;
+- la **productivité du travail** et le **coût du capital**.
+:::
+
+::: {.source}
+Source : Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994], synthèse du cours (Chapitre II, Partie 2, §IV).
+:::
+
+## Deux leviers de politique de l'emploi issus de l'appariement
+
+::: {.callout-important}
+## À retenir
+::: {.incremental}
+1. **Faciliter les créations et destructions d'emplois** (flexibiliser) : les coûts d'embauche/licenciement ralentissent l'ajustement de l'emploi à la conjoncture. *Nuance empirique* : la relation entre protection de l'emploi et niveau du chômage n'est pas clairement établie dans les données.
+2. **Améliorer l'efficacité de l'appariement** : accompagnement des chômeurs (France Travail), incitations à la recherche d'emploi, mobilité géographique et professionnelle.
+:::
+:::
+
+. . .
+
+Ces deux leviers structurent une bonne partie des réformes du marché du travail en France et en Europe depuis les années 2000, étudiées en détail au **Chapitre III**.
+
+## Quatre regards complémentaires sur le chômage
+
+| Cadre théorique | Mécanisme central | Type de chômage | Horizon |
+|---|---|---|---|
+| Néoclassique | Salaire réel trop élevé vs équilibre de marché | Volontaire / classique | Long terme |
+| Keynésien | Insuffisance de la demande effective | Involontaire / conjoncturel | Court terme |
+| **WS-PS** | Pouvoir de négociation + pouvoir de marché | Involontaire / structurel | Long terme |
+| **Appariement (DMP)** | Frictions et inadéquation offre-demande | Frictionnel / d'inadéquation | Court et long terme |
+
+. . .
+
+::: {.cle}
+Ces quatre cadres ne s'excluent pas : ils mettent l'accent sur des mécanismes différents, pertinents à des degrés divers selon les pays, les périodes et les segments du marché du travail.
+:::
+
+## À retenir
+
+::: {.callout-important}
+## Synthèse de la séance
+::: {.incremental}
+- Le modèle **WS-PS** explique un chômage **d'équilibre**, institutionnel (concurrence, négociation salariale), et non conjoncturel : WS décroissante $\times$ PS horizontale $\Rightarrow$ $u^*$.
+- Les salaires sont fixés au-dessus du salaire de réserve par **salaire d'efficience** et **pouvoir de négociation** (insiders-outsiders).
+- La courbe de **Beveridge** ($u$, $v$ décroissants) permet de penser le marché du travail en **flux** plutôt qu'en stocks.
+- Le modèle **DMP** formalise la tension $\theta = v/u$ et l'équilibre entre demande de travail et courbe des salaires.
+- Deux leviers de politique : **flexibiliser** et **améliorer l'appariement**.
+:::
+:::
+
+## Pour la prochaine fois
+
+::: {.def}
+**CM 9 : Chapitre III : Politiques de l'emploi (cas français)**
+
+- Relire les sections §III-IV du Chapitre II (WS-PS et appariement) et revoir le diagramme WS-PS.
+- Réviser la distinction politiques **actives** vs **passives** de l'emploi.
+- Préparer le TD 7 (appariement + trappe à inactivité).
+:::
+
+::: {.source}
+Sources : Chapitre II, Partie 2, §III-IV (`cours/chap2.qmd`) ; Layard, Nickell & Jackman (1991) [@layard1991] ; Shapiro & Stiglitz (1984) [@shapirostiglitz1984] ; Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994].
+:::

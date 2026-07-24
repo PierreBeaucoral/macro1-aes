@@ -1,0 +1,34 @@
+# Métadonnées communes à tous les decks RevealJS (CM)
+format:
+  revealjs:
+    theme: [default, slides.scss]
+    slide-number: c/t
+    show-slide-number: all
+    progress: true
+    history: true
+    controls: true
+    transition: fade
+    incremental: false
+    width: 1200
+    height: 750
+    margin: 0.06
+    center-title-slide: true
+    fig-align: center
+    fig-cap-location: bottom
+    code-line-numbers: false
+    footer: "Macroéconomie 1, L2 AES"
+    logo: ""
+    link-external-newwindow: true
+
+# Auteur / cadre communs
+author: "Pierre Beaucoral"
+institute: "L2 AES : Semestre 1"
+lang: fr
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+
+bibliography: ../references.bib

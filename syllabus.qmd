@@ -1,0 +1,101 @@
+---
+title: "Syllabus"
+subtitle: "Macroéconomie 1 : Les Politiques Économiques"
+description: "Objectifs du cours, méthode de travail, planning des séances, modalités d'évaluation, consignes et manuels de référence."
+---
+
+::: {.objectifs}
+Objectifs du cours
+
+- Introduire à la macroéconomie en mettant l'accent sur l'analyse des politiques économiques.
+- Présenter les concepts de base de la politique économique (chapitre I).
+- Approfondir l'analyse des politiques de l'emploi et du marché du travail (chapitres II et III).
+:::
+
+Ce cours de Macroéconomie 1 s'adresse aux étudiants de deuxième année de licence Administration Économique et Sociale (L2 AES), semestre 1.^[Ce syllabus reprend et met en forme le support de présentation du cours élaboré par M. Ouedraogo (2025-2026), avec des sources antérieures de C. Mathonnat (2018-2019).] Il se compose de trois chapitres : le chapitre I pose les concepts fondamentaux de la politique économique ; les chapitres II et III approfondissent, respectivement sous l'angle descriptif-théorique puis appliqué, le marché du travail et les politiques de l'emploi en France.
+
+## Enseignant
+
+::: {.callout-note}
+## Qui enseigne ce cours ?
+Ce cours est assuré par **Pierre Beaucoral**, ATER (Attaché Temporaire d'Enseignement et de Recherche) à l'Université Clermont Auvergne, pour la L2 AES (Semestre 1).
+
+Une permanence pédagogique (*office hours*) est proposée chaque semaine ; les créneaux et les modalités de prise de rendez-vous sont indiqués sur la page [Accueil](index.qmd) du site. Pour toute question, le contact par mail figure sur l'espace numérique de travail (ENT) du cours.
+:::
+
+## Objectifs
+
+À l'issue du semestre, vous serez capable de :
+
+- **définir et articuler** les notions fondamentales de la politique économique (objectifs, instruments, fonctions de l'État) présentées au chapitre I ;
+- **décrire et mesurer** le fonctionnement du marché du travail à l'aide des indicateurs usuels (chômage, emploi, activité) et **mobiliser** les principaux cadres théoriques (néoclassique, keynésien, WS-PS, appariement) au chapitre II ;
+- **analyser de façon critique** les politiques de l'emploi mises en œuvre en France depuis les années 1970 (coût du travail, flexibilisation, activation) au chapitre III.
+
+## Méthode
+
+Le cours adopte une **perspective transdisciplinaire**, reliant la théorie économique aux enjeux de société contemporains, et laisse une large place au débat pendant les séances.
+
+::: {.callout-tip}
+## Pour aller plus loin
+De nombreuses ressources complémentaires (articles, vidéos, données) sont mises à disposition tout au long du semestre pour approfondir chaque thème, voir la page [Ressources](ressources.qmd).
+:::
+
+Le travail personnel est indispensable et repose sur trois piliers :
+
+1. **Relecture régulière du cours** : résumés et diapositives de CM.
+2. **Préparation des dossiers de TD** avant chaque séance.
+3. **Approfondissement** via les ressources complémentaires (articles, vidéos, données).
+
+Les supports sont mis à disposition sur l'espace numérique de travail (ENT) : diapositives de CM, dossiers de TD, ressources complémentaires et informations pratiques.
+
+## Planning
+
+::: {.callout-note}
+## Organisation du semestre
+- **10 séances de CM** de 3h chacune, le **lundi**.
+- **8 séances de TD** de 2h chacune, réparties en **3 groupes**.
+- Chaque **dossier de TD** est publié sur l'ENT **une semaine avant** la séance correspondante : sa préparation est nécessaire pour suivre le TD dans de bonnes conditions.
+:::
+
+Le déroulé des dix chapitres/séances de CM et des huit séances de TD est détaillé dans les pages [Résumés de cours](cours/chap1.qmd), [Slides](slides/cm01.qmd) et [TD](td/td1.qmd) du site.
+
+## Évaluation
+
+L'évaluation combine contrôle continu et examen final, complétés par un ajustement lié à l'assiduité et à la participation.
+
+| Composante | Poids | Modalités |
+|---|---|---|
+| **Contrôle continu (TD)** | 50 % | Deux devoirs sur table notés, en **séance 4** (CC1) et en **séance 8** (CC2). La correction du CC1 est faite en **séance 6**. |
+| **Examen final** | 50 % | Épreuve de **2 heures**, combinant **QCM** et **question(s) de réflexion**. |
+| **Bonus-malus** | / | Ajustement de la moyenne générale selon l'**assiduité** et la **participation**, en CM comme en TD. |
+
+: Modalités d'évaluation du cours de Macroéconomie 1. {#tbl-evaluation}
+
+::: {.callout-important}
+## À retenir
+Les deux contrôles continus (séances 4 et 8) comptent chacun pour une part du bloc TD, qui pèse au total **50 %** de la note finale, au même titre que l'examen final. Une préparation régulière des dossiers de TD est donc déterminante.
+:::
+
+## Consignes & usage responsable de l'IA
+
+::: {.callout-warning}
+## Charte IA UCA : usage responsable de l'intelligence artificielle
+L'université invite à un usage responsable de l'IA, conformément à la Charte IA de l'Université Clermont Auvergne (UCA). Votre génération est sans doute l'une des grandes bénéficiaires des outils d'IA générative, mais aussi potentiellement l'une des plus exposées à leurs risques : si l'IA peut réaliser votre tâche à votre place, demandez-vous ce que cela signifie pour votre propre apprentissage, et, à terme, pour votre employabilité.
+:::
+
+Quelques règles de vie en séance :
+
+- Les **ordinateurs portables** sont autorisés pour la prise de notes et la consultation des supports (diapositives, documents).
+- Les **téléphones** doivent être rangés dans les sacs.
+- Vous êtes invités à **participer, prendre des notes** (idéalement sur papier) et **poser des questions**.
+- Merci d'éviter de perturber l'apprentissage des autres (retards, allers-retours fréquents, digressions, interruptions).
+
+## Manuels
+
+Trois manuels de référence accompagnent le cours ; ils ne sont pas exclusifs des ressources complémentaires signalées au fil des chapitres.
+
+- Bénassy-Quéré, A., Coeuré, B., Jacquet, P. et Pisani-Ferry, J. [-@benassy2017]. *Politique économique*, 4e édition, De Boeck Supérieur.
+- Blanchard, O. et Cohen, D. [-@blanchardcohen]. *Macroéconomie*, 7e édition, Pearson Education.
+- Généreux, J. [-@genereux]. *Introduction à la politique économique*, 4e édition, Éditions du Seuil.
+
+Pour la bibliographie complémentaire (articles, chaînes vidéo, bases de données économiques), voir la page [Ressources](ressources.qmd).

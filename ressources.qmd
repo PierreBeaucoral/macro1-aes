@@ -1,0 +1,72 @@
+---
+title: "Ressources pédagogiques"
+subtitle: "Manuels, presse économique, vidéos et données pour approfondir le cours"
+description: "Sélection de manuels de référence, d'articles et d'analyses, de chaînes YouTube et de bases de données économiques pour prolonger le travail personnel du semestre."
+---
+
+Cette page rassemble les ressources complémentaires du cours : elles ne remplacent pas le travail sur les résumés de cours et les dossiers de TD, mais permettent d'approfondir une notion, de suivre l'actualité économique ou de manipuler des données réelles.^[Sélection reprise des supports de M. Ouedraogo (2025-2026).]
+
+::: {.callout-tip}
+## Pour aller plus loin : comment utiliser cette page
+- Un **manuel** sert à revoir un chapitre entier avec plus de détails que le résumé de cours.
+- Un **article ou une vidéo** permet d'illustrer une notion vue en cours par un exemple d'actualité, utile pour préparer une question de réflexion en TD ou à l'examen.
+- Une **base de données** permet de vérifier un ordre de grandeur cité en cours (taux de chômage, croissance, inflation…) ou de construire un graphique pour un exposé.
+:::
+
+## Manuels
+
+Trois manuels de référence couvrent l'ensemble du programme. Ils sont complémentaires : Bénassy-Quéré et al. est le plus proche du plan du cours (politiques de stabilisation, structurelles, marché du travail) ; Blanchard et Cohen offre les fondements de macroéconomie générale ; Généreux propose une mise en perspective historique et institutionnelle de la politique économique.
+
+- Agnès **Bénassy-Quéré**, Benoît **Coeuré**, Pierre **Jacquet** et Jean **Pisani-Ferry**, *Politique économique*, 4^e^ édition, De Boeck Supérieur, 2017 [@benassy2017].
+- Olivier **Blanchard** et Daniel **Cohen**, *Macroéconomie*, 7^e^ édition, Pearson Education, 2020 [@blanchardcohen].
+- Jacques **Généreux**, *Introduction à la politique économique*, 4^e^ édition, Éditions du Seuil, 2018 [@genereux].
+
+::: {.callout-note}
+## Où trouver ces ouvrages ?
+Les trois manuels sont disponibles au **SCD (bibliothèque universitaire)** de l'UCA. Les éditions plus anciennes que celles indiquées ci-dessus restent utilisables : la structure et les mécanismes n'ont pas changé, seuls certains chiffres d'actualité diffèrent.
+:::
+
+## Articles & analyses
+
+Une sélection de médias et de centres d'analyse pour suivre l'actualité économique et lire des analyses plus approfondies que la presse généraliste.
+
+- **[Alternatives économiques](https://www.alternatives-economiques.fr/)** : mensuel et site français de vulgarisation économique, orienté analyse critique des politiques publiques.
+- **[Les Échos](https://www.lesechos.fr/)** : quotidien économique et financier français de référence.
+- **[The Economist](https://www.economist.com/)** : hebdomadaire britannique d'analyse économique et géopolitique internationale (en anglais).
+- **[Conseil d'analyse économique (CAE)](http://www.cae-eco.fr/)** : organisme rattaché à Matignon qui produit des notes d'aide à la décision publique, rédigées par des économistes universitaires.
+- **[Institut Veblen](https://www.veblen-institute.org/?lang=fr)** : think tank français spécialisé dans les alternatives économiques et la transition écologique.
+- **[Captain Economics](http://www.captaineconomics.fr/)** : site de vulgarisation économique, formats courts et pédagogiques.
+- **[La Vie des idées](http://www.laviedesidees.fr/+-Economie-+.html)** : plateforme de débat scientifique, rubrique Économie : comptes rendus de recherches académiques présentés pour un public non spécialiste.
+
+## Chaînes YouTube
+
+Quatre chaînes de vulgarisation économique en français, utiles pour réviser une notion sous un format vidéo court.
+
+- **[Heu?reka](https://www.youtube.com/channel/UC7sXGI8p8PvKosLWagkK9wQ)** : vulgarisation économique et sociale, formats documentaires approfondis.
+- **[Dessine-moi l'éco](https://www.youtube.com/channel/UCjgSf4vhWXgi3edYZiKrlig)** : capsules courtes et animées sur des notions et mécanismes économiques.
+- **[Grand angle](https://www.youtube.com/channel/UCWtD8JN9hkxL5TJL_ktaNZA)** : analyses de sujets économiques et géopolitiques d'actualité.
+- **[Stupid Economics](https://www.youtube.com/@StupidEco)** : vulgarisation économique orientée actualité et débats de politique économique.
+
+## Données
+
+Pour vérifier un ordre de grandeur, construire un graphique ou préparer un exposé, ces organismes publient des données macroéconomiques ouvertes et documentées (méthodologie, définitions, séries longues).
+
+| Organisme | Champ couvert | Lien |
+|---|---|---|
+| **INSEE** | Statistiques nationales françaises : PIB, emploi, chômage (enquête Emploi, définition BIT), prix, démographie | <https://www.insee.fr/fr/accueil> |
+| **Banque de France** | Statistiques monétaires et financières françaises, conjoncture, balance des paiements | <https://www.banque-france.fr/> |
+| **Eurostat** | Statistiques harmonisées de l'Union européenne, comparaisons entre pays membres | <https://ec.europa.eu/eurostat/fr/home> |
+| **Banque centrale européenne (BCE)** | Politique monétaire de la zone euro, statistiques monétaires et financières | <https://www.ecb.europa.eu/home/html/index.en.html> |
+| **OCDE** | Statistiques et analyses comparées des pays développés (croissance, emploi, protection sociale) | <http://www.oecd.org> |
+| **FMI** | Statistiques macroéconomiques mondiales, perspectives économiques internationales | <https://www.imf.org/fr/home> |
+| **Banque mondiale** | Indicateurs de développement pour l'ensemble des pays du monde, séries longues | <https://data.worldbank.org/> |
+
+::: {.callout-warning}
+## Erreur fréquente
+Ne comparez pas directement un taux de chômage INSEE (définition BIT, enquête Emploi) à un chiffre Pôle emploi/France Travail (catégorie A) : les deux séries mesurent des réalités différentes. Cette distinction, vue au chapitre II, s'applique aussi lorsque vous consultez une base de données : vérifiez toujours la **définition exacte** de l'indicateur avant de comparer des chiffres entre eux ou entre pays.
+:::
+
+## Références
+
+::: {#refs}
+:::

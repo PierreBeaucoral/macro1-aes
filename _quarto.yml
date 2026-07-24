@@ -1,0 +1,103 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "cours/*.qmd"
+    - "td/*.qmd"
+    - "!td/corrections/*.qmd"   # corrections rendues à part : décommenter pour publier
+    - "slides/*.qmd"
+
+lang: fr
+
+website:
+  title: "Macroéconomie 1 : Les Politiques Économiques"
+  description: "Cours de L2 AES (Semestre 1) : concepts de politique économique, marché du travail et politiques de l'emploi."
+  site-url: "https://pierrebeaucoral.github.io/macro1-aes/"
+  page-navigation: true
+  reader-mode: true
+  back-to-top-navigation: true
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Syllabus"
+        href: syllabus.qmd
+      - text: "Résumés de cours"
+        menu:
+          - text: "Chapitre I : Introduction à la politique économique"
+            href: cours/chap1.qmd
+          - text: "Chapitre II : Marché du travail & politique de l'emploi"
+            href: cours/chap2.qmd
+          - text: "Chapitre III : Politiques de l'emploi (cas français)"
+            href: cours/chap3.qmd
+      - text: "Slides (CM)"
+        menu:
+          - text: "CM 1 : Rappels, faits marquants, horizons temporels"
+            href: slides/cm01.qmd
+          - text: "CM 2 : Politique économique & fonctions de Musgrave"
+            href: slides/cm02.qmd
+          - text: "CM 3 : Marché du travail : définitions & mesures"
+            href: slides/cm03.qmd
+          - text: "CM 4 : Typologie des chômages & évolutions"
+            href: slides/cm04.qmd
+          - text: "CM 5 : Analyse néoclassique"
+            href: slides/cm05.qmd
+          - text: "CM 6 : Analyse keynésienne & loi d'Okun"
+            href: slides/cm06.qmd
+          - text: "CM 7 : Courbe de Phillips & NAIRU"
+            href: slides/cm07.qmd
+          - text: "CM 8 : WS-PS & appariement"
+            href: slides/cm08.qmd
+          - text: "CM 9 : Modèles & flexisécurité"
+            href: slides/cm09.qmd
+          - text: "CM 10 : Réformes françaises & synthèse"
+            href: slides/cm10.qmd
+      - text: "TD"
+        menu:
+          - text: "TD 1 : Fondements de la politique économique"
+            href: td/td1.qmd
+          - text: "TD 2 : Définitions & mesures du marché du travail"
+            href: td/td2.qmd
+          - text: "TD 3 : Typologies & segmentation"
+            href: td/td3.qmd
+          - text: "TD 4 : CC1 blanc (entraînement)"
+            href: td/td4.qmd
+          - text: "TD 5 : Néoclassique & WS-PS"
+            href: td/td5.qmd
+          - text: "TD 6 : Keynes, Okun, Phillips"
+            href: td/td6.qmd
+          - text: "TD 7 : Appariement & trappe à inactivité"
+            href: td/td7.qmd
+          - text: "TD 8 : CC2 blanc (entraînement)"
+            href: td/td8.qmd
+      - text: "Ressources"
+        href: ressources.qmd
+  page-footer:
+    left: "Macroéconomie 1, L2 AES · Pierre Beaucoral"
+    right: "Construit avec [Quarto](https://quarto.org)."
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: true
+    toc-depth: 3
+    toc-title: "Sur cette page"
+    number-sections: false
+    code-tools: false
+    fig-align: center
+    fig-cap-location: bottom
+    smooth-scroll: true
+    link-external-newwindow: true
+
+bibliography: references.bib
+
+execute:
+  freeze: auto
+  warning: false
+  message: false
+  echo: false

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Pierre Beaucoral">
+  <title>Macroéconomie 1 : Les Politiques Économiques – La courbe de Phillips : de l’arbitrage keynésien au NAIRU</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8728e8b7a3650ae65bab8afcc05e5e8e.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">La courbe de Phillips : de l’arbitrage keynésien au NAIRU</h1>
+  <p class="subtitle">Chapitre II, Partie 2, §II.4 : Inflation, chômage et anticipations</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Pierre Beaucoral 
+</div>
+        <p class="quarto-title-affiliation">
+            L2 AES : Semestre 1
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="plan-de-la-séance" class="slide level2">
+<h2>Plan de la séance</h2>
+<ol type="1">
+<li>Phillips (1958) : une corrélation empirique inflation-chômage</li>
+<li>L’interprétation keynésienne : un arbitrage exploitable par les gouvernements</li>
+<li>La critique de Friedman-Phelps : anticipations et NAIRU</li>
+<li>Les années 1970 : la stagflation fait disparaître la relation</li>
+<li>Les anticipations rationnelles : l’absence d’arbitrage, même à court terme</li>
+</ol>
+<div class="source">
+<p>Sources : <span class="citation" data-cites="phillips1958">Phillips (<a href="#/pour-la-prochaine-fois" role="doc-biblioref" onclick="">1958</a>)</span> ; <span class="citation" data-cites="friedman1968">Friedman (<a href="#/pour-la-prochaine-fois" role="doc-biblioref" onclick="">1968</a>)</span> ; <em>Chapitre II, Partie 2, section II</em>.</p>
+</div>
+</section>
+<section id="objectifs" class="slide level2">
+<h2>Objectifs</h2>
+<div class="cle">
+<p><strong>À l’issue de cette séance, vous saurez :</strong></p>
+<ul>
+<li>Reconstituer la relation empirique découverte par Phillips (1958) et son interprétation keynésienne.</li>
+<li>Expliquer pourquoi cette relation s’est brisée après les chocs pétroliers des années 1970 (stagflation).</li>
+<li>Distinguer courbe de Phillips de <strong>court terme</strong> (décroissante, anticipations données) et de <strong>long terme</strong> (verticale au NAIRU <span class="math inline">\(u^n\)</span>).</li>
+<li>Définir le NAIRU et l’équation de Phillips augmentée des anticipations <span class="math inline">\(\pi = \pi^a - a\,(u-u^n)\)</span>.</li>
+<li>Expliquer pourquoi les anticipations rationnelles suppriment tout arbitrage, même à court terme.</li>
+</ul>
+</div>
+</section>
+<section>
+<section id="phillips-1958-une-découverte-empirique" class="title-slide slide level1 center" data-background-color="#1f4e79">
+<h1>1. Phillips (1958) : une découverte empirique</h1>
+
+</section>
+<section id="phillips-met-en-évidence-une-relation-inverse-salaires-chômage" class="slide level2">
+<h2>Phillips met en évidence une relation inverse salaires-chômage</h2>
+<div class="def">
+<p><strong>A. W. Phillips (1958)</strong> étudie le Royaume-Uni sur 1861-1957 et documente une <strong>corrélation négative</strong> entre le taux de croissance des salaires nominaux et le taux de chômage <span class="citation" data-cites="phillips1958">(<a href="#/pour-la-prochaine-fois" role="doc-biblioref" onclick="">Phillips 1958</a>)</span>.</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">Chômage élevé <span class="math inline">\(\Rightarrow\)</span> faible pression sur les salaires nominaux.</li>
+<li class="fragment">Chômage faible <span class="math inline">\(\Rightarrow\)</span> forte pression à la hausse sur les salaires nominaux.</li>
+<li class="fragment"><strong>Samuelson et Solow (1960)</strong> retrouvent une relation similaire aux États-Unis et l’étendent à l’<strong>inflation</strong> : les entreprises répercutant les hausses de salaires sur leurs prix de vente, chômage faible <span class="math inline">\(\Leftrightarrow\)</span> inflation élevée.</li>
+</ul>
+<div class="source">
+<p>Phillips (1958) ; Samuelson et Solow (1960).</p>
+</div>
+</div>
+</section>
+<section id="linterprétation-keynésienne-le-chômage-explique-linflation" class="slide level2">
+<h2>L’interprétation keynésienne : le chômage explique l’inflation</h2>
+<p>Dans cette lecture, la causalité va du marché du travail vers les prix :</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Chômage faible (proche du plein emploi)</strong></p>
+<ul>
+<li>Demande de travail des entreprises <span class="math inline">\(&gt;\)</span> offre de travail</li>
+<li>Hausse des salaires nominaux <span class="math inline">\(W\)</span></li>
+<li>Hausse du niveau général des prix <span class="math inline">\(P\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Chômage élevé (récession)</strong></p>
+<ul>
+<li>Offre de travail <span class="math inline">\(&gt;\)</span> demande de travail</li>
+<li>Stagnation, voire baisse de <span class="math inline">\(W\)</span></li>
+<li>Ralentissement de la hausse de <span class="math inline">\(P\)</span></li>
+</ul>
+</div></div>
+<div class="fragment">
+<div class="cle">
+<p>La courbe de Phillips relâche l’hypothèse de rigidité des prix et des salaires : elle relie explicitement l’état du marché du travail à l’évolution de l’inflation.</p>
+</div>
+</div>
+</section>
+<section id="deux-chaînes-causales-symétriques-relient-chômage-et-prix" class="slide level2">
+<h2>Deux chaînes causales symétriques relient chômage et prix</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Etat du marche du travail] --&gt; B[Chomage faible - pres du plein emploi]
+    A --&gt; C[Chomage eleve - recession]
+    B --&gt; B1[Demande de travail superieure a l offre]
+    B1 --&gt; B2[Hausse des salaires nominaux W]
+    B2 --&gt; B3[Hausse du niveau general des prix P]
+    C --&gt; C1[Offre de travail superieure a la demande]
+    C1 --&gt; C2[Stagnation ou baisse de W]
+    C2 --&gt; C3[Ralentissement de la hausse de P]
+</pre>
+</div>
+<p></p><figcaption> Selon la lecture keynésienne, l’état du marché du travail détermine l’évolution des salaires nominaux, qui se répercute ensuite sur le niveau général des prix.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="dans-les-années-1950-1960-larbitrage-semble-un-choix-de-politique-économique" class="slide level2">
+<h2>Dans les années 1950-1960, l’arbitrage semble un choix de politique économique</h2>
+<ul>
+<li class="fragment">La relation inflation-chômage devient <strong>centrale</strong> dans la politique macroéconomique d’après-guerre.</li>
+<li class="fragment">Les gouvernements semblent pouvoir <strong>choisir</strong> un point sur la courbe : accepter un peu plus d’inflation pour obtenir un peu moins de chômage, ou l’inverse.</li>
+<li class="fragment">Cette lecture reste dominante jusqu’à la fin des années 1960.</li>
+</ul>
+<div class="fragment">
+<div class="def">
+<p><strong>Arbitrage inflation-chômage</strong> : l’idée qu’une politique de relance (monétaire ou budgétaire) permettrait de réduire durablement le chômage au prix d’une inflation plus élevée, et réciproquement.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="la-critique-de-friedman-phelps-anticipations-et-nairu" class="title-slide slide level1 center" data-background-color="#1f4e79">
+<h1>2. La critique de Friedman-Phelps : anticipations et NAIRU</h1>
+
+</section>
+<section id="friedman-et-phelps-inversent-le-sens-de-la-causalité" class="slide level2">
+<h2>Friedman et Phelps inversent le sens de la causalité</h2>
+<div class="def">
+<p><strong>Friedman (1968) et Phelps</strong> réinterprètent la relation en plaçant la causalité dans l’autre sens : ce sont les <strong>salaires et les prix</strong> qui expliquent le chômage, via le rôle des anticipations d’inflation <span class="citation" data-cites="friedman1968">(<a href="#/pour-la-prochaine-fois" role="doc-biblioref" onclick="">Friedman 1968</a>)</span>.</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">Vision néoclassique sous-jacente : pour une productivité donnée, l’emploi dépend du <strong>salaire réel</strong> <span class="math inline">\(w = W/P\)</span>.</li>
+<li class="fragment">Une politique monétaire expansive fait monter <span class="math inline">\(P\)</span> ; si les salariés ne réagissent pas immédiatement, le salaire réel baisse <span class="math inline">\(\Rightarrow\)</span> le coût du travail baisse <span class="math inline">\(\Rightarrow\)</span> le chômage recule.</li>
+<li class="fragment">Cet effet ne dure que tant que les salariés <strong>n’ont pas perçu</strong> la baisse de leur pouvoir d’achat.</li>
+</ul>
+</div>
+</section>
+<section id="leffet-de-linflation-sur-lemploi-nest-que-transitoire" class="slide level2">
+<h2>L’effet de l’inflation sur l’emploi n’est que transitoire</h2>
+<div class="def">
+<p><strong>Anticipations adaptatives</strong> : les agents forment leurs anticipations d’inflation à partir de l’évolution <em>passée</em> des prix, et corrigent progressivement leurs erreurs à mesure que de nouvelles observations arrivent.</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">Dès que les salariés réalisent la baisse de leur salaire réel : ils réduisent leur offre de travail ou négocient une hausse de salaire nominal.</li>
+<li class="fragment">Dans les deux cas, le salaire réel (et le chômage) reviennent à leur niveau antérieur.</li>
+<li class="fragment"><strong>Conséquence</strong> : l’arbitrage inflation-chômage n’existe qu’à <strong>court terme</strong>, tant que l’inflation observée dépasse l’inflation anticipée.</li>
+</ul>
+</div>
+</section>
+<section id="pourquoi-leffet-sur-le-chômage-nest-que-transitoire" class="slide level2">
+<h2>Pourquoi l’effet sur le chômage n’est que transitoire</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Politique monetaire expansive] --&gt; B[Hausse du niveau general des prix P]
+    B --&gt; C[Le salaire reel baisse a court terme]
+    C --&gt; D[Cout du travail plus faible]
+    D --&gt; E[Chomage recule temporairement]
+    E --&gt; F[Salaries percoivent la baisse de leur pouvoir d achat]
+    F --&gt; G[Salaire reel et chomage reviennent a leur niveau anterieur]
+</pre>
+</div>
+<p></p><figcaption> Une politique monétaire expansive ne réduit le chômage que le temps que les salariés ne perçoivent pas la baisse de leur salaire réel : dès qu’ils l’observent et négocient, le chômage revient à son niveau antérieur.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="le-nairu-le-taux-de-chômage-compatible-avec-une-inflation-stable" class="slide level2">
+<h2>Le NAIRU : le taux de chômage compatible avec une inflation stable</h2>
+<div class="def">
+<p><strong>NAIRU</strong> (<em>Non-Accelerating Inflation Rate of Unemployment</em>) : taux de chômage pour lequel l’inflation observée est égale à l’inflation anticipée (<span class="math inline">\(\pi = \pi^a\)</span>), donc stable.</p>
+<p><strong>NAIRU = taux de chômage naturel <span class="math inline">\(u^n\)</span> = taux de chômage structurel.</strong></p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">Si <span class="math inline">\(u &lt; u^n\)</span> : l’inflation <strong>accélère</strong>.</li>
+<li class="fragment">Si <span class="math inline">\(u &gt; u^n\)</span> : l’inflation <strong>décélère</strong>.</li>
+<li class="fragment">Depuis les années 1970, le NAIRU est estimé à environ <strong>6 %</strong> aux États-Unis ; depuis les années 1990, autour de <strong>9-10 %</strong> dans plusieurs pays européens.</li>
+</ul>
+</div>
+</section>
+<section id="la-courbe-de-phillips-de-court-terme-et-de-long-terme" class="slide level2">
+<h2>La courbe de Phillips de court terme et de long terme</h2>
+
+<img data-src="cm07_files/figure-revealjs/fig-phillips-1.png" width="576" class="r-stretch quarto-figure-center" id="fig-phillips"><p class="caption">
+Figure&nbsp;1: Courbe de Phillips de court terme et de long terme : à long terme, le chômage revient au taux naturel uⁿ (NAIRU), quel que soit le niveau d’inflation anticipée.
+</p></section>
+<section id="léquation-de-phillips-augmentée-des-anticipations-formalise-ce-mécanisme" class="slide level2">
+<h2>L’équation de Phillips augmentée des anticipations formalise ce mécanisme</h2>
+<p><span class="math display">\[
+\pi = \pi^a - a\,(u - u^n)
+\]</span></p>
+<p>où <span class="math inline">\(\pi\)</span> est l’inflation observée, <span class="math inline">\(\pi^a\)</span> l’inflation anticipée, <span class="math inline">\(u^n\)</span> le taux de chômage naturel (NAIRU) et <span class="math inline">\(a &gt; 0\)</span> un paramètre de sensibilité.</p>
+<div class="fragment">
+<div class="cle">
+<ul>
+<li class="fragment"><strong>Court terme</strong> : <span class="math inline">\(\pi^a\)</span> est donné <span class="math inline">\(\Rightarrow\)</span> chaque droite (bleue ou rouge sur le graphique) reste <strong>décroissante</strong>.</li>
+<li class="fragment"><strong>Long terme</strong> : les anticipations s’ajustent (<span class="math inline">\(\pi^a = \pi\)</span>) <span class="math inline">\(\Rightarrow\)</span> la relation devient <strong>verticale</strong> au niveau <span class="math inline">\(u^n\)</span>.</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="les-années-1970-la-disparition-de-la-courbe" class="title-slide slide level1 center" data-background-color="#1f4e79">
+<h1>3. Les années 1970 : la disparition de la courbe</h1>
+
+</section>
+<section id="les-chocs-pétroliers-provoquent-une-stagflation-inédite" class="slide level2">
+<h2>Les chocs pétroliers provoquent une stagflation inédite</h2>
+<div class="def">
+<p><strong>Stagflation</strong> : coexistence d’une inflation élevée et d’un chômage élevé, situation que la courbe de Phillips initiale ne peut pas expliquer (elle prédit une relation <em>inverse</em> entre les deux).</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">Chocs pétroliers de <strong>1973</strong> et <strong>1979</strong> : hausse des coûts de production dans un contexte de ralentissement des gains de productivité.</li>
+<li class="fragment">Indexation plus systématique des salaires sur l’inflation passée <span class="math inline">\(\Rightarrow\)</span> spirale prix-salaires.</li>
+<li class="fragment">À partir de 1970, la relation inflation-chômage se <strong>brise</strong> aux États-Unis comme en France.</li>
+</ul>
+</div>
+</section>
+<section id="le-nuage-de-phillips-réel-la-relation-existe-1960-1969-puis-se-brise-1970-1984" class="slide level2 smaller">
+<h2>Le nuage de Phillips réel : la relation existe (1960-1969), puis se brise (1970-1984)</h2>
+<p>Les données confirment ce schéma théorique : chômage et inflation annuels aux États-Unis, cliquez pour faire apparaître la seconde période.</p>
+<div class="r-stack">
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-phillips-reel-1" class="quarto-float quarto-figure quarto-figure-center" width="672">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-phillips-reel-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm07_files/figure-revealjs/fig-phillips-reel-1-1.png" id="fig-phillips-reel-1" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-phillips-reel-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-phillips-reel-2" class="quarto-float quarto-figure quarto-figure-center" width="672">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-phillips-reel-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="cm07_files/figure-revealjs/fig-phillips-reel-2-1.png" id="fig-phillips-reel-2" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-phillips-reel-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="source">
+<p>Nuage de Phillips empirique, États-Unis, 1960-1984 (chômage en abscisse, inflation en ordonnée). En bleu (1960-1969) : la relation négative de Phillips (1958) est nettement visible. En rouge (1970-1984) : les chocs pétroliers et l’ancrage des anticipations d’inflation font disparaître la relation stable, qui dessine désormais des boucles plutôt qu’une courbe unique. Source : Bureau of Labor Statistics (BLS), séries UNRATE et CPIAUCSL, via FRED, Federal Reserve Bank of St.&nbsp;Louis.</p>
+</div>
+</section>
+<section id="la-stagflation-en-direct-inflation-et-chômage-montent-ensemble-1968-1985" class="slide level2 smaller">
+<h2>La stagflation en direct : inflation et chômage montent ensemble (1968-1985)</h2>
+
+<img data-src="cm07_files/figure-revealjs/fig-stagflation-cm07-1.png" width="720" class="r-stretch quarto-figure-center" id="fig-stagflation-cm07"><p class="caption">
+Figure&nbsp;4: Taux de chômage annuel moyen et inflation des prix à la consommation (IPC), États-Unis, 1968-1985 (lignes verticales pointillées : chocs pétroliers de 1973 et 1979). Lors des deux chocs, chômage et inflation montent ensemble : c’est la stagflation, une configuration que la courbe de Phillips initiale (relation inverse) ne peut pas expliquer. Source : Bureau of Labor Statistics (BLS), séries UNRATE et CPIAUCSL, via FRED, Federal Reserve Bank of St.&nbsp;Louis.
+</p></section>
+<section id="deux-explications-concurrentes-de-la-rupture" class="slide level2">
+<h2>Deux explications concurrentes de la rupture</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Approche par les chocs d’offre</strong></p>
+<p>Un choc d’offre négatif (coût du pétrole) déplace simultanément la production potentielle à la baisse et les prix à la hausse : chômage et inflation augmentent ensemble.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Approche monétariste</strong></p>
+<p>L’accent est mis sur la réaction des agents à une politique monétaire expansive répétée : ils intègrent progressivement l’inflation dans leurs anticipations, ce qui déplace la courbe de Phillips de court terme vers la droite.</p>
+</div></div>
+<div class="fragment">
+<div class="cle">
+<p>Les deux lectures convergent sur un point : la courbe de Phillips de court terme n’est <strong>pas stable</strong>, elle se déplace avec les anticipations d’inflation.</p>
+</div>
+</div>
+</section>
+<section id="à-long-terme-il-nexiste-plus-aucun-arbitrage-inflation-chômage" class="slide level2">
+<h2>À long terme, il n’existe plus aucun arbitrage inflation-chômage</h2>
+<ul>
+<li class="fragment">Si un gouvernement tente de maintenir indéfiniment <span class="math inline">\(u &lt; u^n\)</span> en tolérant plus d’inflation, les agents ajustent leurs anticipations : la courbe de Phillips de court terme se déplace vers la droite.</li>
+<li class="fragment">Le chômage revient alors à <span class="math inline">\(u^n\)</span>, mais à un niveau d’inflation <strong>plus élevé</strong>.</li>
+<li class="fragment">À long terme, seul le niveau de production potentielle (quantité et qualité du travail, stock de capital, progrès technique) détermine le chômage, pas l’inflation.</li>
+</ul>
+<div class="fragment">
+<div class="cle">
+<p>La politique monétaire ne peut réduire le chômage que <strong>temporairement</strong>. À long terme, elle n’a d’effet que sur les prix, pas sur l’emploi.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="anticipations-rationnelles-au-delà-du-nairu" class="title-slide slide level1 center" data-background-color="#1f4e79">
+<h1>4. Anticipations rationnelles : au-delà du NAIRU</h1>
+
+</section>
+<section id="les-anticipations-rationnelles-suppriment-larbitrage-même-à-court-terme" class="slide level2">
+<h2>Les anticipations rationnelles suppriment l’arbitrage même à court terme</h2>
+<div class="def">
+<p><strong>Anticipations rationnelles</strong> (J. Muth, 1961) : les agents utilisent <em>toute</em> l’information disponible pour former leurs anticipations, de sorte qu’en moyenne l’inflation anticipée est égale à l’inflation observée.</p>
+</div>
+<div class="fragment">
+<ul>
+<li class="fragment">Une étape supplémentaire est franchie par la <strong>Nouvelle Macroéconomie Classique</strong> (Robert Lucas, Thomas Sargent, Neil Wallace).</li>
+<li class="fragment">Si les agents anticipent correctement une politique monétaire, ils l’intègrent immédiatement dans leurs décisions de salaire et de prix.</li>
+<li class="fragment">Le salaire réel n’est alors influencé <strong>que par des déterminants réels</strong> (productivité), pas par la politique monétaire anticipée.</li>
+</ul>
+</div>
+</section>
+<section id="seule-une-politique-monétaire-surprise-a-un-effet-réel" class="slide level2">
+<h2>Seule une politique monétaire surprise a un effet réel</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Politique anticipée</strong></p>
+<p>Aucun effet réel, même à court terme : les prix et les salaires s’ajustent immédiatement, le chômage reste à <span class="math inline">\(u^n\)</span>.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Politique surprise</strong></p>
+<p>Effet transitoire possible sur l’emploi, tant que les agents n’ont pas encore révisé leurs anticipations.</p>
+</div></div>
+<div class="fragment">
+<div class="cle">
+<p>Avec les anticipations rationnelles, l’arbitrage keynésien initial disparaît complètement : même à court terme, une politique monétaire annoncée et crédible ne change pas l’emploi.</p>
+</div>
+</div>
+</section>
+<section id="depuis-les-années-1990-la-relation-inflation-chômage-diverge-selon-les-pays" class="slide level2">
+<h2>Depuis les années 1990, la relation inflation-chômage diverge selon les pays</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Actualisation</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment">États-Unis, Allemagne, pays nordiques : faible inflation <strong>et</strong> faible chômage.</li>
+<li class="fragment">France : faible inflation mais chômage <strong>élevé</strong>.</li>
+</ul>
+<p>Ce constat suggère que la position et la pente de la courbe de Phillips dépendent fortement des <strong>institutions nationales</strong> du marché du travail, un thème approfondi avec le modèle WS-PS (CM 8).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="depuis-1990-la-relation-diverge-selon-les-institutions-nationales" class="slide level2 smaller">
+<h2>Depuis 1990, la relation diverge selon les institutions nationales</h2>
+
+<img data-src="cm07_files/figure-revealjs/fig-divergence-cm07-1.png" width="720" class="r-stretch quarto-figure-center" id="fig-divergence-cm07"><p class="caption">
+Figure&nbsp;5: Taux de chômage (%), France, Allemagne, Danemark, États-Unis, années sélectionnées 1991-2023. France : série nationale BIT (Banque mondiale, WDI) ; comparaison indicative. L’Allemagne bascule d’un chômage élevé (environ 11 % en 2005) à l’un des plus bas d’Europe après les réformes Hartz (2003-2005) ; le Danemark reste durablement modéré depuis la flexicurité de 1994 ; les États-Unis fluctuent avec le cycle mais reviennent vite à un chômage bas ; la France reste seule à un niveau structurellement élevé. Source : France, Banque mondiale (WDI, SL.UEM.TOTL.NE.ZS) ; autres pays, OCDE/Eurostat, taux de chômage harmonisé (définition BIT), moyenne annuelle, années sélectionnées.
+</p></section>
+<section id="cinq-décennies-de-théorie-de-phillips-aux-anticipations-rationnelles" class="slide level2">
+<h2>Cinq décennies de théorie : de Phillips aux anticipations rationnelles</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Phillips 1958 - Correlation salaires-chomage] --&gt; B[Lecture keynesienne - Arbitrage exploitable]
+    B --&gt; C[Stagflation annees 1970 - La relation se brise]
+    C --&gt; D[Friedman-Phelps - NAIRU et anticipations adaptatives]
+    D --&gt; E[Anticipations rationnelles - Arbitrage disparait meme a court terme]
+</pre>
+</div>
+<p></p><figcaption> Quatre ruptures théoriques jalonnent l’histoire de la courbe de Phillips : de la corrélation empirique de 1958 à la disparition complète de l’arbitrage avec les anticipations rationnelles.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="synthèse-trois-lectures-de-la-courbe-de-phillips" class="slide level2">
+<h2>Synthèse : trois lectures de la courbe de Phillips</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Relation CT/LT</th>
+<th>Rôle des anticipations</th>
+<th>Arbitrage politique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Phillips (1958)</strong></td>
+<td>Une seule courbe, stable</td>
+<td>Absent</td>
+<td>Exploitable, semble permanent</td>
+</tr>
+<tr class="even">
+<td><strong>Friedman-Phelps</strong></td>
+<td>CT décroissante, LT verticale en <span class="math inline">\(u^n\)</span></td>
+<td>Adaptatives (inflation passée)</td>
+<td>Existe à CT seulement</td>
+</tr>
+<tr class="odd">
+<td><strong>Anticipations rationnelles</strong></td>
+<td>LT verticale, CT verticale si anticipée</td>
+<td>Rationnelles (toute l’info disponible)</td>
+<td>Disparaît même à CT si la politique est anticipée</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="à-retenir" class="slide level2">
+<h2>À retenir</h2>
+<div class="cle">
+<ul>
+<li class="fragment">Phillips (1958) documente une corrélation négative salaires/chômage, étendue par Samuelson-Solow à l’inflation ; l’interprétation keynésienne y voit un arbitrage exploitable.</li>
+<li class="fragment">La stagflation des années 1970 (chocs pétroliers) brise cette relation stable.</li>
+<li class="fragment">Friedman-Phelps réintroduisent les <strong>anticipations</strong> : la courbe de Phillips est décroissante à court terme mais <strong>verticale au NAIRU <span class="math inline">\(u^n\)</span></strong> à long terme, soit <span class="math inline">\(\pi = \pi^a - a\,(u-u^n)\)</span>.</li>
+<li class="fragment">Avec les <strong>anticipations rationnelles</strong> (Lucas, Muth), l’arbitrage disparaît même à court terme si la politique est anticipée.</li>
+<li class="fragment">Depuis les années 1990, la relation diverge selon les institutions nationales du marché du travail.</li>
+</ul>
+</div>
+</section>
+<section id="pour-la-prochaine-fois" class="slide level2 smaller scrollable">
+<h2>Pour la prochaine fois</h2>
+<ul>
+<li class="fragment">Relire la section II.4 du chapitre II (partie 2) et refaire l’équation de Phillips augmentée à partir du graphique.</li>
+<li class="fragment">Préparer le TD 6 (Keynes, Okun, Phillips) : correction du CC1 en séance.</li>
+<li class="fragment">Lecture conseillée : Blanchard et Cohen, <em>Macroéconomie</em>, chapitre sur la courbe de Phillips.</li>
+<li class="fragment">CM 8 : modèle Wage Setting–Price Setting (WS-PS), pourquoi le chômage d’équilibre diffère selon les pays.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-friedman1968" class="csl-entry" role="listitem">
+Friedman, Milton. 1968. <span>«&nbsp;The Role of Monetary Policy&nbsp;»</span>. <em>American Economic Review</em> 58 (1): 1‑17.
+</div>
+<div id="ref-phillips1958" class="csl-entry" role="listitem">
+Phillips, A. W. 1958. <span>«&nbsp;The Relation between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861–1957&nbsp;»</span>. <em>Economica</em> 25 (100): 283‑99.
+</div>
+</div>
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Macroéconomie 1, L2 AES</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1200,
+
+        height: 750,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/macro1-aes\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

@@ -1,0 +1,519 @@
+---
+title: "CM 5 : L'analyse néoclassique du marché du travail"
+subtitle: "Un marché comme les autres : l'équilibre par les salaires exclut tout chômage involontaire"
+---
+
+## Plan de la séance
+
+1. Les hypothèses du modèle néoclassique (CPP, rationalité, arbitrage)
+2. L'offre de travail : effet de substitution vs effet de revenu
+3. La demande de travail : la productivité marginale décroissante
+4. L'équilibre et le chômage volontaire
+5. Chocs et ajustement par les salaires
+6. La solution néoclassique : baisser le coût du travail
+7. Limites de l'approche
+
+::: {.source}
+D'après M. Ouedraogo (CERDI, Université Clermont Auvergne), *Chapitre II (Partie 2), Section I : L'analyse néoclassique du marché du travail*.
+:::
+
+## Objectifs de la séance
+
+::: {.cle}
+**À l'issue de cette séance, vous saurez :**
+
+- Énoncer les hypothèses du modèle néoclassique du marché du travail (CPP, rationalité, arbitrage).
+- Expliquer pourquoi l'offre de travail est supposée croissante et la demande décroissante avec le salaire réel.
+- Représenter et commenter le graphique d'équilibre offre-demande de travail.
+- Justifier pourquoi les néoclassiques qualifient le chômage résiduel de « volontaire ».
+- Analyser l'effet d'un choc (immigration, indemnités chômage, productivité) sur le salaire et l'emploi d'équilibre.
+- Expliquer pourquoi un salaire minimum trop élevé crée du chômage dans ce cadre, et pourquoi la solution néoclassique consiste à baisser le coût du travail.
+:::
+
+## Rappel : quatre cadres théoriques expliquent le chômage
+
+Le chapitre II (Partie 2) présente **quatre grands cadres théoriques**, dans l'ordre chronologique de leur développement :
+
+::: {.cle .incremental}
+1. **Néoclassique** (aujourd'hui) : marché du travail en concurrence pure et parfaite.
+2. Keynésien : demande effective, chômage involontaire.
+3. WS-PS : négociation salariale et fixation des prix.
+4. Appariement : flux, frictions, courbe de Beveridge.
+:::
+
+. . .
+
+Chaque cadre propose une explication différente des causes du chômage, et donc des politiques économiques différentes pour le réduire.
+
+## Quatre cadres théoriques se sont développés dans le temps
+
+```{mermaid}
+%%| fig-cap: "Les quatre cadres théoriques se succèdent chronologiquement : chacun répond aux limites du précédent. Le cadre néoclassique, étudié dans ce cours, ouvre la séquence."
+flowchart LR
+    A[1. Neoclassique - CPP] --> B[2. Keynesien - demande effective]
+    B --> C[3. WS-PS - negociation salariale]
+    C --> D[4. Appariement - frictions et flux]
+    classDef courant fill:#1f4e79,stroke:#1f4e79,color:#ffffff
+    class A courant
+```
+
+. . .
+
+::: {.cle}
+Ce cours (CM 5) porte sur le premier cadre, historiquement le plus ancien : le modèle néoclassique du marché du travail.
+:::
+
+## Le marché néoclassique respecte les conditions de la CPP
+
+L'analyse néoclassique traite l'offre et la demande de travail comme celles de **n'importe quelle marchandise**, sous les hypothèses de la **concurrence pure et parfaite (CPP)** : atomicité des offreurs/demandeurs, homogénéité du travail, libre entrée-sortie, information parfaite.
+
+. . .
+
+::: {.def .incremental}
+**Deux hypothèses clés structurent le raisonnement :**
+
+- Les agents sont **rationnels** : les ménages maximisent leur utilité, les entreprises leur profit.
+- Le travail fait l'objet d'un **arbitrage** : entre loisir et travail pour les ménages, entre capital et travail pour les entreprises.
+:::
+
+## Les ménages arbitrent entre consommation et loisir
+
+Chaque individu dispose d'une dotation de temps qu'il répartit entre **travail** (source de revenu, donc de consommation) et **loisir**.
+
+. . .
+
+::: {.def}
+**Salaire de réserve $w_r$.** Rémunération minimale qu'un individu est prêt à accepter pour occuper un emploi. En-deçà de ce seuil, il préfère rester inactif.
+
+Déterminants : revenus du ménage et transferts publics, qualification (éducation, expérience), coûts fixes liés au travail (garde d'enfants, transport), fiscalité sur les revenus du travail.
+:::
+
+. . .
+
+Un individu offre son travail dès lors que le salaire de marché $w$ dépasse son salaire de réserve $w_r$.
+
+## Une hausse du salaire produit deux effets opposés
+
+::: {.columns}
+::: {.column width="50%"}
+**Effet de substitution**
+
+Le loisir devient plus « cher » en coût d'opportunité $\Rightarrow$ l'individu **substitue** du travail au loisir : il offre davantage de travail.
+:::
+
+::: {.column width="50%"}
+**Effet de revenu**
+
+À salaire plus élevé, un même niveau de vie est atteint avec **moins d'heures travaillées** $\Rightarrow$ l'individu peut choisir de consommer plus de loisir.
+:::
+:::
+
+. . .
+
+::: {.cle}
+Par simplification, le modèle néoclassique retient l'hypothèse selon laquelle **l'effet de substitution domine l'effet de revenu**.
+:::
+
+## L'offre agrégée de travail croît avec le salaire réel
+
+L'offre agrégée $L^s$ est la somme des offres individuelles : elle indique la quantité de travail offerte dans l'économie pour chaque niveau de salaire réel $w = W/P$.
+
+```{r}
+#| label: fig-offre-neo
+#| fig-cap: "L'offre agrégée de travail est une fonction croissante du salaire réel : l'effet de substitution domine l'effet de revenu."
+#| fig-width: 6
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+L <- seq(0, 10, length.out = 200)
+w_offre <- 1 + 0.55 * L
+df_offre <- data.frame(L = L, w = w_offre)
+
+ggplot(df_offre, aes(x = L, y = w)) +
+  geom_line(linewidth = 1.1, color = macro_pal[["bleu"]]) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
+  theme_macro()
+```
+
+## La productivité marginale décroissante gouverne la demande
+
+À court terme, le capital est fixe : les entreprises embauchent jusqu'à égaliser le salaire réel à la **productivité marginale du travail (PmL)**, elle-même décroissante (chaque travailleur supplémentaire ajoute moins de production que le précédent).
+
+. . .
+
+::: {.cle}
+Plus le coût du travail $w$ est élevé, plus les coûts de production augmentent $\Rightarrow$ **la demande de travail $L^d$ est une fonction décroissante du salaire réel**.
+:::
+
+. . .
+
+À long terme, les entreprises peuvent aussi substituer capital et travail, mais la relation décroissante entre $L^d$ et $w$ demeure. La demande agrégée $L^d$ est la somme des demandes individuelles des entreprises.
+
+## La demande de travail décroît avec le salaire réel
+
+```{r}
+#| label: fig-demande-neo
+#| fig-cap: "La demande agrégée de travail est une fonction décroissante du salaire réel : un coût du travail plus élevé réduit les embauches."
+#| fig-width: 6
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+L <- seq(0, 10, length.out = 200)
+w_demande <- 9 - 0.6 * L
+df_demande <- data.frame(L = L, w = w_demande)
+
+ggplot(df_demande, aes(x = L, y = w)) +
+  geom_line(linewidth = 1.1, color = macro_pal[["or"]]) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
+  theme_macro()
+```
+
+## Les heures travaillées ont chuté à mesure que les salaires montaient
+
+```{r}
+#| label: fig-heures-longterme
+#| fig-cap: "Durée annuelle moyenne du travail en France, 1950-2019 (heures par travailleur), avec repères internationaux 2019. Sur longue période, le pouvoir d'achat du salaire a été multiplié par environ 5 tandis que la durée annuelle du travail était réduite d'environ un tiers : à l'inverse de l'hypothèse du modèle néoclassique (effet de substitution dominant), c'est l'effet de revenu qui l'a emporté sur la marge des heures travaillées. Source : OCDE, Average annual hours actually worked (1970-2019) ; Bergeaud, Cette et Lecat (2016, Banque de France), Productivity Trends in Advanced Countries, pour les points antérieurs à 1970."
+#| fig-width: 6.5
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Duree annuelle moyenne du travail en France, 1950-2019 (heures par travailleur).
+# Source : OCDE, "Average annual hours actually worked" (1970-2019) ;
+# Bergeaud, Cette et Lecat (2016, Banque de France, base "Productivity Trends
+# in Advanced Countries") pour les points anterieurs a 1970. Ordres de
+# grandeur bien etablis (baisse seculaire d'environ un tiers depuis 1950).
+df_heures <- data.frame(
+  annee  = c(1950, 1960, 1970, 1980, 1990, 2000, 2010, 2019),
+  heures = c(2242, 1988, 1960, 1806, 1667, 1567, 1494, 1505)
+)
+
+# Points de comparaison internationale en 2019 (OCDE, meme serie).
+df_comp <- data.frame(
+  pays   = c("États-Unis (2019)", "Allemagne (2019)"),
+  heures = c(1765, 1385)
+)
+
+ggplot(df_heures, aes(x = annee, y = heures)) +
+  geom_hline(data = df_comp, aes(yintercept = heures), linetype = "dashed",
+             color = macro_pal[["gris"]], linewidth = 0.5) +
+  geom_text(data = df_comp, aes(x = 1951, y = heures, label = pays),
+            hjust = 0, vjust = -0.6, size = 3.2, color = macro_pal[["gris"]]) +
+  geom_line(linewidth = 1.1, color = macro_pal[["bleu"]]) +
+  geom_point(size = 2.2, color = macro_pal[["bleu"]]) +
+  scale_x_continuous(breaks = df_heures$annee) +
+  coord_cartesian(ylim = c(1300, 2350)) +
+  labs(x = "Année", y = "Durée annuelle du travail (heures)") +
+  theme_macro()
+```
+
+::: {.source}
+Note : ce fait empirique nuance l'hypothèse simplificatrice du modèle (§7, Limites) sans l'invalider sur le court terme.
+:::
+
+## L'équilibre égalise offre et demande de travail
+
+L'intersection des deux courbes détermine le **salaire d'équilibre** $w^*$ et l'**emploi d'équilibre** $L^*$.
+
+```{r}
+#| label: fig-equilibre-neo
+#| fig-cap: "Équilibre néoclassique sur le marché du travail : la rencontre de l'offre et de la demande de travail détermine le salaire réel et l'emploi d'équilibre."
+#| fig-width: 6
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+L <- seq(0, 10, length.out = 200)
+w_offre <- 1 + 0.55 * L
+w_demande <- 9 - 0.6 * L
+eq_L <- (9 - 1) / (0.55 + 0.6)
+eq_w <- 1 + 0.55 * eq_L
+
+df_od <- data.frame(
+  L = rep(L, 2),
+  w = c(w_offre, w_demande),
+  courbe = rep(c("Offre de travail (Ls)", "Demande de travail (Ld)"), each = length(L))
+)
+
+ggplot(df_od, aes(x = L, y = w, color = courbe)) +
+  geom_line(linewidth = 1.1) +
+  annotate("segment", x = eq_L, xend = eq_L, y = 0, yend = eq_w,
+           linetype = "dashed", color = macro_pal[["gris"]], linewidth = 0.4) +
+  annotate("segment", x = 0, xend = eq_L, y = eq_w, yend = eq_w,
+           linetype = "dashed", color = macro_pal[["gris"]], linewidth = 0.4) +
+  annotate("point", x = eq_L, y = eq_w, size = 2.6, color = macro_pal[["rouge"]]) +
+  annotate("text", x = eq_L + 0.35, y = eq_w + 0.55,
+           label = "Équilibre (w*, L*)", hjust = 0, size = 3.6, color = macro_pal[["rouge"]]) +
+  scale_color_manual(values = c("Offre de travail (Ls)" = macro_pal[["bleu"]],
+                                 "Demande de travail (Ld)" = macro_pal[["or"]])) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
+  theme_macro()
+```
+
+## À l'équilibre, tout chômage résiduel est volontaire
+
+::: {.cle}
+Pour les néoclassiques, **il n'existe pas de chômage involontaire à l'équilibre** : tout individu disposé à travailler au taux de salaire de marché trouve un emploi.
+:::
+
+. . .
+
+Le chômage résiduel observé est qualifié de **chômage volontaire** : il s'agit d'individus dont le salaire de réserve $w_r$ est *supérieur* au salaire de marché $w^*$ en vigueur, et qui choisissent donc de ne pas travailler à ce prix.
+
+## Une chaîne logique relie hypothèses, courbes et équilibre
+
+```{mermaid}
+%%| fig-cap: "Les hypothèses de concurrence pure et parfaite déterminent la forme des deux courbes ; leur rencontre fixe l'équilibre, et tout chômage résiduel est alors qualifié de volontaire."
+flowchart TD
+    H[Hypotheses CPP - agents rationnels] --> O[Offre croissante - substitution domine]
+    H --> Dm[Demande decroissante - PmL decroissante]
+    O --> E[Equilibre - offre egale demande]
+    Dm --> E
+    E --> V[Chomage residuel qualifie de volontaire]
+```
+
+## Les salaires flexibles absorbent tous les chocs
+
+Dans ce cadre, **les salaires sont parfaitement flexibles** et constituent la variable d'ajustement du marché : tout choc déplace l'une des deux courbes, puis le salaire s'ajuste pour ramener le marché au plein emploi.
+
+| Choc | Courbe affectée | Effet attendu |
+|---|---|---|
+| Immigration massive | Offre $\uparrow$ | $w \downarrow$, $L \uparrow$ |
+| Hausse des indemnités chômage | Offre $\downarrow$ ($w_r \uparrow$) | $w \uparrow$, $L \downarrow$ |
+| Baisse de l'impôt sur le revenu | Offre $\uparrow$ | $w \downarrow$, $L \uparrow$ |
+| Hausse de la productivité du travail | Demande $\uparrow$ | $w \uparrow$, $L \uparrow$ |
+| Automatisation (tâches peu qualifiées) | Demande $\downarrow$ | $w \downarrow$, $L \downarrow$ |
+
+## Exemple : une immigration massive déplace l'offre
+
+::: {.columns}
+::: {.column width="55%"}
+::: {.incremental}
+1. L'arrivée de nouveaux actifs déplace la courbe d'offre $L^s$ **vers la droite** (à chaque salaire, davantage de travailleurs sont disponibles).
+2. Au salaire initial $w^*$, l'offre excède désormais la demande.
+3. Le salaire réel s'ajuste à la **baisse** jusqu'à un nouvel équilibre.
+4. L'emploi d'équilibre **augmente**.
+:::
+:::
+::: {.column width="45%"}
+::: {.def}
+**Logique générale**
+
+Un choc d'offre (ou de demande) provoque un déséquilibre temporaire ; le salaire, variable flexible, le résorbe en ramenant le marché au plein emploi, à un nouveau couple $(w^*, L^*)$.
+:::
+:::
+:::
+
+## Le salaire réel est la variable d'ajustement de tout choc
+
+```{mermaid}
+%%| fig-cap: "Qu'il touche l'offre ou la demande de travail, un choc crée un déséquilibre temporaire que le salaire réel, variable flexible, résorbe en ramenant le marché à un nouvel équilibre de plein emploi."
+flowchart LR
+    A[Choc offre ou demande] --> B[Desequilibre temporaire]
+    B --> C[Ajustement du salaire reel]
+    C --> D[Nouvel equilibre de plein emploi]
+```
+
+. . .
+
+::: {.cle}
+Ce mécanisme générique s'applique à chacun des chocs du tableau précédent : immigration, indemnités chômage, productivité, automatisation.
+:::
+
+## La recommandation néoclassique : laisser agir le marché
+
+Le modèle néoclassique recommande de **laisser agir les forces du marché** :
+
+::: {.incremental}
+- Limiter les interventions publiques directes sur le salaire.
+- Rendre les salaires flexibles (éviter un salaire minimum trop élevé, des conventions collectives trop rigides).
+- Assouplir le droit du travail pour faciliter la mobilité.
+- Réduire les prélèvements et prestations qui désincitent au travail.
+:::
+
+. . .
+
+::: {.cle}
+Objectif : ramener le marché du travail au plus près de son fonctionnement concurrentiel, seul garant du plein emploi.
+:::
+
+## Le coin fiscal renchérit le coût du travail sans hausser le salaire net
+
+::: {.def}
+**Coin fiscal (« tax wedge »).** Écart entre le coût du travail payé par l'employeur (salaire brut + cotisations patronales) et le salaire net réellement perçu par le salarié (après cotisations salariales et impôts).
+:::
+
+. . .
+
+Un coin fiscal élevé déplace la courbe de demande de travail $L^d$ **vers la gauche** (le coût pour l'entreprise augmente à salaire net inchangé) : à rigidité salariale donnée, l'emploi d'équilibre baisse. D'où la préconisation néoclassique de **baisser les cotisations et prélèvements pesant sur le travail**.
+
+## Le coin fiscal sur le travail : la France parmi les plus élevés de l'OCDE
+
+```{r}
+#| label: fig-coin-fiscal-ocde
+#| fig-cap: "Coin fiscal sur le travail (impôt sur le revenu et cotisations sociales salarié + employeur, en % du coût total du travail), célibataire au salaire moyen sans enfant, 2023. La France se situe nettement au-dessus de la moyenne OCDE, ce qui matérialise le déplacement de L^d vers la gauche évoqué ci-dessus. Source : OCDE, Taxing Wages 2024."
+#| fig-width: 6.5
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Coin fiscal (tax wedge) sur le travail, celibataire au salaire moyen sans
+# enfant, 2023. Source : OCDE, "Taxing Wages 2024", part de l'impot sur le
+# revenu et des cotisations sociales (salarie + employeur) dans le cout total
+# du travail. Ordres de grandeur bien etablis.
+df_coin <- data.frame(
+  pays = c("Belgique", "Allemagne", "France", "Italie", "Moyenne OCDE",
+           "Royaume-Uni", "États-Unis"),
+  coin = c(53, 48, 47, 45, 35, 31, 30)
+)
+df_coin <- df_coin[order(-df_coin$coin), ]
+df_coin$pays <- factor(df_coin$pays, levels = rev(df_coin$pays))
+df_coin$categorie <- ifelse(df_coin$pays == "France", "France",
+                      ifelse(df_coin$pays == "Moyenne OCDE", "Repère", "Autre"))
+
+ggplot(df_coin, aes(x = pays, y = coin, fill = categorie)) +
+  geom_col(width = 0.65, show.legend = FALSE) +
+  geom_text(aes(label = paste0(coin, " %")),
+            hjust = -0.15, size = 4, color = "#1f4e79", fontface = "bold") +
+  scale_fill_manual(values = c("France" = macro_pal[["rouge"]],
+                                "Repère" = macro_pal[["gris"]],
+                                "Autre" = macro_pal[["bleu2"]])) +
+  coord_flip(ylim = c(0, 60)) +
+  labs(x = NULL, y = "Coin fiscal sur le travail (% du coût total employeur)") +
+  theme_macro()
+```
+
+## Un salaire minimum trop élevé crée du chômage classique
+
+Si un salaire plancher $w_{min}$ est imposé **au-dessus** du salaire d'équilibre $w^*$, l'offre de travail excède la demande à ce niveau de salaire : c'est du **chômage classique** (lecture néoclassique : chômage volontaire au sens où il résulte d'un prix administré trop élevé).
+
+```{r}
+#| label: fig-smic-neo
+#| fig-cap: "Un salaire minimum fixé au-dessus du salaire d'équilibre crée un excédent d'offre de travail : du chômage apparaît, faute d'ajustement du salaire à la baisse."
+#| fig-width: 6.5
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+L <- seq(0, 10, length.out = 200)
+w_offre <- 1 + 0.55 * L
+w_demande <- 9 - 0.6 * L
+eq_L <- (9 - 1) / (0.55 + 0.6)
+eq_w <- 1 + 0.55 * eq_L
+
+w_min <- eq_w + 1.5
+L_offerte  <- (w_min - 1) / 0.55
+L_demandee <- (9 - w_min) / 0.6
+
+df_od <- data.frame(
+  L = rep(L, 2),
+  w = c(w_offre, w_demande),
+  courbe = rep(c("Offre de travail (Ls)", "Demande de travail (Ld)"), each = length(L))
+)
+
+ggplot(df_od, aes(x = L, y = w, color = courbe)) +
+  geom_line(linewidth = 1.1) +
+  annotate("segment", x = 0, xend = 10, y = w_min, yend = w_min,
+           linetype = "dashed", color = macro_pal[["vert"]], linewidth = 0.6) +
+  annotate("text", x = 0.15, y = w_min + 0.35,
+           label = "Salaire minimum (w_min)", hjust = 0, size = 3.4, color = macro_pal[["vert"]]) +
+  annotate("segment", x = L_demandee, xend = L_offerte, y = w_min, yend = w_min,
+           color = macro_pal[["rouge"]], linewidth = 2.2, alpha = 0.5) +
+  annotate("text", x = (L_demandee + L_offerte) / 2, y = w_min - 0.45,
+           label = "Chômage classique", size = 3.4, color = macro_pal[["rouge"]]) +
+  annotate("point", x = eq_L, y = eq_w, size = 2.2, color = macro_pal[["gris"]]) +
+  scale_color_manual(values = c("Offre de travail (Ls)" = macro_pal[["bleu"]],
+                                 "Demande de travail (Ld)" = macro_pal[["or"]])) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
+  theme_macro()
+```
+
+## Le SMIC français est élevé rapporté au salaire médian
+
+```{r}
+#| label: fig-kaitz-ocde
+#| fig-cap: "Indice de Kaitz (salaire minimum / salaire médian des salariés à temps plein), ~2022. La France affiche l'un des ratios les plus élevés de l'OCDE : le SMIC est proche des deux tiers du salaire médian, ce qui rend plausible l'hypothèse d'un salaire minimum fixé au-dessus du salaire d'équilibre néoclassique (w_min > w*, cf. graphique précédent). Source : OCDE, base « Minimum relative to median wages of full-time workers »."
+#| fig-width: 6.5
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Indice de Kaitz (salaire minimum / salaire median des salaries a temps plein),
+# ~2022. Source : OCDE, base "Minimum relative to median wages of full-time
+# workers" (stats.oecd.org, serie MIN2AVE/MIN2MED). Ordres de grandeur bien
+# etablis.
+df_kaitz <- data.frame(
+  pays  = c("Portugal", "France", "Royaume-Uni", "Pays-Bas", "Allemagne",
+            "Espagne", "Japon", "États-Unis"),
+  kaitz = c(0.66, 0.61, 0.58, 0.49, 0.52, 0.48, 0.45, 0.28)
+)
+df_kaitz <- df_kaitz[order(-df_kaitz$kaitz), ]
+df_kaitz$pays <- factor(df_kaitz$pays, levels = rev(df_kaitz$pays))
+df_kaitz$mise_en_avant <- ifelse(df_kaitz$pays == "France", "France", "Autre")
+
+ggplot(df_kaitz, aes(x = pays, y = kaitz, fill = mise_en_avant)) +
+  geom_col(width = 0.65, show.legend = FALSE) +
+  geom_text(aes(label = scales::label_number(decimal.mark = ",", accuracy = 0.01)(kaitz)),
+            hjust = -0.15, size = 4, color = "#1f4e79", fontface = "bold") +
+  scale_fill_manual(values = c("France" = macro_pal[["rouge"]],
+                                "Autre" = macro_pal[["bleu2"]])) +
+  coord_flip(ylim = c(0, 0.75)) +
+  labs(x = NULL, y = "Indice de Kaitz (SMIC / salaire médian)") +
+  theme_macro()
+```
+
+## Baisser le coût du travail : la solution néoclassique au chômage
+
+::: {.cle}
+Puisque le chômage classique résulte d'un salaire trop élevé par rapport à l'équilibre concurrentiel, la solution logique consiste à **baisser le coût du travail** :
+:::
+
+. . .
+
+::: {.incremental}
+- Réduire les cotisations patronales et le **coin fiscal**.
+- Limiter les hausses du **SMIC** au-delà de l'inflation et de la productivité.
+- Assouplir les conventions collectives et les rigidités salariales à la baisse.
+:::
+
+::: {.source}
+Cf. Chapitre III pour l'analyse détaillée des politiques françaises de baisse du coût du travail (allègements de cotisations, CICE).
+:::
+
+## Quatre limites fragilisent l'approche néoclassique
+
+::: {.def .incremental}
+- **Hypothèses irréalistes** : salaires souvent administrés (SMIC, conventions collectives) et non fixés par un marché atomistique ; travail hétérogène (marchés segmentés) ; information coûteuse ; barrières à l'entrée/sortie (qualifications, coûts de licenciement).
+- **Ajustement non instantané** : rigidités salariales et lenteur des contrats retardent le retour à l'équilibre.
+- **Interdépendance offre-demande** : le modèle suppose offre et demande indépendantes, alors que les décisions d'embauche influencent en retour la motivation et la disponibilité des travailleurs.
+- **Vision en équilibre partiel** : le marché du travail est isolé du reste de l'économie, critique centrale que formulera l'analyse keynésienne (CM 6).
+:::
+
+## À retenir
+
+::: {.cle .incremental}
+- Le modèle néoclassique applique les hypothèses de la CPP au marché du travail : agents rationnels, arbitrage loisir/travail et capital/travail.
+- L'offre de travail $L^s$ est croissante en $w$ (effet de substitution > effet de revenu) ; la demande $L^d$ est décroissante en $w$ (PmL décroissante).
+- L'équilibre $(w^*, L^*)$ élimine tout chômage involontaire : le chômage résiduel est volontaire.
+- Les salaires flexibles absorbent les chocs ; un salaire minimum au-dessus de $w^*$ crée du chômage classique.
+- La solution néoclassique : baisser le coût du travail (coin fiscal, modération du SMIC) et laisser flexibiliser les salaires.
+- Limites : hypothèses irréalistes, ajustement lent, interdépendance offre-demande, équilibre partiel.
+:::
+
+## Pour la prochaine fois
+
+::: {.incremental}
+- Relire la section correspondante de `cours/chap2.qmd` (Partie 2, §2.1) et refaire le graphique d'équilibre à la main.
+- Préparer le TD 5 (analyses théoriques : néoclassique & WS-PS).
+- CM 6 : l'analyse **keynésienne** du marché du travail, pourquoi le chômage peut y être *involontaire*, et la loi d'Okun.
+:::
+
+::: {.source}
+Sources : M. Ouedraogo, *Chapitre II (Partie 2), Section I* ; `cours/chap2.qmd` §2.1.
+:::

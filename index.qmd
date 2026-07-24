@@ -1,0 +1,62 @@
+---
+title: "Comprendre, et discuter, les politiques économiques"
+subtitle: "Macroéconomie 1, L2 AES · Semestre 1"
+description: "Page d'accueil du cours : présentation, méthode et accès direct aux résumés de cours, slides, dossiers de TD, syllabus et ressources."
+---
+
+Ce cours de **Macroéconomie 1 : Les Politiques Économiques** s'adresse aux étudiants de deuxième année de licence Administration Économique et Sociale (L2 AES). Il vise trois objectifs : introduire les grands concepts de la politique économique, analyser en détail le fonctionnement du marché du travail, puis appliquer ces outils à l'étude des politiques de l'emploi menées en France depuis les années 1970. Il s'agit moins d'accumuler des définitions que de comprendre pourquoi les pouvoirs publics interviennent dans l'économie, selon quelles logiques théoriques concurrentes, et avec quels résultats empiriques.
+
+La méthode retenue est **transdisciplinaire** : la théorie économique y est systématiquement reliée aux enjeux de société contemporains (chômage, précarité, réformes du marché du travail), à l'aide de données réelles, d'articles et de vidéos qui complètent les résumés de cours. Une large place est laissée au débat pendant les séances, et le travail personnel (relecture des résumés, préparation des dossiers de TD, approfondissement via les ressources complémentaires) est indispensable à la progression.
+
+Le cours est organisé en **trois chapitres**, construits pour s'enchaîner logiquement : le Chapitre I pose les fondements de la politique économique (mesure de la richesse, horizons temporels, fonctions de l'État) ; le Chapitre II étudie le marché du travail, d'abord de façon descriptive (indicateurs, typologies de chômage) puis théorique (analyses néoclassique, keynésienne, WS-PS et appariement) ; le Chapitre III applique ces cadres au cas français, à travers l'histoire des réformes de l'emploi et les grands arbitrages de politique économique (coût du travail, flexibilisation, activation). Chaque chapitre est décliné en résumé de cours écrit, en slides de CM et en dossiers de TD.
+
+<div class="grid-cards">
+<a class="card-tile" href="cours/chap1.qmd">
+<span class="tag">Chapitre I</span>
+<h3>Introduction à la politique économique</h3>
+<p>PIB et croissance, horizons CT/MT/LT, typologie des politiques économiques et fonctions de Musgrave (stabilisation, allocation, redistribution).</p>
+</a>
+<a class="card-tile" href="cours/chap2.qmd">
+<span class="tag">Chapitre II</span>
+<h3>Marché du travail & politique de l'emploi</h3>
+<p>Indicateurs et typologies du chômage, puis quatre cadres théoriques : néoclassique, keynésien, WS-PS et appariement.</p>
+</a>
+<a class="card-tile" href="cours/chap3.qmd">
+<span class="tag">Chapitre III</span>
+<h3>Politiques de l'emploi : le cas français</h3>
+<p>Flexisécurité, coût du travail, flexibilisation et activation : la chronologie des réformes françaises depuis 1972.</p>
+</a>
+<a class="card-tile" href="slides/cm01.qmd">
+<span class="tag">Slides</span>
+<h3>Commencer par le CM 1</h3>
+<p>Rappels sur le PIB, cinq faits marquants de la croissance et horizons temporels de la macroéconomie.</p>
+</a>
+<a class="card-tile" href="td/td1.qmd">
+<span class="tag">TD</span>
+<h3>Commencer par le TD 1</h3>
+<p>Fondements de la politique économique : objectifs, instruments, règle de Tinbergen et carré magique de Kaldor.</p>
+</a>
+<a class="card-tile" href="syllabus.qmd">
+<span class="tag">Syllabus</span>
+<h3>Objectifs, méthode et évaluation</h3>
+<p>Planning des séances, modalités d'évaluation (CC1, CC2, examen final) et charte d'usage de l'IA.</p>
+</a>
+<a class="card-tile" href="ressources.qmd">
+<span class="tag">Ressources</span>
+<h3>Pour aller plus loin</h3>
+<p>Manuels de référence, articles, chaînes vidéo et sources de données (INSEE, Banque de France, Eurostat, OCDE...).</p>
+</a>
+</div>
+
+## Contact & permanence
+
+::: {.callout-note}
+## Une question, besoin d'un rendez-vous ?
+
+Le cours est assuré par **Pierre Beaucoral** (ATER), à partir des enseignements hérités de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026). Une permanence pédagogique (*office hours*) est proposée chaque semaine :
+
+- **Vendredi 12h-14h**, bureau 437, CERDI.
+- **Sur rendez-vous** en dehors de ce créneau : écrivez un mail au moins un jour à l'avance.
+
+Les coordonnées de contact et les modalités précises figurent sur l'espace numérique de travail (ENT) du cours, ainsi que dans le [syllabus](syllabus.qmd).
+:::

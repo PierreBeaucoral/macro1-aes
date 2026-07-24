@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pierre Beaucoral">
+<meta name="description" content="Dossier de TD : QCM de définitions, lecture d’un article de presse et de chiffres INSEE, exercice analytique avec construction d’un graphique, question de réflexion.">
+
+<title>TD 2 : Définitions &amp; mesures du marché du travail – Macroéconomie 1 : Les Politiques Économiques</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1518bad1a6d08f37882f6f62cc13478c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Macroéconomie 1 : Les Politiques Économiques</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-résumés-de-cours" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Résumés de cours</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-résumés-de-cours">    
+        <li>
+    <a class="dropdown-item" href="../cours/chap1.html">
+ <span class="dropdown-text">Chapitre I : Introduction à la politique économique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cours/chap2.html">
+ <span class="dropdown-text">Chapitre II : Marché du travail &amp; politique de l’emploi</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cours/chap3.html">
+ <span class="dropdown-text">Chapitre III : Politiques de l’emploi (cas français)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides-(cm" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Slides (CM)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides-(cm">    
+        <li>
+    <a class="dropdown-item" href="../slides/cm01.html">
+ <span class="dropdown-text">CM 1 : Rappels, faits marquants, horizons temporels</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm02.html">
+ <span class="dropdown-text">CM 2 : Politique économique &amp; fonctions de Musgrave</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm03.html">
+ <span class="dropdown-text">CM 3 : Marché du travail : définitions &amp; mesures</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm04.html">
+ <span class="dropdown-text">CM 4 : Typologie des chômages &amp; évolutions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm05.html">
+ <span class="dropdown-text">CM 5 : Analyse néoclassique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm06.html">
+ <span class="dropdown-text">CM 6 : Analyse keynésienne &amp; loi d’Okun</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm07.html">
+ <span class="dropdown-text">CM 7 : Courbe de Phillips &amp; NAIRU</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm08.html">
+ <span class="dropdown-text">CM 8 : WS-PS &amp; appariement</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm09.html">
+ <span class="dropdown-text">CM 9 : Modèles &amp; flexisécurité</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/cm10.html">
+ <span class="dropdown-text">CM 10 : Réformes françaises &amp; synthèse</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-td" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">TD</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-td">    
+        <li>
+    <a class="dropdown-item" href="../td/td1.html">
+ <span class="dropdown-text">TD 1 : Fondements de la politique économique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td2.html">
+ <span class="dropdown-text">TD 2 : Définitions &amp; mesures du marché du travail</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td3.html">
+ <span class="dropdown-text">TD 3 : Typologies &amp; segmentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td4.html">
+ <span class="dropdown-text">TD 4 : CC1 blanc (entraînement)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td5.html">
+ <span class="dropdown-text">TD 5 : Néoclassique &amp; WS-PS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td6.html">
+ <span class="dropdown-text">TD 6 : Keynes, Okun, Phillips</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td7.html">
+ <span class="dropdown-text">TD 7 : Appariement &amp; trappe à inactivité</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../td/td8.html">
+ <span class="dropdown-text">TD 8 : CC2 blanc (entraînement)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text">Ressources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#exercice-1-qcm-définitions-et-mesures" id="toc-exercice-1-qcm-définitions-et-mesures" class="nav-link active" data-scroll-target="#exercice-1-qcm-définitions-et-mesures">Exercice 1 : QCM : définitions et mesures</a></li>
+  <li><a href="#exercice-2-lecture-de-données-la-presse-économique-et-les-chiffres-du-chômage" id="toc-exercice-2-lecture-de-données-la-presse-économique-et-les-chiffres-du-chômage" class="nav-link" data-scroll-target="#exercice-2-lecture-de-données-la-presse-économique-et-les-chiffres-du-chômage">Exercice 2 : Lecture de données : la presse économique et les chiffres du chômage</a></li>
+  <li><a href="#exercice-3-exercice-analytique-calculer-et-représenter-la-structure-du-marché-du-travail" id="toc-exercice-3-exercice-analytique-calculer-et-représenter-la-structure-du-marché-du-travail" class="nav-link" data-scroll-target="#exercice-3-exercice-analytique-calculer-et-représenter-la-structure-du-marché-du-travail">Exercice 3 : Exercice analytique : calculer et représenter la structure du marché du travail</a></li>
+  <li><a href="#exercice-4-question-de-réflexion-dissertation-courte-15-20-lignes" id="toc-exercice-4-question-de-réflexion-dissertation-courte-15-20-lignes" class="nav-link" data-scroll-target="#exercice-4-question-de-réflexion-dissertation-courte-15-20-lignes">Exercice 4 : Question de réflexion (dissertation courte, 15-20 lignes)</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="td2.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TD 2 : Définitions &amp; mesures du marché du travail</h1>
+<p class="subtitle lead">Population active, taux d’activité/emploi/chômage, BIT vs France Travail, halo du chômage</p>
+</div>
+
+<div>
+  <div class="description">
+    Dossier de TD : QCM de définitions, lecture d’un article de presse et de chiffres INSEE, exercice analytique avec construction d’un graphique, question de réflexion.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Auteur·rice</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Pierre Beaucoral </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ATER, Université Clermont Auvergne · L2 AES (Semestre 1)
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">juillet 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="objectifs">
+<p><strong>Objectifs de la séance</strong></p>
+<p>À l’issue de ce TD, vous saurez :</p>
+<ul>
+<li>Définir précisément population active, taux d’activité (participation), taux d’emploi et taux de chômage, et calculer chacun de ces indicateurs à partir de données brutes.</li>
+<li>Distinguer la mesure du chômage par l’INSEE (au sens du <strong>BIT</strong>) de celle de <strong>France Travail</strong> (ex-Pôle Emploi), et savoir pourquoi les deux chiffres divergent.</li>
+<li>Expliquer ce que recouvre le <strong>halo du chômage</strong> et pourquoi le taux de chômage seul peut donner une image incomplète du marché du travail.</li>
+<li>Lire et interpréter un tableau ou un article de presse mobilisant des statistiques du marché du travail (INSEE, France Travail).</li>
+</ul>
+<p><strong>Pré-requis</strong> : avoir lu la section 1.3 (« Mesurer le marché du travail ») du <a href="../cours/chap2.html">résumé du Chapitre II</a>. Aucun calcul ne dépasse le niveau collège (pourcentages, règle de trois) : la difficulté est conceptuelle, pas arithmétique.</p>
+</div>
+<section id="exercice-1-qcm-définitions-et-mesures" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1-qcm-définitions-et-mesures">Exercice 1 : QCM : définitions et mesures</h2>
+<p>Pour chaque question, une seule réponse est exacte. Justifiez votre choix en une phrase : la justification compte autant que la bonne réponse le jour du CC.</p>
+<p><strong>Question 1.</strong> Comment définit-on la population active au sens du BIT ?</p>
+<ol type="a">
+<li>L’ensemble des personnes en âge de travailler.</li>
+<li>L’ensemble des personnes en emploi.</li>
+<li>La somme des personnes en emploi et des chômeurs au sens du BIT.</li>
+<li>L’ensemble des personnes inscrites à France Travail.</li>
+</ol>
+<p><strong>Question 2.</strong> Quel indicateur mesure le pourcentage de la population en âge de travailler qui est <em>effectivement en emploi</em> ?</p>
+<ol type="a">
+<li>Le taux de chômage</li>
+<li>Le taux d’emploi</li>
+<li>Le taux d’activité</li>
+<li>Le taux de non-emploi</li>
+</ol>
+<p><strong>Question 3.</strong> Quels sont les trois critères que doit remplir <strong>simultanément</strong> une personne pour être comptée comme chômeur au sens du BIT par l’INSEE ?</p>
+<ol type="a">
+<li>Être inscrite à France Travail, indemnisée, et sans emploi.</li>
+<li>Être sans emploi, disponible pour travailler sous deux semaines, et à la recherche active d’un emploi.</li>
+<li>Être sans emploi depuis plus de 12 mois et indemnisée par l’assurance chômage.</li>
+<li>Être en âge de travailler, résider en France, et ne pas être étudiant.</li>
+</ol>
+<p><strong>Question 4.</strong> Pourquoi le nombre de demandeurs d’emploi publié par France Travail diffère-t-il structurellement du nombre de chômeurs BIT publié par l’INSEE ?</p>
+<ol type="a">
+<li>France Travail sous-estime toujours le chômage par rapport à l’INSEE.</li>
+<li>Le chiffre France Travail repose sur une <strong>inscription administrative</strong> (catégories A à E), tandis que le chiffre INSEE repose sur une <strong>enquête standardisée</strong> appliquant les trois critères du BIT : les deux populations ne se recouvrent pas exactement.</li>
+<li>L’INSEE et France Travail utilisent exactement la même définition, seule la fréquence de publication diffère.</li>
+<li>France Travail ne mesure que le chômage des jeunes de moins de 25 ans.</li>
+</ol>
+<p><strong>Question 5.</strong> Si le taux de chômage est de 6 % et le taux d’emploi de 58 % (tous deux rapportés à la population en âge de travailler), quel est le taux d’inactivité de cette population ?</p>
+<ol type="a">
+<li>6 %</li>
+<li>36 %</li>
+<li>58 %</li>
+<li>94 %</li>
+</ol>
+<p><strong>Question 6.</strong> Laquelle de ces situations relève du <strong>halo du chômage</strong> plutôt que du chômage BIT au sens strict ?</p>
+<ol type="a">
+<li>Une personne sans emploi, qui postule activement chaque semaine et peut commencer dans les deux semaines.</li>
+<li>Une personne en CDI à temps plein, satisfaite de son poste.</li>
+<li>Une personne sans emploi, qui souhaiterait travailler mais ne peut pas être disponible avant un mois pour des raisons familiales, et qui de ce fait n’est pas comptée comme chômeur BIT.</li>
+<li>Un retraité qui ne recherche pas d’emploi.</li>
+</ol>
+<p><strong>Question 7.</strong> Une baisse du taux de chômage d’un trimestre à l’autre peut-elle s’accompagner d’une dégradation du marché du travail ?</p>
+<ol type="a">
+<li>Non, une baisse du taux de chômage est toujours un signal univoque d’amélioration.</li>
+<li>Oui, si elle résulte d’une baisse de la population active (chômeurs découragés qui cessent de chercher un emploi) plutôt que de créations d’emplois.</li>
+<li>Non, car le taux de chômage et le taux d’emploi évoluent toujours dans le même sens.</li>
+<li>Oui, mais uniquement si le PIB est en récession.</li>
+</ol>
+<p><strong>Question 8.</strong> Le sous-emploi (temps partiel subi) fait-il partie de la population des chômeurs au sens du BIT ?</p>
+<ol type="a">
+<li>Oui, systématiquement.</li>
+<li>Non : ces personnes sont en emploi (elles travaillent), donc classées actives occupées, mais elles relèvent du sous-emploi, une forme de sous-utilisation de la main-d’œuvre distincte du halo, car elles souhaiteraient travailler davantage.</li>
+<li>Non, elles sont classées comme inactives.</li>
+<li>Cela dépend uniquement de leur âge.</li>
+</ol>
+</section>
+<section id="exercice-2-lecture-de-données-la-presse-économique-et-les-chiffres-du-chômage" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2-lecture-de-données-la-presse-économique-et-les-chiffres-du-chômage">Exercice 2 : Lecture de données : la presse économique et les chiffres du chômage</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Document : Marché du travail : coup d’arrêt à la baisse du chômage
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>D’après Laurent Jeanneau, <em>Alternatives Économiques</em>, 11 août 2023 (<a href="https://www.alternatives-economiques.fr/coup-darret-a-baisse-chomage/00107775">lien</a>).</p>
+<blockquote class="blockquote">
+<p>« Selon les chiffres publiés ce vendredi par l’Insee, le nombre de chômeurs est reparti à la hausse au deuxième trimestre 2023 : + 20 000 personnes par rapport au trimestre précédent, portant le nombre officiel de chômeurs à 2,2 millions de personnes en France. […] Le taux de chômage, lui, est resté quasi stable (+0,1 point), à 7,2 % de la population active. […] Autre chiffre préoccupant : le halo autour du chômage est reparti à la hausse. […] On parle tout de même de 1,9 millions de personnes, soit presque autant que le nombre officiel de chômeurs. […] Or la part du halo dans la population est passée de 4,4 % il y a un an à 4,7 % au deuxième trimestre 2023. […] Troisième et dernier obstacle sur le chemin du plein-emploi : la hausse de la population active, notamment au quatrième trimestre, sous l’effet de la réforme des retraites qui va entrer en vigueur progressivement à partir de septembre. »</p>
+</blockquote>
+</div>
+</div>
+<p><strong>Chiffres clés extraits de l’article (2ᵉ trimestre 2023) :</strong></p>
+<div id="tbl-article-chomage" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-article-chomage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Chiffres cités dans l’article d’<em>Alternatives Économiques</em> (2ᵉ trimestre 2023).
+</figcaption>
+<div aria-describedby="tbl-article-chomage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Indicateur</th>
+<th style="text-align: right;">Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chômeurs au sens du BIT</td>
+<td style="text-align: right;">2,2 millions</td>
+</tr>
+<tr class="even">
+<td>Taux de chômage</td>
+<td style="text-align: right;">7,2 %</td>
+</tr>
+<tr class="odd">
+<td>Halo du chômage</td>
+<td style="text-align: right;">1,9 million de personnes</td>
+</tr>
+<tr class="even">
+<td>Part du halo dans la population (15-64 ans)</td>
+<td style="text-align: right;">4,7 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Questions</strong></p>
+<ol type="1">
+<li>À partir du nombre de chômeurs (2,2 millions) et du taux de chômage (7,2 %), retrouvez, par un calcul, l’ordre de grandeur de la <strong>population active</strong> française au 2ᵉ trimestre 2023.</li>
+<li>À partir du nombre de personnes dans le halo (1,9 million) et de sa part dans la population (4,7 %), retrouvez l’ordre de grandeur de la <strong>population des 15-64 ans</strong>. Comparez ce nombre à la population active trouvée en (1) : que représente l’écart ?</li>
+<li>En quoi le halo du chômage (1,9 million de personnes) est-il conceptuellement différent des 2,2 millions de chômeurs BIT ? Pourquoi l’article les mentionne-t-il l’un à côté de l’autre ?</li>
+<li>L’article évoque une hausse de la population active « sous l’effet de la réforme des retraites ». En reprenant la formule du taux de chômage, expliquez pourquoi une hausse de la population active peut, <em>toutes choses égales par ailleurs</em>, faire mécaniquement remonter le taux de chômage, même sans aucune destruction d’emploi.</li>
+<li>D’après l’article, citez deux indicateurs <em>avancés</em> (autres que le taux de chômage lui-même) que l’auteur mobilise pour anticiper un retournement du marché du travail. Pourquoi ces indicateurs sont-ils qualifiés d’« avancés » ?</li>
+</ol>
+</section>
+<section id="exercice-3-exercice-analytique-calculer-et-représenter-la-structure-du-marché-du-travail" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3-exercice-analytique-calculer-et-représenter-la-structure-du-marché-du-travail">Exercice 3 : Exercice analytique : calculer et représenter la structure du marché du travail</h2>
+<p>Le tableau ci-dessous donne des <strong>valeurs indicatives</strong> (ordres de grandeur inspirés des données INSEE, arrondis pour l’exercice) décrivant la population des 15-64 ans en France à deux dates : une année de référence notée <span class="math inline">\(T-10\)</span> et l’année la plus récente notée <span class="math inline">\(T\)</span>.</p>
+<div id="tbl-exo3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-exo3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Structure indicative de la population 15-64 ans à deux dates.
+</figcaption>
+<div aria-describedby="tbl-exo3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Indicateur</th>
+<th style="text-align: right;">Année <span class="math inline">\(T-10\)</span></th>
+<th style="text-align: right;">Année <span class="math inline">\(T\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Population des 15-64 ans</td>
+<td style="text-align: right;">40,0 millions</td>
+<td style="text-align: right;">40,0 millions</td>
+</tr>
+<tr class="even">
+<td>Population active</td>
+<td style="text-align: right;">28,4 millions</td>
+<td style="text-align: right;">30,0 millions</td>
+</tr>
+<tr class="odd">
+<td>dont emplois</td>
+<td style="text-align: right;">25,8 millions</td>
+<td style="text-align: right;">27,9 millions</td>
+</tr>
+<tr class="even">
+<td>dont chômeurs (BIT)</td>
+<td style="text-align: right;">2,6 millions</td>
+<td style="text-align: right;">2,1 millions</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Questions</strong></p>
+<ol type="1">
+<li>Calculez, pour chacune des deux années, le <strong>taux d’activité</strong>, le <strong>taux d’emploi</strong> et le <strong>taux de chômage</strong>. Présentez vos résultats dans un tableau à trois lignes et deux colonnes.</li>
+<li>La population active a augmenté de <span class="math inline">\(T-10\)</span> à <span class="math inline">\(T\)</span>. Le taux de chômage a-t-il pour autant baissé pour de « mauvaises » raisons (effet de découragement) ou pour de « bonnes » raisons ? Justifiez à partir de vos calculs.</li>
+<li>Calculez le nombre d’inactifs à chaque date. Comment évolue le taux d’inactivité entre <span class="math inline">\(T-10\)</span> et <span class="math inline">\(T\)</span> ? Proposez une explication économique plausible (au moins un déterminant vu en cours : activité féminine, âge de la retraite, durée des études…).</li>
+<li><strong>Construction du graphique.</strong> Le chunk R ci-dessous représente la décomposition de la population des 15-64 ans en trois catégories (emploi, chômage, inactivité) aux deux dates. Vérifiez, à l’aide de vos calculs de la question 1, que les hauteurs relatives des trois segments de chaque barre sont cohérentes avec les taux que vous avez obtenus.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-decomposition-population" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-decomposition-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="td2_files/figure-html/fig-decomposition-population-1.png" class="img-fluid figure-img" width="576">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decomposition-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Décomposition de la population des 15-64 ans en emploi, chômage et inactivité, entre l’année T-10 et l’année T (valeurs indicatives).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="5" type="1">
+<li>En vous appuyant sur le graphique, expliquez pourquoi deux personnes qui « sortent » du segment inactivité peuvent avoir des effets opposés sur le taux de chômage (l’une rejoint directement l’emploi, l’autre rejoint le chômage en cherchant activement un emploi sans en trouver immédiatement).</li>
+</ol>
+</section>
+<section id="exercice-4-question-de-réflexion-dissertation-courte-15-20-lignes" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4-question-de-réflexion-dissertation-courte-15-20-lignes">Exercice 4 : Question de réflexion (dissertation courte, 15-20 lignes)</h2>
+<blockquote class="blockquote">
+<p>« Une baisse du taux de chômage est toujours une bonne nouvelle pour le marché du travail. »</p>
+</blockquote>
+<p>Discutez cette affirmation en mobilisant précisément les notions suivantes : taux d’activité, taux d’emploi, halo du chômage, chômage de longue durée. Votre réponse devra :</p>
+<ul>
+<li>rappeler la définition du taux de chômage et montrer qu’il s’agit d’un <strong>rapport</strong> (donc sensible à des variations du numérateur <em>et</em> du dénominateur) ;</li>
+<li>proposer au moins <strong>un scénario concret</strong> dans lequel le taux de chômage baisse alors que la situation du marché du travail se dégrade ;</li>
+<li>conclure sur les indicateurs complémentaires qu’un économiste devrait regarder avant de se prononcer sur l’état du marché du travail.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Pour aller plus loin
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Vidéo « Comment mesure-t-on le chômage ? », <em>Dessine-moi l’éco</em> : <a href="https://www.youtube.com/watch?v=0AJLLsL2mZg">https://www.youtube.com/watch?v=0AJLLsL2mZg</a>. Reprend en 4 minutes la distinction INSEE/BIT vs France Travail.</li>
+<li>INSEE, <em>Informations rapides</em> : statistiques trimestrielles du chômage au sens du BIT, <a href="https://www.insee.fr">insee.fr</a> (rubrique Emploi-Chômage-Revenus). Comparez le dernier chiffre publié à celui de l’article étudié en Exercice 2.</li>
+<li>France Travail (ex-Pôle Emploi), statistiques mensuelles des demandeurs d’emploi par catégorie (A à E), utile pour l’Exercice 1, question 4.</li>
+<li>Relisez la section 1.3 du <a href="../cours/chap2.html">résumé du Chapitre II</a>, notamment le tableau comparant deux pays au même taux de chômage mais à des taux d’emploi très différents.</li>
+</ul>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/macro1-aes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Macroéconomie 1, L2 AES · Pierre Beaucoral</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Construit avec <a href="https://quarto.org">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

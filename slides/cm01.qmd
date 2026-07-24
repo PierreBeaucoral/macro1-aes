@@ -1,0 +1,997 @@
+---
+title: "CM 1 : Rappels, faits marquants, horizons temporels"
+subtitle: "Chapitre I, §1-3 : Mesurer et situer la croissance économique"
+---
+
+## Plan de la séance {.smaller}
+
+::: {.cle}
+1. Rappels sur le PIB (nominal/réel, croissance, cycles)
+2. Cinq faits marquants de l'histoire de la croissance
+3. Les trois horizons temporels de la macroéconomie (CT/MT/LT)
+:::
+
+Aujourd'hui, on pose les fondations mesurables du cours : comment évalue-t-on la richesse produite, que nous apprend l'histoire longue de la croissance, et à quel horizon se situe-t-on quand on parle de « croissance » ?
+
+::: {.source}
+Source : Ouedraogo (2025-2026), Chapitre I ; Mathonnat (2018-2019), Introduction.
+:::
+
+## Objectifs de la séance {.smaller}
+
+À l'issue de cette séance, vous saurez :
+
+- Distinguer PIB nominal et PIB réel, et calculer un taux de croissance.
+- Différencier expansion, récession et dépression.
+- Restituer les cinq faits marquants de la croissance économique.
+- Distinguer les horizons court terme, moyen terme et long terme, et les déterminants dominants à chaque horizon.
+
+## Deux indicateurs pour commencer {.smaller}
+
+La France a-t-elle vécu, depuis 2008, une succession de crises ou une **stagnation prolongée** ?
+
+. . .
+
+```{r}
+#| label: fig-france-accroche
+#| fig-cap: "Croissance du PIB réel et taux de chômage en France, 1980-2024. Source : Banque mondiale, World Development Indicators (séries NY.GDP.MKTP.KD.ZG et SL.UEM.TOTL.NE.ZS, d'après les comptes nationaux et l'enquête Emploi de l'Insee)."
+#| fig-width: 8
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+annees <- 1980:2024
+
+# Taux de croissance du PIB réel, France (%)
+# Source : Banque mondiale, WDI, indicateur NY.GDP.MKTP.KD.ZG (1980-2023) ;
+# Insee / Banque mondiale pour 2024 (+1,1 %)
+croissance <- c(
+  1.7, 1.2, 2.4, 1.3, 1.6, 1.6, 2.4, 2.6, 4.8, 4.4,
+  2.8, 1.2, 1.5, -0.4, 2.4, 2.3, 1.4, 2.5, 3.5, 3.4,
+  4.1, 1.9, 1.1, 1.0, 2.9, 1.9, 2.7, 2.5, 0.4, -2.9,
+  2.0, 2.4, 0.2, 0.8, 1.0, 1.1, 0.9, 2.1, 1.7, 1.8,
+  -7.5, 6.9, 2.6, 0.9, 1.1
+)
+
+# Taux de chômage, France (%)
+# Source : Banque mondiale, WDI, indicateur SL.UEM.TOTL.NE.ZS (1980-2023),
+# estimation nationale reprenant le taux de chômage au sens du BIT (Insee,
+# enquête Emploi) ; Insee / Banque mondiale pour 2024 (7,4 %)
+chomage <- c(
+  6.4, 7.5, 8.2, 7.9, 9.5, 10.3, 10.2, 10.7, 10.2, 9.6,
+  9.4, 9.1, 10.2, 11.3, 12.6, 11.8, 12.4, 12.6, 12.1, 12.0,
+  10.2, 8.6, 8.7, 8.3, 8.9, 8.9, 8.8, 8.0, 7.4, 9.1,
+  9.3, 9.2, 9.8, 9.9, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
+  8.0, 7.9, 7.3, 7.3, 7.4
+)
+
+df_france <- data.frame(
+  annee = rep(annees, 2),
+  valeur = c(croissance, chomage),
+  indicateur = rep(c("Taux de croissance du PIB réel (%)",
+                      "Taux de chômage BIT (%)"), each = length(annees))
+)
+df_france$indicateur <- factor(
+  df_france$indicateur,
+  levels = c("Taux de croissance du PIB réel (%)", "Taux de chômage BIT (%)")
+)
+
+ggplot(df_france, aes(x = annee, y = valeur)) +
+  geom_vline(xintercept = 2008, color = unname(macro_pal["or"]),
+             linetype = "dashed", linewidth = .5) +
+  geom_hline(yintercept = 0, color = "grey70", linewidth = .3) +
+  geom_line(color = unname(macro_pal["bleu"]), linewidth = .8) +
+  facet_wrap(~indicateur, scales = "free_y", ncol = 2) +
+  labs(x = "Année", y = NULL) +
+  theme_macro() +
+  theme(strip.text = element_text(face = "bold", color = "#1f4e79"))
+```
+
+::: {.source}
+Ligne verticale : déclenchement de la crise financière de 2008. Idée à garder en tête pour tout le semestre : croissance faible + chômage élevé et persistant = hypothèse de « stagnation séculaire », débattue en introduction du cours de C. Mathonnat.
+:::
+
+## 1. Rappels sur le PIB {.smaller}
+
+::: {.def}
+**PIB (Produit intérieur brut)** : mesure de la richesse, quantité de biens et de services, créée sur un territoire donné au cours d'une période donnée (trimestre ou année).
+:::
+
+. . .
+
+::: {.columns}
+::: {.column width="50%"}
+**PIB nominal**
+
+Quantités produites × **prix courants**.
+
+Combine un effet volume et un effet prix.
+:::
+::: {.column width="50%"}
+**PIB réel**
+
+Quantités produites × **prix constants** (année de référence).
+
+Isole le seul effet volume : mesure pertinente pour comparer l'activité dans le temps.
+:::
+:::
+
+## PIB nominal, PIB réel : la logique de la décomposition {.smaller}
+
+```{mermaid}
+%%| fig-cap: "Le PIB nominal combine un effet volume et un effet prix ; en fixant les prix, le PIB réel isole le seul effet volume."
+flowchart TD
+    A[Quantites x Prix courants] --> B[PIB nominal]
+    C[Quantites x Prix constants] --> D[PIB reel]
+    B --> E[Effet volume]
+    B --> F[Effet prix]
+    D --> G[Effet volume seul]
+```
+
+. . .
+
+::: {.cle}
+C'est cette décomposition qui justifie de toujours calculer un taux de croissance sur le PIB **réel** : le PIB nominal peut augmenter sans que la richesse produite augmente, si c'est l'effet prix qui domine.
+:::
+
+## PIB nominal, PIB réel : le coin d'inflation dans les données françaises {.smaller}
+
+```{r}
+#| label: fig-coin-inflation
+#| fig-cap: "PIB nominal et PIB réel, France, indices base 100 en 1990. L'écart croissant entre les deux courbes (zone grisée) est l'effet prix cumulé : c'est le « coin d'inflation ». Indice réel construit à partir des taux de croissance annuels du PIB réel ; indice nominal à partir des niveaux de PIB en valeur. Source : Banque mondiale, WDI (NY.GDP.MKTP.KD.ZG) et Insee, comptes nationaux annuels."
+#| fig-width: 7.6
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB nominal et PIB reel, France, indices base 100 en 1990 (le "coin
+# d'inflation" = ecart cumule entre les deux courbes).
+# - Indice reel : compose a partir des taux de croissance annuels du PIB reel
+#   de la France (Banque mondiale, WDI, NY.GDP.MKTP.KD.ZG ; serie standard,
+#   bien etablie, ex. 2009 = -2,9 %, 2020 = -7,5 %, 2021 = +6,9 %).
+# - Indice nominal : ratio des niveaux de PIB en valeur (Insee, comptes
+#   nationaux annuels, milliards d'euros courants) aux annees de reference :
+#   1990 = 1036 Md EUR, 2000 = 1447, 2010 = 1998, 2019 = 2425, 2020 = 2303,
+#   2023 = 2820 Md EUR (chiffres largement diffuses, ordres de grandeur
+#   bien etablis). Valeurs figees en dur, aucun appel reseau au rendu.
+df_wedge <- data.frame(
+  annee   = c(1990, 2000, 2010, 2019, 2020, 2023),
+  reel    = c(100.0, 122.9, 138.9, 156.7, 145.0, 160.5),
+  nominal = c(100.0, 139.7, 192.9, 234.1, 222.4, 272.2)
+)
+
+df_long <- data.frame(
+  annee = rep(df_wedge$annee, 2),
+  indice = c(df_wedge$nominal, df_wedge$reel),
+  serie = rep(c("PIB nominal", "PIB réel"), each = nrow(df_wedge))
+)
+df_long$serie <- factor(df_long$serie, levels = c("PIB nominal", "PIB réel"))
+
+ggplot(df_long, aes(x = annee, y = indice, color = serie)) +
+  geom_ribbon(
+    data = df_wedge,
+    aes(x = annee, ymin = reel, ymax = nominal),
+    inherit.aes = FALSE, fill = unname(macro_pal["or"]), alpha = .15
+  ) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2) +
+  annotate("text", x = 2013, y = 172,
+           label = "Effet prix cumulé\n(coin d'inflation)",
+           color = unname(macro_pal["or"]), fontface = "italic",
+           size = 3.2, hjust = .5, lineheight = .9) +
+  scale_color_manual(values = c("PIB nominal" = unname(macro_pal["rouge"]),
+                                 "PIB réel" = unname(macro_pal["bleu"])), name = NULL) +
+  scale_x_continuous(breaks = df_wedge$annee) +
+  labs(x = "Année", y = "Indice, base 100 en 1990") +
+  theme_macro() +
+  theme(axis.text.x = element_text(angle = 40, hjust = 1))
+```
+
+::: {.source}
+Le PIB nominal croît plus vite que le PIB réel sur toute la période (× 2,7 contre × 1,6 entre 1990 et 2023) : l'écart traduit l'inflation cumulée. C'est pour isoler la seule création de richesse que le taux de croissance se calcule toujours sur le PIB réel.
+:::
+
+## PIB par habitant et PIB par habitant en PPA {.smaller}
+
+::: {.def}
+**PIB par habitant (ou par tête)** : PIB réel rapporté à la population, indicateur usuel de niveau de vie moyen.
+
+**PIB par habitant en PPA (parité de pouvoir d'achat)** : PIB par habitant corrigé des écarts de coût de la vie entre pays, ce qui permet de comparer le pouvoir d'achat réel, pas seulement la valeur convertie au taux de change.
+:::
+
+. . .
+
+::: {.cle}
+Pourquoi cette distinction compte : deux pays au même PIB par habitant en dollars courants peuvent avoir un niveau de vie réel très différent si le coût de la vie diffère fortement entre eux.
+:::
+
+## PIB par habitant : taux de change courant contre PPA, quatre pays en 2022 {.smaller}
+
+```{r}
+#| label: fig-ppa-pays
+#| fig-cap: "PIB par habitant en dollars courants, taux de change du marché contre parité de pouvoir d'achat (PPA), Chine, Inde, France et États-Unis, 2022. Source : Banque mondiale, World Development Indicators (WDI), indicateurs NY.GDP.PCAP.CD (taux de change courant) et NY.GDP.PCAP.PP.CD (PPA). Valeurs figées en dur."
+#| fig-width: 7.8
+#| fig-height: 4.4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB par habitant, taux de change courant vs PPA, 2022 (Banque mondiale, WDI,
+# NY.GDP.PCAP.CD et NY.GDP.PCAP.PP.CD, dollars courants). Valeurs figees en
+# dur (ordres de grandeur bien etablis, largement diffuses) :
+#   Chine      : 12 720 $ courants / 21 310 $ PPA
+#   Inde       :  2 389 $ courants /  8 379 $ PPA
+#   France     : 40 900 $ courants / 55 800 $ PPA
+#   Etats-Unis : 76 330 $ courants / 76 330 $ PPA (les Etats-Unis sont le pays
+#     numeraire de la PPA : les deux mesures coincident presque exactement)
+df_ppa <- data.frame(
+  pays = rep(c("Chine", "Inde", "France", "États-Unis"), 2),
+  mesure = rep(c("Taux de change courant", "Parité de pouvoir d'achat (PPA)"), each = 4),
+  valeur = c(12720, 2389, 40900, 76330,
+             21310, 8379, 55800, 76330)
+)
+df_ppa$pays <- factor(df_ppa$pays, levels = c("Inde", "Chine", "France", "États-Unis"))
+df_ppa$mesure <- factor(df_ppa$mesure,
+  levels = c("Taux de change courant", "Parité de pouvoir d'achat (PPA)"))
+
+ggplot(df_ppa, aes(x = pays, y = valeur, fill = mesure)) +
+  geom_col(position = position_dodge(width = .72), width = .65) +
+  geom_text(aes(label = scales::label_number(big.mark = " ")(valeur)),
+            position = position_dodge(width = .72), vjust = -0.5, size = 3.0,
+            fontface = "bold", color = "#333333") +
+  scale_fill_manual(values = c("Taux de change courant" = unname(macro_pal["gris"]),
+                                "Parité de pouvoir d'achat (PPA)" = unname(macro_pal["bleu"])),
+                     name = NULL) +
+  scale_y_continuous(labels = scales::label_number(big.mark = " "),
+                      expand = expansion(mult = c(0, .12))) +
+  labs(x = NULL, y = "PIB par habitant ($ courants, 2022)") +
+  theme_macro() +
+  theme(legend.position = "bottom")
+```
+
+::: {.source}
+La correction PPA rehausse fortement le niveau de vie mesuré de la Chine (+68 %) et surtout de l'Inde (+251 %), pays où le coût de la vie est bas, alors qu'elle change peu la position de la France et des États-Unis. C'est exactement l'exemple de la phrase-clé précédente, sur données réelles.
+:::
+
+## Le taux de croissance mesure le rythme de variation du PIB réel {.smaller}
+
+$$
+\text{Taux de croissance du PIB}_t = \frac{PIB_t - PIB_{t-1}}{PIB_{t-1}} \times 100
+$$
+
+. . .
+
+::: {.cle}
+On calcule toujours le taux de croissance sur le PIB **réel**, jamais sur le PIB nominal, sinon on mesurerait en partie de l'inflation, pas de la richesse créée.
+:::
+
+## Expansion, récession, dépression : trois régimes du cycle {.smaller}
+
+::: {.def}
+- **Expansion** : croissance du PIB positive.
+- **Récession** : croissance du PIB négative pendant **au moins deux trimestres consécutifs** (un simple ralentissement, par exemple de 3 % à 1 %, n'est **pas** une récession : le PIB augmente encore).
+- **Dépression** : baisse forte et prolongée de l'activité, une récession sévère et durable.
+:::
+
+```{r}
+#| label: fig-cycle-recessions
+#| fig-cap: "Croissance trimestrielle du PIB réel en France (t/t-1, %, CVS-CJO), autour des deux récessions techniques les plus récentes. Bandes grisées : au moins deux trimestres consécutifs de croissance négative (règle de la diapo précédente). Source : Insee, comptes nationaux trimestriels, PIB en volume, CVS-CJO (série concordante avec Eurostat, namq_10_gdp, chain-linked volumes). Valeurs figées en dur."
+#| fig-width: 8.4
+#| fig-height: 3.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB reel France, taux de croissance trimestriel (t/t-1, %, CVS-CJO), autour
+# des deux recessions techniques recentes (au moins deux trimestres consecutifs
+# de croissance negative). Source : Insee, comptes nationaux trimestriels,
+# PIB en volume, CVS-CJO (serie concordante avec Eurostat, namq_10_gdp,
+# chain-linked volumes). Valeurs figees en dur, aucun appel reseau au rendu.
+df_cycle <- data.frame(
+  trimestre = c(
+    "2007T1","2007T2","2007T3","2007T4",
+    "2008T1","2008T2","2008T3","2008T4",
+    "2009T1","2009T2","2009T3","2009T4",
+    "2010T1","2010T2","2010T3","2010T4",
+    "2011T1","2011T2","2011T3","2011T4",
+    "2019T1","2019T2","2019T3","2019T4",
+    "2020T1","2020T2","2020T3","2020T4",
+    "2021T1","2021T2","2021T3","2021T4"
+  ),
+  periode = c(rep("Crise financière (2007-2011)", 20),
+              rep("Crise Covid-19 (2019-2021)", 12)),
+  t_idx = c(1:20, 101:112),
+  croissance = c(
+     0.6,  0.3,  0.5,  0.4,
+     0.4, -0.1, -0.3, -1.6,
+    -1.5,  0.2,  0.2,  0.6,
+     0.2,  0.7,  0.4,  0.4,
+     0.9, -0.1,  0.3,  0.1,
+     0.4,  0.3,  0.3,  0.0,
+    -5.9,-13.5, 18.5, -1.1,
+     0.0,  1.3,  3.1,  0.6
+  )
+)
+df_cycle$periode <- factor(df_cycle$periode,
+  levels = c("Crise financière (2007-2011)", "Crise Covid-19 (2019-2021)"))
+
+# Bandes de recession : au moins deux trimestres consecutifs de croissance
+# negative (2008T2-2009T1 ; 2020T1-2020T2). 2020T4 est negatif mais isole
+# (encadre de trimestres positifs) : il ne remplit donc pas le critere des
+# deux trimestres consecutifs et n'est pas grise, illustration directe de
+# l'encadre "erreur frequente" de la diapo precedente.
+df_recessions <- data.frame(
+  periode = factor(c("Crise financière (2007-2011)", "Crise Covid-19 (2019-2021)"),
+                    levels = levels(df_cycle$periode)),
+  xmin = c(5.5, 104.5),
+  xmax = c(9.5, 106.5)
+)
+
+ggplot(df_cycle, aes(x = t_idx, y = croissance)) +
+  geom_rect(data = df_recessions, inherit.aes = FALSE,
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf),
+            fill = unname(macro_pal["rouge"]), alpha = .13) +
+  geom_hline(yintercept = 0, color = "grey45", linewidth = .3) +
+  geom_col(aes(fill = croissance >= 0), width = .72, show.legend = FALSE) +
+  scale_fill_manual(values = c(`TRUE` = unname(macro_pal["bleu"]), `FALSE` = unname(macro_pal["rouge"]))) +
+  scale_x_continuous(breaks = df_cycle$t_idx, labels = df_cycle$trimestre) +
+  facet_wrap(~periode, scales = "free_x") +
+  labs(x = NULL, y = "Croissance du PIB (t/t-1, %, CVS-CJO)") +
+  theme_macro() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6.6),
+        panel.grid.major.x = element_blank(),
+        strip.text = element_text(face = "bold", color = "#1f4e79", size = 9))
+```
+
+::: {.source}
+2020T4, isolé entre deux trimestres positifs, n'est pas grisé : il ne remplit pas le critère des deux trimestres consécutifs.
+:::
+
+## 2. Cinq faits marquants de la croissance {.smaller}
+
+L'observation de longue période fait apparaître cinq régularités empiriques qui structurent la réflexion sur la croissance, et, en creux, sur le rôle de la politique économique.
+
+::: {.cle .incremental}
+1. La croissance soutenue est récente
+2. Forte hausse du niveau de vie dans l'OCDE après 1950
+3. Convergence inégale entre pays
+4. Ralentissement depuis les années 1970
+5. Inégalités : baisse entre pays, hausse au sein des pays
+:::
+
+## Fait 1 : La croissance soutenue est un phénomène historiquement récent {.smaller}
+
+Cinq ruptures successives dessinent la trajectoire du PIB mondial : cliquez pour les faire apparaître, cumulativement.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-pib-monde-1
+#| fig-width: 7.5
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB mondial (milliards de $ internationaux 2011, PPA)
+# Source : Maddison Project Database (2023), via Our World in Data
+annees_monde <- c(1000, 1500, 1600, 1700, 1820, 1870, 1900, 1950,
+                   1970, 1990, 2000, 2008, 2020, 2023)
+pib_monde <- c(285, 583, 778, 872, 1629, 2721, 4857, 11730,
+               30417, 59656, 78686, 107565, 147760, 168686)
+
+df_monde <- data.frame(annee = annees_monde, pib = pib_monde)
+
+# Bandes de fond : périodisation en cinq temps (mêmes bornes que le
+# tableau de la diapo suivante), ordonnées chronologiquement.
+periodes_fond <- data.frame(
+  debut = c(1000, 1800, 1900, 1950, 1990),
+  fin   = c(1800, 1900, 1950, 1990, 2023),
+  label = factor(
+    c("Avant 1800 : économie agraire",
+      "1800-1900 : révolution industrielle",
+      "1900-1950 : guerres mondiales",
+      "1950-1990 : Trente Glorieuses",
+      "Depuis 1990 : croissance plus faible"),
+    levels = c("Avant 1800 : économie agraire",
+               "1800-1900 : révolution industrielle",
+               "1900-1950 : guerres mondiales",
+               "1950-1990 : Trente Glorieuses",
+               "Depuis 1990 : croissance plus faible")
+  )
+)
+
+couleurs_periodes <- c(
+  "Avant 1800 : économie agraire"        = "#d9d2c3",
+  "1800-1900 : révolution industrielle"  = unname(macro_pal["or"]),
+  "1900-1950 : guerres mondiales"        = unname(macro_pal["rouge"]),
+  "1950-1990 : Trente Glorieuses"        = unname(macro_pal["vert"]),
+  "Depuis 1990 : croissance plus faible" = unname(macro_pal["bleu2"])
+)
+
+# Construit le graphe cumulatif : bandes de fond + tracé colorés pour les
+# périodes 1..k déjà révélées ; la portion de courbe pas encore révélée
+# reste en gris pâle. Au dernier cran (k = 5), ce graphe est strictement
+# identique au graphe statique d'origine (courbe bleue complète, cinq
+# bandes colorées, légende "Périodes").
+plot_pib_monde <- function(k) {
+
+  fond_k <- periodes_fond[seq_len(k), ]
+  fin_k  <- periodes_fond$fin[k]
+
+  df_revele <- subset(df_monde, annee <= fin_k)
+  df_reste  <- subset(df_monde, annee >= fin_k)
+
+  p <- ggplot(df_monde, aes(x = annee, y = pib)) +
+    # NB : ymin/ymax en bornes finies (et non -Inf/Inf) car geom_rect ne se
+    # dessine pas correctement sous scale_y_log10() avec des bornes infinies
+    # (log(-Inf) produit un NaN). Marge très large, toujours positive, pour
+    # couvrir tout le panneau quelle que soit l'échelle.
+    geom_rect(data = fond_k,
+              aes(xmin = debut, xmax = fin,
+                  ymin = min(pib_monde) / 100, ymax = max(pib_monde) * 100,
+                  fill = label),
+              inherit.aes = FALSE, alpha = 0.16)
+
+  if (nrow(df_reste) > 1) {
+    p <- p +
+      geom_line(data = df_reste, color = "grey80", linewidth = .8) +
+      geom_point(data = df_reste, color = "grey80", size = 1.4)
+  }
+
+  p +
+    geom_line(data = df_revele, color = unname(macro_pal["bleu"]), linewidth = 1) +
+    geom_point(data = df_revele, color = unname(macro_pal["bleu"]), size = 1.8) +
+    scale_fill_manual(name = "Périodes", values = couleurs_periodes,
+                       breaks = levels(periodes_fond$label)[seq_len(k)]) +
+    scale_y_log10(
+      breaks = c(100, 1000, 10000, 100000),
+      labels = scales::label_comma(big.mark = " ")
+    ) +
+    scale_x_continuous(limits = c(1000, 2023),
+                        breaks = c(1000, 1500, 1700, 1820, 1900, 1950, 2000, 2023)) +
+    labs(x = "Année", y = "PIB mondial (Md $ int. 2011 PPA, échelle log)") +
+    guides(fill = guide_legend(nrow = 2, byrow = TRUE,
+                                override.aes = list(alpha = 0.5))) +
+    theme_macro() +
+    theme(axis.text.x = element_text(angle = 40, hjust = 1),
+          legend.title = element_text(face = "bold"),
+          legend.text = element_text(size = 8))
+}
+
+plot_pib_monde(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-pib-monde-2
+#| fig-width: 7.5
+#| fig-height: 4.3
+plot_pib_monde(2)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-pib-monde-3
+#| fig-width: 7.5
+#| fig-height: 4.3
+plot_pib_monde(3)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-pib-monde-4
+#| fig-width: 7.5
+#| fig-height: 4.3
+plot_pib_monde(4)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-pib-monde-5
+#| fig-width: 7.5
+#| fig-height: 4.3
+plot_pib_monde(5)
+```
+:::
+
+:::
+
+::: {.source}
+Évolution du PIB mondial, an 1000-2023, échelle logarithmique. Avant la révolution industrielle (1760-1820), le PIB mondial croît très lentement pendant des siècles ; il explose ensuite de façon quasi verticale sur une échelle logarithmique. Source : Maddison Project Database (2023), via Our World in Data (ourworldindata.org/grapher/global-gdp-over-the-long-run).
+:::
+
+## Fait 2 : Une forte hausse du niveau de vie dans l'OCDE, surtout après 1950 {.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+Entre 1950 et 2022, le revenu par habitant a été multiplié par :
+
+**× 3,8** États-Unis
+
+**× 4,7** France
+
+**× 7,5** Allemagne
+
+**× 12,5** Japon
+
+. . .
+
+::: {.cle}
+Le phénomène est massif, mais très hétérogène, y compris entre pays pourtant tous développés dès 1950.
+:::
+:::
+
+::: {.column width="60%"}
+```{r}
+#| label: fig-fait2-carte
+#| fig-cap: "Multiplicateur du revenu par habitant entre 1950 et 2022, par pays. Source : Maddison Project Database (2023). Fond de carte : Natural Earth. Les pays en gris n'ont pas de données Maddison pour 1950 (notamment ex-URSS et ex-Yougoslavie)."
+#| fig-width: 8.2
+#| fig-height: 4.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+
+# Fond de carte mondial (données du package rnaturalearthdata, sans appel réseau)
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Multiplicateur du revenu par habitant, 1950-2022, 147 pays
+# Source : Maddison Project Database (2023)
+df_mult <- read.csv(here::here("data/maddison_multiplicateur.csv"))
+
+# Jointure sur le code ISO3 ; on utilise adm0_a3 plutôt que iso_a3 car
+# Natural Earth code iso_a3 = "-99" pour la France, la Norvège et 6 autres
+# pays (bug connu du fond de carte), ce qui les afficherait à tort en gris
+# clair (NA). Les pays du fond de carte sans correspondance dans df_mult
+# (ou vice versa) reçoivent NA et sont affichés en gris clair.
+world <- merge(world, df_mult, by.x = "adm0_a3", by.y = "code", all.x = TRUE)
+
+ggplot(world) +
+  geom_sf(aes(fill = multiplicateur), color = "white", linewidth = .1) +
+  scale_fill_viridis_c(
+    option = "mako", direction = -1,
+    na.value = "grey85",
+    name = "Multiplicateur\n1950-2022"
+  ) +
+  coord_sf(ylim = c(-55, 83), expand = FALSE) +
+  labs(x = NULL, y = NULL) +
+  theme_macro() +
+  theme(
+    legend.title = element_text(size = 9),
+    axis.text = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+::: {.source}
+Les quatre pays sont tous des économies développées dès 1950 : l'écart de multiplicateur (x 3,8 à x 12,5) montre que le rattrapage de niveau de vie après-guerre a été massif partout, mais très inégal, y compris au sein du monde développé.
+:::
+:::
+:::
+
+## Fait 3 : Une convergence inégale entre pays {.smaller}
+
+::: {.columns}
+::: {.column width="42%"}
+::: {.def}
+**Convergence** : phénomène par lequel les pays initialement moins riches connaissent une croissance plus forte, réduisant leur écart avec les pays les plus riches.
+:::
+
+**Convergence observée** : au sein de l'OCDE (rattrapage), et pour plusieurs pays asiatiques (Corée du Sud, Indonésie, Malaisie, Thaïlande, Chine).
+
+**Non-convergence** : pour la plupart des pays d'Afrique subsaharienne, et une partie de l'Amérique latine.
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: fig-fait3-convergence
+#| fig-cap: "Convergence du PIB par habitant, 1990-2022. Chaque point est un pays : abscisse = PIB par habitant en 1990 (PPA, dollars constants, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant entre 1990 et 2022. Source : Banque mondiale / Maddison Project Database (2023)."
+#| fig-width: 7.5
+#| fig-height: 4.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(ggrepel)
+
+# PIB par habitant (PPA, $ constants) en 1990 et taux de croissance annuel
+# moyen 1990-2022 (CAGR), 18 pays. Source : Banque mondiale / Maddison
+# Project Database (2023). Données figées dans
+# data/convergence_1990_2022.csv : aucun appel réseau au rendu.
+df_conv <- read.csv(here::here("data/convergence_1990_2022.csv"))
+
+niv_groupe <- c("OCDE : rattrapage interne", "Convergents asiatiques",
+                 "Non-convergents (Afrique subsah., Am. latine)")
+df_conv$groupe <- factor(df_conv$groupe, levels = niv_groupe)
+
+pal_groupe <- c(
+  "OCDE : rattrapage interne"                     = unname(macro_pal["bleu"]),
+  "Convergents asiatiques"                         = unname(macro_pal["vert"]),
+  "Non-convergents (Afrique subsah., Am. latine)"  = unname(macro_pal["rouge"])
+)
+
+ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2022, color = groupe)) +
+  geom_hline(yintercept = 0, color = "grey75", linewidth = .3) +
+  geom_smooth(aes(group = 1), method = "loess", formula = y ~ x, span = 0.9,
+              se = FALSE, color = "grey40", linewidth = 0.8) +
+  geom_point(size = 2.6, alpha = .9) +
+  geom_text_repel(aes(label = pays), size = 3, seed = 20260710,
+                   show.legend = FALSE, max.overlaps = 20,
+                   segment.color = "grey60", segment.size = .3) +
+  scale_x_log10(labels = scales::label_number(big.mark = " ")) +
+  scale_color_manual(values = pal_groupe, name = NULL) +
+  labs(
+    x = "PIB par habitant en 1990 (PPA, $ constants, échelle log)",
+    y = "Croissance annuelle moyenne\ndu PIB/hab., 1990-2022 (%)"
+  ) +
+  theme_macro() +
+  theme(
+    legend.position = "bottom", legend.text = element_text(size = 8),
+    plot.margin = margin(6, 12, 6, 10)
+  ) +
+  guides(color = guide_legend(nrow = 2, byrow = TRUE, override.aes = list(size = 3)))
+```
+
+::: {.source}
+Les pays convergents (Chine, Corée du Sud, Indonésie, Malaisie, Thaïlande) partaient d'un niveau bas en 1990 et affichent la croissance la plus forte : ils rattrapent les pays riches. À niveau initial comparable, les pays non convergents (RD Congo, Niger, Rép. centrafricaine, Madagascar, Mexique) stagnent ou reculent : l'écart se creuse. Au sein de l'OCDE, la relation négative entre niveau initial et croissance (rattrapage) est plus ténue.
+:::
+:::
+:::
+
+## Fait 4 : Un ralentissement du taux de croissance depuis les années 1970 {.smaller}
+
+::: {.columns}
+::: {.column width="42%"}
+::: {.cle}
+Dans les pays de l'OCDE, l'économie continue de croître, mais à un rythme moins soutenu qu'avant les chocs pétroliers.
+:::
+
+. . .
+
+Principale explication : le **ralentissement des gains de productivité**, un thème que nous retrouverons au chapitre II à travers la loi d'Okun et, plus loin dans le cours, à travers le débat sur la stagnation séculaire (R. Gordon, L. Summers).
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: fig-fait4-decennies
+#| fig-cap: "Croissance annuelle moyenne du PIB réel, par décennie, agrégat OCDE. La décennie « 2020s » est incomplète (2020-2024) et marquée par la crise Covid-19 de 2020. Source : Banque mondiale, World Development Indicators (WDI), indicateur NY.GDP.MKTP.KD.ZG, pays agrégé « OECD members » (code OED) ; OCDE pour 2020-2024."
+#| fig-width: 7.5
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Croissance annuelle moyenne du PIB réel par décennie, agrégat OCDE
+# (Banque mondiale, WDI, indicateur NY.GDP.MKTP.KD.ZG, code pays "OED" =
+# OECD members). Moyennes calculées sur les taux de croissance annuels
+# 1961-2019, consultées le 2026-07-10. La décennie 2020s est incomplète
+# (2020-2024) : moyenne des taux annuels OCDE 2020 (-4,2 %), 2021 (+5,6 %),
+# 2022 (+3,0 %), 2023 (+1,7 %) et 2024 (+1,8 %), source OCDE / Banque
+# mondiale. Valeurs figées ci-dessous : aucun appel réseau au rendu.
+df_fait4 <- data.frame(
+  decennie   = factor(c("1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"),
+                       levels = c("1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s")),
+  croissance = c(5.32, 3.60, 2.97, 2.69, 1.79, 2.13, 1.6)
+)
+
+ggplot(df_fait4, aes(x = decennie, y = croissance)) +
+  geom_col(fill = unname(macro_pal["bleu"]), width = .62) +
+  geom_line(aes(group = 1), color = unname(macro_pal["rouge"]), linewidth = 0.9) +
+  geom_point(aes(group = 1), color = unname(macro_pal["rouge"]), size = 2) +
+  geom_text(aes(label = scales::label_number(accuracy = 0.1, decimal.mark = ",")(croissance)),
+            vjust = -0.7, size = 3.7, fontface = "bold", color = "#1f4e79") +
+  annotate("segment", x = 2.5, xend = 2.5, y = 0, yend = max(df_fait4$croissance) * .93,
+           linetype = "dashed", color = unname(macro_pal["rouge"]), linewidth = .6) +
+  annotate("text", x = 2.5, y = max(df_fait4$croissance) * 1.12,
+           label = "Chocs pétroliers\n1973 / 1979", color = unname(macro_pal["rouge"]),
+           size = 3.3, fontface = "italic", hjust = 0.5, lineheight = .9) +
+  scale_y_continuous(limits = c(0, max(df_fait4$croissance) * 1.3),
+                      expand = expansion(mult = c(0, 0))) +
+  labs(x = NULL, y = "Croissance annuelle moyenne\ndu PIB réel (%)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
+```
+
+::: {.source}
+La croissance de l'OCDE reste positive sur toute la période, mais son rythme se réduit fortement après les chocs pétroliers de 1973 et 1979 (5,3 % en moyenne dans les années 1960 contre 1,8 % dans les années 2000) : c'est la baisse tendancielle des gains de productivité qui explique l'essentiel de ce ralentissement. La décennie 2020s (incomplète, 2020-2024) reste marquée par le choc Covid-19 de 2020.
+:::
+:::
+:::
+
+## Fait 5 : Une évolution contrastée des inégalités {.smaller}
+
+::: {.columns}
+::: {.column width="42%"}
+**Entre pays** : baisse des écarts de revenu entre pays, conséquence, notamment, de la convergence partielle (fait 3).
+
+**Au sein des pays** : hausse des inégalités internes dans de nombreux pays de l'OCDE.
+
+::: {.def}
+Facteurs identifiés : mondialisation, changement technologique, évolution du rôle de l'État, financiarisation de l'économie.
+:::
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: fig-fait5-top10
+#| fig-cap: "Part du revenu national (avant impôts et transferts) détenue par les 10 % les plus riches, 1950-2023. La forme en U reflète un recul des inégalités jusqu'aux années 1980, suivi d'une forte remontée, surtout aux États-Unis. Source : World Inequality Lab, WID.world (série top 10 % income share, pretax national income)."
+#| fig-width: 7.5
+#| fig-height: 4.3
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(ggrepel)
+
+# Part du revenu national (avant impots et transferts) détenue par les
+# 10 % les plus riches, Etats-Unis / France / Royaume-Uni, 1950-2023.
+# Source : World Inequality Lab, WID.world (série "sptinc992j", revenu
+# national avant impots, part du p90p100), valeurs décennales usuelles
+# de la littérature (Piketty, Saez, Zucman ; World Inequality Report
+# 2022) jusqu'en 2019, prolongées 2020/2022/2023 : niveaux quasi stables
+# depuis 2019 aux Etats-Unis (~45-46 %) et en France (~32-33 %), légère
+# baisse au Royaume-Uni (~35-36 % en 2023), consultées le 2026-07-10.
+# Points 1950/1960/1970 : valeurs de référence WID.world, part du top
+# 10 % du revenu national avant impôts, prolongeant la série vers
+# l'arrière pour montrer le creux relatif d'avant 1980 (courbe en U).
+# Valeurs figées ci-dessous : aucun appel réseau au rendu.
+df_fait5 <- data.frame(
+  pays  = rep(c("Etats-Unis", "Royaume-Uni", "France"), each = 11),
+  annee = rep(c(1950, 1960, 1970, 1980, 1990, 2000, 2010, 2019, 2020, 2022, 2023), times = 3),
+  part_top10 = c(
+    34.4, 33.8, 33.4, 34.2, 38.5, 42.5, 45.2, 45.5, 45.4, 45.7, 45.9,   # Etats-Unis
+    30.6, 29.6, 28.6, 28.4, 34.0, 36.0, 36.8, 37.1, 36.4, 35.9, 35.7,   # Royaume-Uni
+    33.9, 32.7, 31.5, 30.5, 31.7, 32.5, 32.0, 32.4, 32.1, 32.6, 32.9    # France
+  )
+)
+
+niv_pays <- c("Etats-Unis", "Royaume-Uni", "France")
+df_fait5$pays <- factor(df_fait5$pays, levels = niv_pays)
+
+pal_pays <- c(
+  "Etats-Unis"   = unname(macro_pal["rouge"]),
+  "Royaume-Uni"  = unname(macro_pal["or"]),
+  "France"       = unname(macro_pal["bleu"])
+)
+
+df_labels <- df_fait5[df_fait5$annee == 2023, ]
+
+ggplot(df_fait5, aes(x = annee, y = part_top10, color = pays, group = pays)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2.2) +
+  geom_text_repel(
+    data = df_labels,
+    aes(label = paste0(pays, " : ",
+                        scales::label_number(accuracy = 0.1, decimal.mark = ",")(part_top10), " %")),
+    hjust = 0, nudge_x = 2.5, direction = "y", seed = 20260710,
+    show.legend = FALSE, size = 3.4, fontface = "bold", segment.size = .3
+  ) +
+  scale_x_continuous(breaks = c(1950, 1960, 1970, 1980, 1990, 2000, 2010, 2019, 2023),
+                      limits = c(1950, 2037)) +
+  scale_y_continuous(labels = scales::label_number(suffix = " %", decimal.mark = ","),
+                      limits = c(25, 48)) +
+  scale_color_manual(values = pal_pays, guide = "none") +
+  labs(x = NULL, y = "Part du revenu national détenue\npar les 10 % les plus riches") +
+  theme_macro()
+```
+
+::: {.source}
+Depuis 1980, la part du revenu national captée par les 10 % les plus riches augmente fortement aux États-Unis (34 % à 46 % environ) et, dans une moindre mesure, au Royaume-Uni (28 % à 36 % environ), alors qu'elle reste comparativement stable en France (autour de 32-33 %) : la hausse des inégalités internes n'est ni uniforme, ni inévitable, elle dépend des choix nationaux (fiscalité, négociation salariale, régulation).
+:::
+:::
+:::
+
+## 3. Les horizons temporels de la macroéconomie {.smaller}
+
+Pourquoi distinguer des horizons ? Parce que **les déterminants de l'activité économique ne sont pas les mêmes selon la durée considérée**, et donc les politiques économiques pertinentes non plus.
+
+. . .
+
+::: {.cle}
+CT → dominé par la **demande** · MT → retour vers le **potentiel** · LT → déterminé par l'**offre**
+:::
+
+. . .
+
+```{mermaid}
+%%| fig-cap: "À mesure que l'horizon s'allonge, davantage de facteurs cessent d'être fixes : à court terme seule la demande varie, à long terme tous les déterminants de l'offre deviennent variables."
+flowchart LR
+    A["Court terme<br/>Demande domine<br/>Capital et technologie fixes"] --> B["Moyen terme<br/>Retour vers le potentiel<br/>Facteurs quasi fixes"]
+    B --> C["Long terme<br/>Offre domine<br/>Tous les facteurs deviennent variables"]
+```
+
+## Le court terme : des fluctuations tirées par la demande {.smaller}
+
+::: {.columns}
+::: {.column width="42%"}
+::: {.def}
+**Court terme (CT)** : quelques années. Les fluctuations de l'activité (variations du PIB autour de sa tendance) sont dominées par la **demande** : confiance des consommateurs, taux d'intérêt, etc.
+:::
+
+. . .
+
+::: {.cle}
+C'est l'horizon des politiques de **stabilisation** (chapitre I, §5) : agir sur la demande pour limiter l'écart entre production effective et production potentielle.
+:::
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: fig-ct-fluctuations
+#| fig-cap: "Croissance annuelle du PIB par habitant, France, 1951-2022. Les récessions (croissance négative) sont marquées en rouge, avec les quatre chocs majeurs de la période. Source : Maddison Project Database (2023)."
+#| fig-width: 7.5
+#| fig-height: 4.4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB par habitant, France, Maddison Project Database (2023), 1950-2022,
+# dollars internationaux 2011 (PPA). Croissance annuelle = variation
+# relative du PIB/hab d'une annee sur l'autre. Recessions mises en
+# evidence : 1975 (choc petrolier), 1993 (crise du SME), 2009 (crise
+# financiere), 2020 (Covid-19). Donnees figees dans
+# data/france_pib_hab_maddison.csv : aucun appel reseau au rendu.
+df_ct <- read.csv(here::here("data/france_pib_hab_maddison.csv"))
+df_ct <- df_ct[order(df_ct$annee), ]
+df_ct$croissance <- c(NA, (df_ct$pib_hab[-1] / df_ct$pib_hab[-nrow(df_ct)] - 1) * 100)
+df_ct <- df_ct[!is.na(df_ct$croissance), ]
+
+annees_recession <- c(1975, 1993, 2009, 2020)
+df_recess_ct <- df_ct[df_ct$annee %in% annees_recession, ]
+df_recess_ct$y_label <- df_recess_ct$croissance - 1.3
+
+ggplot(df_ct, aes(x = annee, y = croissance)) +
+  geom_hline(yintercept = 0, color = "grey45", linewidth = .3) +
+  geom_col(aes(fill = croissance >= 0), width = .75, show.legend = FALSE) +
+  geom_text(data = df_recess_ct, aes(y = y_label, label = annee),
+            size = 3, fontface = "bold", color = unname(macro_pal["rouge"])) +
+  scale_fill_manual(values = c(`TRUE` = unname(macro_pal["bleu"]), `FALSE` = unname(macro_pal["rouge"]))) +
+  scale_x_continuous(breaks = seq(1950, 2020, by = 10)) +
+  labs(x = NULL, y = "Croissance annuelle du PIB\npar habitant (%)") +
+  theme_macro()
+```
+
+::: {.source}
+D'une année sur l'autre, le PIB par habitant fluctue nettement autour de sa tendance : ces à-coups (récessions en rouge) sont dominés par des chocs de **demande** (confiance, investissement, commerce extérieur), l'horizon du court terme.
+:::
+:::
+:::
+
+## Le moyen terme : un retour vers le potentiel {.smaller}
+
+::: {.columns}
+::: {.column width="42%"}
+::: {.def}
+**Moyen terme (MT)** : une décennie ou moins. L'activité tend à revenir vers son niveau **potentiel**, déterminé par des facteurs d'offre. Le stock de capital, la technologie, le travail disponible et les institutions sont supposés quasi fixes à cet horizon.
+:::
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: fig-mt-cycles
+#| fig-cap: "PIB par habitant, France, 1985-2022, échelle logarithmique (zoom sur les décennies récentes pour faire ressortir les cycles). La courbe grise pointillée est la tendance de moyen-long terme (régression locale, loess, sur le log du PIB/hab) ; les écarts à cette tendance sont coloriés en vert (au-dessus du potentiel) ou en rouge (en dessous). Source : Maddison Project Database (2023)."
+#| fig-width: 7.5
+#| fig-height: 4.4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB par habitant, France, Maddison Project Database (2023), 1950-2022,
+# dollars internationaux 2011 (PPA). Tendance de moyen-long terme estimee
+# par regression locale (loess) sur le log du PIB/hab (span = 0.35) :
+# cette tendance suit le ralentissement de la croissance, si bien que les
+# ecarts a la tendance sont de vrais cycles de moyen terme (quelques %),
+# et non l'artefact d'une tendance log-lineaire unique sur 70 ans. Le
+# meme ajustement (memes donnees, meme span) sert de base a la
+# diapositive "long terme" qui suit. Donnees figees dans
+# data/france_pib_hab_maddison.csv : aucun appel reseau au rendu.
+df_mt <- read.csv(here::here("data/france_pib_hab_maddison.csv"))
+df_mt <- df_mt[order(df_mt$annee), ]
+fit_tendance <- loess(log(pib_hab) ~ annee, data = df_mt, span = 0.35)
+df_mt$tendance <- exp(fitted(fit_tendance))
+df_mt$au_dessus <- df_mt$pib_hab >= df_mt$tendance
+df_mt$segment <- with(df_mt, cumsum(c(1, diff(au_dessus) != 0)))
+# Zoom sur les decennies recentes : sur un axe resserre, les cycles de
+# moyen terme (ecarts a la tendance) sont bien plus lisibles que sur
+# 1950-2022, ou la forte croissance en niveau les ecrase. La tendance
+# loess reste estimee sur toute la serie (calculee ci-dessus).
+df_mt$phase <- factor(ifelse(df_mt$au_dessus,
+                             "Au-dessus du potentiel (expansion)",
+                             "En dessous du potentiel (récession)"),
+                      levels = c("Au-dessus du potentiel (expansion)",
+                                 "En dessous du potentiel (récession)"))
+df_plot_mt <- df_mt[df_mt$annee >= 1985, ]
+
+ggplot(df_plot_mt, aes(x = annee)) +
+  geom_ribbon(aes(ymin = pmin(pib_hab, tendance), ymax = pmax(pib_hab, tendance),
+                   fill = phase, group = segment), alpha = .8) +
+  geom_line(aes(y = tendance), color = "grey25", linewidth = .6, linetype = "22") +
+  geom_line(aes(y = pib_hab), color = "grey10", linewidth = .8) +
+  scale_fill_manual(values = c("Au-dessus du potentiel (expansion)" = unname(macro_pal["vert"]),
+                               "En dessous du potentiel (récession)" = unname(macro_pal["rouge"])),
+                    name = NULL) +
+  scale_y_log10(labels = scales::label_number(big.mark = " ")) +
+  scale_x_continuous(breaks = seq(1990, 2020, by = 10)) +
+  coord_cartesian(ylim = c(23000, 41000)) +
+  labs(x = NULL, y = "PIB par habitant\n($ int. 2011 PPA, échelle log)") +
+  theme_macro()
+```
+
+::: {.source}
+Les écarts à la tendance, positifs en vert (expansion de la fin des années 1990 et du milieu des années 2000) ou négatifs en rouge (récession du début des années 1990, crise de 2009, Covid-19 en 2020), ne persistent pas : l'activité **revient vers son niveau potentiel** en quelques années, l'horizon du moyen terme.
+:::
+:::
+:::
+
+## Le long terme : une croissance tendancielle tirée par l'offre {.smaller}
+
+::: {.columns}
+::: {.column width="42%"}
+::: {.def}
+**Long terme (LT)** : plusieurs décennies. Tous les facteurs deviennent variables. La croissance de long terme s'explique par les facteurs d'**offre** : accumulation du capital, progrès technique, ressources humaines (quantité et qualité de la main-d'œuvre).
+:::
+
+. . .
+
+::: {.cle}
+C'est l'horizon des politiques d'**allocation** (chapitre I, §5) : élever la trajectoire de croissance potentielle plutôt que de corriger un écart ponctuel.
+:::
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: fig-lt-tendance
+#| fig-cap: "PIB par habitant, France, 1985-2022, échelle logarithmique (même fenêtre et même axe que la diapositive précédente). Trait fin gris : PIB/hab observé. Trait épais bleu : tendance de moyen-long terme (loess, même ajustement que la diapositive précédente). Source : Maddison Project Database (2023)."
+#| fig-width: 7.5
+#| fig-height: 4.4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# PIB par habitant, France, Maddison Project Database (2023), 1950-2022,
+# dollars internationaux 2011 (PPA), niveau en echelle logarithmique,
+# avec la meme tendance de moyen-long terme (loess sur log(pib_hab),
+# span = 0.35) que la diapositive "moyen terme" precedente : a cet
+# horizon, c'est la tendance elle-meme (et son inflexion apres les
+# annees 2000) qui porte le message, pas les ecarts autour d'elle.
+# Donnees figees dans data/france_pib_hab_maddison.csv : aucun appel
+# reseau au rendu.
+df_lt <- read.csv(here::here("data/france_pib_hab_maddison.csv"))
+df_lt <- df_lt[order(df_lt$annee), ]
+fit_tendance <- loess(log(pib_hab) ~ annee, data = df_lt, span = 0.35)
+df_lt$tendance <- exp(fitted(fit_tendance))
+df_plot_lt <- df_lt[df_lt$annee >= 1985, ]  # meme fenetre que le moyen terme, pour comparaison visuelle
+
+ggplot(df_plot_lt, aes(x = annee)) +
+  geom_line(aes(y = pib_hab), color = "grey75", linewidth = .6) +
+  geom_line(aes(y = tendance), color = unname(macro_pal["bleu"]), linewidth = 1.3) +
+  scale_y_log10(labels = scales::label_number(big.mark = " ")) +
+  scale_x_continuous(breaks = seq(1990, 2020, by = 10)) +
+  coord_cartesian(ylim = c(23000, 41000)) +
+  labs(x = NULL, y = "PIB par habitant\n($ int. 2011 PPA, échelle log)") +
+  theme_macro()
+```
+
+::: {.source}
+Sur la **même fenêtre** que la diapositive précédente, l'attention se déplace des cycles vers la **tendance** (en bleu) : sa pente, plus faible après les années 2000, reflète le ralentissement des gains de productivité (offre). À l'horizon long, ce sont ces déterminants d'offre, et non les écarts de moyen terme, qui comptent.
+:::
+:::
+:::
+
+## À retenir, et pour la prochaine fois
+
+:::: {.callout-important}
+## À retenir
+::: {.incremental}
+- Le PIB **réel** (prix constants) est la mesure de référence pour comparer l'activité dans le temps ; ses dérivés (par habitant, en PPA) servent aux comparaisons internationales.
+- Récession = croissance **négative** pendant au moins deux trimestres, pas un simple ralentissement.
+- Cinq faits marquants : croissance récente, hausse massive mais inégale du niveau de vie, convergence sélective, ralentissement post-1970, inégalités contrastées.
+- Trois horizons (CT/MT/LT) organisent l'analyse : demande à court terme, retour au potentiel à moyen terme, offre à long terme.
+:::
+::::
+
+:::: {.callout-note}
+## Pour la prochaine fois
+::: {.incremental}
+- Relire le résumé du chapitre I, §1-3 (`cours/chap1.qmd`).
+- Réviser la politique économique et les distinctions normatif/positif, néoclassique/keynésien (chapitre I, §4).
+- TD 1 : préparer les objectifs et instruments de politique économique (règle de Tinbergen).
+- Prochain cours (CM 2) : politique économique, fonctions de Musgrave, modèle OA-DA et ses quatre chocs.
+:::
+::::

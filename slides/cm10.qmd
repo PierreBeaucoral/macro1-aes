@@ -1,0 +1,793 @@
+---
+title: "Quatre décennies de réformes n'ont pas résorbé le chômage structurel français"
+subtitle: "CM 10 : Politiques de l'emploi en France : chronologie, trois axes et synthèse du cours (Chapitre III, §II)"
+---
+
+## Plan de la séance
+
+1. Rappel : trois modèles, flexisécurité et trois axes de réforme
+2. Chronologie commentée des réformes françaises (1972-2024)
+3. Axe 1 : Baisse du coût du travail
+4. Axe 2 : Flexibilisation de l'emploi
+5. Axe 3 : Activation et trappe à inactivité
+6. Bilan : un chômage structurel qui résiste aux réformes
+7. Synthèse générale du cours (Chapitres I, II, III)
+8. Se préparer à l'examen
+
+## Objectifs {.objectifs}
+
+**À l'issue de cette séance, vous saurez :**
+
+- Situer une réforme française du marché du travail sur l'un des **trois axes** : coût du travail, flexibilisation, activation.
+- Expliquer la logique et les limites de la trajectoire **RMI → RSA → prime d'activité** (trappe à inactivité).
+- Relier deux réformes récentes (**assurance chômage 2023-24**, **retraites 2023**) aux cadres conceptuels du chapitre.
+- Interpréter l'évolution du taux de chômage français depuis 1975 à la lumière du diagnostic de chômage **structurel**.
+- Mobiliser l'ensemble des trois chapitres du cours pour l'examen final (QCM + réflexion).
+
+# 1. Rappel des cadres du Chapitre III, Section I
+
+## Trois modèles nationaux, un triangle d'or comme référence
+
+::: {.cle}
+Le CM précédent a distingué trois modèles de marché du travail, **flexibilité** (anglo-saxon), **sécurité** (Europe continentale, dont la France) et **flexisécurité** (Danemark), puis leur **triangle d'or** : flexibilité + indemnisation généreuse + activation, qui se renforcent mutuellement.
+:::
+
+```{r}
+#| label: fig-triangle-or-cm10
+#| fig-cap: "Rappel : le « triangle d'or » de la flexisécurité danoise, référence pour juger les réformes françaises."
+#| fig-width: 6
+#| fig-height: 5.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+sommets <- data.frame(
+  x = c(0, 1, 0.5),
+  y = c(0, 0, 0.87),
+  label = c("Flexibilité\n(licenciements aisés,\nmobilité élevée)",
+            "Indemnisation\ngénéreuse\n(niveau et durée)",
+            "Activation\n(accompagnement,\ncontrôle, formation)")
+)
+
+fleches <- data.frame(
+  x    = c(0.08, 0.92, 0.5),
+  y    = c(0.05, 0.10, 0.80),
+  xend = c(0.42, 0.58, 0.10),
+  yend = c(0.75, 0.75, 0.10)
+)
+
+ggplot() +
+  geom_polygon(data = sommets, aes(x, y), fill = macro_pal["bleu2"], alpha = 0.12,
+               color = macro_pal["bleu"], linewidth = 0.9) +
+  geom_curve(data = fleches[1, ], aes(x = x, y = y, xend = xend, yend = yend),
+             curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
+             color = macro_pal["gris"], linewidth = 0.6) +
+  geom_curve(data = fleches[2, ], aes(x = x, y = y, xend = xend, yend = yend),
+             curvature = -0.25, arrow = arrow(length = unit(0.22, "cm")),
+             color = macro_pal["gris"], linewidth = 0.6) +
+  geom_curve(data = fleches[3, ], aes(x = x, y = y, xend = xend, yend = yend),
+             curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
+             color = macro_pal["gris"], linewidth = 0.6) +
+  geom_point(data = sommets, aes(x, y), size = 4, color = macro_pal["bleu"]) +
+  geom_label(data = sommets, aes(x, y, label = label),
+             nudge_y = c(-0.09, -0.09, 0.11),
+             size = 3.5, fontface = "bold", color = "#1f4e79",
+             linewidth = 0, fill = "white") +
+  coord_fixed(clip = "off") +
+  xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
+  theme_void() +
+  theme(plot.margin = margin(10, 10, 10, 10))
+```
+
+## Les réformes françaises se lisent selon trois axes récurrents
+
+::: {.def}
+Depuis les années 1970, les gouvernements successifs, quelle que soit leur couleur politique, mobilisent trois grands leviers, isolément ou combinés :
+
+::: {.incremental}
+1. **Baisse du coût du travail** : réduire les cotisations patronales, en priorité sur les bas salaires.
+2. **Flexibilisation de l'emploi** : assouplir l'embauche, le licenciement et le temps de travail.
+3. **Activation** des chômeurs et allocataires de minima sociaux : rendre le retour à l'emploi plus incitatif et mieux accompagné.
+:::
+:::
+
+. . .
+
+Ces trois axes correspondent chacun à un diagnostic théorique vu au chapitre II : le premier suppose un chômage **classique** (néoclassique), le second cible les **rigidités institutionnelles** (WS-PS, appariement), le troisième traite la **trappe à inactivité**, à l'interface entre incitations individuelles et redistribution.
+
+## Chaque axe cible un diagnostic théorique du chapitre II
+
+```{mermaid}
+%%| fig-cap: "Les trois axes de reforme ne sont pas interchangeables : chacun repond a un diagnostic theorique different vu au chapitre II, ce qui explique pourquoi ils sont souvent combines plutot que substitues."
+flowchart LR
+    A[Axe 1 - Cout du travail] --> D[Diagnostic neoclassique]
+    B[Axe 2 - Flexibilisation] --> E[Diagnostic WS-PS et appariement]
+    C[Axe 3 - Activation] --> F[Trappe a inactivite]
+```
+
+. . .
+
+::: {.cle}
+Cette correspondance justifie de **situer** toute réforme sur son axe avant de juger son efficacité : évaluer une baisse de cotisations à l'aune d'un diagnostic WS-PS, ou une réforme du droit du travail à l'aune d'un diagnostic néoclassique, mène à un contresens.
+:::
+
+# 2. Vue d'ensemble de la chronologie
+
+## Dix-sept réformes, trois trajectoires parallèles depuis 1972
+
+```{r}
+#| label: fig-chronologie-cm10
+#| fig-cap: "Chronologie des réformes françaises du marché du travail (1972-2024), classées selon les trois axes. Lecture : chaque axe a été mobilisé de façon quasi continue, sans ordre de priorité stable dans le temps. Source : synthèse du cours (Chapitre III, §II), d'après DARES et sources légales citées ci-après."
+#| fig-width: 9
+#| fig-height: 6.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(ggrepel)
+set.seed(123)
+
+reformes <- data.frame(
+  annee = c(1977, 1993, 1998, 2002, 2013, 2019,
+            1972, 1979, 1982, 2008, 2016, 2017,
+            1988, 2009, 2016, 2023, 2023.6),
+  axe = factor(c(rep("1. Coût du travail", 6),
+                 rep("2. Flexibilisation", 6),
+                 rep("3. Activation", 5)),
+               levels = c("1. Coût du travail", "2. Flexibilisation", "3. Activation")),
+  label = c("Pacte national\npour l'emploi (1977)", "Loi quinquennale\n(1993)", "Aubry I\n35h (1998)",
+            "Allègement\nFillon (2002)", "CICE\n(2013)", "Bascule CICE\n(2019)",
+            "Intérim\n(1972)", "CDD\n(1979)", "Lois Auroux\n(1982)", "Rupture conv.\n(2008)",
+            "Loi El Khomri\n(2016)", "Ordonnances\nMacron (2017)",
+            "RMI\n(1988)", "RSA\n(2009)", "Prime d'activité\n(2016)",
+            "Ass. chômage\n(2023)", "Retraites\n(2023)")
+)
+
+ggplot(reformes, aes(x = annee, y = 0, color = axe)) +
+  geom_hline(yintercept = 0, linewidth = 0.4, color = "grey75") +
+  geom_point(size = 2.8) +
+  geom_text_repel(aes(label = label), size = 2.6, lineheight = 0.82, show.legend = FALSE,
+                   direction = "y", nudge_y = 0.55, segment.size = 0.3,
+                   segment.color = "grey60", box.padding = 0.15, force = 3,
+                   min.segment.length = 0) +
+  facet_wrap(~ axe, ncol = 1) +
+  scale_color_manual(values = c("1. Coût du travail" = macro_pal[["bleu"]],
+                                 "2. Flexibilisation" = macro_pal[["or"]],
+                                 "3. Activation" = macro_pal[["vert"]]),
+                      guide = "none") +
+  scale_x_continuous(breaks = seq(1970, 2025, 5), limits = c(1969, 2028)) +
+  coord_cartesian(ylim = c(-0.3, 2.1), clip = "off") +
+  labs(x = "Année", y = NULL) +
+  theme_macro() +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(),
+        strip.text = element_text(face = "bold", color = "#1f4e79"))
+```
+
+# 3. Axe 1 : Baisse du coût du travail
+
+## Un objectif constant depuis 1977, des dispositifs qui se succèdent
+
+::: {.cle}
+La logique : si le chômage a une composante **classique** (salaire réel/coût du travail trop élevé par rapport à la productivité, chapitre II), réduire les cotisations patronales, surtout sur les bas salaires, où l'élasticité de l'emploi au coût du travail est la plus forte, doit stimuler l'embauche.
+:::
+
+::: {.incremental}
+- **1977** : *Pacte national pour l'emploi* : exonérations pour l'embauche de jeunes.
+- **1993-1996** : *Lois Balladur puis Juppé* : premiers allègements généraux sur les bas salaires (1,1-1,3 SMIC).
+- **1998** : *Aubry I* : allègements liés au passage aux 35 heures (jusqu'à 1,7 SMIC).
+- **2002** : *Allègement Fillon* : fusion et extension des dispositifs (jusqu'à 1,6 SMIC).
+- **2013** : *CICE* : crédit d'impôt sur les salaires jusqu'à 2,5 SMIC.
+:::
+
+## La bascule du CICE : un cas d'école pour évaluer une politique
+
+::: {.callout-tip}
+## Actualisation : bascule du CICE en baisse de cotisations (2019)
+En 2019, le CICE a été transformé en **baisse pérenne de cotisations patronales**. Les évaluations du comité de suivi concluent à un effet net sur l'emploi plus **modeste qu'attendu** : l'essentiel des sommes a servi à restaurer les marges des entreprises plutôt qu'à embaucher.
+:::
+
+. . .
+
+::: {.cle}
+Ce résultat doit être mis en regard du modèle **néoclassique simple** du chapitre II, qui suppose une transmission intégrale coût du travail $\rightarrow$ emploi. Les données invitent à nuancer cette hypothèse : l'ampleur de la réponse de l'emploi dépend du **partage** entre salaires, marges et emploi, pas seulement du signe de l'effet.
+:::
+
+# 4. Axe 2 : Flexibilisation de l'emploi
+
+## Élargir les marges d'ajustement de l'embauche et du licenciement
+
+::: {.def}
+Rattacher chaque réforme à une **forme de flexibilité** (chapitre III, §I) :
+
+::: {.incremental}
+- **Numérique externe** : ajuster le volume de travailleurs : intérim (1972), CDD (1979), licenciements facilités (ordonnances Macron, 2017). La rupture conventionnelle (2008) touche aussi cette dimension, tout en relevant de la **sécurité des parcours** (§I).
+- **Numérique interne** : ajuster les heures travaillées plutôt que l'effectif : lois Auroux (1982, accords dérogatoires sur le temps de travail), loi El Khomri (2016, assouplissement du temps de travail).
+:::
+:::
+
+## Le tournant de 2015-2017 : la primauté de l'accord d'entreprise
+
+::: {.incremental}
+- **2015** : *Loi Macron* : travail dominical/de nuit, licenciements collectifs appréciés au niveau national, réforme des prud'hommes.
+- **2016** : *Loi El Khomri* (« loi Travail ») : primauté renforcée de l'accord d'entreprise sur la branche.
+- **2017** : *Ordonnances Macron* : **barème d'indemnisation obligatoire** (plafonnement des indemnités prud'homales pour licenciement sans cause réelle et sérieuse), primauté de l'accord d'entreprise généralisée, licenciements facilités.
+- **2019-2022** : Le barème, institué en 2017, est confirmé conforme au droit international par deux avis de la Cour de cassation (2019) puis par deux arrêts de sa chambre sociale (2022).
+:::
+
+. . .
+
+::: {.callout-warning}
+## Erreur fréquente
+Ne pas réduire la flexibilisation à une seule direction (« facilité de licenciement »). Elle touche aussi le **temps de travail** (35h, heures supplémentaires), le **niveau de négociation** (branche vs entreprise) et la **sécurisation des parcours** (rupture conventionnelle protège aussi le salarié, en ouvrant droit au chômage).
+:::
+
+## Actualisation : la réforme de l'assurance chômage 2023-2024
+
+::: {.def}
+**Modulation contracyclique de l'indemnisation.** La durée d'indemnisation chômage est **réduite** lorsque le marché du travail est favorable (faible chômage) et **allongée** en période de dégradation.
+:::
+
+. . .
+
+::: {.cle}
+Ce mécanisme relève davantage de l'axe **activation** que de la flexibilisation stricto sensu : il rapproche partiellement le système français de la logique danoise d'indemnisation **conditionnelle** (Section I du CM précédent), sans atteindre le niveau d'accompagnement nordique : le triangle d'or danois repose aussi sur un effort de formation que la réforme française ne réplique pas à la même échelle.
+:::
+
+# 5. Axe 3 : Activation et trappe à inactivité
+
+## Le problème : une allocation peut décourager le retour à l'emploi
+
+::: {.def}
+**Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente. Le taux marginal de prélèvement implicite peut approcher **100 %**.
+:::
+
+. . .
+
+Ce mécanisme relie directement la fonction de **redistribution** de Musgrave (chapitre I) et l'analyse micro des incitations au travail : trop protéger les revenus hors emploi peut, si le barème est mal conçu, freiner le retour à l'emploi qu'il cherche par ailleurs à faciliter.
+
+## RMI → RSA → prime d'activité : réduire la trappe à inactivité sans supprimer le filet de sécurité
+
+::: {.columns}
+::: {.column width="33%"}
+::: {.def}
+**RMI (1988)**
+
+Cumul allocation/salaire quasi nul : reprendre un emploi fait perdre presque l'intégralité de l'allocation.
+:::
+:::
+
+::: {.column width="33%"}
+::: {.def}
+**RSA (2009)**
+
+Remplace le RMI. Cumul progressif : le bénéficiaire conserve **62 centimes** par euro gagné (recul de 38 centimes d'allocation par euro). RSA-socle + RSA-activité.
+:::
+:::
+
+::: {.column width="33%"}
+::: {.def}
+**Prime d'activité (2016)**
+
+Remplace le RSA-activité, dont le non-recours atteignait **60-70 %** des ayants droit. Taux de recours nettement supérieur.
+:::
+:::
+:::
+
+. . .
+
+::: {.callout-warning}
+## Erreur fréquente
+Ne pas confondre **RSA-socle** (devenu simplement « RSA » après 2016, équivalent du RMI) et **RSA-activité** (remplacé par la prime d'activité). Cette trajectoire ne supprime pas les minima sociaux : elle fait évoluer leur **architecture** pour réduire les effets de trappe tout en maintenant un filet de sécurité.
+:::
+
+## Ce que « trappe à inactivité » veut dire : la pente compte {.smaller}
+
+Cliquez pour faire apparaître chaque régime : plus la pente est forte, plus reprendre un emploi rapporte.
+
+::: {.r-stack}
+
+::: {.fragment}
+```{r}
+#| label: fig-trappe-cm10-1
+#| fig-width: 7
+#| fig-height: 4.6
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Figure stylisée (pédagogique) de la trappe à inactivité et de sa réduction.
+# Axe des x : revenu d'activité, en % du SMIC net travaillé (0 à 100).
+# Axe des y : revenu disponible total (allocation + revenu d'activité net
+# du barème), indice base 100 = allocation seule à revenu d'activité nul.
+# Seul paramètre officiel injecté : RSA, taux de conservation de 62 % du
+# revenu d'activité (pente 0,62 ; source : DARES 2016, Prestations sociales
+# et trappe à inactivité, citée dans le cours). Les pentes RMI (quasi nulle)
+# et prime d'activité (bonification concentrée sur les bas salaires) sont
+# schématiques, à but didactique : ce ne sont pas des montants officiels en
+# euros, mais l'illustration du mécanisme décrit dans le texte de ce CM.
+x <- seq(0, 100, by = 1)
+
+rmi <- 100 + 0.05 * x
+rsa <- 100 + 0.62 * x
+pa  <- ifelse(x <= 40, 100 + 0.85 * x, 100 + 0.85 * 40 + 0.55 * (x - 40))
+
+df_trappe <- data.frame(
+  x      = rep(x, 3),
+  y      = c(rmi, rsa, pa),
+  regime = rep(c("RMI (avant 2009)", "RSA (depuis 2009)",
+                 "+ Prime d'activité (depuis 2016)"), each = length(x))
+)
+df_trappe$regime <- factor(df_trappe$regime,
+                            levels = c("RMI (avant 2009)", "RSA (depuis 2009)",
+                                       "+ Prime d'activité (depuis 2016)"))
+
+cols_trappe <- c("RMI (avant 2009)" = unname(macro_pal["rouge"]),
+                  "RSA (depuis 2009)" = unname(macro_pal["or"]),
+                  "+ Prime d'activité (depuis 2016)" = unname(macro_pal["vert"]))
+
+# Construit la figure regime par regime : k = 1 la seule courbe RMI (plate),
+# k = 2 ajoute la RSA (pente 0,62), k = 3 ajoute la prime d'activite
+# (bonification renforcee sur les bas salaires).
+plot_trappe <- function(k) {
+  regimes_k <- levels(df_trappe$regime)[seq_len(k)]
+  d <- df_trappe[df_trappe$regime %in% regimes_k, ]
+
+  p <- ggplot() +
+    geom_abline(intercept = 100, slope = 0, linetype = "dotted",
+                color = "grey70", linewidth = 0.4) +
+    geom_line(data = d, aes(x = x, y = y, color = regime), linewidth = 1.1)
+
+  if (k >= 1) p <- p + annotate("text", x = 78, y = 100 + 0.05 * 78 + 4,
+                                 label = "quasi 0 % conservé", size = 3,
+                                 color = unname(macro_pal["rouge"]), fontface = "italic")
+  if (k >= 2) p <- p + annotate("text", x = 60, y = 100 + 0.62 * 60 + 6,
+                                 label = "62 centimes / euro", size = 3,
+                                 color = unname(macro_pal["or"]), fontface = "italic")
+  if (k >= 3) p <- p + annotate("text", x = 20, y = 100 + 0.85 * 20 + 9,
+                                 label = "bonification\nbas salaires", size = 3,
+                                 color = unname(macro_pal["vert"]), fontface = "italic",
+                                 lineheight = 0.85)
+
+  p +
+    scale_color_manual(values = cols_trappe, name = NULL, limits = levels(df_trappe$regime)) +
+    scale_x_continuous(limits = c(0, 100), labels = function(v) paste0(v, " %")) +
+    scale_y_continuous(limits = c(95, 190)) +
+    labs(x = "Revenu d'activité (% du SMIC net travaillé)",
+         y = "Revenu disponible\n(indice, 100 = allocation seule)") +
+    theme_macro() +
+    theme(legend.position = "bottom")
+}
+
+plot_trappe(1)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-trappe-cm10-2
+#| fig-width: 7
+#| fig-height: 4.6
+plot_trappe(2)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| label: fig-trappe-cm10-3
+#| fig-width: 7
+#| fig-height: 4.6
+plot_trappe(3)
+```
+:::
+
+:::
+
+::: {.source}
+Figure stylisée à but pédagogique (aucune donnée réelle en euros) : seule la pente RSA (0,62, soit 62 centimes conservés par euro gagné) reprend un paramètre officiel, cité dans le texte de ce CM d'après DARES (2016), *Prestations sociales et trappe à inactivité*. Les profils RMI et prime d'activité illustrent schématiquement l'absence de cumul, puis la bonification ciblée sur les bas salaires.
+:::
+
+## Trois réformes, une même trajectoire de réduction de la trappe
+
+```{mermaid}
+%%| fig-cap: "Trois reformes successives elargissent le cumul entre allocation et salaire, reduisant le taux marginal de prelevement implicite qui alimentait la trappe a inactivite, sans jamais supprimer le filet de securite."
+flowchart LR
+    A[RMI 1988 - Cumul quasi nul] --> B[RSA 2009 - Cumul 62 centimes par euro gagne]
+    B --> C[Prime d activite 2016 - Taux de recours ameliore]
+```
+
+::: {.source}
+Synthèse de la section précédente (RMI, RSA, prime d'activité).
+:::
+
+## Actualisation : la réforme des retraites de 2023
+
+::: {.def}
+**Relèvement de l'âge légal de départ à la retraite** de 62 à 64 ans (loi du 14 avril 2023).
+:::
+
+. . .
+
+::: {.cle}
+Une logique d'**activation par la marge extensive** : retarder la sortie du marché du travail des seniors plutôt qu'inciter au retour à l'emploi des chômeurs. Elle s'oppose, dans son principe, aux politiques **passives** des années 1980-1990, qui avaient au contraire abaissé l'âge de la retraite pour partager le travail entre générations.
+:::
+
+. . .
+
+Le débat renvoie au **taux d'emploi des seniors**, structurellement bas en France par rapport à ses voisins, et à l'équilibre financier du système de retraite par répartition (hors périmètre de ce cours, mais lié à la contrainte budgétaire du chapitre I).
+
+## Le taux d'emploi des seniors reste bas en France par rapport à ses voisins
+
+```{r}
+#| label: fig-emploi-seniors-cm10
+#| fig-cap: "Taux d'emploi des 55-64 ans (%), 2000-2023. La France reste durablement sous l'Allemagne, la Suède et la moyenne de l'Union européenne : c'est cet écart d'une quinzaine à une vingtaine de points que le relèvement de l'âge légal cherche à réduire par la marge extensive. Source : Eurostat, enquête sur les forces de travail, table lfsa_ergan (taux d'emploi par groupe d'âge)."
+#| fig-width: 7.5
+#| fig-height: 4.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(ggrepel)
+
+# Taux d'emploi des 55-64 ans (%), France / Allemagne / Suède / UE27, 2000-2023.
+# Source : Eurostat, enquête sur les forces de travail (EFT-LFS), table
+# lfsa_ergan, taux d'emploi par groupe d'âge, % de la population 55-64 ans en emploi.
+annees_sen <- c(2000, 2005, 2010, 2015, 2019, 2023)
+
+seniors <- data.frame(
+  annee = rep(annees_sen, 4),
+  taux  = c(29.9, 37.0, 39.7, 47.0, 52.1, 57.5,      # France
+            37.4, 45.4, 57.7, 66.2, 72.9, 73.3,      # Allemagne
+            64.9, 69.4, 70.5, 74.5, 77.0, 77.2,      # Suède
+            36.6, 42.5, 46.3, 53.3, 59.1, 62.4),     # UE27 (moyenne)
+  pays  = rep(c("France", "Allemagne", "Suède", "UE27 (moyenne)"), each = length(annees_sen))
+)
+seniors$pays <- factor(seniors$pays, levels = c("Suède", "Allemagne", "UE27 (moyenne)", "France"))
+
+lab_seniors <- seniors[seniors$annee == max(annees_sen), ]
+
+ggplot(seniors, aes(x = annee, y = taux, color = pays)) +
+  geom_line(linewidth = 1.05) +
+  geom_point(size = 1.8) +
+  geom_text_repel(data = lab_seniors, aes(label = pays), hjust = 0, nudge_x = 1.2,
+                   direction = "y", segment.size = 0.3, size = 3.3, fontface = "bold",
+                   show.legend = FALSE) +
+  scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
+                                 "Allemagne" = unname(macro_pal["gris"]),
+                                 "Suède" = unname(macro_pal["vert"]),
+                                 "UE27 (moyenne)" = unname(macro_pal["bleu2"])),
+                      guide = "none") +
+  scale_x_continuous(breaks = annees_sen, limits = c(2000, 2029)) +
+  scale_y_continuous(labels = function(x) paste0(x, " %"), limits = c(25, 80)) +
+  labs(x = "Année", y = "Taux d'emploi des 55-64 ans (%)") +
+  theme_macro()
+```
+
+# 6. Bilan : un chômage qui résiste aux réformes
+
+## Le taux de chômage français reste structurellement élevé
+
+```{r}
+#| label: fig-chomage-fr-cm10
+#| fig-cap: "Taux de chômage en France, 1975-2024 (définition BIT/OIT, moyenne annuelle, % de la population active). Quatre décennies de réformes sur les trois axes n'empêchent pas un niveau durablement plus élevé que dans les pays de comparaison anglo-saxons ou nordiques. Source : Banque mondiale, *World Development Indicators* (indicateur SL.UEM.TOTL.NE.ZS, estimation nationale, définition BIT), données Insee ; cohérent avec Insee (2017), *Emploi, chômage, revenus du travail*, éd. 2017 (7,4 % en 2008 ; 10,4 % en 2015 ; 10,1 % en 2016)."
+#| fig-width: 7.5
+#| fig-height: 4.5
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+chomage_fr <- data.frame(
+  annee = 1975:2024,
+  taux  = c(4.1, 4.5, 5.0, 5.3, 6.0, 6.4, 7.5, 8.2, 7.9, 9.5,
+            10.3, 10.2, 10.7, 10.2, 9.6, 9.4, 9.1, 10.2, 11.3, 12.6,
+            11.8, 12.4, 12.6, 12.1, 12.0, 10.2, 8.6, 8.7, 8.3, 8.9,
+            8.9, 8.8, 8.0, 7.4, 9.1, 9.3, 9.2, 9.8, 9.9, 10.3,
+            10.4, 10.1, 9.4, 9.0, 8.4, 8.0, 7.9, 7.3, 7.3, 7.4)
+)
+
+ggplot(chomage_fr, aes(x = annee, y = taux)) +
+  geom_line(color = macro_pal["bleu"], linewidth = 1) +
+  geom_point(color = macro_pal["bleu"], size = 1.4) +
+  annotate("rect", xmin = 2008, xmax = 2009.5, ymin = -Inf, ymax = Inf,
+           fill = macro_pal["rouge"], alpha = 0.08) +
+  annotate("text", x = 2008.7, y = 12.2, label = "Crise\n2008-09",
+           size = 3, color = macro_pal["rouge"], fontface = "italic") +
+  scale_x_continuous(breaks = seq(1975, 2024, 5)) +
+  scale_y_continuous(limits = c(0, 13.5), labels = function(x) paste0(x, " %")) +
+  labs(x = "Année", y = "Taux de chômage (BIT, %)") +
+  theme_macro()
+```
+
+## Vu en perspective : le Danemark reste sous la France, les États-Unis plus bas encore {.smaller}
+
+```{r}
+#| label: fig-chomage-fr-dk-us-cm10
+#| fig-cap: "Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024 : France, Danemark (flexisécurité), États-Unis (flexibilité). Même série que fig-chomage-dk-fr-us-cm09 (CM précédent), reproduite ici pour appuyer la conclusion du bilan. Le Danemark reste durablement sous la France ; ce chiffre est la mesure harmonisée, à distinguer du chômage « net » enregistré danois (2,5-3 %, Danmarks Statistik), non comparable. Les États-Unis illustrent le modèle de flexibilité pure : niveau bas hors récession, mais volatilité plus marquée (pic net en 2009-10 et 2020) et sans le filet de l'activation danoise. Sources : OCDE/BIT, taux de chômage harmonisé annuel (séries LRHUTTTTFRA156S, LRHUTTTTDKA156S, LRHUTTTTUSA156S), via FRED, Federal Reserve Bank of St. Louis, d'après OCDE."
+#| fig-width: 7.5
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+annees_cmp <- 2000:2024
+
+# Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024.
+# Meme source/serie que fig-chomage-dk-fr-us-cm09 (slides/cm09.qmd), reprise
+# ici a l'identique pour assurer la coherence des chiffres entre les deux
+# seances (INV-11).
+# Source : OCDE/BIT, series LRHUTTTTFRA156S / LRHUTTTTDKA156S / LRHUTTTTUSA156S,
+# via FRED (Federal Reserve Bank of St. Louis), d'apres OCDE.
+france_cmp   <- c(9.6, 8.7, 8.6, 8.5, 8.9, 8.9, 8.9, 8.0, 7.4, 9.1,
+                   9.3, 9.2, 9.8, 10.3, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
+                   8.0, 7.9, 7.3, 7.4, 7.5)
+danemark_cmp <- c(4.3, 4.5, 4.6, 5.4, 5.5, 4.8, 3.9, 3.8, 3.7, 6.4,
+                   7.8, 7.8, 7.8, 7.4, 6.9, 6.3, 6.0, 5.8, 5.2, 5.0,
+                   5.6, 5.1, 4.5, 5.1, 6.2)
+usa_cmp      <- c(4.0, 4.7, 5.8, 6.0, 5.5, 5.1, 4.6, 4.6, 5.8, 9.3,
+                   9.6, 9.0, 8.1, 7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7,
+                   8.1, 5.4, 3.7, 3.6, 4.0)
+
+df_cmp <- data.frame(
+  annee = rep(annees_cmp, 3),
+  taux  = c(france_cmp, danemark_cmp, usa_cmp),
+  pays  = rep(c("France", "Danemark", "États-Unis"), each = length(annees_cmp))
+)
+df_cmp$pays <- factor(df_cmp$pays, levels = c("France", "Danemark", "États-Unis"))
+
+ggplot(df_cmp, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
+  geom_line() +
+  scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
+                                 "Danemark" = unname(macro_pal["vert"]),
+                                 "États-Unis" = unname(macro_pal["gris"])),
+                      name = NULL) +
+  scale_linewidth_manual(values = c("France" = 1.1, "Danemark" = 1.1, "États-Unis" = 0.7),
+                          guide = "none") +
+  scale_x_continuous(breaks = seq(2000, 2024, 4)) +
+  scale_y_continuous(labels = function(x) paste0(x, " %")) +
+  labs(x = "Année", y = "Taux de chômage harmonisé (%)") +
+  theme_macro()
+```
+
+## Les évaluations disponibles nuancent l'efficacité de chaque axe
+
+::: {.cle}
+Les évaluations convergentes (DARES, France Stratégie, comité de suivi du CICE) livrent un diagnostic nuancé, axe par axe :
+
+::: {.incremental}
+- **Coût du travail** : effets positifs mais **modestes** sur l'emploi non qualifié.
+- **Flexibilisation** : a surtout développé les **contrats courts**, sans réduire durablement le chômage structurel.
+- **Activation** : a amélioré le taux de **recours** aux prestations, sans éliminer toutes les trappes à inactivité.
+:::
+:::
+
+## La flexibilisation a surtout démultiplié les contrats courts {.smaller}
+
+```{r}
+#| label: fig-cdd-stock-flux-cm10
+#| fig-cap: "Deux mesures de la part des contrats courts en France, 1982-2023. Stock : part des CDD et de l'intérim dans l'emploi salarié total (Insee, enquêtes Emploi), en plateau autour de 11-13 % depuis le milieu des années 1990. Flux : part des CDD dans les déclarations d'embauche hors intérim (DARES, mouvements de main-d'œuvre), qui progresse quasi continûment jusqu'à environ 9 embauches sur 10 en fin de période. Lecture : la flexibilisation a surtout intensifié le renouvellement des contrats courts (marge du flux), sans faire progresser à due proportion la part de l'emploi durablement précaire (marge du stock), ce qui nuance le diagnostic « moins de chômage structurel » attendu de cet axe. Sources : Insee, enquêtes Emploi, séries longues sur l'emploi temporaire ; DARES, déclarations préalables à l'embauche (DMMO-EMMO)."
+#| fig-width: 8
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Deux mesures de la part des contrats courts en France, 1982-2023.
+# (a) Stock : part des emplois temporaires (CDD + interim) dans l'emploi
+#     salarie total. Source : Insee, enquetes Emploi, series longues.
+# (b) Flux : part des CDD (hors interim) dans les declarations d'embauche
+#     hors interim (DMMO-EMMO). Source : DARES.
+annees_cdd <- c(1982, 1990, 2000, 2010, 2019, 2023)
+
+df_cdd <- data.frame(
+  annee  = rep(annees_cdd, 2),
+  valeur = c(5.0, 8.6, 12.1, 11.3, 13.3, 13.0,          # stock, % emploi salarié
+             73.7, 76.0, 76.4, 82.5, 87.3, 88.0),       # flux, % des embauches hors intérim
+  mesure = rep(c("Stock : CDD + intérim\ndans l'emploi salarié (Insee)",
+                 "Flux : CDD dans les embauches\nhors intérim (DARES)"),
+               each = length(annees_cdd))
+)
+df_cdd$mesure <- factor(df_cdd$mesure, levels = unique(df_cdd$mesure))
+
+ggplot(df_cdd, aes(x = annee, y = valeur, color = mesure)) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 1.8) +
+  facet_wrap(~ mesure, scales = "free_y", ncol = 2) +
+  scale_color_manual(values = c(unname(macro_pal["bleu"]), unname(macro_pal["or"])), guide = "none") +
+  scale_x_continuous(breaks = annees_cdd) +
+  scale_y_continuous(labels = function(x) paste0(x, " %")) +
+  labs(x = "Année", y = "%") +
+  theme_macro() +
+  theme(strip.text = element_text(face = "bold", color = "#1f4e79", size = rel(0.85)))
+```
+
+## Pourquoi les résultats déçoivent-ils par rapport au triangle d'or ?
+
+::: {.callout-important}
+## À retenir
+Aucun des trois axes, pris **isolément**, n'a résorbé durablement le chômage structurel français. Le triangle d'or danois suggère que c'est la **combinaison cohérente** des trois leviers, pas leur usage séquentiel et partiel selon les alternances politiques, qui explique les résultats obtenus par les pays de flexisécurité.
+:::
+
+::: {.source}
+Sources : DARES (2016) ; France Stratégie ; comité de suivi du CICE ; synthèse du cours (Chapitre III, §II).
+:::
+
+# 7. Synthèse générale du cours
+
+## Trois chapitres, une même question : comment agir sur l'économie ?
+
+::: {.cle}
+::: {.incremental}
+- **Chapitre I** : cadre général de la politique économique : objectifs/instruments, règle de Tinbergen, fonctions de Musgrave (stabilisation, allocation, **redistribution**), modèle OA-DA pour la stabilisation conjoncturelle.
+- **Chapitre II** : diagnostic du chômage : quatre cadres théoriques complémentaires expliquant *pourquoi* le chômage existe et persiste.
+- **Chapitre III** : réponse de politique économique : *comment* agir sur le marché du travail, avec le cas français comme illustration appliquée.
+:::
+:::
+
+. . .
+
+Le fil conducteur : un bon diagnostic théorique (chapitre II) est la condition d'une politique de l'emploi pertinente (chapitre III) ; toute politique s'inscrit par ailleurs dans les arbitrages généraux de politique économique (chapitre I).
+
+## La progression du cours en un coup d'œil
+
+```{mermaid}
+%%| fig-cap: "Le cours suit une progression logique : le cadre general de la politique economique borne le diagnostic du chomage, qui conditionne a son tour le choix des politiques de l emploi etudiees sur le cas francais."
+flowchart LR
+    A[Chapitre I - Cadre general Musgrave OA-DA] --> B[Chapitre II - Diagnostic du chomage]
+    B --> C[Chapitre III - Politiques de l emploi]
+    C --> D[Cas francais - trois axes de reforme]
+```
+
+. . .
+
+::: {.cle}
+Aucun chapitre ne se comprend isolément : un contresens sur le diagnostic (chapitre II) entraîne un contresens sur la politique recommandée (chapitre III), et toute politique reste contrainte par les arbitrages du chapitre I.
+:::
+
+## Quatre regards complémentaires sur le chômage (rappel Chapitre II)
+
+| Cadre théorique | Mécanisme central | Type de chômage expliqué | Horizon |
+|---|---|---|---|
+| **Néoclassique** | Salaire réel trop élevé par rapport à l'équilibre de marché | Volontaire / classique | Long terme |
+| **Keynésien** | Insuffisance de la demande effective | Involontaire / conjoncturel | Court terme |
+| **WS-PS** | Pouvoir de négociation salariale + pouvoir de marché des entreprises | Involontaire / structurel (chômage d'équilibre) | Long terme |
+| **Appariement (DMP)** | Frictions et inadéquation dans la rencontre offre-demande | Frictionnel / d'inadéquation | Court et long terme |
+
+. . .
+
+::: {.cle}
+Chaque axe de réforme du chapitre III **cible implicitement** un ou plusieurs de ces cadres : coût du travail $\rightarrow$ néoclassique ; flexibilisation $\rightarrow$ WS-PS et appariement ; activation $\rightarrow$ appariement et trappe à inactivité.
+:::
+
+## Ouverture : population active, marché du travail et retraites {.smaller}
+
+::: {.def}
+La réforme des retraites de 2023 (âge légal 62 $\rightarrow$ 64 ans, durée de cotisation portée à 43 ans) vise la **soutenabilité** du système par répartition en **augmentant la population active**. Mais le taux d'emploi des **55-64 ans** reste bas en France (environ 58 % en 2023, contre ~63 % dans l'UE, ~74 % en Allemagne, ~77 % en Suède).
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.cle}
+**Risque de court terme (demande)**
+
+Si l'emploi ne suit pas, l'allongement de la vie active nourrit le **chômage et l'inactivité des seniors**. Comme $u$ rapporte les chômeurs à la population active, une population active qui monte sans emplois nouveaux fait **mécaniquement monter le chômage**.
+:::
+:::
+::: {.column width="50%"}
+::: {.cle}
+**Vision de long terme (offre)**
+
+Pas de « quantité fixe d'emplois » (sophisme du *lump of labour*) : entre pays, l'emploi des seniors et celui des jeunes sont **corrélés positivement** (pas d'éviction). Une population active plus nombreuse relève le **potentiel de croissance**.
+:::
+:::
+:::
+
+. . .
+
+::: {.callout-important}
+## Débat (à discuter en TD)
+Reculer l'âge de départ relève-t-il d'abord de la **soutenabilité des retraites** (long terme, offre) ou de la **capacité du marché du travail à employer les seniors** (court terme, demande et institutions) ? Il y faut des politiques d'accompagnement (formation, lutte contre les discriminations) ; l'« index seniors » de 2023 a d'ailleurs été censuré par le Conseil constitutionnel.
+:::
+
+::: {.source}
+Sources : Conseil d'orientation des retraites (COR) ; Insee, enquête Emploi ; DARES, emploi des seniors ; OCDE, *Working Better with Age* ; Conseil d'analyse économique.
+:::
+
+## Ouverture : le décrochage de l'emploi des seniors après 60 ans {.smaller}
+
+```{r}
+#| label: fig-emploi-seniors-age
+#| fig-cap: "Taux d'emploi par tranche d'âge, 2023. En France, l'emploi s'effondre après 60 ans (~38 %), loin derrière l'Allemagne (~62 %) et la Suède (~70 %) : c'est justement la tranche que la réforme des retraites de 2023 vise à maintenir en activité. Source : Eurostat (lfsa_ergan), 2023."
+#| fig-width: 8
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux d'emploi par tranche d'age fine, 2023 (%), Eurostat lfsa_ergan.
+# Valeurs figees en dur (ordres de grandeur bien etablis), aucun appel reseau.
+df_age <- data.frame(
+  tranche = rep(c("50-54 ans", "55-59 ans", "60-64 ans"), 4),
+  pays    = rep(c("France", "UE27", "Allemagne", "Suède"), each = 3),
+  taux    = c(82, 78, 38,   80, 72, 47,   85, 82, 62,   89, 86, 70)
+)
+df_age$tranche <- factor(df_age$tranche, levels = c("50-54 ans", "55-59 ans", "60-64 ans"))
+df_age$pays    <- factor(df_age$pays,    levels = c("France", "UE27", "Allemagne", "Suède"))
+
+ggplot(df_age, aes(x = tranche, y = taux, fill = pays)) +
+  geom_col(position = position_dodge(width = .8), width = .72) +
+  geom_text(aes(label = paste0(taux, " %")), position = position_dodge(width = .8),
+            vjust = -0.4, size = 3) +
+  scale_fill_manual(values = unname(macro_pal[c("bleu", "gris", "or", "vert")]), name = NULL) +
+  scale_y_continuous(limits = c(0, 100), labels = function(x) paste0(x, " %")) +
+  labs(x = NULL, y = "Taux d'emploi") +
+  theme_macro()
+```
+
+::: {.cle}
+Reculer l'âge de départ concentre l'effort là où l'emploi des seniors est le plus faible : sans politiques d'accompagnement, le risque est de convertir de l'inactivité en **chômage**, non en emploi.
+:::
+
+## Une notation à maîtriser pour l'examen
+
+::: {.def}
+Retenir la notation commune du cours : PIB réel $Y$, prix $P$, salaire nominal $W$, salaire réel $w = W/P$, emploi $L$, taux de chômage $u$. Loi d'Okun $\Delta u = -\beta(g - \bar g)$ ; courbe de Phillips $\pi = \pi^a - a(u - u^n)$ ; WS : $w = F(u,z)$ décroissante ; PS : $w = 1/(1+m)$ ; tension $\theta = v/u$.
+
+Distinguer systématiquement **conjoncturel** vs **structurel**, et **volontaire** vs **involontaire**.
+:::
+
+# 8. Se préparer à l'examen
+
+## L'examen final : 2 heures, QCM + réflexion
+
+::: {.cle}
+L'examen final (50 % de la note, avec les TD notés CC1 et CC2 pour les 50 % restants) comporte deux parties : un **QCM** de connaissances et de définitions, et une question de **réflexion** demandant d'articuler plusieurs notions du cours.
+:::
+
+## Réviser efficacement le QCM
+
+::: {.def}
+::: {.incremental}
+- Refaire, chapitre par chapitre, la liste des **définitions en gras** de chaque résumé (`cours/chap1.qmd`, `chap2.qmd`, `chap3.qmd`) : chaque terme technique doit pouvoir être défini en une phrase.
+- Vérifier que vous savez **distinguer** les paires classiques : conjoncturel/structurel, volontaire/involontaire, actif/passif, flexibilité/sécurité, RSA-socle/RSA-activité.
+- Savoir associer **une réforme $\rightarrow$ un axe $\rightarrow$ un cadre théorique** (tableau de cette séance).
+:::
+:::
+
+## Réussir la question de réflexion
+
+::: {.cle}
+Une bonne réponse de réflexion :
+
+::: {.incremental}
+1. **Mobilise plusieurs chapitres**, pas seulement le dernier vu en cours.
+2. **Définit chaque terme technique** utilisé, dès sa première occurrence.
+3. **Nuance** : cite les limites empiriques (effets modestes du CICE, débat protection de l'emploi/chômage, non-recours) plutôt que d'affirmer un mécanisme comme automatique.
+4. **Structure** l'argumentation (introduction, développement organisé, conclusion), à l'image des synthèses de fin de chapitre.
+:::
+:::
+
+. . .
+
+::: {.callout-tip}
+## Pour aller plus loin
+Relire les encadrés « Erreur fréquente » de chaque chapitre : ils ciblent précisément les confusions les plus fréquentes en copie.
+:::
+
+## À retenir
+
+::: {.callout-important}
+## Synthèse de la séance
+::: {.incremental}
+- Les réformes françaises du marché du travail se lisent selon **trois axes** : coût du travail, flexibilisation, activation.
+- La trajectoire **RMI → RSA → prime d'activité** illustre la lutte contre la **trappe à inactivité**.
+- Deux réformes récentes prolongent cette logique : **assurance chômage 2023-24** (indemnisation contracyclique) et **retraites 2023** (activation par la marge extensive).
+- Aucun axe pris isolément n'a résorbé le chômage structurel : le **triangle d'or** danois suggère que la combinaison cohérente des leviers importe davantage que leur usage séquentiel.
+- Le cours articule trois niveaux : cadre général (chapitre I), diagnostic théorique (chapitre II), réponse appliquée (chapitre III).
+:::
+:::
+
+## Pour la prochaine fois
+
+::: {.def}
+**Préparation de l'examen final**
+
+::: {.incremental}
+- Relire l'ensemble des trois résumés de chapitre (`cours/chap1.qmd`, `chap2.qmd`, `chap3.qmd`) et leurs encadrés « À retenir ».
+- Refaire les exercices des dossiers de TD, en particulier **TD4 (CC1)** et **TD8 (CC2)**, qui couvrent l'ensemble du programme.
+- Réviser les quatre figures de modèle du cours : OA-DA, offre/demande de travail, WS-PS, courbe de Beveridge : savoir les tracer et les commenter.
+:::
+:::
+
+::: {.source}
+Sources : Chapitre III, §II (`cours/chap3.qmd`) ; DARES (2016), *Faut-il baisser le coût du travail ?* ; *Prestations sociales et trappe à inactivité* ; *Réformes du droit du travail en France* ; *Protection de l'emploi, emploi et chômage* ; Bénassy-Quéré et al. (2017) [@benassy2017].
+:::

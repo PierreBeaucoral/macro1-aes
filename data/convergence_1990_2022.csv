@@ -1,0 +1,19 @@
+code,pays,groupe,pib_hab_1990,croissance_1990_2022
+PRT,Portugal,OCDE : rattrapage interne,17256,1.63
+ESP,Espagne,OCDE : rattrapage interne,19215,1.81
+GBR,Royaume-Uni,OCDE : rattrapage interne,26189,1.2
+JPN,Japon,OCDE : rattrapage interne,29949,0.77
+FRA,France,OCDE : rattrapage interne,28129,1.03
+DEU,Allemagne,OCDE : rattrapage interne,25391,1.92
+ITA,Italie,OCDE : rattrapage interne,26003,1.04
+USA,États-Unis,OCDE : rattrapage interne,36982,1.44
+CHN,Chine,Convergents asiatiques,2982,6.0
+IDN,Indonésie,Convergents asiatiques,4007,3.7
+THA,Thaïlande,Convergents asiatiques,7385,2.53
+MYS,Malaisie,Convergents asiatiques,8179,3.76
+KOR,Corée du Sud,Convergents asiatiques,13874,3.47
+NER,Niger,"Non-convergents (Afrique subsah., Am. latine)",872,0.45
+CAF,Rép. centrafricaine,"Non-convergents (Afrique subsah., Am. latine)",1023,-1.67
+MDG,Madagascar,"Non-convergents (Afrique subsah., Am. latine)",1262,0.25
+COD,RD Congo,"Non-convergents (Afrique subsah., Am. latine)",813,0.12
+MEX,Mexique,"Non-convergents (Afrique subsah., Am. latine)",9699,1.62

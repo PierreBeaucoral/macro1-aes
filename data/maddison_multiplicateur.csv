@@ -1,0 +1,148 @@
+code,pays,multiplicateur
+OMN,Oman,48.33
+KOR,South Korea,41.4
+TWN,Taiwan,36.4
+BWA,Botswana,33.44
+GNQ,Equatorial Guinea,28.49
+CHN,China,24.08
+SGP,Singapore,22.49
+MLT,Malta,21.93
+LBY,Libya,20.57
+MNG,Mongolia,19.86
+SAU,Saudi Arabia,15.05
+SWZ,Eswatini,14.11
+ROU,Romania,13.91
+TUR,Turkey,13.16
+THA,Thailand,12.61
+JPN,Japan,12.5
+HKG,Hong Kong,11.83
+SYC,Seychelles,11.8
+BHR,Bahrain,11.52
+IRL,Ireland,10.95
+CYP,Cyprus,10.93
+DOM,Dominican Republic,10.82
+MYS,Malaysia,10.72
+PRI,Puerto Rico,10.33
+LAO,Laos,10.28
+NOR,Norway,10.21
+IDN,Indonesia,10.0
+ESP,Spain,9.86
+PAN,Panama,9.14
+EGY,Egypt,9.1
+DMA,Dominica,9.06
+PRT,Portugal,8.72
+OWID_YGS,Yugoslavia,8.5
+LCA,Saint Lucia,8.49
+POL,Poland,8.33
+GRC,Greece,8.28
+MMR,Myanmar,8.21
+ISR,Israel,8.16
+ALB,Albania,8.13
+IND,India,7.87
+BGR,Bulgaria,7.82
+RUS,Russia,7.68
+VNM,Vietnam,7.67
+DEU,Germany,7.54
+HUN,Hungary,7.45
+AUT,Austria,7.41
+CPV,Cape Verde,7.16
+IRN,Iran,6.74
+BRA,Brazil,6.55
+ITA,Italy,6.49
+DZA,Algeria,6.21
+TUN,Tunisia,6.14
+IRQ,Iraq,6.01
+FIN,Finland,6.0
+BGD,Bangladesh,5.72
+OWID_CZS,Czechoslovakia,5.49
+CHE,Switzerland,5.49
+MRT,Mauritania,5.42
+PAK,Pakistan,5.4
+LKA,Sri Lanka,5.36
+GAB,Gabon,5.31
+MUS,Mauritius,5.24
+NLD,Netherlands,5.2
+KHM,Cambodia,5.14
+ISL,Iceland,4.96
+OWID_WRL,World,4.96
+CRI,Costa Rica,4.95
+PHL,Philippines,4.91
+BEL,Belgium,4.81
+FRA,France,4.73
+MEX,Mexico,4.63
+DNK,Denmark,4.58
+TZA,Tanzania,4.52
+AUS,Australia,4.41
+TTO,Trinidad and Tobago,4.4
+SWE,Sweden,4.39
+OWID_USS,USSR,4.27
+NGA,Nigeria,4.23
+COL,Colombia,4.22
+LUX,Luxembourg,4.15
+CAN,Canada,3.92
+SLV,El Salvador,3.88
+CHL,Chile,3.87
+USA,United States,3.84
+NPL,Nepal,3.76
+ETH,Ethiopia,3.68
+LSO,Lesotho,3.67
+PRY,Paraguay,3.66
+AGO,Angola,3.65
+MAR,Morocco,3.62
+COM,Comoros,3.56
+JAM,Jamaica,3.54
+GNB,Guinea-Bissau,3.52
+GIN,Guinea,3.48
+PER,Peru,3.47
+GBR,United Kingdom,3.47
+JOR,Jordan,3.45
+BRB,Barbados,3.41
+ECU,Ecuador,3.41
+KEN,Kenya,3.28
+ZMB,Zambia,3.17
+PSE,Palestine,3.08
+QAT,Qatar,3.08
+ARE,United Arab Emirates,3.07
+STP,Sao Tome and Principe,2.94
+CUB,Cuba,2.9
+URY,Uruguay,2.88
+NZL,New Zealand,2.84
+ZAF,South Africa,2.83
+LBN,Lebanon,2.67
+CMR,Cameroon,2.63
+HND,Honduras,2.57
+COG,Congo,2.47
+CIV,Cote d'Ivoire,2.42
+GTM,Guatemala,2.4
+GHA,Ghana,2.37
+MWI,Malawi,2.31
+ARG,Argentina,2.3
+MLI,Mali,2.27
+BFA,Burkina Faso,2.26
+BOL,Bolivia,2.15
+RWA,Rwanda,2.15
+GMB,Gambia,2.05
+NAM,Namibia,1.99
+NIC,Nicaragua,1.99
+UGA,Uganda,1.94
+SLE,Sierra Leone,1.87
+OWID_SDN,Sudan (former),1.84
+TGO,Togo,1.82
+TCD,Chad,1.71
+KWT,Kuwait,1.55
+ZWE,Zimbabwe,1.53
+BEN,Benin,1.52
+YEM,Yemen,1.35
+SEN,Senegal,1.33
+BDI,Burundi,1.21
+AFG,Afghanistan,1.17
+DJI,Djibouti,1.05
+NER,Niger,1.03
+COD,Democratic Republic of Congo,0.93
+MDG,Madagascar,0.9
+HTI,Haiti,0.86
+SYR,Syria,0.65
+VEN,Venezuela,0.62
+MOZ,Mozambique,0.6
+CAF,Central African Republic,0.46
+LBR,Liberia,0.26
