@@ -10,43 +10,45 @@ La méthode retenue est **transdisciplinaire** : la théorie économique y est s
 
 Le cours est organisé en **trois chapitres**, construits pour s'enchaîner logiquement : le Chapitre I pose les fondements de la politique économique (mesure de la richesse, horizons temporels, fonctions de l'État) ; le Chapitre II étudie le marché du travail, d'abord de façon descriptive (indicateurs, typologies de chômage) puis théorique (analyses néoclassique, keynésienne, WS-PS et appariement) ; le Chapitre III applique ces cadres au cas français, à travers l'histoire des réformes de l'emploi et les grands arbitrages de politique économique (coût du travail, flexibilisation, activation). Chaque chapitre est décliné en résumé de cours écrit, en slides de CM et en dossiers de TD.
 
+```{=html}
 <div class="grid-cards">
-<a class="card-tile" href="cours/chap1.qmd">
+<a class="card-tile" href="cours/chap1.html">
 <span class="tag">Chapitre I</span>
 <h3>Introduction à la politique économique</h3>
 <p>PIB et croissance, horizons CT/MT/LT, typologie des politiques économiques et fonctions de Musgrave (stabilisation, allocation, redistribution).</p>
 </a>
-<a class="card-tile" href="cours/chap2.qmd">
+<a class="card-tile" href="cours/chap2.html">
 <span class="tag">Chapitre II</span>
-<h3>Marché du travail & politique de l'emploi</h3>
+<h3>Marché du travail &amp; politique de l'emploi</h3>
 <p>Indicateurs et typologies du chômage, puis quatre cadres théoriques : néoclassique, keynésien, WS-PS et appariement.</p>
 </a>
-<a class="card-tile" href="cours/chap3.qmd">
+<a class="card-tile" href="cours/chap3.html">
 <span class="tag">Chapitre III</span>
 <h3>Politiques de l'emploi : le cas français</h3>
 <p>Flexisécurité, coût du travail, flexibilisation et activation : la chronologie des réformes françaises depuis 1972.</p>
 </a>
-<a class="card-tile" href="slides/cm01.qmd">
+<a class="card-tile" href="slides/cm01.html">
 <span class="tag">Slides</span>
 <h3>Commencer par le CM 1</h3>
 <p>Rappels sur le PIB, cinq faits marquants de la croissance et horizons temporels de la macroéconomie.</p>
 </a>
-<a class="card-tile" href="td/td1.qmd">
+<a class="card-tile" href="td/td1.html">
 <span class="tag">TD</span>
 <h3>Commencer par le TD 1</h3>
 <p>Fondements de la politique économique : objectifs, instruments, règle de Tinbergen et carré magique de Kaldor.</p>
 </a>
-<a class="card-tile" href="syllabus.qmd">
+<a class="card-tile" href="syllabus.html">
 <span class="tag">Syllabus</span>
 <h3>Objectifs, méthode et évaluation</h3>
 <p>Planning des séances, modalités d'évaluation (CC1, CC2, examen final) et charte d'usage de l'IA.</p>
 </a>
-<a class="card-tile" href="ressources.qmd">
+<a class="card-tile" href="ressources.html">
 <span class="tag">Ressources</span>
 <h3>Pour aller plus loin</h3>
 <p>Manuels de référence, articles, chaînes vidéo et sources de données (INSEE, Banque de France, Eurostat, OCDE...).</p>
 </a>
 </div>
+```
 
 ## Contact & permanence
 
