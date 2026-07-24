@@ -1,16 +1,20 @@
 # --- Caches et intermédiaires Quarto/R ---
 /.quarto/
 /_sources/
-_freeze/
 .Rproj.user
 .Rhistory
 *_cache/
 .DS_Store
 **/*.quarto_ipynb
 
-# --- Artefacts de rendu EN PLACE (le site final est dans docs/) ---
-# On ne versionne que les sources .qmd et le dossier docs/ publié.
-# Les motifs couvrent aussi les variantes macOS « _files (1) », « _files (2) ».
+# _freeze/ EST versionné (résultats R figés) : il permet au CI de ne pas
+# ré-exécuter les chunks inchangés. NE PAS l'ignorer.
+
+# --- Sortie rendue : construite et déployée par GitHub Actions ---
+# On ne versionne PAS docs/ ; le CI le régénère et le déploie (Pages = Actions).
+/docs/
+
+# --- Artefacts de rendu EN PLACE ---
 /cours/*.html
 /slides/*.html
 /td/*.html
@@ -21,7 +25,6 @@ carte*.png
 cours/*_files*
 slides/*_files*
 td/*_files*
-!docs/**
 
 # --- Corrigés (clés de réponses) : exclus pour ne PAS exposer les réponses
 # sur un dépôt public. Ils restent en local. Pour les versionner (dépôt privé

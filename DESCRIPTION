@@ -1,0 +1,17 @@
+Package: macro1aes
+Title: Site de cours Macroeconomie 1 (L2 AES)
+Version: 1.0.0
+Description: Dependances R utilisees par les figures du site (deps pour le CI).
+Encoding: UTF-8
+Imports:
+    knitr,
+    rmarkdown,
+    ggplot2,
+    ggrepel,
+    patchwork,
+    scales,
+    tibble,
+    here,
+    sf,
+    rnaturalearth,
+    rnaturalearthdata
