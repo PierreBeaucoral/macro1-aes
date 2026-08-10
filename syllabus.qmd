@@ -20,7 +20,7 @@ Ce cours de Macroéconomie 1 s'adresse aux étudiants de deuxième année de lic
 ## Qui enseigne ce cours ?
 Ce cours est assuré par **Pierre Beaucoral**, ATER (Attaché Temporaire d'Enseignement et de Recherche) à l'Université Clermont Auvergne, pour la L2 AES (Semestre 1).
 
-Une permanence pédagogique (*office hours*) est proposée chaque semaine ; les créneaux et les modalités de prise de rendez-vous sont indiqués sur la page [Accueil](index.qmd) du site. Pour toute question, le contact par mail figure sur l'espace numérique de travail (ENT) du cours.
+Une permanence pédagogique (*office hours*) est proposée **uniquement sur rendez-vous** ; les modalités de prise de rendez-vous sont indiquées sur la page [Accueil](index.qmd) du site. Pour toute question, le contact par mail figure sur l'espace numérique de travail (ENT) du cours.
 :::
 
 ## Objectifs
@@ -33,7 +33,7 @@ Une permanence pédagogique (*office hours*) est proposée chaque semaine ; les 
 
 ## Méthode
 
-Le cours adopte une **perspective transdisciplinaire**, reliant la théorie économique aux enjeux de société contemporains, et laisse une large place au débat pendant les séances.
+Le cours privilégie l'**ancrage empirique** : chaque cadre théorique est confronté à des données réelles et aux débats publics contemporains (chômage, précarité, réformes du marché du travail), et une large place est laissée à la discussion pendant les séances.
 
 ::: {.callout-tip}
 ## Pour aller plus loin

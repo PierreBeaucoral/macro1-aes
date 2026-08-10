@@ -6,7 +6,7 @@ description: "Page d'accueil du cours : présentation, méthode et accès direct
 
 Ce cours de **Macroéconomie 1 : Les Politiques Économiques** s'adresse aux étudiants de deuxième année de licence Administration Économique et Sociale (L2 AES). Il vise trois objectifs : introduire les grands concepts de la politique économique, analyser en détail le fonctionnement du marché du travail, puis appliquer ces outils à l'étude des politiques de l'emploi menées en France depuis les années 1970. Il s'agit moins d'accumuler des définitions que de comprendre pourquoi les pouvoirs publics interviennent dans l'économie, selon quelles logiques théoriques concurrentes, et avec quels résultats empiriques.
 
-La méthode retenue est **transdisciplinaire** : la théorie économique y est systématiquement reliée aux enjeux de société contemporains (chômage, précarité, réformes du marché du travail), à l'aide de données réelles, d'articles et de vidéos qui complètent les résumés de cours. Une large place est laissée au débat pendant les séances, et le travail personnel (relecture des résumés, préparation des dossiers de TD, approfondissement via les ressources complémentaires) est indispensable à la progression.
+La méthode retenue privilégie l'**ancrage empirique** : chaque cadre théorique est confronté à des données réelles et aux débats publics contemporains (chômage, précarité, réformes du marché du travail), à l'aide d'articles et de vidéos qui complètent les résumés de cours. Une large place est laissée à la discussion pendant les séances, et le travail personnel (relecture des résumés, préparation des dossiers de TD, approfondissement via les ressources complémentaires) est indispensable à la progression.
 
 Le cours est organisé en **trois chapitres**, construits pour s'enchaîner logiquement : le Chapitre I pose les fondements de la politique économique (mesure de la richesse, horizons temporels, fonctions de l'État) ; le Chapitre II étudie le marché du travail, d'abord de façon descriptive (indicateurs, typologies de chômage) puis théorique (analyses néoclassique, keynésienne, WS-PS et appariement) ; le Chapitre III applique ces cadres au cas français, à travers l'histoire des réformes de l'emploi et les grands arbitrages de politique économique (coût du travail, flexibilisation, activation). Chaque chapitre est décliné en résumé de cours écrit, en slides de CM et en dossiers de TD.
 
@@ -55,10 +55,7 @@ Le cours est organisé en **trois chapitres**, construits pour s'enchaîner logi
 ::: {.callout-note}
 ## Une question, besoin d'un rendez-vous ?
 
-Le cours est assuré par **Pierre Beaucoral** (ATER), à partir des enseignements hérités de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026). Une permanence pédagogique (*office hours*) est proposée chaque semaine :
-
-- **Vendredi 12h-14h**, bureau 437, CERDI.
-- **Sur rendez-vous** en dehors de ce créneau : écrivez un mail au moins un jour à l'avance.
+Le cours est assuré par **Pierre Beaucoral** (ATER), à partir des enseignements hérités de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026). Une permanence pédagogique (*office hours*) est proposée **uniquement sur rendez-vous**, bureau 437 au CERDI : écrivez un mail au moins un jour à l'avance en proposant quelques créneaux.
 
 Les coordonnées de contact et les modalités précises figurent sur l'espace numérique de travail (ENT) du cours, ainsi que dans le [syllabus](syllabus.qmd).
 :::
