@@ -20,11 +20,13 @@ Chapitre II, Partie 2, §II.1-4 : d'après les cours de M. Ouedraogo (2025-2026)
 
 À l'issue de cette séance, vous saurez :
 
+::: {.incremental}
 - Expliquer pourquoi Keynes rejette la lecture néoclassique du marché du travail (offre, demande, ajustement)
 - Définir la **demande effective** et son rôle dans les décisions d'embauche
 - Distinguer chômage **volontaire** (néoclassique) et chômage **involontaire** (keynésien)
 - Justifier pourquoi baisser les salaires n'est pas une solution au chômage chez Keynes
 - Énoncer et lire graphiquement la **loi d'Okun**
+:::
 
 ## Rappel du CM précédent
 

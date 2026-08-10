@@ -34,6 +34,8 @@ D'après M. Ouedraogo (CERDI, Université Clermont Auvergne), *Chapitre II (Part
 
 Le chapitre II (Partie 2) présente **quatre grands cadres théoriques**, dans l'ordre chronologique de leur développement :
 
+. . .
+
 ::: {.cle .incremental}
 1. **Néoclassique** (aujourd'hui) : marché du travail en concurrence pure et parfaite.
 2. Keynésien : demande effective, chômage involontaire.
@@ -301,6 +303,9 @@ Dans ce cadre, **les salaires sont parfaitement flexibles** et constituent la va
 :::
 :::
 ::: {.column width="45%"}
+
+. . .
+
 ::: {.def}
 **Logique générale**
 

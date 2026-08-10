@@ -6,10 +6,10 @@ subtitle: "Chapitre I, §4-5 : fondements, typologie, Tinbergen, Kaldor et le mo
 ## Plan {.smaller}
 
 1. Qu'est-ce que la politique économique ? (définition, fondements)
-2. Deux théories, deux ordonnances : néoclassiques et keynésiens
-3. Typologie, objectifs et instruments (Tinbergen, carré de Kaldor)
-4. Les trois fonctions de Musgrave
-5. **Pièce maîtresse**, la stabilisation et le modèle OA-DA : les quatre chocs
+2. Approches néoclassique et keynésienne
+3. Objectifs et instruments
+4. Trois fonctions de la politique économique
+5. Objectif de stabilisation et modèle OA-DA
 6. Allocation, redistribution, synthèse
 
 ## Objectifs {.smaller}
@@ -243,12 +243,12 @@ Allocation et stabilisation agissent toutes deux sur le **niveau** de l'activit�
 ```{mermaid}
 %%| fig-cap: "Les trois fonctions de Musgrave partent toutes de la politique économique mais diffèrent par leur horizon et leur logique : efficacité pour la stabilisation et l'allocation, équité pour la redistribution."
 flowchart TD
-    A[Politique economique] --> B[Stabilisation - court terme]
-    A --> C[Allocation - moyen-long terme]
-    A --> D[Redistribution - tous horizons]
-    B --> B1[Reduit ecart production-potentiel]
-    C --> C1[Eleve la production potentielle Y star]
-    D --> D1[Ajuste le partage des richesses]
+    A[Politique economique] --> B[Stabilisation<br/>court terme]
+    A --> C[Allocation<br/>moyen-long terme]
+    A --> D[Redistribution<br/>tous horizons]
+    B --> B1[Reduit ecart<br/>production-potentiel]
+    C --> C1[Eleve la production<br/>potentielle Y star]
+    D --> D1[Ajuste le partage<br/>des richesses]
 ```
 
 ## Faut-il stabiliser l'économie à court terme ? Deux réponses opposées {.smaller}
@@ -919,6 +919,17 @@ France. Croissance du PIB réel et inflation IPC. Source : Banque mondiale, Worl
 
 ## Le modèle colle aux données {.smaller}
 
+```{r}
+#| label: fig-signature-choc-recap
+#| fig-width: 7
+#| fig-height: 3.2
+plot_signature(c("2019", "2009", "1975"))
+```
+
+::: {.source}
+France. Croissance du PIB réel et inflation IPC. Source : Banque mondiale, World Development Indicators (NY.GDP.MKTP.KD.ZG, FP.CPI.TOTL.ZG) ; INSEE pour 1975.
+:::
+
 . . .
 
 ::: {.callout-important}
@@ -979,6 +990,8 @@ Stabilisation et allocation influencent toutes deux le **niveau** de l'activité
 - Politique de demande d'autant plus efficace que l'OA_CT est plate.
 :::
 :::
+
+. . .
 
 ::: {.callout-note}
 ## Pour la prochaine fois

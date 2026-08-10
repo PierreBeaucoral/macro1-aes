@@ -450,6 +450,8 @@ ggplot(df_bev_fr, aes(x = chomage, y = vacance)) +
   theme_macro()
 ```
 
+. . .
+
 ::: {.cle}
 Avant 2020, la France se déplace **le long** d'une courbe à peu près stable au fil du cycle. À partir de 2020, la courbe se **déplace vers l'extérieur** : à chômage comparable, il faut désormais davantage d'emplois vacants, signe de tensions de recrutement accrues.
 :::

@@ -447,6 +447,8 @@ ggplot(df_div, aes(x = annee, y = taux, color = pays)) +
   theme_macro()
 ```
 
+. . .
+
 ::: {.cle}
 Cette divergence remet en cause l'explication *purement* hystérétique : les chocs des années 1970-1980 étaient largement **communs** à toute l'Europe et ne peuvent, à eux seuls, expliquer des trajectoires nationales aussi différentes dans les décennies suivantes.
 :::

@@ -18,11 +18,13 @@ subtitle: "CM 10 : Politiques de l'emploi en France : chronologie, trois axes et
 
 **À l'issue de cette séance, vous saurez :**
 
+::: {.incremental}
 - Situer une réforme française du marché du travail sur l'un des **trois axes** : coût du travail, flexibilisation, activation.
 - Expliquer la logique et les limites de la trajectoire **RMI → RSA → prime d'activité** (trappe à inactivité).
 - Relier deux réformes récentes (**assurance chômage 2023-24**, **retraites 2023**) aux cadres conceptuels du chapitre.
 - Interpréter l'évolution du taux de chômage français depuis 1975 à la lumière du diagnostic de chômage **structurel**.
 - Mobiliser l'ensemble des trois chapitres du cours pour l'examen final (QCM + réflexion).
+:::
 
 # 1. Rappel des cadres du Chapitre III, Section I
 
@@ -712,6 +714,8 @@ ggplot(df_age, aes(x = tranche, y = taux, fill = pays)) +
   labs(x = NULL, y = "Taux d'emploi") +
   theme_macro()
 ```
+
+. . .
 
 ::: {.cle}
 Reculer l'âge de départ concentre l'effort là où l'emploi des seniors est le plus faible : sans politiques d'accompagnement, le risque est de convertir de l'inactivité en **chômage**, non en emploi.

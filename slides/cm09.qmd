@@ -15,11 +15,13 @@ subtitle: "CM 9 : Politiques de l'emploi : cadres d'analyse et flexisécurité (
 
 **À l'issue de cette séance, vous saurez :**
 
+::: {.incremental}
 - Distinguer politiques de l'emploi **actives** et **passives**, et l'objectif poursuivi par chacune.
 - Caractériser les trois modèles, **flexibilité**, **sécurité**, **flexisécurité**, à partir de trois critères : protection de l'emploi, indemnisation, accompagnement.
 - Expliquer pourquoi la flexisécurité **découple** protection de l'emploi et protection des travailleurs.
 - Représenter et commenter le **triangle d'or** danois.
 - Distinguer les quatre formes de **flexibilité** (numérique externe, numérique interne, fonctionnelle, salariale) et les relier à des dispositifs concrets.
+:::
 
 # 1. Politiques actives et politiques passives
 
@@ -81,6 +83,8 @@ En protégeant le revenu des personnes sans emploi, les politiques passives rép
 ## Au-delà des instruments : des modèles cohérents
 
 Un pays ne choisit pas ses instruments isolément : il combine un niveau de **protection de l'emploi**, d'**indemnisation du chômage** et d'**accompagnement** des chômeurs dans une configuration cohérente. Trois grandes configurations se dégagent dans les pays développés.
+
+. . .
 
 ::: {.def}
 ::: {.incremental}

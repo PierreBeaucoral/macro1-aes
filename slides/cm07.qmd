@@ -55,16 +55,20 @@ Dans cette lecture, la causalité va du marché du travail vers les prix :
 ::: {.column width="50%"}
 **Chômage faible (proche du plein emploi)**
 
+::: {.incremental}
 - Demande de travail des entreprises $>$ offre de travail
 - Hausse des salaires nominaux $W$
 - Hausse du niveau général des prix $P$
 :::
+:::
 ::: {.column width="50%"}
 **Chômage élevé (récession)**
 
+::: {.incremental}
 - Offre de travail $>$ demande de travail
 - Stagnation, voire baisse de $W$
 - Ralentissement de la hausse de $P$
+:::
 :::
 :::
 

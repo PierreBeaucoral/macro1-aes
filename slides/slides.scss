@@ -26,3 +26,28 @@ $presentation-font-size-root: 30px;
 .reveal .source { font-size: .55em; color: #777; }
 .reveal ul { margin-left: .3em; }
 .reveal .columns { gap: 1.2em; }
+
+// Diagrammes mermaid.
+// Deux corrections liées. D'une part mermaid pose un `max-width` en style
+// inline sur le SVG, qui le fige à sa taille naturelle : sur une diapo de
+// 1200px, le schéma reste minuscule. D'autre part mermaid calcule la largeur
+// des boîtes avec sa police par défaut (16px), puis reveal impose sa racine
+// (30px) aux étiquettes : le texte déborde des encadrés. On refige donc la
+// typo des étiquettes, et on laisse le SVG occuper la largeur de la diapo :
+// boîtes et texte grandissent ensemble, dans les mêmes proportions.
+.reveal svg[id^="mermaid"] {
+  max-width: 100% !important;
+  width: 100%;
+  height: auto;
+  max-height: 66vh;
+}
+
+.reveal svg[id^="mermaid"] .nodeLabel,
+.reveal svg[id^="mermaid"] .edgeLabel,
+.reveal svg[id^="mermaid"] .cluster-label,
+.reveal svg[id^="mermaid"] foreignObject div {
+  font-family: "trebuchet ms", verdana, arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  white-space: normal;
+}

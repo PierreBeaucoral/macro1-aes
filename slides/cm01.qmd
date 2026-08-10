@@ -21,10 +21,12 @@ Source : Ouedraogo (2025-2026), Chapitre I ; Mathonnat (2018-2019), Introduction
 
 À l'issue de cette séance, vous saurez :
 
+::: {.incremental}
 - Distinguer PIB nominal et PIB réel, et calculer un taux de croissance.
 - Différencier expansion, récession et dépression.
 - Restituer les cinq faits marquants de la croissance économique.
 - Distinguer les horizons court terme, moyen terme et long terme, et les déterminants dominants à chaque horizon.
+:::
 
 ## Deux indicateurs pour commencer {.smaller}
 
@@ -348,6 +350,8 @@ ggplot(df_cycle, aes(x = t_idx, y = croissance)) +
 ## 2. Cinq faits marquants de la croissance {.smaller}
 
 L'observation de longue période fait apparaître cinq régularités empiriques qui structurent la réflexion sur la croissance, et, en creux, sur le rôle de la politique économique.
+
+. . .
 
 ::: {.cle .incremental}
 1. La croissance soutenue est récente
@@ -707,6 +711,8 @@ La croissance de l'OCDE reste positive sur toute la période, mais son rythme se
 
 **Au sein des pays** : hausse des inégalités internes dans de nombreux pays de l'OCDE.
 
+. . .
+
 ::: {.def}
 Facteurs identifiés : mondialisation, changement technologique, évolution du rôle de l'État, financiarisation de l'économie.
 :::
@@ -985,6 +991,8 @@ Sur la **même fenêtre** que la diapositive précédente, l'attention se dépla
 - Trois horizons (CT/MT/LT) organisent l'analyse : demande à court terme, retour au potentiel à moyen terme, offre à long terme.
 :::
 ::::
+
+. . .
 
 :::: {.callout-note}
 ## Pour la prochaine fois
