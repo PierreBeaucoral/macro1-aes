@@ -204,7 +204,7 @@ Trois sommets qui se construisent, et se renforcent, ensemble : cliquez pour les
 ```{r}
 #| label: fig-triangle-or-cm09-1
 #| fig-width: 6.5
-#| fig-height: 5.6
+#| fig-height: 4.3
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
@@ -274,7 +274,7 @@ plot_triangle(1)
 ```{r}
 #| label: fig-triangle-or-cm09-2
 #| fig-width: 6.5
-#| fig-height: 5.6
+#| fig-height: 4.3
 plot_triangle(2)
 ```
 :::
@@ -283,7 +283,7 @@ plot_triangle(2)
 ```{r}
 #| label: fig-triangle-or-cm09-3
 #| fig-width: 6.5
-#| fig-height: 5.6
+#| fig-height: 4.3
 plot_triangle(3)
 ```
 :::

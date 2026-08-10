@@ -926,10 +926,6 @@ France. Croissance du PIB réel et inflation IPC. Source : Banque mondiale, Worl
 plot_signature(c("2019", "2009", "1975"))
 ```
 
-::: {.source}
-France. Croissance du PIB réel et inflation IPC. Source : Banque mondiale, World Development Indicators (NY.GDP.MKTP.KD.ZG, FP.CPI.TOTL.ZG) ; INSEE pour 1975.
-:::
-
 . . .
 
 ::: {.callout-important}
