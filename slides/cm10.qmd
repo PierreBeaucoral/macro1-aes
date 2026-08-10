@@ -28,7 +28,7 @@ subtitle: "CM 10 : Politiques de l'emploi en France : chronologie, trois axes et
 
 # 1. Rappel des cadres du Chapitre III, Section I
 
-## Trois modèles nationaux, un triangle d'or comme référence
+## Trois modèles nationaux, un triangle d'or comme référence {.smaller}
 
 ::: {.cle}
 Le CM précédent a distingué trois modèles de marché du travail, **flexibilité** (anglo-saxon), **sécurité** (Europe continentale, dont la France) et **flexisécurité** (Danemark), puis leur **triangle d'or** : flexibilité + indemnisation généreuse + activation, qui se renforcent mutuellement.
@@ -38,7 +38,7 @@ Le CM précédent a distingué trois modèles de marché du travail, **flexibili
 #| label: fig-triangle-or-cm10
 #| fig-cap: "Rappel : le « triangle d'or » de la flexisécurité danoise, référence pour juger les réformes françaises."
 #| fig-width: 6
-#| fig-height: 5.5
+#| fig-height: 4.0
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
@@ -120,7 +120,7 @@ Cette correspondance justifie de **situer** toute réforme sur son axe avant de 
 #| label: fig-chronologie-cm10
 #| fig-cap: "Chronologie des réformes françaises du marché du travail (1972-2024), classées selon les trois axes. Lecture : chaque axe a été mobilisé de façon quasi continue, sans ordre de priorité stable dans le temps. Source : synthèse du cours (Chapitre III, §II), d'après DARES et sources légales citées ci-après."
 #| fig-width: 9
-#| fig-height: 6.5
+#| fig-height: 4.6
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 library(ggrepel)

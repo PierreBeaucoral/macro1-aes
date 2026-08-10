@@ -83,7 +83,7 @@ Un salarié en CDI peut être moins incité à fournir un effort maximal.
 Ces deux asymétries d'information distinguent radicalement le marché du travail d'un marché de biens ordinaire.
 
 ::: {.source}
-Sélection adverse : Akerlof (1970) [@akerlof1970], complété par Spence (1973) sur le signal [@spence1973]. Aléa moral et effort au travail : Shapiro & Stiglitz (1984) [@shapirostiglitz1984]. Akerlof, Spence et Stiglitz ont partagé le prix Nobel d'économie 2001 pour leurs analyses des marchés en information asymétrique.
+Akerlof (1970) [@akerlof1970] ; Spence (1973) [@spence1973] ; Shapiro & Stiglitz (1984) [@shapirostiglitz1984].
 :::
 
 ## Les deux asymétries n'interviennent pas au même moment
@@ -96,6 +96,12 @@ flowchart LR
     S --> B[Apres signature]
     B --> AM[Alea moral]
 ```
+
+. . .
+
+::: {.cle}
+Akerlof, Spence et Stiglitz ont partagé le **prix Nobel d'économie 2001** pour leurs analyses des marchés en information asymétrique.
+:::
 
 ## Le marché des « lemons » : quand l'information asymétrique tue l'échange {.smaller}
 
@@ -188,7 +194,7 @@ OCDE (Employment Outlook 2024) ; Eurostat (Labour Force Survey), moyennes annuel
 #| label: fig-carte-chomage-ue
 #| fig-cap: "Taux de chômage harmonisé par pays, Union européenne, moyenne annuelle 2023. Le gradient Nord/Sud est visible, mais pas parfaitement continu : l'Espagne (12,2 %) et la Grèce (11,1 %) se détachent nettement, tandis que le Portugal (6,5 %) se rapproche des niveaux d'Europe centrale. Source : Eurostat, Labour Force Survey (indicateur une_rt_a). Fond de carte : Natural Earth (rnaturalearth)."
 #| fig-width: 7.5
-#| fig-height: 5.3
+#| fig-height: 4.2
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 library(sf)
