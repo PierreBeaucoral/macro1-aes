@@ -82,6 +82,26 @@ Un salarié en CDI peut être moins incité à fournir un effort maximal.
 
 Ces deux asymétries d'information distinguent radicalement le marché du travail d'un marché de biens ordinaire.
 
+::: {.source}
+Sélection adverse : Akerlof (1970) [@akerlof1970], complété par Spence (1973) sur le signal [@spence1973]. Aléa moral et effort au travail : Shapiro & Stiglitz (1984) [@shapirostiglitz1984]. Akerlof, Spence et Stiglitz ont partagé le prix Nobel d'économie 2001 pour leurs analyses des marchés en information asymétrique.
+:::
+
+## Le marché des « lemons » : quand l'information asymétrique tue l'échange {.smaller}
+
+Akerlof [-@akerlof1970] raisonne sur les voitures d'occasion : le vendeur connaît l'état réel du véhicule, l'acheteur non.
+
+::: {.incremental}
+- Incapable de distinguer une bonne voiture d'une épave (*lemon*), l'acheteur n'accepte de payer que le prix d'une qualité **moyenne**.
+- À ce prix, les vendeurs de bonnes voitures se retirent : leur véhicule vaut davantage que ce qu'on leur propose.
+- La qualité moyenne offerte baisse donc, le prix acceptable baisse à son tour, et le processus se répète : le marché peut **disparaître**, alors même que des échanges mutuellement avantageux existaient.
+:::
+
+. . .
+
+::: {.cle}
+Transposé au recrutement : si l'employeur n'observe pas la productivité des candidats, il propose un salaire calé sur la productivité **moyenne** attendue. Les candidats les plus productifs, sous-payés à ce salaire, renoncent à postuler, ce qui dégrade encore le vivier. D'où le rôle des dispositifs de **signal** (diplôme, expérience, période d'essai) analysés par Spence [-@spence1973], et celui du **salaire d'efficience** (CM 8) : payer au-dessus du marché pour attirer et retenir les bons profils.
+:::
+
 ```{mermaid}
 %%| fig-cap: "Les deux asymétries d'information n'apparaissent pas au même moment : la sélection adverse joue avant la signature, l'aléa moral après."
 flowchart LR
