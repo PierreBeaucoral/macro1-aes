@@ -35,11 +35,15 @@ $presentation-font-size-root: 30px;
 // (30px) aux étiquettes : le texte déborde des encadrés. On refige donc la
 // typo des étiquettes, et on laisse le SVG occuper la largeur de la diapo :
 // boîtes et texte grandissent ensemble, dans les mêmes proportions.
+// Le plafond de hauteur est délibérément bas : un schéma partage souvent sa
+// diapo avec du texte et un encadré, et sans lui il les repousserait hors de
+// l'écran. Une diapo dont le schéma est le seul contenu gagne malgré tout
+// nettement en taille par rapport au rendu par défaut.
 .reveal svg[id^="mermaid"] {
   max-width: 100% !important;
   width: 100%;
   height: auto;
-  max-height: 66vh;
+  max-height: 48vh;
 }
 
 .reveal svg[id^="mermaid"] .nodeLabel,

@@ -86,6 +86,17 @@ Ces deux asymétries d'information distinguent radicalement le marché du travai
 Sélection adverse : Akerlof (1970) [@akerlof1970], complété par Spence (1973) sur le signal [@spence1973]. Aléa moral et effort au travail : Shapiro & Stiglitz (1984) [@shapirostiglitz1984]. Akerlof, Spence et Stiglitz ont partagé le prix Nobel d'économie 2001 pour leurs analyses des marchés en information asymétrique.
 :::
 
+## Les deux asymétries n'interviennent pas au même moment
+
+```{mermaid}
+%%| fig-cap: "Les deux asymétries d'information n'apparaissent pas au même moment : la sélection adverse joue avant la signature, l'aléa moral après."
+flowchart LR
+    A[Avant signature] --> SA[Selection adverse]
+    SA --> S[Signature du contrat]
+    S --> B[Apres signature]
+    B --> AM[Alea moral]
+```
+
 ## Le marché des « lemons » : quand l'information asymétrique tue l'échange {.smaller}
 
 Akerlof [-@akerlof1970] raisonne sur les voitures d'occasion : le vendeur connaît l'état réel du véhicule, l'acheteur non.
@@ -101,15 +112,6 @@ Akerlof [-@akerlof1970] raisonne sur les voitures d'occasion : le vendeur conna�
 ::: {.cle}
 Transposé au recrutement : si l'employeur n'observe pas la productivité des candidats, il propose un salaire calé sur la productivité **moyenne** attendue. Les candidats les plus productifs, sous-payés à ce salaire, renoncent à postuler, ce qui dégrade encore le vivier. D'où le rôle des dispositifs de **signal** (diplôme, expérience, période d'essai) analysés par Spence [-@spence1973], et celui du **salaire d'efficience** (CM 8) : payer au-dessus du marché pour attirer et retenir les bons profils.
 :::
-
-```{mermaid}
-%%| fig-cap: "Les deux asymétries d'information n'apparaissent pas au même moment : la sélection adverse joue avant la signature, l'aléa moral après."
-flowchart LR
-    A[Avant signature] --> SA[Selection adverse]
-    SA --> S[Signature du contrat]
-    S --> B[Apres signature]
-    B --> AM[Alea moral]
-```
 
 ## Rien ne garantit un ajustement automatique vers le plein emploi
 
@@ -307,6 +309,8 @@ La population active représente **l'offre de travail** sur le marché. Ses dét
 ::: {.cle}
 Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en emploi, ni activement à la recherche d'un emploi : chômeurs découragés, personnes malades ou en situation de handicap, personnes au foyer, étudiants, retraités.
 :::
+
+## Actifs et inactifs : comment se répartit la population en âge de travailler
 
 ```{mermaid}
 %%| fig-cap: "La population en âge de travailler se scinde en actifs (population active) et inactifs ; les actifs se répartissent entre emploi et chômage."
