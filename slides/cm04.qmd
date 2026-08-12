@@ -3,7 +3,7 @@ title: "CM 4 : Typologie des chômages & évolutions"
 subtitle: "Chapitre II, Partie 1, §IV-V"
 ---
 
-## Plan de la séance {.smaller}
+## Plan de la séance
 
 1. Pourquoi distinguer plusieurs formes de chômage ?
 2. Le chômage **structurel** : quatre mécanismes
@@ -53,7 +53,7 @@ D'où la nécessité d'une **typologie** : chaque forme de chômage a sa propre 
 
 Cette distinction structure toute la suite du chapitre : les cadres théoriques néoclassique et WS-PS expliquent le chômage **structurel**, le cadre keynésien le chômage **conjoncturel**.
 
-## Le chômage structurel recouvre quatre mécanismes distincts
+## Le chômage structurel recouvre quatre mécanismes distincts {.smaller}
 
 | Type | Mécanisme |
 |---|---|
@@ -370,8 +370,8 @@ ggplot(df_ltu, aes(x = annee, y = part, color = zone)) +
   scale_x_continuous(breaks = annees_ltu) +
   scale_y_continuous(limits = c(0, 50), breaks = seq(0, 50, 10)) +
   labs(x = "Année",
-       y = "Part des chômeurs de longue durée\n(12 mois ou plus, % du chômage total)") +
-  theme_macro()
+       y = "Chômage de longue durée (% du chômage)") +
+  theme_macro(base_size = 15)
 ```
 
 ::: {.source}
@@ -461,7 +461,7 @@ Cette divergence remet en cause l'explication *purement* hystérétique : les ch
 
 ```{r}
 #| label: fig-carte-chomage-europe
-#| fig-cap: "Taux de chômage harmonisé en Europe, 2005. Source : Eurostat, une_rt_a (définition BIT). Fond de carte : Natural Earth."
+#| fig-cap: "Taux de chômage harmonisé en Europe, 2005. Les pays en gris ne figurent pas dans l'échantillon retenu (UE-15, Pologne, Norvège, Suisse). Source : Eurostat, une_rt_a (définition BIT). Fond de carte : Natural Earth."
 #| fig-width: 7
 #| fig-height: 4.5
 source(here::here("R/theme_macro.R"))
