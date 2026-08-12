@@ -516,12 +516,12 @@ df_eu <- read.csv(here::here("data/chomage_europe_2016_2025.csv")) |>
 
 # Une copie du fond par année, pour un facettage propre : un simple
 # match() ne suffit plus dès qu'il y a deux cartes.
-cartes <- lapply(c(2016, 2025), function(an) {
+cartes <- do.call(rbind, lapply(c(2016, 2025), function(an) {
   w <- world
   w$taux <- df_eu$taux[match(w$adm0_a3, df_eu$adm0_a3[df_eu$annee == an])]
   w$annee <- an
   w
-}) |> (\(x) do.call(rbind, x))()
+}))
 
 ggplot(cartes) +
   geom_sf(aes(fill = taux), color = "white", linewidth = .1) +
