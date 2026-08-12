@@ -461,7 +461,7 @@ Cette divergence remet en cause l'explication *purement* hystérétique : les ch
 
 ```{r}
 #| label: fig-carte-chomage-europe
-#| fig-cap: "Taux de chômage harmonisé en Europe, 2005. Les pays en gris ne figurent pas dans l'échantillon retenu (UE-15, Pologne, Norvège, Suisse). Source : Eurostat, une_rt_a (définition BIT). Fond de carte : Natural Earth."
+#| fig-cap: "Taux de chômage harmonisé en Europe, 2005. L'Union comptait alors 25 membres : l'UE-15 et les dix entrants de mai 2004. Les pays en gris sont ceux dont la valeur n'est pas renseignée. Source : Eurostat, une_rt_a (définition BIT). Fond de carte : Natural Earth."
 #| fig-width: 7
 #| fig-height: 4.5
 source(here::here("R/theme_macro.R"))
@@ -473,12 +473,10 @@ world <- ne_countries(scale = "medium", returnclass = "sf")
 
 # Taux de chômage harmonisé (%), moyenne annuelle 2005.
 # Source : Eurostat, une_rt_a (taux de chômage harmonisé, definition BIT).
-df_carte <- data.frame(
-  adm0_a3 = c("ESP", "FRA", "DEU", "ITA", "PRT", "GRC", "GBR", "NLD",
-              "BEL", "DNK", "SWE", "FIN", "AUT", "IRL", "POL", "NOR", "CHE"),
-  taux = c(9.2, 9.3, 11.3, 7.7, 8.6, 9.9, 4.8, 5.9,
-           8.5, 4.8, 7.7, 8.4, 5.2, 4.4, 17.7, 4.6, 4.4)
-)
+# Les valeurs vivent dans data/chomage_europe_2005.csv : une ligne par pays,
+# colonne `taux` vide tant que la donnée n'a pas été renseignée. Un pays sans
+# valeur reste gris sur la carte, ce que la légende signale.
+df_carte <- read.csv(here::here("data/chomage_europe_2005.csv"))
 
 world$taux <- df_carte$taux[match(world$adm0_a3, df_carte$adm0_a3)]
 
