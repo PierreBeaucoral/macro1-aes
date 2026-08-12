@@ -139,7 +139,7 @@ ggplot(df_offre, aes(x = L, y = w)) +
   coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
   theme_macro() +
-  theme(panel.grid = element_blank())
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
 ## La productivité marginale décroissante gouverne la demande
@@ -177,7 +177,7 @@ ggplot(df_demande, aes(x = L, y = w)) +
   coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
   theme_macro() +
-  theme(panel.grid = element_blank())
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
 ## Les heures travaillées ont chuté à mesure que les salaires montaient
@@ -269,7 +269,7 @@ ggplot(df_od, aes(x = L, y = w, color = courbe)) +
   coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
   theme_macro() +
-  theme(panel.grid = element_blank())
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
 ## À l'équilibre, tout chômage résiduel est volontaire
@@ -459,7 +459,7 @@ ggplot(df_od, aes(x = L, y = w, color = courbe)) +
   coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
   theme_macro() +
-  theme(panel.grid = element_blank())
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
 ## Le SMIC français est élevé rapporté au salaire médian

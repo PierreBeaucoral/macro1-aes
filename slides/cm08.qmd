@@ -75,7 +75,7 @@ ggplot(world) +
   # Sequentiel a teinte unique (clair -> fonce d'un seul rouge), comme la
   # carte de reference du CM 4 : la clarte dit le niveau, sans suggerer de
   # seuil intermediaire.
-  scale_fill_gradient(low = "#f7e3e0", high = unname(macro_pal["rouge"]),
+  scale_fill_gradient(low = "#eef4f9", high = unname(macro_pal["bleu"]),
                        na.value = "grey92", limits = c(2, 13),
                        breaks = c(3, 6, 9, 12),
                        name = "Taux de chômage (%)") +

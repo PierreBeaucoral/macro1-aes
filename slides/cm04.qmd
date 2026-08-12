@@ -495,7 +495,7 @@ Cette divergence remet en cause l'explication *purement* hystérétique : les ch
 ## Le clivage Nord/Sud s'est estompé en dix ans {.smaller}
 
 ```{r}
-#| label: fig-carte-chomage-europe
+#| label: fig-cartes-chomage-2016-2025
 #| fig-cap: "Taux de chômage harmonisé (15-74 ans), 2016 et 2025. Les deux cartes partagent la même échelle : la pâleur de celle de 2025 est le résultat, pas un artefact. En gris clair, les pays hors du champ Eurostat. Source : Eurostat, une_rt_a (définition BIT). Fond de carte : Natural Earth."
 #| fig-width: 8
 #| fig-height: 4.1
@@ -537,10 +537,14 @@ ggplot(cartes) +
   coord_sf(xlim = c(-11, 32), ylim = c(35, 71), expand = FALSE) +
   labs(x = NULL, y = NULL) +
   theme_macro() +
-  theme(axis.text = element_blank(), panel.grid = element_blank(),
+  theme(axis.text = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
         strip.text = element_text(face = "bold", size = rel(1.15),
                                   color = unname(macro_pal["bleu"])),
         legend.position = "right",
+        # theme_macro masque les titres de légende, ce qui convient aux séries
+        # nommées mais rend une barre de couleur muette : on le rétablit ici.
+        legend.title = element_text(face = "bold", size = rel(.8)),
         legend.key.height = unit(1.1, "cm"))
 ```
 
