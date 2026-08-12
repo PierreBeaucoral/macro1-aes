@@ -181,7 +181,8 @@ ggplot(df_chom_intl, aes(x = pays, y = taux, fill = groupe)) +
                      name = NULL) +
   coord_flip(ylim = c(0, 14)) +
   labs(x = NULL, y = "Taux de chômage harmonisé, 2023 (%)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid.major.y = element_blank())
 ```
 
 ::: {.source}
@@ -219,9 +220,9 @@ world$taux <- df_ue$taux[match(world$adm0_a3, df_ue$adm0_a3)]
 ggplot(world) +
   geom_sf(aes(fill = taux), color = "white", linewidth = .1) +
   scale_fill_gradient(
-    low = unname(macro_pal["bleu2"]), high = unname(macro_pal["rouge"]),
+    low = "#eef4f9", high = unname(macro_pal["bleu"]),
     na.value = "grey92", limits = c(2, 13), breaks = c(3, 6, 9, 12),
-    name = "Taux de chômage\n2023 (%)"
+    name = "Taux de chômage 2023 (%)"
   ) +
   coord_sf(xlim = c(-11, 32), ylim = c(34, 71), expand = FALSE) +
   labs(x = NULL, y = NULL) +
@@ -454,22 +455,40 @@ df_mesures$indicateur <- factor(
              "Catégories A+B+C (France Travail)")
 )
 
+# Étiquettes courtes pour les extrémités de courbe (nom de série + dernière
+# valeur), en remplacement de la légende.
+labels_courts <- c(
+  "Chômeurs BIT (Insee)" = "BIT (Insee)",
+  "Catégorie A (France Travail)" = "Catégorie A",
+  "Catégories A+B+C (France Travail)" = "Cat. A+B+C"
+)
+df_fin <- subset(df_mesures, annee == 2024)
+df_fin$etiquette <- paste0(
+  labels_courts[as.character(df_fin$indicateur)], " : ",
+  scales::label_number(decimal.mark = ",", accuracy = 0.1)(df_fin$valeur)
+)
+
 ggplot(df_mesures, aes(x = annee, y = valeur, color = indicateur)) +
   geom_vline(xintercept = 2020, color = "grey70", linetype = "dashed", linewidth = .4) +
   annotate("text", x = 2020, y = 6.7, label = "Confinement",
            hjust = .5, size = 3.1, color = "grey45", fontface = "italic") +
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
+  geom_text(data = df_fin, aes(label = etiquette), hjust = 0, nudge_x = 0.35,
+            size = 3.1, fontface = "bold", show.legend = FALSE) +
   scale_color_manual(values = c(
     "Chômeurs BIT (Insee)" = unname(macro_pal["bleu"]),
     "Catégorie A (France Travail)" = unname(macro_pal["or"]),
     "Catégories A+B+C (France Travail)" = unname(macro_pal["rouge"])
   ), name = NULL) +
-  scale_x_continuous(breaks = c(2010, 2012, 2015, 2019, 2020, 2023, 2024)) +
+  scale_x_continuous(breaks = c(2010, 2012, 2015, 2019, 2020, 2023, 2024),
+                      limits = c(2010, 2030)) +
   scale_y_continuous(limits = c(0, 7), breaks = seq(0, 7, 1)) +
-  labs(x = "Année", y = "Millions de personnes") +
+  labs(x = NULL, y = "Millions de personnes") +
   theme_macro() +
-  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+  theme(axis.text.x = element_text(angle = 30, hjust = 1),
+        legend.position = "none",
+        panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -526,7 +545,8 @@ plot_marche <- function(k) {
                                   "Italie" = unname(macro_pal["rouge"])), name = NULL) +
     scale_y_continuous(limits = c(0, 95), breaks = seq(0, 90, 15)) +
     labs(x = NULL, y = "%") +
-    theme_macro()
+    theme_macro() +
+    theme(panel.grid.major.x = element_blank())
 }
 
 plot_marche(1)

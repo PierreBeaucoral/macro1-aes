@@ -196,11 +196,17 @@ ggplot() +
   geom_vline(xintercept = un, linetype = "dashed", color = macro_pal[["vert"]], linewidth = 0.7) +
   annotate("text", x = un + 0.2, y = 9, label = "Long terme :\nu = un (NAIRU)",
            hjust = 0, size = 3.4, color = macro_pal[["vert"]]) +
+  # Etiquettes directes en bout de droite (u = 12) plutot qu'une legende.
+  annotate("text", x = 12.3, y = pi_ct1[length(u)], label = "CT : pi_a basse\n(2 %)",
+           hjust = 0, size = 3.1, fontface = "bold", color = macro_pal[["bleu"]]) +
+  annotate("text", x = 12.3, y = pi_ct2[length(u)], label = "CT : pi_a haute\n(5 %)",
+           hjust = 0, size = 3.1, fontface = "bold", color = macro_pal[["rouge"]]) +
   scale_color_manual(values = c("CT : anticipations basses (pi_a = 2%)" = macro_pal[["bleu"]],
                                  "CT : anticipations hautes (pi_a = 5%)" = macro_pal[["rouge"]])) +
-  coord_cartesian(xlim = c(2, 12), ylim = c(-3, 10), expand = FALSE) +
+  coord_cartesian(xlim = c(2, 14.5), ylim = c(-4, 10), expand = FALSE) +
   labs(x = "Taux de chômage (u, %)", y = "Taux d'inflation (pi, %)") +
-  theme_macro()
+  theme_macro() +
+  theme(legend.position = "none")
 ```
 
 ## L'équation de Phillips augmentée des anticipations formalise ce mécanisme
@@ -278,16 +284,34 @@ df_phil_reel$periode <- factor(df_phil_reel$periode,
 plot_phillips_reel <- function(stage) {
   df_stage <- if (stage == 1) subset(df_phil_reel, annee <= 1969) else df_phil_reel
 
-  ggplot(df_stage, aes(x = u, y = pi, color = periode)) +
+  # Points de fin de chaque periode, pour etiqueter les trajectoires
+  # directement plutot que par une legende.
+  fin_1960 <- subset(df_phil_reel, annee == 1969)
+  fin_1984 <- subset(df_phil_reel, annee == 1984)
+
+  p <- ggplot(df_stage, aes(x = u, y = pi, color = periode)) +
     geom_path(linewidth = 0.6, alpha = 0.6,
               arrow = arrow(length = unit(0.15, "cm"), type = "open")) +
     geom_point(size = 2.6) +
+    annotate("text", x = fin_1960$u, y = fin_1960$pi, label = "1960-1969",
+             hjust = -0.15, vjust = -0.8, size = 3, fontface = "bold",
+             color = unname(macro_pal["bleu"]))
+
+  if (stage == 2) {
+    p <- p +
+      annotate("text", x = fin_1984$u, y = fin_1984$pi, label = "1970-1984",
+               hjust = -0.1, vjust = 1.6, size = 3, fontface = "bold",
+               color = unname(macro_pal["rouge"]))
+  }
+
+  p +
     scale_color_manual(values = c("1960-1969 : la relation tient" = unname(macro_pal["bleu"]),
                                    "1970-1984 : la relation se brise" = unname(macro_pal["rouge"])),
                         drop = FALSE) +
     coord_cartesian(xlim = c(3, 10.5), ylim = c(0, 14)) +
     labs(x = "Taux de chômage (%)", y = "Inflation IPC (%)") +
-    theme_macro()
+    theme_macro() +
+    theme(legend.position = "none")
 }
 
 plot_phillips_reel(1)
@@ -337,13 +361,23 @@ df_stagf$serie <- factor(df_stagf$serie, levels = c("Taux de chômage", "Inflati
 ggplot(df_stagf, aes(x = annee, y = valeur, color = serie)) +
   geom_vline(xintercept = c(1973, 1979), linetype = "dashed",
              color = unname(macro_pal["gris"]), linewidth = 0.4) +
+  annotate("text", x = c(1973, 1979), y = 1.3,
+           label = c("1er choc\npétrolier", "2e choc\npétrolier"),
+           size = 2.5, color = unname(macro_pal["gris"])) +
   geom_line(linewidth = 1.1) +
   geom_point(size = 1.6) +
+  # Etiquettes directes en bout de courbe plutot qu'une legende.
+  annotate("text", x = 1985.5, y = 7.2, label = "Taux de\nchômage",
+           hjust = 0, size = 3.1, fontface = "bold", color = unname(macro_pal["bleu"])) +
+  annotate("text", x = 1985.5, y = 3.6, label = "Inflation\n(IPC)",
+           hjust = 0, size = 3.1, fontface = "bold", color = unname(macro_pal["rouge"])) +
   scale_color_manual(values = c("Taux de chômage" = unname(macro_pal["bleu"]),
                                  "Inflation (IPC)" = unname(macro_pal["rouge"]))) +
   scale_x_continuous(breaks = seq(1968, 1985, 2)) +
-  labs(x = "Année", y = "%") +
-  theme_macro()
+  coord_cartesian(xlim = c(1968, 1989), ylim = c(0, 15), expand = FALSE) +
+  labs(x = NULL, y = "%") +
+  theme_macro() +
+  theme(legend.position = "none")
 ```
 
 ## Deux explications concurrentes de la rupture
@@ -458,18 +492,35 @@ df_div <- data.frame(
 )
 df_div$pays <- factor(df_div$pays, levels = c("France", "Allemagne", "Danemark", "États-Unis"))
 
+# Dernier point (2023) de chaque pays, pour etiqueter les courbes
+# directement plutot que par une legende ; leger decalage vertical pour
+# separer Allemagne/Danemark/Etats-Unis, proches en 2023.
+df_last <- df_div[df_div$annee == max(annees_div), ]
+nudge_lbl <- c(France = 0, Allemagne = -0.4, Danemark = 0.2, "États-Unis" = 0.3)
+df_last$y_lbl <- df_last$taux + nudge_lbl[as.character(df_last$pays)]
+
 ggplot(df_div, aes(x = annee, y = taux, color = pays)) +
   geom_line(linewidth = 1.0) +
   geom_point(size = 2) +
+  geom_text(data = df_last, aes(x = annee + 0.8, y = y_lbl, label = pays),
+            hjust = 0, size = 3.1, fontface = "bold", show.legend = FALSE) +
+  # Fait marquant : le decrochage allemand apres les reformes Hartz.
+  annotate("segment", x = 2005, xend = 2010.7, y = 11.2, yend = 7.3,
+           arrow = arrow(length = unit(.15, "cm")), color = unname(macro_pal["or"]),
+           linewidth = .5) +
+  annotate("text", x = 2005.3, y = 12.2, label = "Réformes Hartz",
+           hjust = 0, size = 2.8, color = unname(macro_pal["or"])) +
   scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
                                  "Allemagne" = unname(macro_pal["or"]),
                                  "Danemark" = unname(macro_pal["vert"]),
                                  "États-Unis" = unname(macro_pal["gris"])),
                       name = NULL) +
   scale_x_continuous(breaks = annees_div) +
-  labs(x = "Année", y = "Taux de chômage harmonisé (%)") +
+  coord_cartesian(xlim = c(1991, max(annees_div) + 7), ylim = c(0, 13), expand = FALSE) +
+  labs(x = NULL, y = "Taux de chômage harmonisé (%)") +
   theme_macro() +
-  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 30, hjust = 1))
 ```
 
 ## Cinq décennies de théorie : de Phillips aux anticipations rationnelles

@@ -72,10 +72,13 @@ world$u <- df_u_eur$u[match(world$adm0_a3, df_u_eur$adm0_a3)]
 
 ggplot(world) +
   geom_sf(aes(fill = u), color = "white", linewidth = .1) +
-  scale_fill_gradient(low = "#fbe3c8", high = unname(macro_pal["rouge"]),
+  # Sequentiel a teinte unique (clair -> fonce d'un seul rouge), comme la
+  # carte de reference du CM 4 : la clarte dit le niveau, sans suggerer de
+  # seuil intermediaire.
+  scale_fill_gradient(low = "#eef4f9", high = unname(macro_pal["bleu"]),
                        na.value = "grey92", limits = c(2, 13),
                        breaks = c(3, 6, 9, 12),
-                       name = "Taux de chômage\n(%, 2023)") +
+                       name = "Taux de chômage (%)") +
   coord_sf(xlim = c(-11, 31), ylim = c(34, 62), expand = FALSE) +
   labs(x = NULL, y = NULL) +
   theme_macro() +
@@ -222,28 +225,34 @@ m2 <- 0.50; ps2 <- 1 / (1 + m2); u_star2 <- (0.75 - ps2) / 0.02
 df_ps1 <- data.frame(u = u_seq, w = rep(ps1, length(u_seq)))
 df_ps2 <- data.frame(u = u_seq, w = rep(ps2, length(u_seq)))
 
-cols_wsps <- c("WS : fixation des salaires" = macro_pal[["bleu"]],
-               "PS : fixation des prix (m = 0,43)" = macro_pal[["or"]],
-               "PS après hausse de m (m = 0,50)" = macro_pal[["rouge"]])
-
 # Construit le diagramme WS-PS etape par etape : k = 1 la seule courbe WS ;
 # k = 2 ajoute la courbe PS (m = 0,43) ; k = 3 marque u* a l'intersection ;
 # k = 4 simule une hausse du taux de marge (m = 0,50) : la PS baisse, un
 # nouveau u* plus eleve apparait, l'ancien equilibre reste visible en grise.
+# Les courbes sont nommees directement a leur extremite droite (u = 15)
+# plutot que par une legende.
 plot_wsps <- function(k) {
-  p <- ggplot() +
-    geom_line(data = df_ws, aes(x = u, y = w, color = "WS : fixation des salaires"), linewidth = 1.1)
+  ws_end <- 0.75 - 0.02 * 15
 
-  if (k >= 2) {
-    p <- p + geom_line(data = df_ps1, aes(x = u, y = w, color = "PS : fixation des prix (m = 0,43)"),
-                        linewidth = 1.1)
+  p <- ggplot() +
+    geom_line(data = df_ws, aes(x = u, y = w), color = macro_pal[["bleu"]], linewidth = 1.1) +
+    annotate("text", x = 15.4, y = ws_end, label = "WS", hjust = 0, size = 3.5,
+             fontface = "bold", color = macro_pal[["bleu"]])
+
+  if (k %in% c(2, 3)) {
+    p <- p +
+      geom_line(data = df_ps1, aes(x = u, y = w), color = macro_pal[["or"]], linewidth = 1.1) +
+      annotate("text", x = 15.4, y = ps1, label = "PS\n(m = 0,43)", hjust = 0, size = 3,
+               fontface = "bold", color = macro_pal[["or"]])
   }
 
   if (k == 4) {
     p <- p +
       geom_line(data = df_ps1, aes(x = u, y = w), color = macro_pal[["or"]], alpha = 0.30, linewidth = 1.1) +
-      geom_line(data = df_ps2, aes(x = u, y = w, color = "PS après hausse de m (m = 0,50)"), linewidth = 1.1) +
-      annotate("point", x = u_star1, y = ps1, size = 2.2, color = macro_pal[["gris"]], alpha = 0.6)
+      geom_line(data = df_ps2, aes(x = u, y = w), color = macro_pal[["rouge"]], linewidth = 1.1) +
+      annotate("point", x = u_star1, y = ps1, size = 2.2, color = macro_pal[["gris"]], alpha = 0.6) +
+      annotate("text", x = 15.4, y = ps2, label = "PS\n(m = 0,50)", hjust = 0, size = 3,
+               fontface = "bold", color = macro_pal[["rouge"]])
   }
 
   if (k >= 3) {
@@ -260,10 +269,10 @@ plot_wsps <- function(k) {
   }
 
   p +
-    scale_color_manual(values = cols_wsps, name = NULL, breaks = names(cols_wsps)) +
-    coord_cartesian(xlim = c(0, 15), ylim = c(0, 0.8), expand = FALSE) +
+    coord_cartesian(xlim = c(0, 18.5), ylim = c(0, 0.8), expand = FALSE) +
     labs(x = "Taux de chômage (u, %)", y = "Salaire réel (W/P)") +
-    theme_macro()
+    theme_macro() +
+    theme(legend.position = "none")
 }
 
 plot_wsps(1)
@@ -407,12 +416,19 @@ ggplot() +
   geom_abline(slope = 1, intercept = 0, linetype = "dotted", color = "grey50", linewidth = 0.5) +
   annotate("text", x = 7.6, y = 6.6, label = "droite à 45°\n(u = v)",
            hjust = 0, size = 3.2, color = "grey40") +
+  # Courbes nommees directement a leur extremite droite (u = 12) plutot
+  # qu'une legende.
+  annotate("text", x = 12.3, y = 8 / 12 - 0.15, label = "Avant",
+           hjust = 0, size = 3.3, fontface = "bold", color = macro_pal[["bleu"]]) +
+  annotate("text", x = 12.3, y = 10 / 12 + 0.15, label = "Après",
+           hjust = 0, size = 3.3, fontface = "bold", color = macro_pal[["rouge"]]) +
   scale_color_manual(values = c("Avant (appariement efficace)" = macro_pal[["bleu"]],
                                  "Après (inadéquation accrue)" = macro_pal[["rouge"]]),
                       name = NULL) +
-  coord_cartesian(xlim = c(0, 12), ylim = c(0, 10), expand = FALSE) +
+  coord_cartesian(xlim = c(0, 14.5), ylim = c(0, 10), expand = FALSE) +
   labs(x = "Taux de chômage (u, %)", y = "Taux d'emplois vacants (v, %)") +
-  theme_macro()
+  theme_macro() +
+  theme(legend.position = "none")
 ```
 
 ## Le cas français : boucle conjoncturelle et choc post-Covid {.smaller}
@@ -443,11 +459,18 @@ ggplot(df_bev_fr, aes(x = chomage, y = vacance)) +
   geom_point(aes(color = periode), size = 3.2) +
   geom_text(aes(label = annee), size = 2.8, color = "#333333",
             fontface = "bold", nudge_y = 0.13) +
+  # Groupes nommes directement pres de leur nuage de points plutot que par
+  # une legende.
+  annotate("text", x = 9.7, y = 0.75, label = "2013-2019",
+           hjust = 0, size = 3, fontface = "bold", color = macro_pal[["bleu"]]) +
+  annotate("text", x = 7.55, y = 1.75, label = "2020-2024",
+           hjust = 0, size = 3, fontface = "bold", color = macro_pal[["rouge"]]) +
   scale_color_manual(values = c("2013-2019" = macro_pal[["bleu"]],
                                  "2020-2024" = macro_pal[["rouge"]]), name = NULL) +
   coord_cartesian(xlim = c(6.5, 11), ylim = c(0.5, 3.4), expand = FALSE) +
   labs(x = "Taux de chômage (BIT, %)", y = "Taux d'emplois vacants (%)") +
-  theme_macro()
+  theme_macro() +
+  theme(legend.position = "none")
 ```
 
 . . .
