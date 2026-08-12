@@ -8,6 +8,7 @@ Imports:
     rmarkdown,
     ggplot2,
     ggrepel,
+    dplyr,
     patchwork,
     scales,
     tibble,
