@@ -137,11 +137,19 @@ df_epl$indicateur <- factor(df_epl$indicateur, levels = c(
 
 ggplot(df_epl, aes(x = pays, y = valeur, fill = indicateur)) +
   geom_col(position = position_dodge(width = 0.72), width = 0.65) +
+  # Fait marquant du fig-cap : l'écart Danemark/France se creuse surtout
+  # sur l'EPC (licenciements collectifs), pas sur l'EPRC.
+  annotate("segment", x = 3.18, xend = 4.18, y = 3.55, yend = 3.55,
+           arrow = arrow(ends = "both", length = unit(.12, "cm")),
+           color = unname(macro_pal["rouge"]), linewidth = .5) +
+  annotate("text", x = 3.68, y = 3.85, label = "+1,07 point sur l'EPC",
+           size = 3, color = unname(macro_pal["rouge"]), fontface = "italic") +
   scale_fill_manual(values = c(unname(macro_pal["bleu2"]), unname(macro_pal["bleu"])), name = NULL) +
   coord_cartesian(ylim = c(0, 6)) +
   labs(x = NULL, y = "Indice OCDE de protection de l'emploi (0-6)") +
   theme_macro() +
-  theme(legend.position = "bottom", legend.text = element_text(size = 8.5)) +
+  theme(legend.position = "bottom", legend.text = element_text(size = 8.5),
+        panel.grid.major.x = element_blank()) +
   guides(fill = guide_legend(nrow = 2))
 ```
 
@@ -255,10 +263,10 @@ plot_triangle <- function(k) {
   nudges    <- c(-0.09, -0.09, 0.11)[seq_len(k)]
 
   p +
-    geom_point(data = sommets_k, aes(x, y), size = 4, color = macro_pal["bleu"]) +
+    geom_point(data = sommets_k, aes(x, y), size = 3.5, color = macro_pal["bleu"]) +
     geom_label(data = sommets_k, aes(x, y, label = label),
                nudge_y = nudges,
-               size = 3.5, fontface = "bold", color = "#1f4e79",
+               size = 3, fontface = "bold", color = "#1f4e79",
                linewidth = 0, fill = "white") +
     coord_fixed(clip = "off") +
     xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
@@ -340,17 +348,22 @@ df_chomage <- data.frame(
 )
 df_chomage$pays <- factor(df_chomage$pays, levels = c("France", "Danemark", "États-Unis"))
 
+etiquettes_ch <- df_chomage[df_chomage$annee == max(annees), ]
+
 ggplot(df_chomage, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
   geom_line() +
+  geom_text(data = etiquettes_ch, aes(label = pays), hjust = 0, nudge_x = 0.6,
+            size = 3.3, fontface = "bold", show.legend = FALSE) +
   scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
                                  "Danemark" = unname(macro_pal["vert"]),
                                  "États-Unis" = unname(macro_pal["gris"])),
-                      name = NULL) +
+                      guide = "none") +
   scale_linewidth_manual(values = c("France" = 1.1, "Danemark" = 1.1, "États-Unis" = 0.7),
                           guide = "none") +
-  scale_x_continuous(breaks = seq(2000, 2024, 4)) +
-  labs(x = "Année", y = "Taux de chômage harmonisé (%)") +
-  theme_macro()
+  scale_x_continuous(breaks = seq(2000, 2024, 4), limits = c(2000, 2032)) +
+  labs(x = NULL, y = "Taux de chômage harmonisé (%)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ## Le troisième sommet a un coût : dépenses de politiques actives {.smaller}
@@ -381,7 +394,8 @@ ggplot(df_almp, aes(x = pays, y = depense, fill = pays)) +
                                 unname(macro_pal["or"]), unname(macro_pal["vert"]))) +
   coord_cartesian(ylim = c(0, 1.75)) +
   labs(x = NULL, y = "Dépenses de politiques actives (% du PIB)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ## À retenir : un triptyque, pas une dérégulation {.callout-important}

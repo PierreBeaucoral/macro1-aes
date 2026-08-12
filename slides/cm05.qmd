@@ -134,9 +134,12 @@ df_offre <- data.frame(L = L, w = w_offre)
 
 ggplot(df_offre, aes(x = L, y = w)) +
   geom_line(linewidth = 1.1, color = macro_pal[["bleu"]]) +
-  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  annotate("text", x = 10.2, y = tail(w_offre, 1), label = "Offre (Ls)",
+           hjust = 0, size = 3.8, fontface = "bold", color = macro_pal[["bleu"]]) +
+  coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid = element_blank())
 ```
 
 ## La productivité marginale décroissante gouverne la demande
@@ -169,9 +172,12 @@ df_demande <- data.frame(L = L, w = w_demande)
 
 ggplot(df_demande, aes(x = L, y = w)) +
   geom_line(linewidth = 1.1, color = macro_pal[["or"]]) +
-  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  annotate("text", x = 10.2, y = tail(w_demande, 1), label = "Demande (Ld)",
+           hjust = 0, size = 3.8, fontface = "bold", color = macro_pal[["or"]]) +
+  coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid = element_blank())
 ```
 
 ## Les heures travaillées ont chuté à mesure que les salaires montaient
@@ -207,10 +213,14 @@ ggplot(df_heures, aes(x = annee, y = heures)) +
             hjust = 0, vjust = -0.6, size = 3.2, color = macro_pal[["gris"]]) +
   geom_line(linewidth = 1.1, color = macro_pal[["bleu"]]) +
   geom_point(size = 2.2, color = macro_pal[["bleu"]]) +
+  geom_text(data = df_heures[c(1, nrow(df_heures)), ],
+            aes(label = heures), nudge_y = 55, size = 3.2, fontface = "bold",
+            color = macro_pal[["bleu"]]) +
   scale_x_continuous(breaks = df_heures$annee) +
   coord_cartesian(ylim = c(1300, 2350)) +
-  labs(x = "Année", y = "Durée annuelle du travail (heures)") +
-  theme_macro()
+  labs(x = NULL, y = "Durée annuelle du travail (heures)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -242,7 +252,11 @@ df_od <- data.frame(
 )
 
 ggplot(df_od, aes(x = L, y = w, color = courbe)) +
-  geom_line(linewidth = 1.1) +
+  geom_line(linewidth = 1.1, show.legend = FALSE) +
+  annotate("text", x = 10.2, y = tail(w_offre, 1), label = "Offre (Ls)",
+           hjust = 0, size = 3.8, fontface = "bold", color = macro_pal[["bleu"]]) +
+  annotate("text", x = 10.2, y = tail(w_demande, 1), label = "Demande (Ld)",
+           hjust = 0, size = 3.8, fontface = "bold", color = macro_pal[["or"]]) +
   annotate("segment", x = eq_L, xend = eq_L, y = 0, yend = eq_w,
            linetype = "dashed", color = macro_pal[["gris"]], linewidth = 0.4) +
   annotate("segment", x = 0, xend = eq_L, y = eq_w, yend = eq_w,
@@ -252,9 +266,10 @@ ggplot(df_od, aes(x = L, y = w, color = courbe)) +
            label = "Équilibre (w*, L*)", hjust = 0, size = 3.6, color = macro_pal[["rouge"]]) +
   scale_color_manual(values = c("Offre de travail (Ls)" = macro_pal[["bleu"]],
                                  "Demande de travail (Ld)" = macro_pal[["or"]])) +
-  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid = element_blank())
 ```
 
 ## À l'équilibre, tout chômage résiduel est volontaire
@@ -390,7 +405,8 @@ ggplot(df_coin, aes(x = pays, y = coin, fill = categorie)) +
                                 "Autre" = macro_pal[["bleu2"]])) +
   coord_flip(ylim = c(0, 60)) +
   labs(x = NULL, y = "Coin fiscal sur le travail (% du coût total employeur)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ## Un salaire minimum trop élevé crée du chômage classique
@@ -422,7 +438,11 @@ df_od <- data.frame(
 )
 
 ggplot(df_od, aes(x = L, y = w, color = courbe)) +
-  geom_line(linewidth = 1.1) +
+  geom_line(linewidth = 1.1, show.legend = FALSE) +
+  annotate("text", x = 10.2, y = tail(w_offre, 1), label = "Offre (Ls)",
+           hjust = 0, size = 3.8, fontface = "bold", color = macro_pal[["bleu"]]) +
+  annotate("text", x = 10.2, y = tail(w_demande, 1), label = "Demande (Ld)",
+           hjust = 0, size = 3.8, fontface = "bold", color = macro_pal[["or"]]) +
   annotate("segment", x = 0, xend = 10, y = w_min, yend = w_min,
            linetype = "dashed", color = macro_pal[["vert"]], linewidth = 0.6) +
   annotate("text", x = 0.15, y = w_min + 0.35,
@@ -432,11 +452,14 @@ ggplot(df_od, aes(x = L, y = w, color = courbe)) +
   annotate("text", x = (L_demandee + L_offerte) / 2, y = w_min - 0.45,
            label = "Chômage classique", size = 3.4, color = macro_pal[["rouge"]]) +
   annotate("point", x = eq_L, y = eq_w, size = 2.2, color = macro_pal[["gris"]]) +
+  annotate("text", x = eq_L, y = eq_w - 0.5,
+           label = "(w*, L*)", size = 3, color = macro_pal[["gris"]]) +
   scale_color_manual(values = c("Offre de travail (Ls)" = macro_pal[["bleu"]],
                                  "Demande de travail (Ld)" = macro_pal[["or"]])) +
-  coord_cartesian(xlim = c(0, 10), ylim = c(0, 9.5), expand = FALSE) +
+  coord_cartesian(xlim = c(0, 12.5), ylim = c(0, 9.5), expand = FALSE) +
   labs(x = "Emploi (L)", y = "Salaire réel (w = W/P)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid = element_blank())
 ```
 
 ## Le SMIC français est élevé rapporté au salaire médian
@@ -470,7 +493,8 @@ ggplot(df_kaitz, aes(x = pays, y = kaitz, fill = mise_en_avant)) +
                                 "Autre" = macro_pal[["bleu2"]])) +
   coord_flip(ylim = c(0, 0.75)) +
   labs(x = NULL, y = "Indice de Kaitz (SMIC / salaire médian)") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ## Baisser le coût du travail : la solution néoclassique au chômage

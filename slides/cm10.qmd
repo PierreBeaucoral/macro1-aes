@@ -69,10 +69,10 @@ ggplot() +
   geom_curve(data = fleches[3, ], aes(x = x, y = y, xend = xend, yend = yend),
              curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
              color = macro_pal["gris"], linewidth = 0.6) +
-  geom_point(data = sommets, aes(x, y), size = 4, color = macro_pal["bleu"]) +
+  geom_point(data = sommets, aes(x, y), size = 3.5, color = macro_pal["bleu"]) +
   geom_label(data = sommets, aes(x, y, label = label),
              nudge_y = c(-0.09, -0.09, 0.11),
-             size = 3.5, fontface = "bold", color = "#1f4e79",
+             size = 3, fontface = "bold", color = "#1f4e79",
              linewidth = 0, fill = "white") +
   coord_fixed(clip = "off") +
   xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
@@ -144,10 +144,13 @@ reformes <- data.frame(
 
 ggplot(reformes, aes(x = annee, y = 0, color = axe)) +
   geom_hline(yintercept = 0, linewidth = 0.4, color = "grey75") +
-  geom_point(size = 2.8) +
-  geom_text_repel(aes(label = label), size = 2.6, lineheight = 0.82, show.legend = FALSE,
-                   direction = "y", nudge_y = 0.55, segment.size = 0.3,
-                   segment.color = "grey60", box.padding = 0.15, force = 3,
+  geom_point(size = 2.4) +
+  # Repere recalibre pour la hauteur reduite (4.6 po) : texte, décalage et
+  # marge plus serres, force de repulsion un peu plus forte pour compenser
+  # l'espace vertical disponible en moins.
+  geom_text_repel(aes(label = label), size = 2.15, lineheight = 0.8, show.legend = FALSE,
+                   direction = "y", nudge_y = 0.4, segment.size = 0.3,
+                   segment.color = "grey60", box.padding = 0.1, force = 3.5,
                    min.segment.length = 0) +
   facet_wrap(~ axe, ncol = 1) +
   scale_color_manual(values = c("1. Coût du travail" = macro_pal[["bleu"]],
@@ -156,7 +159,7 @@ ggplot(reformes, aes(x = annee, y = 0, color = axe)) +
                       guide = "none") +
   scale_x_continuous(breaks = seq(1970, 2025, 5), limits = c(1969, 2028)) +
   coord_cartesian(ylim = c(-0.3, 2.1), clip = "off") +
-  labs(x = "Année", y = NULL) +
+  labs(x = NULL, y = NULL) +
   theme_macro() +
   theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
         panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(),
@@ -331,10 +334,25 @@ plot_trappe <- function(k) {
   regimes_k <- levels(df_trappe$regime)[seq_len(k)]
   d <- df_trappe[df_trappe$regime %in% regimes_k, ]
 
+  # Étiquette directe en bout de courbe plutôt qu'une légende : nom court
+  # du régime, avec un décalage vertical propre à chaque régime pour éviter
+  # que RSA et prime d'activité ne se chevauchent en fin de tracé.
+  lab_trappe <- d[d$x == max(d$x), ]
+  noms_courts <- c("RMI (avant 2009)" = "RMI",
+                    "RSA (depuis 2009)" = "RSA",
+                    "+ Prime d'activité (depuis 2016)" = "Prime d'activité")
+  decalages   <- c("RMI (avant 2009)" = 0,
+                    "RSA (depuis 2009)" = -4,
+                    "+ Prime d'activité (depuis 2016)" = 4)
+  lab_trappe$nom  <- noms_courts[as.character(lab_trappe$regime)]
+  lab_trappe$yfin <- lab_trappe$y + decalages[as.character(lab_trappe$regime)]
+
   p <- ggplot() +
     geom_abline(intercept = 100, slope = 0, linetype = "dotted",
                 color = "grey70", linewidth = 0.4) +
-    geom_line(data = d, aes(x = x, y = y, color = regime), linewidth = 1.1)
+    geom_line(data = d, aes(x = x, y = y, color = regime), linewidth = 1.1) +
+    geom_text(data = lab_trappe, aes(x = x, y = yfin, label = nom, color = regime),
+              hjust = 0, nudge_x = 3, size = 3.2, fontface = "bold", show.legend = FALSE)
 
   if (k >= 1) p <- p + annotate("text", x = 78, y = 100 + 0.05 * 78 + 4,
                                  label = "quasi 0 % conservé", size = 3,
@@ -348,13 +366,15 @@ plot_trappe <- function(k) {
                                  lineheight = 0.85)
 
   p +
-    scale_color_manual(values = cols_trappe, name = NULL, limits = levels(df_trappe$regime)) +
-    scale_x_continuous(limits = c(0, 100), labels = function(v) paste0(v, " %")) +
+    scale_color_manual(values = cols_trappe, name = NULL, limits = levels(df_trappe$regime),
+                        guide = "none") +
+    scale_x_continuous(limits = c(0, 130), breaks = seq(0, 100, 25),
+                        labels = function(v) paste0(v, " %")) +
     scale_y_continuous(limits = c(95, 190)) +
     labs(x = "Revenu d'activité (% du SMIC net travaillé)",
-         y = "Revenu disponible\n(indice, 100 = allocation seule)") +
+         y = "Revenu disponible (indice, base 100)") +
     theme_macro() +
-    theme(legend.position = "bottom")
+    theme(legend.position = "none", panel.grid.major.x = element_blank())
 }
 
 plot_trappe(1)
@@ -455,8 +475,9 @@ ggplot(seniors, aes(x = annee, y = taux, color = pays)) +
                       guide = "none") +
   scale_x_continuous(breaks = annees_sen, limits = c(2000, 2029)) +
   scale_y_continuous(labels = function(x) paste0(x, " %"), limits = c(25, 80)) +
-  labs(x = "Année", y = "Taux d'emploi des 55-64 ans (%)") +
-  theme_macro()
+  labs(x = NULL, y = "Taux d'emploi des 55-64 ans (%)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 # 6. Bilan : un chômage qui résiste aux réformes
@@ -489,8 +510,9 @@ ggplot(chomage_fr, aes(x = annee, y = taux)) +
            size = 3, color = macro_pal["rouge"], fontface = "italic") +
   scale_x_continuous(breaks = seq(1975, 2024, 5)) +
   scale_y_continuous(limits = c(0, 13.5), labels = function(x) paste0(x, " %")) +
-  labs(x = "Année", y = "Taux de chômage (BIT, %)") +
-  theme_macro()
+  labs(x = NULL, y = "Taux de chômage (BIT, %)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ## Vu en perspective : le Danemark reste sous la France, les États-Unis plus bas encore {.smaller}
@@ -528,18 +550,23 @@ df_cmp <- data.frame(
 )
 df_cmp$pays <- factor(df_cmp$pays, levels = c("France", "Danemark", "États-Unis"))
 
+etiquettes_cmp <- df_cmp[df_cmp$annee == max(annees_cmp), ]
+
 ggplot(df_cmp, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
   geom_line() +
+  geom_text(data = etiquettes_cmp, aes(label = pays), hjust = 0, nudge_x = 0.6,
+            size = 3.3, fontface = "bold", show.legend = FALSE) +
   scale_color_manual(values = c("France" = unname(macro_pal["bleu"]),
                                  "Danemark" = unname(macro_pal["vert"]),
                                  "États-Unis" = unname(macro_pal["gris"])),
-                      name = NULL) +
+                      guide = "none") +
   scale_linewidth_manual(values = c("France" = 1.1, "Danemark" = 1.1, "États-Unis" = 0.7),
                           guide = "none") +
-  scale_x_continuous(breaks = seq(2000, 2024, 4)) +
+  scale_x_continuous(breaks = seq(2000, 2024, 4), limits = c(2000, 2032)) +
   scale_y_continuous(labels = function(x) paste0(x, " %")) +
-  labs(x = "Année", y = "Taux de chômage harmonisé (%)") +
-  theme_macro()
+  labs(x = NULL, y = "Taux de chômage harmonisé (%)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ## Les évaluations disponibles nuancent l'efficacité de chaque axe
@@ -581,16 +608,21 @@ df_cdd <- data.frame(
 )
 df_cdd$mesure <- factor(df_cdd$mesure, levels = unique(df_cdd$mesure))
 
+lab_cdd <- df_cdd[df_cdd$annee == max(annees_cdd), ]
+
 ggplot(df_cdd, aes(x = annee, y = valeur, color = mesure)) +
   geom_line(linewidth = 1.1) +
   geom_point(size = 1.8) +
+  geom_text(data = lab_cdd, aes(label = paste0(valeur, " %")), hjust = 1.15,
+            size = 3, fontface = "bold", show.legend = FALSE) +
   facet_wrap(~ mesure, scales = "free_y", ncol = 2) +
   scale_color_manual(values = c(unname(macro_pal["bleu"]), unname(macro_pal["or"])), guide = "none") +
   scale_x_continuous(breaks = annees_cdd) +
   scale_y_continuous(labels = function(x) paste0(x, " %")) +
-  labs(x = "Année", y = "%") +
+  labs(x = NULL, y = "%") +
   theme_macro() +
-  theme(strip.text = element_text(face = "bold", color = "#1f4e79", size = rel(0.85)))
+  theme(strip.text = element_text(face = "bold", color = "#1f4e79", size = rel(0.85)),
+        panel.grid.major.x = element_blank())
 ```
 
 ## Pourquoi les résultats déçoivent-ils par rapport au triangle d'or ?
@@ -705,14 +737,23 @@ df_age <- data.frame(
 df_age$tranche <- factor(df_age$tranche, levels = c("50-54 ans", "55-59 ans", "60-64 ans"))
 df_age$pays    <- factor(df_age$pays,    levels = c("France", "UE27", "Allemagne", "Suède"))
 
+# Seuls les trois pays commentés dans le fig-cap (France, Allemagne, Suède)
+# sont étiquetés, et seulement sur la tranche 60-64 ans qui porte le
+# propos : pas de valeur sur chacune des douze barres.
+lab_age <- subset(df_age, tranche == "60-64 ans" & pays %in% c("France", "Allemagne", "Suède"))
+decalages_age <- c(France = -0.3, UE27 = -0.1, Allemagne = 0.1, Suède = 0.3)
+lab_age$x_pos <- 3 + decalages_age[as.character(lab_age$pays)]
+
 ggplot(df_age, aes(x = tranche, y = taux, fill = pays)) +
   geom_col(position = position_dodge(width = .8), width = .72) +
-  geom_text(aes(label = paste0(taux, " %")), position = position_dodge(width = .8),
-            vjust = -0.4, size = 3) +
+  geom_text(data = lab_age, aes(x = x_pos, y = taux, label = paste0(taux, " %")),
+            vjust = -0.5, size = 3.2, fontface = "bold", color = "#1f4e79",
+            inherit.aes = FALSE) +
   scale_fill_manual(values = unname(macro_pal[c("bleu", "gris", "or", "vert")]), name = NULL) +
   scale_y_continuous(limits = c(0, 100), labels = function(x) paste0(x, " %")) +
   labs(x = NULL, y = "Taux d'emploi") +
-  theme_macro()
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 . . .

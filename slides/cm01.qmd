@@ -84,9 +84,10 @@ ggplot(df_france, aes(x = annee, y = valeur)) +
   geom_hline(yintercept = 0, color = "grey70", linewidth = .3) +
   geom_line(color = unname(macro_pal["bleu"]), linewidth = .8) +
   facet_wrap(~indicateur, scales = "free_y", ncol = 2) +
-  labs(x = "Année", y = NULL) +
+  labs(x = NULL, y = NULL) +
   theme_macro() +
-  theme(strip.text = element_text(face = "bold", color = "#1f4e79"))
+  theme(strip.text = element_text(face = "bold", color = "#1f4e79"),
+        panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -181,12 +182,20 @@ ggplot(df_long, aes(x = annee, y = indice, color = serie)) +
            label = "Effet prix cumulé\n(coin d'inflation)",
            color = unname(macro_pal["or"]), fontface = "italic",
            size = 3.2, hjust = .5, lineheight = .9) +
+  geom_text(
+    data = subset(df_long, annee == max(annee)),
+    aes(label = paste0(serie, " : ",
+                        scales::label_number(accuracy = 0.1, decimal.mark = ",")(indice))),
+    hjust = 0, nudge_x = 1, fontface = "bold", size = 3.1, show.legend = FALSE
+  ) +
   scale_color_manual(values = c("PIB nominal" = unname(macro_pal["rouge"]),
                                  "PIB réel" = unname(macro_pal["bleu"])), name = NULL) +
-  scale_x_continuous(breaks = df_wedge$annee) +
-  labs(x = "Année", y = "Indice, base 100 en 1990") +
+  scale_x_continuous(breaks = df_wedge$annee, limits = c(1990, 2033)) +
+  labs(x = NULL, y = "Indice, base 100 en 1990") +
   theme_macro() +
-  theme(axis.text.x = element_text(angle = 40, hjust = 1))
+  theme(axis.text.x = element_text(angle = 40, hjust = 1),
+        legend.position = "none",
+        panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -247,7 +256,7 @@ ggplot(df_ppa, aes(x = pays, y = valeur, fill = mesure)) +
                       expand = expansion(mult = c(0, .12))) +
   labs(x = NULL, y = "PIB par habitant ($ courants, 2022)") +
   theme_macro() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom", panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -452,13 +461,14 @@ plot_pib_monde <- function(k) {
     ) +
     scale_x_continuous(limits = c(1000, 2023),
                         breaks = c(1000, 1500, 1700, 1820, 1900, 1950, 2000, 2023)) +
-    labs(x = "Année", y = "PIB mondial (Md $ int. 2011 PPA, échelle log)") +
+    labs(x = NULL, y = "PIB mondial (Md $ int. 2011 PPA, échelle log)") +
     guides(fill = guide_legend(nrow = 2, byrow = TRUE,
                                 override.aes = list(alpha = 0.5))) +
     theme_macro() +
     theme(axis.text.x = element_text(angle = 40, hjust = 1),
           legend.title = element_text(face = "bold"),
-          legend.text = element_text(size = 8))
+          legend.text = element_text(size = 8),
+          panel.grid.major.x = element_blank())
 }
 
 plot_pib_monde(1)
@@ -555,8 +565,8 @@ world <- merge(world, df_mult, by.x = "adm0_a3", by.y = "code", all.x = TRUE)
 
 ggplot(world) +
   geom_sf(aes(fill = multiplicateur), color = "white", linewidth = .1) +
-  scale_fill_viridis_c(
-    option = "mako", direction = -1,
+  scale_fill_gradient(
+    low = "#eef4f9", high = unname(macro_pal[["bleu"]]),
     na.value = "grey85",
     name = "Multiplicateur\n1950-2022"
   ) +
@@ -628,7 +638,7 @@ ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2022, color = groupe))
   scale_color_manual(values = pal_groupe, name = NULL) +
   labs(
     x = "PIB par habitant en 1990 (PPA, $ constants, échelle log)",
-    y = "Croissance annuelle moyenne\ndu PIB/hab., 1990-2022 (%)"
+    y = "Croissance annuelle moyenne du PIB/hab. (%)"
   ) +
   theme_macro() +
   theme(
@@ -692,7 +702,7 @@ ggplot(df_fait4, aes(x = decennie, y = croissance)) +
            size = 3.3, fontface = "italic", hjust = 0.5, lineheight = .9) +
   scale_y_continuous(limits = c(0, max(df_fait4$croissance) * 1.3),
                       expand = expansion(mult = c(0, 0))) +
-  labs(x = NULL, y = "Croissance annuelle moyenne\ndu PIB réel (%)") +
+  labs(x = NULL, y = "Croissance annuelle moyenne du PIB réel (%)") +
   theme_macro() +
   theme(panel.grid.major.x = element_blank())
 ```
@@ -776,8 +786,9 @@ ggplot(df_fait5, aes(x = annee, y = part_top10, color = pays, group = pays)) +
   scale_y_continuous(labels = scales::label_number(suffix = " %", decimal.mark = ","),
                       limits = c(25, 48)) +
   scale_color_manual(values = pal_pays, guide = "none") +
-  labs(x = NULL, y = "Part du revenu national détenue\npar les 10 % les plus riches") +
-  theme_macro()
+  labs(x = NULL, y = "Part des 10 % les plus riches (%)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -851,8 +862,9 @@ ggplot(df_ct, aes(x = annee, y = croissance)) +
             size = 3, fontface = "bold", color = unname(macro_pal["rouge"])) +
   scale_fill_manual(values = c(`TRUE` = unname(macro_pal["bleu"]), `FALSE` = unname(macro_pal["rouge"]))) +
   scale_x_continuous(breaks = seq(1950, 2020, by = 10)) +
-  labs(x = NULL, y = "Croissance annuelle du PIB\npar habitant (%)") +
-  theme_macro()
+  labs(x = NULL, y = "Croissance annuelle du PIB par habitant (%)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -916,8 +928,9 @@ ggplot(df_plot_mt, aes(x = annee)) +
   scale_y_log10(labels = scales::label_number(big.mark = " ")) +
   scale_x_continuous(breaks = seq(1990, 2020, by = 10)) +
   coord_cartesian(ylim = c(23000, 41000)) +
-  labs(x = NULL, y = "PIB par habitant\n($ int. 2011 PPA, échelle log)") +
-  theme_macro()
+  labs(x = NULL, y = "PIB par habitant ($, PPA 2011)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}
@@ -965,13 +978,18 @@ df_lt$tendance <- exp(fitted(fit_tendance))
 df_plot_lt <- df_lt[df_lt$annee >= 1985, ]  # meme fenetre que le moyen terme, pour comparaison visuelle
 
 ggplot(df_plot_lt, aes(x = annee)) +
+  geom_vline(xintercept = 2000, color = "grey55", linetype = "dashed", linewidth = .4) +
+  annotate("text", x = 2001, y = 38500,
+           label = "Pente plus faible\naprès 2000", hjust = 0,
+           color = "grey40", fontface = "italic", size = 2.9, lineheight = .9) +
   geom_line(aes(y = pib_hab), color = "grey75", linewidth = .6) +
   geom_line(aes(y = tendance), color = unname(macro_pal["bleu"]), linewidth = 1.3) +
   scale_y_log10(labels = scales::label_number(big.mark = " ")) +
   scale_x_continuous(breaks = seq(1990, 2020, by = 10)) +
   coord_cartesian(ylim = c(23000, 41000)) +
-  labs(x = NULL, y = "PIB par habitant\n($ int. 2011 PPA, échelle log)") +
-  theme_macro()
+  labs(x = NULL, y = "PIB par habitant ($, PPA 2011)") +
+  theme_macro() +
+  theme(panel.grid.major.x = element_blank())
 ```
 
 ::: {.source}

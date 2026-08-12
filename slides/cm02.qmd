@@ -505,8 +505,8 @@ couleurs_courbes <- c(
   "Demande agrégée après choc négatif (DA1)"    = unname(macro_pal["rouge"])
 )
 
-ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
-  geom_line(linewidth = 1) +
+ggplot(df_courbes, aes(x = Y, y = P, color = courbe)) +
+  geom_line(linewidth = 1, show.legend = FALSE) +
   geom_vline(xintercept = Y_star, color = unname(macro_pal["or"]),
              linetype = "dashed", linewidth = .6) +
   annotate("text", x = Y_star + 1.5, y = 148,
@@ -521,16 +521,17 @@ ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
   annotate("segment", x = E0$Y, xend = E1$Y, y = E0$P - 1, yend = E1$P + 1,
            arrow = arrow(length = unit(.18, "cm")), color = "#444444",
            linewidth = .5, linetype = "dotted") +
-  scale_color_manual(values = couleurs_courbes) +
-  scale_linetype_manual(values = c(
-    "Offre agrégée de court terme (OA_CT)"     = "solid",
-    "Demande agrégée initiale (DA0)"           = "solid",
-    "Demande agrégée après choc négatif (DA1)" = "solid"
-  )) +
+  annotate("text", x = 130, y = 142, label = "OA_CT", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["bleu"])) +
+  annotate("text", x = 124, y = 108, label = "DA0", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["vert"])) +
+  annotate("text", x = 55, y = 133, label = "DA1", hjust = 0, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["rouge"])) +
+  scale_color_manual(values = couleurs_courbes, guide = "none") +
   coord_cartesian(xlim = c(50, 140), ylim = c(95, 150)) +
   labs(x = "Production (Y)", y = "Niveau général des prix (P)") +
   theme_macro() +
-  theme(legend.title = element_blank())
+  theme(legend.position = "none")
 ```
 
 . . .
@@ -572,8 +573,8 @@ couleurs_courbes <- c(
   "Demande agrégée après choc positif (DA1)"    = unname(macro_pal["rouge"])
 )
 
-ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
-  geom_line(linewidth = 1) +
+ggplot(df_courbes, aes(x = Y, y = P, color = courbe)) +
+  geom_line(linewidth = 1, show.legend = FALSE) +
   geom_vline(xintercept = Y_star, color = unname(macro_pal["or"]),
              linetype = "dashed", linewidth = .6) +
   annotate("text", x = Y_star + 1.5, y = 148,
@@ -588,16 +589,17 @@ ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
   annotate("segment", x = E0$Y, xend = E1$Y, y = E0$P + 1, yend = E1$P - 1,
            arrow = arrow(length = unit(.18, "cm")), color = "#444444",
            linewidth = .5, linetype = "dotted") +
-  scale_color_manual(values = couleurs_courbes) +
-  scale_linetype_manual(values = c(
-    "Offre agrégée de court terme (OA_CT)"     = "solid",
-    "Demande agrégée initiale (DA0)"           = "solid",
-    "Demande agrégée après choc positif (DA1)" = "solid"
-  )) +
+  annotate("text", x = 65, y = 115.5, label = "OA_CT", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["bleu"])) +
+  annotate("text", x = 85, y = 142, label = "DA0", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["vert"])) +
+  annotate("text", x = 138, y = 135, label = "DA1", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["rouge"])) +
+  scale_color_manual(values = couleurs_courbes, guide = "none") +
   coord_cartesian(xlim = c(50, 145), ylim = c(95, 150)) +
   labs(x = "Production (Y)", y = "Niveau général des prix (P)") +
   theme_macro() +
-  theme(legend.title = element_blank())
+  theme(legend.position = "none")
 ```
 
 . . .
@@ -639,8 +641,8 @@ couleurs_courbes <- c(
   "Demande agrégée (DA)"                     = unname(macro_pal["vert"])
 )
 
-ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
-  geom_line(linewidth = 1) +
+ggplot(df_courbes, aes(x = Y, y = P, color = courbe)) +
+  geom_line(linewidth = 1, show.legend = FALSE) +
   geom_vline(xintercept = Y_star, color = unname(macro_pal["or"]),
              linetype = "dashed", linewidth = .6) +
   annotate("text", x = Y_star + 1.5, y = 158,
@@ -655,16 +657,17 @@ ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
   annotate("segment", x = E0$Y, xend = E1$Y, y = E0$P + 1, yend = E1$P - 1,
            arrow = arrow(length = unit(.18, "cm")), color = "#444444",
            linewidth = .5, linetype = "dotted") +
-  scale_color_manual(values = couleurs_courbes) +
-  scale_linetype_manual(values = c(
-    "Offre agrégée initiale (OA0)"           = "solid",
-    "Offre agrégée après choc négatif (OA1)" = "solid",
-    "Demande agrégée (DA)"                   = "solid"
-  )) +
+  annotate("text", x = 130, y = 142, label = "OA0", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["bleu"])) +
+  annotate("text", x = 60, y = 137, label = "OA1", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["rouge"])) +
+  annotate("text", x = 125, y = 108, label = "DA", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["vert"])) +
+  scale_color_manual(values = couleurs_courbes, guide = "none") +
   coord_cartesian(xlim = c(50, 140), ylim = c(95, 160)) +
   labs(x = "Production (Y)", y = "Niveau général des prix (P)") +
   theme_macro() +
-  theme(legend.title = element_blank())
+  theme(legend.position = "none")
 ```
 
 . . .
@@ -706,29 +709,43 @@ chocs <- data.frame(annee = c(1973, 1979),
 
 plot_choc <- function(montrer_chomage = FALSE) {
 
+  df_dernier <- df_choc[df_choc$annee == max(df_choc$annee), ]
+
   p <- ggplot(df_choc, aes(x = annee)) +
     geom_vline(data = chocs, aes(xintercept = annee), color = "grey55",
                linetype = "dashed", linewidth = .5) +
     geom_text(data = chocs, aes(x = annee, y = 14.5, label = lab),
               color = "grey40", size = 3, vjust = 0, lineheight = .85) +
     geom_line(aes(y = inflation, color = "Inflation (IPC, % annuel)"), linewidth = 1.1) +
-    geom_point(aes(y = inflation, color = "Inflation (IPC, % annuel)"), size = 2.2)
+    geom_point(aes(y = inflation, color = "Inflation (IPC, % annuel)"), size = 2.2) +
+    geom_text(data = df_dernier,
+              aes(y = inflation,
+                  label = paste0("Inflation : ",
+                                 scales::label_number(accuracy = 0.1, decimal.mark = ",")(inflation), " %")),
+              color = unname(macro_pal["rouge"]), hjust = 0, nudge_x = .8,
+              fontface = "bold", size = 3, show.legend = FALSE)
 
   if (montrer_chomage) {
     p <- p +
       geom_line(aes(y = chomage, color = "Taux de chômage (%)"), linewidth = 1.1) +
-      geom_point(aes(y = chomage, color = "Taux de chômage (%)"), size = 2.2)
+      geom_point(aes(y = chomage, color = "Taux de chômage (%)"), size = 2.2) +
+      geom_text(data = df_dernier,
+                aes(y = chomage,
+                    label = paste0("Chômage : ",
+                                   scales::label_number(accuracy = 0.1, decimal.mark = ",")(chomage), " %")),
+                color = unname(macro_pal["bleu"]), hjust = 0, nudge_x = .8,
+                fontface = "bold", size = 3, show.legend = FALSE)
   }
 
   p +
     scale_color_manual(values = c(
       "Inflation (IPC, % annuel)" = unname(macro_pal["rouge"]),
-      "Taux de chômage (%)"       = unname(macro_pal["bleu"]))) +
+      "Taux de chômage (%)"       = unname(macro_pal["bleu"])), guide = "none") +
     scale_x_continuous(breaks = df_choc$annee) +
-    coord_cartesian(ylim = c(0, 16)) +
-    labs(x = "Année", y = "%") +
+    coord_cartesian(xlim = c(1969, 1993), ylim = c(0, 16)) +
+    labs(x = NULL, y = "%") +
     theme_macro() +
-    theme(legend.title = element_blank())
+    theme(legend.position = "none", panel.grid.major.x = element_blank())
 }
 
 plot_choc(FALSE)
@@ -783,8 +800,8 @@ couleurs_courbes <- c(
   "Demande agrégée (DA)"                    = unname(macro_pal["vert"])
 )
 
-ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
-  geom_line(linewidth = 1) +
+ggplot(df_courbes, aes(x = Y, y = P, color = courbe)) +
+  geom_line(linewidth = 1, show.legend = FALSE) +
   geom_vline(xintercept = Y_star, color = unname(macro_pal["or"]),
              linetype = "dashed", linewidth = .6) +
   annotate("text", x = Y_star + 1.5, y = 148,
@@ -799,16 +816,17 @@ ggplot(df_courbes, aes(x = Y, y = P, color = courbe, linetype = courbe)) +
   annotate("segment", x = E0$Y, xend = E1$Y, y = E0$P - 1, yend = E1$P + 1,
            arrow = arrow(length = unit(.18, "cm")), color = "#444444",
            linewidth = .5, linetype = "dotted") +
-  scale_color_manual(values = couleurs_courbes) +
-  scale_linetype_manual(values = c(
-    "Offre agrégée initiale (OA0)"           = "solid",
-    "Offre agrégée après choc positif (OA1)" = "solid",
-    "Demande agrégée (DA)"                   = "solid"
-  )) +
+  annotate("text", x = 65, y = 115.5, label = "OA0", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["bleu"])) +
+  annotate("text", x = 90, y = 98, label = "OA1", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["rouge"])) +
+  annotate("text", x = 135, y = 98, label = "DA", hjust = .5, fontface = "bold",
+           size = 3.2, color = unname(macro_pal["vert"])) +
+  scale_color_manual(values = couleurs_courbes, guide = "none") +
   coord_cartesian(xlim = c(50, 140), ylim = c(90, 150)) +
   labs(x = "Production (Y)", y = "Niveau général des prix (P)") +
   theme_macro() +
-  theme(legend.title = element_blank())
+  theme(legend.position = "none")
 ```
 
 . . .
@@ -886,7 +904,7 @@ plot_signature <- function(annees_visibles) {
     coord_cartesian(xlim = c(-3.8, 2.6), ylim = c(-1, 15)) +
     labs(x = "Croissance du PIB réel (%)", y = "Inflation, IPC (%)") +
     theme_macro() +
-    theme(legend.title = element_blank())
+    theme(legend.position = "none")
 }
 
 plot_signature("2019")
