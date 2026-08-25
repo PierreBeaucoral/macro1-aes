@@ -287,7 +287,7 @@ ggplot(df_cycle, aes(x = t_idx, y = croissance)) +
 
 Les bandes grisées matérialisent la règle des deux trimestres consécutifs : 2008T2-2009T1 et 2020T1-T2 sont des récessions techniques. À l'inverse, 2020T4 est un trimestre isolé de croissance négative (encadré entre deux trimestres positifs) : ce n'est pas une récession au sens de la définition, la barre rouge unique le montre bien.
 
-## 2. Cinq faits marquants de la croissance
+## 2. Cinq faits marquants sur la croissance
 
 L'observation de longue période fait apparaître cinq régularités empiriques qui structurent la réflexion sur la croissance et, en creux, sur le rôle de la politique économique.
 
@@ -424,18 +424,20 @@ Le multiplicateur varie considérablement d'un pays à l'autre : il dépasse 25 
 
 ```{r}
 #| label: fig-convergence
-#| fig-cap: "Convergence du PIB par habitant, 1990-2022. Chaque point est un pays : abscisse = PIB par habitant en 1990 (PPA, dollars constants, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant entre 1990 et 2022. Source : Banque mondiale / Maddison Project Database (2023)."
+#| fig-cap: "Convergence du PIB par habitant, 1990-2025. Chaque point est un pays : abscisse = PIB par habitant en 1990 (PPA, dollars internationaux constants de 2021, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant entre 1990 et 2025. Source : Banque mondiale, World Development Indicators, indicateur NY.GDP.PCAP.PP.KD, extraction d'août 2026 ; les valeurs de 2025 sont encore susceptibles d'être révisées."
 #| fig-width: 8.4
 #| fig-height: 4.7
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 library(ggrepel)
 
-# PIB par habitant (PPA, $ constants) en 1990 et taux de croissance annuel
-# moyen 1990-2022 (CAGR), 18 pays. Source : Banque mondiale / Maddison
-# Project Database (2023). Données figées dans
-# data/convergence_1990_2022.csv : aucun appel réseau au rendu.
-df_conv <- read.csv(here::here("data/convergence_1990_2022.csv"))
+# PIB par habitant (PPA, $ internationaux constants de 2021) en 1990 et taux
+# de croissance annuel moyen 1990-2025 (CAGR), 18 pays. Source unique :
+# Banque mondiale, World Development Indicators, NY.GDP.PCAP.PP.KD, extraction
+# d'aout 2026. Les deux bornes viennent du meme millesime, sans quoi le CAGR
+# melangerait des bases PPA differentes. Donnees figees dans
+# data/convergence_1990_2025.csv : aucun appel reseau au rendu.
+df_conv <- read.csv(here::here("data/convergence_1990_2025.csv"))
 
 niv_groupe <- c("OCDE : rattrapage interne", "Convergents asiatiques",
                  "Non-convergents (Afrique subsah., Am. latine)")
@@ -447,7 +449,7 @@ pal_groupe <- c(
   "Non-convergents (Afrique subsah., Am. latine)"  = unname(macro_pal["rouge"])
 )
 
-ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2022, color = groupe)) +
+ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2025, color = groupe)) +
   geom_hline(yintercept = 0, color = "grey75", linewidth = .3) +
   geom_smooth(aes(group = 1), method = "loess", formula = y ~ x, span = 0.9,
               se = FALSE, color = "grey40", linewidth = 0.8) +
@@ -458,8 +460,8 @@ ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2022, color = groupe))
   scale_x_log10(labels = scales::label_number(big.mark = " ")) +
   scale_color_manual(values = pal_groupe, name = NULL) +
   labs(
-    x = "PIB par habitant en 1990 (PPA, $ constants, échelle log)",
-    y = "Croissance annuelle moyenne\ndu PIB/hab., 1990-2022 (%)"
+    x = "PIB par habitant en 1990 (PPA, $ int. constants 2021, échelle log)",
+    y = "Croissance annuelle moyenne\ndu PIB/hab., 1990-2025 (%)"
   ) +
   theme_macro() +
   theme(
