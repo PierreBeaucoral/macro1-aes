@@ -119,6 +119,24 @@ Isole le seul effet volume : mesure pertinente pour comparer l'activité dans le
 :::
 :::
 
+## PIB nominal, PIB réel : la logique de la décomposition {.smaller}
+
+```{mermaid}
+%%| fig-cap: "Le PIB nominal combine un effet volume et un effet prix ; en fixant les prix, le PIB réel isole le seul effet volume."
+flowchart TD
+    A[Quantites x Prix courants] --> B[PIB nominal]
+    C[Quantites x Prix constants] --> D[PIB reel]
+    B --> E[Effet volume]
+    B --> F[Effet prix]
+    D --> G[Effet volume seul]
+```
+
+. . .
+
+::: {.cle}
+C'est cette décomposition qui justifie de toujours calculer un taux de croissance sur le PIB **réel** : le PIB nominal peut augmenter sans que la richesse produite augmente, si c'est l'effet prix qui domine.
+:::
+
 ## En pratique, on ne pèse pas des quantités : on déflate des valeurs {.smaller}
 
 Personne ne recompte chaque année toutes les quantités produites : l'Insee part des **valeurs en euros courants** et leur retire la part due aux prix.
@@ -148,43 +166,31 @@ Un « prix constant » n'est pas le prix d'une année lointaine appliqué mécan
 Source : Insee, comptes nationaux annuels, base 2020 ; SEC 2010 (Eurostat).
 :::
 
-## PIB nominal, PIB réel : la logique de la décomposition {.smaller}
-
-```{mermaid}
-%%| fig-cap: "Le PIB nominal combine un effet volume et un effet prix ; en fixant les prix, le PIB réel isole le seul effet volume."
-flowchart TD
-    A[Quantites x Prix courants] --> B[PIB nominal]
-    C[Quantites x Prix constants] --> D[PIB reel]
-    B --> E[Effet volume]
-    B --> F[Effet prix]
-    D --> G[Effet volume seul]
-```
-
-. . .
-
-::: {.cle}
-C'est cette décomposition qui justifie de toujours calculer un taux de croissance sur le PIB **réel** : le PIB nominal peut augmenter sans que la richesse produite augmente, si c'est l'effet prix qui domine.
-:::
-
 ## Deux indices de prix, deux champs, deux constructions {.smaller}
 
 ::: {.columns}
 ::: {.column width="50%"}
 **L'IPC** (Insee, mensuel)
 
+::: {.incremental}
 - Champ : la consommation des ménages, **importations comprises**.
 - 440 postes, environ 1 200 variétés. Les pondérations sont la part de chaque poste dans la dépense des ménages, tirée de la comptabilité nationale et **réactualisée chaque année**.
 - Environ 140 000 relevés par mois dans quelque 30 000 points de vente, complétés depuis 2020 par les **données de caisse** de la grande distribution (près de 80 millions de produits suivis) et 2,5 millions de prix collectés sur internet.
 - Formule : **Laspeyres chaîné** annuellement.
 :::
+:::
 ::: {.column width="50%"}
 **Le déflateur du PIB** (trimestriel)
 
+::: {.incremental}
 - Champ : la production nationale, **exportations comprises, importations exclues**.
 - Aucun relevé propre : c'est un **résultat de calcul**, PIB nominal / PIB réel × 100.
 - Ses pondérations sont celles de la production **de l'année courante**, d'où un indice de type **Paasche**.
 :::
 :::
+:::
+
+. . .
 
 ::: {.cle}
 D'où une divergence à retenir : un choc sur le prix de l'énergie importée fait bondir l'IPC et beaucoup moins le déflateur du PIB. Le pétrole pèse dans le panier des ménages ; il ne fait pas partie de la valeur ajoutée produite en France.
