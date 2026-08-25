@@ -241,5 +241,5 @@ Ne confondez pas politique **conjoncturelle** (agit sur la demande à court term
 - « Inflation : causes et conséquences », Florent Leydier : [youtube.com/watch?v=K1tIaY_1x-c](https://www.youtube.com/watch?v=K1tIaY_1x-c)
 - « Covid-19 : quel avenir pour l'économie ? », *Dessine-moi l'éco* : [youtube.com/watch?v=5nRm8isq1_I](https://www.youtube.com/watch?v=5nRm8isq1_I)
 - Sur le carré magique de Kaldor : [youtube.com/watch?v=tn5dQ7udJ9o](https://www.youtube.com/watch?v=tn5dQ7udJ9o)
-- Pour situer la règle de Tinbergen et les fonctions de Musgrave dans une perspective d'ensemble : A. Bénassy-Quéré, B. Coeuré, P. Jacquet, J. Pisani-Ferry, *Politique économique*, De Boeck [@benassy2017] ; R. Musgrave, *The Theory of Public Finance* [@musgrave1959].
+- Pour situer la règle de Tinbergen et les fonctions de Musgrave dans une perspective d'ensemble : A. Bénassy-Quéré, B. Coeuré, P. Jacquet, J. Pisani-Ferry, *Politique économique*, De Boeck [@benassy2021] ; R. Musgrave, *The Theory of Public Finance* [@musgrave1959].
 :::

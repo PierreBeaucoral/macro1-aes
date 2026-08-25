@@ -834,5 +834,5 @@ Relire les encadrés « Erreur fréquente » de chaque chapitre : ils ciblent pr
 :::
 
 ::: {.source}
-Sources : Chapitre III, §II (`cours/chap3.qmd`) ; DARES (2016), *Faut-il baisser le coût du travail ?* ; *Prestations sociales et trappe à inactivité* ; *Réformes du droit du travail en France* ; *Protection de l'emploi, emploi et chômage* ; Bénassy-Quéré et al. (2017) [@benassy2017].
+Sources : Chapitre III, §II (`cours/chap3.qmd`) ; DARES (2016), *Faut-il baisser le coût du travail ?* ; *Prestations sociales et trappe à inactivité* ; *Réformes du droit du travail en France* ; *Protection de l'emploi, emploi et chômage* ; Bénassy-Quéré et al. (2021) [@benassy2021].
 :::

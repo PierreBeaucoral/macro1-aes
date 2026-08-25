@@ -17,7 +17,7 @@ Cette page rassemble les ressources complémentaires du cours : elles ne remplac
 
 Trois manuels de référence couvrent l'ensemble du programme. Ils sont complémentaires : Bénassy-Quéré et al. est le plus proche du plan du cours (politiques de stabilisation, structurelles, marché du travail) ; Blanchard et Cohen offre les fondements de macroéconomie générale ; Généreux propose une mise en perspective historique et institutionnelle de la politique économique.
 
-- Agnès **Bénassy-Quéré**, Benoît **Coeuré**, Pierre **Jacquet** et Jean **Pisani-Ferry**, *Politique économique*, 4^e^ édition, De Boeck Supérieur, 2017 [@benassy2017].
+- Agnès **Bénassy-Quéré**, Benoît **Coeuré**, Pierre **Jacquet** et Jean **Pisani-Ferry**, *Politique économique*, 5^e^ édition, De Boeck Supérieur, 2021 [@benassy2021].
 - Olivier **Blanchard** et Daniel **Cohen**, *Macroéconomie*, 7^e^ édition, Pearson Education, 2020 [@blanchardcohen].
 - Jacques **Généreux**, *Introduction à la politique économique*, 4^e^ édition, Éditions du Seuil, 2018 [@genereux].
 

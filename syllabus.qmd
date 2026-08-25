@@ -94,7 +94,7 @@ Quelques règles de vie en séance :
 
 Trois manuels de référence accompagnent le cours ; ils ne sont pas exclusifs des ressources complémentaires signalées au fil des chapitres.
 
-- Bénassy-Quéré, A., Coeuré, B., Jacquet, P. et Pisani-Ferry, J. [-@benassy2017]. *Politique économique*, 4e édition, De Boeck Supérieur.
+- Bénassy-Quéré, A., Coeuré, B., Jacquet, P. et Pisani-Ferry, J. [-@benassy2021]. *Politique économique*, 5e édition, De Boeck Supérieur.
 - Blanchard, O. et Cohen, D. [-@blanchardcohen]. *Macroéconomie*, 7e édition, Pearson Education.
 - Généreux, J. [-@genereux]. *Introduction à la politique économique*, 4e édition, Éditions du Seuil.
 

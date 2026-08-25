@@ -104,7 +104,7 @@ Un pays ne choisit pas ses instruments isolément : il combine un niveau de **pr
 | **Logique** | Ni emplois ni travailleurs protégés | Emplois **et** travailleurs protégés | Travailleurs protégés, pas les emplois |
 
 ::: {.source}
-Source : d'après Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2017) [@benassy2017].
+Source : d'après Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2021) [@benassy2021].
 :::
 
 ## Protéger l'emploi : ce que mesure vraiment l'indice de l'OCDE {.smaller}
@@ -518,5 +518,5 @@ Ces deux arbres se répondent terme à terme : c'est cette architecture à deux 
 :::
 
 ::: {.source}
-Sources : Chapitre III, Section I (`cours/chap3.qmd`) ; Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2017) [@benassy2017].
+Sources : Chapitre III, Section I (`cours/chap3.qmd`) ; Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2021) [@benassy2021].
 :::

@@ -77,7 +77,7 @@ Au-delà des instruments pris isolément, on peut caractériser des **modèles n
 
 : Trois modèles de fonctionnement du marché du travail {#tbl-modeles}
 
-*Source : d'après Bénassy-Quéré et al. (2017) [@benassy2017].*
+*Source : d'après Bénassy-Quéré et al. (2021) [@benassy2021].*
 
 Cette typologie éclaire un point essentiel : **protection de l'emploi** (coût du licenciement) et **protection des travailleurs** (revenu, employabilité) ne sont pas la même chose. Le modèle danois découple les deux : licenciements faciles, mais niveau de vie et accompagnement élevés pour les personnes qui perdent leur emploi. L'indice OCDE de protection de l'emploi permet de chiffrer ce « Faible » de la @tbl-modeles (@fig-epl).
 
