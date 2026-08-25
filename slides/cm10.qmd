@@ -96,7 +96,7 @@ Depuis les années 1970, les gouvernements successifs, quelle que soit leur coul
 
 Ces trois axes correspondent chacun à un diagnostic théorique vu au chapitre II : le premier suppose un chômage **classique** (néoclassique), le second cible les **rigidités institutionnelles** (WS-PS, appariement), le troisième traite la **trappe à inactivité**, à l'interface entre incitations individuelles et redistribution.
 
-## Chaque axe cible un diagnostic théorique du chapitre II
+## Chaque axe cible un diagnostic théorique du chapitre II {.smaller}
 
 ```{mermaid}
 %%| fig-cap: "Les trois axes de reforme ne sont pas interchangeables : chacun repond a un diagnostic theorique different vu au chapitre II, ce qui explique pourquoi ils sont souvent combines plutot que substitues."
@@ -668,7 +668,7 @@ flowchart LR
 Aucun chapitre ne se comprend isolément : un contresens sur le diagnostic (chapitre II) entraîne un contresens sur la politique recommandée (chapitre III), et toute politique reste contrainte par les arbitrages du chapitre I.
 :::
 
-## Quatre regards complémentaires sur le chômage (rappel Chapitre II)
+## Quatre regards complémentaires sur le chômage (rappel Chapitre II) {.smaller}
 
 | Cadre théorique | Mécanisme central | Type de chômage expliqué | Horizon |
 |---|---|---|---|

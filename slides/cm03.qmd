@@ -358,7 +358,7 @@ Il n'existe pas une, mais **deux** mesures officielles du chômage en France : c
 Le **chômage de longue durée** désigne une recherche d'emploi qui se prolonge au-delà de **12 mois**.
 :::
 
-## France Travail classe les demandeurs d'emploi en cinq catégories
+## France Travail classe les demandeurs d'emploi en cinq catégories {.smaller}
 
 France Travail comptabilise les personnes **inscrites**, réparties selon leur situation :
 
@@ -495,7 +495,7 @@ ggplot(df_mesures, aes(x = annee, y = valeur, color = indicateur)) +
 Insee, enquête Emploi (chômeurs BIT, France hors Mayotte) ; Dares/France Travail, STMT (catégories A et A+B+C, France entière). Les trois courbes restent structurellement ordonnées (BIT < catégorie A < catégories A+B+C), preuve visuelle que les deux logiques de mesure ne comptent pas la même population.
 :::
 
-## Un même taux de chômage peut cacher deux marchés très différents
+## Un même taux de chômage peut cacher deux marchés très différents {.smaller}
 
 Deux pays affichant un taux de chômage **quasi identique** peuvent avoir des taux d'emploi et d'activité très différents, selon le niveau de participation au marché du travail. Cas réel : Suède contre Italie, 2023. Cliquez pour révéler les indicateurs un à un.
 

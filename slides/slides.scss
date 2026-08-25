@@ -39,11 +39,16 @@ $presentation-font-size-root: 30px;
 // diapo avec du texte et un encadré, et sans lui il les repousserait hors de
 // l'écran. Une diapo dont le schéma est le seul contenu gagne malgré tout
 // nettement en taille par rapport au rendu par défaut.
+// Le plafond est exprimé en pixels et non en `vh` : reveal applique un
+// `transform: scale()` a la diapo, donc les px sont ici des unites de diapo
+// (hauteur de reference : 750px). Avec `vh`, la hauteur du schema suivait
+// celle de la fenetre du navigateur, si bien qu'un schema tenant dans la
+// diapo sur un ecran d'ordinateur en debordait une fois projete en 16/9.
 .reveal svg[id^="mermaid"] {
   max-width: 100% !important;
   width: 100%;
   height: auto;
-  max-height: 48vh;
+  max-height: 300px;
 }
 
 .reveal svg[id^="mermaid"] .nodeLabel,

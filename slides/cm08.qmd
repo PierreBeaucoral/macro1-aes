@@ -106,7 +106,7 @@ L'écart entre l'Espagne ou la Grèce (chômage à deux chiffres) et l'Allemagne
 
 Deux niveaux : au niveau **micro**, chaque entreprise fixe $w$, $p$ et son embauche ; au niveau **macro**, l'agrégation de ces décisions fait émerger deux courbes, WS et PS, dont la confrontation détermine le salaire réel et l'emploi total.
 
-## Les décisions micro s'agrègent en deux courbes macro
+## Les décisions micro s'agrègent en deux courbes macro {.smaller}
 
 ```{mermaid}
 %%| fig-cap: "Les décisions individuelles des entreprises se rejoignent au niveau macroéconomique dans les courbes WS et PS, dont la confrontation détermine le salaire réel et l'emploi total."
@@ -145,7 +145,7 @@ Les **insiders** (en poste) défendent leur salaire et leur emploi au détriment
 :::
 :::
 
-## Deux logiques convergent vers un salaire élevé
+## Deux logiques convergent vers un salaire élevé {.smaller}
 
 ```{mermaid}
 %%| fig-cap: "Salaire d'efficience et pouvoir de négociation des insiders sont deux logiques distinctes qui convergent vers un salaire réel supérieur au salaire de réserve, à l'origine de la pente négative de la courbe WS."
@@ -362,7 +362,7 @@ Néoclassique, keynésien et WS-PS raisonnent sur une structure **statique** : e
 
 Il faut donc analyser le marché du travail en **flux** : créations et destructions d'emploi, entrées et sorties du chômage, mouvements entre emploi, chômage et inactivité.
 
-## Trois flux relient emploi, chômage et inactivité
+## Trois flux relient emploi, chômage et inactivité {.smaller}
 
 ```{mermaid}
 %%| fig-cap: "Trois flux relient en permanence emploi, chômage et inactivité : créations et destructions d'emploi, entrées et sorties du chômage, mouvements avec l'inactivité."
@@ -526,7 +526,7 @@ Relation **croissante** entre $\theta$ et $w/p$ : plus la probabilité de retrou
 :::
 :::
 
-## Deux relations opposées déterminent la tension d'équilibre
+## Deux relations opposées déterminent la tension d'équilibre {.smaller}
 
 ```{mermaid}
 %%| fig-cap: "La tension du marché du travail résulte de la rencontre entre la demande de travail des entreprises, décroissante avec le salaire réel, et la courbe des salaires, croissante avec le salaire réel."
@@ -572,7 +572,7 @@ Source : Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortens
 
 Ces deux leviers structurent une bonne partie des réformes du marché du travail en France et en Europe depuis les années 2000, étudiées en détail au **Chapitre III**.
 
-## Quatre regards complémentaires sur le chômage
+## Quatre regards complémentaires sur le chômage {.smaller}
 
 | Cadre théorique | Mécanisme central | Type de chômage | Horizon |
 |---|---|---|---|

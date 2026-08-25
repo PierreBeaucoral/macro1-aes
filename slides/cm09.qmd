@@ -48,7 +48,7 @@ subtitle: "CM 9 : Politiques de l'emploi : cadres d'analyse et flexisécurité (
 Une politique active n'a d'effet que si le **diagnostic** est le bon : baisser le coût du travail suppose un chômage classique ; renforcer l'accompagnement suppose un chômage frictionnel (Chapitre II).
 :::
 
-## Le diagnostic conditionne la politique active
+## Le diagnostic conditionne la politique active {.smaller}
 
 ```{mermaid}
 %%| fig-cap: "Le choix de la politique active depend du diagnostic pose sur le type de chomage : cout du travail pour un chomage classique, accompagnement pour un chomage frictionnel."
@@ -444,7 +444,7 @@ Une même réforme peut relever de **plusieurs** formes à la fois : la rupture 
 
 # 5. Protéger les travailleurs plutôt que les emplois
 
-## Quatre notions de sécurité à ne pas confondre
+## Quatre notions de sécurité à ne pas confondre {.smaller}
 
 ::: {.def}
 **Sécurité de l'emploi** : garder un emploi donné dans une entreprise donnée. Se mesure par le **taux de rotation de la main-d'œuvre** :
