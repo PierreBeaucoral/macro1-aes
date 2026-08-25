@@ -145,6 +145,45 @@ ggplot(df_long, aes(x = annee, y = indice, color = serie)) +
 
 Le PIB nominal croît plus vite que le PIB réel sur toute la période (× 2,7 contre × 1,6 entre 1990 et 2023) : l'écart traduit l'inflation cumulée. C'est pour isoler la seule création de richesse que le taux de croissance se calcule toujours sur le PIB réel.
 
+Encore faut-il savoir ce qu'est concrètement un « prix constant ». Personne ne recompte chaque année toutes les quantités produites dans le pays : l'Insee part des valeurs en euros courants, celles qui figurent sur les factures, et leur retire la part qui revient aux prix. L'opération se déroule en trois temps.
+
+Il faut d'abord **mesurer les prix**. Des indices de prix (indice des prix à la consommation, indices de prix de production) suivent dans le temps des références de biens strictement définies, de façon à comparer ce qui est comparable d'une année sur l'autre. Lorsqu'un produit change de qualité, par exemple un ordinateur plus puissant vendu au même prix, un **ajustement de qualité** évite de compter l'amélioration technique comme de l'inflation.
+
+Vient ensuite la **déflation** proprement dite, produit par produit : la valeur en volume est égale à la valeur courante divisée par l'indice de prix. Un exemple chiffré suffit à fixer l'idée.
+
+| | Prix | Quantité | Valeur courante |
+|---|---|---|---|
+| 2023 | 10 € | 100 | 1 000 € |
+| 2024 | 11 € | 102 | 1 122 € |
+
+La valeur produite passe de 1 000 à 1 122 euros, soit **+12,2 %** en nominal, alors que le prix, lui, augmente de **10 %**. En déflatant la valeur de 2024 par l'indice de prix (1 122 / 1,10 = 1 020 euros), il ne reste qu'une progression de **2 %** : c'est la croissance en volume, celle qui correspond effectivement aux 102 unités produites au lieu de 100.
+
+Reste enfin à **chaîner**. Chaque année est valorisée aux prix de l'année précédente, puis les taux de croissance ainsi obtenus sont enchaînés les uns aux autres (on parle de **volumes chaînés**, conformément au système européen des comptes SEC 2010), et le résultat est réexprimé en euros d'une année de référence, 2020 pour les comptes nationaux français.
+
+Un « prix constant » n'est donc pas le prix d'une année lointaine appliqué mécaniquement à toutes les années suivantes : c'est le produit d'un chaînage annuel, qui suit la déformation des prix relatifs. Deux conséquences en découlent. D'une part, le déflateur du PIB n'est pas une donnée relevée sur le terrain, mais un résultat du calcul. D'autre part, les volumes chaînés ne s'additionnent plus exactement : la somme des composantes ne redonne pas tout à fait le total, ce que les comptables nationaux appellent le **défaut d'additivité**.
+
+::: {.definition}
+**Déflateur du PIB** : indice de prix implicite de l'ensemble de la production nationale, obtenu comme rapport du PIB nominal au PIB réel :
+
+$$
+\text{Déflateur du PIB}_t = \frac{PIB\ \text{nominal}_t}{PIB\ \text{réel}_t} \times 100
+$$
+
+Il n'est jamais mesuré directement : il se déduit du calcul des volumes.
+:::
+
+Deux indices de prix reviennent constamment dans le débat public, et ils ne mesurent pas la même chose. L'**indice des prix à la consommation (IPC)**, publié chaque mois par l'Insee, porte sur la consommation des ménages, importations comprises. Il couvre 440 postes et environ 1 200 variétés de produits ; les pondérations sont la part de chaque poste dans la dépense des ménages, tirée de la comptabilité nationale et réactualisée chaque année. Sa construction repose sur une collecte massive : environ 140 000 relevés par mois dans quelque 30 000 points de vente, complétés depuis 2020 par les données de caisse de la grande distribution (près de 80 millions de produits suivis) et par 2,5 millions de prix collectés sur internet. La formule retenue est un indice de **Laspeyres**, chaîné annuellement [@insee2026ipc].
+
+Le **déflateur du PIB**, trimestriel, obéit à une tout autre logique. Son champ est la production nationale : les exportations y entrent, les importations en sont exclues. Il ne repose sur aucun relevé de prix qui lui soit propre, puisqu'il n'est que le rapport du PIB nominal au PIB réel. Et comme ses pondérations sont celles de la production de l'année courante, et non celles d'une année de base, il s'agit d'un indice de type **Paasche**.
+
+La différence n'est pas seulement technique : un choc sur le prix de l'énergie importée fait bondir l'IPC et beaucoup moins le déflateur du PIB. Le pétrole pèse lourd dans le panier des ménages, mais il ne fait pas partie de la valeur ajoutée produite en France.
+
+Aucun indice de prix n'est neutre, et deux biais de mesure méritent d'être connus. Le premier est l'**effet qualité**. Quand un produit disparaît des rayons en cours d'année et qu'un autre le remplace, l'écart de prix observé mêle deux choses distinctes : de l'inflation et un changement de qualité. L'Insee corrige cet écart pour obtenir une évolution à **qualité constante**, notamment par des méthodes hédoniques, qui estiment la valeur de chaque caractéristique du produit afin d'isoler ce qui relève du seul progrès technique. Sans cette correction, une partie du progrès technique serait comptée comme de l'inflation, et la croissance en volume sous-estimée d'autant.
+
+Le second est l'**effet de substitution**. Un indice de Laspeyres fige la composition du panier sur l'année écoulée, alors que les ménages se reportent précisément vers les produits qui renchérissent le moins. L'indice surestime donc la hausse du coût de la vie réellement subie : le rapport Boskin chiffrait ce biais à environ 1,1 point par an pour l'indice américain des prix à la consommation [@boskin1996]. Le déflateur du PIB, construit à pondérations courantes, porte le biais symétrique et sous-estime plutôt l'évolution des prix.
+
+Ces questions de mesure ne sont pas des raffinements de statisticien. Un point d'inflation surestimé, c'est un point de croissance en volume sous-estimé ; et comme le Smic, les pensions de retraite et de nombreux contrats sont indexés sur l'IPC, c'est aussi une indexation calée trop haut.
+
 Deux dérivés du PIB réel servent aux comparaisons internationales et sociales :
 
 - **PIB par habitant (ou par tête)** : PIB réel rapporté à la population, indicateur usuel de niveau de vie moyen.
@@ -420,7 +459,7 @@ ggplot(world) +
 
 Le multiplicateur varie considérablement d'un pays à l'autre : il dépasse 25 pour la Guinée équatoriale, Oman, la Corée du Sud ou le Botswana (rente pétrolière ou gazière, ou rattrapage industriel rapide), mais reste inférieur à 1 pour plusieurs pays d'Afrique subsaharienne (Liberia, Mozambique, République centrafricaine), où le revenu par habitant est aujourd'hui plus faible qu'en 1950. Cette hétérogénéité, bien plus large que celle observée entre les seules économies développées, illustre l'ampleur des trajectoires divergentes de croissance depuis 1950.
 
-**3. Une convergence inégale entre pays.** Au sein de l'OCDE, un phénomène de rattrapage a permis aux pays initialement moins riches de réduire leur écart avec les États-Unis. À l'échelle mondiale, en revanche, le niveau de départ ne suffit pas à prédire la croissance qui suit : sur données brutes, la convergence n'est pas vérifiée. Le rattrapage est spectaculaire en Asie émergente (Chine, Viêt Nam, Inde, Bangladesh) et réel pour une partie de l'Afrique (Éthiopie, Rwanda, Ghana), mais d'autres pays partis du même niveau — RD Congo, Rép. centrafricaine, Madagascar — ont vu leur revenu par habitant reculer. C'est cette dispersion à niveau initial donné, et non une relation d'ensemble, que montre la figure : la convergence est conditionnelle aux institutions, à l'accumulation de capital humain et aux politiques suivies.
+**3. Une convergence inégale entre pays.** Au sein de l'OCDE, un phénomène de rattrapage a permis aux pays initialement moins riches de réduire leur écart avec les États-Unis. À l'échelle mondiale, en revanche, le niveau de départ ne suffit pas à prédire la croissance qui suit : sur données brutes, la convergence n'est pas vérifiée. Le rattrapage est spectaculaire en Asie émergente (Chine, Viêt Nam, Inde, Bangladesh) et réel pour une partie de l'Afrique (Éthiopie, Rwanda, Ghana), mais d'autres pays partis du même niveau (RD Congo, Rép. centrafricaine, Madagascar) ont vu leur revenu par habitant reculer. C'est cette dispersion à niveau initial donné, et non une relation d'ensemble, que montre la figure : la convergence est conditionnelle aux institutions, à l'accumulation de capital humain et aux politiques suivies.
 
 ```{r}
 #| label: fig-convergence
