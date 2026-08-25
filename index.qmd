@@ -30,7 +30,7 @@ Le cours est organisé en **trois chapitres**, construits pour s'enchaîner logi
 <a class="card-tile" href="slides/cm01.html">
 <span class="tag">Slides</span>
 <h3>Commencer par le CM 1</h3>
-<p>Rappels sur le PIB, cinq faits marquants de la croissance et horizons temporels de la macroéconomie.</p>
+<p>Rappels sur le PIB, cinq faits marquants sur la croissance et horizons temporels de la macroéconomie.</p>
 </a>
 <a class="card-tile" href="td/td1.html">
 <span class="tag">TD</span>

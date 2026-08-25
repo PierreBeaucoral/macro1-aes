@@ -1,14 +1,14 @@
 ---
 title: "Chapitre I : Introduction à la politique économique"
 subtitle: "Rappels de croissance, horizons temporels et fondements de l'intervention publique"
-description: "Résumé de cours : cinq faits marquants de la croissance, horizons CT/MT/LT, typologie des politiques économiques et trois fonctions de Musgrave (stabilisation, allocation, redistribution)."
+description: "Résumé de cours : cinq faits marquants sur la croissance, horizons CT/MT/LT, typologie des politiques économiques et trois fonctions de Musgrave (stabilisation, allocation, redistribution)."
 ---
 
 ::: {.objectifs}
 Objectifs du chapitre
 
 - Distinguer PIB nominal, PIB réel, PIB par habitant et PIB par habitant en parité de pouvoir d'achat (PPA).
-- Restituer les cinq faits marquants de l'histoire de la croissance économique.
+- Restituer les cinq faits marquants sur la croissance économique.
 - Différencier les horizons court terme (CT), moyen terme (MT) et long terme (LT) en macroéconomie.
 - Définir la politique économique, la distinguer de l'économie politique, et situer ses fondements normatif/positif et néoclassique/keynésien.
 - Appliquer la règle de Tinbergen et le carré magique de Kaldor à un arbitrage d'objectifs.

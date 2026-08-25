@@ -7,7 +7,7 @@ subtitle: "Chapitre I, §1-3 : Mesurer et situer la croissance économique"
 
 ::: {.cle}
 1. Rappels sur le PIB (nominal/réel, croissance, cycles)
-2. Cinq faits marquants de l'histoire de la croissance
+2. Cinq faits marquants sur la croissance
 3. Les trois horizons temporels de la macroéconomie (CT/MT/LT)
 :::
 
@@ -24,7 +24,7 @@ Source : Ouedraogo (2025-2026), Chapitre I ; Mathonnat (2018-2019), Introduction
 ::: {.incremental}
 - Distinguer PIB nominal et PIB réel, et calculer un taux de croissance.
 - Différencier expansion, récession et dépression.
-- Restituer les cinq faits marquants de la croissance économique.
+- Restituer les cinq faits marquants sur la croissance économique.
 - Distinguer les horizons court terme, moyen terme et long terme, et les déterminants dominants à chaque horizon.
 :::
 
