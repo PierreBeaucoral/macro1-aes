@@ -119,6 +119,35 @@ Isole le seul effet volume : mesure pertinente pour comparer l'activité dans le
 :::
 :::
 
+## En pratique, on ne pèse pas des quantités : on déflate des valeurs {.smaller}
+
+Personne ne recompte chaque année toutes les quantités produites : l'Insee part des **valeurs en euros courants** et leur retire la part due aux prix.
+
+. . .
+
+**1. Mesurer les prix.** Des indices de prix (IPC, prix de production) suivent dans le temps des références de biens strictement définies. Si le produit change de qualité — un ordinateur plus puissant au même prix —, un **ajustement de qualité** évite de compter l'amélioration comme de l'inflation.
+
+**2. Déflater**, produit par produit : valeur en volume = valeur courante ÷ indice de prix.
+
+| | Prix | Quantité | Valeur courante |
+|---|---|---|---|
+| 2023 | 10 € | 100 | 1 000 € |
+| 2024 | 11 € | 102 | 1 122 € |
+
+Nominal **+12,2 %**, prix **+10 %** : valeur 2024 déflatée = 1 122 / 1,10 = 1 020 €, soit **+2 %** en volume.
+
+. . .
+
+**3. Chaîner.** Chaque année est valorisée **aux prix de l'année précédente**, puis les taux obtenus sont enchaînés (**volumes chaînés**, SEC 2010) et réexprimés en euros d'une année de référence — 2020 pour les comptes français.
+
+::: {.cle}
+Un « prix constant » n'est pas le prix d'une année lointaine appliqué mécaniquement : c'est un chaînage annuel, qui suit la déformation des prix relatifs. Deux conséquences : le **déflateur du PIB** est un résultat du calcul (nominal / réel × 100), pas une donnée mesurée ; et les volumes chaînés ne s'additionnent plus exactement au total (« défaut d'additivité »).
+:::
+
+::: {.source}
+Source : Insee, comptes nationaux annuels, base 2020 ; SEC 2010 (Eurostat).
+:::
+
 ## PIB nominal, PIB réel : la logique de la décomposition {.smaller}
 
 ```{mermaid}
