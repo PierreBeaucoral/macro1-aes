@@ -420,11 +420,11 @@ ggplot(world) +
 
 Le multiplicateur varie considérablement d'un pays à l'autre : il dépasse 25 pour la Guinée équatoriale, Oman, la Corée du Sud ou le Botswana (rente pétrolière ou gazière, ou rattrapage industriel rapide), mais reste inférieur à 1 pour plusieurs pays d'Afrique subsaharienne (Liberia, Mozambique, République centrafricaine), où le revenu par habitant est aujourd'hui plus faible qu'en 1950. Cette hétérogénéité, bien plus large que celle observée entre les seules économies développées, illustre l'ampleur des trajectoires divergentes de croissance depuis 1950.
 
-**3. Une convergence inégale entre pays.** Au sein de l'OCDE, un phénomène de rattrapage a permis aux pays initialement moins riches de réduire leur écart avec les États-Unis. À l'échelle mondiale, la convergence est plus sélective : elle est nette pour plusieurs pays asiatiques (Corée du Sud, Indonésie, Malaisie, Thaïlande, Chine), mais absente pour la plupart des pays d'Afrique subsaharienne et pour une partie de l'Amérique latine.
+**3. Une convergence inégale entre pays.** Au sein de l'OCDE, un phénomène de rattrapage a permis aux pays initialement moins riches de réduire leur écart avec les États-Unis. À l'échelle mondiale, en revanche, le niveau de départ ne suffit pas à prédire la croissance qui suit : sur données brutes, la convergence n'est pas vérifiée. Le rattrapage est spectaculaire en Asie émergente (Chine, Viêt Nam, Inde, Bangladesh) et réel pour une partie de l'Afrique (Éthiopie, Rwanda, Ghana), mais d'autres pays partis du même niveau — RD Congo, Rép. centrafricaine, Madagascar — ont vu leur revenu par habitant reculer. C'est cette dispersion à niveau initial donné, et non une relation d'ensemble, que montre la figure : la convergence est conditionnelle aux institutions, à l'accumulation de capital humain et aux politiques suivies.
 
 ```{r}
 #| label: fig-convergence
-#| fig-cap: "Convergence du PIB par habitant, 1990-2025. Chaque point est un pays : abscisse = PIB par habitant en 1990 (PPA, dollars internationaux constants de 2021, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant entre 1990 et 2025. Source : Banque mondiale, World Development Indicators, indicateur NY.GDP.PCAP.PP.KD, extraction d'août 2026 ; les valeurs de 2025 sont encore susceptibles d'être révisées."
+#| fig-cap: "Convergence du PIB par habitant, 1990-2024, 40 pays. Chaque point est un pays : abscisse = PIB par habitant en 1990, le niveau de départ (PPA, dollars internationaux constants de 2021, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant sur la période. Les groupes sont géographiques, pas construits sur le résultat : c'est la figure, et non la légende, qui dit qui converge. Source : Banque mondiale, World Development Indicators, indicateur NY.GDP.PCAP.PP.KD, extraction d'août 2026."
 #| fig-width: 8.4
 #| fig-height: 4.7
 source(here::here("R/theme_macro.R"))
@@ -432,36 +432,43 @@ library(ggplot2)
 library(ggrepel)
 
 # PIB par habitant (PPA, $ internationaux constants de 2021) en 1990 et taux
-# de croissance annuel moyen 1990-2025 (CAGR), 18 pays. Source unique :
+# de croissance annuel moyen 1990-2024 (CAGR), 40 pays. Source unique :
 # Banque mondiale, World Development Indicators, NY.GDP.PCAP.PP.KD, extraction
 # d'aout 2026. Les deux bornes viennent du meme millesime, sans quoi le CAGR
-# melangerait des bases PPA differentes. Donnees figees dans
-# data/convergence_1990_2025.csv : aucun appel reseau au rendu.
-df_conv <- read.csv(here::here("data/convergence_1990_2025.csv"))
+# melangerait des bases PPA differentes. Borne finale a 2024 et non 2025 : les
+# valeurs de la derniere annee publiee sont encore largement revisees.
+# Les groupes sont geographiques et non construits sur le resultat, sinon la
+# figure ne ferait que confirmer sa propre legende. Donnees figees dans
+# data/convergence_1990_2024.csv : aucun appel reseau au rendu.
+df_conv <- read.csv(here::here("data/convergence_1990_2024.csv"))
 
-niv_groupe <- c("OCDE : rattrapage interne", "Convergents asiatiques",
-                 "Non-convergents (Afrique subsah., Am. latine)")
+niv_groupe <- c("OCDE : pays avancés", "Asie émergente",
+                 "Afrique subsaharienne", "Amérique latine")
 df_conv$groupe <- factor(df_conv$groupe, levels = niv_groupe)
 
 pal_groupe <- c(
-  "OCDE : rattrapage interne"                     = unname(macro_pal["bleu"]),
-  "Convergents asiatiques"                         = unname(macro_pal["vert"]),
-  "Non-convergents (Afrique subsah., Am. latine)"  = unname(macro_pal["rouge"])
+  "OCDE : pays avancés"    = unname(macro_pal["bleu"]),
+  "Asie émergente"         = unname(macro_pal["vert"]),
+  "Afrique subsaharienne"  = unname(macro_pal["rouge"]),
+  "Amérique latine"        = unname(macro_pal["or"])
 )
 
-ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2025, color = groupe)) +
+ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2024, color = groupe)) +
   geom_hline(yintercept = 0, color = "grey75", linewidth = .3) +
   geom_smooth(aes(group = 1), method = "loess", formula = y ~ x, span = 0.9,
               se = FALSE, color = "grey40", linewidth = 0.8) +
-  geom_point(size = 2.6, alpha = .9) +
-  geom_text_repel(aes(label = pays), size = 3, seed = 20260710,
-                   show.legend = FALSE, max.overlaps = 20,
-                   segment.color = "grey60", segment.size = .3) +
-  scale_x_log10(labels = scales::label_number(big.mark = " ")) +
+  geom_point(size = 2.2, alpha = .9) +
+  geom_text_repel(aes(label = pays), size = 3.0, seed = 20260710,
+                   show.legend = FALSE, max.overlaps = Inf,
+                   box.padding = 0.22, point.padding = 0.1,
+                   min.segment.length = 0, force = 1.6,
+                   segment.color = "grey60", segment.size = .25) +
+  scale_x_log10(breaks = c(1000, 3000, 10000, 30000),
+                 labels = scales::label_number(big.mark = " ")) +
   scale_color_manual(values = pal_groupe, name = NULL) +
   labs(
-    x = "PIB par habitant en 1990 (PPA, $ int. constants 2021, échelle log)",
-    y = "Croissance annuelle moyenne\ndu PIB/hab., 1990-2025 (%)"
+    x = "PIB par habitant en 1990, niveau de départ (PPA, $ int. 2021, échelle log)",
+    y = "Croissance annuelle moyenne\ndu PIB/hab., 1990-2024 (%)"
   ) +
   theme_macro() +
   theme(
@@ -471,7 +478,7 @@ ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2025, color = groupe))
   guides(color = guide_legend(nrow = 2, byrow = TRUE, override.aes = list(size = 3)))
 ```
 
-Les pays convergents (Chine, Corée du Sud, Indonésie, Malaisie, Thaïlande) partaient d'un niveau bas en 1990 et affichent la croissance la plus forte : ils rattrapent les pays riches. À niveau initial comparable, les pays non convergents (RD Congo, Niger, Rép. centrafricaine, Madagascar, Mexique) stagnent ou reculent : l'écart se creuse. Au sein de l'OCDE, la relation négative entre niveau initial et croissance (rattrapage) est plus ténue.
+La courbe grise, presque plate, dit l'essentiel : sur données brutes, le niveau de départ ne prédit pas la croissance qui suit. Regardez la partie gauche du nuage : des pays partis du même niveau en 1990, entre 1 000 et 2 500 dollars, ont divergé du tout au tout. L'Éthiopie et le Rwanda gagnent plus de 3 % par an, la Chine 8,1 %, tandis que la RD Congo, la Rép. centrafricaine et Madagascar reculent. Le groupe le plus homogène est l'OCDE, resserré entre 0,7 % (Italie) et 1,6 % (États-Unis).
 
 **4. Un ralentissement du taux de croissance depuis les années 1970 dans les pays de l'OCDE.** L'économie continue de croître, mais à un rythme moins soutenu, principalement en raison du ralentissement des gains de productivité.
 
