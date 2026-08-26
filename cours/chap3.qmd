@@ -644,7 +644,11 @@ Les réformes françaises depuis 1972 se lisent selon **trois axes** : coût du 
 
 Ce chapitre a articulé deux niveaux de lecture. Au niveau conceptuel, politiques actives/passives et les trois modèles de marché du travail (flexibilité, sécurité, flexisécurité) fournissent une grille pour comparer les systèmes nationaux et leurs arbitrages entre protection de l'emploi et protection des travailleurs. Au niveau appliqué, la chronologie française montre une **constance des objectifs** (coût du travail, flexibilisation, activation) mais une difficulté durable à les combiner aussi efficacement que le triangle d'or danois. Ce chapitre clôt le programme : il invite à mobiliser conjointement les outils du chapitre I (arbitrages de politique économique) et du chapitre II (diagnostics théoriques du chômage) pour évaluer, de façon critique, l'efficacité des politiques de l'emploi.
 
-## Ouverture : population active, marché du travail et réforme des retraites
+## Ouverture
+
+Ce chapitre clôt le programme, mais les outils qu'il a construits ne prennent leur sens qu'appliqués. Deux ouvertures le montrent : la première sur un débat de politique publique majeur, la réforme des retraites ; la seconde sur la lecture critique de l'actualité économique, à partir d'un article de presse.
+
+### Population active, marché du travail et réforme des retraites
 
 La réforme des retraites de 2023 (recul progressif de l'âge légal de 62 à 64 ans, allongement de la durée de cotisation à 43 ans) cristallise la tension au cœur des chapitres II et III. Son objectif est la **soutenabilité financière** du système par répartition, dont l'équilibre dépend du rapport entre cotisants et retraités (Conseil d'orientation des retraites, COR) ; mécaniquement, elle **augmente la population active** en maintenant les seniors plus longtemps en activité.
 
@@ -692,6 +696,42 @@ Reculer l'âge de départ est-il d'abord un problème de **soutenabilité des re
 
 ::: {.source}
 Sources : Conseil d'orientation des retraites (COR), rapports annuels ; Insee, enquête Emploi ; DARES, publications sur l'emploi des seniors ; OCDE, *Working Better with Age* ; Conseil d'analyse économique (CAE). Données de taux d'emploi : Eurostat (`lfsa_ergan`).
+:::
+
+### Analyser un article de presse : la remontée du chômage en 2026
+
+Un cours de politique économique ne sert pas seulement à restituer des définitions le jour de l'examen. Il sert à lire l'actualité économique sans se laisser imposer son cadrage. L'exercice ci-dessous prend un article de presse et le passe au filtre des trois chapitres.
+
+**L'article.** Thibaud Métais, [« La hausse du chômage enterre la promesse d'Emmanuel Macron de retrouver le plein-emploi »](https://www.lemonde.fr/politique/article/2026/08/19/la-hausse-du-chomage-enterre-la-promesse-d-emmanuel-macron-de-retrouver-le-plein-emploi_6749465_823448.html), *Le Monde*, 19 août 2026 (réservé aux abonnés ; accessible via l'accès presse de la bibliothèque universitaire). Il part des chiffres du chômage publiés par l'Insee le 7 août 2026 et recueille les réactions d'économistes et de responsables politiques, à huit mois de l'élection présidentielle.
+
+**Les faits rapportés.** Au deuxième trimestre 2026, le taux de chômage au sens du BIT augmente pour la sixième fois consécutive : 0,2 point sur le trimestre (62 000 personnes), 0,7 point sur un an, pour atteindre **8,3 %**, soit 2,7 millions de chômeurs, avec une prévision de 8,5 % en fin d'année. La trajectoire depuis 2017 dessine un aller-retour : 9,7 % à l'élection d'Emmanuel Macron, 7,1 % en 2023 (un creux historiquement bas), 8,3 % aujourd'hui, alors que l'objectif affiché du second quinquennat était le plein-emploi, soit un taux de l'ordre de 5 %. Le chômage des 15-24 ans passe de 17,1 % en 2023 à 22,2 %, et la part des NEET (ni en emploi, ni en études, ni en formation) parmi les 15-29 ans de 11,8 % en 2022 à 13,3 %, au-dessus de la moyenne de l'Union européenne (11 %). Le taux d'emploi, lui, progresse de 65,5 % à 69 % en neuf ans.
+
+**La grille d'analyse.** Chaque élément de l'article renvoie à un outil vu en cours, et c'est cet outil qui permet d'en faire une lecture critique.
+
+| Ce que dit l'article | L'outil du cours | Ce qu'il permet de voir |
+|---|---|---|
+| Un taux de chômage de 8,3 %, soit 2,7 millions de chômeurs | La mesure du chômage au sens du BIT (chapitre II) | Le chiffre vient de l'enquête Emploi de l'Insee, non du décompte administratif de France Travail. Identifier la mesure avant de commenter le niveau. |
+| La loi pour le plein-emploi de janvier 2025 inscrit automatiquement les allocataires du RSA à France Travail, ce qui augmente mécaniquement le décompte | Les deux mesures concurrentes et les catégories A à E (chapitre II) | L'effet porte d'abord sur le décompte administratif. Peut-il déplacer aussi le taux BIT, qui exige une recherche active et une disponibilité ? Une règle administrative peut modifier le comportement de recherche, donc la statistique : c'est une question à instruire, pas un glissement à accepter. |
+| Assouplissement du code du travail, réformes de l'assurance chômage, subvention de l'apprentissage, aides aux entreprises | Les trois axes de la section II : coût du travail, flexibilisation, activation | Chaque mesure citée se situe sur un axe et répond à un diagnostic distinct. Les juger en bloc revient à évaluer une réforme à l'aune d'un diagnostic qui n'est pas le sien. |
+| « C'est le signe de l'échec de la politique de l'offre » (Eric Heyer, OFCE), contre l'argument adverse selon lequel les effets d'une telle politique ne se voient qu'à moyen et long terme | Les horizons temporels du chapitre I ; diagnostic classique contre diagnostic keynésien (chapitre II) | Le désaccord ne porte pas sur les chiffres, que personne ne conteste, mais sur l'horizon auquel une politique s'évalue et sur le diagnostic posé quant à la nature du chômage. |
+| Une note de la Banque de France indique que la part structurelle du chômage a diminué continûment sur dix ans | Chômage structurel et chômage conjoncturel, NAIRU (chapitre II) | Une remontée conjoncturelle et une baisse du chômage structurel ne se contredisent pas. Deux affirmations opposées en apparence peuvent être vraies ensemble si elles ne portent pas sur la même composante. |
+| Le taux d'emploi atteint 69 %, mais le taux de pauvreté augmente en parallèle, ce que l'OFCE lit comme le signe d'emplois créés souvent précaires | Taux d'emploi, taux d'activité et taux de chômage (chapitre II) ; dualisme et contrats courts (section II) | Un taux d'emploi record ne dit rien de la qualité des emplois. C'est la leçon de la comparaison Suède-Italie : un indicateur agrégé recouvre des marchés très différents. |
+| Chômage des 15-24 ans à 22,2 %, NEET à 13,3 %, arrêt de dispositifs destinés aux déscolarisés | Segmentation du marché du travail (chapitre II) ; politiques actives ciblées (section I) | La moyenne nationale masque une concentration du risque sur une classe d'âge, ce qui appelle des politiques ciblées plutôt que générales. |
+
+: Grille de lecture d'un article de presse à partir des outils du cours. {#tbl-grille-presse}
+
+::: {.callout-tip}
+## Questions sur l'article (TD)
+1. Quelle mesure du chômage l'article mobilise-t-il ? Le constat serait-il le même avec l'autre mesure vue en cours ?
+2. L'article attribue une partie de la hausse à la loi pour le plein-emploi. Cet argument vaut-il pour la mesure effectivement citée dans l'article ? Comment le vérifier ?
+3. Classez les dispositifs cités sur les trois axes de la section II. Un même axe domine-t-il ?
+4. Eric Heyer et les défenseurs de la politique de l'offre s'opposent-ils sur les faits, sur l'horizon d'évaluation, ou sur le diagnostic ?
+5. Comment un taux d'emploi au plus haut peut-il coexister avec une hausse du taux de pauvreté ? Quels indicateurs faudrait-il mobiliser pour trancher ?
+6. La Banque de France constate une baisse du chômage structurel, l'Insee une hausse du chômage observé. Ces deux constats sont-ils compatibles ? À quelle condition ?
+:::
+
+::: {.source}
+Source de l'exercice : Thibaud Métais, « La hausse du chômage enterre la promesse d'Emmanuel Macron de retrouver le plein-emploi », *Le Monde*, 19 août 2026, <https://www.lemonde.fr/politique/article/2026/08/19/la-hausse-du-chomage-enterre-la-promesse-d-emmanuel-macron-de-retrouver-le-plein-emploi_6749465_823448.html> (article réservé aux abonnés). Données citées : Insee, enquête Emploi, taux de chômage au sens du BIT (France hors Mayotte, données CVS), publication du 7 août 2026 ; Banque de France, note de mai 2026 sur la composante structurelle du chômage.
 :::
 
 ::: {.callout-note}
