@@ -1,0 +1,41 @@
+code,pays,groupe,pib_hab_1950,croissance_1950_2022
+PRT,Portugal,OCDE : pays avancés,3325,3.05
+ESP,Espagne,OCDE : pays avancés,3459,3.23
+GBR,Royaume-Uni,OCDE : pays avancés,11061,1.74
+JPN,Japon,OCDE : pays avancés,3062,3.57
+FRA,France,OCDE : pays avancés,8266,2.18
+DEU,Allemagne,OCDE : pays avancés,6186,2.85
+ITA,Italie,OCDE : pays avancés,5582,2.63
+USA,États-Unis,OCDE : pays avancés,15240,1.89
+CHN,Chine,Asie émergente,799,4.52
+IND,Inde,Asie émergente,987,2.91
+IDN,Indonésie,Asie émergente,1280,3.25
+VNM,Viêt Nam,Asie émergente,1049,2.87
+BGD,Bangladesh,Asie émergente,861,2.45
+THA,Thaïlande,Asie émergente,1302,3.58
+MYS,Malaisie,Asie émergente,2485,3.35
+KOR,Corée du Sud,Asie émergente,998,5.31
+PHL,Philippines,Asie émergente,1706,2.23
+PAK,Pakistan,Asie émergente,1025,2.37
+NER,Niger,Afrique subsaharienne,983,0.03
+CAF,Rép. centrafricaine,Afrique subsaharienne,1307,-1.08
+MDG,Madagascar,Afrique subsaharienne,1516,-0.14
+COD,RD Congo,Afrique subsaharienne,909,-0.10
+ETH,Éthiopie,Afrique subsaharienne,622,1.83
+GHA,Ghana,Afrique subsaharienne,1788,1.21
+KEN,Kenya,Afrique subsaharienne,1038,1.66
+NGA,Nigeria,Afrique subsaharienne,1200,2.02
+SEN,Sénégal,Afrique subsaharienne,2007,0.39
+TZA,Tanzanie,Afrique subsaharienne,676,2.12
+BWA,Botswana,Afrique subsaharienne,489,5.00
+RWA,Rwanda,Afrique subsaharienne,1020,1.07
+CIV,Côte d'Ivoire,Afrique subsaharienne,1659,1.23
+ZMB,Zambie,Afrique subsaharienne,1054,1.62
+MEX,Mexique,Amérique latine,3510,2.15
+BRA,Brésil,Amérique latine,2236,2.64
+ARG,Argentine,Amérique latine,7949,1.16
+COL,Colombie,Amérique latine,3432,2.02
+PER,Pérou,Amérique latine,3679,1.74
+CHL,Chili,Amérique latine,5880,1.90
+BOL,Bolivie,Amérique latine,3011,1.07
+ECU,Équateur,Amérique latine,2970,1.72

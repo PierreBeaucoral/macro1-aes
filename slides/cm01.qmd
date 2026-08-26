@@ -676,33 +676,35 @@ Les quatre pays sont tous des économies développées dès 1950 : l'écart de m
 **Convergence** : phénomène par lequel les pays initialement moins riches connaissent une croissance plus forte, réduisant leur écart avec les pays les plus riches.
 :::
 
-**Rattrapage net** : l'Asie émergente (Chine, Viêt Nam, Inde, Bangladesh) et, en Afrique, l'Éthiopie, le Rwanda, le Ghana.
+**Dans l'OCDE, rattrapage net** : le Japon, le plus pauvre du groupe en 1950, croît le plus vite ; les États-Unis, les plus riches, le moins vite.
 
-**Décrochage** : la RD Congo, la Rép. centrafricaine et Madagascar reculent, alors qu'ils partaient du même niveau que l'Éthiopie.
+**À l'échelle mondiale, rien de tel** : la courbe d'ensemble est plate. Le Botswana et la Corée du Sud décollent depuis le bas du classement, la RD Congo, Madagascar et la Centrafrique reculent.
 
-**La convergence n'a donc rien d'automatique** : à niveau de départ égal, les trajectoires divergent.
+**La convergence est donc conditionnelle** : elle joue à l'intérieur d'un club, pas entre tous les pays.
 :::
 
 ::: {.column width="65%"}
 ```{r}
 #| label: fig-fait3-convergence
-#| fig-cap: "Convergence du PIB par habitant, 1990-2024, 40 pays. Chaque point est un pays : abscisse = PIB par habitant en 1990, le niveau de départ (PPA, dollars internationaux constants de 2021, échelle logarithmique) ; ordonnée = taux de croissance annuel moyen du PIB par habitant sur la période. Les groupes sont géographiques, pas construits sur le résultat : c'est la figure, et non la légende, qui dit qui converge. Source : Banque mondiale, World Development Indicators, indicateur NY.GDP.PCAP.PP.KD, extraction d'août 2026."
+#| fig-cap: "Convergence du PIB par habitant, 1950-2022, 40 pays. Abscisse : PIB par habitant en 1950 (PPA, dollars internationaux constants, échelle logarithmique) ; ordonnée : croissance annuelle moyenne sur les 72 années suivantes. La droite grise ajuste les 40 pays, la droite bleue tiretée les seuls pays de l'OCDE. Source : Maddison Project Database (2023), via Our World in Data."
 #| fig-width: 8.0
 #| fig-height: 4.7
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 library(ggrepel)
 
-# PIB par habitant (PPA, $ internationaux constants de 2021) en 1990 et taux
-# de croissance annuel moyen 1990-2024 (CAGR), 40 pays. Source unique :
-# Banque mondiale, World Development Indicators, NY.GDP.PCAP.PP.KD, extraction
-# d'aout 2026. Les deux bornes viennent du meme millesime, sans quoi le CAGR
-# melangerait des bases PPA differentes. Borne finale a 2024 et non 2025 : les
-# valeurs de la derniere annee publiee sont encore largement revisees.
+# PIB par habitant (PPA, $ internationaux constants) en 1950 et taux de
+# croissance annuel moyen 1950-2022 (CAGR), 40 pays. Source unique : Maddison
+# Project Database (2023), via Our World in Data, meme base que la carte du
+# multiplicateur du fait 2. Les deux bornes viennent du meme millesime, sans
+# quoi le CAGR melangerait des bases PPA differentes.
+# Depart en 1950 plutot qu'en 1990 : sur la periode courte, le rattrapage
+# interne a l'OCDE est invisible, alors qu'il est ici tres net. Fin en 2022,
+# derniere annee disponible dans Maddison.
 # Les groupes sont geographiques et non construits sur le resultat, sinon la
 # figure ne ferait que confirmer sa propre legende. Donnees figees dans
-# data/convergence_1990_2024.csv : aucun appel reseau au rendu.
-df_conv <- read.csv(here::here("data/convergence_1990_2024.csv"))
+# data/convergence_1950_2022.csv : aucun appel reseau au rendu.
+df_conv <- read.csv(here::here("data/convergence_1950_2022.csv"))
 
 niv_groupe <- c("OCDE : pays avancés", "Asie émergente",
                  "Afrique subsaharienne", "Amérique latine")
@@ -715,21 +717,30 @@ pal_groupe <- c(
   "Amérique latine"        = unname(macro_pal["or"])
 )
 
-ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2024, color = groupe)) +
+ggplot(df_conv, aes(x = pib_hab_1950, y = croissance_1950_2022, color = groupe)) +
   geom_hline(yintercept = 0, color = "grey75", linewidth = .3) +
-  geom_smooth(aes(group = 1), method = "loess", formula = y ~ x, span = 0.9,
-              se = FALSE, color = "grey40", linewidth = 0.8) +
+  # Deux ajustements lineaires, conformes au test usuel de beta-convergence
+  # (regression de la croissance sur le log du niveau initial) : l'un sur les
+  # 40 pays, l'autre sur le seul groupe OCDE. Un lissage local ondulerait au
+  # gre de la composition de l'echantillon et suggererait une forme en U qui
+  # n'a pas de contenu economique.
+  geom_smooth(aes(group = 1), method = "lm", formula = y ~ x,
+              se = FALSE, color = "grey45", linewidth = 0.8) +
+  geom_smooth(data = subset(df_conv, groupe == "OCDE : pays avancés"),
+              aes(group = 1), method = "lm", formula = y ~ x, se = FALSE,
+              color = unname(macro_pal["bleu"]), linewidth = 0.8,
+              linetype = "longdash") +
   geom_point(size = 2.2, alpha = .9) +
   geom_text_repel(aes(label = pays), size = 3.0, seed = 20260710,
                    show.legend = FALSE, max.overlaps = Inf,
                    box.padding = 0.22, point.padding = 0.1,
                    min.segment.length = 0, force = 1.6,
                    segment.color = "grey60", segment.size = .25) +
-  scale_x_log10(breaks = c(1000, 3000, 10000, 30000),
+  scale_x_log10(breaks = c(500, 1000, 2000, 5000, 10000),
                  labels = scales::label_number(big.mark = " ")) +
   scale_color_manual(values = pal_groupe, name = NULL) +
   labs(
-    x = "PIB par habitant en 1990, niveau de départ (PPA, $ int. 2021, échelle log)",
+    x = "PIB par habitant en 1950, niveau de départ (PPA, $ int. constants, échelle log)",
     y = "Croissance annuelle moyenne\ndu PIB/hab. (%)"
   ) +
   theme_macro() +
@@ -741,7 +752,7 @@ ggplot(df_conv, aes(x = pib_hab_1990, y = croissance_1990_2024, color = groupe))
 ```
 
 ::: {.source}
-La courbe grise, presque plate, dit l'essentiel : sur données brutes, le niveau de départ ne prédit pas la croissance qui suit. Regardez la partie gauche du nuage : des pays partis du même niveau en 1990, entre 1 000 et 2 500 dollars, ont divergé du tout au tout. L'Éthiopie et le Rwanda gagnent plus de 3 % par an, la Chine 8,1 %, tandis que la RD Congo, la Rép. centrafricaine et Madagascar reculent. Le groupe le plus homogène est l'OCDE, resserré entre 0,7 % (Italie) et 1,6 % (États-Unis).
+La droite grise est quasi plate : sur 40 pays, le niveau de départ ne prédit pas la croissance qui suit. La droite bleue descend nettement : dans l'OCDE, le Japon, le plus pauvre en 1950, gagne 3,6 % par an, les États-Unis 1,9 %. La convergence joue à l'intérieur d'un club, non entre tous les pays.
 :::
 :::
 :::
