@@ -1,6 +1,6 @@
 ---
 title: "Comprendre, et discuter, les politiques économiques"
-subtitle: "Macroéconomie 1, L2 AES · Semestre 1"
+subtitle: "Macroéconomie 1, L2 AES · Semestre 1 · Année universitaire 2026-2027"
 description: "Page d'accueil du cours : présentation, méthode et accès direct aux résumés de cours, slides, dossiers de TD, syllabus et ressources."
 ---
 

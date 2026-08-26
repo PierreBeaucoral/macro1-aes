@@ -1,6 +1,6 @@
 ---
 title: "Syllabus"
-subtitle: "Macroéconomie 1 : Les Politiques Économiques"
+subtitle: "Macroéconomie 1 : Les Politiques Économiques · L2 AES, semestre 1 · Année universitaire 2026-2027"
 description: "Objectifs du cours, méthode de travail, planning des séances, modalités d'évaluation, consignes et manuels de référence."
 ---
 
@@ -12,13 +12,13 @@ Objectifs du cours
 - Approfondir l'analyse des politiques de l'emploi et du marché du travail (chapitres II et III).
 :::
 
-Ce cours de Macroéconomie 1 s'adresse aux étudiants de deuxième année de licence Administration Économique et Sociale (L2 AES), semestre 1.^[Ce syllabus reprend et met en forme le support de présentation du cours élaboré par M. Ouedraogo (2025-2026), avec des sources antérieures de C. Mathonnat (2018-2019).] Il se compose de trois chapitres : le chapitre I pose les concepts fondamentaux de la politique économique ; les chapitres II et III approfondissent, respectivement sous l'angle descriptif-théorique puis appliqué, le marché du travail et les politiques de l'emploi en France.
+Ce cours de Macroéconomie 1 s'adresse aux étudiants de deuxième année de licence Administration Économique et Sociale (L2 AES), semestre 1 de l'année universitaire **2026-2027**.^[Ce syllabus reprend et met en forme le support de présentation du cours élaboré par M. Ouedraogo (2025-2026), avec des sources antérieures de C. Mathonnat (2018-2019).] Il se compose de trois chapitres : le chapitre I pose les concepts fondamentaux de la politique économique ; les chapitres II et III approfondissent, respectivement sous l'angle descriptif-théorique puis appliqué, le marché du travail et les politiques de l'emploi en France.
 
 ## Enseignant
 
 ::: {.callout-note}
 ## Qui enseigne ce cours ?
-Ce cours est assuré par **Pierre Beaucoral**, ATER (Attaché Temporaire d'Enseignement et de Recherche) à l'Université Clermont Auvergne, pour la L2 AES (Semestre 1).
+Ce cours est assuré par **Pierre Beaucoral**, ATER (Attaché Temporaire d'Enseignement et de Recherche) à l'Université Clermont Auvergne, pour la L2 AES (semestre 1), au titre de l'année universitaire 2026-2027.
 
 Une permanence pédagogique (*office hours*) est proposée **uniquement sur rendez-vous** ; les modalités de prise de rendez-vous sont indiquées sur la page [Accueil](index.qmd) du site. Pour toute question, le contact par mail figure sur l'espace numérique de travail (ENT) du cours.
 :::
