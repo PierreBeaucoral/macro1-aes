@@ -76,7 +76,7 @@ website:
       - text: "Ressources"
         href: ressources.qmd
   page-footer:
-    left: "Macroéconomie 1, L2 AES · Pierre Beaucoral"
+    left: "Macroéconomie 1, L2 AES · Semestre 1, 2026-2027 · Pierre Beaucoral"
     right: "Construit avec [Quarto](https://quarto.org)."
 
 format:

@@ -16,13 +16,13 @@ format:
     fig-align: center
     fig-cap-location: bottom
     code-line-numbers: false
-    footer: "Macroéconomie 1, L2 AES"
+    footer: "Macroéconomie 1, L2 AES · 2026-2027"
     logo: ""
     link-external-newwindow: true
 
 # Auteur / cadre communs
 author: "Pierre Beaucoral"
-institute: "L2 AES : Semestre 1"
+institute: "L2 AES : Semestre 1, 2026-2027"
 lang: fr
 
 execute:
