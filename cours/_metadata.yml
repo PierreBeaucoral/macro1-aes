@@ -1,0 +1,9 @@
+# Métadonnées communes aux résumés de cours (chapitres I à III).
+#
+# Les figures sont cliquables et s'ouvrent en plein écran, via le lightbox
+# intégré à Quarto (aucune extension à installer). « auto » l'applique à
+# toutes les images du document sans avoir à annoter chaque figure.
+# Utile ici : les chapitres contiennent des graphiques denses (nuage de
+# convergence à 40 pays, chronologie des réformes, séries longues) qui sont
+# difficiles à lire sur un écran de portable ou de téléphone.
+lightbox: auto
