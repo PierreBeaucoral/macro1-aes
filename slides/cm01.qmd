@@ -139,80 +139,85 @@ C'est cette décomposition qui justifie de toujours calculer un taux de croissan
 
 ## En pratique, on ne pèse pas des quantités : on déflate des valeurs {.smaller}
 
-Personne ne recompte chaque année toutes les quantités produites : l'Insee part des **valeurs en euros courants** et leur retire la part due aux prix.
+L'Insee ne recompte pas les quantités produites. Il part des **valeurs en euros courants** et leur retire la part due aux prix, en trois temps.
 
-. . .
+::: {.columns}
+::: {.column width="46%"}
+::: {.incremental}
+- **Mesurer les prix.** Des indices suivent des biens strictement définis. Si la qualité change, un **ajustement** évite de compter le progrès technique comme de l'inflation.
+- **Déflater**, produit par produit : volume = valeur courante ÷ indice de prix.
+- **Chaîner.** Chaque année est valorisée **aux prix de l'année précédente**, puis les taux sont enchaînés (SEC 2010) et réexprimés en euros 2020.
+:::
+:::
+::: {.column width="54%"}
+Un produit, deux années :
 
-**1. Mesurer les prix.** Des indices de prix (IPC, prix de production) suivent dans le temps des références de biens strictement définies. Si le produit change de qualité (un ordinateur plus puissant au même prix), un **ajustement de qualité** évite de compter l'amélioration comme de l'inflation.
-
-**2. Déflater**, produit par produit : valeur en volume = valeur courante ÷ indice de prix.
-
-| | Prix | Quantité | Valeur courante |
+| | Prix | Quantité | Valeur |
 |---|---|---|---|
 | 2023 | 10 € | 100 | 1 000 € |
 | 2024 | 11 € | 102 | 1 122 € |
 
-Nominal **+12,2 %**, prix **+10 %** : valeur 2024 déflatée = 1 122 / 1,10 = 1 020 €, soit **+2 %** en volume.
+::: {.fragment}
+On déflate : 1 122 / 1,10 = **1 020 €**
 
-. . .
-
-**3. Chaîner.** Chaque année est valorisée **aux prix de l'année précédente**, puis les taux obtenus sont enchaînés (**volumes chaînés**, SEC 2010) et réexprimés en euros d'une année de référence, soit 2020 pour les comptes français.
+| | Évolution |
+|---|---|
+| Valeur (nominal) | + 12,2 % |
+| Prix | + 10 % |
+| **Volume (réel)** | **+ 2 %** |
+:::
+:::
+:::
 
 ::: {.cle}
-Un « prix constant » n'est pas le prix d'une année lointaine appliqué mécaniquement : c'est un chaînage annuel, qui suit la déformation des prix relatifs. Deux conséquences : le **déflateur du PIB** est un résultat du calcul (nominal / réel × 100), pas une donnée mesurée ; et les volumes chaînés ne s'additionnent plus exactement au total (« défaut d'additivité »).
+Un « prix constant » n'est pas un prix figé, c'est un chaînage annuel. D'où deux conséquences : le **déflateur du PIB** est un résultat du calcul (nominal / réel × 100), pas une mesure ; et les volumes chaînés ne s'additionnent plus exactement (**défaut d'additivité**).
 :::
 
 ::: {.source}
 Source : Insee, comptes nationaux annuels, base 2020 ; SEC 2010 (Eurostat).
 :::
 
-## Deux indices de prix, deux champs, deux constructions {.smaller}
+## Deux indices de prix qui ne mesurent pas la même chose {.smaller}
 
-::: {.columns}
-::: {.column width="50%"}
-**L'IPC** (Insee, mensuel)
+|  | **IPC** | **Déflateur du PIB** |
+|---|---|---|
+| Ce qu'il mesure | les prix **payés par les ménages** | les prix de ce qui est **produit en France** |
+| Importations | comprises | exclues |
+| Exportations | exclues | comprises |
+| D'où vient le chiffre | d'une collecte de prix sur le terrain | d'un calcul : PIB nominal / PIB réel |
+| Publication | mensuelle | trimestrielle |
 
-::: {.incremental}
-- Champ : la consommation des ménages, **importations comprises**.
-- 440 postes, environ 1 200 variétés. Les pondérations sont la part de chaque poste dans la dépense des ménages, tirée de la comptabilité nationale et **réactualisée chaque année**.
-- Environ 140 000 relevés par mois dans quelque 30 000 points de vente, complétés depuis 2020 par les **données de caisse** de la grande distribution (près de 80 millions de produits suivis) et 2,5 millions de prix collectés sur internet.
-- Formule : **Laspeyres chaîné** annuellement.
-:::
-:::
-::: {.column width="50%"}
-**Le déflateur du PIB** (trimestriel)
+. . .
 
-::: {.incremental}
-- Champ : la production nationale, **exportations comprises, importations exclues**.
-- Aucun relevé propre : c'est un **résultat de calcul**, PIB nominal / PIB réel × 100.
-- Ses pondérations sont celles de la production **de l'année courante**, d'où un indice de type **Paasche**.
-:::
-:::
-:::
+Derrière l'IPC, une collecte massive : **140 000 relevés par mois** dans 30 000 points de vente, plus les **données de caisse** de la grande distribution depuis 2020, soit près de 80 millions de produits suivis.
 
 . . .
 
 ::: {.cle}
-D'où une divergence à retenir : un choc sur le prix de l'énergie importée fait bondir l'IPC et beaucoup moins le déflateur du PIB. Le pétrole pèse dans le panier des ménages ; il ne fait pas partie de la valeur ajoutée produite en France.
+D'où une divergence à retenir : un choc sur le prix de l'énergie importée fait bondir l'IPC et beaucoup moins le déflateur du PIB. Le pétrole pèse dans le panier des ménages ; il ne fait pas partie de ce qui est produit en France.
 :::
 
 ::: {.source}
 Source : Insee, IPC base 2025, note méthodologique de février 2026 [@insee2026ipc].
 :::
 
-## Aucun indice de prix n'est neutre : deux biais de mesure {.smaller}
+## Aucun indice de prix n'est neutre {.smaller}
 
-**L'effet qualité.** Quand un produit disparaît en cours d'année et qu'un autre le remplace, l'écart de prix mêle inflation et changement de qualité. L'Insee corrige pour obtenir une évolution **à qualité constante**, notamment par des méthodes hédoniques qui estiment la valeur des caractéristiques du produit. Sans cette correction, du progrès technique serait compté comme de l'inflation, et la croissance en volume sous-estimée d'autant.
+Deux biais tirent la mesure dans le même sens : ils gonflent l'inflation mesurée, donc rabotent la croissance en volume.
+
+```{mermaid}
+%%| fig-cap: "Les deux biais de mesure poussent l'inflation mesurée à la hausse, ce qui se répercute sur la croissance en volume et sur tout ce qui est indexé sur l'IPC."
+flowchart LR
+    Q["Effet qualité"] --> S["Inflation mesurée trop élevée"]
+    B["Effet de substitution"] --> S
+    S --> V["Croissance en volume sous-estimée"]
+    S --> I["Smic et pensions indexés trop haut"]
+```
 
 . . .
 
-**L'effet de substitution.** Un Laspeyres fige la composition du panier sur l'année écoulée, alors que les ménages se reportent vers ce qui renchérit le moins. L'indice **surestime** donc la hausse du coût de la vie : le rapport Boskin chiffrait ce biais à environ 1,1 point par an pour l'indice américain. Le déflateur, à pondérations courantes, porte le biais symétrique et sous-estime.
-
-. . .
-
-::: {.cle}
-Ce ne sont pas des raffinements de statisticien. Un point d'inflation surestimé, c'est un point de croissance en volume sous-estimé ; et comme le Smic, les pensions et de nombreux contrats sont indexés sur l'IPC, c'est aussi une indexation calée trop haut.
-:::
+- **Effet qualité.** Un produit disparaît, un autre le remplace : l'écart de prix mêle inflation et changement de qualité. L'Insee corrige, notamment par méthodes hédoniques, pour rester **à qualité constante**.
+- **Effet de substitution.** Le panier est figé sur l'année écoulée, alors que les ménages se reportent vers ce qui renchérit le moins. Le rapport Boskin chiffrait ce biais à environ **1,1 point par an** pour l'indice américain.
 
 ::: {.source}
 Sources : Insee, IPC base 2025, note méthodologique de février 2026 [@insee2026ipc] ; Boskin, Dulberger, Gordon, Griliches et Jorgenson, *Toward a More Accurate Measure of the Cost of Living*, rapport au Senate Finance Committee, 1996 [@boskin1996].
