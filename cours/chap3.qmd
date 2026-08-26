@@ -704,9 +704,170 @@ Un cours de politique économique ne sert pas seulement à restituer des défini
 
 **L'article.** Thibaud Métais, [« La hausse du chômage enterre la promesse d'Emmanuel Macron de retrouver le plein-emploi »](https://www.lemonde.fr/politique/article/2026/08/19/la-hausse-du-chomage-enterre-la-promesse-d-emmanuel-macron-de-retrouver-le-plein-emploi_6749465_823448.html), *Le Monde*, 19 août 2026 (réservé aux abonnés ; accessible via l'accès presse de la bibliothèque universitaire). Il part des chiffres du chômage publiés par l'Insee le 7 août 2026 et recueille les réactions d'économistes et de responsables politiques, à huit mois de l'élection présidentielle.
 
-**Les faits rapportés.** Au deuxième trimestre 2026, le taux de chômage au sens du BIT augmente pour la sixième fois consécutive : 0,2 point sur le trimestre (62 000 personnes), 0,7 point sur un an, pour atteindre **8,3 %**, soit 2,7 millions de chômeurs, avec une prévision de 8,5 % en fin d'année. La trajectoire depuis 2017 dessine un aller-retour : 9,7 % à l'élection d'Emmanuel Macron, 7,1 % en 2023 (un creux historiquement bas), 8,3 % aujourd'hui, alors que l'objectif affiché du second quinquennat était le plein-emploi, soit un taux de l'ordre de 5 %. Le chômage des 15-24 ans passe de 17,1 % en 2023 à 22,2 %, et la part des NEET (ni en emploi, ni en études, ni en formation) parmi les 15-29 ans de 11,8 % en 2022 à 13,3 %, au-dessus de la moyenne de l'Union européenne (11 %). Le taux d'emploi, lui, progresse de 65,5 % à 69 % en neuf ans.
+#### Le retournement : six trimestres de hausse consécutifs
 
-**La grille d'analyse.** Chaque élément de l'article renvoie à un outil vu en cours, et c'est cet outil qui permet d'en faire une lecture critique.
+> « la France semble de retour à la case départ »
+
+L'article part d'un fait simple : au deuxième trimestre 2026, le taux de chômage au sens du BIT augmente pour la sixième fois d'affilée, de 0,2 point sur le trimestre (62 000 personnes) et de 0,7 point sur un an, pour atteindre 8,3 %, soit 2,7 millions de chômeurs. La formule de la « case départ » se lit directement sur la série trimestrielle : le taux revient vers les niveaux de 2017, après être descendu à 7,1 % début 2023.
+
+```{r}
+#| label: fig-presse-chomage-trim
+#| fig-cap: "Taux de chômage au sens du BIT en France, données trimestrielles corrigées des variations saisonnières, 2017-2026. La ligne pointillée marque l'objectif de plein-emploi affiché lors de la campagne de 2022, de l'ordre de 5 %. Le creux de 7,1 % au premier trimestre 2023 est suivi d'une remontée continue. Le pic isolé du troisième trimestre 2020 est un artefact du confinement : au deuxième trimestre, beaucoup de personnes sans emploi ne pouvaient pas rechercher activement et sortaient donc du champ du chômage BIT, ce qui a fait artificiellement baisser le taux avant qu'il ne rebondisse. Source : Eurostat, une_rt_q (15-74 ans, France) ; point du deuxième trimestre 2026 d'après l'Insee cité dans l'article. Les écarts de quelques dixièmes avec les chiffres de l'article tiennent au champ retenu, France entière ici contre France hors Mayotte à l'Insee."
+#| fig-width: 8
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux de chomage BIT trimestriel, France, CVS, 15-74 ans.
+# Source : Eurostat, dataflow une_rt_q, extraction du 2026-08-26.
+# Le dernier point (2026 T2 = 8,3) n'est pas encore diffuse par Eurostat :
+# il provient de l'Insee (publication du 7 aout 2026) tel que cite dans
+# l'article analyse. Valeurs figees en dur, aucun appel reseau au rendu.
+taux <- c(9.6, 9.5, 9.5, 9.1,  9.3, 9.1, 8.9, 8.8,  8.7, 8.4, 8.3, 8.3,
+          7.9, 7.2, 8.9, 8.1,  8.1, 8.0, 7.9, 7.5,  7.4, 7.5, 7.2, 7.2,
+          7.1, 7.3, 7.4, 7.6,  7.5, 7.4, 7.5, 7.4,  7.5, 7.6, 7.8, 8.0,
+          8.1, 8.3)
+df_q <- data.frame(
+  t      = seq(2017, by = 0.25, length.out = length(taux)),
+  taux   = taux,
+  source = c(rep("Eurostat", length(taux) - 1), "Insee (article)")
+)
+
+ggplot(df_q, aes(x = t, y = taux)) +
+  geom_hline(yintercept = 5, linetype = "dashed", color = "grey55", linewidth = .4) +
+  annotate("text", x = 2017.3, y = 5.3, hjust = 0, size = 2.9, color = "grey40",
+           label = "Objectif de plein-emploi affiché en 2022 (~5 %)") +
+  geom_line(color = unname(macro_pal["bleu"]), linewidth = .9) +
+  geom_point(aes(color = source, size = source)) +
+  annotate("text", x = 2023.0, y = 6.55, label = "7,1 % début 2023\n(creux)",
+           size = 2.9, color = unname(macro_pal["vert"]), lineheight = .9) +
+  annotate("text", x = 2025.0, y = 8.75, label = "8,3 % au T2 2026\naprès six hausses",
+           size = 2.9, color = unname(macro_pal["rouge"]), lineheight = .9, hjust = 0) +
+  scale_color_manual(values = c("Eurostat" = unname(macro_pal["bleu"]),
+                                 "Insee (article)" = unname(macro_pal["rouge"])), name = NULL) +
+  scale_size_manual(values = c("Eurostat" = 1.3, "Insee (article)" = 2.8), guide = "none") +
+  scale_x_continuous(breaks = seq(2017, 2026, 1)) +
+  scale_y_continuous(limits = c(4.5, 10), labels = function(x) paste0(x, " %")) +
+  labs(x = NULL, y = "Taux de chômage (BIT, CVS)") +
+  theme_macro() +
+  theme(legend.position = "bottom")
+```
+
+Deux enseignements. D'abord, l'écart à l'objectif : le plein-emploi visé en 2022 supposait de descendre autour de 5 %, un niveau que la France n'a atteint à aucun moment de la période. Ensuite, la prudence à avoir avec un point isolé : le décrochage de 2020 ne traduit pas une amélioration du marché du travail mais un effet de mesure, le confinement ayant empêché la recherche active d'emploi, critère constitutif du chômage au sens du BIT.
+
+#### Une moyenne qui masque une concentration sur les jeunes
+
+> « La situation est particulièrement compliquée pour les jeunes »
+
+Le taux d'ensemble dissimule des évolutions très inégales. Entre 2023 et le deuxième trimestre 2026, le chômage des 15-24 ans gagne 5,1 points quand celui de l'ensemble de la population active en gagne 1,2. Autrement dit, la dégradation est plus de quatre fois plus forte pour les jeunes.
+
+```{r}
+#| label: fig-presse-jeunes
+#| fig-cap: "Taux de chômage au sens du BIT, ensemble de la population active et 15-24 ans, entre 2023 et le deuxième trimestre 2026. La pente de chaque segment mesure l'ampleur de la dégradation : 1,2 point pour l'ensemble, 5,1 points pour les jeunes. Le taux des jeunes part d'un niveau déjà plus de deux fois supérieur, ce qui illustre la segmentation du marché du travail étudiée au chapitre II. Source : chiffres cités dans l'article analysé, d'après l'Insee, enquête Emploi."
+#| fig-width: 6.4
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux de chomage BIT, ensemble et 15-24 ans, 2023 et T2 2026.
+# Source : chiffres cites dans l'article du Monde du 19 aout 2026,
+# d'apres l'Insee. Valeurs figees en dur.
+df_j <- data.frame(
+  moment = rep(c("2023", "T2 2026"), 2),
+  groupe = rep(c("Ensemble", "15-24 ans"), each = 2),
+  taux   = c(7.1, 8.3, 17.1, 22.2)
+)
+df_j$moment <- factor(df_j$moment, levels = c("2023", "T2 2026"))
+df_j$groupe <- factor(df_j$groupe, levels = c("15-24 ans", "Ensemble"))
+
+ggplot(df_j, aes(x = moment, y = taux, group = groupe, color = groupe)) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 3) +
+  geom_text(aes(label = paste0(format(taux, decimal.mark = ","), " %")),
+            vjust = -1.1, size = 3.1, show.legend = FALSE) +
+  annotate("text", x = 1.5, y = 21.4, label = "+ 5,1 points", size = 3,
+           color = unname(macro_pal["rouge"]), fontface = "italic") +
+  annotate("text", x = 1.5, y = 6.2, label = "+ 1,2 point", size = 3,
+           color = unname(macro_pal["bleu"]), fontface = "italic") +
+  scale_color_manual(values = c("15-24 ans" = unname(macro_pal["rouge"]),
+                                 "Ensemble"  = unname(macro_pal["bleu"])), name = NULL) +
+  scale_y_continuous(limits = c(4, 25), labels = function(x) paste0(x, " %")) +
+  labs(x = NULL, y = "Taux de chômage (BIT)") +
+  theme_macro() +
+  theme(legend.position = "bottom")
+```
+
+La même concentration se lit sur les NEET, ces jeunes de 15 à 29 ans qui ne sont ni en emploi, ni en études, ni en formation : leur part passe de 11,8 % en 2022 à 13,3 %, plaçant la France au-dessus de la moyenne européenne (11 %). Un chômeur au sens du BIT recherche activement un emploi ; un NEET peut n'être ni en emploi ni en recherche, donc rester invisible dans le taux de chômage. Suivre les deux indicateurs conjointement évite de sous-estimer le décrochage.
+
+#### Plus d'emploi et plus de chômage : est-ce contradictoire ?
+
+> « Jamais autant de Français n'ont travaillé »
+
+C'est l'argument du premier ministre, Sébastien Lecornu, et il est exact : le taux d'emploi est passé de 65,5 % à 69 % en neuf ans. Sur l'ensemble de la période, il n'y a d'ailleurs pas de contradiction avec le chômage, qui perd 1,4 point sur le même intervalle. Ce qui rend les deux mouvements compatibles est une troisième grandeur, que l'article ne mentionne pas : le taux d'activité, qui gagne 2,7 points. Davantage de personnes se présentent sur le marché du travail, et une part croissante d'entre elles occupe un emploi. On le retrouve par l'identité comptable déjà rencontrée au chapitre II, qui lie le taux d'activité au taux d'emploi et au taux de chômage.
+
+La tension que pointe l'article se situe ailleurs, sur la période récente : depuis 2023, le chômage remonte alors que le taux d'emploi reste au plus haut. C'est le signe que la population active continue de croître plus vite que l'emploi, et c'est précisément le mécanisme décrit dans l'ouverture précédente à propos de la réforme des retraites.
+
+```{r}
+#| label: fig-presse-emploi-activite
+#| fig-cap: "Décomposition de l'évolution du marché du travail français entre 2017 et 2026. Le taux d'emploi et le taux de chômage sont ceux cités dans l'article ; le taux d'activité en est déduit par l'identité comptable taux d'activité = taux d'emploi / (1 - taux de chômage), la même que celle utilisée au chapitre II. Lecture : une hausse simultanée du taux d'emploi et du taux de chômage n'est pas contradictoire, elle signale une population active en expansion. Source : chiffres du taux d'emploi et du taux de chômage cités dans l'article analysé ; taux d'activité calculé par nos soins."
+#| fig-width: 7.4
+#| fig-height: 3.4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Taux d'emploi et taux de chomage : valeurs citees dans l'article
+# (65,5 % -> 69 % sur neuf ans ; 9,7 % -> 8,3 %). Le taux d'activite est
+# derive de l'identite comptable, coherente avec celle employee au CM 3.
+emploi <- c(65.5, 69.0)
+chomage <- c(9.7, 8.3)
+activite <- round(emploi / (1 - chomage / 100), 1)
+
+df_d <- data.frame(
+  indicateur = rep(c("Taux d'emploi", "Taux de chômage", "Taux d'activité\n(déduit)"), each = 2),
+  moment     = rep(c("2017", "2026"), 3),
+  valeur     = c(emploi, chomage, activite)
+)
+df_d$indicateur <- factor(df_d$indicateur,
+  levels = c("Taux d'activité\n(déduit)", "Taux d'emploi", "Taux de chômage"))
+df_d$ecart <- ave(df_d$valeur, df_d$indicateur, FUN = function(v) v[2] - v[1])
+
+ggplot(df_d, aes(x = moment, y = valeur, fill = moment)) +
+  geom_col(width = .55) +
+  geom_text(aes(label = paste0(format(valeur, decimal.mark = ","), " %")),
+            vjust = -0.45, size = 3.1) +
+  geom_text(data = unique(df_d[, c("indicateur", "ecart")]),
+            aes(x = 1.5, y = 0,
+                label = sub("\\.", ",", sprintf("%+.1f pt", ecart))),
+            inherit.aes = FALSE, vjust = -0.8, size = 3,
+            fontface = "italic", color = "grey35") +
+  facet_wrap(~indicateur, scales = "free_y", nrow = 1) +
+  scale_fill_manual(values = c("2017" = unname(macro_pal["gris"]),
+                                "2026" = unname(macro_pal["bleu"])), guide = "none") +
+  scale_y_continuous(expand = expansion(mult = c(0, .22)),
+                     labels = function(x) paste0(x, " %")) +
+  labs(x = NULL, y = NULL) +
+  theme_macro()
+```
+
+Reste à savoir quels emplois. L'économiste de l'OFCE Eric Heyer objecte que le taux de pauvreté a augmenté en parallèle, contrairement à la quasi-totalité des autres pays européens, ce qu'il interprète comme le signe que « de nombreux emplois créés sont des emplois précaires ». Un taux d'emploi record ne renseigne donc ni sur la qualité des emplois, ni sur leur stabilité : c'est exactement la limite des indicateurs agrégés mise en évidence au chapitre II par la comparaison entre la Suède et l'Italie.
+
+#### Deux constats opposés qui sont tous deux vrais
+
+> « C'est le signe de l'échec de la politique de l'offre »
+
+Le jugement d'Eric Heyer se heurte à un autre constat rapporté par l'article : une note de la Banque de France de mai 2026 établit que la part structurelle du chômage a diminué de façon continue sur dix ans, sous l'effet des réformes. Comment concilier une hausse du chômage observé et une baisse du chômage structurel ? En distinguant les deux composantes vues au chapitre II. Le chômage observé additionne une composante structurelle, liée aux institutions et à l'appariement, et une composante conjoncturelle, liée à l'insuffisance de la demande. Les réformes peuvent avoir réduit la première pendant que le ralentissement économique, l'inflation et les tensions géopolitiques faisaient remonter la seconde. Les deux affirmations ne portent pas sur le même objet.
+
+Le désaccord entre Heyer et les défenseurs de la politique de l'offre ne porte d'ailleurs pas sur les chiffres, que personne ne conteste, mais sur deux points étudiés en cours : l'**horizon** auquel une politique s'évalue, court terme contre moyen-long terme (chapitre I), et le **diagnostic** posé sur la nature du chômage, insuffisance de la demande ou coût du travail et rigidités (chapitre II).
+
+#### Un piège de mesure : quand la règle change, le chiffre change
+
+> « une statistique qui les laissait de côté jusqu'à maintenant »
+
+Le premier ministre défend ainsi la loi pour le plein-emploi, entrée en vigueur en janvier 2025, qui inscrit automatiquement à France Travail l'ensemble des demandeurs d'emploi, notamment les allocataires du RSA. L'argument est présenté dans l'article comme une explication possible de la hausse : élargir le champ des inscrits augmente mécaniquement le décompte.
+
+Cet argument mérite un examen critique, et c'est là que le chapitre II est directement utile. La loi modifie d'abord le **décompte administratif** de France Travail, celui des catégories A à E. Or le chiffre commenté dans l'article, 8,3 %, est le taux **au sens du BIT**, issu de l'enquête Emploi de l'Insee, qui repose sur des critères déclaratifs de recherche active et de disponibilité, non sur l'inscription. Le raisonnement n'est donc pas transposable tel quel d'une mesure à l'autre. Il n'est pas nul pour autant : une inscription obligatoire, assortie d'un accompagnement, peut conduire des personnes auparavant inactives à rechercher effectivement un emploi, et donc à basculer dans le champ du chômage BIT. La question est empirique et vaut d'être posée en TD.
+
+#### La grille de lecture, en résumé
 
 | Ce que dit l'article | L'outil du cours | Ce qu'il permet de voir |
 |---|---|---|
