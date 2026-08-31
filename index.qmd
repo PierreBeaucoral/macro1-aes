@@ -55,7 +55,7 @@ Le cours est organisé en **trois chapitres**, construits pour s'enchaîner logi
 ::: {.callout-note}
 ## Une question, besoin d'un rendez-vous ?
 
-Le cours est assuré par **Pierre Beaucoral** (ATER), à partir des enseignements hérités de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026). Une permanence pédagogique (*office hours*) est proposée **uniquement sur rendez-vous**, bureau 437 au CERDI : écrivez un mail au moins un jour à l'avance en proposant quelques créneaux.
+Le cours est assuré par **Pierre Beaucoral** (ATER), à partir des enseignements hérités de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026). Une permanence pédagogique (*office hours*) est proposée **uniquement sur rendez-vous**, bureau 427 au CERDI : écrivez un mail au moins un jour à l'avance en proposant quelques créneaux.
 
 Les coordonnées de contact et les modalités précises figurent sur l'espace numérique de travail (ENT) du cours, ainsi que dans le [syllabus](syllabus.qmd).
 :::
