@@ -446,7 +446,7 @@ L'observation de longue période fait apparaître cinq régularités empiriques 
 
 ::: {.cle .incremental}
 1. La croissance soutenue est récente
-2. Forte hausse du niveau de vie dans l'OCDE après 1950
+2. Forte hausse du niveau de vie après 1950
 3. Convergence inégale entre pays
 4. Ralentissement depuis les années 1970
 5. Inégalités : baisse entre pays, hausse au sein des pays
@@ -599,7 +599,7 @@ plot_pib_monde(5)
 Évolution du PIB mondial, an 1000-2023, échelle logarithmique. Avant la révolution industrielle (1760-1820), le PIB mondial croît très lentement pendant des siècles ; il explose ensuite de façon quasi verticale sur une échelle logarithmique. Source : Maddison Project Database (2023), via Our World in Data (ourworldindata.org/grapher/global-gdp-over-the-long-run).
 :::
 
-## Fait 2 : Une forte hausse du niveau de vie dans l'OCDE, surtout après 1950 {.smaller}
+## Fait 2 : Une forte hausse du niveau de vie, surtout après 1950 {.smaller}
 
 ::: {.columns}
 ::: {.column width="40%"}

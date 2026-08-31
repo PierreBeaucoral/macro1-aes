@@ -413,7 +413,7 @@ ggplot(df_monde, aes(x = annee, y = pib)) +
 
 Avant la révolution industrielle (1760-1820), le PIB mondial croît très lentement pendant des siècles ; il explose ensuite de façon quasi verticale sur une échelle logarithmique.
 
-**2. Une forte hausse du niveau de vie dans les pays de l'OCDE, surtout après 1950.** Entre 1950 et 2022, le revenu par habitant a été multiplié par 3,8 aux États-Unis, par 4,7 en France, par 7,5 en Allemagne et par 12,5 au Japon, illustrant à la fois l'ampleur du phénomène et sa forte hétérogénéité entre pays pourtant tous développés.
+**2. Une forte hausse du niveau de vie, surtout après 1950.** Entre 1950 et 2022, le revenu par habitant a été multiplié par 3,8 aux États-Unis, par 4,7 en France, par 7,5 en Allemagne et par 12,5 au Japon, illustrant à la fois l'ampleur du phénomène et sa forte hétérogénéité entre pays pourtant tous développés.
 
 ```{r}
 #| label: fig-multiplicateur-carte
