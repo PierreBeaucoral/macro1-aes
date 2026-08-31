@@ -14,7 +14,7 @@ subtitle: "Un marché comme les autres : l'équilibre par les salaires exclut to
 7. Limites de l'approche
 
 ::: {.source}
-D'après M. Ouedraogo (CERDI, Université Clermont Auvergne), *Chapitre II (Partie 2), Section I : L'analyse néoclassique du marché du travail*.
+D'après le *Chapitre II (Partie 2), Section I : L'analyse néoclassique du marché du travail*.
 :::
 
 ## Objectifs de la séance
@@ -544,5 +544,5 @@ Cf. Chapitre III pour l'analyse détaillée des politiques françaises de baisse
 :::
 
 ::: {.source}
-Sources : M. Ouedraogo, *Chapitre II (Partie 2), Section I* ; `cours/chap2.qmd` §2.1.
+Sources : *Chapitre II (Partie 2), Section I* ; `cours/chap2.qmd` §2.1.
 :::

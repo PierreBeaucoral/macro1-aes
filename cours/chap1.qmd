@@ -15,7 +15,7 @@ Objectifs du chapitre
 - Expliquer les trois fonctions de Musgrave (stabilisation, allocation, redistribution) et modéliser la stabilisation avec le cadre offre agrégée-demande agrégée (OA-DA).
 :::
 
-Ce chapitre pose les bases conceptuelles du cours : pourquoi et comment les pouvoirs publics interviennent dans l'économie.^[Ce résumé s'appuie sur les enseignements de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026).] Il part des rappels indispensables sur la mesure de la richesse (le PIB), retrace les grandes régularités empiriques de la croissance, distingue les horizons temporels pertinents en macroéconomie, puis construit la notion de politique économique : ses fondements théoriques, sa typologie et ses trois grandes fonctions.
+Ce chapitre pose les bases conceptuelles du cours : pourquoi et comment les pouvoirs publics interviennent dans l'économie. Il part des rappels indispensables sur la mesure de la richesse (le PIB), retrace les grandes régularités empiriques de la croissance, distingue les horizons temporels pertinents en macroéconomie, puis construit la notion de politique économique : ses fondements théoriques, sa typologie et ses trois grandes fonctions.
 
 La France a-t-elle connu, depuis 2008, une succession de crises ponctuelles ou une stagnation prolongée de la croissance et de l'emploi ? La figure ci-dessous, qui sera mobilisée tout au long du semestre, pose le décor.
 

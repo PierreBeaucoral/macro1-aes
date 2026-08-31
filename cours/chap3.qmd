@@ -902,5 +902,5 @@ Le dossier de TD 8 est un **entraînement au CC2** (le contrôle continu 2 noté
 
 ::: {.callout-note collapse="true"}
 ## Sources et remerciements
-Résumé rédigé d'après les cours de M. Ouedraogo (2025-2026) et C. Mathonnat (2018-2019), chapitre III, complétés par les ressources DARES (2016), *Faut-il baisser le coût du travail ?*, *Prestations sociales et trappe à inactivité*, *Réformes du droit du travail en France*, et *Protection de l'emploi, emploi et chômage*.
+Résumé rédigé d'après les ressources du chapitre III : DARES (2016), *Faut-il baisser le coût du travail ?*, *Prestations sociales et trappe à inactivité*, *Réformes du droit du travail en France*, et *Protection de l'emploi, emploi et chômage*.
 :::

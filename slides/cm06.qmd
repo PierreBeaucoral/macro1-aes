@@ -13,7 +13,7 @@ description: "Critique keynésienne du marché du travail, demande effective, ch
 5. La loi d'Okun : croissance et chômage
 
 ::: {.source}
-Chapitre II, Partie 2, §II.1-4 : d'après les cours de M. Ouedraogo (2025-2026).
+D'après le Chapitre II, Partie 2, §II.1-4.
 :::
 
 ## Objectifs
@@ -564,5 +564,5 @@ Préparez vos questions sur la demande effective et le calcul du coefficient d'O
 :::
 
 ::: {.source}
-Sources : Chapitre II, Partie 2, §II.1-4 (Ouedraogo, 2025-26) ; Blanchard & Cohen (2017), *Macroéconomie*.
+Sources : Chapitre II, Partie 2, §II.1-4 ; Blanchard & Cohen (2017), *Macroéconomie*.
 :::

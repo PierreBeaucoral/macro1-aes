@@ -13,10 +13,6 @@ subtitle: "Chapitre I, §1-3 : Mesurer et situer la croissance économique"
 
 Aujourd'hui, on pose les fondations mesurables du cours : comment évalue-t-on la richesse produite, que nous apprend l'histoire longue de la croissance, et à quel horizon se situe-t-on quand on parle de « croissance » ?
 
-::: {.source}
-Source : Ouedraogo (2025-2026), Chapitre I ; Mathonnat (2018-2019), Introduction.
-:::
-
 ## Objectifs de la séance {.smaller}
 
 À l'issue de cette séance, vous saurez :
@@ -91,7 +87,7 @@ ggplot(df_france, aes(x = annee, y = valeur)) +
 ```
 
 ::: {.source}
-Ligne verticale : déclenchement de la crise financière de 2008. Idée à garder en tête pour tout le semestre : croissance faible + chômage élevé et persistant = hypothèse de « stagnation séculaire », débattue en introduction du cours de C. Mathonnat.
+Ligne verticale : déclenchement de la crise financière de 2008. Idée à garder en tête pour tout le semestre : croissance faible + chômage élevé et persistant = hypothèse de « stagnation séculaire ».
 :::
 
 ## 1. Rappels sur le PIB {.smaller}

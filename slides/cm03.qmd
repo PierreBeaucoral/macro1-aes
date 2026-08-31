@@ -28,10 +28,6 @@ Séance adossée au Chapitre II, Partie 1, sections I à III du résumé de cour
 - Expliquer pourquoi le taux de chômage seul peut être trompeur, et ce que recouvre le « halo du chômage ».
 :::
 
-::: {.source}
-D'après les cours de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026), CERDI, Université Clermont Auvergne.
-:::
-
 ## Le marché du travail fait se rencontrer deux offres inversées
 
 ::: {.def}

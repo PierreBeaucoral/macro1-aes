@@ -1021,5 +1021,5 @@ Stabilisation et allocation influencent toutes deux le **niveau** de l'activité
 :::
 
 ::: {.source}
-D'après les cours de C. Mathonnat (2018-2019) et M. Ouedraogo (2025-2026). Sources : Chapitre I, §4-5 (Ouedraogo) ; Slides Chapitre I, partie 2.
+Sources : Chapitre I, §4-5 ; Slides Chapitre I, partie 2.
 :::

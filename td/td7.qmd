@@ -18,9 +18,9 @@ description: "Dossier de TD : théorie de l'appariement (Beveridge, modèle DMP,
 **Pré-requis** : Chapitre II, Partie 2, §IV (courbe de Beveridge, modèle DMP, tension $\theta$) ; Chapitre III, §II, axe 3 (activation, trappe à inactivité) ; TD 5 et TD 6 (néoclassique, WS-PS, Okun-Phillips).
 :::
 
-Ce dossier s'appuie sur les enseignements de M. Ouedraogo (CERDI, Université Clermont Auvergne)[^source] ainsi que sur les ressources complémentaires du Chapitre III consacrées à la trappe à inactivité et aux demandeurs d'emploi non indemnisables. Les trois premiers exercices reprennent la théorie de l'appariement vue en cours (courbe de Beveridge, modèle de Diamond-Mortensen-Pissarides). Le quatrième exercice, nouveau, applique la théorie de la recherche d'emploi à un cas concret de politique économique française : le passage du RMI au RSA puis à la prime d'activité.
+Ce dossier s'appuie sur les ressources complémentaires du Chapitre III consacrées à la trappe à inactivité et aux demandeurs d'emploi non indemnisables[^source]. Les trois premiers exercices reprennent la théorie de l'appariement vue en cours (courbe de Beveridge, modèle de Diamond-Mortensen-Pissarides). Le quatrième exercice, nouveau, applique la théorie de la recherche d'emploi à un cas concret de politique économique française : le passage du RMI au RSA puis à la prime d'activité.
 
-[^source]: Dossier rédigé d'après les cours de M. Ouedraogo (2025-2026), CERDI, Université Clermont Auvergne, et les ressources complémentaires DARES (2016), *Les demandeurs d'emploi non indemnisables*, et B. Gomel & D. Méda, *Prestations sociales et trappe à inactivité* (chapitre III).
+[^source]: Dossier rédigé d'après les ressources complémentaires DARES (2016), *Les demandeurs d'emploi non indemnisables*, et B. Gomel & D. Méda, *Prestations sociales et trappe à inactivité* (chapitre III).
 
 ---
 

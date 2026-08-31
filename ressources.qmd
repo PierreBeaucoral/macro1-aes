@@ -4,7 +4,7 @@ subtitle: "Manuels, presse économique, vidéos et données pour approfondir le 
 description: "Sélection de manuels de référence, d'articles et d'analyses, de chaînes YouTube et de bases de données économiques pour prolonger le travail personnel du semestre."
 ---
 
-Cette page rassemble les ressources complémentaires du cours : elles ne remplacent pas le travail sur les résumés de cours et les dossiers de TD, mais permettent d'approfondir une notion, de suivre l'actualité économique ou de manipuler des données réelles.^[Sélection reprise des supports de M. Ouedraogo (2025-2026).]
+Cette page rassemble les ressources complémentaires du cours : elles ne remplacent pas le travail sur les résumés de cours et les dossiers de TD, mais permettent d'approfondir une notion, de suivre l'actualité économique ou de manipuler des données réelles.
 
 ::: {.callout-tip}
 ## Pour aller plus loin : comment utiliser cette page

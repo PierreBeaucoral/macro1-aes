@@ -16,9 +16,7 @@ description: "Résumé complet du chapitre II : indicateurs du marché du travai
 - Représenter et commenter les modèles graphiques associés : offre/demande de travail, courbe de Phillips, loi d'Okun, WS-PS, courbe de Beveridge.
 :::
 
-Ce chapitre s'appuie sur les enseignements de M. Ouedraogo (CERDI, Université Clermont Auvergne)[^source]. Il se divise en deux grandes parties. La **Partie 1** dresse un portrait descriptif du marché du travail : ses spécificités, ses indicateurs de mesure et la typologie des différentes formes de chômage. La **Partie 2** présente quatre cadres théoriques successifs (néoclassique, keynésien, WS-PS et appariement) qui proposent chacun une explication différente des causes du chômage et donc des politiques économiques à mettre en œuvre pour le réduire.
-
-[^source]: Résumé rédigé d'après les cours de C. Mathonnat (2018-2019) et de M. Ouedraogo (2025-2026), CERDI, Université Clermont Auvergne.
+Ce chapitre se divise en deux grandes parties. La **Partie 1** dresse un portrait descriptif du marché du travail : ses spécificités, ses indicateurs de mesure et la typologie des différentes formes de chômage. La **Partie 2** présente quatre cadres théoriques successifs (néoclassique, keynésien, WS-PS et appariement) qui proposent chacun une explication différente des causes du chômage et donc des politiques économiques à mettre en œuvre pour le réduire.
 
 # Partie 1 : Le marché du travail : un objet d'étude spécifique
 
