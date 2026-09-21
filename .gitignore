@@ -30,3 +30,7 @@ td/*_files*
 # sur un dépôt public. Ils restent en local. Pour les versionner (dépôt privé
 # uniquement), supprimer la ligne ci-dessous. ---
 /td/corrections/
+
+# --- Banques de questions Wooclap : contiennent la colonne des bonnes
+# réponses. Exclues pour les mêmes raisons que td/corrections/. ---
+/wooclap/

@@ -319,9 +319,8 @@ Dans ce cadre, **les salaires sont parfaitement flexibles** et constituent la va
 :::
 ::: {.column width="45%"}
 
-. . .
 
-::: {.def}
+::: {.def .fragment}
 **Logique générale**
 
 Un choc d'offre (ou de demande) provoque un déséquilibre temporaire ; le salaire, variable flexible, le résorbe en ramenant le marché au plein emploi, à un nouveau couple $(w^*, L^*)$.

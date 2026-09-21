@@ -164,14 +164,25 @@ Ces deux distinctions se recoupent **partiellement**, mais ne sont pas identique
 :::
 :::
 
-## Cette typologie s'éclaire par l'histoire longue du chômage
+## Cette typologie s'éclaire par l'histoire longue du chômage {.smaller}
 
+:::: {.columns}
+::: {.column width="52%"}
+![Chômeurs faisant la queue devant une soupe populaire ouverte à Chicago par Al Capone, février 1931. Au creux de la Grande Dépression, le chômage américain approche les 25 % de la population active : un chômage keynésien de masse, né d'un effondrement de la demande, et non d'un choix individuel.](../assets/soupe-populaire-chicago-1931.png){fig-alt="Photographie en noir et blanc : file d'hommes en manteau et chapeau attendant devant une devanture portant l'inscription « Free soup, coffee & doughnuts for the unemployed »." width="100%"}
+:::
+
+::: {.column width="44%"}
 L'évolution du chômage en Europe et aux États-Unis depuis les années 1970 permet d'illustrer concrètement chacune de ces formes de chômage, et de comprendre pourquoi un même choc peut avoir des conséquences très différentes selon le pays.
 
-. . .
 
-::: {.cle}
+::: {.cle .fragment}
 Trois grandes séquences : le choc pétrolier des années 1970, la désinflation du début des années 1980, puis la divergence institutionnelle des années 1990-2000.
+:::
+:::
+::::
+
+::: {.source}
+National Archives and Records Administration (NARA), via Wikimedia Commons, domaine public.
 :::
 
 ## Les chocs pétroliers des années 1970 déclenchent une stagflation inédite
@@ -218,6 +229,32 @@ Pour juguler l'inflation, les banques centrales relèvent fortement leurs **taux
 → choc **durable**
 :::
 ::::
+
+## En Europe, le choc durable a un visage : celui d'une génération sans emploi {.smaller}
+
+:::: {.columns}
+::: {.column width="55%"}
+![*People's March for Jobs*, Cardiff, septembre 1982 : des marcheurs venus d'Ebbw Vale et de la Rhondda, vallées minières et sidérurgiques du sud du Pays de Galles, réclament « Give us a future ».](../assets/peoples-march-for-jobs-cardiff-1982.png){fig-alt="Photographie en noir et blanc : jeunes manifestants criant des slogans, portant des t-shirts « Give us a future » et des banderoles « People's March for Jobs, Wales 1982 »." width="100%"}
+:::
+
+::: {.column width="41%"}
+Le Royaume-Uni franchit le seuil des **3 millions de chômeurs** en 1983, sous l'effet conjugué de la désinflation et de la disparition des emplois industriels (charbon, sidérurgie, chantiers navals).
+
+
+::: {.cle .fragment}
+Deux formes de chômage se superposent ici : un chômage **keynésien** (la restriction monétaire comprime la demande) et un chômage **d'inadéquation**, les qualifications des mineurs et sidérurgistes ne correspondant plus aux emplois qui subsistent.
+:::
+
+
+::: {.fragment}
+Ce second volet ne disparaît pas avec la reprise : il nourrit le **chômage de longue durée** et l'**hystérèse** étudiée plus loin.
+:::
+:::
+::::
+
+::: {.source}
+Photographie : Robin Weaver / Alamy (*The Guardian*, 7 juillet 2020). Les responsables de l'époque eux-mêmes identifiaient rétrospectivement les chômeurs de longue durée « déplacés des chantiers navals, de la sidérurgie et des autres secteurs traditionnels » comme le problème central, davantage que le chômage des jeunes.
+:::
 
 ## Les trajectoires divergent nettement entre 1970 et 2000 {.smaller}
 
@@ -315,6 +352,30 @@ plot_hyst(2000)
 
 ::: {.source}
 Après la désinflation du début des années 1980, le chômage retombe aux États-Unis mais reste durablement élevé en France. Sources : BLS (États-Unis, taux de chômage civil, moyenne annuelle, série LNS14000000) ; France : série nationale BIT (Banque mondiale, WDI) à partir de 1980, INSEE/OCDE pour 1970-1979 ; comparaison indicative. Années sélectionnées, 1970-2000.
+:::
+
+## Aujourd'hui, le débat porte moins sur le volume du chômage que sur les chômeurs eux-mêmes {.smaller}
+
+:::: {.columns}
+::: {.column width="52%"}
+![Manifestation nationale des chômeurs et précaires, Paris. La banderole — « Guerre au chômage, pas aux chômeurs ! » — vise le déplacement de la cible : du phénomène vers les personnes.](../assets/manifestation-chomeurs-paris-2019.png){fig-alt="Photographie : cortège de manifestants derrière une grande banderole portant l'inscription « Guerre au chômage, pas aux chômeurs ! », drapeaux syndicaux à l'arrière-plan." width="100%"}
+:::
+
+::: {.column width="44%"}
+Troisième temps de l'histoire longue : le chômage de masse ne disparaît pas, mais le débat public se déplace vers les **droits des chômeurs**, les conditions d'indemnisation et le **renforcement des contrôles**.
+
+::: {.cle .fragment}
+Ce déplacement suppose implicitement un diagnostic : si le chômage tenait surtout à une recherche d'emploi insuffisante, durcir les contrôles serait la bonne réponse.
+:::
+
+::: {.fragment}
+Or la typologie vue aujourd'hui rappelle qu'un chômage **keynésien** ou **d'inadéquation** ne se résorbe pas en intensifiant la recherche : les emplois manquent, ou les qualifications ne correspondent pas. **Identifier la forme du chômage précède le choix de l'instrument** : c'est tout l'objet du Chapitre III.
+:::
+:::
+::::
+
+::: {.source}
+*L'Humanité*, « Manifestation nationale des chômeurs », 4 décembre 2021 (Cécile Rousseau). Mobilisation à l'appel d'AC !, de la CGT chômeurs, du MNCP et de l'Apéis, contre la réforme de l'assurance chômage et le renforcement des contrôles.
 :::
 
 ## Un choc temporaire peut laisser une empreinte permanente

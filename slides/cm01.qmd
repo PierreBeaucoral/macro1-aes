@@ -613,9 +613,8 @@ Entre 1950 et 2022, le revenu par habitant a été multiplié par :
 
 **× 12,5** Japon
 
-. . .
 
-::: {.cle}
+::: {.cle .fragment}
 Le phénomène est massif, mais très hétérogène, y compris entre pays pourtant tous développés dès 1950.
 :::
 :::
@@ -766,9 +765,10 @@ La droite grise est quasi plate : sur 40 pays, le niveau de départ ne prédit p
 Dans les pays de l'OCDE, l'économie continue de croître, mais à un rythme moins soutenu qu'avant les chocs pétroliers.
 :::
 
-. . .
 
+::: {.fragment}
 Principale explication : le **ralentissement des gains de productivité**, un thème que nous retrouverons au chapitre II à travers la loi d'Okun et, plus loin dans le cours, à travers le débat sur la stagnation séculaire (R. Gordon, L. Summers).
+:::
 :::
 
 ::: {.column width="58%"}
@@ -825,9 +825,8 @@ La croissance de l'OCDE reste positive sur toute la période, mais son rythme se
 
 **Au sein des pays** : hausse des inégalités internes dans de nombreux pays de l'OCDE.
 
-. . .
 
-::: {.def}
+::: {.def .fragment}
 Facteurs identifiés : mondialisation, changement technologique, évolution du rôle de l'État, financiarisation de l'économie.
 :::
 :::
@@ -928,9 +927,8 @@ flowchart LR
 **Court terme (CT)** : quelques années. Les fluctuations de l'activité (variations du PIB autour de sa tendance) sont dominées par la **demande** : confiance des consommateurs, taux d'intérêt, etc.
 :::
 
-. . .
 
-::: {.cle}
+::: {.cle .fragment}
 C'est l'horizon des politiques de **stabilisation** (chapitre I, §5) : agir sur la demande pour limiter l'écart entre production effective et production potentielle.
 :::
 :::
@@ -1051,9 +1049,8 @@ Les écarts à la tendance, positifs en vert (expansion de la fin des années 19
 **Long terme (LT)** : plusieurs décennies. Tous les facteurs deviennent variables. La croissance de long terme s'explique par les facteurs d'**offre** : accumulation du capital, progrès technique, ressources humaines (quantité et qualité de la main-d'œuvre).
 :::
 
-. . .
 
-::: {.cle}
+::: {.cle .fragment}
 C'est l'horizon des politiques d'**allocation** (chapitre I, §5) : élever la trajectoire de croissance potentielle plutôt que de corriger un écart ponctuel.
 :::
 :::
