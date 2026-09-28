@@ -578,6 +578,22 @@ Chaque individu répartit son temps entre travail et loisir de façon à maximis
 
 Par simplification, le modèle néoclassique retient l'hypothèse selon laquelle l'effet de substitution domine l'effet de revenu : **l'offre agrégée de travail $L^s$ est une fonction croissante du salaire réel $w$**.
 
+::: {.callout-note}
+## Pourquoi cette hypothèse, propre au marché du travail ?
+**Une hypothèse, pas un résultat.** La théorie ne dit pas lequel des deux effets l'emporte. Sur un marché de biens, la question ne se pose pas :
+
+- l'**offre** vient d'entreprises, qui maximisent leur profit et n'ont pas d'effet de revenu : sa pente positive découle du coût marginal croissant ;
+- côté **demande**, les deux effets vont dans le même sens : quand un bien renchérit, il devient relativement plus cher (substitution) *et* l'acheteur s'appauvrit (revenu), donc il en achète moins.
+
+Sur le marché du travail, le vendeur est un **ménage**, qui vend son propre temps : une hausse du salaire l'**enrichit** au lieu de l'appauvrir, et les deux effets s'opposent. La même ambiguïté apparaît pour l'épargne face au taux d'intérêt.
+
+**Pourquoi retenir la domination de l'effet de substitution ?**
+
+1. **Elle préserve les résultats classiques.** Avec $L^s$ croissante et $L^d$ décroissante, le marché du travail a la forme d'un marché ordinaire : un équilibre unique et stable $(w^*, L^*)$, et un salaire minimum fixé au-dessus de $w^*$ crée un excédent d'offre, c'est-à-dire du chômage classique. Si l'effet de revenu dominait, $L^s$ serait décroissante, et plusieurs équilibres, parfois instables, deviendraient possibles.
+2. **Elle est plausible pour ceux qui travaillent peu.** L'effet de revenu est proportionnel aux heures *déjà* travaillées : 1 € de plus par heure rapporte beaucoup à qui travaille 35 heures, rien à qui ne travaille pas. L'effet de substitution, lui, joue pour tous.
+3. **Elle est cohérente avec l'offre agrégée.** Celle-ci dépend surtout de la décision de travailler ou non (femmes, seniors, étudiants). Pour une personne inactive, il n'y a pas d'effet de revenu : un salaire plus élevé attire des inactifs vers l'activité. Empiriquement, les heures des personnes déjà en emploi réagissent peu au salaire, mais la participation, surtout féminine, réagit nettement.
+:::
+
 ::: {.callout-warning}
 ## Nuance empirique : et sur longue période ?
 Cette hypothèse simplificatrice (l'effet de substitution domine) est raisonnable à court terme, mais elle s'inverse sur longue période. Alors que le salaire réel était multiplié par environ 10 en France entre 1950 et 2019, la durée annuelle du travail a été divisée par deux sur la même période : c'est donc l'**effet de revenu** qui l'a finalement emporté sur la marge des heures travaillées de long terme, les ménages ayant choisi de convertir une partie des gains de productivité en loisir plutôt qu'en heures travaillées supplémentaires.
