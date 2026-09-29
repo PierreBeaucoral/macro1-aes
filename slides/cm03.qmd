@@ -1,6 +1,6 @@
 ---
 title: "CM 3 : Marché du travail : définitions & mesures"
-subtitle: "Spécificités, modèles internationaux et mesures du chômage (Chapitre II, Partie 1 : § I-III)"
+subtitle: "Spécificités, modèles internationaux et mesures du chômage (Chapitre II, Partie 1 : §1.1-1.3)"
 description: "Pourquoi le marché du travail n'est pas un marché comme les autres, les trois modèles nationaux de régulation, et les deux façons de mesurer le chômage en France (INSEE/BIT vs France Travail)."
 ---
 
@@ -13,7 +13,7 @@ description: "Pourquoi le marché du travail n'est pas un marché comme les autr
 5. Les limites du taux de chômage et le halo du chômage
 
 ::: {.source}
-Séance adossée au Chapitre II, Partie 1, sections I à III du résumé de cours.
+Séance adossée au Chapitre II, Partie 1, §1.1-1.3 du résumé de cours.
 :::
 
 ## Objectifs de la séance
@@ -310,7 +310,7 @@ La population active représente **l'offre de travail** sur le marché. Ses dét
 . . .
 
 ::: {.cle}
-Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en emploi, ni activement à la recherche d'un emploi : chômeurs découragés, personnes malades ou en situation de handicap, personnes au foyer, étudiants, retraités.
+Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en emploi, ni au chômage au sens du BIT : étudiants, retraités, personnes au foyer, personnes malades ou en situation de handicap, mais aussi chômeurs découragés (ces derniers relèvent du halo du chômage).
 :::
 
 ## Actifs et inactifs : comment se répartit la population en âge de travailler
@@ -361,8 +361,8 @@ France Travail comptabilise les personnes **inscrites**, réparties selon leur s
 | Catégorie | Situation |
 |---|---|
 | **A** | Sans emploi, tenues de rechercher activement un emploi |
-| **B** | Activité réduite courte, tenues de rechercher un emploi |
-| **C** | Activité réduite longue, tenues de rechercher un emploi |
+| **B** | Activité réduite courte (78 h ou moins par mois), tenues de rechercher un emploi |
+| **C** | Activité réduite longue (plus de 78 h par mois), tenues de rechercher un emploi |
 | **D** | Sans emploi, non tenues de rechercher (formation, maladie…) |
 | **E** | En emploi (contrat aidé, création d'entreprise…), non tenues de rechercher |
 
@@ -595,22 +595,29 @@ Un même taux de chômage peut recouvrir des réalités très différentes selon
 En France, environ **4 %** des personnes en emploi à un trimestre donné ne le sont plus au trimestre suivant, contre **40 %** des chômeurs qui sortent du chômage d'un trimestre à l'autre.
 :::
 
-## Le halo du chômage brouille les frontières entre emploi, chômage et inactivité
+## Le halo : des inactifs qui voudraient travailler
 
 ::: {.def}
-**Halo du chômage.** Ensemble des situations dans lesquelles les frontières entre emploi, chômage et inactivité sont difficiles à établir, les critères INSEE/BIT étant stricts, de nombreuses situations intermédiaires échappent à la mesure officielle du chômage.
+**Halo autour du chômage** (INSEE). Personnes **inactives au sens du BIT** qui **souhaitent travailler** mais ne remplissent pas tous les critères du chômage :
+
+- elles cherchent un emploi mais ne sont **pas disponibles** sous deux semaines ;
+- ou elles n'ont fait **aucune démarche** depuis quatre semaines (dont les **chômeurs découragés**).
+
+Environ **1,9 million** de personnes au 2ᵉ trimestre 2023, presque autant que les 2,2 millions de chômeurs BIT.
 :::
 
 . . .
 
 ::: {.callout-note}
-Ce halo explique pourquoi les économistes surveillent aussi le **taux de non-emploi** (proportion de personnes sans emploi dans la population en âge de travailler), qui inclut les chômeurs BIT **et** une partie des inactifs proches du marché du travail.
+Ce halo explique pourquoi les économistes surveillent aussi le **taux de non-emploi** (proportion de personnes sans emploi dans la population en âge de travailler), soit 1 − taux d'emploi : il compte **toutes** les personnes sans emploi (chômeurs BIT, halo et autres inactifs).
 :::
 
-## Le sous-emploi et l'emploi temporaire peuplent le halo du chômage
+## Sous-emploi et emploi temporaire : des personnes en emploi, à la marge
+
+Ces deux situations concernent des personnes **en emploi** : elles ne relèvent **pas** du halo.
 
 ::: {.incremental}
-- **Le sous-emploi (temps partiel subi)** : personnes travaillant à temps partiel (moins de 35 heures/semaine en France) qui souhaiteraient travailler davantage. Concerne très majoritairement les **femmes** (environ 80 % des emplois à temps partiel) et les emplois peu qualifiés.
+- **Le sous-emploi (temps partiel subi)** : personnes travaillant à temps partiel qui souhaiteraient travailler davantage et sont disponibles pour le faire. Concerne très majoritairement les **femmes** (environ 80 % des emplois à temps partiel) et les emplois peu qualifiés.
 - **L'emploi temporaire** : CDD, intérim, stages rémunérés, emplois aidés, statut d'actif de courte durée alternant emploi, chômage et inactivité. En France, les CDI restent la norme (environ 88 % des salariés hors intérim), mais la part des *recrutements* en CDD a fortement augmenté depuis les années 1980.
 :::
 
@@ -618,16 +625,15 @@ Ce halo explique pourquoi les économistes surveillent aussi le **taux de non-em
 INSEE, *Emploi, chômage, revenus du travail* (2017) ; DARES.
 :::
 
-## Le halo se déploie sur un continuum entre emploi et inactivité
+## Du plein emploi à l'inactivité : où se situe le halo ?
 
 ```{mermaid}
-%%| fig-cap: "Le halo du chômage occupe l'espace flou entre emploi, chômage au sens du BIT et inactivité stricte."
+%%| fig-cap: "Le sous-emploi se situe du côté de l'emploi ; le halo, du côté de l'inactivité, entre chômage BIT et inactivité stricte."
 flowchart LR
-    E[Emploi a temps plein] --> SE[Sous-emploi temps partiel subi]
-    SE --> H[Halo du chomage]
-    H --> CB[Chomage BIT]
-    H --> IN[Inactifs proches du marche]
-    IN --> I[Inactivite stricte]
+    E[Emploi a temps plein] --- SE[Sous-emploi : en emploi]
+    SE --- CB[Chomage BIT]
+    CB --- H[Halo : inactifs souhaitant travailler]
+    H --- I[Inactivite stricte]
 ```
 
 ::: {.source}
@@ -656,5 +662,5 @@ Synthèse des notions de halo du chômage, sous-emploi et emploi temporaire pré
 :::
 
 ::: {.source}
-Chapitre II, Partie 1, sections IV-V.
+Chapitre II, Partie 1, §1.4-1.5.
 :::

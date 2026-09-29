@@ -183,7 +183,7 @@ $$
 
 La population active représente **l'offre de travail** sur le marché. Ses principaux déterminants sont : le taux d'activité des femmes, la structure par âge de la population, les flux migratoires, la durée des études, et l'âge de départ à la retraite.
 
-Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en emploi, ni activement à la recherche d'un emploi : personnes ne souhaitant pas travailler (chômeurs découragés, personnes malades ou en situation de handicap, personnes au foyer), personnes n'ayant pas l'âge légal de travailler, étudiants, retraités.
+Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en emploi, ni au chômage au sens du BIT : étudiants, retraités, personnes au foyer, personnes malades ou en situation de handicap, mais aussi des personnes qui **souhaiteraient travailler** sans remplir tous les critères du BIT (chômeurs découragés qui ont cessé de chercher, personnes non disponibles immédiatement). Ces dernières forment le **halo du chômage** (voir plus bas).
 
 ::: {.definition}
 **Taux d'activité (ou de participation)** $= \dfrac{\text{Population active}}{\text{Population en âge de travailler}}$, proportion de la population en âge de travailler qui est active (en emploi ou au chômage).
@@ -199,12 +199,12 @@ Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en empl
 ## À retenir : deux définitions du chômage
 **INSEE (au sens du BIT)** : un chômeur est une personne répondant **simultanément** à trois critères :
 
-1. être **sans emploi** durant la période de référence (les quatre semaines précédant l'enquête) ;
+1. être **sans emploi** au cours d'une semaine de référence (ne pas avoir travaillé, ne serait-ce qu'une heure) ;
 2. être **disponible** pour travailler dans les deux semaines ;
-3. être **activement à la recherche** d'un emploi (démarches spécifiques engagées).
+3. être **activement à la recherche** d'un emploi (démarches spécifiques au cours des quatre semaines précédentes, ou avoir trouvé un emploi qui commence dans moins de trois mois).
 
-**France Travail (ex-Pôle Emploi)** : comptabilise les personnes **inscrites** répondant à trois critères proches (sans emploi, inscrites, disponibles), mais découpe la population des demandeurs d'emploi en **cinq catégories (A à E)**, notamment pour tenir compte :
-   - des personnes en activité réduite (moins de 78 heures/mois) qui continuent à chercher un emploi à temps plein ;
+**France Travail (ex-Pôle Emploi)** : comptabilise les personnes **inscrites**, avec ou sans activité, et découpe la population des demandeurs d'emploi en **cinq catégories (A à E)**, notamment pour tenir compte :
+   - des personnes en activité réduite (catégorie B : 78 heures ou moins par mois ; catégorie C : plus de 78 heures) qui continuent à chercher un emploi ;
    - des personnes inscrites mais n'effectuant aucune recherche active.
 
 Les deux mesures divergent donc structurellement : le chiffre France Travail dépend de choix administratifs (inscription), le chiffre INSEE/BIT d'une enquête standardisée internationalement comparable.
@@ -215,8 +215,8 @@ France Travail répartit précisément les demandeurs d'emploi inscrits en cinq 
 | Catégorie | Situation |
 |---|---|
 | **A** | Sans emploi, tenues de rechercher activement un emploi |
-| **B** | Activité réduite courte, tenues de rechercher un emploi |
-| **C** | Activité réduite longue, tenues de rechercher un emploi |
+| **B** | Activité réduite courte (78 h ou moins par mois), tenues de rechercher un emploi |
+| **C** | Activité réduite longue (plus de 78 h par mois), tenues de rechercher un emploi |
 | **D** | Sans emploi, non tenues de rechercher (formation, maladie…) |
 | **E** | En emploi (contrat aidé, création d'entreprise…), non tenues de rechercher |
 
@@ -336,16 +336,20 @@ Le taux de chômage identique masque donc deux réalités opposées : la Suède 
 ### Le halo du chômage
 
 ::: {.definition}
-**Halo du chômage.** Ensemble des situations dans lesquelles les frontières entre emploi, chômage et inactivité sont difficiles à établir, les critères INSEE/BIT étant stricts, de nombreuses situations intermédiaires échappent à la mesure officielle du chômage.
+**Halo autour du chômage** (INSEE). Ensemble des personnes **inactives au sens du BIT** qui **souhaitent travailler** mais ne remplissent pas tous les critères pour être comptées comme chômeurs : soit elles recherchent un emploi mais ne sont **pas disponibles** dans les deux semaines, soit elles souhaitent travailler mais **n'ont effectué aucune démarche** de recherche au cours des quatre dernières semaines, qu'elles soient disponibles ou non. Les **chômeurs découragés**, qui ont renoncé à chercher faute de perspectives, en font partie. Le halo se situe donc à la frontière entre **chômage et inactivité** : ses membres ne sont ni en emploi, ni chômeurs au sens du BIT.
 :::
 
-Deux catégories principales relèvent du halo du chômage :
+Ordre de grandeur : environ 1,9 million de personnes au 2ᵉ trimestre 2023, presque autant que les 2,2 millions de chômeurs BIT (Insee ; voir TD 2).
 
-- **Le sous-emploi (temps partiel subi)** : personnes travaillant à temps partiel (moins de 35 heures/semaine en France) qui souhaiteraient travailler davantage et recherchent (activement ou non) un emploi à temps plein, à distinguer du temps partiel *choisi*. Le temps partiel subi concerne très majoritairement les femmes (environ 80 % des emplois à temps partiel) et les emplois peu qualifiés. Il pose plusieurs problèmes : rémunération plus faible, droits sociaux moindres (retraite, assurance chômage), accès limité à la formation continue.
+### Au-delà du halo : sous-emploi et emploi temporaire
+
+Deux autres situations brouillent, elles, la frontière entre **emploi** et chômage. Elles concernent des personnes **en emploi** et ne relèvent donc **pas** du halo :
+
+- **Le sous-emploi (temps partiel subi)** : personnes en emploi à temps partiel qui souhaitent travailler davantage et sont disponibles pour le faire, qu'elles recherchent ou non un autre emploi, à distinguer du temps partiel *choisi*. Le temps partiel subi concerne très majoritairement les femmes (environ 80 % des emplois à temps partiel) et les emplois peu qualifiés. Il pose plusieurs problèmes : rémunération plus faible, droits sociaux moindres (retraite, assurance chômage), accès limité à la formation continue. Halo (des inactifs) et sous-emploi (des personnes en emploi) sont deux composantes **distinctes** de la sous-utilisation de la main-d'œuvre que l'Insee mesure en complément du chômage BIT.
 - **L'emploi temporaire** : statut d'actif de courte durée alternant emploi, chômage et inactivité. Il regroupe les CDD, les missions d'intérim, les stages rémunérés et les emplois aidés. En France, les CDI restent la norme (environ 88 % des salariés hors intérim), mais la part des *recrutements* en CDD a fortement augmenté depuis les années 1980, en particulier les CDD de très courte durée dans le secteur tertiaire, d'où un phénomène de **dualisation** du marché du travail entre salariés en emploi stable et salariés multipliant les contrats courts.
 
 ::: {.callout-note}
-Ce halo du chômage explique pourquoi, à côté du taux de chômage, les économistes surveillent aussi le **taux de non-emploi** (proportion de personnes sans emploi dans la population en âge de travailler), qui inclut à la fois les chômeurs BIT et une partie des inactifs proches du marché du travail.
+Ces situations expliquent pourquoi, à côté du taux de chômage, les économistes surveillent aussi le **taux de non-emploi** (proportion de personnes sans emploi dans la population en âge de travailler, soit 1 − taux d'emploi), qui compte l'ensemble des personnes sans emploi : chômeurs BIT, halo et autres inactifs.
 :::
 
 ## 1.4 Typologie des différentes formes de chômage
@@ -363,7 +367,7 @@ Il est essentiel de distinguer le chômage selon son **horizon temporel** (struc
 | Type | Mécanisme |
 |---|---|
 | **Frictionnel** (ou de mobilité) | Temps nécessaire pour retrouver un emploi entre deux postes, période de transition inévitable, même dans une économie proche du plein emploi. |
-| **Classique (ou volontaire)** | Rigidité à la baisse du salaire réel : un salaire trop élevé réduit la rentabilité de la production et donc l'incitation à embaucher. Signe caractéristique : coexistence d'un chômage élevé, de salaires élevés et d'une faible rentabilité des entreprises. |
+| **Classique** (qualifié de volontaire par les néoclassiques, au sens collectif : il résulte d'un salaire administré) | Rigidité à la baisse du salaire réel : un salaire trop élevé réduit la rentabilité de la production et donc l'incitation à embaucher. Signe caractéristique : coexistence d'un chômage élevé, de salaires élevés et d'une faible rentabilité des entreprises. |
 | **Technologique** | Substitution du capital (machines) au travail dans un objectif de hausse de la productivité. |
 | **D'inadéquation** | Décalage entre les compétences offertes par les travailleurs et celles demandées par les entreprises. |
 
@@ -401,7 +405,7 @@ L'évolution du chômage en Europe et aux États-Unis depuis les années 1970 pe
 
 **Années 1970 : choc d'offre négatif.** Les deux chocs pétroliers (1973 et 1979) provoquent une **stagflation** (hausse simultanée du chômage et de l'inflation) sous l'effet conjugué de la hausse du prix du pétrole, du ralentissement des gains de productivité et d'une forte demande de hausses salariales.
 
-**Début des années 1980 : choc de demande négatif.** La mise en œuvre de politiques monétaires restrictives pour juguler l'inflation provoque une forte hausse du chômage. Ce choc reste temporaire aux États-Unis (marché du travail plus flexible, politique budgétaire expansive de policy-mix, remontée des taux d'intérêt plus brève) mais devient **durable en Europe**.
+**Début des années 1980 : choc de demande négatif.** La mise en œuvre de politiques monétaires restrictives pour juguler l'inflation provoque une forte hausse du chômage. Ce choc reste temporaire aux États-Unis (marché du travail plus flexible, politique budgétaire expansive de policy-mix, remontée des taux d'intérêt plus brève) mais devient **durable en Europe**, où l'ajustement des salaires est plus rigide et la réponse budgétaire plus limitée.
 
 ```{r}
 #| label: fig-hysteresis-us-europe
@@ -466,7 +470,7 @@ annees_ltu <- c(2000, 2007, 2010, 2013, 2019)
 df_ltu <- data.frame(
   annee = rep(annees_ltu, 2),
   part  = c(
-    6, 10, 29, 33, 19,     # Etats-Unis
+    6, 10, 29, 25, 12,     # Etats-Unis
     42, 40, 40, 41, 43     # France
   ),
   zone  = rep(c("Etats-Unis", "France"), each = length(annees_ltu))
@@ -506,7 +510,7 @@ df_div <- data.frame(
   taux  = c(
     8.4, 7.5, 8.5, 5.2, 4.6,        # Allemagne
     24.1, 13.9, 8.2, 26.1, 22.1,    # Espagne
-    12.3, 9.1, 8.0, 10.3, 10.4,     # France
+    12.6, 10.2, 8.0, 9.9, 10.4,     # France
     6.8, 2.8, 3.2, 6.7, 6.9,        # Pays-Bas
     8.2, 4.3, 3.8, 7.0, 6.2         # Danemark
   ),
@@ -591,17 +595,17 @@ Sur le marché du travail, le vendeur est un **ménage**, qui vend son propre te
 
 1. **Elle préserve les résultats classiques.** Avec $L^s$ croissante et $L^d$ décroissante, le marché du travail a la forme d'un marché ordinaire : un équilibre unique et stable $(w^*, L^*)$, et un salaire minimum fixé au-dessus de $w^*$ crée un excédent d'offre, c'est-à-dire du chômage classique. Si l'effet de revenu dominait, $L^s$ serait décroissante, et plusieurs équilibres, parfois instables, deviendraient possibles.
 2. **Elle est plausible pour ceux qui travaillent peu.** L'effet de revenu est proportionnel aux heures *déjà* travaillées : 1 € de plus par heure rapporte beaucoup à qui travaille 35 heures, rien à qui ne travaille pas. L'effet de substitution, lui, joue pour tous.
-3. **Elle est cohérente avec l'offre agrégée.** Celle-ci dépend surtout de la décision de travailler ou non (femmes, seniors, étudiants). Pour une personne inactive, il n'y a pas d'effet de revenu : un salaire plus élevé attire des inactifs vers l'activité. Empiriquement, les heures des personnes déjà en emploi réagissent peu au salaire, mais la participation, surtout féminine, réagit nettement.
+3. **Elle est cohérente avec l'offre agrégée.** Celle-ci dépend surtout de la décision de travailler ou non (femmes, seniors, étudiants). Pour une personne inactive, il n'y a pas d'effet de revenu : un salaire plus élevé attire des inactifs vers l'activité. Empiriquement, à court terme, les heures des personnes déjà en emploi réagissent peu au salaire, mais la participation, surtout féminine, réagit nettement.
 :::
 
 ::: {.callout-warning}
 ## Nuance empirique : et sur longue période ?
-Cette hypothèse simplificatrice (l'effet de substitution domine) est raisonnable à court terme, mais elle s'inverse sur longue période. Alors que le salaire réel était multiplié par environ 10 en France entre 1950 et 2019, la durée annuelle du travail a été divisée par deux sur la même période : c'est donc l'**effet de revenu** qui l'a finalement emporté sur la marge des heures travaillées de long terme, les ménages ayant choisi de convertir une partie des gains de productivité en loisir plutôt qu'en heures travaillées supplémentaires.
+Cette hypothèse simplificatrice (l'effet de substitution domine) est raisonnable à court terme, mais elle s'inverse sur longue période. Alors que le pouvoir d'achat du salaire moyen était multiplié par 4 à 5 environ en France entre 1950 et 2019, la durée annuelle du travail par travailleur a reculé d'environ un tiers (d'environ 2 240 à 1 500 heures) : c'est donc l'**effet de revenu** qui l'a finalement emporté sur la marge des heures travaillées de long terme, les ménages ayant choisi de convertir une partie des gains de productivité en loisir plutôt qu'en heures travaillées supplémentaires.
 :::
 
 ```{r}
 #| label: fig-heures-longterme-resume
-#| fig-cap: "Durée annuelle moyenne du travail en France, 1950-2019 (heures par travailleur), avec repères internationaux 2019. Sur longue période, la durée du travail a diminué de moitié alors que le salaire réel était multiplié par environ 10 : à l'inverse de l'hypothèse du modèle néoclassique (effet de substitution dominant), c'est l'effet de revenu qui l'a emporté sur la marge des heures travaillées. Source : OCDE, Average annual hours actually worked (1970-2019) ; Bergeaud, Cette et Lecat (2016, Banque de France), Productivity Trends in Advanced Countries, pour les points antérieurs à 1970."
+#| fig-cap: "Durée annuelle moyenne du travail en France, 1950-2019 (heures par travailleur), avec repères internationaux 2019. Sur longue période, la durée du travail a diminué d'environ un tiers alors que le pouvoir d'achat du salaire était multiplié par 4 à 5 environ : à l'inverse de l'hypothèse du modèle néoclassique (effet de substitution dominant), c'est l'effet de revenu qui l'a emporté sur la marge des heures travaillées. Source : OCDE, Average annual hours actually worked (1970-2019) ; Bergeaud, Cette et Lecat (2016, Banque de France), Productivity Trends in Advanced Countries, pour les points antérieurs à 1970."
 #| fig-width: 6.5
 #| fig-height: 4
 source(here::here("R/theme_macro.R"))
@@ -611,7 +615,7 @@ library(ggplot2)
 # Source : OCDE, "Average annual hours actually worked" (1970-2019) ;
 # Bergeaud, Cette et Lecat (2016, Banque de France, base "Productivity Trends
 # in Advanced Countries") pour les points anterieurs a 1970. Ordres de
-# grandeur bien etablis (baisse seculaire de moitie environ depuis 1950).
+# grandeur bien etablis (baisse d'environ un tiers depuis 1950).
 df_heures <- data.frame(
   annee  = c(1950, 1960, 1970, 1980, 1990, 2000, 2010, 2019),
   heures = c(2242, 1988, 1960, 1806, 1667, 1567, 1494, 1505)
@@ -714,7 +718,7 @@ Pédagogiquement, c'est un cas où un modèle néoclassique naïf (choc d'offre 
 
 ### Un salaire minimum trop élevé crée du chômage classique
 
-Si un salaire plancher $w_{min}$ est imposé **au-dessus** du salaire d'équilibre $w^*$, l'offre de travail excède la demande à ce niveau de salaire : c'est le **chômage classique** déjà identifié au §1.4 (lecture néoclassique : chômage volontaire, au sens où il résulte d'un prix administré trop élevé, non d'une insuffisance de la demande).
+Si un salaire plancher $w_{min}$ est imposé **au-dessus** du salaire d'équilibre $w^*$, l'offre de travail excède la demande à ce niveau de salaire : c'est le **chômage classique** déjà identifié au §1.4 (lecture néoclassique : chômage volontaire, au sens **collectif** où il résulte d'un prix administré trop élevé, non d'une insuffisance de la demande). Au sens strict de la définition ($w_r > w^*$), les exclus ne sont pas volontaires : ils sont prêts à travailler au salaire $w_{min}$.
 
 ```{r}
 #| label: fig-smic-neo
@@ -877,7 +881,7 @@ Chez Keynes, rien ne garantit que les décisions d'épargne des ménages (foncti
 L'économie peut alors se retrouver durablement dans un **équilibre de sous-emploi** : un état où offre et demande de biens sont égales, mais à un niveau de production trop faible pour assurer le plein emploi. Aucun mécanisme de marché, ni la flexibilité des prix, ni celle des salaires, ne permet de revenir spontanément au plein emploi. On parle alors de **chômage involontaire** : des individus souhaitent travailler au salaire en vigueur mais ne trouvent pas d'emploi, faute d'embauches suffisantes de la part des entreprises.
 
 ::: {.callout-important}
-## À retenir : quatre points clés de la critique keynésienne
+## À retenir : quatre ruptures avec l'analyse néoclassique
 1. Le marché livré à lui-même n'aboutit pas nécessairement à un équilibre de plein emploi : un équilibre durable de sous-emploi est possible $\Rightarrow$ l'intervention de l'État est légitime.
 2. Le marché du travail n'est pas autonome : son équilibre dépend de l'équilibre général de l'économie.
 3. Les anticipations et l'incertitude jouent un rôle central (contre l'hypothèse néoclassique d'information parfaite).
@@ -896,7 +900,7 @@ $$
 où $u$ est le taux de chômage, $g$ le taux de croissance du PIB réel, $\bar g$ le taux de croissance nécessaire pour stabiliser le chômage, et $\beta > 0$ le **coefficient d'Okun**.
 :::
 
-Aux États-Unis sur la période 1961-2013, une hausse de 1 point du taux de croissance est associée en moyenne à une baisse d'environ 0,38 point du taux de chômage ($\beta \approx 0{,}38$). Ce coefficient varie selon les pays car il dépend de la façon dont les entreprises ajustent l'emploi aux variations de la production, donc de la structure des économies (flexibilité des contrats, législation sur l'embauche et le licenciement).
+Aux États-Unis, une hausse de 1 point du taux de croissance est associée en moyenne à une baisse d'environ 0,4 point du taux de chômage ($\beta \approx 0{,}38$ sur 1961-1980, $0{,}42$ sur 1981-2016 ; Blanchard et Cohen, 2017). Ce coefficient varie selon les pays car il dépend de la façon dont les entreprises ajustent l'emploi aux variations de la production, donc de la structure des économies (flexibilité des contrats, législation sur l'embauche et le licenciement).
 
 Avant de résumer le coefficient d'Okun par pays, il est utile de voir la relation brute, année par année : chaque point est une année, avec la croissance du PIB réel en abscisse et la variation du taux de chômage en ordonnée.
 
@@ -1238,6 +1242,8 @@ Plusieurs éléments déplacent l'une ou l'autre courbe, et donc $u^*$ : le coû
 | Subvention sur les salaires (baisse du coût du travail) | WS $\downarrow$ | $u^*$ $\downarrow$ |
 | Hausse de la productivité du travail | PS $\uparrow$ | Effet ambigu sur $u^*$ (dépend du partage salaire/profit) |
 | Baisse de la demande globale | Aucune (chômage conjoncturel additionnel) | Chômage total $\uparrow$, au-delà de $u^*$ |
+
+*Convention du cours* : dans ce tableau, une baisse du coût du travail pour l'employeur (allègement de cotisations, subvention) est représentée comme un déplacement de **WS vers le bas**, le salaire réel s'entendant alors comme le coût réel du travail. D'autres manuels (Blanchard) placent ce coin fiscal dans **PS**, qui monte : l'effet sur $u^*$ (baisse) est le même.
 
 Dans ce modèle, **le chômage est involontaire mais non keynésien** : il ne provient pas d'une insuffisance de la demande globale mais de l'absence de marchés parfaitement concurrentiels et du pouvoir de négociation des salariés, donc des politiques de prix des entreprises et des exigences salariales des travailleurs.
 

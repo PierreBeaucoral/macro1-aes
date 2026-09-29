@@ -15,7 +15,7 @@ description: "Dossier de TD : théorie de l'appariement (Beveridge, modèle DMP,
 - Calculer, à partir du barème du RSA, un taux marginal de prélèvement implicite et un gain net au retour à l'emploi.
 - Relier la notion de **trappe à inactivité** à la théorie de la recherche d'emploi (salaire de réserve) et discuter l'apport de la réforme de 2016 (prime d'activité).
 
-**Pré-requis** : Chapitre II, Partie 2, §IV (courbe de Beveridge, modèle DMP, tension $\theta$) ; Chapitre III, §II, axe 3 (activation, trappe à inactivité) ; TD 5 et TD 6 (néoclassique, WS-PS, Okun-Phillips).
+**Pré-requis** : Chapitre II, §2.4 (courbe de Beveridge, modèle DMP, tension $\theta$) ; Chapitre III, §II, axe 3 (activation, trappe à inactivité) ; TD 5 et TD 6 (néoclassique, WS-PS, Okun-Phillips).
 :::
 
 Ce dossier s'appuie sur les ressources complémentaires du Chapitre III consacrées à la trappe à inactivité et aux demandeurs d'emploi non indemnisables[^source]. Les trois premiers exercices reprennent la théorie de l'appariement vue en cours (courbe de Beveridge, modèle de Diamond-Mortensen-Pissarides). Le quatrième exercice, nouveau, applique la théorie de la recherche d'emploi à un cas concret de politique économique française : le passage du RMI au RSA puis à la prime d'activité.
@@ -236,7 +236,7 @@ Représentez la nouvelle courbe des salaires sur un même graphique que la quest
 
 ::: {.callout-tip}
 ## Actualisation : chronologie RMI → RSA → prime d'activité
-**1988** : création du RMI. **2009** : le RSA remplace le RMI et l'allocation de parent isolé ; il se compose d'un RSA-socle (équivalent du RMI) et d'un RSA-activité (complément pour travailleurs pauvres). **2016** : la prime d'activité remplace le RSA-activité, dont le taux de non-recours était très élevé (de l'ordre de 60 à 70 % des ayants droit) du fait de sa complexité et de sa stigmatisation ; elle connaît un taux de recours nettement supérieur.
+**1988** : création du RMI. **2009** : le RSA remplace le RMI et l'allocation de parent isolé ; il se compose d'un RSA-socle (équivalent du RMI) et d'un RSA-activité (complément pour travailleurs pauvres). **2016** : la prime d'activité remplace le RSA-activité et la prime pour l'emploi (PPE) ; le taux de non-recours du RSA-activité était très élevé (de l'ordre de 60 à 70 % des ayants droit) du fait de sa complexité et de sa stigmatisation ; elle connaît un taux de recours nettement supérieur.
 :::
 
 ## 4.1 Le barème du RSA (formule simplifiée)

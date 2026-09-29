@@ -12,7 +12,7 @@ description: "Dossier de travaux dirigés : typologie du chômage, dualisation d
 - Mobiliser sans erreur la typologie du chômage (frictionnel, classique, technologique, d'inadéquation, keynésien, technique) et la distinction structurel/conjoncturel, volontaire/involontaire.
 - Définir la segmentation **primaire/secondaire** du marché du travail et le phénomène de **dualisation** entre CDI et contrats courts.
 - Calculer un **taux de rotation de la main-d'œuvre** et interpréter son évolution en France depuis 1993.
-- Présenter les mécanismes de la théorie **insiders-outsiders** (Lindbeck & Snower, 1986) et son lien avec le modèle WS-PS étudié au chapitre suivant.
+- Présenter les mécanismes de la théorie **insiders-outsiders** (Lindbeck & Snower, 1986) et son lien avec le modèle WS-PS étudié en Partie 2 du chapitre (§2.3, CM 8, TD 5).
 - Lire et discuter des données réelles (Dares) et un article de presse sur la précarisation de l'emploi.
 :::
 

@@ -342,7 +342,7 @@ ggplot(df_ppa, aes(x = pays, y = valeur, fill = mesure)) +
 ```
 
 ::: {.source}
-La correction PPA rehausse fortement le niveau de vie mesuré de la Chine (+68 %) et surtout de l'Inde (+251 %), pays où le coût de la vie est bas, alors qu'elle change peu la position de la France et des États-Unis. C'est exactement l'exemple de la phrase-clé précédente, sur données réelles.
+La correction PPA rehausse fortement le niveau de vie mesuré de la Chine (+68 %) et surtout de l'Inde (+251 %), pays où le coût de la vie est bas, alors qu'elle ne modifie pas le classement de la France (+36 %) ni des États-Unis. L'écart relatif France-Chine se réduit (de 3,2 à 2,6), mais l'écart absolu en dollars s'accroît. C'est exactement l'exemple de la phrase-clé précédente, sur données réelles.
 :::
 
 ## Le taux de croissance mesure le rythme de variation du PIB réel {.smaller}
@@ -767,7 +767,7 @@ Dans les pays de l'OCDE, l'économie continue de croître, mais à un rythme moi
 
 
 ::: {.fragment}
-Principale explication : le **ralentissement des gains de productivité**, un thème que nous retrouverons au chapitre II à travers la loi d'Okun et, plus loin dans le cours, à travers le débat sur la stagnation séculaire (R. Gordon, L. Summers).
+Principale explication : le **ralentissement des gains de productivité**, un thème au cœur du débat sur la stagnation séculaire (R. Gordon, L. Summers).
 :::
 :::
 
@@ -970,7 +970,7 @@ ggplot(df_ct, aes(x = annee, y = croissance)) +
 ```
 
 ::: {.source}
-D'une année sur l'autre, le PIB par habitant fluctue nettement autour de sa tendance : ces à-coups (récessions en rouge) sont dominés par des chocs de **demande** (confiance, investissement, commerce extérieur), l'horizon du court terme.
+D'une année sur l'autre, le PIB par habitant fluctue nettement autour de sa tendance : ces à-coups (récessions en rouge) sont le plus souvent dominés par des chocs de **demande** (confiance, investissement, commerce extérieur), l'horizon du court terme ; 1975 fait exception (choc d'offre pétrolier, CM 2).
 :::
 :::
 :::

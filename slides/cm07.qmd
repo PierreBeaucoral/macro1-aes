@@ -1,6 +1,6 @@
 ---
 title: "La courbe de Phillips : de l'arbitrage keynésien au NAIRU"
-subtitle: "Chapitre II, Partie 2, §II.4 : Inflation, chômage et anticipations"
+subtitle: "Chapitre II, Partie 2, §2.2 : Inflation, chômage et anticipations"
 ---
 
 ## Plan de la séance

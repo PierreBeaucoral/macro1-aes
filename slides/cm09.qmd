@@ -40,7 +40,7 @@ subtitle: "CM 9 : Politiques de l'emploi : cadres d'analyse et flexisécurité (
 | **Cible** | Le volume d'emplois disponibles | Le niveau de vie des personnes sans emploi |
 | **Fonction de Musgrave mobilisée** | Allocation / stabilisation | Redistribution |
 | **Condition d'efficacité** | Diagnostic correct sur le type de chômage | Calibrage qui ne décourage pas le retour à l'emploi |
-| **Exemple** | Baisse du coût du travail, formation | Assurance chômage, RSA |
+| **Exemple** | Baisse du coût du travail, formation | Assurance chômage, RSA-socle |
 
 . . .
 
@@ -111,7 +111,7 @@ Source : d'après Bénassy-Quéré, Coeuré, Jacquet, Pisani-Ferry (2021) [@bena
 
 ```{r}
 #| label: fig-epl-cm09
-#| fig-cap: "Indice OCDE de protection de l'emploi (EPL Database, version 4, 2019 ; échelle 0 = aucune protection, 6 = protection maximale). Sur l'indicateur agrégé de protection des CDI contre les licenciements individuels et collectifs (EPRC), le Danemark est nettement sous la France, proche du Royaume-Uni : c'est ce qui justifie l'étiquette « Faible » du tableau précédent. L'écart avec la France est plus marqué encore sur les seules dispositions propres aux licenciements collectifs (EPC) : c'est surtout par cette marge que passe la flexibilité danoise, la protection contre le licenciement individuel restant proche de celle du Royaume-Uni. Source : OCDE, Indicators of Employment Protection (EPL Database, version 4, 2019), sdmx.oecd.org, dataflow DSD_EPL, indicateurs EPRC (individual and collective dismissals, regular contracts) et EPC (additional provisions for collective dismissals)."
+#| fig-cap: "Indice OCDE de protection de l'emploi (EPL Database, version 4, 2019 ; échelle 0 = aucune protection, 6 = protection maximale). Sur l'indicateur agrégé de protection des CDI contre les licenciements individuels et collectifs (EPRC), le Danemark est nettement sous la France, proche du Royaume-Uni : c'est ce qui justifie l'étiquette « Faible » du tableau précédent. L'écart avec la France est plus marqué encore sur les seules dispositions propres aux licenciements collectifs (EPC) : c'est surtout par cette marge que passe la flexibilité danoise. Source : OCDE, Indicators of Employment Protection (EPL Database, version 4, 2019), sdmx.oecd.org, dataflow DSD_EPL, indicateurs EPRC (individual and collective dismissals, regular contracts) et EPC (additional provisions for collective dismissals)."
 #| fig-width: 7.5
 #| fig-height: 4.6
 source(here::here("R/theme_macro.R"))
@@ -192,7 +192,7 @@ Sécurité protège les deux à la fois ; flexibilité ne protège ni l'un ni l'
 
 . . .
 
-Le terme naît des réformes menées aux **Pays-Bas et au Danemark en 1999**. Le modèle danois en est devenu la référence internationale, du fait de ses résultats.
+Le terme naît des réformes menées aux **Pays-Bas** (loi de 1999) et au **Danemark** (années 1990). Le modèle danois en est devenu la référence internationale, du fait de ses résultats.
 
 ## Trois piliers qui se renforcent mutuellement
 
@@ -466,7 +466,7 @@ $$
 . . .
 
 ::: {.cle}
-La flexisécurité déplace l'objectif de la sécurité *de l'emploi* vers la sécurité *de la personne*, un fil directeur qui éclaire les réformes françaises étudiées au CM 10 (portabilité des droits, compte personnel de formation).
+La flexisécurité déplace l'objectif de la sécurité *de l'emploi* vers la sécurité *de la personne*, un fil directeur qui éclaire les réformes françaises étudiées au CM 10 (portabilité des droits, compte personnel de formation : voir aussi le résumé du Chapitre III).
 :::
 
 ## Flexisécurité : deux typologies qui se répondent

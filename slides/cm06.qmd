@@ -1,6 +1,6 @@
 ---
 title: "CM 6 : Le chômage vu par Keynes : demande effective et loi d'Okun"
-subtitle: "Chapitre II, Partie 2, §II.1-4 : De la critique du néoclassique à la relation croissance-chômage"
+subtitle: "Chapitre II, Partie 2, §2.2 : De la critique du néoclassique à la relation croissance-chômage"
 description: "Critique keynésienne du marché du travail, demande effective, chômage involontaire et loi d'Okun."
 ---
 
@@ -13,7 +13,7 @@ description: "Critique keynésienne du marché du travail, demande effective, ch
 5. La loi d'Okun : croissance et chômage
 
 ::: {.source}
-D'après le Chapitre II, Partie 2, §II.1-4.
+D'après le Chapitre II, Partie 2, §2.2.
 :::
 
 ## Objectifs
@@ -31,7 +31,7 @@ D'après le Chapitre II, Partie 2, §II.1-4.
 ## Rappel du CM précédent
 
 ::: {.cle}
-Pour les néoclassiques (CM 5), le chômage observé est **volontaire** : il résulte d'un salaire réel maintenu au-dessus du salaire d'équilibre (SMIC, conventions collectives, rigidités). La solution est alors de **baisser le coût du travail**.
+Pour les néoclassiques (CM 5), le chômage d'équilibre est **volontaire** (salaire de réserve supérieur au salaire de marché) ; le reste est un chômage **classique**, dû à un salaire réel maintenu au-dessus du salaire d'équilibre (SMIC, conventions collectives, rigidités). La solution est alors de **baisser le coût du travail**.
 :::
 
 . . .
@@ -70,7 +70,7 @@ Si l'offre de travail est décroissante avec $w$, une baisse des salaires **accr
 ::: {.incremental}
 - Les rigidités nominales (contrats, conventions collectives) rendent l'offre de travail largement **inélastique** au salaire à court terme.
 - L'ajustement ne se fait donc pas par le salaire, mais par le **volume d'emploi** que les entreprises décident d'offrir.
-- Conséquence : une baisse des salaires ne relance pas l'embauche : elle ne fait qu'accroître le nombre de travailleurs disponibles au salaire en vigueur.
+- Conséquence : une baisse des salaires ne relance pas l'embauche, puisque l'emploi dépend du volume de production que les entreprises décident.
 :::
 
 ## Troisième critique : la demande de travail est une demande dérivée
@@ -225,7 +225,7 @@ Pour sortir l'économie de l'équilibre de sous-emploi, il faut des **politiques
 :::
 
 ::: {.source}
-D'après Chapitre II, Partie 2, §II.3.b : implications de politique économique.
+D'après Chapitre II, Partie 2, §2.2 : implications de politique économique.
 :::
 
 ## Le chômage suit le cycle : de la théorie à l'observation
@@ -506,15 +506,15 @@ ggplot(df_okun, aes(x = pays, y = coefficient, fill = periode)) +
 Blanchard et Cohen (2017), *Macroéconomie* : coefficients d'Okun estimés par pays et sous-période, 1961-1980 et 1981-2016 (repris par CORE, 2018).
 :::
 
-## Aux États-Unis, un point de croissance en plus réduit le chômage d'environ 0,38 point
+## Aux États-Unis, un point de croissance en plus réduit le chômage d'environ 0,4 point
 
 ::: {.incremental}
-- Sur la période 1961-2013, une hausse de 1 point du taux de croissance du PIB réel est associée en moyenne à une **baisse d'environ 0,38 point** du taux de chômage ($\beta \approx 0{,}38$).
+- Une hausse de 1 point du taux de croissance du PIB réel est associée en moyenne à une **baisse d'environ 0,4 point** du taux de chômage ($\beta \approx 0{,}38$ sur 1961-1980, $0{,}42$ sur 1981-2016).
 - Ce coefficient mesure la **sensibilité** du chômage aux fluctuations de l'activité.
 :::
 
 ::: {.source}
-D'après Blanchard et Cohen (2017), Chapitre II, Partie 2, §II.4.
+D'après Blanchard et Cohen (2017), Chapitre II, Partie 2, §2.2.
 :::
 
 ## Le coefficient d'Okun dépend des institutions du marché du travail
@@ -528,7 +528,7 @@ Le coefficient d'Okun n'est pas universel : il dépend de la façon dont les ent
 ::: {.incremental}
 - Une économie où les contrats sont très flexibles ajuste rapidement l'emploi $\Rightarrow$ coefficient d'Okun plus élevé.
 - Une économie où l'emploi est plus protégé amortit les chocs de production sur l'emploi $\Rightarrow$ coefficient d'Okun plus faible.
-- Cette hétérogénéité entre pays sera approfondie avec le modèle **WS-PS** (CM 8).
+- Cette hétérogénéité entre pays renvoie aux **institutions** du marché du travail (protection de l'emploi, modèles nationaux : Chapitre III).
 :::
 
 ## Rendez-vous en TD 6
@@ -558,11 +558,11 @@ Préparez vos questions sur la demande effective et le calcul du coefficient d'O
 ## Pour la prochaine fois
 
 ::: {.incremental}
-- Relire §II.1-4 du Chapitre II, Partie 2 (résumé : `cours/chap2.qmd`)
+- Relire le §2.2 du Chapitre II, Partie 2 (résumé : `cours/chap2.qmd`)
 - Préparer le **TD 6** : exercices sur la critique keynésienne et le calcul du coefficient d'Okun, et correction du **CC1**
 - CM 7 : la **courbe de Phillips**, du compromis inflation-chômage au NAIRU et aux anticipations rationnelles
 :::
 
 ::: {.source}
-Sources : Chapitre II, Partie 2, §II.1-4 ; Blanchard & Cohen (2017), *Macroéconomie*.
+Sources : Chapitre II, Partie 2, §2.2 ; Blanchard & Cohen (2017), *Macroéconomie*.
 :::

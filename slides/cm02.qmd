@@ -450,7 +450,7 @@ Faute de prix et salaires flexibles à court terme, un choc de demande négatif 
 ::: {.incremental}
 - **Offre agrégée (OA)** : relation entre prix et quantité produite.
     - CT (keynésien) : **croissante** : une hausse des prix réduit le salaire réel $w = W/P$ et rend la production plus profitable.
-    - LT (néoclassique) : **verticale** en $Y^*$ (production potentielle) : les prix s'ajustent, l'offre ne peut plus croître.
+    - LT (néoclassique) : **verticale** en $Y^*$ (production potentielle) : les prix s'ajustent, la production ne répond plus aux prix : elle reste en $Y^*$.
 - **Demande agrégée (DA)** : relation **décroissante** à CT comme à LT : une hausse des prix réduit la richesse réelle des ménages (effet de richesse négatif) donc la consommation.
 :::
 :::
@@ -1010,7 +1010,7 @@ Stabilisation et allocation influencent toutes deux le **niveau** de l'activité
 ::: {.callout-note}
 ## Pour la prochaine fois
 
-À préparer pour le CM 3 (Chapitre II, §I-III : marché du travail)
+À préparer pour le CM 3 (Chapitre II, Partie 1, §1.1-1.3 : marché du travail)
 
 ::: {.incremental}
 - Relire la section 5 du chapitre I (Musgrave, OA-DA).

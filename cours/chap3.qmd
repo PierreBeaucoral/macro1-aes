@@ -83,7 +83,7 @@ Cette typologie éclaire un point essentiel : **protection de l'emploi** (coût 
 
 ```{r}
 #| label: fig-epl
-#| fig-cap: "Indice OCDE de protection de l'emploi (EPL Database, version 4, 2019 ; échelle 0 = aucune protection, 6 = protection maximale). Sur les licenciements individuels et collectifs combinés (EPRC), le Danemark est nettement sous la France, proche du Royaume-Uni : c'est ce qui justifie l'étiquette « Faible » de la @tbl-modeles. L'écart avec la France est plus marqué encore sur les seules dispositions propres aux licenciements collectifs (EPC) : c'est surtout par cette marge que passe la flexibilité danoise, la protection contre le licenciement individuel restant proche de celle du Royaume-Uni. Source : OCDE, Indicators of Employment Protection (EPL Database, version 4, 2019), sdmx.oecd.org, dataflow DSD_EPL, indicateurs EPR (individual and collective dismissals, regular contracts) et EPC (additional provisions for collective dismissals)."
+#| fig-cap: "Indice OCDE de protection de l'emploi (EPL Database, version 4, 2019 ; échelle 0 = aucune protection, 6 = protection maximale). Sur les licenciements individuels et collectifs combinés (EPRC), le Danemark est nettement sous la France, proche du Royaume-Uni : c'est ce qui justifie l'étiquette « Faible » de la @tbl-modeles. L'écart avec la France est plus marqué encore sur les seules dispositions propres aux licenciements collectifs (EPC) : c'est surtout par cette marge que passe la flexibilité danoise. Source : OCDE, Indicators of Employment Protection (EPL Database, version 4, 2019), sdmx.oecd.org, dataflow DSD_EPL, indicateurs EPRC (individual and collective dismissals, regular contracts) et EPC (additional provisions for collective dismissals)."
 #| fig-width: 7.5
 #| fig-height: 4.6
 source(here::here("R/theme_macro.R"))
@@ -92,7 +92,7 @@ library(ggplot2)
 # Indice OCDE de protection de l'emploi, EPL Database version 4 (2019),
 # echelle 0-6. Valeurs figees en dur, extraites de sdmx.oecd.org
 # (OECD.ELS.JAI, dataflow DSD_EPL@DF_EPL) :
-#   - EPR : protection des CDI contre licenciements individuels ET collectifs
+#   - EPRC : protection des CDI contre licenciements individuels ET collectifs
 #   - EPC : dispositions additionnelles propres aux licenciements collectifs
 df_epl <- data.frame(
   pays = rep(c("États-Unis", "Royaume-Uni", "Danemark", "France"), 2),
@@ -117,13 +117,18 @@ ggplot(df_epl, aes(x = pays, y = valeur, fill = indicateur)) +
   guides(fill = guide_legend(nrow = 2))
 ```
 
+::: {.callout-warning}
+## Nuance empirique : protéger les emplois change surtout *qui* est au chômage
+Les études de l'OCDE (Bassanini et Duval, 2006) ne trouvent pas d'effet significatif de la rigueur de la protection de l'emploi sur le **taux de chômage agrégé**. Ses effets sont en revanche différenciés selon l'âge : elle freine l'**insertion des jeunes** (les entreprises hésitent à embaucher quand licencier coûte cher) et peut favoriser le **maintien en emploi des seniors**. Protéger les emplois modifie donc surtout *qui* est au chômage, plus que *combien* de personnes le sont.
+:::
+
 ## 3. La flexisécurité : origine et « triangle d'or »
 
 ::: {.definition}
 **Flexisécurité** (contraction de *flexibilité* et *sécurité*) : modèle conjuguant flexibilité pour les employeurs et sécurité pour les chercheurs d'emploi. Principe directeur : **protéger les personnes plutôt que les emplois**.
 :::
 
-Le terme naît des réformes menées aux **Pays-Bas et au Danemark en 1999**. Le modèle danois est devenu la référence internationale du fait de ses résultats. Sa viabilité repose sur : une grande liberté de licenciement ; une forte mobilité de l'emploi ; une indemnisation très généreuse du chômage ; un effort important de formation ; des structures institutionnelles décentralisées (conseils régionaux, municipalités, *job centers*) pilotant finement l'accompagnement.
+Le terme naît des réformes menées aux **Pays-Bas** (loi de 1999) et au **Danemark** (années 1990). Le modèle danois est devenu la référence internationale du fait de ses résultats. Sa viabilité repose sur : une grande liberté de licenciement ; une forte mobilité de l'emploi ; une indemnisation très généreuse du chômage ; un effort important de formation ; des structures institutionnelles décentralisées (conseils régionaux, municipalités, *job centers*) pilotant finement l'accompagnement.
 
 On résume cette logique par le **« triangle d'or »** danois, dont les trois sommets sont : (1) une grande flexibilité du marché du travail ; (2) un système d'indemnisation généreux ; (3) des politiques actives d'activation, visant à éviter le chômage de longue durée et à contrôler la disponibilité des chômeurs.
 
@@ -324,7 +329,7 @@ Ces trois axes ne sont pas interchangeables : chacun répond à un diagnostic th
 
 Cette correspondance permet de **situer** toute réforme sur son axe avant de juger son efficacité : évaluer une baisse de cotisations à l'aune d'un diagnostic WS-PS, ou une réforme du droit du travail à l'aune d'un diagnostic néoclassique, mène à un contresens.
 
-## 1. Chronologie commentée (1972-2020)
+## 1. Chronologie commentée (1972-2023)
 
 Les réformes détaillées ci-dessous se répartissent sur trois axes menés en parallèle depuis les années 1970, sans qu'aucun ne suffise, isolément, à résorber le chômage structurel :
 
@@ -402,33 +407,35 @@ En 2019, le CICE a été transformé en **baisse pérenne de cotisations patrona
 - **1982** : *Lois Auroux* : accords d'entreprise dérogatoires sur le temps de travail.
 - **1986** : Facilitation du recours au temps partiel, CDD et intérim.
 - **2008** : *Loi de modernisation du marché du travail* : création de la **rupture conventionnelle**, extension des CDD d'usage.
-- **2015** : *Loi Macron* : travail dominical/de nuit, appréciation nationale (non plus au niveau du groupe) des licenciements collectifs, réforme des prud'hommes.
+- **2015** : *Loi Macron* : travail dominical/de nuit, réforme des prud'hommes.
 - **2016** : *Loi El Khomri* (« loi Travail ») : assouplissement du temps de travail, primauté renforcée de l'accord d'entreprise.
-- **2017** : *Ordonnances Macron* : plafonnement des indemnités prud'homales, primauté de l'accord d'entreprise sur la branche, licenciements facilités.
-- **2019** : **Barème d'indemnisation** obligatoire pour licenciement sans cause réelle et sérieuse, validé par la Cour de cassation en 2022.
+- **2017** : *Ordonnances Macron* : plafonnement des indemnités prud'homales (barème), primauté de l'accord d'entreprise sur la branche, appréciation du motif économique des licenciements au niveau national (et non plus du groupe mondial), fusion des instances représentatives du personnel dans le comité social et économique (CSE).
+- **2019-2022** : le **barème d'indemnisation** instauré par les ordonnances de 2017 (licenciement sans cause réelle et sérieuse) est jugé conforme au droit international (avis de la Cour de cassation, 2019 ; arrêts de mai 2022).
+
+### Axe 3 : Activation des chômeurs et des allocataires de minima sociaux
+
+::: {.definition}
+**Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente. Le **taux marginal de prélèvement implicite** (TMPI) mesure la part de chaque euro supplémentaire gagné qui est reprise par la baisse des prestations : TMPI = 1 − part conservée. Il peut approcher 100 %, ce qui décourage le retour à l'emploi.
+:::
+
+- **1988** : Création du **Revenu minimum d'insertion (RMI)**.
+- **2009** : Le **RSA** remplace le RMI et l'allocation de parent isolé. Il rend le cumul revenu d'activité/allocation plus progressif (réduction de 38 centimes d'allocation par euro gagné, le bénéficiaire conserve 62 centimes de chaque euro gagné, contre une suppression brutale sous le RMI). Il se compose d'un **RSA-socle** (équivalent du RMI) et d'un **RSA-activité** (complément pour travailleurs pauvres). La même année, entrée en vigueur du statut d'**auto-entrepreneur**.
+- **2013** : *Loi de sécurisation de l'emploi* : exonération temporaire de cotisation chômage employeur pour l'embauche en CDI de jeunes de moins de 26 ans. Issue d'un accord entre partenaires sociaux (ANI de janvier 2013), elle organise aussi un compromis de type flexisécurité : accords de maintien dans l'emploi, droits rechargeables à l'assurance chômage, portabilité de la complémentaire santé.
+- **2016** : La **prime d'activité** remplace à la fois le **RSA-activité** et la **prime pour l'emploi** (PPE, crédit d'impôt créé en 2001). Le taux de non-recours du RSA-activité était très élevé (de l'ordre de 60-70 % des ayants droit) du fait de sa complexité et de sa stigmatisation. Elle connaît un taux de recours nettement supérieur.
+- **2019-2021** : réforme de l'assurance chômage : durcissement de la condition d'affiliation, nouveau calcul du salaire journalier de référence, bonus-malus sur les contrats courts.
+- **2023** : *Loi pour le plein emploi* : Pôle emploi devient France Travail, inscription automatique des allocataires du RSA (effective en 2025).
 
 ::: {.callout-tip}
 ## Actualisation : la réforme de l'assurance chômage 2023-2024
 Elle introduit une **modulation contracyclique** de la durée d'indemnisation : réduite quand le marché du travail est favorable, allongée en période de dégradation. Ce mécanisme relève de l'axe « activation » et se rapproche, partiellement, de la logique danoise d'indemnisation *conditionnelle* (Section I), sans atteindre le niveau d'accompagnement nordique.
 :::
 
-### Axe 3 : Activation des chômeurs et des allocataires de minima sociaux
-
-::: {.definition}
-**Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente. Le taux marginal de prélèvement implicite peut approcher 100 %, ce qui décourage le retour à l'emploi.
-:::
-
-- **1988** : Création du **Revenu minimum d'insertion (RMI)**.
-- **2009** : Le **RSA** remplace le RMI et l'allocation de parent isolé. Il rend le cumul revenu d'activité/allocation plus progressif (réduction de 38 centimes d'allocation par euro gagné, le bénéficiaire conserve 62 centimes de chaque euro gagné, contre une suppression brutale sous le RMI). Il se compose d'un **RSA-socle** (équivalent du RMI) et d'un **RSA-activité** (complément pour travailleurs pauvres). La même année, entrée en vigueur du statut d'**auto-entrepreneur**.
-- **2013** : *Loi de sécurisation de l'emploi* : exonération temporaire de cotisation chômage employeur pour l'embauche en CDI de jeunes de moins de 26 ans.
-- **2016** : La **prime d'activité** remplace le RSA-activité, dont le taux de non-recours était très élevé (de l'ordre de 60-70 % des ayants droit) du fait de sa complexité et de sa stigmatisation. Elle connaît un taux de recours nettement supérieur.
-
 ```{mermaid}
 %%| label: fig-sequence-rsa
 %%| fig-cap: "La trajectoire RMI → RSA → prime d'activité vise à réduire les effets de trappe à inactivité et le non-recours aux prestations."
 flowchart LR
   RMI["1988 RMI - Revenu minimum d'insertion"] -->|Trappe à inactivité| RSA["2009 RSA - RSA-socle et RSA-activité"]
-  RSA -->|Non-recours élevé au RSA-activité| PA["2016 Prime d'activité - remplace le RSA-activité"]
+  RSA -->|Non-recours élevé au RSA-activité| PA["2016 Prime d'activité - remplace RSA-activité et PPE"]
 ```
 
 ::: {.callout-warning}

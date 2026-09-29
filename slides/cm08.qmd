@@ -1,6 +1,6 @@
 ---
 title: "Le chômage d'équilibre résulte des institutions du marché du travail"
-subtitle: "CM 8 : Le modèle WS-PS et la théorie de l'appariement (Chapitre II, Partie 2, §III-IV)"
+subtitle: "CM 8 : Le modèle WS-PS et la théorie de l'appariement (Chapitre II, Partie 2, §2.3-2.4)"
 ---
 
 ## Plan de la séance
@@ -349,7 +349,7 @@ Dans ce modèle, le chômage est **involontaire mais non keynésien** : il ne pr
 | Baisse de la demande globale | Aucune | Chômage total $\uparrow$, **au-delà** de $u^*$ |
 
 ::: {.source}
-Source : Layard, Nickell & Jackman (1991), synthèse du cours (Chapitre II, Partie 2, §III).
+Source : Layard, Nickell & Jackman (1991), synthèse du cours (Chapitre II, Partie 2, §2.3).
 :::
 
 ## Les cadres statiques ont une limite commune
@@ -555,7 +555,7 @@ Les deux relations sont fonctions de la **même** variable $\theta$ mais varient
 :::
 
 ::: {.source}
-Source : Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994], synthèse du cours (Chapitre II, Partie 2, §IV).
+Source : Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994], synthèse du cours (Chapitre II, Partie 2, §2.4).
 :::
 
 ## Deux leviers de politique de l'emploi issus de l'appariement
@@ -605,11 +605,11 @@ Ces quatre cadres ne s'excluent pas : ils mettent l'accent sur des mécanismes d
 ::: {.def}
 **CM 9 : Chapitre III : Politiques de l'emploi (cas français)**
 
-- Relire les sections §III-IV du Chapitre II (WS-PS et appariement) et revoir le diagramme WS-PS.
+- Relire les §2.3-2.4 du Chapitre II (WS-PS et appariement) et revoir le diagramme WS-PS.
 - Réviser la distinction politiques **actives** vs **passives** de l'emploi.
 - Préparer le TD 7 (appariement + trappe à inactivité).
 :::
 
 ::: {.source}
-Sources : Chapitre II, Partie 2, §III-IV (`cours/chap2.qmd`) ; Layard, Nickell & Jackman (1991) [@layard1991] ; Shapiro & Stiglitz (1984) [@shapirostiglitz1984] ; Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994].
+Sources : Chapitre II, Partie 2, §2.3-2.4 (`cours/chap2.qmd`) ; Layard, Nickell & Jackman (1991) [@layard1991] ; Shapiro & Stiglitz (1984) [@shapirostiglitz1984] ; Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994].
 :::

@@ -1,6 +1,6 @@
 ---
 title: "CM 4 : Typologie des chômages & évolutions"
-subtitle: "Chapitre II, Partie 1, §IV-V"
+subtitle: "Chapitre II, Partie 1, §1.4-1.5"
 ---
 
 ## Plan de la séance

@@ -51,7 +51,7 @@ La **correction du CC1** (évalué en séance 4) est traitée **en séance**, à
 
 ::: {.callout-tip collapse="true"}
 ## Indice
-Pour les questions 1 à 6, repartez du tableau « quatre ruptures avec l'analyse néoclassique » du CM 6 et de l'équation $\pi = \pi^a - a(u-u^n)$ du CM 7 : le signe de chaque relation (positive/négative) est la clé de la plupart des pièges.
+Pour les questions 1 à 6, repartez de l'encadré « quatre ruptures avec l'analyse néoclassique » du CM 6 et de l'équation $\pi = \pi^a - a(u-u^n)$ du CM 7 : le signe de chaque relation (positive/négative) est la clé de la plupart des pièges.
 :::
 
 ---
@@ -75,7 +75,7 @@ Le tableau suivant reporte le coefficient d'Okun $\beta$ estimé pour cinq pays,
 1. Rappelez la signification économique du coefficient $\beta$ dans la loi d'Okun $\Delta u = -\beta\,(g-\bar g)$. Un $\beta$ élevé traduit-il un chômage plus ou moins **réactif** aux fluctuations de la production ?
 2. Classez les cinq pays du plus **réactif** au moins réactif sur la période 1981-2016. Le classement change-t-il par rapport à 1961-1980 ?
 3. Le CM 6 avance que $\beta$ dépend de la façon dont les entreprises **ajustent l'emploi** aux variations de production, elle-même liée à la législation sur l'embauche et le licenciement. Le cas du Japon (0,02 puis 0,07) illustre-t-il plutôt un marché du travail flexible ou protégé ? Justifiez.
-4. Le coefficient français passe de 0,13 à 0,28 entre les deux sous-périodes. Proposez une explication à cette hausse en mobilisant la notion de flexibilité du marché du travail (vous pouvez anticiper sur le modèle WS-PS vu en CM 8).
+4. Le coefficient français passe de 0,13 à 0,28 entre les deux sous-périodes. Proposez une explication à cette hausse en mobilisant la notion de flexibilité du marché du travail (vous pouvez anticiper sur la typologie des modèles nationaux du Chapitre III).
 
 ::: {.callout-warning}
 ## Erreur fréquente

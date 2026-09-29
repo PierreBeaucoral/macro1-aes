@@ -211,9 +211,9 @@ Rattacher chaque réforme à une **forme de flexibilité** (chapitre III, §I) :
 ## Le tournant de 2015-2017 : la primauté de l'accord d'entreprise
 
 ::: {.incremental}
-- **2015** : *Loi Macron* : travail dominical/de nuit, licenciements collectifs appréciés au niveau national, réforme des prud'hommes.
+- **2015** : *Loi Macron* : travail dominical/de nuit, réforme des prud'hommes.
 - **2016** : *Loi El Khomri* (« loi Travail ») : primauté renforcée de l'accord d'entreprise sur la branche.
-- **2017** : *Ordonnances Macron* : **barème d'indemnisation obligatoire** (plafonnement des indemnités prud'homales pour licenciement sans cause réelle et sérieuse), primauté de l'accord d'entreprise généralisée, licenciements facilités.
+- **2017** : *Ordonnances Macron* : **barème d'indemnisation obligatoire** (plafonnement des indemnités prud'homales pour licenciement sans cause réelle et sérieuse), primauté de l'accord d'entreprise généralisée, motif économique des licenciements apprécié au niveau national, fusion des instances représentatives dans le CSE.
 - **2019-2022** : Le barème, institué en 2017, est confirmé conforme au droit international par deux avis de la Cour de cassation (2019) puis par deux arrêts de sa chambre sociale (2022).
 :::
 
@@ -271,7 +271,7 @@ Remplace le RMI. Cumul progressif : le bénéficiaire conserve **62 centimes** p
 ::: {.def}
 **Prime d'activité (2016)**
 
-Remplace le RSA-activité, dont le non-recours atteignait **60-70 %** des ayants droit. Taux de recours nettement supérieur.
+Remplace le RSA-activité et la prime pour l'emploi (PPE) ; le non-recours au RSA-activité atteignait **60-70 %** des ayants droit. Taux de recours nettement supérieur.
 :::
 :::
 :::

@@ -184,7 +184,7 @@ ggplot(df_demande, aes(x = L, y = w)) +
 
 ```{r}
 #| label: fig-heures-longterme
-#| fig-cap: "Durée annuelle moyenne du travail en France, 1950-2019 (heures par travailleur), avec repères internationaux 2019. Sur longue période, le pouvoir d'achat du salaire a été multiplié par environ 5 tandis que la durée annuelle du travail était réduite d'environ un tiers : à l'inverse de l'hypothèse du modèle néoclassique (effet de substitution dominant), c'est l'effet de revenu qui l'a emporté sur la marge des heures travaillées. Source : OCDE, Average annual hours actually worked (1970-2019) ; Bergeaud, Cette et Lecat (2016, Banque de France), Productivity Trends in Advanced Countries, pour les points antérieurs à 1970."
+#| fig-cap: "Durée annuelle moyenne du travail en France, 1950-2019 (heures par travailleur), avec repères internationaux 2019. Sur longue période, le pouvoir d'achat du salaire a été multiplié par 4 à 5 environ tandis que la durée annuelle du travail était réduite d'environ un tiers : à l'inverse de l'hypothèse du modèle néoclassique (effet de substitution dominant), c'est l'effet de revenu qui l'a emporté sur la marge des heures travaillées. Source : OCDE, Average annual hours actually worked (1970-2019) ; Bergeaud, Cette et Lecat (2016, Banque de France), Productivity Trends in Advanced Countries, pour les points antérieurs à 1970."
 #| fig-width: 6.5
 #| fig-height: 4
 source(here::here("R/theme_macro.R"))
@@ -224,7 +224,7 @@ ggplot(df_heures, aes(x = annee, y = heures)) +
 ```
 
 ::: {.source}
-Note : ce fait empirique nuance l'hypothèse simplificatrice du modèle (§7, Limites) sans l'invalider sur le court terme.
+Note : ce fait empirique nuance l'hypothèse simplificatrice du modèle sans l'invalider sur le court terme.
 :::
 
 ## L'équilibre égalise offre et demande de travail

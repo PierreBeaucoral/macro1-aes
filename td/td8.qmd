@@ -20,7 +20,7 @@ Ce document est un **sujet d'ENTRAÎNEMENT (blanc)**. Ce n'est **pas** le sujet 
 - Résoudre **analytiquement** un modèle **WS-PS** intégrant un choc de politique économique (baisse du coût du travail) et en tirer les implications.
 - Construire une **argumentation structurée** (introduction, développement, conclusion) sur la place de la France dans la typologie des modèles de marché du travail.
 
-**Pré-requis** : chapitre II §2.3 (modèle WS-PS, `cours/chap2.qmd`), chapitre III (flexisécurité, triangle d'or, chronologie des réformes françaises, `cours/chap3.qmd`), TD 3 (coût du travail), TD 5 (modèle WS-PS), TD 7 (trappe à inactivité).
+**Pré-requis** : chapitre II §2.3 (modèle WS-PS, `cours/chap2.qmd`), chapitre III (flexisécurité, triangle d'or, chronologie des réformes françaises, `cours/chap3.qmd`), TD 5 (coût du travail, modèle WS-PS), TD 7 (trappe à inactivité).
 :::
 
 ::: {.callout-note}
@@ -92,7 +92,7 @@ d) La politique monétaire.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** Le plafonnement des indemnités prud'homales et le renforcement de la primauté de l'accord d'entreprise assouplissent les conditions d'embauche et de licenciement : ils relèvent de l'axe **flexibilisation**, et non de la baisse du coût du travail (a, qui concerne les cotisations et la fiscalité pesant sur les salaires) ni de l'activation (c, qui vise le retour à l'emploi des chômeurs et allocataires). La politique monétaire (d) est un instrument macroéconomique distinct des politiques de l'emploi.
+**Réponse : b.** Le plafonnement des indemnités prud'homales réduit le coût et l'incertitude du licenciement, et le renforcement de la primauté de l'accord d'entreprise décentralise la négociation collective : les deux relèvent de l'axe **flexibilisation**, et non de la baisse du coût du travail (a, qui concerne les cotisations et la fiscalité pesant sur les salaires) ni de l'activation (c, qui vise le retour à l'emploi des chômeurs et allocataires). La politique monétaire (d) est un instrument macroéconomique distinct des politiques de l'emploi.
 :::
 
 **5.** La **trappe à inactivité** est d'autant plus marquée que :
@@ -104,19 +104,19 @@ d) Le taux de chômage de longue durée est nul.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** La trappe à inactivité désigne une situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction rapide des prestations sociales à mesure que le revenu d'activité augmente. Plus cette réduction est rapide (plus le **taux marginal de prélèvement implicite** est élevé, donc plus l'affirmation a, qui décrit l'inverse, est fausse), plus le gain net à la reprise d'emploi est faible et plus la trappe est marquée. Cette notion est indépendante du niveau du salaire minimum (c) ou du taux de chômage de longue durée (d).
+**Réponse : b.** La trappe à inactivité désigne une situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction rapide des prestations sociales à mesure que le revenu d'activité augmente. Plus cette réduction est rapide (plus le **taux marginal de prélèvement implicite** est élevé, donc plus l'affirmation a, qui décrit l'inverse, est fausse), plus le gain net à la reprise d'emploi est faible et plus la trappe est marquée. L'option c) est fausse : un salaire minimum élevé augmenterait plutôt le gain à la reprise d'emploi et atténuerait la trappe, qui dépend avant tout du rythme de retrait des prestations. L'option d) est sans rapport avec la notion.
 :::
 
 **6.** Selon les résultats empiriques de Bassanini et Duval (2006) mobilisés en cours, la rigueur de la protection de l'emploi (EPL) a un effet :
 
 a) Fortement négatif sur l'emploi de toutes les classes d'âge.
-b) Non significatif sur l'emploi agrégé des 25-54 ans, mais différencié selon l'âge : défavorable à l'insertion des jeunes, plutôt favorable au maintien en emploi des salariés seniors.
+b) Non significatif sur le chômage agrégé, mais différencié selon l'âge : défavorable à l'insertion des jeunes, plutôt favorable au maintien en emploi des salariés seniors.
 c) Positif et significatif sur l'emploi agrégé, quel que soit l'âge.
 d) Nul, quelle que soit la classe d'âge considérée.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** Bassanini et Duval (2006) ne trouvent pas d'effet significatif de la protection de l'emploi sur le niveau d'emploi agrégé des salariés « cœur de carrière » (25-54 ans), mais un effet différencié selon l'âge : défavorable à l'insertion des jeunes (20-24 ans, pour qui une forte protection dissuade l'embauche), plutôt favorable au maintien en emploi des seniors (55-64 ans, pour qui elle limite les licenciements en fin de carrière). Les réponses a, c et d proposent toutes un effet uniforme selon l'âge, ce que l'étude ne confirme pas.
+**Réponse : b.** Bassanini et Duval (2006) ne trouvent pas d'effet significatif de la protection de l'emploi sur le **taux de chômage agrégé**, mais un effet différencié selon l'âge : défavorable à l'insertion des jeunes (20-24 ans, pour qui une forte protection dissuade l'embauche), plutôt favorable au maintien en emploi des seniors (55-64 ans, pour qui elle limite les licenciements en fin de carrière). Les réponses a, c et d proposent toutes un effet uniforme selon l'âge, ce que l'étude ne confirme pas.
 :::
 
 **7.** Le remplacement du RSA-activité par la **prime d'activité** en 2016 visait principalement à :
@@ -155,7 +155,8 @@ Le pays fictif Nordavie verse à ses allocataires de minima sociaux une allocati
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
-x <- seq(0, 800, by = 10)
+# Borne à 700 € : dans l'ancien dispositif, l'allocation (600 - 0,80x) s'épuise à 750 €.
+x <- seq(0, 700, by = 10)
 allocation_base <- 600
 ancien  <- allocation_base + 0.20 * x
 reforme <- allocation_base + 0.65 * x
@@ -190,7 +191,7 @@ ggplot(df_trappe, aes(x = x, y = y, color = dispositif)) +
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
 
-**1. *(1 point)*** Les deux courbes partent du même point (600 € lorsque le revenu d'activité est nul) mais divergent ensuite : le dispositif réformé (pente 0,65) monte beaucoup plus vite que le dispositif ancien (pente 0,20). L'écart entre les deux dispositifs se creuse mécaniquement à mesure que le revenu d'activité augmente : à 800 € de revenu d'activité, l'allocataire dispose de 760 € au total dans l'ancien dispositif contre 1 120 € dans le dispositif réformé, soit un écart de 360 €.
+**1. *(1 point)*** Les deux courbes partent du même point (600 € lorsque le revenu d'activité est nul) mais divergent ensuite : le dispositif réformé (pente 0,65) monte beaucoup plus vite que le dispositif ancien (pente 0,20). L'écart entre les deux dispositifs se creuse à mesure que le revenu d'activité augmente : à 700 € de revenu d'activité, l'allocataire dispose de 740 € au total dans l'ancien dispositif contre 1 055 € dans le dispositif réformé, soit un écart de 315 €. (Au-delà de 750 €, l'allocation de l'ancien dispositif est entièrement épuisée : le revenu disponible y devient égal au seul revenu d'activité.)
 
 **2. *(1,5 point)*** Le taux marginal de prélèvement implicite mesure la part de chaque euro supplémentaire gagné qui est « reprise » par la baisse des prestations. TMPI $=1-0{,}20=80\ \%$ pour le dispositif ancien : sur chaque euro gagné, l'allocataire n'en conserve que 20 centimes, 80 centimes étant retirés de son allocation. TMPI $=1-0{,}65=35\ \%$ pour le dispositif réformé : l'allocataire conserve 65 centimes par euro gagné. Un TMPI élevé (proche de 100 %, comme dans le dispositif ancien) annule quasiment le gain financier associé à la reprise d'un emploi peu rémunéré : l'allocataire travaille alors « pour presque rien » en termes de revenu disponible additionnel, ce qui décourage la reprise d'activité, c'est la définition même de la trappe à inactivité.
 
@@ -298,13 +299,13 @@ $$
 
 Le nouveau taux de chômage d'équilibre est $u^{*}_1 = 9$, soit une **baisse de 4 points** ($\Delta u^{*} = u^{*}_1 - u^{*}_0 = -4$). Le salaire réel d'équilibre reste $\left(W/P\right)^{*}_1 = 0{,}625$, **inchangé**.
 
-**d) Interprétation économique *(1,5 point)*.** Le salaire réel d'équilibre est entièrement déterminé par la courbe **PS** (donc par le taux de marge $m$ et la productivité $\lambda$), qui n'est pas affectée par la baisse de cotisations. La mesure ne se traduit donc **pas** par une hausse du salaire réel perçu par les salariés déjà en emploi : elle se traduit intégralement par une **baisse du chômage d'équilibre**. Dans ce cadre théorique, le bénéfice de la politique revient donc aux personnes qui, grâce à la mesure, passent du chômage à l'emploi, pas à une hausse du salaire réel des salariés déjà en poste, ni à une hausse pérenne des marges des entreprises (le supplément de compétitivité se traduit intégralement par de l'emploi supplémentaire, à taux de marge $m$ inchangé).
+**d) Interprétation économique *(1,5 point)*.** Ici, $W/P$ mesure le **coût réel du travail** pour l'employeur (c'est pourquoi la baisse de cotisations déplace WS vers le bas). Ce coût réel d'équilibre est entièrement déterminé par la courbe **PS** (donc par le taux de marge $m$ et la productivité $\lambda$), qui n'est pas affectée par la mesure : il reste à 0,625. La mesure ne réduit donc pas durablement ce que coûte un salarié à l'entreprise ; elle se traduit par une **baisse du chômage d'équilibre** (13 → 9). Le salaire net perçu par les salariés, lui, peut augmenter, puisque les cotisations baissent à coût du travail inchangé. Le principal bénéfice de la politique revient aux personnes qui, grâce à la mesure, passent du chômage à l'emploi, et non à une hausse pérenne des marges des entreprises (le supplément de compétitivité se traduit intégralement par de l'emploi supplémentaire, à taux de marge $m$ inchangé).
 
 **e) Limite tenant au financement *(1,5 point)*.** Le modèle WS-PS de base est un modèle d'**offre**, statique, qui ne représente pas le mode de financement de la mesure. Si la baisse de cotisations patronales est financée par une hausse de la TVA ou une baisse de la dépense publique, cela réduit le revenu disponible des ménages et/ou la demande publique adressée aux entreprises : dans le cadre du modèle **OA-DA** du chapitre I, il s'agit d'un **choc de demande négatif**, qui déplace la courbe $DA$ vers la gauche et pèse sur la production et l'emploi, à l'opposé du choc d'offre positif que représente la baisse du coût du travail. Le résultat « $u^{*}$ baisse sans coût pour le salaire réel » obtenu en c) et d) n'est donc valable **qu'à demande globale inchangée** : si le financement de la mesure comprime suffisamment la demande, l'effet net sur l'emploi peut être sensiblement plus faible que ne le suggère le seul modèle WS-PS statique, une fois le choc de demande négatif pris en compte.
 
 ::: {.callout-warning}
 ## Piège fréquent
-Beaucoup de copies confondent le déplacement de WS avec un déplacement de PS, ou concluent à tort que la baisse du chômage d'équilibre s'accompagne d'une baisse du salaire réel : dans ce modèle, c'est l'inverse : le salaire réel d'équilibre est **fixé par PS**, indépendamment du niveau de WS ; seul $u^{*}$ varie avec les déplacements de WS. Vérifiez toujours l'ordonnée à l'intersection avant de conclure sur le salaire réel.
+Beaucoup de copies confondent le déplacement de WS avec un déplacement de PS, ou concluent à tort que la baisse du chômage d'équilibre s'accompagne d'une baisse du coût réel du travail : dans ce modèle, le coût réel du travail d'équilibre est **fixé par PS**, indépendamment du niveau de WS ; seul $u^{*}$ varie avec les déplacements de WS. Vérifiez toujours l'ordonnée à l'intersection avant de conclure sur le salaire réel.
 :::
 :::
 
@@ -343,7 +344,7 @@ Vous répondrez à cette question sous la forme d'un développement structuré (
 
 *II. Mais un volet « sécurité » et « activation » qui reste loin du niveau danois.* Le triangle d'or danois n'est pas qu'une affaire de règles juridiques : il est financé par des dépenses de politiques actives de l'emploi représentant plus de 1,5 % du PIB au Danemark, contre moins de 0,8 % en France, soit un rapport de près de un à deux. Sans cet effort budgétaire massif d'accompagnement et de formation, une flexibilisation des règles de licenciement, sans contrepartie de sécurité et d'activation à due proportion, rapproche davantage la France d'une logique de flexibilité asymétrique (les entreprises gagnent en souplesse, les travailleurs ne gagnent pas la même sécurité de l'employabilité) que du triptyque équilibré danois. La loi de sécurisation de l'emploi de 2013 avait pourtant ouvert la voie à une logique de compromis (portabilité de certains droits, accords de maintien dans l'emploi), mais cette dynamique n'a pas été prolongée à la hauteur de l'effort danois.
 
-*Conclusion.* Les réformes françaises depuis 2017 ont indéniablement flexibilisé le marché du travail, mais sans construire, en contrepartie, un système d'indemnisation et d'accompagnement comparable en générosité et en moyens à celui du Danemark. La France se situe donc aujourd'hui dans une position intermédiaire, plus proche d'une flexibilisation partielle inspirée du modèle anglo-saxon que d'une authentique flexisécurité à la danoise, faute d'un investissement budgétaire équivalent dans le volet « sécurité » et « activation » du triangle d'or.
+*Conclusion.* Les réformes françaises depuis 2017 ont indéniablement flexibilisé le marché du travail, mais sans construire, en contrepartie, un effort d'accompagnement et d'activation comparable en moyens à celui du Danemark (moins de 0,8 % du PIB contre plus de 1,5 %). La France se situe donc aujourd'hui dans une position intermédiaire, plus proche d'une flexibilisation partielle inspirée du modèle anglo-saxon que d'une authentique flexisécurité à la danoise, faute d'un investissement budgétaire équivalent dans le volet « sécurité » et « activation » du triangle d'or.
 
 ::: {.callout-warning}
 ## Piège fréquent
