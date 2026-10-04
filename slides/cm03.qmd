@@ -47,7 +47,7 @@ Ce qui s'échange sur le marché du travail, ce sont des **personnes**, pas des 
 
 ::: {.incremental}
 - Le contrat de travail engage la personne du salarié, sa **subordination** à un employeur et une partie de sa vie professionnelle, il n'est donc pas une simple variante du contrat commercial.
-- Le marché du travail est en outre **segmenté** par compétences et par secteurs, plutôt qu'unique et homogène : il n'existe pas un marché du travail, mais des marchés du travail.
+- Le marché du travail est en outre **segmenté** par compétences et par secteurs, plutôt qu'unique et homogène : il n'existe pas un marché du travail, mais des marchés du travail, avec un segment **primaire** (emplois stables, qualifiés) et un segment **secondaire** (emplois précaires, à forte rotation).
 :::
 
 ## L'information circule mal entre employeur et salarié
