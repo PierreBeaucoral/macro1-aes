@@ -241,7 +241,9 @@ Ce mécanisme relève davantage de l'axe **activation** que de la flexibilisatio
 ## Le problème : une allocation peut décourager le retour à l'emploi
 
 ::: {.def}
-**Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente. Le taux marginal de prélèvement implicite peut approcher **100 %**.
+**Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente.
+
+**Taux marginal de prélèvement implicite** : part de chaque euro supplémentaire gagné reprise par la baisse des prestations, $\text{TMPI} = 1 - \text{part conservée}$. Avec le RSA (62 centimes conservés par euro gagné), $\text{TMPI} = 1 - 0{,}62 = 38\,\%$ ; sous le RMI, il pouvait approcher **100 %**.
 :::
 
 . . .
@@ -416,6 +418,20 @@ flowchart LR
 
 ::: {.source}
 Synthèse de la section précédente (RMI, RSA, prime d'activité).
+:::
+
+## 2013 : la loi de sécurisation de l'emploi, un compromis de type flexisécurité
+
+Issue d'un accord entre partenaires sociaux (**ANI de janvier 2013**), elle combine :
+
+::: {.incremental}
+- une **exonération temporaire** de cotisation chômage employeur pour l'embauche en CDI de jeunes de moins de 26 ans ;
+- des **accords de maintien dans l'emploi** (flexibilité négociée en cas de difficultés) ;
+- des **droits rechargeables** à l'assurance chômage et la **portabilité** de la complémentaire santé (sécurité des personnes).
+:::
+
+::: {.source}
+D'après Chapitre III, §II, axe 3.
 :::
 
 ## Actualisation : la réforme des retraites de 2023

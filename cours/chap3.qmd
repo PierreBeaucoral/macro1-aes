@@ -36,6 +36,8 @@ On distingue deux grandes catégories de politiques de l'emploi, selon qu'elles 
 **Politiques passives** : rendre le chômage supportable et réduire la population active. Elles comprennent : indemniser les chômeurs ; inciter au retrait d'activité ; abaisser l'âge de la retraite ; partager le travail par la réduction du temps de travail.
 :::
 
+En France, l'indemnisation repose sur trois étages. L'**assurance chômage** (gérée par l'Unédic, financée par les contributions sur les salaires) verse l'allocation d'aide au retour à l'emploi aux personnes qui ont suffisamment travaillé avant de perdre leur emploi : c'est la **condition d'affiliation minimale**. Le **régime de solidarité**, financé par l'État (allocation de solidarité spécifique, ASS), prend le relais pour une partie des chômeurs qui ont épuisé leurs droits. Enfin, le **RSA** joue le rôle de filet de sécurité de dernier recours, mais il est en principe fermé aux moins de 25 ans (sauf charge de famille ou activité antérieure suffisante) : de nombreux jeunes chômeurs, faute d'affiliation suffisante, ne sont donc **pas indemnisés**.
+
 ```{mermaid}
 %%| label: fig-tree-actives-passives
 %%| fig-cap: "Deux familles de politiques de l'emploi (actives et passives) et leurs principaux instruments."
@@ -417,6 +419,8 @@ En 2019, le CICE a été transformé en **baisse pérenne de cotisations patrona
 ::: {.definition}
 **Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente. Le **taux marginal de prélèvement implicite** (TMPI) mesure la part de chaque euro supplémentaire gagné qui est reprise par la baisse des prestations : TMPI = 1 − part conservée. Il peut approcher 100 %, ce qui décourage le retour à l'emploi.
 :::
+
+Dans le vocabulaire du Chapitre II, une allocation élevée, ou fortement réduite dès la reprise d'un emploi (TMPI élevé), relève le **salaire de réserve** $w_r$ (§2.1) et réduit l'intensité de la recherche d'emploi (§2.4).
 
 - **1988** : Création du **Revenu minimum d'insertion (RMI)**.
 - **2009** : Le **RSA** remplace le RMI et l'allocation de parent isolé. Il rend le cumul revenu d'activité/allocation plus progressif (réduction de 38 centimes d'allocation par euro gagné, le bénéficiaire conserve 62 centimes de chaque euro gagné, contre une suppression brutale sous le RMI). Il se compose d'un **RSA-socle** (équivalent du RMI) et d'un **RSA-activité** (complément pour travailleurs pauvres). La même année, entrée en vigueur du statut d'**auto-entrepreneur**.

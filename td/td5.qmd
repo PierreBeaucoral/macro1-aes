@@ -14,12 +14,14 @@ Objectifs de la séance
 - Discuter, de façon argumentée, l'efficacité d'une baisse du coût du travail selon le cadre théorique mobilisé.
 :::
 
-**Pré-requis.** Ce TD s'appuie sur le CM 5 (analyse néoclassique) et le CM 8 (modèle WS-PS), ainsi que sur les notions vues en TD 3 (typologie des chômages : distinguer chômage volontaire, classique, structurel). Relisez avant la séance les définitions de **salaire réel** $w = W/P$, **salaire de réserve** $w_r$ et **taux de marge** $m$.
+**Pré-requis.** Ce TD s'appuie sur le CM 5 (analyse néoclassique) et sur le modèle WS-PS, ainsi que sur les notions vues en TD 3 (typologie des chômages : distinguer chômage volontaire, classique, structurel). Relisez avant la séance les définitions de **salaire réel** $w = W/P$, **salaire de réserve** $w_r$ et **taux de marge** $m$.
+
+**Préparer le volet WS-PS.** Le modèle WS-PS n'est présenté en amphithéâtre qu'au **CM 8**. Les questions qui le mobilisent (Exercice 1 : définitions a.4-5 et QCM b.5-6 ; Exercice 3 en entier ; seconde partie de l'Exercice 4) se préparent donc sur le **résumé de cours** : `cours/chap2.qmd`, §2.3, dont l'application numérique suit la même méthode que l'Exercice 3.
 
 ::: {.callout-note}
 ## Rappel express : deux modèles, deux logiques du chômage
-- **Néoclassique** (§I) : marché en concurrence pure et parfaite, salaires flexibles $\Rightarrow$ à l'équilibre, offre = demande, et tout chômage résiduel est **volontaire** (salaire de réserve supérieur au salaire de marché).
-- **WS-PS** (§III) : marchés en concurrence imparfaite, salaires négociés au-dessus du salaire de réserve $\Rightarrow$ le chômage d'équilibre $u^*$ est **involontaire** mais **structurel** (pas de force de rappel automatique vers le plein emploi).
+- **Néoclassique** (Chapitre II, §2.1) : marché en concurrence pure et parfaite, salaires flexibles $\Rightarrow$ à l'équilibre, offre = demande, et tout chômage résiduel est **volontaire** (salaire de réserve supérieur au salaire de marché).
+- **WS-PS** (Chapitre II, §2.3) : marchés en concurrence imparfaite, salaires négociés au-dessus du salaire de réserve $\Rightarrow$ le chômage d'équilibre $u^*$ est **involontaire** mais **structurel** (pas de force de rappel automatique vers le plein emploi).
 :::
 
 ## Exercice 1 : Définitions et QCM (offre/demande de travail, chômage volontaire)
@@ -121,7 +123,7 @@ Répondez aux questions suivantes en vous appuyant sur le graphique :
 
 1. Repérez sur le graphique le salaire d'équilibre concurrentiel $w^*$ et l'emploi d'équilibre $L^*$. À quoi correspond, graphiquement, l'intersection des deux courbes ?
 2. Au niveau du salaire minimum $w_{min}$, lisez la quantité de travail offerte et la quantité de travail demandée. Comment se nomme l'écart entre les deux ?
-3. Ce chômage est-il volontaire ou involontaire au sens néoclassique ? Justifiez à partir de la définition du chômage volontaire.
+3. En quel sens les néoclassiques qualifient-ils ce chômage de **volontaire** ? Cette qualification est-elle compatible avec la définition stricte du chômage volontaire (salaire de réserve supérieur au salaire de marché) ?
 4. Deux mesures de politique économique sont envisagées pour réduire ce chômage sans toucher au salaire minimum légal : (i) une baisse des cotisations sociales employeur, (ii) une hausse de la productivité du travail. Pour chacune, indiquez la courbe affectée, le sens du déplacement, et l'effet attendu sur l'emploi. *(Indice : représentez mentalement, ou sur brouillon, le déplacement de la courbe concernée.)*
 
 ## Exercice 3 : Exercice analytique : le chômage d'équilibre dans le modèle WS-PS

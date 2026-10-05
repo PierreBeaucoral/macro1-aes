@@ -391,7 +391,7 @@ Un choc d'offre négatif (coût du pétrole) déplace simultanément la producti
 ::: {.column width="50%"}
 **Approche monétariste**
 
-L'accent est mis sur la réaction des agents à une politique monétaire expansive répétée : ils intègrent progressivement l'inflation dans leurs anticipations, ce qui déplace la courbe de Phillips de court terme vers la droite.
+L'accent est mis sur la réaction des agents à une politique monétaire expansive répétée : ils intègrent progressivement l'inflation dans leurs anticipations, ce qui déplace la courbe de Phillips de court terme **vers le haut** (donc aussi vers la droite).
 :::
 :::
 
@@ -404,7 +404,7 @@ Les deux lectures convergent sur un point : la courbe de Phillips de court terme
 ## À long terme, il n'existe plus aucun arbitrage inflation-chômage
 
 ::: {.incremental}
-- Si un gouvernement tente de maintenir indéfiniment $u < u^n$ en tolérant plus d'inflation, les agents ajustent leurs anticipations : la courbe de Phillips de court terme se déplace vers la droite.
+- Si un gouvernement tente de maintenir indéfiniment $u < u^n$ en tolérant plus d'inflation, les agents ajustent leurs anticipations : la courbe de Phillips de court terme se déplace **vers le haut** (à chômage donné, l'inflation est plus forte).
 - Le chômage revient alors à $u^n$, mais à un niveau d'inflation **plus élevé**.
 - À long terme, seul le niveau de production potentielle (quantité et qualité du travail, stock de capital, progrès technique) détermine le chômage, pas l'inflation.
 :::
@@ -557,7 +557,7 @@ flowchart LR
 ## Pour la prochaine fois
 
 ::: {.incremental}
-- Relire la section II.4 du chapitre II (partie 2) et refaire l'équation de Phillips augmentée à partir du graphique.
+- Relire le §2.2 du chapitre II (partie 2, résumé : `cours/chap2.qmd`) et refaire l'équation de Phillips augmentée à partir du graphique.
 - Préparer le TD 6 (Keynes, Okun, Phillips) : correction du CC1 en séance.
 - Lecture conseillée : Blanchard et Cohen, *Macroéconomie*, chapitre sur la courbe de Phillips.
 - CM 8 : modèle Wage Setting–Price Setting (WS-PS), pourquoi le chômage d'équilibre diffère selon les pays.

@@ -227,7 +227,7 @@ D'après Richard Musgrave [@musgrave1959] :
 
 ::: {.incremental}
 - **Stabilisation** (conjoncturelle) : limiter les fluctuations de l'activité autour de sa tendance de long terme (réduire l'*output gap*).
-- **Allocation** (structurelle) : élever la trajectoire de la croissance **potentielle**.
+- **Allocation** (structurelle) : élever la trajectoire de la croissance **potentielle**, en corrigeant les **défaillances de marché** (biens publics, externalités).
 - **Redistribution** (structurelle) : ajuster le partage des richesses (équité).
 :::
 :::
@@ -458,6 +458,20 @@ Faute de prix et salaires flexibles à court terme, un choc de demande négatif 
 . . .
 
 À l'équilibre de référence $E_0$, la production est égale à son potentiel $Y^*$ : c'est le point de départ des quatre chocs qui suivent.
+
+## Du court au long terme, les salaires renégociés ramènent la production à $Y^*$
+
+::: {.incremental}
+- Si $Y > Y^*$ : le marché du travail est en tension ; les salaires nominaux, rigides à court terme, finissent par être **renégociés à la hausse**.
+- L'OA de court terme se déplace alors **vers le haut** (la gauche), jusqu'au retour de la production à $Y^*$, à un niveau de prix **plus élevé**.
+- Si $Y < Y^*$ : la modération salariale déplace l'OA de court terme **vers le bas** (la droite), mais **lentement**.
+:::
+
+. . .
+
+::: {.cle}
+Ce retour lent vers $Y^*$ quand la production est trop basse est l'argument keynésien pour **relancer** plutôt qu'attendre.
+:::
 
 ## Quatre chocs conjoncturels : une carte pour s'orienter
 
@@ -955,6 +969,8 @@ Oui : en **2009**, production et prix chutent **ensemble** (choc de demande, qua
 
 ::: {.def}
 **Allocation** : élever la trajectoire de la croissance potentielle : accumulation du capital, progrès technique, quantité et qualité des ressources humaines.
+
+Elle naît des **défaillances de marché** : **biens publics**, non rivaux et non exclusifs (le phare, la défense nationale), que le marché ne fournit pas ; **externalités** (pollution, recherche fondamentale), que le prix ne reflète pas.
 :::
 
 . . .

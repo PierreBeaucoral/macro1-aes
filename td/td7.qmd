@@ -18,7 +18,7 @@ description: "Dossier de TD : théorie de l'appariement (Beveridge, modèle DMP,
 **Pré-requis** : Chapitre II, §2.4 (courbe de Beveridge, modèle DMP, tension $\theta$) ; Chapitre III, §II, axe 3 (activation, trappe à inactivité) ; TD 5 et TD 6 (néoclassique, WS-PS, Okun-Phillips).
 :::
 
-Ce dossier s'appuie sur les ressources complémentaires du Chapitre III consacrées à la trappe à inactivité et aux demandeurs d'emploi non indemnisables[^source]. Les trois premiers exercices reprennent la théorie de l'appariement vue en cours (courbe de Beveridge, modèle de Diamond-Mortensen-Pissarides). Le quatrième exercice, nouveau, applique la théorie de la recherche d'emploi à un cas concret de politique économique française : le passage du RMI au RSA puis à la prime d'activité.
+Ce dossier s'appuie sur les ressources complémentaires du Chapitre III consacrées à la trappe à inactivité et aux demandeurs d'emploi non indemnisables[^source]. Les trois premiers exercices reprennent la théorie de l'appariement vue en cours (courbe de Beveridge, modèle de Diamond-Mortensen-Pissarides). Le quatrième exercice applique la théorie de la recherche d'emploi à un cas concret de politique économique française : le passage du RMI au RSA puis à la prime d'activité.
 
 [^source]: Dossier rédigé d'après les ressources complémentaires DARES (2016), *Les demandeurs d'emploi non indemnisables*, et B. Gomel & D. Méda, *Prestations sociales et trappe à inactivité* (chapitre III).
 
@@ -36,7 +36,7 @@ En une phrase chacune, définissez :
 4. Le **chômage frictionnel**, et en quoi il diffère du chômage d'inadéquation (*mismatch*).
 
 ::: {.definition}
-**Rappel : le modèle DMP.** Les modèles d'appariement, développés par Peter Diamond, Dale Mortensen et Chris Pissarides [@diamond1982; @mortensenpissarides1994] (distingués par le prix Nobel d'économie 2010) expliquent le niveau d'emploi et de salaire par la confrontation de deux relations fonctions de $\theta = v/u$ et du salaire réel $w/p$ : la **demande de travail** (décroissante en $\theta$) et la **courbe des salaires** (croissante en $\theta$).
+**Rappel : le modèle DMP.** Les modèles d'appariement, développés par Peter Diamond, Dale Mortensen et Chris Pissarides [@diamond1982; @mortensenpissarides1994] (distingués par le prix Nobel d'économie 2010) expliquent le niveau d'emploi et de salaire par la confrontation de deux relations fonctions de $\theta = v/u$ et du salaire réel $W/P$ : la **demande de travail** (décroissante en $\theta$) et la **courbe des salaires** (croissante en $\theta$).
 :::
 
 ## 1.2 QCM
@@ -47,7 +47,7 @@ Pour chaque question, une seule réponse est correcte.
 
 a) croissante entre le taux de chômage $u$ et le taux d'emplois vacants $v$.
 b) décroissante entre le taux de chômage $u$ et le taux d'emplois vacants $v$.
-c) décroissante entre le taux de chômage $u$ et le salaire réel $w/p$.
+c) décroissante entre le taux de chômage $u$ et le salaire réel $W/P$.
 d) indépendante de la conjoncture économique.
 
 **2.** Le point d'intersection de la courbe de Beveridge avec la droite de pente 45° ($u = v$) correspond à une situation où :
@@ -160,20 +160,20 @@ Personnes inscrites à Pôle emploi ou dispensées de recherche d'emploi au 30 s
 
 # Exercice 3 : Exercice analytique : l'équilibre du modèle DMP
 
-On considère un marché du travail décrit par les deux relations suivantes, fonctions de la tension $\theta = v/u$ et du salaire réel $w/p$ :
+On considère un marché du travail décrit par les deux relations suivantes, fonctions de la tension $\theta = v/u$ et du salaire réel $W/P$ :
 
 $$
-\text{Demande de travail : } \quad \frac{w}{p} = 1 - 0{,}2\,\theta
+\text{Demande de travail : } \quad \frac{W}{P} = 1 - 0{,}2\,\theta
 $$
 
 $$
-\text{Courbe des salaires : } \quad \frac{w}{p} = 0{,}2 + 0{,}2\,\theta
+\text{Courbe des salaires : } \quad \frac{W}{P} = 0{,}2 + 0{,}2\,\theta
 $$
 
 ## 3.1 Interprétation et calcul
 
 1. Justifiez économiquement le signe de la pente de chacune des deux relations.
-2. Résolvez algébriquement le système pour trouver la tension d'équilibre $\theta^*$ et le salaire réel d'équilibre $(w/p)^*$.
+2. Résolvez algébriquement le système pour trouver la tension d'équilibre $\theta^*$ et le salaire réel d'équilibre $(W/P)^*$.
 3. Vérifiez votre résultat sur le graphique ci-dessous.
 
 ```{r}
@@ -209,16 +209,16 @@ ggplot() +
   scale_color_manual(values = c("Demande de travail" = macro_pal[["bleu"]],
                                  "Courbe des salaires" = macro_pal[["or"]]), name = NULL) +
   coord_cartesian(xlim = c(0, 5), ylim = c(0, 1.1), expand = FALSE) +
-  labs(x = "Tension du marché du travail (θ = v/u)", y = "Salaire réel (w/p)") +
+  labs(x = "Tension du marché du travail (θ = v/u)", y = "Salaire réel (W/P)") +
   theme_macro()
 ```
 
 ## 3.2 Statique comparative : un choc sur les revenus de remplacement
 
-Une réforme rend l'indemnisation chômage plus généreuse. Pour tout niveau de $\theta$, les travailleurs négocient désormais un salaire réel plus élevé de 0,15 (la nouvelle courbe des salaires devient $w/p = 0{,}35 + 0{,}2\,\theta$).
+Une réforme rend l'indemnisation chômage plus généreuse. Pour tout niveau de $\theta$, les travailleurs négocient désormais un salaire réel plus élevé de 0,15 (la nouvelle courbe des salaires devient $W/P = 0{,}35 + 0{,}2\,\theta$).
 
 1. Laquelle des deux courbes se déplace, et dans quel sens ?
-2. Recalculez le nouvel équilibre $(\theta^{*\prime}, (w/p)^{*\prime})$.
+2. Recalculez le nouvel équilibre $(\theta^{*\prime}, (W/P)^{*\prime})$.
 3. Que devient le taux de chômage d'équilibre, à taux d'emplois vacants $v$ inchangé ? Justifiez à partir de la définition de $\theta$.
 
 ::: {.callout-tip}
@@ -228,7 +228,7 @@ Représentez la nouvelle courbe des salaires sur un même graphique que la quest
 
 ---
 
-# Exercice 4 : NOUVEAU : la trappe à inactivité, du RSA à la prime d'activité
+# Exercice 4 : la trappe à inactivité, du RSA à la prime d'activité
 
 ::: {.definition}
 **Trappe à inactivité (ou à pauvreté)** : situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction des prestations sociales à mesure que le revenu d'activité augmente. Le **taux marginal de prélèvement implicite**, la part de tout euro supplémentaire gagné qui est « reprise » par la baisse des prestations, peut approcher 100 %, ce qui décourage le retour à l'emploi.

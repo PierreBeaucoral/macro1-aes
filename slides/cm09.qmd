@@ -153,6 +153,19 @@ ggplot(df_epl, aes(x = pays, y = valeur, fill = indicateur)) +
   guides(fill = guide_legend(nrow = 2))
 ```
 
+## Protéger les emplois change surtout *qui* est au chômage, pas *combien*
+
+::: {.incremental}
+- Les études de l'OCDE (Bassanini et Duval, 2006) ne trouvent **pas d'effet significatif** de la rigueur de la protection de l'emploi sur le **taux de chômage agrégé**.
+- Ses effets diffèrent en revanche selon l'âge : elle freine l'**insertion des jeunes** (les entreprises hésitent à embaucher quand licencier coûte cher) et peut favoriser le **maintien en emploi des seniors**.
+:::
+
+. . .
+
+::: {.cle}
+Un indice de protection élevé ne suffit donc pas à expliquer un chômage élevé : il en modifie surtout la **composition**.
+:::
+
 ## Le point-clé : deux notions de protection distinctes
 
 ::: {.cle}

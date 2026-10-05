@@ -20,7 +20,7 @@ description: "Dossier de TD : critique keynésienne du marché du travail, calcu
 La **correction du CC1** (évalué en séance 4) est traitée **en séance**, à l'oral, avec le sujet projeté. Elle ne figure pas dans ce dossier écrit : apportez vos copies annotées.
 :::
 
-**Pré-requis.** CM 6 (critique keynésienne du marché du travail, demande effective, loi d'Okun) et CM 7 (courbe de Phillips, NAIRU, anticipations). Relisez si besoin `cours/chap2.qmd`, §II.2-4.
+**Pré-requis.** CM 6 (critique keynésienne du marché du travail, demande effective, loi d'Okun) et CM 7 (courbe de Phillips, NAIRU, anticipations). Relisez si besoin `cours/chap2.qmd`, Partie 2, §2.2 (analyse keynésienne, loi d'Okun et courbe de Phillips).
 
 ---
 

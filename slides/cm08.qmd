@@ -185,11 +185,13 @@ La courbe **WS est décroissante** : plus le chômage est élevé, plus le pouvo
 
 ## Les entreprises appliquent un taux de marge sur leur coût
 
-Simplification : le travail est le seul facteur de production, de productivité $\lambda = 1$. En concurrence imparfaite, les entreprises appliquent un **taux de marge** $m > 0$ sur leur coût marginal :
+Simplification : le travail est le seul facteur de production, de productivité $\lambda$ ; le coût marginal est donc $W/\lambda$. En concurrence imparfaite, les entreprises appliquent un **taux de marge** $m > 0$ sur ce coût :
 
 $$
-P = (1+m)\,W \quad\Longrightarrow\quad PS : \quad \frac{W}{P} = \frac{1}{1+m}
+P = (1+m)\,\frac{W}{\lambda} \quad\Longrightarrow\quad PS : \quad \frac{W}{P} = \frac{\lambda}{1+m}
 $$
+
+On normalise ensuite $\lambda = 1$ : $PS : W/P = 1/(1+m)$.
 
 . . .
 
@@ -349,7 +351,7 @@ Dans ce modèle, le chômage est **involontaire mais non keynésien** : il ne pr
 | Baisse de la demande globale | Aucune | Chômage total $\uparrow$, **au-delà** de $u^*$ |
 
 ::: {.source}
-Source : Layard, Nickell & Jackman (1991), synthèse du cours (Chapitre II, Partie 2, §2.3).
+Convention du cours : une baisse du coût du travail est représentée par **WS vers le bas**, $W/P$ s'entendant alors comme le **coût réel** du travail pour l'employeur (Blanchard place ce coin fiscal dans PS, qui monte : même effet sur $u^*$). Source : Layard, Nickell & Jackman (1991), synthèse du cours (Chapitre II, Partie 2, §2.3).
 :::
 
 ## Les cadres statiques ont une limite commune
@@ -504,7 +506,7 @@ Les modèles d'appariement, développés par Peter Diamond, Dale Mortensen et Ch
 
 ## L'équilibre du modèle DMP
 
-L'équilibre résulte de la confrontation de deux relations, toutes deux fonctions de $\theta$ et du salaire réel $w/p$ :
+L'équilibre résulte de la confrontation de deux relations, toutes deux fonctions de $\theta$ et du salaire réel $W/P$ :
 
 . . .
 
@@ -513,7 +515,7 @@ L'équilibre résulte de la confrontation de deux relations, toutes deux fonctio
 ::: {.cle}
 **Demande de travail des entreprises**
 
-Relation **décroissante** entre $\theta$ et $w/p$ : un salaire réel élevé réduit la demande de travail, donc le nombre de postes créés, donc $\theta$.
+Relation **décroissante** entre $\theta$ et $W/P$ : un salaire réel élevé réduit la demande de travail, donc le nombre de postes créés, donc $\theta$.
 :::
 :::
 
@@ -521,26 +523,73 @@ Relation **décroissante** entre $\theta$ et $w/p$ : un salaire réel élevé r�
 ::: {.cle}
 **Courbe des salaires**
 
-Relation **croissante** entre $\theta$ et $w/p$ : plus la probabilité de retrouver un emploi est élevée (marché tendu), plus le pouvoir de négociation des travailleurs, donc le salaire exigé, est fort.
+Relation **croissante** entre $\theta$ et $W/P$ : plus la probabilité de retrouver un emploi est élevée (marché tendu), plus le pouvoir de négociation des travailleurs, donc le salaire exigé, est fort.
 :::
 :::
 :::
 
 ## Deux relations opposées déterminent la tension d'équilibre {.smaller}
 
-```{mermaid}
-%%| fig-cap: "La tension du marché du travail résulte de la rencontre entre la demande de travail des entreprises, décroissante avec le salaire réel, et la courbe des salaires, croissante avec le salaire réel."
-flowchart TD
-    T[Tension theta egale v sur u] --> D1[Demande de travail decroissante en salaire reel]
-    T --> D2[Courbe des salaires croissante en salaire reel]
-    D1 --> EQ[Equilibre theta etoile et salaire reel d equilibre]
-    D2 --> EQ
+::: {.columns}
+::: {.column width="58%"}
+```{r}
+#| label: fig-dmp-cm08
+#| fig-width: 5.6
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+
+# Exemple chiffre du cours (chap2, Sec. 2.4) : demande de travail
+# W/P = 1,2 - 0,1 theta ; courbe des salaires W/P = 0,3 + 0,2 theta, puis
+# 0,45 + 0,2 theta apres une hausse des revenus de remplacement.
+plot_dmp <- function(avec_choc) {
+  theta <- seq(0, 6, length.out = 200)
+  df <- data.frame(theta = rep(theta, 2),
+                   wp = c(1.2 - 0.1 * theta, 0.3 + 0.2 * theta),
+                   courbe = rep(c("Demande de travail", "Courbe des salaires"), each = 200))
+  eq <- data.frame(theta = 3, wp = 0.9, lab = "E", lx = 3.2, ly = 0.8)
+  if (avec_choc) {
+    df <- rbind(df, data.frame(theta = theta, wp = 0.45 + 0.2 * theta,
+                               courbe = "Courbe des salaires (après)"))
+    eq <- rbind(eq, data.frame(theta = 2.5, wp = 0.95, lab = "E'", lx = 2.25, ly = 1.04))
+  }
+  ggplot(df, aes(x = theta, y = wp, color = courbe, linetype = courbe)) +
+    geom_line(linewidth = 1.1) +
+    geom_segment(data = eq, aes(x = theta, xend = theta, y = 0, yend = wp),
+                 inherit.aes = FALSE, linetype = "dashed", color = "grey50", linewidth = .4) +
+    geom_point(data = eq, aes(x = theta, y = wp), inherit.aes = FALSE,
+               color = macro_pal[["rouge"]], size = 2.6) +
+    geom_text(data = eq, aes(x = lx, y = ly, label = lab), inherit.aes = FALSE,
+              fontface = "bold", color = macro_pal[["rouge"]]) +
+    scale_color_manual(values = c("Demande de travail" = macro_pal[["bleu"]],
+                                  "Courbe des salaires" = macro_pal[["or"]],
+                                  "Courbe des salaires (après)" = macro_pal[["or"]]), name = NULL) +
+    scale_linetype_manual(values = c("Demande de travail" = "solid", "Courbe des salaires" = "solid",
+                                     "Courbe des salaires (après)" = "dashed"), name = NULL) +
+    coord_cartesian(xlim = c(0, 6), ylim = c(0, 1.4), expand = FALSE) +
+    labs(x = "Tension du marché du travail (θ = v/u)", y = "Salaire réel (W/P)") +
+    theme_macro() +
+    guides(color = guide_legend(nrow = 2), linetype = guide_legend(nrow = 2))
+}
+plot_dmp(avec_choc = FALSE)
 ```
+:::
+
+::: {.column width="42%"}
+Exemple : demande de travail $W/P = 1{,}2 - 0{,}1\,\theta$, courbe des salaires $W/P = 0{,}3 + 0{,}2\,\theta$.
+
+. . .
+
+$1{,}2 - 0{,}1\,\theta^* = 0{,}3 + 0{,}2\,\theta^*$
+
+$\Rightarrow \theta^* = 3$ et $(W/P)^* = 0{,}9$.
+:::
+:::
 
 . . .
 
 ::: {.cle}
-Les deux relations sont fonctions de la **même** variable $\theta$ mais varient en sens opposé avec le salaire réel : leur intersection fixe simultanément la tension d'équilibre $\theta^*$ et le salaire réel négocié.
+L'intersection fixe **simultanément** la tension d'équilibre $\theta^*$ et le salaire réel négocié.
 :::
 
 ## Les déterminants du chômage dans le cadre DMP
@@ -550,12 +599,39 @@ Les deux relations sont fonctions de la **même** variable $\theta$ mais varient
 - l'**intensité de l'effort de recherche** des chômeurs ;
 - le **taux de destruction des emplois** (séparation) ;
 - le **pouvoir de négociation** des travailleurs ;
-- le **niveau des revenus de remplacement** (indemnisation chômage) ;
+- le **niveau des revenus de remplacement** (indemnisation chômage), via le **salaire de réserve** $w_r$ des chômeurs ;
 - la **productivité du travail** et le **coût du capital**.
 :::
 
 ::: {.source}
 Source : Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortensenpissarides1994], synthèse du cours (Chapitre II, Partie 2, §2.4).
+:::
+
+## Des revenus de remplacement plus généreux font monter la courbe des salaires {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+```{r}
+#| label: fig-dmp-choc-cm08
+#| fig-width: 5.6
+#| fig-height: 4.2
+plot_dmp(avec_choc = TRUE)
+```
+:::
+
+::: {.column width="42%"}
+::: {.incremental}
+- Indemnisation plus généreuse $\Rightarrow$ **salaire de réserve** plus élevé $\Rightarrow$ exigences salariales plus fortes : $W/P = 0{,}45 + 0{,}2\,\theta$.
+- La courbe des salaires monte ; la demande de travail ne bouge pas.
+- $0{,}3\,\theta^* = 0{,}75$ : $\theta^* = 2{,}5$ et $(W/P)^* = 0{,}95$.
+:::
+:::
+:::
+
+. . .
+
+::: {.cle}
+Salaire réel plus élevé, mais **tension plus faible** : moins de postes vacants par chômeur, donc un chômage plus élevé à efficacité d'appariement donnée.
 :::
 
 ## Deux leviers de politique de l'emploi issus de l'appariement

@@ -410,7 +410,7 @@ ggplot(df_coin, aes(x = pays, y = coin, fill = categorie)) +
 
 ## Un salaire minimum trop élevé crée du chômage classique
 
-Si un salaire plancher $w_{min}$ est imposé **au-dessus** du salaire d'équilibre $w^*$, l'offre de travail excède la demande à ce niveau de salaire : c'est du **chômage classique** (lecture néoclassique : chômage volontaire au sens où il résulte d'un prix administré trop élevé).
+Si un salaire plancher $w_{min}$ est imposé **au-dessus** du salaire d'équilibre $w^*$, l'offre de travail excède la demande à ce niveau de salaire : c'est du **chômage classique** (lecture néoclassique : chômage volontaire au sens **collectif**, car il résulte d'un prix administré trop élevé). Au sens strict (refuser de travailler au salaire offert, car $w_r$ lui est supérieur), les exclus ne sont **pas** volontaires : ils sont prêts à travailler à $w_{min}$.
 
 ```{r}
 #| label: fig-smic-neo
@@ -538,7 +538,7 @@ Cf. Chapitre III pour l'analyse détaillée des politiques françaises de baisse
 
 ::: {.incremental}
 - Relire la section correspondante de `cours/chap2.qmd` (Partie 2, §2.1) et refaire le graphique d'équilibre à la main.
-- Préparer le TD 5 (analyses théoriques : néoclassique & WS-PS).
+- Préparer le TD 5 (analyses théoriques : néoclassique & WS-PS). Le volet WS-PS (QCM correspondants, Ex. 3) se prépare sur le résumé `cours/chap2.qmd` §2.3 : le modèle sera présenté en CM 8.
 - CM 6 : l'analyse **keynésienne** du marché du travail, pourquoi le chômage peut y être *involontaire*, et la loi d'Okun.
 :::
 

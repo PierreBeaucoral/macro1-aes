@@ -199,7 +199,7 @@ Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en empl
 ## À retenir : deux définitions du chômage
 **INSEE (au sens du BIT)** : un chômeur est une personne répondant **simultanément** à trois critères :
 
-1. être **sans emploi** au cours d'une semaine de référence (ne pas avoir travaillé, ne serait-ce qu'une heure) ;
+1. être **sans emploi** au cours d'une semaine de référence (ne pas avoir travaillé, ne serait-ce qu'une heure ; un salarié temporairement absent qui conserve son contrat, en arrêt maladie ou en congés, est compté **en emploi**) ;
 2. être **disponible** pour travailler dans les deux semaines ;
 3. être **activement à la recherche** d'un emploi (démarches spécifiques au cours des quatre semaines précédentes, ou avoir trouvé un emploi qui commence dans moins de trois mois).
 
@@ -853,9 +853,10 @@ Le modèle néoclassique recommande de **laisser agir les forces du marché** : 
 
 ### Critiques de l'approche néoclassique
 
-L'analyse keynésienne adopte une **vision macroéconomique** du marché du travail : elle prend en compte les effets, sur l'ensemble de l'économie, des variations de salaire, alors que l'approche néoclassique raisonne en équilibre partiel. Elle formule deux critiques principales :
+L'analyse keynésienne adopte une **vision macroéconomique** du marché du travail : elle prend en compte les effets, sur l'ensemble de l'économie, des variations de salaire, alors que l'approche néoclassique raisonne en équilibre partiel. Elle formule trois critiques principales :
 
-- **Sur l'offre de travail** : la fonction d'offre pourrait être *décroissante* plutôt que croissante : la plupart des salariés n'ayant que leur travail comme source de revenu, une baisse des salaires peut les inciter à travailler *davantage* pour compenser la perte de revenu, ce qui aggraverait le chômage plutôt que de le résorber. À court terme, les rigidités nominales rendent d'ailleurs l'offre de travail largement **inélastique** au salaire.
+- **Sur l'offre de travail** : la fonction d'offre pourrait être *décroissante* plutôt que croissante : la plupart des salariés n'ayant que leur travail comme source de revenu, une baisse des salaires peut les inciter à travailler *davantage* pour compenser la perte de revenu, ce qui aggraverait le chômage plutôt que de le résorber.
+- **Sur l'ajustement par le salaire** : à court terme, le **salaire nominal** est rigide (contrats, conventions collectives) et les salariés ne négocient que ce salaire nominal, pas leur salaire réel, qui dépend aussi des prix. Le marché du travail ne s'ajuste donc pas par le prix (le salaire) mais par les **quantités** : le volume d'emploi que les entreprises décident d'offrir.
 - **Sur la demande de travail** : elle n'est qu'une **demande dérivée** de la demande anticipée sur le marché des biens et services, et non le résultat d'un pur calcul de productivité marginale. Le marché du travail n'est donc pas un marché autonome : son équilibre ne peut résulter que d'un équilibre général sur l'ensemble des marchés (biens et services, capitaux, monnaie, travail).
 
 ### La demande effective et le chômage involontaire
@@ -876,7 +877,195 @@ flowchart LR
 
 *Lecture : la demande de travail est une demande dérivée, elle dépend de la conjoncture anticipée sur le marché des biens, non d'un pur calcul de productivité marginale.*
 
-Chez Keynes, rien ne garantit que les décisions d'épargne des ménages (fonction de leur revenu courant) coïncident avec les décisions d'investissement des entreprises (fonction de leurs anticipations de demande) : contrairement à la vision néoclassique où l'épargne se transforme automatiquement en investissement via le taux d'intérêt, les deux décisions sont prises **indépendamment**. Il peut donc exister un déséquilibre global entre offre et demande agrégées, se traduisant par une demande effective faible, un investissement réduit, et une demande de travail insuffisante.
+### Consommer ou épargner : la loi psychologique fondamentale
+
+Pour Keynes, la consommation des ménages dépend d'abord de leur **revenu courant**. C'est ce qu'il appelle la **loi psychologique fondamentale** :
+
+> « En moyenne et la plupart du temps, les hommes tendent à accroître leur consommation à mesure que leur revenu croît, mais non d'une quantité aussi grande que l'accroissement du revenu. » (Keynes, *Théorie générale*, 1936, chapitre 8)
+
+::: {.definition}
+**Fonction de consommation keynésienne.** $C = C_0 + c\,Y$, avec $C_0 > 0$ la consommation **incompressible** (consommée même à revenu nul, en puisant dans l'épargne passée) et $0 < c < 1$.
+
+- **Propension marginale à consommer** (PmC) : $c = \Delta C / \Delta Y$, part de chaque euro de revenu *supplémentaire* consacrée à la consommation.
+- **Propension moyenne à consommer** (PMC) : $C/Y = C_0/Y + c$, part du revenu *total* consommée ; elle **diminue** quand le revenu augmente.
+- L'épargne est ce qui n'est pas consommé : $S = Y - C = -C_0 + (1-c)\,Y$, avec une propension marginale à épargner $s = 1 - c$.
+:::
+
+::: {.callout-note}
+## Exemple chiffré : $C = 200 + 0{,}8\,Y$
+
+| Revenu $Y$ | Consommation $C$ | Épargne $S$ | PMC $= C/Y$ | Propension moyenne à épargner $S/Y$ |
+|---:|---:|---:|---:|---:|
+| 500 | 600 | −100 | 1,20 | −0,20 |
+| 1 000 | 1 000 | 0 | 1,00 | 0 |
+| 2 000 | 1 800 | 200 | 0,90 | 0,10 |
+| 4 000 | 3 400 | 600 | 0,85 | 0,15 |
+
+Chaque euro de revenu supplémentaire est consommé à 80 centimes et épargné à 20 centimes (PmC $= 0{,}8$), quel que soit le niveau de revenu. Mais la part du revenu consommée (PMC) baisse de 1,20 à 0,85 quand le revenu passe de 500 à 4 000 : plus un ménage est riche, plus il épargne une part importante de son revenu. Sous 1 000, le ménage désépargne (il consomme plus que son revenu).
+:::
+
+```{r}
+#| label: fig-fonction-consommation
+#| fig-cap: "La loi psychologique fondamentale, illustrée par la fonction de consommation C = 200 + 0,8 Y. Panneau A : la consommation croît avec le revenu, mais moins vite que lui (pente 0,8 < 1, inférieure à celle de la bissectrice C = Y) ; l'écart vertical entre la bissectrice et la droite de consommation mesure l'épargne. Panneau B : l'épargne correspondante, S = −200 + 0,2 Y, négative sous le revenu seuil de 1 000 et croissante au-delà. Valeurs illustratives."
+#| fig-width: 8
+#| fig-height: 4
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(patchwork)
+
+# Fonction de consommation illustrative C = C0 + c Y (valeurs de l'exemple
+# chiffre du texte) et epargne S = Y - C.
+C0 <- 200
+c_marg <- 0.8
+y_seuil <- C0 / (1 - c_marg)  # revenu pour lequel C = Y (epargne nulle)
+df_cons <- data.frame(Y = seq(0, 3000, by = 10))
+df_cons$C <- C0 + c_marg * df_cons$Y
+df_cons$S <- df_cons$Y - df_cons$C
+
+y_ex <- 2000  # revenu ou l'on materialise l'epargne (S = 200)
+
+p_conso <- ggplot(df_cons, aes(x = Y)) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dotted", color = "grey45", linewidth = .6) +
+  geom_line(aes(y = C), color = macro_pal[["bleu"]], linewidth = 1.1) +
+  annotate("segment", x = y_ex, xend = y_ex, y = C0 + c_marg * y_ex, yend = y_ex,
+           color = macro_pal[["vert"]], linewidth = 1,
+           arrow = arrow(ends = "both", length = unit(.12, "cm"))) +
+  annotate("text", x = y_ex - 50, y = 2150, label = "S = 200",
+           hjust = 1, size = 3.2, color = macro_pal[["vert"]], fontface = "bold") +
+  annotate("point", x = y_seuil, y = y_seuil, size = 2.6, color = macro_pal[["rouge"]]) +
+  annotate("text", x = y_seuil + 80, y = y_seuil - 170, label = "C = Y\n(S = 0)",
+           hjust = 0, size = 3, color = macro_pal[["rouge"]]) +
+  annotate("text", x = 2700, y = 2900, label = "C = Y (45°)", hjust = 1, size = 3, color = "grey35") +
+  annotate("text", x = 2950, y = 1900, label = "C = 200 + 0,8 Y", hjust = 1, size = 3.2,
+           color = macro_pal[["bleu"]], fontface = "bold") +
+  coord_cartesian(xlim = c(0, 3000), ylim = c(0, 3000), expand = FALSE) +
+  labs(subtitle = "A. Consommation", x = "Revenu (Y)", y = "Consommation (C)") +
+  theme_macro()
+
+p_epargne <- ggplot(df_cons, aes(x = Y)) +
+  geom_hline(yintercept = 0, color = "grey60", linewidth = .4) +
+  geom_line(aes(y = S), color = macro_pal[["vert"]], linewidth = 1.1) +
+  annotate("point", x = y_seuil, y = 0, size = 2.6, color = macro_pal[["rouge"]]) +
+  annotate("text", x = y_seuil + 100, y = -60, hjust = 0, label = "Y = 1 000", size = 3, color = macro_pal[["rouge"]]) +
+  annotate("text", x = 600, y = -200, label = "Désépargne", size = 3, color = "grey35") +
+  annotate("text", x = 2950, y = 150, label = "S = −200 + 0,2 Y", hjust = 1, size = 3.2,
+           color = macro_pal[["vert"]], fontface = "bold") +
+  coord_cartesian(xlim = c(0, 3000), ylim = c(-250, 450), expand = FALSE) +
+  labs(subtitle = "B. Épargne", x = "Revenu (Y)", y = "Épargne (S)") +
+  theme_macro()
+
+p_conso | p_epargne
+```
+
+*Lecture : la pente de la droite de consommation (la PmC, 0,8) est plus faible que celle de la bissectrice (1) : chaque hausse du revenu se partage entre consommation et épargne. Empiriquement, la PmC est plus élevée chez les ménages modestes que chez les ménages aisés, d'où l'intérêt keynésien pour les transferts ciblés sur les premiers.*
+
+### Épargne et investissement : l'arbitrage classique et la rupture keynésienne
+
+**Chez les classiques et les néoclassiques**, épargner est un **arbitrage intertemporel** : renoncer à consommer aujourd'hui pour consommer davantage demain. Le prix de cet arbitrage est le **taux d'intérêt** $r$ qui rémunère l'épargne : plus $r$ est élevé, plus les ménages épargnent ($S$ croît avec $r$). L'investissement des entreprises, lui, diminue avec $r$, qui est le coût de son financement. Sur le **marché des fonds prêtables**, le taux d'intérêt s'ajuste jusqu'à ce que $S(r) = I(r)$ : toute l'épargne est investie. Si les ménages décident d'épargner davantage, le taux d'intérêt baisse et l'investissement augmente d'autant : la demande globale ne change pas, seule sa composition change (moins de consommation, plus d'investissement). C'est la **loi des débouchés de Say** : l'offre crée sa propre demande.
+
+**Chez Keynes**, ce mécanisme est rompu pour deux raisons :
+
+- l'épargne dépend du **revenu** (loi psychologique fondamentale), et non, au premier ordre, du taux d'intérêt ;
+- le taux d'intérêt ne rémunère pas l'épargne mais la **renonciation à la liquidité**. Il se détermine sur le marché de la monnaie, non sur celui des fonds prêtables.
+
+::: {.definition}
+**Préférence pour la liquidité.** Désir des agents de détenir une partie de leur richesse sous forme de **monnaie**, l'actif le plus liquide, pour faire face à leurs transactions, aux imprévus ou à l'incertitude sur l'évolution des taux. Une épargne conservée sous forme de monnaie (**thésaurisée**) n'est ni consommée ni investie : c'est une **fuite** hors du circuit de la demande, et l'offre ne crée plus nécessairement sa propre demande.
+:::
+
+L'investissement dépend, lui, des **anticipations** des entrepreneurs sur la demande future. Épargne et investissement relèvent donc de **deux décisions indépendantes**, prises par des agents différents. Leur égalité n'est pas assurée par le taux d'intérêt mais par l'**ajustement du revenu** : la production (donc le revenu) varie jusqu'à ce que l'épargne que les ménages souhaitent faire à ce niveau de revenu égale l'investissement décidé par les entreprises.
+
+```{r}
+#| label: fig-epargne-classiques-keynes
+#| fig-cap: "Une hausse du désir d'épargne : deux lectures opposées. Panneau A (classiques) : sur le marché des fonds prêtables, l'offre d'épargne se déplace vers la droite (S vers S'), le taux d'intérêt baisse de 5 % à 4,25 % et l'investissement augmente ; l'épargne supplémentaire est entièrement investie. Panneau B (Keynes) : l'épargne dépend du revenu (S = −200 + 0,2 Y) et l'investissement est fixé par les anticipations (I = 300) ; la hausse du désir d'épargne (S') fait baisser le revenu d'équilibre de 2 500 à 2 250, sans hausse de l'épargne totale (paradoxe de l'épargne), et l'économie s'éloigne du revenu de plein emploi. Valeurs illustratives."
+#| fig-width: 8.5
+#| fig-height: 4.2
+source(here::here("R/theme_macro.R"))
+library(ggplot2)
+library(patchwork)
+
+# Panneau A : marche des fonds pretables (classiques). Offre d'epargne
+# S(r) = 100 + 40 r, puis S'(r) = 160 + 40 r ; investissement I(r) = 500 - 40 r.
+r_seq <- seq(0, 10, by = .05)
+df_fp <- data.frame(
+  r = rep(r_seq, 3),
+  montant = c(100 + 40 * r_seq, 160 + 40 * r_seq, 500 - 40 * r_seq),
+  courbe = rep(c("S", "S'", "I"), each = length(r_seq))
+)
+eq_fp <- data.frame(r = c(5, 4.25), montant = c(300, 330))
+
+p_classique <- ggplot(df_fp, aes(x = montant, y = r, color = courbe, linetype = courbe)) +
+  geom_line(linewidth = 1.05) +
+  geom_point(data = eq_fp, aes(x = montant, y = r), inherit.aes = FALSE,
+             color = macro_pal[["rouge"]], size = 2.4) +
+  annotate("segment", x = 0, xend = 300, y = 5, yend = 5, linetype = "dashed",
+           color = "grey55", linewidth = .35) +
+  annotate("segment", x = 0, xend = 330, y = 4.25, yend = 4.25, linetype = "dashed",
+           color = "grey55", linewidth = .35) +
+  annotate("text", x = 15, y = 5.3, label = "r = 5 %", hjust = 0, size = 3, color = "grey30") +
+  annotate("text", x = 15, y = 3.9, label = "r' = 4,25 %", hjust = 0, size = 3, color = "grey30") +
+  annotate("text", x = c(445, 525, 150), y = c(9.3, 8.3, 9.6), label = c("S", "S'", "I"),
+           color = c(macro_pal[["vert"]], macro_pal[["vert"]], macro_pal[["bleu"]]),
+           fontface = "bold", size = 3.6) +
+  scale_color_manual(values = c("S" = macro_pal[["vert"]], "S'" = macro_pal[["vert"]],
+                                "I" = macro_pal[["bleu"]])) +
+  scale_linetype_manual(values = c("S" = "solid", "S'" = "dashed", "I" = "solid")) +
+  coord_cartesian(xlim = c(0, 600), ylim = c(0, 10), expand = FALSE) +
+  labs(subtitle = "A. Classiques : le taux d'intérêt s'ajuste",
+       x = "Épargne et investissement (fonds prêtables)", y = "Taux d'intérêt r (%)") +
+  theme_macro() +
+  theme(legend.position = "none")
+
+# Panneau B : Keynes. Epargne S(Y) = -200 + 0,2 Y, puis S'(Y) = -150 + 0,2 Y
+# (les menages veulent epargner 50 de plus a tout niveau de revenu) ;
+# investissement autonome I = 300. Equilibre : S(Y) = I.
+y_seq <- seq(1500, 3200, by = 10)
+df_k <- data.frame(
+  Y = rep(y_seq, 2),
+  S = c(-200 + .2 * y_seq, -150 + .2 * y_seq),
+  courbe = rep(c("S", "S'"), each = length(y_seq))
+)
+y_pe <- 2900  # revenu de plein emploi (illustratif)
+
+p_keynes <- ggplot(df_k, aes(x = Y, y = S, linetype = courbe)) +
+  geom_hline(yintercept = 300, color = macro_pal[["bleu"]], linewidth = 1.05) +
+  geom_line(color = macro_pal[["vert"]], linewidth = 1.05) +
+  geom_vline(xintercept = y_pe, linetype = "dotdash", color = "grey45", linewidth = .5) +
+  annotate("point", x = c(2500, 2250), y = 300, color = macro_pal[["rouge"]], size = 2.4) +
+  annotate("segment", x = 2480, xend = 2270, y = 245, yend = 245,
+           arrow = arrow(length = unit(.15, "cm")), color = macro_pal[["rouge"]], linewidth = .6) +
+  annotate("text", x = 2375, y = 215, label = "Y baisse", size = 3, color = macro_pal[["rouge"]]) +
+  annotate("text", x = c(2530, 2250), y = c(275, 340), hjust = c(0, 0.5), label = c("2 500", "2 250"), size = 3, color = "grey30") +
+  annotate("text", x = 1560, y = 325, label = "I = 300", hjust = 0, size = 3.2,
+           color = macro_pal[["bleu"]], fontface = "bold") +
+  annotate("text", x = c(3150, 3060), y = c(400, 490), label = c("S", "S'"), size = 3.6,
+           color = macro_pal[["vert"]], fontface = "bold") +
+  annotate("text", x = y_pe - 30, y = 120, label = "Plein\nemploi", hjust = 1, size = 3, color = "grey35") +
+  scale_linetype_manual(values = c("S" = "solid", "S'" = "dashed")) +
+  coord_cartesian(xlim = c(1500, 3200), ylim = c(50, 550), expand = FALSE) +
+  labs(subtitle = "B. Keynes : le revenu s'ajuste",
+       x = "Revenu (Y)", y = "Épargne et investissement") +
+  theme_macro() +
+  theme(legend.position = "none")
+
+p_classique | p_keynes
+```
+
+*Lecture du panneau B : à l'équilibre initial, $-200 + 0{,}2\,Y = 300$, d'où $Y^* = 2\,500$. Si les ménages veulent épargner 50 de plus à tout niveau de revenu, $-150 + 0{,}2\,Y = 300$ donne $Y^* = 2\,250$. Le revenu baisse de 250, mais l'épargne effectivement réalisée reste égale à l'investissement (300) : en voulant épargner plus, les ménages ont réduit la demande, la production et leur propre revenu. C'est le **paradoxe de l'épargne** (ou de la frugalité).*
+
+### Le multiplicateur keynésien
+
+Puisque le revenu s'ajuste à la demande, toute dépense **autonome** supplémentaire (investissement, dépense publique) a un effet amplifié sur le revenu. Avec $Y = C + I$ et $C = C_0 + c\,Y$ :
+$$
+Y^* = \frac{C_0 + I}{1-c} \qquad\Longrightarrow\qquad \Delta Y = \underbrace{\frac{1}{1-c}}_{k}\,\Delta I
+$$
+
+::: {.definition}
+**Multiplicateur keynésien** $k = \dfrac{1}{1-c}$. Une dépense autonome supplémentaire de 1 euro accroît le revenu de $k$ euros, car elle devient un revenu pour d'autres agents, qui en consomment une partie $c$, qui devient à son tour un revenu, etc. : $\Delta Y = \Delta I\,(1 + c + c^2 + \dots) = \Delta I / (1-c)$.
+:::
+
+Dans l'exemple ($c = 0{,}8$), $k = 1/0{,}2 = 5$ : une hausse de 100 de l'investissement (ou de la dépense publique) porte le revenu d'équilibre de 2 500 à 3 000. Ce chiffre est un maximum théorique : en économie ouverte, une partie du revenu supplémentaire sert à acheter des **importations** et une autre est prélevée par les **impôts**. Ces « fuites » réduisent fortement le multiplicateur effectif.
+
+Il peut donc exister un déséquilibre global entre offre et demande agrégées, se traduisant par une demande effective faible, un investissement réduit, et une demande de travail insuffisante.
 
 L'économie peut alors se retrouver durablement dans un **équilibre de sous-emploi** : un état où offre et demande de biens sont égales, mais à un niveau de production trop faible pour assurer le plein emploi. Aucun mécanisme de marché, ni la flexibilité des prix, ni celle des salaires, ne permet de revenir spontanément au plein emploi. On parle alors de **chômage involontaire** : des individus souhaitent travailler au salaire en vigueur mais ne trouvent pas d'emploi, faute d'embauches suffisantes de la part des entreprises.
 
@@ -888,7 +1077,15 @@ L'économie peut alors se retrouver durablement dans un **équilibre de sous-emp
 4. La monnaie n'est pas neutre : la préférence pour la liquidité invalide la loi des débouchés de Say, et les phénomènes monétaires ont des effets réels.
 :::
 
-**Implication de politique économique.** Contrairement à la recommandation néoclassique, baisser les salaires ne stimule pas l'emploi : cela déprime au contraire la demande effective (le salaire est aussi un revenu, donc une source de consommation) et donc, in fine, la demande de travail elle-même. Il faut au contraire des **politiques budgétaires et monétaires expansives** (baisse des taux directeurs, investissement public, politiques redistributives ciblant les ménages à forte propension marginale à consommer) pour sortir l'économie de l'équilibre de sous-emploi.
+**Implication de politique économique.** Contrairement à la recommandation néoclassique, baisser les salaires ne stimule pas l'emploi : cela déprime au contraire la demande effective (le salaire est aussi un revenu, donc une source de consommation) et donc, in fine, la demande de travail elle-même. Il faut au contraire des **politiques budgétaires et monétaires expansives** (baisse des taux directeurs, investissement public, politiques redistributives ciblant les ménages à forte propension marginale à consommer) pour sortir l'économie de l'équilibre de sous-emploi. Le multiplicateur en donne la logique : chaque euro de dépense publique ou d'investissement supplémentaire accroît le revenu de plus d'un euro.
+
+Symétriquement, une **hausse** des salaires a deux effets opposés sur l'emploi : elle soutient la demande effective (effet-revenu, le salaire étant consommé) mais renchérit le coût du travail (effet-coût). L'effet net est **ambigu** : il est d'autant plus favorable à l'emploi que l'économie est en sous-emploi, avec des capacités de production inutilisées, et que la propension marginale à consommer des salariés est élevée.
+
+::: {.callout-warning}
+## Limites de la relance keynésienne
+- **La contrainte extérieure.** En économie ouverte, une partie de la relance profite aux producteurs étrangers via les importations. La relance française de 1981-1982 (hausse du SMIC et des prestations sociales, embauches publiques), menée à contre-courant de pays partenaires en rigueur, a creusé le déficit commercial et conduit à trois dévaluations du franc, puis au « tournant de la rigueur » de mars 1983.
+- **L'inflation et la stagflation.** Quand le chômage n'est pas dû à une insuffisance de la demande, relancer la demande produit surtout de l'inflation. Les années 1970 combinent inflation et chômage élevés (stagflation), ce que la relance ne peut pas résoudre : c'est le point de départ de la critique de la courbe de Phillips (ci-dessous).
+:::
 
 ### La loi d'Okun
 
@@ -900,22 +1097,22 @@ $$
 où $u$ est le taux de chômage, $g$ le taux de croissance du PIB réel, $\bar g$ le taux de croissance nécessaire pour stabiliser le chômage, et $\beta > 0$ le **coefficient d'Okun**.
 :::
 
-Aux États-Unis, une hausse de 1 point du taux de croissance est associée en moyenne à une baisse d'environ 0,4 point du taux de chômage ($\beta \approx 0{,}38$ sur 1961-1980, $0{,}42$ sur 1981-2016 ; Blanchard et Cohen, 2017). Ce coefficient varie selon les pays car il dépend de la façon dont les entreprises ajustent l'emploi aux variations de la production, donc de la structure des économies (flexibilité des contrats, législation sur l'embauche et le licenciement).
+Aux États-Unis, chaque point de croissance **au-dessus** de $\bar g$ est associé en moyenne à une baisse d'environ 0,4 point du taux de chômage ($\beta \approx 0{,}38$ sur 1961-1980, $0{,}42$ sur 1981-2016 ; Blanchard et Cohen, 2017). Ce coefficient varie selon les pays car il dépend de la façon dont les entreprises ajustent l'emploi aux variations de la production, donc de la structure des économies (flexibilité des contrats, législation sur l'embauche et le licenciement).
 
 Avant de résumer le coefficient d'Okun par pays, il est utile de voir la relation brute, année par année : chaque point est une année, avec la croissance du PIB réel en abscisse et la variation du taux de chômage en ordonnée.
 
 ```{r}
 #| label: fig-okun-nuage-resume
-#| fig-cap: "Le nuage d'Okun, France et États-Unis, 1991-2023 : chaque point est une année, croissance du PIB réel en abscisse, variation du taux de chômage en ordonnée. La pente de la droite de régression (en or) est une estimation du coefficient d'Okun négatif, nettement plus raide aux États-Unis qu'en France. Sources : Bureau of Labor Statistics (États-Unis) ; Insee, taux de chômage au sens du BIT, France entière (séries cohérentes avec la Banque mondiale, WDI, indicateurs SL.UEM.TOTL.NE.ZS et NY.GDP.MKTP.KD.ZG)."
+#| fig-cap: "Le nuage d'Okun, États-Unis (1991-2023) et France (1992-2023) : chaque point est une année, croissance du PIB réel en abscisse, variation du taux de chômage en ordonnée. La droite de régression (en or) est estimée hors 2020-2021 (points gris) : la crise sanitaire, avec le recours massif au chômage partiel en France, est un choc atypique qui, inclus, écraserait la pente française (−0,09 au lieu de −0,32). Sa pente estime le coefficient d'Okun négatif (−β), plus raide aux États-Unis qu'en France ; son intersection avec l'axe horizontal donne le taux de croissance qui stabilise le chômage (ḡ). Sources : Bureau of Labor Statistics (États-Unis) ; Banque mondiale, WDI, indicateurs SL.UEM.TOTL.NE.ZS (chômage, estimation nationale) et NY.GDP.MKTP.KD.ZG (croissance du PIB réel)."
 #| fig-width: 7
-#| fig-height: 4.6
+#| fig-height: 4.8
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
-# Taux de croissance du PIB reel (%) et taux de chomage (%, sens BIT/harmonise),
-# Etats-Unis et France, 1990-2023. Sources : BLS (Etats-Unis) ; Insee, taux de
-# chomage au sens du BIT, France entiere (series coherentes avec la Banque
-# mondiale, WDI, indicateurs SL.UEM.TOTL.NE.ZS et NY.GDP.MKTP.KD.ZG).
+# Taux de croissance du PIB reel (%) et taux de chomage (%), Etats-Unis
+# (BLS, 1990-2023) et France (Banque mondiale WDI, SL.UEM.TOTL.NE.ZS,
+# estimation nationale, disponible a partir de 1991). Memes vecteurs que
+# slides/cm06.qmd.
 annee_us <- 1990:2023
 croissance_us <- c(1.9, -0.1, 3.5, 2.8, 4.0, 2.7, 3.8, 4.5, 4.5, 4.8,
                     4.1, 1.0, 1.7, 2.9, 3.8, 3.5, 2.9, 1.9, -0.1, -2.5,
@@ -926,18 +1123,18 @@ chomage_us <- c(5.6, 6.8, 7.5, 6.9, 6.1, 5.6, 5.4, 4.9, 4.5, 4.2,
                 9.6, 8.9, 8.1, 7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7,
                 8.1, 5.3, 3.6, 3.6)
 
-annee_fr <- 1990:2023
-croissance_fr <- c(2.8, 1.2, 1.5, -0.4, 2.4, 2.3, 1.4, 2.5, 3.5, 3.4,
+annee_fr <- 1991:2023
+croissance_fr <- c(1.2, 1.5, -0.4, 2.4, 2.3, 1.4, 2.5, 3.5, 3.4,
                     4.1, 1.9, 1.1, 1.0, 2.9, 1.9, 2.7, 2.5, 0.4, -2.9,
                     2.0, 2.4, 0.2, 0.8, 1.0, 1.1, 0.9, 2.1, 1.7, 1.8,
                     -7.5, 6.9, 2.6, 0.9)
-chomage_fr <- c(9.4, 9.1, 10.2, 11.3, 12.6, 11.8, 12.4, 12.6, 12.1, 12.0,
+chomage_fr <- c(9.1, 10.2, 11.3, 12.6, 11.8, 12.4, 12.6, 12.1, 12.0,
                 10.2, 8.6, 8.7, 8.3, 8.9, 8.9, 8.8, 8.0, 7.4, 9.1,
                 9.3, 9.2, 9.8, 9.9, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
                 8.0, 7.9, 7.3, 7.3)
 
-# La variation annuelle du chomage necessite une annee de base (1990),
-# d'ou le calcul par diff() : chaque pays contribue 33 points (1991-2023).
+# La variation annuelle du chomage necessite une annee de base : points
+# 1991-2023 pour les Etats-Unis, 1992-2023 pour la France.
 construire_okun <- function(pays, annee, croissance, chomage) {
   data.frame(
     pays       = pays,
@@ -951,20 +1148,40 @@ df_okun_nuage <- rbind(
   construire_okun("États-Unis", annee_us, croissance_us, chomage_us),
   construire_okun("France",     annee_fr, croissance_fr, chomage_fr)
 )
-df_okun_nuage$pays      <- factor(df_okun_nuage$pays, levels = c("États-Unis", "France"))
-df_okun_nuage$recession <- df_okun_nuage$croissance < 0
+df_okun_nuage$pays <- factor(df_okun_nuage$pays, levels = c("États-Unis", "France"))
+# 2020-2021 (crise sanitaire) : montres mais exclus de la regression.
+df_okun_nuage$type <- ifelse(df_okun_nuage$annee %in% 2020:2021, "covid",
+                             ifelse(df_okun_nuage$croissance < 0, "recession", "expansion"))
+df_reg <- df_okun_nuage[df_okun_nuage$type != "covid", ]
+
+# Pente (-beta) et croissance stabilisant le chomage (g barre = -constante/pente).
+coefs <- do.call(rbind, lapply(split(df_reg, df_reg$pays), function(d) {
+  m <- coef(lm(delta_u ~ croissance, data = d))
+  data.frame(pays = d$pays[1], pente = m[[2]], g_bar = -m[[1]] / m[[2]])
+}))
+fmt <- scales::label_number(accuracy = 0.01, decimal.mark = ",")
+coefs$etiquette <- paste0("pente = ", fmt(coefs$pente), "\nḡ ≈ ",
+                          scales::label_number(accuracy = 0.1, decimal.mark = ",")(coefs$g_bar), " %")
 
 ggplot(df_okun_nuage, aes(x = croissance, y = delta_u)) +
   geom_hline(yintercept = 0, color = "grey75", linewidth = .4) +
   geom_vline(xintercept = 0, color = "grey75", linewidth = .4) +
-  geom_point(aes(color = recession), size = 2.4, alpha = .9) +
-  scale_color_manual(values = c(`FALSE` = macro_pal[["bleu2"]], `TRUE` = macro_pal[["rouge"]]),
-                      labels = c(`FALSE` = "Expansion", `TRUE` = "Récession (croissance < 0)"),
-                      name = NULL) +
-  geom_smooth(method = "lm", se = FALSE, color = macro_pal[["or"]], linewidth = 1) +
+  geom_smooth(data = df_reg, method = "lm", formula = y ~ x, se = FALSE,
+              fullrange = TRUE, color = macro_pal[["or"]], linewidth = 1) +
+  geom_point(aes(color = type), size = 2.4, alpha = .9) +
+  geom_text(data = df_okun_nuage[df_okun_nuage$type == "covid", ],
+            aes(label = annee), size = 2.7, color = "grey40", nudge_y = .35) +
+  geom_text(data = coefs, aes(x = 7.3, y = 4.5, label = etiquette), hjust = 1, vjust = 1,
+            size = 3, color = macro_pal[["or"]], fontface = "bold") +
+  scale_color_manual(values = c(expansion = macro_pal[["bleu2"]], recession = macro_pal[["rouge"]],
+                                covid = "grey60"),
+                     labels = c(expansion = "Expansion", recession = "Récession (croissance < 0)",
+                                covid = "2020-2021 (hors droite)"),
+                     breaks = c("expansion", "recession", "covid"), name = NULL) +
   facet_wrap(~pays) +
-  scale_x_continuous(limits = c(-9, 7.5), breaks = seq(-8, 6, 2)) +
-  scale_y_continuous(limits = c(-3.4, 4.8), breaks = seq(-3, 4, 1)) +
+  coord_cartesian(xlim = c(-9, 7.5), ylim = c(-3.4, 4.8)) +
+  scale_x_continuous(breaks = seq(-8, 6, 2)) +
+  scale_y_continuous(breaks = seq(-3, 4, 1)) +
   labs(x = "Croissance du PIB réel (%, annuelle)",
        y = "Variation du taux de chômage (points)") +
   theme_macro() +
@@ -1002,7 +1219,7 @@ ggplot(df_okun, aes(x = pays, y = coefficient, fill = periode)) +
 ```
 
 ::: {.callout-note}
-Le coefficient d'Okun mesure la baisse du taux de chômage (en points) associée à une hausse de 1 point du taux de croissance du PIB réel. Il varie fortement selon les pays et les périodes : plus élevé aux États-Unis et au Royaume-Uni (marchés du travail flexibles), plus faible en France et surtout au Japon (ajustement de l'emploi plus rigide face aux variations de la production).
+Le coefficient d'Okun mesure la baisse du taux de chômage (en points) associée à une hausse de 1 point du taux de croissance du PIB réel au-dessus de $\bar g$. Il varie fortement selon les pays et les périodes : plus élevé aux États-Unis et au Royaume-Uni (marchés du travail flexibles), plus faible en France et surtout au Japon (ajustement de l'emploi plus rigide face aux variations de la production).
 :::
 
 ### La courbe de Phillips : de la relation initiale au NAIRU
@@ -1176,17 +1393,18 @@ La **courbe WS** est donc **décroissante** : plus le chômage est élevé, plus
 
 ### La fixation des prix (PS)
 
-Par simplification, le seul facteur de production est le travail, avec une productivité $\lambda = 1$. En concurrence imparfaite, les entreprises appliquent un **taux de marge** $m > 0$ sur leur coût marginal :
+Par simplification, le seul facteur de production est le travail, de productivité $\lambda$ (production par travailleur) : le coût marginal d'une unité produite est donc $W/\lambda$. En concurrence imparfaite, les entreprises appliquent un **taux de marge** $m > 0$ sur ce coût :
 $$
-P = (1+m)\,W \quad\Longrightarrow\quad PS : \quad \frac{W}{P} = \frac{1}{1+m}
+P = (1+m)\,\frac{W}{\lambda} \quad\Longrightarrow\quad PS : \quad \frac{W}{P} = \frac{\lambda}{1+m}
 $$
+Dans la suite, on normalise la productivité à $\lambda = 1$, d'où $PS : W/P = 1/(1+m)$.
 Le salaire réel compatible avec le taux de marge des entreprises ne dépend **pas** du taux de chômage : la **courbe PS est donc horizontale**. Sa position dépend de deux facteurs : le degré de concurrence sur les marchés (une baisse de la concurrence augmente $m$, donc abaisse la courbe PS) et la productivité du travail (une hausse de $\lambda$ relève la courbe PS).
 
 ### Le chômage d'équilibre
 
 Le taux de chômage d'équilibre $u^*$ est celui pour lequel le salaire réel négocié (WS) égalise le salaire réel compatible avec le taux de marge des entreprises (PS) :
 $$
-F(u^*, z) = \frac{1}{1+m}
+F(u^*, z) = \frac{\lambda}{1+m}
 $$
 
 ::: {.callout-note}
@@ -1343,12 +1561,23 @@ Les modèles d'appariement, développés par Peter Diamond, Dale Mortensen et Ch
 **Tension sur le marché du travail** $\theta = v/u$ (ratio emplois vacants sur chômeurs). Plus $\theta$ est élevé, plus le marché du travail est « tendu » (nombreux postes vacants pour peu de chômeurs), et plus la probabilité de pourvoir un poste vacant est faible pour une entreprise donnée, mais plus la probabilité de trouver un emploi est élevée pour un chômeur.
 :::
 
-L'équilibre du modèle résulte de la confrontation de deux relations, toutes deux fonctions de $\theta$ et du salaire réel $w/p$ :
+L'équilibre du modèle résulte de la confrontation de deux relations, toutes deux fonctions de $\theta$ et du salaire réel $w = W/P$ :
 
-- la **demande de travail des entreprises** (relation décroissante entre $\theta$ et $w/p$) : un salaire réel élevé réduit la demande de travail, donc le nombre de postes créés, donc $\theta$ ;
-- la **courbe des salaires** (relation croissante entre $\theta$ et $w/p$) : plus la probabilité de retrouver un emploi est élevée (marché tendu), plus le pouvoir de négociation des travailleurs (et donc le salaire exigé) est fort.
+- la **demande de travail des entreprises** (relation décroissante entre $\theta$ et $W/P$) : un salaire réel élevé réduit la rentabilité d'un poste, donc le nombre de postes créés, donc $\theta$ ;
+- la **courbe des salaires** (relation croissante entre $\theta$ et $W/P$) : plus la probabilité de retrouver un emploi est élevée (marché tendu), plus le pouvoir de négociation des travailleurs (et donc le salaire exigé) est fort.
 
-Les déterminants du chômage dans ce cadre incluent : l'efficacité du processus d'appariement, l'intensité de l'effort de recherche des chômeurs, le taux de destruction des emplois (séparation), le pouvoir de négociation des travailleurs, le niveau des revenus de remplacement (indemnisation chômage), la productivité du travail et le coût du capital.
+**Le rôle du salaire de réserve.** La théorie de la **recherche d'emploi** prolonge ici la notion de salaire de réserve $w_r$ vue au §2.1 : un chômeur n'accepte une offre que si le salaire proposé dépasse son salaire de réserve. Celui-ci dépend notamment de ses **revenus de remplacement** (indemnisation chômage, minima sociaux) : plus ils sont élevés, plus $w_r$ est élevé. Cela a deux effets : les chômeurs sont plus exigeants dans la négociation salariale (la **courbe des salaires se déplace vers le haut**), et ils peuvent prolonger leur recherche, ce qui réduit leur **intensité de recherche** mais peut améliorer la qualité de l'appariement obtenu.
+
+::: {.callout-note}
+## Application numérique (valeurs indicatives)
+Soit la demande de travail $W/P = 1{,}2 - 0{,}1\,\theta$ et la courbe des salaires $W/P = 0{,}3 + 0{,}2\,\theta$.
+
+À l'équilibre, $1{,}2 - 0{,}1\,\theta^* = 0{,}3 + 0{,}2\,\theta^*$, soit $0{,}3\,\theta^* = 0{,}9$ : $\theta^* = 3$ et $(W/P)^* = 1{,}2 - 0{,}3 = 0{,}9$.
+
+**Choc** : les revenus de remplacement augmentent, et les travailleurs exigent un salaire plus élevé de 0,15 pour toute tension $\theta$ : la courbe des salaires devient $W/P = 0{,}45 + 0{,}2\,\theta$ (déplacement **vers le haut**, la demande de travail ne bouge pas). Le nouvel équilibre vérifie $0{,}3\,\theta^* = 0{,}75$ : $\theta^* = 2{,}5$ et $(W/P)^* = 0{,}95$. Le salaire réel augmente, mais la tension baisse : moins de postes vacants par chômeur, donc, à efficacité d'appariement donnée, un **chômage plus élevé** (on se déplace vers le bas-droite de la courbe de Beveridge).
+:::
+
+Les déterminants du chômage dans ce cadre incluent : l'efficacité du processus d'appariement, l'intensité de l'effort de recherche des chômeurs, le taux de destruction des emplois (séparation), le pouvoir de négociation des travailleurs, le niveau des revenus de remplacement (via le salaire de réserve), la productivité du travail et le coût du capital.
 
 ::: {.callout-important}
 ## À retenir : deux leviers de politique de l'emploi issus des modèles d'appariement

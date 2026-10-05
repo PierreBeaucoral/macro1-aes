@@ -348,6 +348,8 @@ Il n'existe pas une, mais **deux** mesures officielles du chômage en France : c
 3. être **activement à la recherche** d'un emploi (avoir effectué des démarches spécifiques au cours des quatre dernières semaines).
 :::
 
+Un salarié **absent temporairement** (arrêt maladie, congés) qui garde son contrat est **en emploi** au sens du BIT.
+
 . . .
 
 ::: {.cle}
