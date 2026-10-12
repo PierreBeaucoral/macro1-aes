@@ -340,12 +340,12 @@ Trois indicateurs complémentaires, pas un seul : le taux de chômage rapporte l
 
 ## L'INSEE applique trois critères stricts du BIT
 
-Il n'existe pas une, mais **deux** mesures officielles du chômage en France : celle de l'**INSEE** (critères du BIT, enquête statistique) et celle de **France Travail** (décompte administratif des inscrits). Un chômeur, au sens du BIT, est une personne répondant **simultanément** à trois critères :
+Il n'existe pas une, mais **deux** mesures officielles du chômage en France : celle de l'**INSEE** (critères du BIT, enquête statistique) et celle de **France Travail** (décompte administratif des inscrits). Un chômeur, au sens du BIT, est une personne **âgée de 15 ans ou plus** répondant **simultanément** à trois critères :
 
 ::: {.incremental}
 1. être **sans emploi** au cours de la semaine de référence (n'avoir pas travaillé, ne serait-ce qu'une heure) ;
 2. être **disponible** pour travailler dans les deux semaines ;
-3. être **activement à la recherche** d'un emploi (avoir effectué des démarches spécifiques au cours des quatre dernières semaines).
+3. être **activement à la recherche** d'un emploi (démarches spécifiques au cours des quatre dernières semaines, ou avoir trouvé un emploi qui commence dans moins de trois mois).
 :::
 
 Un salarié **absent temporairement** (arrêt maladie, congés) qui garde son contrat est **en emploi** au sens du BIT.

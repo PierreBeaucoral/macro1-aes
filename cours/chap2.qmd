@@ -197,11 +197,11 @@ Les **inactifs** sont les personnes en âge de travailler qui ne sont ni en empl
 
 ::: {.callout-important}
 ## À retenir : deux définitions du chômage
-**INSEE (au sens du BIT)** : un chômeur est une personne répondant **simultanément** à trois critères :
+**INSEE (au sens du BIT)** : un chômeur est une personne **âgée de 15 ans ou plus** répondant **simultanément** à trois critères :
 
 1. être **sans emploi** au cours d'une semaine de référence (ne pas avoir travaillé, ne serait-ce qu'une heure ; un salarié temporairement absent qui conserve son contrat, en arrêt maladie ou en congés, est compté **en emploi**) ;
 2. être **disponible** pour travailler dans les deux semaines ;
-3. être **activement à la recherche** d'un emploi (démarches spécifiques au cours des quatre semaines précédentes, ou avoir trouvé un emploi qui commence dans moins de trois mois).
+3. être **activement à la recherche** d'un emploi (démarches spécifiques au cours des quatre dernières semaines, ou avoir trouvé un emploi qui commence dans moins de trois mois).
 
 **France Travail (ex-Pôle Emploi)** : comptabilise les personnes **inscrites**, avec ou sans activité, et découpe la population des demandeurs d'emploi en **cinq catégories (A à E)**, notamment pour tenir compte :
    - des personnes en activité réduite (catégorie B : 78 heures ou moins par mois ; catégorie C : plus de 78 heures) qui continuent à chercher un emploi ;
@@ -1226,7 +1226,26 @@ Le coefficient d'Okun mesure la baisse du taux de chômage (en points) associée
 
 **a) La version initiale (1958-1960).** A.W. Phillips (1958) met en évidence, pour le Royaume-Uni sur 1861-1957, une corrélation négative entre le taux de croissance des salaires nominaux et le taux de chômage [@phillips1958]. Samuelson et Solow (1960) retrouvent une relation similaire pour les États-Unis et l'étendent à la relation **inflation-chômage** : les entreprises répercutant les hausses de salaires sur leurs prix de vente, un chômage faible s'accompagne d'une inflation plus élevée, et réciproquement. Cette relation devient centrale dans la politique macroéconomique des années 1950-1960 : les gouvernements peuvent apparemment **choisir** un point sur l'arbitrage inflation-chômage.
 
+```{r}
+#| label: fig-phillips-arbitrage
+#| fig-cap: "La lecture keynésienne de la courbe de Phillips : la courbe est supposée stable et la politique économique choisit un point. Une relance fait passer l'économie de A (chômage 6 %, inflation 2 %) à B (chômage 4 %, inflation 4 %) ; une politique de rigueur fait le chemin inverse. Valeurs illustratives."
+#| fig-width: 6.5
+#| fig-height: 3.8
+source(here::here("R/fig_phillips.R"))
+fig_phillips_arbitrage()
+```
+
 **b) La critique monétariste : Friedman-Phelps et le NAIRU.** À partir des années 1970, la relation se brise : les chocs pétroliers provoquent une **stagflation** (inflation et chômage élevés simultanément), et les salaires s'indexent plus systématiquement sur l'inflation passée. Milton Friedman (1968) et Edmund Phelps réinterprètent la relation en insistant sur le rôle des **anticipations d'inflation** [@friedman1968] : l'arbitrage inflation-chômage n'existe qu'à **court terme**, tant que les salariés sous-estiment l'inflation réelle (anticipations adaptatives, fondées sur l'inflation passée).
+
+Le mécanisme se lit sur le marché du travail néoclassique (§2.1). Les salariés offrent leur travail en fonction du salaire réel qu'ils **anticipent**, $W/P^a$. Une politique monétaire expansive fait monter les prix plus que prévu ($P > P^a$) : les salariés surestiment leur salaire réel et offrent davantage de travail (1 : $L^s$ se déplace vers la droite). Au nouvel équilibre E1, le salaire réel effectif est plus bas et l'emploi plus élevé : le chômage passe sous son niveau naturel (2). Dès que les salariés corrigent leurs anticipations ($P^a = P$), l'offre revient à sa position initiale et l'économie retrouve E0 (3) : même emploi, mais des prix plus élevés.
+
+```{r}
+#| label: fig-friedman-travail
+#| fig-cap: "La critique de Friedman sur le marché du travail. L'offre de travail dépend du salaire réel anticipé W/Pᵃ. (1) Une hausse surprise des prix (P > Pᵃ) fait surestimer leur salaire réel aux salariés : l'offre se déplace de Ls à Ls'. (2) En E1, le salaire réel effectif baisse (w1 < w*) et l'emploi augmente (L1 > L*). (3) Les anticipations se corrigent : retour en E0. Valeurs illustratives : Ld : w = 10 − 0,5 L ; Ls : w = 2 + 0,5 L ; hausse surprise des prix de 25 %."
+#| fig-width: 6.5
+#| fig-height: 4.2
+fig_friedman_travail()
+```
 
 Cette réinterprétation débouche sur la notion de **NAIRU**, taux de chômage naturel compatible avec une inflation stable :
 
@@ -1275,7 +1294,25 @@ $$
 $$
 où $\pi$ est l'inflation observée, $\pi^a$ l'inflation anticipée, $u^n$ le taux de chômage naturel (NAIRU) et $a > 0$ un paramètre de sensibilité. À **court terme**, pour $\pi^a$ donné, la relation entre $u$ et $\pi$ reste décroissante (chaque droite bleue/rouge du graphique). À **long terme**, les anticipations s'ajustent ($\pi^a = \pi$) et la relation devient **verticale** au niveau $u^n$ : il n'existe alors plus d'arbitrage entre inflation et chômage, seul le niveau de production potentiel (quantité et qualité du travail, stock de capital, progrès technique) détermine le chômage de long terme.
 
+Le graphique suivant décompose ce mécanisme, avec $a = 1$ et $u^n = 7\,\%$. Partant de A (chômage au NAIRU, inflation nulle et anticipée), l'État vise $u = 5\,\%$. La relance surprend les agents : l'économie glisse le long de la courbe de court terme jusqu'en B (2 % d'inflation). Les anticipations rattrapent alors l'inflation observée ($\pi^a = 2\,\%$) et la courbe de court terme monte : si la relance s'arrête, le chômage revient en C, au NAIRU, mais avec 2 % d'inflation. Pour **maintenir** $u = 5\,\%$, il faut surprendre à nouveau à chaque période : B → D → F, l'inflation gagne 2 points par période. C'est la thèse **accélérationniste** : maintenir le chômage sous le NAIRU ne coûte pas un niveau d'inflation plus élevé, mais une inflation qui accélère sans fin.
+
+```{r}
+#| label: fig-phillips-acceleration
+#| fig-cap: "Maintenir le chômage sous le NAIRU fait accélérer l'inflation (anticipations adaptatives, a = 1, uⁿ = 7 %). A → B : la relance réduit le chômage à 5 % contre 2 % d'inflation. B → C : les anticipations s'ajustent ; si la relance s'arrête, le chômage revient à uⁿ avec une inflation plus forte. B → D → F : pour rester à 5 %, l'inflation doit gagner 2 points par période. Valeurs illustratives."
+#| fig-width: 7
+#| fig-height: 4
+fig_phillips_acceleration(3)
+```
+
 **c) Anticipations rationnelles : l'absence d'arbitrage même à court terme.** Une étape supplémentaire est franchie par la Nouvelle Macroéconomie Classique (Robert Lucas, Thomas Sargent, Neil Wallace), à partir du concept d'**anticipations rationnelles** introduit par John Muth (1961) : les agents utilisent *toute* l'information disponible pour former leurs anticipations, de sorte qu'en moyenne l'inflation anticipée est égale à l'inflation observée. Dans ce cas, une politique monétaire *anticipée* par les agents n'a **aucun effet réel**, même à court terme : le salaire réel n'est influencé que par des déterminants réels (productivité). Seule une politique monétaire **surprise** peut avoir un effet transitoire sur l'emploi.
+
+```{r}
+#| label: fig-phillips-rationnelles
+#| fig-cap: "Anticipations rationnelles : la banque centrale porte l'inflation de 2 % à 5 %. Annoncée et crédible, la hausse est intégrée immédiatement dans l'inflation anticipée : l'économie passe de A à C, le long de la verticale, sans gain d'emploi. Surprise, elle réduit le chômage un temps (A → B, le long de la courbe de court terme inchangée), jusqu'à la révision des anticipations (B → C). Valeurs illustratives (a = 1, uⁿ = 7 %)."
+#| fig-width: 7
+#| fig-height: 4
+fig_phillips_rationnelles()
+```
 
 Les données confirment ce schéma théorique : le nuage de Phillips effectivement observé aux États-Unis illustre concrètement la rupture prédite par Friedman et Phelps entre les années 1960, où la relation négative tient nettement, et les années 1970-1980, où elle se brise à mesure que l'inflation anticipée s'ajuste à la hausse.
 

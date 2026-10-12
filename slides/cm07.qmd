@@ -107,6 +107,25 @@ flowchart TD
 **Arbitrage inflation-chômage** : l'idée qu'une politique de relance (monétaire ou budgétaire) permettrait de réduire durablement le chômage au prix d'une inflation plus élevée, et réciproquement.
 :::
 
+## Graphiquement, la relance fait glisser l'économie le long d'une courbe stable
+
+```{r}
+#| label: phillips-arbitrage-cm07
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 3.6
+source(here::here("R/fig_phillips.R"))
+fig_phillips_arbitrage()
+```
+
+::: {.cle}
+Dans la lecture keynésienne, la courbe ne bouge pas : la politique économique **choisit un point**. Une relance mène de A à B (moins de chômage, plus d'inflation) ; une politique de rigueur ramène de B à A.
+:::
+
+::: {.source}
+Valeurs illustratives.
+:::
+
 # 2. La critique de Friedman-Phelps : anticipations et NAIRU {background-color="#1f4e79"}
 
 ## Friedman et Phelps inversent le sens de la causalité
@@ -149,6 +168,68 @@ flowchart LR
     E --> F[Salaries percoivent la baisse de leur pouvoir d achat]
     F --> G[Salaire reel et chomage reviennent a leur niveau anterieur]
 ```
+
+## Sur le marché du travail : une illusion monétaire qui ne dure pas {.smaller}
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.r-stack}
+```{r}
+#| label: friedman-travail-cm07-0
+#| fig-width: 6.2
+#| fig-height: 4.2
+source(here::here("R/fig_phillips.R"))
+fig_friedman_travail(0)
+```
+
+::: {.fragment fragment-index=1}
+```{r}
+#| label: friedman-travail-cm07-1
+#| fig-width: 6.2
+#| fig-height: 4.2
+fig_friedman_travail(1)
+```
+:::
+
+::: {.fragment fragment-index=2}
+```{r}
+#| label: friedman-travail-cm07-2
+#| fig-width: 6.2
+#| fig-height: 4.2
+fig_friedman_travail(2)
+```
+:::
+
+::: {.fragment fragment-index=3}
+```{r}
+#| label: friedman-travail-cm07-3
+#| fig-width: 6.2
+#| fig-height: 4.2
+fig_friedman_travail(3)
+```
+:::
+:::
+:::
+::: {.column width="40%"}
+Les salariés offrent leur travail selon le salaire réel qu'ils **anticipent**, $W/P^a$.
+
+::: {.fragment fragment-index=1}
+- **1.** Hausse surprise des prix ($P > P^a$) : les salariés surestiment leur salaire réel et offrent davantage de travail ($L^s \to L^{s\prime}$).
+:::
+
+::: {.fragment fragment-index=2}
+- **2.** En E1, le salaire réel effectif baisse ($w_1 < w^*$), l'emploi monte ($L_1 > L^*$) : $u < u^n$.
+:::
+
+::: {.fragment fragment-index=3}
+- **3.** Les anticipations se corrigent ($P^a = P$) : retour en E0, au même emploi, mais à des prix plus élevés.
+:::
+:::
+:::
+
+::: {.source}
+Valeurs illustratives : $L^d : w = 10 - 0{,}5\,L$ ; $L^s : w = 2 + 0{,}5\,L$ ; hausse surprise des prix de 25 %.
+:::
 
 ## Le NAIRU : le taux de chômage compatible avec une inflation stable
 
@@ -224,6 +305,42 @@ où $\pi$ est l'inflation observée, $\pi^a$ l'inflation anticipée, $u^n$ le ta
 - **Court terme** : $\pi^a$ est donné $\Rightarrow$ chaque droite (bleue ou rouge sur le graphique) reste **décroissante**.
 - **Long terme** : les anticipations s'ajustent ($\pi^a = \pi$) $\Rightarrow$ la relation devient **verticale** au niveau $u^n$.
 :::
+:::
+
+## Vouloir maintenir $u < u^n$ fait accélérer l'inflation {.smaller}
+
+L'État vise $u = 5\,\%$, sous le NAIRU $u^n = 7\,\%$ ; les anticipations sont adaptatives ($\pi^a$ = inflation de la période précédente). Cliquez pour dérouler.
+
+::: {.r-stack}
+::: {.fragment}
+```{r}
+#| label: phillips-accel-1
+#| fig-width: 7
+#| fig-height: 4.1
+source(here::here("R/fig_phillips.R"))
+fig_phillips_acceleration(1)
+```
+:::
+::: {.fragment}
+```{r}
+#| label: phillips-accel-2
+#| fig-width: 7
+#| fig-height: 4.1
+fig_phillips_acceleration(2)
+```
+:::
+::: {.fragment}
+```{r}
+#| label: phillips-accel-3
+#| fig-width: 7
+#| fig-height: 4.1
+fig_phillips_acceleration(3)
+```
+:::
+:::
+
+::: {.source}
+**A → B** : la relance surprend, le chômage baisse à 5 % contre 2 % d'inflation. **B → C** : les anticipations rattrapent l'inflation (2 %) ; si la relance s'arrête, le chômage revient à 7 %, avec une inflation durablement plus forte. **B → D → F** : pour rester à 5 %, il faut surprendre à chaque période, donc +2 points d'inflation par période. Valeurs illustratives ($a = 1$).
 :::
 
 # 3. Les années 1970 : la disparition de la courbe {background-color="#1f4e79"}
@@ -405,7 +522,7 @@ Les deux lectures convergent sur un point : la courbe de Phillips de court terme
 
 ::: {.incremental}
 - Si un gouvernement tente de maintenir indéfiniment $u < u^n$ en tolérant plus d'inflation, les agents ajustent leurs anticipations : la courbe de Phillips de court terme se déplace **vers le haut** (à chômage donné, l'inflation est plus forte).
-- Le chômage revient alors à $u^n$, mais à un niveau d'inflation **plus élevé**.
+- Le chômage revient alors à $u^n$, mais à un niveau d'inflation **plus élevé** ; vouloir rester sous $u^n$ fait **accélérer** l'inflation (B → D → F sur le graphique de la section 2).
 - À long terme, seul le niveau de production potentielle (quantité et qualité du travail, stock de capital, progrès technique) détermine le chômage, pas l'inflation.
 :::
 
@@ -450,6 +567,21 @@ Effet transitoire possible sur l'emploi, tant que les agents n'ont pas encore r�
 
 ::: {.cle}
 Avec les anticipations rationnelles, l'arbitrage keynésien initial disparaît complètement : même à court terme, une politique monétaire annoncée et crédible ne change pas l'emploi.
+:::
+
+## Graphiquement : anticipée, la politique monte le long de la verticale ; surprise, elle fait un détour
+
+```{r}
+#| label: phillips-rationnelles-cm07
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 3.3
+source(here::here("R/fig_phillips.R"))
+fig_phillips_rationnelles()
+```
+
+::: {.cle}
+La banque centrale porte l'inflation de 2 % à 5 %. **Annoncée et crédible**, la hausse est intégrée aussitôt dans $\pi^a$ : A → C, sans gain d'emploi. **Surprise**, elle fait baisser le chômage un temps (A → B), jusqu'à la révision des anticipations (B → C).
 :::
 
 ## Depuis les années 1990, la relation inflation-chômage diverge selon les pays

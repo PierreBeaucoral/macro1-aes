@@ -65,7 +65,7 @@ L'évaluation combine contrôle continu et examen final, complétés par un ajus
 
 | Composante | Poids | Modalités |
 |---|---|---|
-| **Contrôle continu (TD)** | 50 % | Deux devoirs sur table notés, en **séance 4** (CC1) et en **séance 8** (CC2). La correction du CC1 est faite en **séance 6**. |
+| **Contrôle continu (TD)** | 50 % | Deux devoirs sur table notés, en **séance 4** (CC1) et en **séance 8** (CC2). Le corrigé du CC1 est mis en ligne après l'épreuve. |
 | **Examen final** | 50 % | Épreuve de **2 heures**, combinant **QCM** et **question(s) de réflexion**. |
 | **Bonus-malus** | / | Ajustement de la moyenne générale selon l'**assiduité** et la **participation**, en CM comme en TD. |
 
