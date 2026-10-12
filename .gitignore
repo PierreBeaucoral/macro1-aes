@@ -29,7 +29,11 @@ td/*_files*
 # --- Corrigés (clés de réponses) : exclus pour ne PAS exposer les réponses
 # sur un dépôt public. Ils restent en local. Pour les versionner (dépôt privé
 # uniquement), supprimer la ligne ci-dessous. ---
-/td/corrections/
+/td/corrections/*
+# Corrigés publiés (séances passées) : décommenter les suivants au fil du semestre.
+!/td/corrections/td1-corrige.qmd
+!/td/corrections/td2-corrige.qmd
+!/td/corrections/td3-corrige.qmd
 
 # --- Banques de questions Wooclap : contiennent la colonne des bonnes
 # réponses. Exclues pour les mêmes raisons que td/corrections/. ---

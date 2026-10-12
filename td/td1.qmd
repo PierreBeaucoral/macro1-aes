@@ -4,6 +4,13 @@ subtitle: "Objectifs, instruments, règle de Tinbergen, carré de Kaldor et fonc
 description: "Dossier de TD n°1 : QCM de définitions, lecture d'un article de presse, exercice analytique sur la règle de Tinbergen et le carré magique de Kaldor (graphique R), question de réflexion sur les fonctions de la politique économique."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 1](corrections/td1-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 Objectifs de la séance
 

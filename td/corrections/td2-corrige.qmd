@@ -1,0 +1,154 @@
+---
+title: "Corrigé TD 2 : Définitions & mesures du marché du travail"
+subtitle: "Réponses rédigées, barème indicatif et pièges fréquents"
+description: "Corrigé complet du dossier de TD 2 : QCM, lecture de données, exercice analytique et question de réflexion, avec barème indicatif."
+---
+
+::: {.callout-important}
+## Usage de ce corrigé
+Ce document reprend chaque question du [dossier de TD 2](../td2.qmd) avec une réponse rédigée complète. Le barème est **indicatif** (le TD 2 n'est pas une séance notée : voir CC1 en séance 4 et CC2 en séance 8) ; il donne un ordre de grandeur du poids relatif de chaque question pour vous permettre de vous auto-évaluer.
+:::
+
+## Exercice 1 (QCM) : définitions et mesures *(barème indicatif : 8 points, soit 1 point par question)*
+
+**Question 1. Réponse : c)** La population active au sens du BIT est la somme des personnes en emploi et des chômeurs au sens du BIT : $\text{Population active} = \text{Employés} + \text{Chômeurs}$. Elle exclut les inactifs (étudiants, retraités, personnes au foyer, etc.).
+
+**Question 2. Réponse : b)** Le taux d'emploi rapporte le nombre de personnes en emploi à la population en âge de travailler : $\text{Taux d'emploi} = \dfrac{\text{Employés}}{\text{Population en âge de travailler}}$. Ne pas confondre avec le taux d'activité (numérateur = actifs, donc emploi *et* chômage) ni avec le taux de chômage (dénominateur = population active, pas population en âge de travailler).
+
+**Question 3. Réponse : b)** Un chômeur au sens du BIT est une personne âgée de 15 ans ou plus qui remplit **simultanément** trois critères : (i) être sans emploi durant une semaine donnée (semaine de référence), (ii) être disponible pour travailler sous deux semaines, (iii) être activement à la recherche d'un emploi (démarches au cours des quatre dernières semaines, ou avoir trouvé un emploi qui commence dans moins de trois mois). L'inscription à France Travail n'est pas un critère du BIT.
+
+**Question 4. Réponse : b)** Le chiffre France Travail est un comptage **administratif** (personnes inscrites, réparties en catégories A à E selon leur activité réduite ou non), tandis que le chiffre INSEE/BIT provient d'une **enquête Emploi** standardisée au niveau international, appliquant strictement les trois critères de la question 3. Les deux populations ne coïncident pas : certains inscrits à France Travail ne sont pas chômeurs au sens du BIT (ex. catégorie B/C, en activité réduite), et inversement certains chômeurs BIT ne sont pas inscrits.
+
+**Question 5. Réponse : b) 36 %.** L'énoncé précise que les deux taux sont rapportés à la **même base** : la population en âge de travailler. Prenons 100 personnes en âge de travailler : 58 sont en emploi, 6 au chômage, et toutes les autres sont inactives. Taux d'inactivité $= 100\% - 58\% - 6\% = 36\%$.
+
+::: {.callout-warning}
+## Piège fréquent : vérifier le dénominateur de chaque taux
+Dans cet énoncé, le « 6 % » n'est pas un taux de chômage au sens habituel. Il rapporte les chômeurs à la population **en âge de travailler** : c'est la *part* des chômeurs dans cette population.
+
+Le vrai taux de chômage, lui, rapporte les chômeurs à la population **active** (emploi + chômage), un groupe plus petit (cf. §1.3 du Chapitre II). Si l'énoncé avait donné ce taux-là, on n'aurait pas pu soustraire directement. Voici le calcul correct, étape par étape.
+
+**Notations.** $N$ = population en âge de travailler, $E$ = personnes en emploi, $C$ = chômeurs, $A = E + C$ = population active.
+
+- Taux d'emploi : $e = \dfrac{E}{N} = 58\,\%$
+- Taux de chômage (vrai) : $u = \dfrac{C}{A} = 6\,\%$
+- Taux d'activité, à trouver : $a = \dfrac{A}{N}$
+
+**Étape 1 : quelle part des actifs a un emploi ?** Les actifs sont soit en emploi, soit au chômage. Si 6 % des actifs sont au chômage, les autres sont en emploi :
+$$\frac{E}{A} = 1 - u = 1 - 0{,}06 = 0{,}94$$
+Autrement dit, $E = 0{,}94 \times A$.
+
+**Étape 2 : relier le taux d'emploi au taux d'activité.** On remplace $E$ par $0{,}94 \times A$ dans le taux d'emploi :
+$$e = \frac{E}{N} = \frac{0{,}94 \times A}{N} = 0{,}94 \times \frac{A}{N} = 0{,}94 \times a$$
+
+**Étape 3 : calculer le taux d'activité.** On sait que $e = 0{,}58$, donc :
+$$0{,}58 = 0{,}94 \times a \quad\Rightarrow\quad a = \frac{0{,}58}{0{,}94} \approx 0{,}617 = 61{,}7\,\%$$
+
+**Étape 4 : en déduire le taux d'inactivité.** Toute personne en âge de travailler est soit active, soit inactive :
+$$\text{Taux d'inactivité} = 1 - a = 1 - 0{,}617 = 0{,}383 = 38{,}3\,\%$$
+
+**Vérification avec 100 personnes.** $N = 100$, donc $A \approx 61{,}7$ actifs, dont $E = 58$ en emploi et $C \approx 3{,}7$ chômeurs. On retrouve bien $C/A = 3{,}7/61{,}7 \approx 6\,\%$ et $E/N = 58/100 = 58\,\%$. Les inactifs sont $100 - 61{,}7 = 38{,}3$.
+
+**Pourquoi la soustraction directe donne 36 % ?** Parce qu'elle revient à compter 6 chômeurs pour 100 personnes en âge de travailler, alors qu'avec le vrai taux il n'y en a que 3,7 (6 % de 61,7 actifs, et non 6 % de 100 personnes).
+
+**Règle à retenir** : on ne peut additionner ou soustraire des pourcentages que s'ils ont le **même dénominateur**.
+:::
+
+**Question 6. Réponse : c)** Le halo du chômage regroupe les personnes qui souhaitent travailler et n'ont pas d'emploi, mais qui ne remplissent pas *l'un* des trois critères BIT (ici, la disponibilité sous deux semaines) : elles sont donc classées inactives dans les statistiques officielles, alors que leur situation est proche du chômage.
+
+**Question 7. Réponse : b)** Une baisse du taux de chômage peut provenir d'un **effet de découragement** : des chômeurs cessent de chercher activement un emploi (par exemple faute de perspectives) et basculent en inactivité. Le numérateur (chômeurs) baisse, mais **sans aucune création d'emploi** : c'est une dégradation masquée du marché du travail. À la limite, si tous les chômeurs se décourageaient, le taux de chômage tomberait à zéro.
+
+**Question 8. Réponse : b)** Une personne en sous-emploi (temps partiel subi) est **en emploi** (elle travaille, même si c'est moins d'heures qu'elle ne le souhaiterait), donc comptée en emploi, ni au chômage ni dans le halo (le halo ne rassemble que des **inactifs** proches du marché du travail, cf. Question 6). Dans la nomenclature de l'INSEE, halo autour du chômage et sous-emploi sont deux composantes **distinctes** de la sous-utilisation de la main-d'œuvre : le halo regroupe des personnes inactives souhaitant travailler, le sous-emploi des personnes en emploi qui travaillent moins qu'elles ne le voudraient. Cette personne relève donc du **sous-emploi**, une forme de sous-utilisation de la force de travail à part entière, non du halo.
+
+## Exercice 2 : Lecture de données *(barème indicatif : 6 points)*
+
+**Question 1** *(1 point).* La population active s'obtient en divisant le nombre de chômeurs par le taux de chômage :
+$$
+\text{Population active} = \frac{\text{Chômeurs}}{\text{Taux de chômage}} = \frac{2{,}2 \text{ millions}}{0{,}072} \approx 30{,}6 \text{ millions}
+$$
+Cet ordre de grandeur est cohérent avec la population active française réelle (environ 30 millions de personnes au début des années 2020).
+
+**Question 2** *(1,5 point).* De même :
+$$
+\text{Population 15-64 ans} = \frac{\text{Halo}}{\text{Part du halo}} = \frac{1{,}9 \text{ million}}{0{,}047} \approx 40{,}4 \text{ millions}
+$$
+L'écart entre la population des 15-64 ans (≈ 40,4 millions) et la population active (≈ 30,6 millions) représente la population **inactive** : environ 9,8 millions de personnes. Le halo (1,9 million) n'est qu'une **partie** de ces inactifs : celle qui déclare vouloir travailler sans remplir tous les critères BIT. Le reste des inactifs (environ 7,9 millions) regroupe les personnes ne souhaitant pas travailler : étudiants, retraités, personnes au foyer par choix, etc.
+
+**Question 3** *(1,5 point).* Les chômeurs BIT remplissent **simultanément** les trois critères (sans emploi, disponible, recherche active), tandis que les personnes du halo n'en remplissent qu'une partie : typiquement, elles souhaitent travailler mais ne sont pas immédiatement disponibles, ou ne recherchent pas activement (découragement, contraintes familiales). Dans les statistiques, les chômeurs BIT sont classés **actifs**, les personnes du halo sont classées **inactives**. L'article les mentionne côte à côte car les deux populations, mises bout à bout (2,2 + 1,9 = 4,1 millions), donnent une image plus complète de la « réserve de main-d'œuvre disponible » que le seul taux de chômage officiel.
+
+**Question 4** *(1,5 point).* On raisonne étape par étape.
+
+**Notations.** $E$ = personnes en emploi, $C$ = chômeurs, $A = E + C$ = population active. Le taux de chômage est :
+$$u = \frac{C}{A}$$
+
+**Étape 1 : traduire « toutes choses égales par ailleurs ».** Ici, cela signifie que le nombre d'emplois $E$ ne bouge pas : aucun emploi n'est détruit, mais aucun n'est créé.
+
+**Étape 2 : où vont les nouveaux actifs ?** Si la population active augmente alors que $E$ est fixe, les nouveaux actifs ne trouvent pas de poste : ils sont **chômeurs**. Un nouvel actif ajoute donc 1 au nombre de chômeurs **et** 1 à la population active :
+$$u_{\text{avant}} = \frac{C}{A} \qquad\longrightarrow\qquad u_{\text{après}} = \frac{C+1}{A+1}$$
+
+**Étape 3 : application numérique.** Prenons $A = 100$ actifs, dont $E = 90$ en emploi et $C = 10$ chômeurs :
+$$u_{\text{avant}} = \frac{10}{100} = 10\,\% \qquad\longrightarrow\qquad u_{\text{après}} = \frac{10+1}{100+1} = \frac{11}{101} \approx 10{,}9\,\%$$
+Le taux de chômage **monte**, sans aucune destruction d'emploi.
+
+**Étape 4 : est-ce toujours vrai ?** Oui. Le nouvel actif est chômeur à 100 %, alors que les actifs déjà présents ne sont chômeurs qu'à 10 %. Ajouter au groupe une personne « plus au chômage » que la moyenne fait forcément monter la moyenne. C'est vrai tant que le taux de chômage est inférieur à 100 %, c'est-à-dire toujours.
+
+::: {.callout-warning}
+## Nuance : la réforme des retraites ne relève pas de ce cas
+Le raisonnement ci-dessus suppose que tous les nouveaux actifs sont au chômage. Or la réforme des retraites maintient surtout sur le marché du travail des seniors **qui ont un emploi** et le gardent plus longtemps au lieu de partir à la retraite. Refaisons le calcul pour eux.
+
+**Étape 1 : où va le senior ?** Il reste en emploi : il ajoute 1 à $E$ et 1 à la population active $A$, mais **rien** au nombre de chômeurs $C$ :
+$$u_{\text{avant}} = \frac{C}{A} \qquad\longrightarrow\qquad u_{\text{après}} = \frac{C}{A+1}$$
+
+**Étape 2 : application numérique.** Avec le même exemple ($C = 10$, $A = 100$) :
+$$u_{\text{après}} = \frac{10}{100+1} = \frac{10}{101} \approx 9{,}9\,\%$$
+Le taux de chômage **baisse** : le numérateur ne change pas, le dénominateur augmente.
+
+**Étape 3 : l'effet d'ensemble.** Les seniors déjà sans emploi à l'approche de la retraite, qui doivent désormais attendre plus longtemps avant de partir, restent chômeurs au lieu de devenir retraités : eux relèvent du cas $\frac{C+1}{A+1}$ et font monter le taux. L'effet final dépend donc de la **composition** des actifs supplémentaires : le taux de chômage augmente si la part de chômeurs parmi ces nouveaux actifs **dépasse** le taux de chômage initial (ici 10 %), et baisse dans le cas contraire. Ce qui compte n'est pas le taux de chômage moyen des seniors, mais la situation des personnes que la réforme maintient sur le marché du travail, parmi lesquelles les seniors sans emploi sont surreprésentés.
+
+**Conclusion.** La hausse du **nombre** de chômeurs est probable ; l'effet sur le **taux** est ambigu et dépend de la part de chômeurs parmi les actifs supplémentaires (cf. Exercice 3, question 5).
+:::
+
+**Question 5** *(0,5 point).* Deux indicateurs cités : (i) le ralentissement des créations d'emplois salariés dans le secteur privé (+0,1 % au 2ᵉ trimestre 2023, contre +0,4 % au trimestre précédent), présenté comme un « indice de mauvais augure », et (ii) la baisse de l'intérim (−0,8 %). L'article qualifie explicitement l'intérim d'« indicateur avancé des évolutions à venir du marché du travail » : les entreprises ajustent leurs effectifs temporaires **avant** de prendre des décisions plus lourdes (embauches en CDI, licenciements), si bien que ces séries réagissent en amont du cycle conjoncturel, avant que le taux de chômage lui-même ne bouge.
+
+## Exercice 3 : Exercice analytique *(barème indicatif : 4 points)*
+
+**Question 1** *(1 point).*
+
+| Indicateur | Année $T-10$ | Année $T$ |
+|---|---:|---:|
+| Taux d'activité | $28{,}4/40{,}0 = 71{,}0\%$ | $30{,}0/40{,}0 = 75{,}0\%$ |
+| Taux d'emploi | $25{,}8/40{,}0 = 64{,}5\%$ | $27{,}9/40{,}0 = 69{,}8\%$ |
+| Taux de chômage | $2{,}6/28{,}4 \approx 9{,}2\%$ | $2{,}1/30{,}0 = 7{,}0\%$ |
+
+**Question 2** *(0,75 point).* Il s'agit clairement de « bonnes » raisons. Un effet de découragement se traduirait par une **baisse** de la population active et du taux d'activité ; or ici, le taux d'activité **augmente** (71,0 % → 75,0 %) en même temps que le taux d'emploi augmente (64,5 % → 69,8 %) et que le nombre de chômeurs **diminue en valeur absolue** (2,6 → 2,1 millions). La baisse du taux de chômage s'explique donc par des créations d'emplois qui absorbent à la fois les chômeurs existants et les nouveaux entrants sur le marché du travail : un scénario de reprise, pas de découragement.
+
+**Question 3** *(0,75 point).* Inactifs $= \text{PopAge} - \text{PopActive}$ : $11{,}6$ millions en $T-10$ (taux d'inactivité $= 29{,}0\%$) contre $10{,}0$ millions en $T$ (taux d'inactivité $= 25{,}0\%$), cohérent avec $100\% - \text{taux d'activité}$. La baisse du taux d'inactivité peut s'expliquer par plusieurs déterminants vus en cours : hausse du taux d'activité féminine, recul de l'âge légal de départ à la retraite (réformes successives), ou encore essor de l'apprentissage et du cumul emploi-études (un apprenti est compté en emploi, un étudiant sans emploi est inactif). Toute explication cohérente avec un déterminant du cours est acceptée.
+
+**Question 4** *(1 point).* Pour $T-10$ : la hauteur du segment « Emploi » (25,8 sur un total de 40) représente $64{,}5\%$ de la barre, ce qui correspond bien au taux d'emploi calculé en Q1. La hauteur cumulée « Emploi + Chômage » (28,4/40 = 71,0 %) correspond au taux d'**activité**, pas au taux de chômage.
+
+::: {.callout-warning}
+## Piège fréquent : le segment « Chômage » du graphique n'est pas le taux de chômage
+Sur le graphique, la hauteur du seul segment rouge (« Chômage ») rapportée à la **hauteur totale de la barre** donne $2{,}6/40{,}0 = 6{,}5\%$ en $T-10$ et $2{,}1/40{,}0 = 5{,}25\%$ en $T$. Ces pourcentages **ne sont pas** les taux de chômage calculés en Q1 (9,2 % et 7,0 %), parce que la barre entière représente la population en âge de travailler (40 millions), alors que le taux de chômage se calcule par rapport à la population **active** (28,4 puis 30,0 millions), un sous-ensemble plus petit. C'est le piège signalé à l'Exercice 1, question 5 : toujours vérifier le dénominateur avant de lire un pourcentage sur un graphique empilé.
+:::
+
+**Question 5** *(0,5 point).* Si la personne quitte l'inactivité pour rejoindre directement l'**emploi** : PopActive et Emploi augmentent tous deux de 1, Chômeurs ne change pas $\Rightarrow$ le taux de chômage $C/A$ **baisse** (dénominateur plus grand, numérateur inchangé). Si au contraire elle quitte l'inactivité pour rejoindre le **chômage** (elle cherche activement un emploi sans en trouver) : PopActive et Chômeurs augmentent tous deux de 1 $\Rightarrow$ le taux de chômage **augmente** (cf. la démonstration de l'Exercice 2, question 4). Illustration avec les chiffres du graphique en $T-10$ ($u = 2{,}6/28{,}4 \approx 9{,}15\,\%$), pour 100 000 personnes qui sortent de l'inactivité : si elles rejoignent l'emploi, $u = 2{,}6/28{,}5 \approx 9{,}12\,\%$ (baisse) ; si elles rejoignent le chômage, $u = 2{,}7/28{,}5 \approx 9{,}47\,\%$ (hausse). Sur le graphique, les deux mouvements réduisent de la même façon le segment gris (inactivité), mais l'un allonge le segment bleu (emploi), l'autre le segment rouge (chômage). Un même mouvement de sortie de l'inactivité peut donc avoir des effets opposés sur le taux de chômage, selon qu'il débouche ou non sur un emploi immédiat.
+
+## Exercice 4 : Question de réflexion *(barème indicatif : 2 points)*
+
+**Élément de correction.**
+
+Le taux de chômage est un **rapport** (chômeurs sur population active) et non un stock. Il peut donc baisser pour deux types de raisons radicalement différentes : une baisse du numérateur à dénominateur stable ou croissant (créations d'emplois, ce qui est une bonne nouvelle), ou une baisse simultanée du numérateur et du dénominateur (des chômeurs sortent de la population active, ce qui est une mauvaise nouvelle si cela traduit un découragement).
+
+**Scénario concret attendu.** Reprenons les ordres de grandeur de l'Exercice 3 à la date $T-10$ (population active $28{,}4$ millions, emploi $25{,}8$ millions, chômeurs $2{,}6$ millions, $u = 9{,}2\%$). Supposons qu'aucun emploi ne soit créé (l'emploi reste fixé à $25{,}8$ millions) mais que $1{,}0$ million de chômeurs de longue durée, faute de perspectives, cessent de chercher activement un emploi et basculent en inactivité (ils rejoignent le halo, voire l'inactivité pure). Il reste alors $2{,}6 - 1{,}0 = 1{,}6$ million de chômeurs, et la population active tombe à $25{,}8 + 1{,}6 = 27{,}4$ millions. Le taux de chômage devient :
+$$
+u = \frac{1{,}6}{27{,}4} \approx 5{,}8\%
+$$
+soit une baisse spectaculaire par rapport aux $9{,}2\%$ de $T-10$, alors même qu'**aucun emploi n'a été créé** et que $1$ million de personnes ont purement et simplement disparu des statistiques d'actifs. Un cas encore plus net : si la totalité des 2,6 millions de chômeurs de $T-10$ se décourageait, le taux de chômage tomberait mécaniquement à 0 %, ce qui serait absurde à interpréter comme une amélioration du marché du travail. Le chômage de longue durée est le terreau privilégié de ce phénomène : plus la recherche d'emploi s'éternise, plus le risque de découragement (et donc de bascule vers le halo puis l'inactivité pure) est élevé.
+
+**Conclusion attendue.** Un·e économiste sérieux·se ne se prononce jamais sur le seul taux de chômage : il faut le croiser avec le **taux d'activité** (a-t-il baissé en même temps ?), le **taux d'emploi** (a-t-il progressé, ou est-il resté stable malgré la baisse du chômage : signe alors d'un simple effet de composition ?), le **halo du chômage** (combien de personnes supplémentaires sont à la marge de l'activité ?) et la part du **chômage de longue durée** (le stock de chômeurs se renouvelle-t-il, ou stagne-t-il sur les mêmes individus, avec un risque d'hystérèse au sens du Chapitre II, §1.5 ?). C'est cette lecture croisée, plutôt que la lecture isolée d'un seul indicateur, qui permet de distinguer une amélioration réelle du marché du travail d'une amélioration purement statistique.
+
+::: {.callout-warning}
+## Pièges fréquents à l'Exercice 4
+- Se contenter de rappeler la définition du taux de chômage sans proposer de **scénario chiffré** : la question demande explicitement un exemple concret, pas seulement une définition.
+- Confondre « le taux de chômage peut mentir » avec « le taux de chômage est un mauvais indicateur » : il reste un indicateur utile, à condition de le compléter par d'autres mesures (nuance attendue dans la conclusion).
+- Oublier de mobiliser le chômage de longue durée, qui est le lien le plus direct entre cette question et le mécanisme de découragement.
+:::

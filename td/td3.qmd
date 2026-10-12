@@ -4,6 +4,13 @@ subtitle: "Le dualisme CDI/CDD, la rotation de la main-d'œuvre et la théorie i
 description: "Dossier de travaux dirigés : typologie du chômage, dualisation du marché du travail français, calcul du taux de rotation et anticipation du modèle WS-PS."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 3](corrections/td3-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 **Objectifs de la séance**
 

@@ -1,0 +1,155 @@
+---
+title: "Corrigé TD 3 : Typologies & segmentation"
+subtitle: "Le dualisme CDI/CDD, la rotation de la main-d'œuvre et la théorie insiders-outsiders"
+description: "Corrigé rédigé du dossier de TD 3 : réponses argumentées, barème indicatif et pièges fréquents."
+---
+
+::: {.callout-important}
+## Usage de ce corrigé
+Ce document reprend chaque question du [dossier de TD 3](../td3.qmd) avec une réponse rédigée complète. Le barème est **indicatif**, sur 20 points (le TD 3 n'est pas une séance notée : voir CC1 en séance 4 et CC2 en séance 8) ; il donne un ordre de grandeur du poids relatif de chaque question pour vous permettre de vous auto-évaluer.
+:::
+
+## Exercice 1 : Définitions et QCM *(barème : /4)*
+
+### 1.1 Association terme-définition *(1 point, soit 0,2 par item)*
+
+| Terme | Définition |
+|---|---|
+| (1) Segmentation primaire | **C** : emplois stables, qualifiés, bonnes perspectives de carrière et formation interne |
+| (2) Segmentation secondaire | **D** : emplois précaires, peu qualifiés, forte rotation, faible perspective de carrière |
+| (3) Dualisation du marché du travail | **E** : écart croissant entre salariés en CDI et salariés multipliant les contrats courts |
+| (4) Taux de rotation de la main-d'œuvre | **B** : moyenne du taux d'entrée et du taux de sortie, rapportés à l'effectif moyen |
+| (5) Insiders | **A** : salariés en poste qui utilisent leur position pour préserver salaire et emploi |
+
+::: {.callout-warning}
+## Piège fréquent
+Ne confondez pas **segmentation** (la structure en deux compartiments, primaire/secondaire, à un instant donné) et **dualisation** (la dynamique : l'écart entre les deux compartiments qui se creuse dans le temps). La segmentation peut exister sans dualisation croissante ; c'est l'évolution du taux de rotation et de la durée des CDD depuis les années 1990 qui signale ici une dualisation, pas seulement une segmentation.
+:::
+
+### 1.2 QCM *(3 points, soit 0,5 par question)*
+
+**Question 1 : réponses a, c.**
+Le chômage structurel tient à des rigidités et inadéquations durables (a) et appelle des réformes structurelles plutôt qu'une relance de la demande (c). Les options (b) et (d) décrivent au contraire le chômage *conjoncturel*, qui se résorbe avec la reprise de l'activité : c'est précisément la distinction structurel/conjoncturel vue en cours (chapitre II, §1.4).
+
+**Question 2 : réponses a, c.**
+Le chômage classique résulte d'un salaire réel maintenu au-dessus du salaire d'équilibre (a) par des institutions que la collectivité s'est données (SMIC, conventions collectives), si bien qu'un ajustement libre du salaire à la baisse le résorberait (c) : d'où le qualificatif « volontaire », au sens **collectif** (chapitre II, §1.4 et §2.1). Au sens individuel, en revanche, les personnes exclues de l'emploi ne sont pas volontaires : elles seraient prêtes à travailler au salaire minimum en vigueur, mais les entreprises n'embauchent pas à ce prix. L'option (b) décrit le chômage *keynésien* (insuffisance de demande effective), et l'option (d) évoque plutôt les fondements du modèle WS-PS (salaire d'efficience), non du chômage classique.
+
+**Question 3 : réponses a, d.**
+Le chômage frictionnel correspond au délai de transition normal entre deux emplois (a), et subsiste même à l'équilibre du marché du travail lorsque le nombre d'emplois vacants avoisine le nombre de chercheurs d'emploi (d) : c'est un frottement d'appariement, pas un déséquilibre. Les options (b) et (c) sont fausses : la flexibilité ne l'élimine pas totalement (les délais de recherche et de recrutement demeurent), et il est bien lié aux transitions ordinaires de carrière.
+
+**Question 4 : réponses a, c.**
+Le segment primaire regroupe des emplois stables et qualifiés (a), avec une moindre exposition au risque de chômage frictionnel répété (c), car les transitions y sont plus rares. L'option (b) décrit le segment *secondaire*. L'option (d) est fausse : depuis les années 1990, l'essentiel des *embauches* se fait au contraire en CDD (76 % à 87 % des embauches entre 1993 et 2017, cf. tableau de l'exercice 2 du dossier de TD) : la dynamique des créations de contrats est tirée par le segment secondaire, pas par le primaire.
+
+**Question 5 : réponses a, c.**
+Le taux de rotation se définit bien comme la moyenne du taux d'entrée et du taux de sortie (a). Il peut augmenter fortement sans variation nette de l'emploi total, simplement parce que la durée des contrats se raccourcit et que les mêmes postes sont renouvelés plus souvent (c) : c'est exactement le mécanisme observé en France : le taux d'entrée en CDI reste stable autour de 10 % (établissements ≥ 50 salariés) tandis que le taux de rotation explose, tiré par la multiplication des CDD très courts. L'option (b) confond le taux de rotation avec un autre indicateur (la part des CDD dans les embauches) ; l'option (d) est fausse : le taux de rotation inclut toutes les formes de sortie (fin de CDD, démission, rupture conventionnelle, licenciement...), pas seulement les licenciements économiques.
+
+**Question 6 : réponses a, b, d.**
+La théorie insiders-outsiders repose bien sur le pouvoir de négociation des salariés en poste au détriment des chômeurs (a), renforcé par les coûts de rotation (recrutement, formation, procédures de licenciement) qui protègent les insiders (b), et elle s'inscrit dans le cadre du modèle WS-PS où le chômage résulte de facteurs institutionnels (d). L'option (c) est **fausse** et constitue le cœur du mécanisme : c'est précisément parce que les outsiders ne peuvent pas se substituer librement aux insiders (asymétrie d'information sur leur productivité, coûts de formation, résistance des insiders en place) que le salaire négocié ne baisse pas malgré un chômage élevé (voir l'exercice 3(c)).
+
+::: {.callout-warning}
+## Piège fréquent
+À la question 6, beaucoup d'étudiants cochent (c) par réflexe néoclassique (« s'il y a des chômeurs, les salaires devraient baisser »). C'est précisément ce que la théorie insiders-outsiders vient contredire : elle explique pourquoi ce mécanisme de marché ne joue pas. Relire l'exercice 3(c) si ce point reste flou.
+:::
+
+## Exercice 2 : Lecture de données *(barème : /5)*
+
+**Question 1** *(1,5 point).* Variations :
+
+| Indicateur | Variation en points | Variation relative |
+|---|---:|---:|
+| CDI dans l'emploi salarié | 88 − 94 = **−6 points** | −6/94 ≈ **−6,4 %** |
+| CDD dans les embauches | 87 − 76 = **+11 points** | 11/76 ≈ **+14,5 %** |
+| Taux de rotation | 95,8 − 28,7 = **+67,1 points** | 67,1/28,7 ≈ **+233,8 %** |
+| Durée moyenne des CDD | 46 − 112 = **−66 jours** | −66/112 ≈ **−58,9 %** |
+
+C'est le **taux de rotation de la main-d'œuvre** qui connaît de loin la variation relative la plus marquée : il plus que triple (×3,34) en vingt-cinq ans, alors que les trois autres indicateurs évoluent à un rythme plus modéré (entre −59 % et +15 % en valeur relative).
+
+**Question 2** *(1,5 point).* Ces deux évolutions ne sont pas contradictoires : elles décrivent deux compartiments différents du marché du travail. La part des CDI dans le **stock** d'emploi salarié recule peu (−6 points) car le CDI demeure la norme pour le segment **primaire**, majoritaire en effectifs. Mais le **flux** d'embauches est de plus en plus dominé par des CDD très courts, renouvelés très fréquemment sur les mêmes postes (segment **secondaire**) : c'est ce qui fait exploser le taux de rotation sans faire reculer massivement la part des CDI dans le stock. Autrement dit, la dualisation ne se lit pas dans le stock d'emploi (qui bouge peu), mais dans les **flux**, d'où l'intérêt d'indicateurs de mouvements de main-d'œuvre plutôt que du seul niveau d'emploi.
+
+**Question 3** *(1 point).* C'est le **taux de rotation de la main-d'œuvre** qui illustre le mieux cette idée : il mesure explicitement des mouvements (entrées et sorties), et non un état à un instant donné. Sa forte hausse montre que le marché du travail français gère un volume croissant d'allers-retours en et hors de l'emploi pour un même stock de postes : exactement l'idée que « l'emploi n'est pas un stock à partager, mais un flux à canaliser » (chapitre II, §1.3).
+
+**Question 4** *(1 point).* Ce constat illustre la dualisation de deux façons complémentaires. D'abord, ces 30 % de CDD d'un jour concernent une **minorité récurrente** de salariés (ceux qui n'obtiennent ni CDI ni CDD long) plutôt que l'ensemble des actifs : ce sont les mêmes individus qui enchaînent 3,5 contrats par trimestre, ce qui signale un groupe durablement maintenu dans le segment secondaire plutôt qu'un phénomène diffus et transitoire touchant tout le monde à tour de rôle. Ensuite, cette proportion élevée de contrats très courts, concentrée dans certains secteurs (hébergement médico-social, restauration) et catégories (employés, ouvriers), confirme que la segmentation primaire/secondaire recoupe des clivages socioprofessionnels et sectoriels stables : la définition même de la dualisation.
+
+::: {.callout-warning}
+## Piège fréquent
+Ne confondez pas la **part des CDD dans les embauches** (87 % en 2017 : un flux) avec la **part des CDD dans l'emploi salarié** (environ 12 % : un stock). Ces deux chiffres, tous deux exacts, mesurent des choses très différentes : une écrasante majorité des *contrats signés* chaque trimestre sont des CDD, mais à un instant donné, l'écrasante majorité des *salariés en poste* sont en CDI. C'est justement l'écart entre ces deux lectures qui définit la dualisation.
+:::
+
+## Exercice 3 : Exercice analytique *(barème : /7)*
+
+### 3(a) : Taux de rotation de *Delta Logistique* *(2 points)*
+
+$$
+\text{Taux d'entrée} = \frac{235}{250} = 0{,}94 = 94\,\%
+\qquad
+\text{Taux de sortie} = \frac{210}{250} = 0{,}84 = 84\,\%
+$$
+
+$$
+\text{Taux de rotation} = \frac{94\,\% + 84\,\%}{2} = 89\,\%
+$$
+
+Ce taux de rotation (89 %) est très élevé et proche du taux national de 2017 (95,8 %). Le marché du travail interne de *Delta Logistique* est donc plutôt **« liquide »** : sur un effectif moyen de 250 salariés, l'entreprise enregistre 235 embauches et 210 départs en une seule année. Cela ne signifie pas que tout l'effectif a été renouvelé : ces mouvements portent vraisemblablement sur une frange de postes en CDD courts, renouvelés à de multiples reprises pour absorber des pics d'activité logistique, à côté d'un noyau de salariés stables. C'est la marque d'un marché interne **segmenté**.
+
+### 3(b) : Variation du taux de rotation national *(2 points)*
+
+$$
+\text{Variation en points} = 95{,}8 - 28{,}7 = 67{,}1 \text{ points}
+$$
+
+$$
+\text{Variation relative} = \frac{95{,}8 - 28{,}7}{28{,}7} \times 100 \approx 233{,}8\,\%
+$$
+
+Le taux de rotation a donc été multiplié par $95{,}8/28{,}7 \approx 3{,}34$, soit plus que triplé en vingt-cinq ans. Cette évolution révèle un changement profond dans la gestion de la main-d'œuvre par les entreprises françaises : à volume d'emploi comparable, elles recourent de façon croissante à des cycles courts d'embauche-séparation plutôt qu'à des relations d'emploi durables, ce qui accroît structurellement les flux sur le marché du travail sans nécessairement modifier le niveau d'emploi total (cf. exercice 2, question 2).
+
+### 3(c) : Modèle WS-PS et pouvoir de négociation des insiders *(3 points)*
+
+**1) Calcul de $u_1^*$ et $u_2^*$** *(1,5 point)*
+
+$$
+WS_1 = PS \;:\quad 0{,}72 - 0{,}02\,u_1^* = 0{,}70 \;\Longrightarrow\; 0{,}02\,u_1^* = 0{,}02 \;\Longrightarrow\; u_1^* = 1
+$$
+
+$$
+WS_2 = PS \;:\quad 0{,}78 - 0{,}02\,u_2^* = 0{,}70 \;\Longrightarrow\; 0{,}02\,u_2^* = 0{,}08 \;\Longrightarrow\; u_2^* = 4
+$$
+
+Le renforcement du pouvoir de négociation des insiders (hausse de $z$, déplacement de $WS_1$ vers $WS_2$) fait donc *quadrupler* le chômage d'équilibre dans cet exemple (de $u^*=1$ à $u^*=4$, en unités du modèle), conformément à la lecture graphique.
+
+**2) Pourquoi les outsiders ne font pas baisser le salaire négocié** *(1 point)*
+
+Dans la théorie insiders-outsiders, les insiders et les outsiders ne sont pas des substituts parfaits pour l'entreprise. Remplacer un insider par un outsider moins cher implique des **coûts de rotation** (recrutement, formation, période d'adaptation), un risque lié à l'**asymétrie d'information** sur la productivité réelle du nouvel embauché, et parfois une résistance organisée des insiders en poste. Ces frictions donnent aux insiders un pouvoir de négociation que les outsiders ne peuvent pas contester simplement en proposant de travailler moins cher : l'entreprise n'a pas intérêt à substituer un outsider à un insider, même moins coûteux, tant que le coût de rotation dépasse l'économie salariale espérée. Le chômage pèse bien sur les salaires (la courbe WS est décroissante), mais seulement indirectement, en affaiblissant la position des insiders : avec des insiders plus puissants (WS$_2$), il faut un chômage plus élevé ($u_2^* = 4$ au lieu de 1) pour ramener le salaire négocié au niveau compatible avec les marges des entreprises (0,70). Ce chômage est **d'équilibre** car il perdure tant que les déterminants de WS et de PS ne changent pas.
+
+**3) Deux mécanismes concrets renforçant le pouvoir des insiders** *(0,5 point, soit 2 mécanismes attendus, non exhaustif)*
+
+- Le **salaire d'efficience** : il est fixé par l'employeur seul, ce n'est pas en lui-même un pouvoir de négociation ; mais il repose en partie sur la volonté de limiter les **coûts de rotation** (recrutement, formation), et ce sont précisément ces coûts qui rendent les insiders difficiles à remplacer et renforcent leur pouvoir de négociation.
+- Les **coûts de licenciement et la protection du CDI** (procédures, indemnités, ancienneté) : plus ils sont élevés, plus il est coûteux pour l'entreprise de substituer un outsider à un insider, ce qui accroît le pouvoir de négociation de ce dernier.
+- (Accepter également : spécificité des compétences acquises en interne, rôle de la négociation collective/syndicale au niveau de l'entreprise.)
+
+::: {.callout-warning}
+## Piège fréquent
+Dans la question 3(c).1, une erreur courante consiste à résoudre $WS_1 = WS_2$ au lieu de $WS_i = PS$. Le chômage d'équilibre est défini par l'intersection de **chaque** courbe WS avec la courbe PS (fixe), pas par l'intersection des deux courbes WS entre elles : ce dernier point d'intersection n'a aucune interprétation économique dans ce modèle.
+:::
+
+## Exercice 4 : Question de réflexion *(barème : /4)*
+
+::: {.callout-note}
+## Élément de corrigé (plan indicatif + réponse rédigée resserrée)
+:::
+
+**Introduction.** Depuis les années 1990, le marché du travail français connaît une transformation profonde de ses pratiques d'embauche : 87 % des contrats signés en 2017 sont des CDD, contre 76 % en 1993, tandis que le taux de rotation de la main-d'œuvre triple sur la même période. Dans le même temps, le CDI demeure la norme du stock d'emploi (88 % des salariés hors intérim). Cette coexistence pose la question suivante : ce dualisme relève-t-il d'un ajustement rationnel des entreprises à un environnement incertain, ou révèle-t-il un clivage plus profond et plus durable entre insiders protégés et outsiders précarisés ?
+
+**I. Une lecture par l'adaptation conjoncturelle des entreprises.** Les motifs déclarés de recours au CDD (faire face à un accroissement temporaire d'activité, tester les compétences d'un candidat avant un engagement plus durable, contourner l'incertitude sur l'environnement économique) relèvent d'une logique de gestion rationnelle du risque à l'échelle de l'entreprise. Le fait que le taux d'entrée en CDI reste relativement stable (environ 10 % pour les grands établissements) alors que le taux d'entrée en CDD explose suggère que le « noyau dur » de l'emploi stable n'est pas directement attaqué : les entreprises ajustent leur marge de flexibilité par les CDD sans remettre en cause le CDI comme statut de référence. Cette lecture relève d'un arbitrage de gestion des coûts d'ajustement : plus l'incertitude et le coût de sortie du CDI sont élevés, plus les entreprises arbitrent en faveur de contrats courts à la marge.
+
+**II. Une lecture structurelle par la segmentation et les insiders-outsiders.** Mais plusieurs éléments dépassent la seule explication conjoncturelle. D'abord, la baisse de la durée moyenne des CDD (112 à 46 jours) et la hausse du taux de rotation se poursuivent sur longue période, indépendamment des cycles de croissance et de récession : un signe de tendance structurelle plutôt que d'ajustement ponctuel. Ensuite, la précarité des contrats courts se concentre durablement sur les mêmes catégories (employés, ouvriers) et les mêmes secteurs (hébergement médico-social, restauration), ce qui traduit une segmentation stable du marché du travail plutôt qu'un partage aléatoire du risque entre tous les actifs. Enfin, comme le montre l'article de L. Jeanneau (2025), la baisse du taux de chômage global depuis 2015 (de 10,3 % à 7,3 %) ne s'est *pas* traduite par un recul de la pauvreté, notamment parce que la qualité des emplois créés s'est dégradée pour les moins qualifiés : signe que la baisse du chômage agrégé masque une persistance, voire un approfondissement, du clivage entre insiders en emploi stable et outsiders maintenus dans la précarité. La théorie insiders-outsiders (exercice 3c) donne le mécanisme théorique de cette persistance : les coûts de rotation et les protections du CDI empêchent les outsiders de faire baisser les salaires négociés par les insiders, même en période de chômage élevé.
+
+**Conclusion.** Les deux lectures ne s'opposent pas terme à terme : le recours individuel des entreprises au CDD pour gérer l'incertitude de court terme est une réalité documentée, mais l'accumulation de ces décisions, dans un cadre institutionnel qui maintient un écart de protection important entre CDI et contrats courts, produit à l'échelle macroéconomique un résultat structurel : une segmentation durable entre insiders et outsiders. C'est précisément ce diagnostic qui justifie, au chapitre III, l'attention portée aux politiques de flexibilisation *encadrée* et de sécurisation des transitions professionnelles, plutôt qu'à la seule déréglementation du contrat de travail.
+
+::: {.callout-warning}
+## Pièges fréquents (dissertation)
+- **Confondre corrélation et mécanisme** : citer les chiffres de la dualisation ne suffit pas ; il faut expliquer *pourquoi* le clivage se maintient (théorie insiders-outsiders), pas seulement *que* le clivage existe.
+- **Oublier l'échelle temporelle** : une bonne copie distingue explicitement l'ajustement de court terme des entreprises (motifs déclarés de recours au CDD) de la dynamique de long terme de la segmentation (tendance structurelle, indépendante du cycle).
+- **Réponse hors-sujet en jugement de valeur** : le sujet appelle une analyse économique argumentée (stock/flux, segmentation, insiders-outsiders), pas un avis normatif sur le bien-fondé du CDD.
+- **Absence de données à l'appui** : mobiliser au moins un ou deux chiffres précis de l'exercice 2 (par exemple le taux de rotation ×3,34, ou la part des CDD dans les embauches) renforce nettement la copie.
+:::

@@ -5,7 +5,10 @@ project:
     - "*.qmd"
     - "cours/*.qmd"
     - "td/*.qmd"
-    - "!td/corrections/*.qmd"   # corrections rendues à part : décommenter pour publier
+    # Corrigés : TD 1-3 publiés (séances passées). Pour publier les suivants,
+    # retirer leur exclusion ici et ajouter leur ligne « ! » dans .gitignore.
+    - "!td/corrections/cc1-*.qmd"
+    - "!td/corrections/td[4-8]-corrige.qmd"
     - "slides/*.qmd"
 
 lang: fr

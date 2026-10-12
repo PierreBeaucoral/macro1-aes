@@ -4,6 +4,13 @@ subtitle: "Population active, taux d'activité/emploi/chômage, BIT vs France Tr
 description: "Dossier de TD : QCM de définitions, lecture d'un article de presse et de chiffres INSEE, exercice analytique avec construction d'un graphique, question de réflexion."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 2](corrections/td2-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 **Objectifs de la séance**
 

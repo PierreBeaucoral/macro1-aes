@@ -1,0 +1,91 @@
+---
+title: "Corrigé TD 1 : Fondements de la politique économique"
+subtitle: "Réponses rédigées, barème indicatif et pièges fréquents"
+description: "Corrigé complet du dossier de TD 1 : QCM de définitions, lecture d'un article de presse, exercice analytique (règle de Tinbergen et carré de Kaldor) et question de réflexion, avec barème indicatif."
+---
+
+::: {.callout-important}
+## Usage de ce corrigé
+Ce document reprend chaque question du [dossier de TD 1](../td1.qmd) avec une réponse rédigée complète. Le barème est **indicatif** (le TD 1 n'est pas une séance notée : voir CC1 en séance 4 et CC2 en séance 8) ; il donne un ordre de grandeur du poids relatif de chaque question pour vous permettre de vous auto-évaluer.
+:::
+
+## Exercice 1 (QCM) : les notions de base *(barème indicatif : 8 points, soit 1 point par question)*
+
+**Question 1. Réponse : B.** La microéconomie étudie des marchés et des comportements individuels spécifiques (un consommateur, une entreprise, un marché particulier), tandis que la macroéconomie analyse l'économie **dans son ensemble**, à travers des agrégats (PIB, taux de chômage, niveau général des prix, etc.). L'option A inverse les deux définitions ; C et D restreignent arbitrairement chaque discipline à un seul type de politique ou d'échelle géographique.
+
+**Question 2. Réponse : B.** La politique économique est l'ensemble des décisions et interventions des pouvoirs publics (État, banques centrales, administrations locales, agences spécialisées) visant à atteindre des objectifs macroéconomiques (croissance, plein emploi, stabilité des prix, etc.) en mobilisant des instruments. A confond politique économique et production publique ; C décrit la théorie économique, pas la politique économique ; D relève de l'économie des ménages, hors du champ macroéconomique.
+
+**Question 3. Réponse : C.** La règle de Tinbergen énonce qu'il faut **autant d'instruments indépendants que d'objectifs indépendants** de politique économique. A décrit (mal) l'interprétation du carré de Kaldor ; B est une affirmation de la théorie néoclassique de l'auto-ajustement, non la règle de Tinbergen ; D est une thèse néoclassique sur l'inefficacité des politiques de demande, sans lien avec la règle elle-même.
+
+**Question 4. Réponse : C.** Par convention, les axes de chômage et d'inflation sont représentés en **échelle inversée** dans le carré magique, afin que « s'éloigner du centre » signifie toujours une amélioration de la situation macroéconomique sur les quatre axes, comme pour la croissance et le solde extérieur, où s'éloigner du centre est déjà favorable en échelle normale.
+
+**Question 5. Réponse : A.** Une politique contracyclique agit **à contre-courant du cycle économique** : elle stimule l'activité (politique budgétaire et/ou monétaire expansionniste) lorsque l'économie ralentit, et la freine (politiques restrictives) lorsqu'elle est en surchauffe, afin de lisser les fluctuations autour de la tendance de long terme.
+
+**Question 6. Réponse : C.** Les trois fonctions de Musgrave sont **stabilisation**, **allocation** et **redistribution**. La « croissance potentielle » n'est pas elle-même une fonction : c'est la **cible** de la fonction d'allocation (élever le niveau de production potentielle), qu'il ne faut pas confondre avec la fonction elle-même.
+
+**Question 7. Réponse : A.** À court terme, en présence de rigidités nominales (salaires qui ne s'ajustent pas instantanément), une hausse du niveau général des prix $P$ réduit le salaire réel $w = W/P$ à salaire nominal $W$ donné. Le coût du travail relatif aux prix de vente baisse, ce qui rend la production plus profitable pour les entreprises : elles produisent davantage. C'est ce mécanisme qui rend la courbe d'offre agrégée de court terme **croissante**.
+
+**Question 8. Réponse : B.** Combiner deux instruments de sens opposé (ici, restriction budgétaire et expansion monétaire) pour poursuivre deux objectifs distincts est la définition même d'un **policy-mix** : une application directe de la règle de Tinbergen lorsque l'on dispose d'au moins autant d'instruments indépendants que d'objectifs.
+
+## Exercice 2 : Lecture de document *(barème indicatif : 6 points, soit 1,5 point par question)*
+
+**Question 1.** Le président américain (Donald Trump, puis Joe Biden) a mis en place un **plan de relance budgétaire massif** : une politique de demande expansionniste, visant à déplacer la courbe de demande agrégée (DA) vers la droite. Résultat : la relance a compensé la chute de production liée à la pandémie, et l'emploi s'est redressé (« les bons chiffres de l'emploi ») ; mais en poussant la demande au-delà des capacités, elle a aussi alimenté une **poussée d'inflation** (économie en surchauffe).
+
+**Question 2.** La Réserve fédérale (Fed) a mis en place un **resserrement monétaire** (hausse des taux d'intérêt) : une politique restrictive. Elle intervient car la relance a poussé la demande globale au point de faire monter l'inflation : l'économie est en **surchauffe**. Le resserrement monétaire vise à freiner la demande « pour freiner l'inflation », tout en cherchant un « atterrissage en douceur » (éviter de faire basculer l'économie en récession).
+
+**Question 3.** Les deux interventions relèvent de la fonction de **stabilisation** au sens de Musgrave : la relance budgétaire vise à combler un *output gap* négatif (production sous son potentiel), le resserrement monétaire vise à ramener l'inflation vers sa cible sans provoquer de récession : dans les deux cas, il s'agit de limiter les fluctuations de l'activité autour de sa tendance de long terme, non de modifier le niveau de la production potentielle (allocation) ni de redistribuer les revenus (redistribution).
+
+**Question 4.** Oui, dans une certaine mesure : l'épisode combine un instrument **budgétaire** (relance) et un instrument **monétaire** (resserrement) pour poursuivre des objectifs distincts (soutenir l'activité, puis contenir l'inflation), ce qui illustre bien l'idée d'un **policy-mix** au sens de Tinbergen. Nuance attendue : contrairement à l'exemple canonique de la règle (deux instruments actionnés *simultanément* pour deux objectifs indépendants), les deux interventions décrites ici sont **séquentielles** : la relance intervient d'abord pour compenser le choc pandémique, le resserrement ensuite pour corriger l'inflation que la relance a elle-même contribué à créer. Cette séquence illustre une limite pratique importante de la règle de Tinbergen, non traitée par l'énoncé théorique lui-même : les **délais de mise en œuvre et de transmission** (*policy lags*) des instruments, qui peuvent transformer une politique initialement bien calibrée en source de déséquilibre ultérieur.
+
+## Exercice 3 : Exercice analytique *(barème indicatif : 10 points)*
+
+### 3.1 Combien d'instruments pour combien d'objectifs ? *(5 points)*
+
+**a.** *(1 point)* Quatre objectifs indépendants sont énoncés (croissance, chômage, inflation, solde extérieur). D'après la règle de Tinbergen, il faudrait donc **quatre instruments indépendants** pour les atteindre simultanément.
+
+**b.** *(2 points)* Avec seulement deux instruments, le gouvernement doit se concentrer sur les objectifs qu'il peut effectivement atteindre avec un policy-mix cohérent. Exemple chiffré acceptable : une **politique budgétaire expansionniste** (par exemple une baisse d'impôts ou une hausse des dépenses publiques représentant 1 point de PIB) pour soutenir la croissance et faire refluer le chômage, combinée à une **politique monétaire légèrement restrictive** (hausse modérée du taux directeur) pour empêcher que cette relance ne fasse déraper l'inflation au-delà de la cible de 2 %. Ce policy-mix agit bien sur **deux** objectifs indépendants seulement, comme le veut la règle : l'activité d'un côté, l'inflation de l'autre. Si l'on considère, avec la **loi d'Okun**, que croissance et chômage évoluent de concert (soutenir la croissance fait refluer le chômage), un seul objectif reste sans instrument dédié : le solde extérieur (voir c). Si on les tient pour indépendants, comme dans l'énoncé, deux objectifs restent non couverts.
+
+**c.** *(2 points)* Le **solde extérieur** est le premier objectif sacrifié : il reste hors de portée des deux instruments mobilisés. (Si l'on tient croissance et chômage pour deux objectifs réellement indépendants, c'est-à-dire si la relation d'Okun est jugée trop instable, alors l'arbitrage porte sur deux objectifs et non un seul : c'est exactement ce que la règle de Tinbergen prédit avec deux instruments pour quatre cibles.) En outre, une hausse du taux directeur a un effet ambigu voire défavorable sur le solde courant (elle peut apprécier la monnaie et donc réduire la compétitivité-prix des exportations). Le gouvernement doit donc **arbitrer** : accepter un solde extérieur dégradé, ou renoncer à une partie de l'objectif de croissance/chômage. Instrument supplémentaire envisageable : une **politique de change** (dévaluation/dépréciation compétitive, si le régime de change le permet) ou, à plus long terme, une politique **structurelle** de compétitivité (soutien à l'innovation, baisse ciblée du coût du travail dans les secteurs exposés) : ce dernier point anticipe la fonction d'allocation, étudiée à l'exercice 4.
+
+### 3.2 Construire un carré magique de Kaldor *(5 points)*
+
+**a.** *(1 point)* Calcul à la main pour le Pays A :
+$$
+\text{score}_{\text{croissance}} = \frac{1{,}8}{4}\times 10 = 4{,}5 \qquad
+\text{score}_{\text{emploi}} = 10 - 7{,}4 = 2{,}6
+$$
+Ces deux valeurs correspondent bien aux sommets du polygone bleu sur l'axe « Croissance » et l'axe « Emploi » de la figure.
+
+**b.** *(figure fournie, vérification de lecture, non notée séparément).*
+
+**c.** *(1,5 point)* Le **Pays A** présente la situation la plus favorable : son polygone domine celui du Pays B sur les **quatre** axes (croissance 4,5 contre 1,5 ; emploi 2,6 contre 0,2 ; stabilité des prix 9,8 contre 5,0 ; solde extérieur 5,6 contre 2,7). Le point faible commun aux deux pays est l'**emploi** : même le Pays A n'obtient qu'un score de 2,6/10 sur cet axe, ce qui traduit un taux de chômage encore élevé (7,4 %) au regard de l'objectif implicite de 0 % retenu dans la normalisation. Axe par axe : le **Pays A** est en difficulté sur l'emploi (2,6) et, dans une moindre mesure, sur la croissance (4,5) ; le **Pays B** est en difficulté sur presque tous les axes, surtout l'emploi (0,2), la croissance (1,5) et le solde extérieur (2,7), avec une stabilité des prix moyenne (5,0).
+
+**d.** *(1,5 point)* Il est peu probable qu'un pays maximise simultanément les quatre axes car certains objectifs sont liés par des relations empiriques de sens opposé : la **courbe de Phillips** relie négativement inflation et chômage (faire baisser durablement le chômage par la demande tend à alimenter l'inflation), et la **loi d'Okun** relie positivement croissance et emploi (mais une croissance très forte, si elle est tirée par la demande intérieure, peut aussi creuser le déficit extérieur via les importations). Ces arbitrages rendent la forme d'un « carré parfait » à 10 sur chaque axe largement théorique.
+
+**e.** *(1 point)* Le cinquième objectif, apparu dans le débat depuis les années 1990, est la **soutenabilité de la dette publique** (ou du solde budgétaire).
+
+::: {.callout-warning}
+## Piège fréquent : « plus grand » n'est pas toujours « meilleur »
+La définition du carré magique précise que la situation est d'autant meilleure que la surface est grande **et proche d'un carré régulier**, pas seulement grande. Un polygone très allongé sur un seul axe (par exemple une croissance exceptionnelle obtenue au prix d'un chômage très élevé et d'une inflation forte) peut avoir une surface non négligeable tout en traduisant un **déséquilibre macroéconomique sévère**. Ne jugez jamais un carré de Kaldor à sa seule surface : regardez toujours sa **régularité**.
+:::
+
+## Exercice 4 : Question de réflexion *(barème indicatif : 6 points)*
+
+**Élément de correction : plan attendu.**
+
+**Introduction** *(à formuler par l'étudiant·e)* : rappeler que la question oppose deux natures de politiques économiques : la stabilisation conjoncturelle (Musgrave) face à un ralentissement, et la question de savoir si elle suffit lorsque ce ralentissement est **durable**, c'est-à-dire structurel plutôt que cyclique.
+
+**Argument 1 : la stabilisation traite un symptôme, pas une cause structurelle** *(2 points)*. La fonction de **stabilisation** vise à réduire l'écart entre production effective et production **potentielle** ($Y^*$) : elle agit sur la demande à court terme (relance budgétaire et/ou monétaire) pour ramener l'économie vers un potentiel **inchangé**. Si le ralentissement est durable parce que le potentiel de croissance lui-même a baissé (vieillissement démographique, ralentissement du progrès technique, sous-investissement en capital humain), une relance de la demande ne fait, au mieux, que ramener temporairement la production vers ce potentiel dégradé, mais elle ne le relève pas. C'est le rôle de la fonction d'**allocation** (réformes structurelles, investissement en éducation et en R&D) de déplacer la trajectoire potentielle elle-même.
+
+**Argument 2 : la distinction politiques actives/politiques passives illustre la même limite sur le marché du travail** *(2 points)*. Une réponse purement passive au ralentissement (indemnisation généreuse des chômeurs, incitations au retrait d'activité, abaissement de l'âge de la retraite) rend le chômage plus supportable socialement mais ne traite pas les causes structurelles de la difficulté à retrouver un emploi (inadéquation des compétences, mauvais appariement offre-demande de travail). Des politiques **actives** (formation professionnelle, aide au retour à l'emploi, incitations à l'embauche) sont nécessaires en complément pour agir sur la partie structurelle du problème : elles prolongent, sur le marché du travail, la logique de la fonction d'allocation.
+
+**Argument 3 : la contrainte de Tinbergen rend cette insuffisance presque mécanique** *(1,5 point)*. Si le gouvernement ne dispose que d'instruments conjoncturels (taux directeur, solde budgétaire), soit deux instruments, il ne peut, par construction (règle de Tinbergen), viser correctement un objectif supplémentaire et structurellement distinct (relever le potentiel de croissance) sans un instrument dédié (réforme structurelle, politique d'éducation, politique d'innovation). Utiliser des instruments conjoncturels pour un problème structurel revient à violer implicitement la règle de Tinbergen : on emploie moins d'instruments indépendants que d'objectifs réellement poursuivis.
+
+**Conclusion** *(0,5 point)* : la stabilisation conjoncturelle est **nécessaire mais non suffisante** face à un ralentissement durable : elle peut amortir le choc à court terme, mais seule une réponse combinant stabilisation, allocation et politiques actives de l'emploi permet de traiter la cause structurelle plutôt que le seul symptôme conjoncturel.
+
+::: {.callout-warning}
+## Pièges fréquents à l'Exercice 4
+- Traiter la question comme un simple résumé de cours sans répondre explicitement au « dans quelle mesure » : une bonne copie prend clairement position (ici : non suffisant, en argumentant pourquoi) plutôt que de juxtaposer des définitions.
+- Oublier de mobiliser explicitement la distinction **politiques actives/politiques passives** demandée dans la consigne : une copie qui ne parle que de stabilisation/allocation sans ce troisième élément perd des points, même si l'argumentation générale est juste.
+- Confondre la règle de Tinbergen (nombre d'instruments nécessaires) avec le carré de Kaldor (lecture visuelle des résultats obtenus) : ce sont deux outils complémentaires mais distincts, à ne pas mélanger dans la copie.
+:::
