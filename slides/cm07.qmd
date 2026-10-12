@@ -10,9 +10,10 @@ subtitle: "Chapitre II, Partie 2, §2.2 : Inflation, chômage et anticipations"
 3. La critique de Friedman-Phelps : anticipations et NAIRU
 4. Les années 1970 : la stagflation fait disparaître la relation
 5. Les anticipations rationnelles : l'absence d'arbitrage, même à court terme
+6. Prolongement : prix rigides et synthèse néo-keynésienne (prix Nobel 2026)
 
 ::: {.source}
-Sources : @phillips1958 ; @friedman1968 ; *Chapitre II, Partie 2, section II*.
+Sources : @phillips1958 ; @friedman1968 ; @nobel2026 ; *Chapitre II, Partie 2, section II*.
 :::
 
 ## Objectifs
@@ -584,6 +585,26 @@ fig_phillips_rationnelles()
 La banque centrale porte l'inflation de 2 % à 5 %. **Annoncée et crédible**, la hausse est intégrée aussitôt dans $\pi^a$ : A → C, sans gain d'emploi. **Surprise**, elle fait baisser le chômage un temps (A → B), jusqu'à la révision des anticipations (B → C).
 :::
 
+## Prix Nobel 2026 : avec des prix rigides, l'arbitrage de court terme réapparaît {.smaller}
+
+::: {.def}
+**Prix Nobel d'économie 2026** : Robert E. Hall (Stanford) et Michael Woodford (Columbia), « pour les fondements microéconomiques de la stabilisation macroéconomique » [@nobel2026].
+:::
+
+. . .
+
+::: {.incremental}
+- Ils conservent les **anticipations rationnelles**, mais les entreprises ne révisent leurs prix que **de temps en temps** : à court terme, les prix sont **rigides**.
+- Même **anticipée**, une politique monétaire a donc des effets réels à court terme, le temps que les prix s'ajustent. À long terme, la courbe reste verticale en $u^n$.
+- **Hall** : les ménages consomment en fonction du revenu qu'ils **anticipent**, pas seulement de leur revenu courant (*cf.* CM 6). **Woodford** : les entreprises fixent leurs prix en anticipant l'inflation **future** [@woodford2003].
+:::
+
+. . .
+
+::: {.cle}
+C'est la **synthèse néo-keynésienne**, sur laquelle reposent les modèles des banques centrales (BCE, Fed) : piloter les **anticipations** (cible d'inflation de 2 %, annonces sur les taux futurs) devient un instrument de la politique monétaire.
+:::
+
 ## Depuis les années 1990, la relation inflation-chômage diverge selon les pays
 
 ::: {.callout-tip}
@@ -655,24 +676,26 @@ ggplot(df_div, aes(x = annee, y = taux, color = pays)) +
         axis.text.x = element_text(angle = 30, hjust = 1))
 ```
 
-## Cinq décennies de théorie : de Phillips aux anticipations rationnelles
+## De Phillips (1958) au prix Nobel 2026 : cinq ruptures théoriques
 
 ```{mermaid}
-%%| fig-cap: "Quatre ruptures théoriques jalonnent l'histoire de la courbe de Phillips : de la corrélation empirique de 1958 à la disparition complète de l'arbitrage avec les anticipations rationnelles."
+%%| fig-cap: "Cinq ruptures théoriques jalonnent l'histoire de la courbe de Phillips : de la corrélation empirique de 1958 à la disparition de l'arbitrage avec les anticipations rationnelles, puis à son retour à court terme avec la synthèse néo-keynésienne (prix rigides)."
 flowchart LR
     A[Phillips 1958 - Correlation salaires-chomage] --> B[Lecture keynesienne - Arbitrage exploitable]
     B --> C[Stagflation annees 1970 - La relation se brise]
-    C --> D[Friedman-Phelps - NAIRU et anticipations adaptatives]
+    C --> D[Friedman-Phelps - Anticipations adaptatives, NAIRU]
     D --> E[Anticipations rationnelles - Arbitrage disparait meme a court terme]
+    E --> F[Neo-keynesiens, Nobel 2026 - Prix rigides : arbitrage de court terme]
 ```
 
-## Synthèse : trois lectures de la courbe de Phillips
+## Synthèse : quatre lectures de la courbe de Phillips {.smaller}
 
 | | Relation CT/LT | Rôle des anticipations | Arbitrage politique |
 |---|---|---|---|
 | **Phillips (1958)** | Une seule courbe, stable | Absent | Exploitable, semble permanent |
 | **Friedman-Phelps** | CT décroissante, LT verticale en $u^n$ | Adaptatives (inflation passée) | Existe à CT seulement |
 | **Anticipations rationnelles** | LT verticale, CT verticale si anticipée | Rationnelles (toute l'info disponible) | Disparaît même à CT si la politique est anticipée |
+| **Néo-keynésiens (Nobel 2026)** | CT décroissante, LT verticale en $u^n$ | Rationnelles, mais prix rigides | Existe à CT, même si la politique est anticipée |
 
 ## À retenir
 
@@ -682,6 +705,7 @@ flowchart LR
 - La stagflation des années 1970 (chocs pétroliers) brise cette relation stable.
 - Friedman-Phelps réintroduisent les **anticipations** : la courbe de Phillips est décroissante à court terme mais **verticale au NAIRU $u^n$** à long terme, soit $\pi = \pi^a - a\,(u-u^n)$.
 - Avec les **anticipations rationnelles** (Lucas, Muth), l'arbitrage disparaît même à court terme si la politique est anticipée.
+- La **synthèse néo-keynésienne** (Hall et Woodford, prix Nobel 2026) ajoute des **prix rigides** aux anticipations rationnelles : l'arbitrage réapparaît à court terme, d'où le rôle des banques centrales dans le pilotage des anticipations.
 - Depuis les années 1990, la relation diverge selon les institutions nationales du marché du travail.
 :::
 :::
