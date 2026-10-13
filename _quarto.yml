@@ -9,6 +9,7 @@ project:
     # retirer leur exclusion ici et ajouter leur ligne « ! » dans .gitignore.
     - "!td/corrections/cc1-*.qmd"
     - "!td/corrections/td[4-8]-corrige.qmd"
+    - "!td/corrections/td[4-8]-1-corrige.qmd"
     - "slides/*.qmd"
 
 lang: fr
@@ -70,8 +71,12 @@ website:
             href: td/td4.qmd
           - text: "TD 5 : Néoclassique & WS-PS"
             href: td/td5.qmd
+          - text: "TD 5.1 : Arbitrages travail-loisir, classiques & Keynes"
+            href: td/td5-1.qmd
           - text: "TD 6 : Keynes, Okun, Phillips"
             href: td/td6.qmd
+          - text: "TD 6.1 : Okun, Phillips, Friedman, NEC & NEK"
+            href: td/td6-1.qmd
           - text: "TD 7 : Appariement & trappe à inactivité"
             href: td/td7.qmd
           - text: "TD 8 : CC2 blanc (entraînement)"

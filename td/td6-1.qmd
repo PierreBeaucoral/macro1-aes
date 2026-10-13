@@ -1,0 +1,173 @@
+---
+title: "TD 6.1 : Okun, Phillips, Friedman, NEC et NEK"
+subtitle: "Croissance et chômage, arbitrage inflation-chômage, anticipations adaptatives et rationnelles, prix rigides"
+description: "Dossier de TD complémentaire : calculs sur la loi d'Okun, courbe de Phillips initiale, accélération de l'inflation et coût de la désinflation chez Friedman, efficacité de la politique monétaire selon la Nouvelle Économie Classique (NEC) et la Nouvelle Économie Keynésienne (NEK)."
+---
+
+::: {.objectifs}
+**Objectifs de la séance**
+
+À l'issue de cette séance, vous saurez :
+
+- Utiliser la **loi d'Okun** $\Delta u = -\beta\,(g - \bar g)$ pour calculer une variation du chômage, ou la croissance nécessaire pour atteindre un objectif de chômage.
+- Lire la **courbe de Phillips initiale** comme un « menu » de politique économique et expliquer pourquoi la stagflation la remet en cause.
+- Calculer, avec la courbe de Phillips augmentée $\pi = \pi^a - a\,(u - u^n)$ et des **anticipations adaptatives**, l'accélération de l'inflation puis le coût en chômage d'une désinflation (critique de **Friedman**).
+- Comparer l'effet d'une même politique monétaire selon la **Nouvelle Économie Classique** (NEC : anticipations rationnelles, prix flexibles) et la **Nouvelle Économie Keynésienne** (NEK : anticipations rationnelles, prix rigides).
+:::
+
+**Pré-requis.** CM 6 (loi d'Okun) et CM 7 (courbe de Phillips, NAIRU, anticipations, synthèse néo-keynésienne). Relisez le [Chapitre II](../cours/chap2.qmd), §2.2, en particulier les parties b) à d) sur la courbe de Phillips. Ce TD complète le TD 6.
+
+::: {.callout-note}
+## Rappel des notations
+- $u$ : taux de chômage ; $u^n$ : taux de chômage naturel (NAIRU) ; $\Delta u$ : variation du taux de chômage d'une année sur l'autre (en points).
+- $g$ : taux de croissance du PIB réel ; $\bar g$ : croissance qui stabilise le chômage ; $\beta > 0$ : coefficient d'Okun.
+- $\pi$ : inflation observée ; $\pi^a$ : inflation anticipée ; $a > 0$ : sensibilité de l'inflation au chômage.
+- Toutes les grandeurs sont en %, ou en points de % pour les variations.
+:::
+
+---
+
+## Exercice 1 : La loi d'Okun en calculs
+
+On retient pour la France $\beta = 0{,}3$ et $\bar g = 1{,}5\,\%$, et pour les États-Unis $\beta = 0{,}45$ (valeurs arrondies, proches de celles estimées dans le Chapitre II hors crise sanitaire).
+
+**a)** Interprétez $\bar g$ : pourquoi faut-il une croissance **positive** pour que le chômage reste stable ? *(Pensez à la croissance de la population active et de la productivité.)*
+
+**b)** Complétez le tableau pour la France.
+
+| Croissance du PIB $g$ (%) | −1,0 | 0,5 | 1,5 | 3,0 |
+|---|---:|---:|---:|---:|
+| $g - \bar g$ (points) | | | | |
+| $\Delta u$ (points) | | | | |
+
+**c)** Le taux de chômage français est de 7,5 %. Le gouvernement veut le ramener à 6,5 % en un an. Quelle croissance faut-il ? Cet objectif vous paraît-il réaliste ? Avec une croissance de 2,5 % par an, combien d'années faudrait-il (arrondissez au dixième) ?
+
+**d)** Une récession frappe les deux pays : dans chacun, la croissance passe 2 points sous $\bar g$ ($g - \bar g = -2$). Calculez $\Delta u$ en France et aux États-Unis. Dans quel pays le chômage réagit-il le plus ? Reliez votre réponse à la protection de l'emploi.
+
+**e)** En 2020, le PIB français recule de près de 8 % (−8 % dans les calculs). Quelle hausse du chômage la loi d'Okun prévoit-elle ? En réalité, le taux de chômage au sens du BIT a légèrement **baissé** en moyenne annuelle (d'environ 0,4 point). Proposez deux explications. *(Indices : chômage partiel ; définition du chômage au sens du BIT et confinement.)*
+
+::: {.callout-warning}
+## Erreur fréquente
+La loi d'Okun relie la croissance à la **variation** du chômage, pas à son **niveau**. Une croissance de 1,5 % en France ne signifie pas « pas de chômage », mais « un chômage qui ne bouge pas ».
+:::
+
+---
+
+## Exercice 2 : La courbe de Phillips initiale : un menu de politique économique
+
+En 1960, Samuelson et Solow tirent du nuage de points américain un « menu » de politique économique entre inflation et chômage. On retient, pour une économie fictive, la relation suivante :
+$$
+\pi = 10{,}5 - 1{,}5\,u
+$$
+
+**a)** Complétez le tableau.
+
+| Taux de chômage $u$ (%) | 3 | 4 | 5 | 6 | 7 |
+|---|---:|---:|---:|---:|---:|
+| Inflation $\pi$ (%) | | | | | |
+
+**b)** Combien de points d'inflation « coûte » chaque point de chômage en moins ? Un gouvernement hésite entre $u = 3\,\%$ et $u = 7\,\%$ : décrivez les deux options. Pourquoi parle-t-on d'**arbitrage** ?
+
+**c)** Voici deux années observées aux États-Unis (moyennes annuelles, Bureau of Labor Statistics).
+
+| Année | 1969 | 1975 |
+|---|---:|---:|
+| Chômage $u$ (%) | 3,5 | 8,5 |
+| Inflation $\pi$ (%) | 5,5 | 9,1 |
+
+Entre 1969 et 1975, chômage et inflation évoluent-ils en sens contraire, comme le prévoit la courbe de Phillips initiale ? Comment appelle-t-on cette situation ? Quel événement l'explique en partie ?
+
+---
+
+## Exercice 3 : La critique de Friedman : anticipations adaptatives et accélération de l'inflation
+
+**a) L'illusion monétaire.** Une politique monétaire expansive fait monter les prix de 6 % sur l'année. Les salariés, qui anticipent une inflation de 2 % (celle de l'an passé), obtiennent une hausse de 4 % de leur salaire nominal.
+
+1. De combien les salariés **croient-ils** que leur salaire réel augmente ? De combien varie-t-il **réellement** ? *(Approximation : variation du salaire réel ≈ variation du salaire nominal − inflation.)*
+2. Expliquez pourquoi, à court terme, les salariés offrent davantage de travail et les entreprises embauchent davantage.
+3. Que se passe-t-il l'année suivante, quand les salariés constatent l'inflation réelle ?
+
+**b) L'accélération.** On décrit maintenant l'économie par la courbe de Phillips augmentée :
+$$
+\pi_t = \pi^a_t - 0{,}5\,(u_t - 8)
+$$
+Le NAIRU est donc $u^n = 8\,\%$. Les anticipations sont **adaptatives** : on anticipe l'inflation de l'année précédente, $\pi^a_t = \pi_{t-1}$. À la date 0, l'économie est au NAIRU avec une inflation stable de 2 %.
+
+À partir de la date 1, le gouvernement maintient le chômage à 6 % grâce à une politique de relance. Complétez le tableau.
+
+| Date $t$ | 0 | 1 | 2 | 3 | 4 |
+|---|---:|---:|---:|---:|---:|
+| Chômage $u_t$ (%) | 8 | 6 | 6 | 6 | 6 |
+| Inflation anticipée $\pi^a_t$ (%) | 2 | | | | |
+| Inflation observée $\pi_t$ (%) | 2 | | | | |
+
+1. De combien l'inflation augmente-t-elle chaque année ? Pourquoi parle-t-on d'inflation **accélérationniste** ?
+2. À la date 5, le gouvernement cesse sa relance et le chômage revient à 8 %. Calculez $\pi_5$. L'inflation revient-elle à 2 % ?
+3. En déduire la forme de la courbe de Phillips de **long terme**. Que reste-t-il de l'arbitrage du tableau de l'exercice 2 ?
+
+**c) Le coût de la désinflation.** La banque centrale veut ramener l'inflation de 6 % à 2 %, avec les mêmes anticipations adaptatives.
+
+1. Stratégie progressive : faire baisser l'inflation de 1 point par an pendant 4 ans. Quel taux de chômage faut-il chaque année ?
+2. Stratégie brutale : faire baisser l'inflation de 2 points par an pendant 2 ans. Quel taux de chômage faut-il chaque année ?
+3. Pour chaque stratégie, calculez le nombre total de « points-années » de chômage au-dessus du NAIRU (somme sur les années de $u - u^n$). Comparez. Le **ratio de sacrifice** est ce total divisé par le nombre de points d'inflation gagnés : calculez-le.
+4. Aux États-Unis, la désinflation menée par Paul Volcker, président de la Réserve fédérale à partir d'août 1979, fait passer l'inflation de 13,5 % (1980) à 3,2 % (1983), mais le chômage atteint 9,7 % en 1982. Ce coût est-il cohérent avec l'analyse de Friedman ?
+
+::: {.callout-tip collapse="true"}
+## Indice
+Avec $\pi^a_t = \pi_{t-1}$, l'équation donne $\pi_t - \pi_{t-1} = -0{,}5\,(u_t - 8)$ : la **variation** de l'inflation dépend de l'écart du chômage au NAIRU. Pour faire baisser l'inflation de 1 point, il faut donc $u_t - 8 = 2$.
+:::
+
+---
+
+## Exercice 4 : NEC et NEK : une politique annoncée a-t-elle des effets réels ?
+
+La **Nouvelle Économie Classique** (NEC : Lucas, Sargent, Wallace, années 1970) et la **Nouvelle Économie Keynésienne** (NEK : Fischer, Taylor, Calvo à partir de la fin des années 1970 ; synthèse de Woodford ; prix Nobel 2026 à Hall et Woodford) partagent l'hypothèse d'**anticipations rationnelles** : les agents utilisent toute l'information disponible, y compris les annonces de la banque centrale. Elles s'opposent sur la **flexibilité des prix**.
+
+On garde la courbe de Phillips $\pi = \pi^a - 0{,}5\,(u - 8)$, et une inflation initiale stable de 2 %. Aux questions c) et d), on raisonne en **écart à la tendance** : les chiffres s'ajoutent à l'inflation et à la croissance qui auraient eu lieu sans la politique. Les deux maquettes (Phillips en a-b, Okun en c-d) sont distinctes : n'en comparez pas les ordres de grandeur.
+
+**a) NEC, politique annoncée.** La banque centrale annonce, de façon crédible, qu'elle fera passer l'inflation de 2 % à 4 %. Que vaut $\pi^a$ ? Calculez le chômage. La politique a-t-elle un effet réel ?
+
+**b) NEC, politique surprise.** La banque centrale annonce 2 % mais crée en réalité 3 % d'inflation. Les agents ont anticipé 2 %. Calculez le chômage. Pourquoi la banque centrale ne peut-elle pas répéter cette surprise chaque année ?
+
+**c) NEK : des prix rigides.** On raisonne maintenant sur les entreprises. La banque centrale annonce, de façon crédible, une politique qui augmente la dépense nominale de l'économie de 5 % cette année. Toutes les entreprises l'anticipent. Mais 40 % d'entre elles ont fixé leurs prix pour l'année (catalogues, contrats) et ne peuvent pas les modifier ; les 60 % restantes augmentent leurs prix de 5 %.
+
+On utilise l'approximation : croissance de la dépense nominale ≈ inflation + croissance réelle de la production.
+
+1. Calculez l'inflation moyenne de l'année 1 (moyenne pondérée des hausses de prix).
+2. En déduire la croissance **réelle** de la production en plus de sa tendance.
+3. Avec le coefficient d'Okun $\beta = 0{,}3$ de l'exercice 1, de combien le chômage varie-t-il ? *(Ici, $g - \bar g$ est la croissance en plus de la tendance.)*
+4. L'année 2, la dépense nominale n'augmente plus et les 40 % d'entreprises restantes ajustent à leur tour leurs prix de 5 %. Que deviennent la production et le chômage ?
+
+**d)** Refaites le calcul de la question c) en supposant, comme la NEC, que **toutes** les entreprises peuvent ajuster leurs prix. Concluez : qu'est-ce qui, dans la NEK, redonne un effet réel de court terme à une politique **pourtant anticipée** ?
+
+**e)** La BCE annonce une cible d'inflation de 2 % et communique sur l'évolution future de ses taux d'intérêt. En vous appuyant sur les questions précédentes, expliquez pourquoi **piloter les anticipations** est devenu un instrument de la politique monétaire.
+
+---
+
+## Exercice 5 : Synthèse : quatre lectures de la courbe de Phillips
+
+Complétez le tableau suivant.
+
+| | Keynésiens (années 1960) | Friedman-Phelps (anticipations adaptatives) | NEC (Lucas, Sargent) | NEK (Taylor, Calvo, Woodford) |
+|---|---|---|---|---|
+| Anticipations | | | | |
+| Prix et salaires | | | | |
+| Courbe de Phillips de court terme | | | | |
+| Courbe de Phillips de long terme | | | | |
+| Effet réel d'une politique monétaire annoncée, à court terme | | | | |
+| Effet réel à long terme | | | | |
+
+**Question de réflexion (15 à 20 lignes).** « La politique monétaire peut-elle réduire durablement le chômage ? » Vous mobiliserez les calculs des exercices 3 et 4, et la loi d'Okun.
+
+---
+
+## Pour aller plus loin
+
+::: {.callout-tip}
+## Ressources complémentaires
+- [Chapitre II](../cours/chap2.qmd), §2.2 : loi d'Okun, courbe de Phillips (a à d) et encadré sur le prix Nobel 2026.
+- @okun1962 : l'article fondateur de la loi d'Okun.
+- @phillips1958 et @friedman1968 : la relation initiale et sa critique par les anticipations.
+- @hall1978 et @woodford2003 : les fondements de la synthèse néo-keynésienne ; @nobel2026 pour la présentation du prix.
+- @blanchardcohen, *Macroéconomie* : chapitres sur la courbe de Phillips et la désinflation.
+:::

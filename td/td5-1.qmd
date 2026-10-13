@@ -1,0 +1,200 @@
+---
+title: "TD 5.1 : Décisions et arbitrages : classiques et Keynes"
+subtitle: "Arbitrage travail-loisir, décision d'embauche, loi psychologique fondamentale et multiplicateur"
+description: "Dossier de TD complémentaire : décision de participation et salaire de réserve, effet de substitution et effet de revenu en chiffres, demande de travail à partir d'un tableau de production, calculs sur la fonction de consommation keynésienne, multiplicateur et chômage involontaire. Aucun calcul de dérivée ni modèle d'utilité."
+---
+
+::: {.objectifs}
+**Objectifs de la séance**
+
+À l'issue de cette séance, vous saurez :
+
+- Expliquer, chiffres à l'appui, comment un individu **arbitre entre travail et loisir** (salaire de réserve, coût d'opportunité du loisir) et pourquoi l'offre agrégée de travail est croissante chez les classiques.
+- Distinguer **effet de substitution** et **effet de revenu** sur deux comportements chiffrés, et relier l'effet de revenu dominant à la critique keynésienne de l'offre de travail.
+- Déterminer la **décision d'embauche** d'une entreprise classique à partir d'un tableau de production (règle « on embauche tant que la productivité marginale dépasse le salaire réel »).
+- Calculer, à partir de la **loi psychologique fondamentale** $C = C_0 + c\,Y$, la consommation, l'épargne, les propensions moyennes et marginales, puis le **multiplicateur** et le revenu d'équilibre.
+- Montrer pourquoi, chez Keynes, une baisse des salaires peut **augmenter** le chômage involontaire.
+:::
+
+**Pré-requis.** CM 5 (analyse néoclassique : offre et demande de travail) et CM 6 (analyse keynésienne : demande effective, loi psychologique fondamentale, multiplicateur). Relisez le [Chapitre II](../cours/chap2.qmd), §2.1 et §2.2. Ce TD complète le TD 5 et prépare le TD 6.
+
+::: {.callout-note}
+## Ce TD ne demande ni dérivée ni fonction d'utilité
+Toutes les « variations » se calculent comme des **écarts** entre deux lignes d'un tableau ($\Delta$). La productivité marginale du travail est la production **supplémentaire** apportée par le dernier salarié embauché ; la propension marginale à consommer est la consommation **supplémentaire** associée à un euro de revenu en plus : $c = \Delta C / \Delta Y$.
+:::
+
+---
+
+## Exercice 1 : Travailler ou non ? Le salaire de réserve (classiques)
+
+Chez les classiques, chaque individu compare ce que lui rapporte une heure de travail (le salaire réel $w$) à ce que lui coûte l'heure de loisir qu'il abandonne. Une heure de loisir a donc un **coût d'opportunité** : le salaire auquel on renonce en ne travaillant pas.
+
+Cinq personnes d'une même ville envisagent de prendre un emploi à temps plein (35 heures par semaine). Chacune a un **salaire de réserve** horaire $w_r$ différent, qui dépend de sa situation (transferts reçus, frais de garde d'enfants, de transport, etc.).
+
+| Personne | Ana | Bilal | Chloé | David | Emma |
+|---|---:|---:|---:|---:|---:|
+| Salaire de réserve $w_r$ (€/heure) | 9 | 11 | 13 | 16 | 20 |
+
+**a)** Rappelez la définition du salaire de réserve. Quelle règle de décision chaque personne applique-t-elle pour accepter ou non un emploi ?
+
+**b)** Complétez le tableau suivant : pour chaque salaire de marché, indiquez qui travaille, le nombre de personnes en emploi et le nombre total d'heures offertes par semaine.
+
+| Salaire de marché $w$ (€/heure) | 10 | 12 | 15 | 18 | 22 |
+|---|---|---|---|---|---|
+| Personnes qui travaillent | | | | | |
+| Nombre de personnes en emploi | | | | | |
+| Heures offertes par semaine | | | | | |
+
+**c)** Représentez sur un brouillon l'offre de travail de cette ville (heures en abscisse, salaire en ordonnée). Quelle est sa forme ? Expliquez pourquoi, à l'échelle de l'économie, l'offre de travail est **croissante** du salaire réel.
+
+**d)** Le salaire de marché est de 12 €. Que vaut, pour Chloé, le coût d'opportunité d'une heure de loisir ? Chloé, David et Emma ne travaillent pas : au sens des classiques, sont-ils chômeurs **volontaires** ou **involontaires** ? Justifiez.
+
+**e)** Emma a deux jeunes enfants : ses frais de garde représentent 7 € par heure travaillée. La commune ouvre une crèche gratuite. Comment évolue son salaire de réserve ? Travaille-t-elle désormais au salaire de 15 € ? Citez une autre mesure de politique publique qui agit sur le salaire de réserve.
+
+---
+
+## Exercice 2 : Combien d'heures ? Effet de substitution et effet de revenu
+
+On s'intéresse maintenant à deux salariés déjà en emploi, qui peuvent choisir leur nombre d'heures hebdomadaires (heures supplémentaires, temps partiel).
+
+- **Alex** travaille davantage quand le salaire augmente : chaque heure de loisir lui « coûte » plus cher.
+- **Camille** doit payer un loyer et des charges fixes : elle cherche à gagner **450 € par semaine**, ni plus ni moins, et ajuste ses heures pour atteindre exactement ce revenu.
+
+| Salaire horaire $w$ (€) | 10 | 12 | 15 |
+|---|---:|---:|---:|
+| Heures d'Alex | 30 | 35 | 40 |
+| Revenu hebdomadaire d'Alex (€) | | | |
+| Heures de Camille | | | |
+| Revenu hebdomadaire de Camille (€) | 450 | 450 | 450 |
+
+**a)** Complétez le tableau. *(Pour Camille : heures $= 450 / w$.)*
+
+**b)** Lorsque le salaire passe de 12 € à 15 €, comment évoluent les heures de chacun ? Pour chacun, dites quel effet l'emporte : l'**effet de substitution** (le loisir devient plus cher, on travaille plus) ou l'**effet de revenu** (on atteint le même niveau de vie en travaillant moins).
+
+**c)** Lequel des deux comportements correspond à l'hypothèse retenue par le modèle classique ? Lequel illustre la critique de Keynes, pour qui l'offre de travail peut être **décroissante** ?
+
+**d)** Le salaire horaire baisse de 12 € à 10 €. De combien d'heures varie l'offre de travail de Camille ? Si beaucoup de salariés se comportent comme Camille, une baisse des salaires réduit-elle ou aggrave-t-elle l'excédent d'offre de travail (le chômage) ?
+
+::: {.callout-warning}
+## Erreur fréquente
+L'offre de travail croissante n'est pas un **résultat** de la théorie classique, c'est une **hypothèse** : la théorie ne dit pas lequel des deux effets l'emporte. Sur longue période, en France, le salaire réel a été multiplié par 4 à 5 depuis 1950 alors que la durée annuelle du travail a baissé d'un tiers : c'est l'effet de revenu qui l'a emporté ([Chapitre II](../cours/chap2.qmd), §2.1).
+:::
+
+---
+
+## Exercice 3 : Combien embaucher ? La décision de l'entreprise classique
+
+Une boulangerie dispose d'un four et d'un local donnés (le capital est fixe à court terme). Le tableau indique sa production quotidienne de pains selon le nombre de salariés. Le salaire réel est exprimé **en pains par jour**.
+
+| Nombre de salariés $N$ | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---:|---:|---:|---:|---:|---:|
+| Production totale (pains/jour) | 20 | 38 | 54 | 67 | 77 | 84 |
+| Productivité marginale du travail (pains) | 20 | | | | | |
+
+**a)** Complétez la ligne de la productivité marginale du travail (PmL), c'est-à-dire la production supplémentaire apportée par chaque salarié : par exemple, le 2^e^ salarié ajoute $38 - 20 = 18$ pains. Comment évolue-t-elle ? Pourquoi, avec un four unique ?
+
+**b)** Le salaire réel est de 12 pains par jour. Calculez le profit de la boulangerie (production − masse salariale, en pains) pour $N = 3$, $N = 4$ et $N = 5$. Quel nombre de salariés maximise le profit ?
+
+**c)** Vérifiez que ce résultat correspond à la règle classique : l'entreprise embauche tant que la productivité marginale du dernier salarié est **supérieure** au salaire réel.
+
+**d)** Appliquez cette règle pour trouver le nombre de salariés embauchés lorsque le salaire réel vaut 17, puis 8 pains par jour. Complétez :
+
+| Salaire réel (pains/jour) | 17 | 12 | 8 |
+|---|---:|---:|---:|
+| Salariés embauchés | | | |
+
+Quelle est la forme de la demande de travail ? En déduire la recommandation classique face au chômage.
+
+**e)** Un salaire minimum est fixé à 17 pains par jour, alors que les classiques estiment le salaire d'équilibre à 12. Combien d'emplois la boulangerie supprime-t-elle ? Quel type de chômage le salaire minimum crée-t-il selon eux ?
+
+---
+
+## Exercice 4 : Consommer ou épargner ? La loi psychologique fondamentale (Keynes)
+
+> « En moyenne et la plupart du temps, les hommes tendent à accroître leur consommation à mesure que leur revenu croît, mais non d'une quantité aussi grande que l'accroissement du revenu. » (Keynes, *Théorie générale*, 1936, chapitre 8)
+
+Dans une économie fictive, la consommation des ménages (en milliards d'euros) est donnée par :
+$$
+C = 100 + 0{,}75\,Y
+$$
+où $Y$ est le revenu disponible des ménages.
+
+**a)** Que représentent le terme 100 et le coefficient 0,75 ? Lequel des deux traduit la phrase de Keynes ci-dessus ?
+
+**b)** Complétez le tableau (arrondissez à deux décimales).
+
+| Revenu $Y$ | 200 | 400 | 1 000 | 1 600 | 2 000 |
+|---|---:|---:|---:|---:|---:|
+| Consommation $C$ | | | | | |
+| Épargne $S = Y - C$ | | | | | |
+| Propension moyenne à consommer $C/Y$ | | | | | |
+| Propension moyenne à épargner $S/Y$ | | | | | |
+
+**c)** Calculez la propension marginale à consommer entre $Y = 400$ et $Y = 1\,000$, puis entre $Y = 1\,600$ et $Y = 2\,000$, avec $c = \Delta C / \Delta Y$. Que constatez-vous ? Comparez avec l'évolution de la propension **moyenne** à consommer.
+
+**d)** Pour quel niveau de revenu l'épargne est-elle nulle ? Comment les ménages financent-ils leur consommation lorsque $Y = 200$ ?
+
+**e) Redistribution.** L'économie compte deux groupes de ménages : des ménages modestes, dont la propension marginale à consommer est de 0,9, et des ménages aisés, dont elle est de 0,5. L'État prélève 100 milliards d'euros d'impôt sur les ménages aisés et les reverse aux ménages modestes. Calculez la variation de la consommation de chaque groupe, puis de la consommation totale (effet immédiat, avant tout effet multiplicateur). Quel argument keynésien en faveur de la redistribution ce calcul illustre-t-il ?
+
+::: {.callout-tip collapse="true"}
+## Indice
+Une propension marginale à consommer **constante** et une propension moyenne **décroissante** ne sont pas contradictoires : la consommation incompressible $C_0$ pèse de moins en moins lourd dans le revenu quand celui-ci augmente, puisque $C/Y = C_0/Y + c$.
+:::
+
+---
+
+## Exercice 5 : De la demande effective au chômage involontaire
+
+On reprend l'économie de l'exercice 4 ($C = 100 + 0{,}75\,Y$), sans État ni échanges extérieurs. L'investissement, fixé par les anticipations des entrepreneurs, vaut $I = 150$ milliards d'euros. Le revenu d'équilibre est celui pour lequel la production est égale à la demande : $Y = C + I$.
+
+Chaque emploi produit 50 000 € par an. Les montants sont exprimés à prix constants. La population active compte 22 millions de personnes.
+
+**a)** Calculez le revenu d'équilibre $Y^*$, avec $Y^* = \dfrac{C_0 + I}{1-c}$. Vérifiez qu'à ce niveau de revenu, l'épargne des ménages est égale à l'investissement.
+
+**b)** Combien d'emplois les entreprises offrent-elles pour produire $Y^*$ ? En déduire le nombre de chômeurs et le taux de chômage (à 0,1 point près).
+
+**c)** Ces chômeurs accepteraient de travailler au salaire en vigueur. Pourquoi Keynes parle-t-il de chômage **involontaire** ? Pourquoi cette situation peut-elle durer (équilibre de **sous-emploi**) ?
+
+**d) Multiplicateur.** Calculez le multiplicateur $k = \dfrac{1}{1-c}$. Quelle production permettrait d'employer toute la population active (on néglige ici le chômage frictionnel) ? L'État introduit une dépense publique $G$, financée par emprunt, de sorte que $Y = C + I + G$ : quel montant de $G$ permet d'atteindre cette production ?
+
+**e) Une baisse générale des salaires.** Pour réduire le chômage, les entreprises baissent les salaires. Une partie du revenu passe des salaires aux profits, qui sont moins consommés : on résume cet effet par une baisse de la consommation de 20 milliards d'euros quel que soit le revenu, soit $C_0$ qui passe de 100 à 80. Les entrepreneurs, pessimistes, ne modifient pas leur investissement.
+
+1. Calculez le nouveau revenu d'équilibre, l'emploi et le taux de chômage.
+2. Vérifiez que la baisse du revenu est égale à $k$ fois la baisse de la consommation incompressible.
+3. Comparez avec la prédiction classique de l'exercice 3. Pourquoi les deux analyses aboutissent-elles à des conclusions opposées ? *(Pensez à ce que représente le salaire pour l'entreprise et pour l'économie dans son ensemble.)*
+
+::: {.callout-warning}
+## Erreur fréquente
+Le multiplicateur s'applique à une variation de **dépense autonome** (investissement, dépense publique, consommation incompressible), pas à une variation du revenu. Dans un sens comme dans l'autre : une baisse de la dépense autonome fait baisser le revenu de $k$ fois son montant.
+:::
+
+---
+
+## Exercice 6 : Synthèse : deux visions des décisions des agents
+
+Complétez le tableau de synthèse suivant, en une ou deux expressions par case.
+
+| Question | Classiques (néoclassiques) | Keynes |
+|---|---|---|
+| Qui décide du volume d'emploi ? | | |
+| Variable qui ajuste le marché du travail | | |
+| De quoi dépend l'offre de travail ? | | |
+| De quoi dépend l'épargne des ménages ? | | |
+| Qu'est-ce qui égalise épargne et investissement ? | | |
+| Nature du chômage | | |
+| Effet attendu d'une baisse des salaires sur l'emploi | | |
+| Politique recommandée contre le chômage | | |
+
+**Question de réflexion (10 à 15 lignes).** « Le salaire est-il seulement un coût ? » Vous mobiliserez les résultats chiffrés des exercices 3 et 5.
+
+---
+
+## Pour aller plus loin
+
+::: {.callout-tip}
+## Ressources complémentaires
+- [Chapitre II](../cours/chap2.qmd), §2.1 (offre de travail : pourquoi retenir l'effet de substitution dominant) et §2.2 (loi psychologique fondamentale, paradoxe de l'épargne, multiplicateur).
+- Keynes (1936), *Théorie générale de l'emploi, de l'intérêt et de la monnaie*, chapitres 2 (critique des postulats classiques) et 8 à 10 (propension à consommer, multiplicateur).
+- @cahuczylberberg2004, *Le marché du travail* : chapitre sur l'offre de travail (participation et heures travaillées).
+- @blanchardcohen, *Macroéconomie* : chapitre sur le marché des biens et le multiplicateur.
+:::
