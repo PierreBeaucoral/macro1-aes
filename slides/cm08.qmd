@@ -40,7 +40,7 @@ Les modèles **néoclassique** et **keynésien** ne rendent pas compte de deux r
 
 Le modèle **WS-PS** répond à la première limite ; la théorie de l'**appariement** répond à la seconde.
 
-## Le chômage se disperse durablement en Europe {.smaller}
+## Le chômage reste très dispersé en Europe {.smaller}
 
 ```{r}
 #| label: fig-carte-chomage-europe
@@ -93,7 +93,15 @@ ggplot(world) +
 ## Un écart durable, pas conjoncturel
 
 ::: {.cle}
-L'écart entre l'Espagne ou la Grèce (chômage à deux chiffres) et l'Allemagne, la Tchéquie ou la Pologne (chômage autour de 3 %) est **durable**, pas seulement conjoncturel : deux économies exposées à des chocs de demande comparables peuvent afficher un chômage structurel très différent. C'est ce que le modèle WS-PS cherche à expliquer.
+Depuis 2009, le chômage espagnol reste nettement supérieur au chômage allemand (26 % contre 5 % en 2013, 12 % contre 3 % en 2023) : un écart aussi persistant ne s'explique pas par un choc de demande passager. C'est ce que le modèle WS-PS cherche à expliquer.
+:::
+
+. . .
+
+Le chômage d'équilibre n'est pas pour autant figé : il bouge quand les institutions bougent. L'Allemagne passe d'environ 11 % en 2005 à 3 % en 2023, une baisse souvent attribuée en partie aux réformes Hartz (2003-2005), qui ont réduit l'indemnisation des chômeurs.
+
+::: {.source}
+Source : Eurostat (une_rt_a), taux de chômage harmonisé BIT, 15-74 ans.
 :::
 
 ## Le modèle WS-PS : chômage institutionnel, pas conjoncturel
@@ -164,14 +172,14 @@ Ces deux mécanismes n'ont pas la même origine, l'un relève de la stratégie d
 ## L'équation de fixation des salaires
 
 $$
-W = P \cdot F(u, z)
+W = P^e \cdot F(u, z)
 $$
 
-où $P$ (effet $+$) est le niveau général des prix, $u$ (effet $-$) le taux de chômage, et $z$ (effet $+$) une variable composite (indemnisation chômage, pouvoir syndical, salaire minimum...).
+où $P^e$ (effet $+$) est le niveau des prix **anticipé** lors de la négociation, $u$ (effet $-$) le taux de chômage, et $z$ (effet $+$) une variable composite (indemnisation chômage, pouvoir syndical, salaire minimum...).
 
 . . .
 
-En divisant par $P$ :
+À l'équilibre de moyen terme, les anticipations sont réalisées ($P^e = P$, comme sur la courbe de Phillips verticale du CM 7). En divisant par $P$ :
 
 $$
 WS : \quad \frac{W}{P} = F(u, z)
@@ -213,7 +221,7 @@ Construction pas à pas : cliquez pour ajouter la courbe PS, situer $u^*$, puis 
 
 ::: {.fragment}
 ```{r}
-#| label: fig-wsps-cm08-1
+#| label: wsps-cm08-1
 #| fig-width: 6.2
 #| fig-height: 3.2
 source(here::here("R/theme_macro.R"))
@@ -261,7 +269,7 @@ plot_wsps <- function(k) {
     u_s     <- if (k == 4) u_star2 else u_star1
     ps_s    <- if (k == 4) ps2 else ps1
     lab     <- if (k == 4) "nouveau u* (chômage plus élevé)" else "u* (chômage d'équilibre)"
-    lab_dy  <- if (k == 4) -0.05 else 0.03
+    lab_dy  <- if (k == 4) -0.30 else 0.03
     p <- p +
       annotate("segment", x = u_s, xend = u_s, y = 0, yend = ps_s,
                linetype = "dashed", color = macro_pal[["gris"]], linewidth = 0.4) +
@@ -283,7 +291,7 @@ plot_wsps(1)
 
 ::: {.fragment}
 ```{r}
-#| label: fig-wsps-cm08-2
+#| label: wsps-cm08-2
 #| fig-width: 6.2
 #| fig-height: 3.2
 plot_wsps(2)
@@ -292,7 +300,7 @@ plot_wsps(2)
 
 ::: {.fragment}
 ```{r}
-#| label: fig-wsps-cm08-3
+#| label: wsps-cm08-3
 #| fig-width: 6.2
 #| fig-height: 3.2
 plot_wsps(3)
@@ -301,7 +309,7 @@ plot_wsps(3)
 
 ::: {.fragment}
 ```{r}
-#| label: fig-wsps-cm08-4
+#| label: wsps-cm08-4
 #| fig-width: 6.2
 #| fig-height: 3.2
 plot_wsps(4)
@@ -325,7 +333,7 @@ $PS = \dfrac{1}{1{,}43} \approx 0{,}699$. En résolvant $0{,}75 - 0{,}02\,u^* = 
 . . .
 
 ::: {.cle}
-Une hausse du taux de marge (fusion sectorielle, $m$ passant à $0{,}50$) **abaisse** la courbe PS ($PS = 1/1{,}5 \approx 0{,}667$) et **augmente** donc le chômage d'équilibre.
+Une hausse du taux de marge (fusion sectorielle, $m$ passant à $0{,}50$) **abaisse** la courbe PS ($PS = 1/1{,}5 \approx 0{,}667$) et **augmente** donc le chômage d'équilibre : $0{,}75 - 0{,}02\,u^{*\prime} = 0{,}667$, soit $0{,}02\,u^{*\prime} = 0{,}083$ et $u^{*\prime} \approx 4{,}2$.
 :::
 
 ## Terminologie à retenir
@@ -347,7 +355,7 @@ Dans ce modèle, le chômage est **involontaire mais non keynésien** : il ne pr
 | Baisse de la concurrence (hausse de $m$) | PS $\downarrow$ | $u^*$ $\uparrow$ |
 | Hausse du pouvoir syndical / des indemnités chômage | WS $\uparrow$ | $u^*$ $\uparrow$ |
 | Subvention sur les salaires (baisse du coût du travail) | WS $\downarrow$ | $u^*$ $\downarrow$ |
-| Hausse de la productivité du travail | PS $\uparrow$ | Effet ambigu (partage salaire/profit) |
+| Hausse de la productivité du travail | PS $\uparrow$ | $u^*$ $\downarrow$ à court terme ; inchangé à long terme si les salaires s'indexent sur la productivité (WS monte aussi) |
 | Baisse de la demande globale | Aucune | Chômage total $\uparrow$, **au-delà** de $u^*$ |
 
 ::: {.source}
@@ -367,10 +375,10 @@ Il faut donc analyser le marché du travail en **flux** : créations et destruct
 ## Trois flux relient emploi, chômage et inactivité {.smaller}
 
 ```{mermaid}
-%%| fig-cap: "Trois flux relient en permanence emploi, chômage et inactivité : créations et destructions d'emploi, entrées et sorties du chômage, mouvements avec l'inactivité."
+%%| fig-cap: "Des flux de travailleurs relient en permanence emploi, chômage et inactivité : embauches et pertes d'emploi, entrées et sorties du marché du travail, passages directs entre emploi et inactivité."
 flowchart TD
-    E[Emploi] -- destructions --> C[Chomage]
-    C -- creations --> E
+    E[Emploi] -- pertes d emploi --> C[Chomage]
+    C -- embauches --> E
     C -- sorties du marche --> I[Inactivite]
     I -- entrees sur le marche --> C
     E -- depart --> I
@@ -433,52 +441,21 @@ ggplot() +
   theme(legend.position = "none")
 ```
 
-## Le cas français : boucle conjoncturelle et choc post-Covid {.smaller}
+## Le cas français : un déplacement post-Covid en partie résorbé {.smaller}
 
 ```{r}
 #| label: fig-beveridge-france
-#| fig-cap: "Chômage (BIT) et taux d'emplois vacants en France, moyennes annuelles, 2013-2024 : avant 2020, l'économie se déplace le long d'une courbe à peu près stable ; à partir de 2020, la boucle se déplace vers l'extérieur, avec une tension record en 2022. Sources : chômage, série nationale BIT (Banque mondiale, WDI, SL.UEM.TOTL.NE.ZS) ; taux d'emplois vacants, Eurostat (jvs_q_nace2, indicateur JOBRATE, secteurs B-S), France, moyennes annuelles ; quelques points bien établis retenus plutôt qu'une série trimestrielle complète."
+#| fig-cap: "Chômage (BIT) et taux d'emplois vacants en France, moyennes annuelles, 2013-2025. Sources : chômage, série nationale BIT (Banque mondiale, WDI, SL.UEM.TOTL.NE.ZS) ; taux d'emplois vacants, Eurostat (jvs_q_nace2, JVR, secteurs B-S). En 2020, la baisse du chômage est en partie mécanique : les chômeurs confinés, ne pouvant plus chercher, sont comptés inactifs au sens du BIT."
 #| fig-width: 6.2
-#| fig-height: 3.3
-source(here::here("R/theme_macro.R"))
-library(ggplot2)
-
-# Chomage : serie canonique WDI SL.UEM.TOTL.NE.ZS (Banque mondiale, chomage
-# national BIT), utilisee pour la France dans tout le cours. Taux d'emplois
-# vacants (Eurostat jvs_q_nace2, indicateur JOBRATE, secteurs B-S, %),
-# France. Valeurs figees en dur (ordres de grandeur bien etablis) ; peu de
-# points retenus plutot qu'une serie trimestrielle complete approximative.
-df_bev_fr <- data.frame(
-  annee   = c(2013, 2016, 2019, 2020, 2021, 2022, 2023, 2024),
-  chomage = c(9.9, 10.1, 8.4, 8.0, 7.9, 7.3, 7.3, 7.4),
-  vacance = c(1.0, 1.3, 1.7, 1.3, 2.2, 3.0, 2.7, 2.4),
-  periode = factor(rep(c("2013-2019", "2020-2024"), c(3, 5)),
-                    levels = c("2013-2019", "2020-2024"))
-)
-
-ggplot(df_bev_fr, aes(x = chomage, y = vacance)) +
-  geom_path(color = "grey55", linewidth = 0.5) +
-  geom_point(aes(color = periode), size = 3.2) +
-  geom_text(aes(label = annee), size = 2.8, color = "#333333",
-            fontface = "bold", nudge_y = 0.13) +
-  # Groupes nommes directement pres de leur nuage de points plutot que par
-  # une legende.
-  annotate("text", x = 9.7, y = 0.75, label = "2013-2019",
-           hjust = 0, size = 3, fontface = "bold", color = macro_pal[["bleu"]]) +
-  annotate("text", x = 7.55, y = 1.75, label = "2020-2024",
-           hjust = 0, size = 3, fontface = "bold", color = macro_pal[["rouge"]]) +
-  scale_color_manual(values = c("2013-2019" = macro_pal[["bleu"]],
-                                 "2020-2024" = macro_pal[["rouge"]]), name = NULL) +
-  coord_cartesian(xlim = c(6.5, 11), ylim = c(0.5, 3.4), expand = FALSE) +
-  labs(x = "Taux de chômage (BIT, %)", y = "Taux d'emplois vacants (%)") +
-  theme_macro() +
-  theme(legend.position = "none")
+#| fig-height: 2.9
+source(here::here("R/fig_beveridge.R"))
+fig_beveridge_france()
 ```
 
 . . .
 
 ::: {.cle}
-Avant 2020, la France se déplace **le long** d'une courbe à peu près stable au fil du cycle. À partir de 2020, la courbe se **déplace vers l'extérieur** : à chômage comparable, il faut désormais davantage d'emplois vacants, signe de tensions de recrutement accrues.
+2015-2019 : la France glisse **le long** de sa courbe. 2022-2023 : elle passe **au-dessus** (tensions de recrutement post-Covid). 2024-2025 : elle y revient, le déplacement était en grande partie **temporaire**.
 :::
 
 ## Deux mouvements à ne pas confondre
@@ -533,7 +510,7 @@ Relation **croissante** entre $\theta$ et $W/P$ : plus la probabilité de retrou
 ::: {.columns}
 ::: {.column width="58%"}
 ```{r}
-#| label: fig-dmp-cm08
+#| label: dmp-cm08
 #| fig-width: 5.6
 #| fig-height: 4.2
 source(here::here("R/theme_macro.R"))
@@ -612,7 +589,7 @@ Source : Diamond (1982) [@diamond1982] ; Mortensen & Pissarides (1994) [@mortens
 ::: {.columns}
 ::: {.column width="58%"}
 ```{r}
-#| label: fig-dmp-choc-cm08
+#| label: dmp-choc-cm08
 #| fig-width: 5.6
 #| fig-height: 4.2
 plot_dmp(avec_choc = TRUE)
@@ -632,6 +609,32 @@ plot_dmp(avec_choc = TRUE)
 
 ::: {.cle}
 Salaire réel plus élevé, mais **tension plus faible** : moins de postes vacants par chômeur, donc un chômage plus élevé à efficacité d'appariement donnée.
+:::
+
+## La tension d'équilibre et la courbe de Beveridge fixent ensemble le chômage {.smaller}
+
+::: {.columns}
+::: {.column width="58%"}
+```{r}
+#| label: beveridge-theta-cm08
+#| fig-width: 5.6
+#| fig-height: 4.2
+source(here::here("R/fig_beveridge.R"))
+fig_beveridge_theta()
+```
+:::
+
+::: {.column width="42%"}
+::: {.incremental}
+- Le modèle DMP fixe la tension $\theta^*$ : dans le plan $(u, v)$, c'est le rayon $v = \theta^* u$.
+- La courbe de Beveridge décrit l'appariement : son intersection avec le rayon donne $u^*$ et $v^*$ (point E).
+- Revenus de remplacement plus généreux : $\theta^*$ baisse, le rayon pivote vers le bas, l'économie glisse le long de la courbe de E à E' : **$u^*$ augmente**.
+:::
+:::
+:::
+
+::: {.source}
+Valeurs illustratives. Une détérioration de l'appariement déplacerait au contraire la courbe de Beveridge elle-même vers l'extérieur.
 :::
 
 ## Deux leviers de politique de l'emploi issus de l'appariement

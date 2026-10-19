@@ -1432,9 +1432,9 @@ Deux mécanismes, présents dans toutes les économies malgré des différences 
 
 Ces deux mécanismes se résument dans l'équation de fixation des salaires :
 $$
-W = P \cdot F(u, z)
+W = P^e \cdot F(u, z)
 $$
-où $P$ (effet positif) est le niveau général des prix, $u$ (effet négatif) le taux de chômage, et $z$ (effet positif) une variable composite regroupant les autres déterminants (indemnisation chômage, pouvoir syndical, salaire minimum...). En divisant par $P$ :
+où $P^e$ (effet positif) est le niveau des prix anticipé lors de la négociation, $u$ (effet négatif) le taux de chômage, et $z$ (effet positif) une variable composite regroupant les autres déterminants (indemnisation chômage, pouvoir syndical, salaire minimum...). À l'équilibre de moyen terme, les anticipations sont réalisées ($P^e = P$, comme sur la courbe de Phillips verticale du §2.2). En divisant par $P$ :
 $$
 WS : \quad \frac{W}{P} = F(u, z)
 $$
@@ -1460,7 +1460,7 @@ $$
 ## Application numérique (valeurs indicatives, cours WS-PS)
 Soit $WS : \dfrac{W}{P} = 0{,}75 - 0{,}02\,u$ et $PS : \dfrac{W}{P} = \dfrac{1}{1+m}$ avec $m = 0{,}43$.
 
-$PS = \dfrac{1}{1{,}43} \approx 0{,}699$. En résolvant $0{,}75 - 0{,}02\,u^* = 0{,}699$, on obtient $u^* \approx 2{,}5$ (en unités du modèle) et un salaire réel d'équilibre $\approx 0{,}699$. Une hausse du taux de marge (fusion sectorielle, $m$ passant par exemple à $0{,}50$) abaisse la courbe PS ($PS = 1/1{,}5 \approx 0{,}667$) et augmente donc le chômage d'équilibre.
+$PS = \dfrac{1}{1{,}43} \approx 0{,}699$. En résolvant $0{,}75 - 0{,}02\,u^* = 0{,}699$, on obtient $u^* \approx 2{,}5$ (en unités du modèle) et un salaire réel d'équilibre $\approx 0{,}699$. Une hausse du taux de marge (fusion sectorielle, $m$ passant par exemple à $0{,}50$) abaisse la courbe PS ($PS = 1/1{,}5 \approx 0{,}667$) et augmente donc le chômage d'équilibre : $0{,}75 - 0{,}02\,u^{*\prime} = 0{,}667$, soit $0{,}02\,u^{*\prime} = 0{,}083$ et $u^{*\prime} \approx 4{,}2$.
 :::
 
 ```{r}
@@ -1507,7 +1507,7 @@ Plusieurs éléments déplacent l'une ou l'autre courbe, et donc $u^*$ : le coû
 | Baisse de la concurrence (hausse de $m$) | PS $\downarrow$ | $u^*$ $\uparrow$ |
 | Hausse du pouvoir syndical / des indemnités chômage | WS $\uparrow$ | $u^*$ $\uparrow$ |
 | Subvention sur les salaires (baisse du coût du travail) | WS $\downarrow$ | $u^*$ $\downarrow$ |
-| Hausse de la productivité du travail | PS $\uparrow$ | Effet ambigu sur $u^*$ (dépend du partage salaire/profit) |
+| Hausse de la productivité du travail | PS $\uparrow$ | $u^*$ $\downarrow$ à court terme ; inchangé à long terme si les salaires s'indexent sur la productivité (WS monte aussi) |
 | Baisse de la demande globale | Aucune (chômage conjoncturel additionnel) | Chômage total $\uparrow$, au-delà de $u^*$ |
 
 *Convention du cours* : dans ce tableau, une baisse du coût du travail pour l'employeur (allègement de cotisations, subvention) est représentée comme un déplacement de **WS vers le bas**, le salaire réel s'entendant alors comme le coût réel du travail. D'autres manuels (Blanchard) placent ce coin fiscal dans **PS**, qui monte : l'effet sur $u^*$ (baisse) est le même.
@@ -1568,38 +1568,15 @@ Le cas français récent illustre concrètement ces deux mouvements.
 
 ```{r}
 #| label: fig-beveridge-france-resume
-#| fig-cap: "Chômage (BIT) et taux d'emplois vacants en France, moyennes annuelles, 2013-2024 : avant 2020, l'économie se déplace le long d'une courbe à peu près stable ; à partir de 2020, la boucle se déplace vers l'extérieur, avec une tension record en 2022. Sources : Eurostat, taux de chômage harmonisé BIT (une_rt_a) et taux d'emplois vacants (jvs_q_nace2, indicateur JOBRATE, secteurs B-S), France, moyennes annuelles ; quelques points bien établis retenus plutôt qu'une série trimestrielle complète."
+#| fig-cap: "Chômage (BIT) et taux d'emplois vacants en France, moyennes annuelles, 2013-2025 ; en pointillés, la tendance 2013-2019 prolongée. Sources : chômage, série nationale BIT (Banque mondiale, WDI, SL.UEM.TOTL.NE.ZS) ; taux d'emplois vacants, Eurostat (jvs_q_nace2, indicateur JVR, secteurs B-S, toutes tailles d'entreprise), moyenne des trimestres (2020 : T2 à T4)."
 #| fig-width: 6.5
 #| fig-height: 4
-source(here::here("R/theme_macro.R"))
-library(ggplot2)
-
-# Chomage BIT (Eurostat une_rt_a, moyenne annuelle, %) et taux d'emplois
-# vacants (Eurostat jvs_q_nace2, indicateur JOBRATE, secteurs B-S, %),
-# France. Valeurs figees en dur (ordres de grandeur bien etablis) ; peu de
-# points retenus plutot qu'une serie trimestrielle complete approximative.
-df_bev_fr <- data.frame(
-  annee   = c(2013, 2016, 2019, 2020, 2021, 2022, 2023, 2024),
-  chomage = c(10.3, 10.1, 8.4, 8.0, 7.9, 7.3, 7.4, 7.5),
-  vacance = c(1.0, 1.3, 1.7, 1.3, 2.2, 3.0, 2.7, 2.4),
-  periode = factor(rep(c("2013-2019", "2020-2024"), c(3, 5)),
-                    levels = c("2013-2019", "2020-2024"))
-)
-
-ggplot(df_bev_fr, aes(x = chomage, y = vacance)) +
-  geom_path(color = "grey55", linewidth = 0.5) +
-  geom_point(aes(color = periode), size = 3.2) +
-  geom_text(aes(label = annee), size = 2.8, color = "#333333",
-            fontface = "bold", nudge_y = 0.13) +
-  scale_color_manual(values = c("2013-2019" = macro_pal[["bleu"]],
-                                 "2020-2024" = macro_pal[["rouge"]]), name = NULL) +
-  coord_cartesian(xlim = c(6.5, 11), ylim = c(0.5, 3.4), expand = FALSE) +
-  labs(x = "Taux de chômage (BIT, %)", y = "Taux d'emplois vacants (%)") +
-  theme_macro()
+source(here::here("R/fig_beveridge.R"))
+fig_beveridge_france()
 ```
 
 ::: {.callout-note}
-Avant 2020, la France se déplace **le long** d'une courbe à peu près stable au fil du cycle. À partir de 2020, la courbe se **déplace vers l'extérieur** : à chômage comparable, il faut désormais davantage d'emplois vacants, signe de tensions de recrutement accrues.
+De 2015 à 2019, la reprise fait glisser la France **le long** de sa courbe de Beveridge (moins de chômage, plus d'emplois vacants). En 2022-2023, elle passe **au-dessus** de cette courbe : à chômage comparable, il y a davantage d'emplois vacants, signe de tensions de recrutement accrues après la crise sanitaire. En 2024-2025, elle revient vers l'ancienne courbe : le déplacement a été en grande partie **temporaire**. Le point 2020 est un artefact de mesure : pendant le confinement, les chômeurs qui ne pouvaient pas chercher d'emploi ont été comptés comme inactifs au sens du BIT, d'où une baisse « mécanique » du chômage.
 :::
 
 ### Le modèle DMP (Diamond-Mortensen-Pissarides)
@@ -1625,6 +1602,17 @@ Soit la demande de travail $W/P = 1{,}2 - 0{,}1\,\theta$ et la courbe des salair
 
 **Choc** : les revenus de remplacement augmentent, et les travailleurs exigent un salaire plus élevé de 0,15 pour toute tension $\theta$ : la courbe des salaires devient $W/P = 0{,}45 + 0{,}2\,\theta$ (déplacement **vers le haut**, la demande de travail ne bouge pas). Le nouvel équilibre vérifie $0{,}3\,\theta^* = 0{,}75$ : $\theta^* = 2{,}5$ et $(W/P)^* = 0{,}95$. Le salaire réel augmente, mais la tension baisse : moins de postes vacants par chômeur, donc, à efficacité d'appariement donnée, un **chômage plus élevé** (on se déplace vers le bas-droite de la courbe de Beveridge).
 :::
+
+Le modèle se boucle avec la courbe de Beveridge : dans le plan $(u, v)$, la tension d'équilibre $\theta^*$ correspond au rayon $v = \theta^* u$, et son intersection avec la courbe de Beveridge donne le chômage $u^*$ et les emplois vacants $v^*$. Une baisse de $\theta^*$ fait pivoter le rayon vers le bas : l'économie glisse le long de la courbe vers un chômage plus élevé. Une détérioration de l'appariement déplacerait au contraire la courbe de Beveridge elle-même vers l'extérieur.
+
+```{r}
+#| label: fig-beveridge-theta
+#| fig-cap: "Bouclage du modèle DMP : le rayon v = θ* u coupe la courbe de Beveridge en E, qui fixe u*. Une baisse de la tension d'équilibre (θ*' < θ*, par exemple après une hausse des revenus de remplacement) mène en E', avec un chômage plus élevé. Valeurs illustratives."
+#| fig-width: 5.6
+#| fig-height: 4.2
+source(here::here("R/fig_beveridge.R"))
+fig_beveridge_theta()
+```
 
 Les déterminants du chômage dans ce cadre incluent : l'efficacité du processus d'appariement, l'intensité de l'effort de recherche des chômeurs, le taux de destruction des emplois (séparation), le pouvoir de négociation des travailleurs, le niveau des revenus de remplacement (via le salaire de réserve), la productivité du travail et le coût du capital.
 
