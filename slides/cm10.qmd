@@ -541,32 +541,16 @@ ggplot(chomage_fr, aes(x = annee, y = taux)) +
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
-annees_cmp <- 2000:2024
-
-# Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024.
-# Meme source/serie que fig-chomage-dk-fr-us-cm09 (slides/cm09.qmd), reprise
-# ici a l'identique pour assurer la coherence des chiffres entre les deux
-# seances (INV-11).
+# Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, fenêtre 2000-2024.
+# Meme fichier que fig-chomage-dk-fr-us-cm09 (INV-11).
 # Source : OCDE/BIT, series LRHUTTTTFRA156S / LRHUTTTTDKA156S / LRHUTTTTUSA156S,
-# via FRED (Federal Reserve Bank of St. Louis), d'apres OCDE.
-france_cmp   <- c(9.6, 8.7, 8.6, 8.5, 8.9, 8.9, 8.9, 8.0, 7.4, 9.1,
-                   9.3, 9.2, 9.8, 10.3, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
-                   8.0, 7.9, 7.3, 7.4, 7.5)
-danemark_cmp <- c(4.3, 4.5, 4.6, 5.4, 5.5, 4.8, 3.9, 3.8, 3.7, 6.4,
-                   7.8, 7.8, 7.8, 7.4, 6.9, 6.3, 6.0, 5.8, 5.2, 5.0,
-                   5.6, 5.1, 4.5, 5.1, 6.2)
-usa_cmp      <- c(4.0, 4.7, 5.8, 6.0, 5.5, 5.1, 4.6, 4.6, 5.8, 9.3,
-                   9.6, 9.0, 8.1, 7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7,
-                   8.1, 5.4, 3.7, 3.6, 4.0)
-
-df_cmp <- data.frame(
-  annee = rep(annees_cmp, 3),
-  taux  = c(france_cmp, danemark_cmp, usa_cmp),
-  pays  = rep(c("France", "Danemark", "États-Unis"), each = length(annees_cmp))
-)
+# via FRED (Federal Reserve Bank of St. Louis), consultees le 2026-11-02,
+# stockees dans data/chomage_harmonise_fr_dk_us_1990_2024.csv (source unique pour chap3, cm09, cm10).
+df_cmp <- read.csv(here::here("data/chomage_harmonise_fr_dk_us_1990_2024.csv"), fileEncoding = "UTF-8")
+df_cmp <- df_cmp[df_cmp$annee >= 2000, ]
 df_cmp$pays <- factor(df_cmp$pays, levels = c("France", "Danemark", "États-Unis"))
 
-etiquettes_cmp <- df_cmp[df_cmp$annee == max(annees_cmp), ]
+etiquettes_cmp <- df_cmp[df_cmp$annee == max(df_cmp$annee), ]
 
 ggplot(df_cmp, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
   geom_line() +

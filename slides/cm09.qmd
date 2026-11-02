@@ -329,41 +329,30 @@ Ces résultats reposent sur des **prélèvements obligatoires élevés**, qui fi
 Attention à la mesure : le chiffre de 2,5-3 % parfois cité pour le Danemark est le taux **national** (« net unemployment », Danmarks Statistik, demandeurs d'emploi immédiatement disponibles) : il n'est pas comparable à la mesure harmonisée BIT/OCDE présentée à la diapo suivante, sur laquelle repose toute comparaison internationale.
 :::
 
-## Le Danemark reste sous la France : taux de chômage harmonisé, 2000-2024 {.smaller}
+## Après 1994, le chômage danois est divisé par deux {.smaller}
 
 ```{r}
 #| label: fig-chomage-dk-fr-us-cm09
-#| fig-cap: "Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024. Le Danemark reste durablement sous la France, mais pas au niveau très bas (2,5-3 %) parfois cité pour la fin des années 2020 : ce chiffre est la mesure administrative nationale danoise (chômage « net » enregistré, Danmarks Statistik), non comparable à la série harmonisée reportée ici. Les États-Unis illustrent le modèle de flexibilité pure : chômage bas hors récession, mais sans le filet de l'activation danoise. Sources : OCDE/BIT, taux de chômage harmonisé annuel (séries LRHUTTTTFRA156S, LRHUTTTTDKA156S, LRHUTTTTUSA156S), via FRED, Federal Reserve Bank of St. Louis, d'après OCDE."
+#| fig-cap: "Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 1990-2024. Zone grisée : réformes danoises du marché du travail (1994-1999 : activation, durcissement progressif de l'indemnisation) ; le chômage danois passe de 9,6 % (1993) à 4,3 % (2000) et reste ensuite sous le niveau français, qui dépasse 11 % de 1993 à 1999. Le chiffre de 2,5-3 % parfois cité pour le Danemark est la mesure nationale (chômage « net » enregistré, Danmarks Statistik), non comparable à cette série. Les États-Unis illustrent la flexibilité pure, sans le filet de l'activation danoise. Sources : OCDE/BIT, séries LRHUTTTTFRA156S, LRHUTTTTDKA156S, LRHUTTTTUSA156S, via FRED (Federal Reserve Bank of St. Louis)."
 #| fig-width: 8
 #| fig-height: 4.3
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
-annees <- 2000:2024
-
-# Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 2000-2024.
+# Taux de chômage harmonisé BIT/OCDE (%), moyenne annuelle, 1990-2024.
 # Source : OCDE/BIT, series LRHUTTTTFRA156S / LRHUTTTTDKA156S / LRHUTTTTUSA156S,
-# via FRED (Federal Reserve Bank of St. Louis), consultees le 2026-07-10.
-france <- c(9.6, 8.7, 8.6, 8.5, 8.9, 8.9, 8.9, 8.0, 7.4, 9.1,
-            9.3, 9.2, 9.8, 10.3, 10.3, 10.4, 10.1, 9.4, 9.0, 8.4,
-            8.0, 7.9, 7.3, 7.4, 7.5)
-danemark <- c(4.3, 4.5, 4.6, 5.4, 5.5, 4.8, 3.9, 3.8, 3.7, 6.4,
-              7.8, 7.8, 7.8, 7.4, 6.9, 6.3, 6.0, 5.8, 5.2, 5.0,
-              5.6, 5.1, 4.5, 5.1, 6.2)
-usa <- c(4.0, 4.7, 5.8, 6.0, 5.5, 5.1, 4.6, 4.6, 5.8, 9.3,
-         9.6, 9.0, 8.1, 7.4, 6.2, 5.3, 4.9, 4.4, 3.9, 3.7,
-         8.1, 5.4, 3.7, 3.6, 4.0)
-
-df_chomage <- data.frame(
-  annee = rep(annees, 3),
-  taux  = c(france, danemark, usa),
-  pays  = rep(c("France", "Danemark", "États-Unis"), each = length(annees))
-)
+# via FRED (Federal Reserve Bank of St. Louis), consultees le 2026-11-02,
+# stockees dans data/chomage_harmonise_fr_dk_us_1990_2024.csv (source unique pour chap3, cm09, cm10).
+df_chomage <- read.csv(here::here("data/chomage_harmonise_fr_dk_us_1990_2024.csv"), fileEncoding = "UTF-8")
 df_chomage$pays <- factor(df_chomage$pays, levels = c("France", "Danemark", "États-Unis"))
 
-etiquettes_ch <- df_chomage[df_chomage$annee == max(annees), ]
+etiquettes_ch <- df_chomage[df_chomage$annee == max(df_chomage$annee), ]
 
 ggplot(df_chomage, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
+  annotate("rect", xmin = 1993.5, xmax = 1999.5, ymin = -Inf, ymax = Inf,
+           fill = macro_pal["vert"], alpha = 0.10) +
+  annotate("text", x = 1996.5, y = 12.9, label = "Réformes danoises\n1994-1999",
+           size = 3, color = macro_pal["vert"], fontface = "italic") +
   geom_line() +
   geom_text(data = etiquettes_ch, aes(label = pays), hjust = 0, nudge_x = 0.6,
             size = 3.3, fontface = "bold", show.legend = FALSE) +
@@ -373,7 +362,7 @@ ggplot(df_chomage, aes(x = annee, y = taux, color = pays, linewidth = pays)) +
                       guide = "none") +
   scale_linewidth_manual(values = c("France" = 1.1, "Danemark" = 1.1, "États-Unis" = 0.7),
                           guide = "none") +
-  scale_x_continuous(breaks = seq(2000, 2024, 4), limits = c(2000, 2032)) +
+  scale_x_continuous(breaks = seq(1990, 2020, 5), limits = c(1990, 2030)) +
   labs(x = NULL, y = "Taux de chômage harmonisé (%)") +
   theme_macro() +
   theme(panel.grid.major.x = element_blank())

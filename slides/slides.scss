@@ -9,6 +9,8 @@ $presentation-font-size-root: 30px;
 
 /*-- scss:rules --*/
 .reveal .slides section { text-align: left; }
+/* Légende sous une figure étirée (r-stretch) : réserve la hauteur du pied de page */
+.reveal .slides section img.r-stretch + .caption { padding-bottom: 32px; }
 .reveal h1, .reveal h2, .reveal h3 { letter-spacing: -0.01em; }
 .reveal h2 { border-bottom: 2px solid rgba(31,78,121,.18); padding-bottom: .2em; }
 .reveal .title-slide h1 { font-size: 1.7em; }
