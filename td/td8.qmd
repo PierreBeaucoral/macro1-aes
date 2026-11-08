@@ -4,6 +4,13 @@ subtitle: "Flexisécurité, coût du travail et réformes du marché du travail 
 description: "Sujet d'entraînement (2h) : QCM, lecture de graphique, exercice analytique WS-PS et question de réflexion sur la flexisécurité. Barème indicatif, réponses exemples incluses."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir rédigé vos réponses : [corrigé du TD 8](corrections/td8-corrige.qmd) (barème détaillé pour vous auto-évaluer ; les réponses exemples se trouvent dans les encadrés repliables de ce sujet).
+:::
+:::
+
 ::: {.callout-important}
 ## Ce sujet est un entraînement
 
@@ -50,13 +57,13 @@ Pour chaque question, indiquez le numéro et la lettre correspondant à la bonne
 **1.** Le « triangle d'or » de la flexisécurité danoise combine trois piliers. Laquelle des combinaisons suivantes le résume correctement ?
 
 a) Forte protection de l'emploi + faible indemnisation + accompagnement faible.
-b) Faible protection de l'emploi + indemnisation chômage généreuse + politique active d'activation forte.
+b) Forte protection de l'emploi + indemnisation généreuse + absence d'activation.
 c) Salaire minimum interprofessionnel élevé + faible protection de l'emploi + accompagnement faible.
-d) Forte protection de l'emploi + indemnisation généreuse + absence d'activation.
+d) Faible protection de l'emploi + indemnisation chômage généreuse + politique active d'activation forte.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** Le triangle d'or danois combine (i) une faible protection de l'emploi (licenciements aisés), (ii) une indemnisation chômage généreuse et (iii) une politique active d'activation forte (accompagnement, contrôle, formation). Les trois autres options associent au moins un pilier erroné (forte protection en a) et d), salaire minimum élevé en c), absence d'activation en d)) : le Danemark n'a d'ailleurs pas de salaire minimum légal, celui-ci résultant de la négociation collective de branche.
+**Réponse : d.** Le triangle d'or danois combine (i) une faible protection de l'emploi (licenciements aisés), (ii) une indemnisation chômage généreuse et (iii) une politique active d'activation forte (accompagnement, contrôle, formation). Les trois autres options associent au moins un pilier erroné (forte protection en a) et b), salaire minimum élevé en c), absence d'activation en b)) : le Danemark n'a d'ailleurs pas de salaire minimum légal, celui-ci résultant de la négociation collective de branche.
 :::
 
 **2.** Une entreprise fait tourner ses salariés sur plusieurs postes et tâches selon les besoins de production (polyvalence, rotation des tâches). De quelle forme de flexibilité relève cette pratique ?
@@ -97,14 +104,14 @@ d) La politique monétaire.
 
 **5.** La **trappe à inactivité** est d'autant plus marquée que :
 
-a) Le taux marginal de prélèvement implicite sur la reprise d'un emploi peu rémunéré est faible.
-b) Les prestations sociales diminuent rapidement à mesure que le revenu d'activité augmente, réduisant fortement le gain net associé à la reprise d'un emploi.
+a) Les prestations sociales diminuent rapidement à mesure que le revenu d'activité augmente, réduisant fortement le gain net associé à la reprise d'un emploi.
+b) Le taux marginal de prélèvement implicite sur la reprise d'un emploi peu rémunéré est faible.
 c) Le salaire minimum est très supérieur au salaire médian.
 d) Le taux de chômage de longue durée est nul.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** La trappe à inactivité désigne une situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction rapide des prestations sociales à mesure que le revenu d'activité augmente. Plus cette réduction est rapide (plus le **taux marginal de prélèvement implicite** est élevé, donc plus l'affirmation a, qui décrit l'inverse, est fausse), plus le gain net à la reprise d'emploi est faible et plus la trappe est marquée. L'option c) est fausse : un salaire minimum élevé augmenterait plutôt le gain à la reprise d'emploi et atténuerait la trappe, qui dépend avant tout du rythme de retrait des prestations. L'option d) est sans rapport avec la notion.
+**Réponse : a.** La trappe à inactivité désigne une situation où la reprise d'un emploi peu rémunéré n'améliore que faiblement le revenu disponible d'un allocataire, du fait de la réduction rapide des prestations sociales à mesure que le revenu d'activité augmente. Plus cette réduction est rapide, plus le **taux marginal de prélèvement implicite** est élevé, plus le gain net à la reprise d'emploi est faible et plus la trappe est marquée : l'option b), qui associe la trappe à un TMPI faible, dit donc l'inverse. L'option c) est fausse : un salaire minimum élevé augmenterait plutôt le gain à la reprise d'emploi et atténuerait la trappe, qui dépend avant tout du rythme de retrait des prestations. L'option d) est sans rapport avec la notion.
 :::
 
 **6.** Selon les résultats empiriques de Bassanini et Duval (2006) mobilisés en cours, la rigueur de la protection de l'emploi (EPL) a un effet :
@@ -122,25 +129,25 @@ d) Nul, quelle que soit la classe d'âge considérée.
 **7.** Le remplacement du RSA-activité par la **prime d'activité** en 2016 visait principalement à :
 
 a) Supprimer tout minimum social pour inciter au retour à l'emploi.
-b) Réduire le non-recours (taux de non-recours élevé au RSA-activité) et améliorer le taux de conservation du revenu d'activité repris.
-c) Augmenter le montant du salaire minimum interprofessionnel.
+b) Augmenter le montant du salaire minimum interprofessionnel.
+c) Réduire le non-recours (taux de non-recours élevé au RSA-activité) et améliorer le taux de conservation du revenu d'activité repris.
 d) Remplacer l'assurance chômage.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** Le RSA-activité souffrait d'un taux de non-recours très élevé (de l'ordre de 60 à 70 % des ayants droit), en raison de sa complexité et de sa stigmatisation. La prime d'activité, plus simple et perçue comme moins stigmatisante, visait à réduire ce non-recours et à améliorer le taux de conservation du revenu d'activité repris, dans une logique d'**activation** : elle ne supprime pas les minima sociaux (a), n'a pas d'effet sur le SMIC (c) et ne remplace pas l'assurance chômage (d), qui reste un dispositif distinct.
+**Réponse : c.** Le RSA-activité souffrait d'un taux de non-recours très élevé (de l'ordre de 60 à 70 % des ayants droit), en raison de sa complexité et de sa stigmatisation. La prime d'activité, plus simple et perçue comme moins stigmatisante, visait à réduire ce non-recours et à améliorer le taux de conservation du revenu d'activité repris, dans une logique d'**activation** : elle ne supprime pas les minima sociaux (a), n'a pas d'effet sur le SMIC (b) et ne remplace pas l'assurance chômage (d), qui reste un dispositif distinct.
 :::
 
 **8.** La flexisécurité danoise privilégie surtout quelle forme de sécurité ?
 
-a) La sécurité de l'emploi (garder le même poste chez le même employeur).
-b) La sécurité de l'employabilité (retrouver rapidement un emploi, pas nécessairement chez le même employeur).
+a) La sécurité de l'employabilité (retrouver rapidement un emploi, pas nécessairement chez le même employeur).
+b) La sécurité de l'emploi (garder le même poste chez le même employeur).
 c) La sécurité de conciliation (équilibre entre vie professionnelle et vie familiale).
 d) La sécurité des revenus, exclusivement, à l'exclusion de toute autre forme de sécurité.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : b.** Le principe directeur de la flexisécurité est de « protéger les personnes plutôt que les emplois » : ce n'est pas la conservation d'un poste donné (sécurité de l'emploi, a) qui est visée, mais la capacité à retrouver rapidement un emploi, éventuellement chez un autre employeur (sécurité de l'**employabilité**), grâce à l'indemnisation généreuse et à l'accompagnement du triangle d'or. La sécurité de conciliation (c) n'est pas la dimension centrale du modèle danois ; la sécurité des revenus (d) y contribue mais n'est pas exclusive, ni la seule sécurité mobilisée.
+**Réponse : a.** Le principe directeur de la flexisécurité est de « protéger les personnes plutôt que les emplois » : ce n'est pas la conservation d'un poste donné (sécurité de l'emploi, b) qui est visée, mais la capacité à retrouver rapidement un emploi, éventuellement chez un autre employeur (sécurité de l'**employabilité**), grâce à l'indemnisation généreuse et à l'accompagnement du triangle d'or. La sécurité de conciliation (c) n'est pas la dimension centrale du modèle danois ; la sécurité des revenus (d) y contribue mais n'est pas exclusive, ni la seule sécurité mobilisée.
 :::
 
 ## Exercice 2 : Lecture de graphique : la trappe à inactivité et sa correction (4 points)
@@ -191,11 +198,22 @@ ggplot(df_trappe, aes(x = x, y = y, color = dispositif)) +
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
 
-**1. *(1 point)*** Les deux courbes partent du même point (600 € lorsque le revenu d'activité est nul) mais divergent ensuite : le dispositif réformé (pente 0,65) monte beaucoup plus vite que le dispositif ancien (pente 0,20). L'écart entre les deux dispositifs se creuse à mesure que le revenu d'activité augmente : à 700 € de revenu d'activité, l'allocataire dispose de 740 € au total dans l'ancien dispositif contre 1 055 € dans le dispositif réformé, soit un écart de 315 €. (Au-delà de 750 €, l'allocation de l'ancien dispositif est entièrement épuisée : le revenu disponible y devient égal au seul revenu d'activité.)
+**1. *(1 point)*** Les deux courbes partent du même point (600 € lorsque le revenu d'activité est nul) mais divergent ensuite : le dispositif réformé (pente 0,65) monte beaucoup plus vite que le dispositif ancien (pente 0,20). L'écart entre les deux dispositifs se creuse à mesure que le revenu d'activité augmente : prenons 700 € de revenu d'activité.
 
-**2. *(1,5 point)*** Le taux marginal de prélèvement implicite mesure la part de chaque euro supplémentaire gagné qui est « reprise » par la baisse des prestations. TMPI $=1-0{,}20=80\ \%$ pour le dispositif ancien : sur chaque euro gagné, l'allocataire n'en conserve que 20 centimes, 80 centimes étant retirés de son allocation. TMPI $=1-0{,}65=35\ \%$ pour le dispositif réformé : l'allocataire conserve 65 centimes par euro gagné. Un TMPI élevé (proche de 100 %, comme dans le dispositif ancien) annule quasiment le gain financier associé à la reprise d'un emploi peu rémunéré : l'allocataire travaille alors « pour presque rien » en termes de revenu disponible additionnel, ce qui décourage la reprise d'activité, c'est la définition même de la trappe à inactivité.
+- Dispositif ancien : $600 + 0{,}20 \times 700 = 600 + 140 = 740$ €.
+- Dispositif réformé : $600 + 0{,}65 \times 700 = 600 + 455 = 1\ 055$ €.
+- Écart : $1\ 055 - 740 = 315$ € (contre 0 € à revenu d'activité nul).
+
+L'écart croît donc avec le revenu d'activité, de $0{,}65 - 0{,}20 = 0{,}45$ € par euro gagné ($0{,}45 \times 700 = 315$ €). Remarque : dans l'ancien dispositif, l'allocation restante vaut $600 - 0{,}80\,x$ ; elle s'annule lorsque $600 - 0{,}80\,x = 0$, soit $x = 600 / 0{,}80 = 750$ €. Au-delà de 750 €, l'allocation de l'ancien dispositif est entièrement épuisée : le revenu disponible y devient égal au seul revenu d'activité.
+
+**2. *(1,5 point)*** Le taux marginal de prélèvement implicite mesure la part de chaque euro supplémentaire gagné qui est « reprise » par la baisse des prestations. TMPI $=1-0{,}20=80\ \%$ pour le dispositif ancien : sur chaque euro gagné, l'allocataire n'en conserve que 20 centimes, 80 centimes étant retirés de son allocation. TMPI $=1-0{,}65=35\ \%$ pour le dispositif réformé : l'allocataire conserve 65 centimes par euro gagné. Un TMPI élevé (80 % dans le dispositif ancien ; 100 % à la limite, en l'absence de tout cumul comme sous le RMI) réduit fortement, voire annule, le gain financier associé à la reprise d'un emploi peu rémunéré : l'allocataire travaille alors « pour peu de chose » en termes de revenu disponible additionnel (20 centimes par euro gagné dans l'ancien dispositif, rien du tout avec un TMPI de 100 %), ce qui décourage la reprise d'activité, c'est la définition même de la trappe à inactivité.
 
 **3. *(1,5 point)*** Cette réforme relève de l'axe **activation** : elle ne modifie ni le coût du travail supporté par l'employeur, ni les règles d'embauche/licenciement, mais cherche à rendre le retour à l'emploi plus incitatif pour l'allocataire, exactement comme la trajectoire française RSA → prime d'activité. Toutefois, un dispositif plus généreux en théorie n'améliore la situation réelle des allocataires que s'il est effectivement **utilisé** : un dispositif complexe à comprendre ou perçu comme stigmatisant peut souffrir d'un **taux de non-recours** élevé (comme ce fut le cas du RSA-activité), auquel cas l'essentiel de son effet incitatif reste virtuel. Juger de l'efficacité réelle d'une réforme d'activation suppose donc de croiser la générosité théorique du barème (la pente) avec le taux de recours effectif des ayants droit.
+
+::: {.callout-warning}
+## Piège fréquent
+Ne confondez pas la **pente** (part conservée par l'allocataire : 0,20 ou 0,65) et le **TMPI** (part reprise par la baisse de l'allocation : $1 -$ pente, soit 80 % ou 35 %). Un dispositif « à 0,20 » n'a donc pas un TMPI de 20 %, mais de 80 %. Autre erreur fréquente : comparer les deux dispositifs à un seul niveau de revenu (l'écart en niveau) sans voir que c'est la différence de pente qui fait croître cet écart avec le revenu d'activité.
+:::
 :::
 
 ## Exercice 3 : Exercice analytique : modèle WS-PS et politique de baisse du coût du travail (7 points)
@@ -209,6 +227,8 @@ $$
 $$
 
 où $W/P$ est le salaire réel, $u$ le taux de chômage (en unités du modèle), $\lambda$ la productivité du travail et $m$ le taux de marge des entreprises. On donne $\lambda = 1$ et $m = 0{,}60$.
+
+*Convention du cours* : dans cet exercice, $W/P$ s'entend comme le **coût réel du travail pour l'employeur** ; un allègement de cotisations patronales déplace donc WS vers le bas (cf. chapitre II, §2.3).
 
 **a)** Calculez le niveau de salaire réel donné par la courbe PS. Déduisez-en le taux de chômage d'équilibre $u^{*}_0$ et le salaire réel d'équilibre initiaux. *(1,5 point)*
 
@@ -247,7 +267,7 @@ Le taux de chômage d'équilibre initial est $u^{*}_0 = 13$ (en unités du modè
 
 ```{r}
 #| label: fig-entrainement-cc2-wsps
-#| fig-cap: "Effet d'une baisse du coût du travail dans le modèle WS-PS : le déplacement vers le bas de la courbe WS (subvention à l'embauche) réduit le chômage d'équilibre (E0 → E1) sans modifier le salaire réel d'équilibre, fixé par la courbe PS."
+#| fig-cap: "Effet d'une baisse du coût du travail dans le modèle WS-PS : le déplacement vers le bas de la courbe WS (baisse des cotisations patronales) réduit le chômage d'équilibre (E0 → E1) sans modifier le salaire réel d'équilibre, fixé par la courbe PS."
 #| fig-width: 7
 #| fig-height: 4.8
 source(here::here("R/theme_macro.R"))
@@ -286,7 +306,7 @@ ggplot() +
                                  "PS : fixation des prix" = macro_pal[["or"]]),
                       name = NULL) +
   coord_cartesian(xlim = c(0, 24), ylim = c(0, 1), expand = FALSE) +
-  labs(x = "Taux de chômage (u, unités du modèle)", y = "Salaire réel (W/P)") +
+  labs(x = "Taux de chômage (u, unités du modèle)", y = "Coût réel du travail (W/P)") +
   theme_macro() +
   theme(legend.position = "bottom", legend.text = element_text(size = 8))
 ```
@@ -299,7 +319,17 @@ $$
 
 Le nouveau taux de chômage d'équilibre est $u^{*}_1 = 9$, soit une **baisse de 4 points** ($\Delta u^{*} = u^{*}_1 - u^{*}_0 = -4$). Le salaire réel d'équilibre reste $\left(W/P\right)^{*}_1 = 0{,}625$, **inchangé**.
 
-**d) Interprétation économique *(1,5 point)*.** Ici, $W/P$ mesure le **coût réel du travail** pour l'employeur (c'est pourquoi la baisse de cotisations déplace WS vers le bas). Ce coût réel d'équilibre est entièrement déterminé par la courbe **PS** (donc par le taux de marge $m$ et la productivité $\lambda$), qui n'est pas affectée par la mesure : il reste à 0,625. La mesure ne réduit donc pas durablement ce que coûte un salarié à l'entreprise ; elle se traduit par une **baisse du chômage d'équilibre** (13 → 9). Le salaire net perçu par les salariés, lui, peut augmenter, puisque les cotisations baissent à coût du travail inchangé. Le principal bénéfice de la politique revient aux personnes qui, grâce à la mesure, passent du chômage à l'emploi, et non à une hausse pérenne des marges des entreprises (le supplément de compétitivité se traduit intégralement par de l'emploi supplémentaire, à taux de marge $m$ inchangé). En résumé : **entreprises**, pas de gain de marge ($m$ et PS inchangés) ; **salariés en poste**, gain possible sur le salaire net, à coût du travail inchangé ; **chômeurs**, principaux bénéficiaires, via la baisse de $u^{*}$.
+**d) Interprétation économique *(1,5 point)*.** Ici, $W/P$ mesure le **coût réel du travail** pour l'employeur (c'est pourquoi la baisse de cotisations déplace WS vers le bas). Ce coût réel d'équilibre est entièrement déterminé par la courbe **PS** (donc par le taux de marge $m$ et la productivité $\lambda$), qui n'est pas affectée par la mesure : il reste à 0,625. La mesure ne réduit donc pas durablement ce que coûte un salarié à l'entreprise ; elle se traduit par une **baisse du chômage d'équilibre** (13 → 9).
+
+Que perçoivent les salariés ? L'allègement crée un écart de 0,10 entre ce que coûte un salarié et ce qu'il perçoit : à chaque niveau de chômage, le salaire obtenu dans la négociation reste celui de WS$_0$, mais il coûte 0,10 de moins à l'employeur (c'est le passage de WS$_0$ à WS$_1$). Au nouvel équilibre ($u^{*}_1 = 9$) :
+
+$$
+\text{salaire perçu} = \text{WS}_0(u^{*}_1) = 0{,}95 - 0{,}025 \times 9 = 0{,}95 - 0{,}225 = 0{,}725
+$$
+
+Vérification : coût réel du travail $= 0{,}725 - 0{,}10 = 0{,}625$, soit bien le niveau fixé par PS. Initialement, le salaire perçu était égal au coût réel du travail, $0{,}625$. Le salaire perçu par les salariés augmente donc de $0{,}725 - 0{,}625 = 0{,}10$, soit exactement le montant de l'allègement, tandis que le coût réel du travail reste à $0{,}625$ (PS).
+
+En résumé : **entreprises**, aucun gain de marge ($m$ et PS inchangés, coût réel du travail inchangé à 0,625) ; **salariés en poste**, hausse du salaire perçu de 0,10 (de 0,625 à 0,725) ; **chômeurs**, baisse du chômage d'équilibre de 13 à 9, soit 4 points de moins. Le gain de l'allègement ne va donc pas aux marges : il se partage entre emploi supplémentaire et hausse du salaire perçu.
 
 **e) Limite tenant au financement *(1,5 point)*.** Le modèle WS-PS de base est un modèle d'**offre**, statique, qui ne représente pas le mode de financement de la mesure. Si la baisse de cotisations patronales est financée par une hausse de la TVA ou une baisse de la dépense publique, cela réduit le revenu disponible des ménages et/ou la demande publique adressée aux entreprises : dans le cadre du modèle **OA-DA** du chapitre I, il s'agit d'un **choc de demande négatif**, qui déplace la courbe $DA$ vers la gauche et pèse sur la production et l'emploi, à l'opposé du choc d'offre positif que représente la baisse du coût du travail. Le résultat « $u^{*}$ baisse sans coût pour le salaire réel » obtenu en c) et d) n'est donc valable **qu'à demande globale inchangée** : si le financement de la mesure comprime suffisamment la demande, l'effet net sur l'emploi peut être sensiblement plus faible que ne le suggère le seul modèle WS-PS statique, une fois le choc de demande négatif pris en compte.
 
@@ -342,7 +372,7 @@ Vous répondrez à cette question sous la forme d'un développement structuré (
 
 *I. Des réformes qui flexibilisent nettement le marché du travail français.* Les ordonnances Macron (plafonnement des indemnités prud'homales, primauté de l'accord d'entreprise sur la branche, fusion des instances représentatives du personnel) réduisent la protection de l'emploi de façon significative. Sur l'indicateur OCDE de protection de l'emploi, la France reste toutefois nettement au-dessus du Danemark et du Royaume-Uni, en particulier sur les dispositions relatives aux licenciements collectifs : la flexibilisation française reste donc partielle au regard du « faible » niveau de protection qui caractérise le Danemark. La réforme de l'assurance chômage de 2023-2024, avec sa modulation contracyclique de la durée d'indemnisation, introduit un début de logique d'indemnisation conditionnelle proche, dans son principe, de la philosophie danoise.
 
-*II. Mais un volet « sécurité » et « activation » qui reste loin du niveau danois.* Le triangle d'or danois n'est pas qu'une affaire de règles juridiques : il est financé par des dépenses de politiques actives de l'emploi représentant plus de 1,5 % du PIB au Danemark, contre moins de 0,8 % en France, soit un rapport de près de un à deux. Sans cet effort budgétaire massif d'accompagnement et de formation, une flexibilisation des règles de licenciement, sans contrepartie de sécurité et d'activation à due proportion, rapproche davantage la France d'une logique de flexibilité asymétrique (les entreprises gagnent en souplesse, les travailleurs ne gagnent pas la même sécurité de l'employabilité) que du triptyque équilibré danois. La loi de sécurisation de l'emploi de 2013 avait pourtant ouvert la voie à une logique de compromis (portabilité de certains droits, accords de maintien dans l'emploi), mais cette dynamique n'a pas été prolongée à la hauteur de l'effort danois.
+*II. Mais un volet « sécurité » et « activation » qui reste loin du niveau danois.* Le triangle d'or danois n'est pas qu'une affaire de règles juridiques : il est financé par des dépenses de politiques actives de l'emploi représentant plus de 1,5 % du PIB au Danemark, contre moins de 0,8 % en France, soit un rapport de près de un à deux. Sans cet effort budgétaire massif d'accompagnement et de formation, une flexibilisation des règles de licenciement, sans contrepartie de sécurité et d'activation à due proportion, rapproche davantage la France d'une logique de flexibilité asymétrique (les entreprises gagnent en souplesse, les travailleurs ne gagnent pas la même sécurité de l'employabilité) que du triptyque équilibré danois. La loi de sécurisation de l'emploi de 2013 avait pourtant ouvert la voie à une logique de compromis (portabilité de certains droits, accords de maintien dans l'emploi), mais cette dynamique n'a pas été prolongée à la hauteur de l'effort danois. Quant au troisième axe, celui du **coût du travail**, la transformation du CICE en baisse pérenne de cotisations patronales (2019) prolonge la politique d'allègements engagée depuis 1993 (allègements Balladur, puis Fillon en 2002) ; ce levier ne fait pas partie du triangle d'or, et les évaluations du comité de suivi concluent à un effet sur l'emploi plus modeste qu'attendu, une large part des sommes ayant servi à restaurer les marges. Il ne rapproche donc la France ni du modèle danois ni du modèle anglo-saxon : il relève d'une stratégie propre de baisse du coût du travail peu qualifié.
 
 *Conclusion.* Les réformes françaises depuis 2017 ont indéniablement flexibilisé le marché du travail, mais sans construire, en contrepartie, un effort d'accompagnement et d'activation comparable en moyens à celui du Danemark (moins de 0,8 % du PIB contre plus de 1,5 %). La France se situe donc aujourd'hui dans une position intermédiaire, plus proche d'une flexibilisation partielle inspirée du modèle anglo-saxon que d'une authentique flexisécurité à la danoise, faute d'un investissement budgétaire équivalent dans le volet « sécurité » et « activation » du triangle d'or.
 
@@ -356,10 +386,9 @@ Une réponse purement descriptive (« voici les trois modèles », « voici les 
 
 ::: {.callout-tip}
 ## Pour aller plus loin
-- J. Gautié (2007), « La flexisécurité : nouvel horizon du modèle social français ? », *ac26c.pdf*, [ses.ens-lyon.fr](http://ses.ens-lyon.fr/ses/fichiers/Articles/ac26c.pdf) : l'article de référence sur les conditions institutionnelles (syndicalisation, formation, cohésion sociale) du succès danois.
+- J. Gautié (2007), « La flexicurité : nouvel horizon du modèle social français ? », article mis en ligne sur le site SES-ENS, reprenant un article paru dans les *Cahiers français*, n° 330, 2006, [ses.ens-lyon.fr](https://ses.ens-lyon.fr/ses/fichiers/Articles/ac26c.pdf) : l'article de référence sur les conditions institutionnelles (syndicalisation, formation, cohésion sociale) du succès danois.
 - A. Chéron (2016), « Flexibilité et emploi : que disent les économistes ? », *Cahiers français* n°394 : synthèse des effets ambigus de la flexibilité sur l'emploi selon l'âge et le cycle économique.
 - DARES (2016), *Prestations sociales et trappe à inactivité* : pour approfondir le mécanisme testé dans l'exercice 2.
 - Vidéo de présentation de la loi de sécurisation de l'emploi (2013) : [youtube.com/watch?v=S0EZrhIb7kc](https://www.youtube.com/watch?v=S0EZrhIb7kc)
 - Econoclaste, « Les ordonnances réformant le code du travail et le cadre d'analyse économique » : synthèse critique des ordonnances Macron (2017).
-- Les réponses exemples figurent directement sous chaque question (blocs « Réponse exemple » repliables). Le barème indicatif est rappelé au fil du sujet.
 :::

@@ -1,0 +1,64 @@
+---
+title: "Corrigé TD 4 : Contrôle continu blanc 1 (entraînement)"
+subtitle: "Synthèse Chapitre I et Chapitre II (partie 1), entrée dans la théorie"
+description: "Barème détaillé de l'entraînement CC1 : les réponses exemples rédigées se trouvent directement dans le sujet, sous chaque question."
+---
+
+::: {.callout-important}
+Ce corrigé accompagne le [sujet d'entraînement TD 4](../td4.qmd), qui n'est **pas** le sujet du contrôle continu noté (voir l'encadré en tête du sujet).
+:::
+
+::: {.callout-note}
+Les **réponses exemples rédigées**, avec justification complète et pièges fréquents, sont intégrées directement dans le sujet, dans un encadré repliable « Réponse exemple » après chaque question ou groupe de questions : voir [TD 4](../td4.qmd). Ce document ne reprend que le **barème détaillé**, pour vous permettre de vous auto-évaluer une fois votre réponse rédigée.
+:::
+
+| Partie | Intitulé | Points |
+|---|---|---|
+| I | QCM (10 questions) | 7,5 |
+| II | Lecture de graphique (modèle OA-DA) | 3 |
+| III | Exercice : indicateurs du marché du travail | 6 |
+| IV | Questions de réflexion | 3,5 |
+| **Total** | | **20** |
+
+: Barème indicatif de l'entraînement. {.striped}
+
+## Partie I : QCM (7,5 points)
+
+*Barème : 0,75 point par question, réponse exacte uniquement (pas de demi-point en QCM). Réponses : voir l'encadré « Réponse exemple » sous chaque question du [sujet](../td4.qmd).*
+
+| Question | Thème | Réponse |
+|---|---|---:|
+| 1 | Récession : critère des deux trimestres consécutifs | B |
+| 2 | PIB par habitant en PPA | A |
+| 3 | Règle de Tinbergen | D |
+| 4 | Fonctions de Musgrave (allocation) | C |
+| 5 | Pente de l'OA de court terme | A |
+| 6 | Détermination du PIB potentiel $Y^\ast$ | D |
+| 7 | Signature d'un choc de demande (co-mouvement $Y$, $P$) | B |
+| 8 | Définition BIT du chômeur (cas pratique) | A |
+| 9 | Catégories France Travail (activité réduite longue) | C |
+| 10 | Chômage technologique/structurel | D |
+
+: Grille de correction du QCM. {.striped}
+
+## Partie II : Lecture de graphique (3 points)
+
+Barème détaillé : identification du choc de demande positif (0,5) + courbe déplacée et sens correctement identifiés (0,5) + justification par les mouvements de même sens de $Y$ et $P$ (0,5) + exemple concret accepté (0,5) + description correcte du mécanisme de retour à $Y^\ast$ par ajustement des salaires nominaux (1). Réponse exemple rédigée complète : voir le [sujet, partie II](../td4.qmd).
+
+## Partie III : Exercice, indicateurs du marché du travail (6 points)
+
+Barème détaillé : 0,5 point par indicateur et par pays (3 points au total pour les six calculs) + explication du paradoxe des taux de chômage différents à nombre de chômeurs identique (1,5 point) + mobilisation d'au moins une notion complémentaire pour discuter les limites du taux de chômage seul (1,5 point). Corrigé chiffré complet (taux d'emploi, d'activité et de chômage de Boréal et d'Austral) : voir le [sujet, partie III](../td4.qmd).
+
+::: {.callout-warning}
+## Piège fréquent à connaître
+L'erreur la plus fréquente consiste à diviser le nombre de chômeurs par la **population en âge de travailler** au lieu de la **population active** (emploi + chômeurs) pour calculer le taux de chômage. Le dénominateur du taux de chômage est *toujours* la population active, jamais la population totale ni la population en âge de travailler.
+:::
+
+## Partie IV : Questions de réflexion (3,5 points)
+
+Barème détaillé, question 1 (2 points) : premier mécanisme correctement développé (0,75) + second mécanisme correctement développé (0,75) + qualité de l'argumentation et mise en perspective (0,5). Question 2 (1,5 point) : mécanisme du choc de demande négatif et absence d'arbitrage correctement décrits (0,5) + mécanisme du choc d'offre négatif et arbitrage inflation/production correctement décrits (0,75) + formulation claire de la comparaison (0,25). Réponses exemples rédigées complètes : voir le [sujet, partie IV](../td4.qmd).
+
+::: {.callout-tip}
+## Pour progresser
+Si votre score global est inférieur à 14/20, relisez en priorité les encadrés de définition des chapitres [I](../../cours/chap1.qmd) et [II](../../cours/chap2.qmd), puis refaites cet entraînement une seconde fois sans consulter les réponses exemples avant d'avoir rédigé une réponse complète.
+:::

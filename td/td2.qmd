@@ -44,17 +44,17 @@ d) Le taux de non-emploi
 
 **Question 3.** Quels sont les trois critères que doit remplir **simultanément** une personne pour être comptée comme chômeur au sens du BIT par l'INSEE ?
 
-a) Être inscrite à France Travail, indemnisée, et sans emploi.
-b) Être sans emploi, disponible pour travailler sous deux semaines, et à la recherche active d'un emploi.
+a) Être sans emploi, disponible pour travailler sous deux semaines, et à la recherche active d'un emploi.
+b) Être inscrite à France Travail, indemnisée, et sans emploi.
 c) Être sans emploi depuis plus de 12 mois et indemnisée par l'assurance chômage.
 d) Être en âge de travailler, résider en France, et ne pas être étudiant.
 
 **Question 4.** Pourquoi le nombre de demandeurs d'emploi publié par France Travail diffère-t-il structurellement du nombre de chômeurs BIT publié par l'INSEE ?
 
 a) France Travail sous-estime toujours le chômage par rapport à l'INSEE.
-b) Le chiffre France Travail repose sur une **inscription administrative** (catégories A à E), tandis que le chiffre INSEE repose sur une **enquête standardisée** appliquant les trois critères du BIT : les deux populations ne se recouvrent pas exactement.
+b) France Travail ne mesure que le chômage des jeunes de moins de 25 ans.
 c) L'INSEE et France Travail utilisent exactement la même définition, seule la fréquence de publication diffère.
-d) France Travail ne mesure que le chômage des jeunes de moins de 25 ans.
+d) Le chiffre France Travail repose sur une inscription administrative (catégories A à E), tandis que le chiffre INSEE repose sur une enquête standardisée appliquant les trois critères du BIT : les deux populations ne se recouvrent pas exactement.
 
 **Question 5.** Si le taux de chômage est de 6 % et le taux d'emploi de 58 % (tous deux rapportés à la population en âge de travailler), quel est le taux d'inactivité de cette population ?
 
@@ -73,14 +73,14 @@ d) Un retraité qui ne recherche pas d'emploi.
 **Question 7.** Une baisse du taux de chômage d'un trimestre à l'autre peut-elle s'accompagner d'une dégradation du marché du travail ?
 
 a) Non, une baisse du taux de chômage est toujours un signal univoque d'amélioration.
-b) Oui, si elle résulte d'une baisse de la population active (chômeurs découragés qui cessent de chercher un emploi) plutôt que de créations d'emplois.
+b) Oui, mais uniquement si le PIB est en récession.
 c) Non, car le taux de chômage et le taux d'emploi évoluent toujours dans le même sens.
-d) Oui, mais uniquement si le PIB est en récession.
+d) Oui, si elle résulte d'une baisse de la population active (chômeurs découragés qui cessent de chercher un emploi) plutôt que de créations d'emplois.
 
 **Question 8.** Le sous-emploi (temps partiel subi) fait-il partie de la population des chômeurs au sens du BIT ?
 
-a) Oui, systématiquement.
-b) Non : ces personnes sont en emploi (elles travaillent), donc classées actives occupées, mais elles relèvent du sous-emploi, une forme de sous-utilisation de la main-d'œuvre distincte du halo, car elles souhaiteraient travailler davantage.
+a) Non : ces personnes sont en emploi (elles travaillent), donc classées actives occupées, mais elles relèvent du sous-emploi, une forme de sous-utilisation de la main-d'œuvre distincte du halo, car elles souhaiteraient travailler davantage.
+b) Oui, systématiquement.
 c) Non, elles sont classées comme inactives.
 d) Cela dépend uniquement de leur âge.
 

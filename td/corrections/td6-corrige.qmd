@@ -1,0 +1,120 @@
+---
+title: "Corrigé du TD 6 : Keynes, Okun, Phillips"
+subtitle: "Demande effective, chômage involontaire, loi d'Okun et courbe de Phillips"
+description: "Corrigé détaillé du dossier de TD 6 : réponses rédigées, barème indicatif et pièges fréquents."
+---
+
+::: {.callout-important}
+## Rappel d'organisation
+La **correction du CC1** (évalué en séance 4) est traitée **à l'oral, en séance**, et n'est pas reprise ici. Ce document corrige uniquement le dossier de **TD 6**.
+:::
+
+**Barème indicatif** : Exercice 1 : /5 · Exercice 2 : /5 · Exercice 3 : /6 · Exercice 4 : /4 · **Total : /20**.
+
+---
+
+## Corrigé de l'exercice 1 (Définitions et QCM) · /5
+
+**a) Vrai/Faux** (0,5 point par item, justification attendue)
+
+1. **Faux.** Pour Keynes, l'embauche est gouvernée par la **demande effective** (la demande anticipée sur le marché des biens et services) et non par le coût du travail anticipé. C'est précisément le point de désaccord avec la lecture néoclassique.
+2. **Faux.** Le chômage involontaire désigne des individus qui **souhaitent** travailler au salaire en vigueur mais ne trouvent pas d'embauche, faute de demande effective suffisante. Le refus de travailler au salaire de marché correspond au chômage **volontaire** néoclassique.
+3. **Vrai, mais l'effet net est ambigu.** L'énoncé dit « peut » : une hausse des salaires a deux effets opposés. **Effet-revenu (positif)** : le salaire est consommé, ce qui soutient la demande effective. **Effet-coût (négatif)** : elle renchérit le coût du travail. L'effet net est donc **ambigu** (plus favorable à l'emploi si l'économie est en sous-emploi et si la propension à consommer des salariés est élevée), alors que la prescription néoclassique ne voit dans le salaire qu'un coût.
+4. **Faux.** La loi d'Okun établit une relation de corrélation **négative** : une croissance plus forte est associée à une **baisse** du chômage ($\Delta u = -\beta (g-\bar g)$, $\beta>0$).
+5. **Faux.** Le NAIRU est le taux de chômage pour lequel l'inflation observée est égale à l'inflation **anticipée** ($\pi=\pi^a$), donc **stable**, pas nécessairement nulle.
+6. **Vrai.** À long terme, les anticipations s'ajustent ($\pi^a=\pi$) et la relation devient verticale au niveau $u^n$ : c'est la traduction graphique de l'absence d'arbitrage inflation-chômage à long terme.
+
+**b) QCM** (0,5 point par item)
+
+7. **c)** la demande effective anticipée sur le marché des biens.
+8. **a)** au taux de chômage compatible avec une inflation stable.
+9. **d)** l'arbitrage disparaît même à court terme si la politique est anticipée.
+10. **b)** la sensibilité de la variation du chômage à un point de croissance supplémentaire.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Confondre **chômage involontaire** (on veut travailler au salaire courant sans trouver d'emploi) et **chômage volontaire** (refus de travailler au salaire de marché).
+- Répondre au NAIRU par « chômage minimal possible » : le NAIRU n'est pas un minimum, c'est le taux compatible avec une inflation **stable** (ni accélération ni décélération).
+- Sur l'item 3, beaucoup d'étudiants répondent « Faux » par réflexe (« une hausse de salaire ne peut pas aider l'emploi ») sans mobiliser la distinction coût/revenu du salaire : c'est justement le cœur de l'argument keynésien du CM 6.
+:::
+
+---
+
+## Corrigé de l'exercice 2 (Lecture de données : coefficient d'Okun) · /5
+
+**1.** (1 point) Le coefficient $\beta$ mesure la **sensibilité** de la variation du taux de chômage à un point de croissance du PIB réel au-dessus du taux $\bar g$ qui stabilise le chômage. Un $\beta$ élevé signifie que le chômage réagit **fortement** aux fluctuations de la production (marché du travail « réactif ») ; un $\beta$ faible signifie que l'emploi est **amorti** face aux variations de l'activité (ajustement plus lent, marché plus protégé).
+
+**2.** (1,5 point) Classement décroissant de $\beta$ sur 1981-2016 : États-Unis (0,42) > Royaume-Uni (0,37) > France (0,28) > Allemagne (0,20) > Japon (0,07). Sur 1961-1980, le classement était : États-Unis (0,38) > Allemagne (0,20) > France (0,13) > Royaume-Uni (0,12) > Japon (0,02). Le classement **change nettement** au milieu du tableau : le Royaume-Uni bondit de la 4ᵉ à la 2ᵉ place (dépassant l'Allemagne, reléguée de la 2ᵉ à la 4ᵉ place), tandis que la France reste 3ᵉ dans les deux périodes mais voit son coefficient plus que doubler (0,13 $\to$ 0,28). Les États-Unis (1ᵉʳ), la France (3ᵉ) et le Japon (dernier) conservent leur rang ; seuls le Royaume-Uni et l'Allemagne échangent leurs positions (2ᵉ ↔ 4ᵉ).
+
+**3.** (1 point) Le Japon affiche le coefficient le plus faible des deux périodes (0,02 puis 0,07) : le chômage y réagit très peu aux fluctuations de la croissance. Cela illustre un marché du travail **protégé** (emploi à vie traditionnel dans les grandes entreprises japonaises, ajustement de la main-d'œuvre par les heures travaillées ou les primes plutôt que par les licenciements), et non un marché flexible : un marché flexible afficherait au contraire un $\beta$ élevé, comme les États-Unis.
+
+**4.** (1,5 point) La hausse du coefficient français de 0,13 à 0,28 traduit un ajustement de l'emploi aux variations de production devenu **plus rapide** entre les deux sous-périodes. Cela est cohérent avec la **flexibilisation croissante** du marché du travail français depuis les années 1980 : développement du CDD et de l'intérim, assouplissements successifs du droit du licenciement. Cette hétérogénéité entre pays renvoie aux institutions du marché du travail, et notamment à la typologie flexibilité/sécurité/flexisécurité (Chapitre III).
+
+::: {.callout-warning}
+## Pièges fréquents
+- Confondre le **niveau** du chômage (la France a un chômage structurel élevé) avec sa **sensibilité conjoncturelle** ($\beta$ modéré) : ce sont deux dimensions indépendantes, et le tableau ne dit **rien** sur le niveau de $u$.
+- Oublier que $\beta$ est **positif par construction** dans $\Delta u = -\beta(g-\bar g)$ : un $\beta$ élevé traduit une forte sensibilité, jamais un chômage élevé en niveau.
+:::
+
+---
+
+## Corrigé de l'exercice 3 (Calcul et lecture de la courbe de Phillips) · /6
+
+**a) Tableau complété** (scénario A, $\pi^a=1\,\%$, $u^n=8\,\%$, $a=0{,}9$), 2 points
+
+| $u$ (%) | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---:|---:|---:|---:|---:|---:|
+| $\pi$ (%) | 3,7 | 2,8 | 1,9 | **1,0** | 0,1 | -0,8 |
+
+*Méthode* : $\pi = \pi^a - a\,(u-u^n) = 1 - 0{,}9\,(u-8)$. On calcule d'abord l'écart $u-8$, puis le produit $0{,}9\,(u-8)$, puis on le retranche de 1 :
+
+- $u=5$ : $\pi = 1 - 0{,}9 \times (5-8) = 1 - 0{,}9 \times (-3) = 1 - (-2{,}7) = 1 + 2{,}7 = 3{,}7\,\%$.
+- $u=6$ : $\pi = 1 - 0{,}9 \times (6-8) = 1 - 0{,}9 \times (-2) = 1 - (-1{,}8) = 1 + 1{,}8 = 2{,}8\,\%$.
+- $u=7$ : $\pi = 1 - 0{,}9 \times (7-8) = 1 - 0{,}9 \times (-1) = 1 - (-0{,}9) = 1 + 0{,}9 = 1{,}9\,\%$.
+- $u=8$ : $\pi = 1 - 0{,}9 \times (8-8) = 1 - 0{,}9 \times 0 = 1 - 0 = 1{,}0\,\%$.
+- $u=9$ : $\pi = 1 - 0{,}9 \times (9-8) = 1 - 0{,}9 \times 1 = 1 - 0{,}9 = 0{,}1\,\%$ (l'écart devient **positif** : on retranche désormais).
+- $u=10$ : $\pi = 1 - 0{,}9 \times (10-8) = 1 - 0{,}9 \times 2 = 1 - 1{,}8 = -0{,}8\,\%$ (inflation **négative** : déflation).
+
+Chaque point de chômage supplémentaire réduit l'inflation de $a = 0{,}9$ point, ce qui permet de vérifier la ligne : $3{,}7 - 0{,}9 = 2{,}8$, $2{,}8 - 0{,}9 = 1{,}9$, etc.
+
+**b)** (1 point) Lorsque $u=u^n=8\,\%$, le terme $(u-u^n)$ s'annule et $\pi = \pi^a$ : l'inflation observée est égale à l'inflation anticipée. C'est vrai **quel que soit le scénario** : pour le scénario B, $\pi = 4 - 0{,}9 \times (8-8) = 4 - 0 = 4\,\%$ en $u=8\,\%$. C'est une propriété **mathématique** de l'équation, pas un résultat spécifique au scénario A : c'est exactement la définition du NAIRU (cf. définition du NAIRU, CM 7, chap. 2 §2.2).
+
+**c) Questions sur la figure** (3 points, 1 point chacune)
+
+**c1.** Pour ramener $u$ à 6 % à court terme dans le scénario A, le gouvernement doit accepter une inflation de $\pi=2{,}8\,\%$ (lecture directe du tableau/de la figure). Si les agents révisent ensuite leurs anticipations à la hausse ($\pi^a \to 2{,}8\,\%$), la courbe de court terme se **translate vers le haut** : maintenir $u = 6\,\%$ exige alors $\pi = 2{,}8 - 0{,}9 \times (6-8) = 2{,}8 + 1{,}8 = 4{,}6\,\%$, puis, avec $\pi^a = 4{,}6\,\%$ à la révision suivante, $\pi = 4{,}6 + 1{,}8 = 6{,}4\,\%$, etc. Tant que $u < u^n$, l'inflation **accélère** sans cesse. Si le gouvernement renonce, le chômage **revient à $u^n=8\,\%$**, avec une inflation plus élevée qu'au départ. Il est donc impossible de maintenir **durablement** le chômage sous le NAIRU sans accélération de l'inflation : la baisse du chômage n'est que **transitoire**.
+
+**c2.** Le passage du scénario A au scénario B se traduit par une **translation parallèle vers le haut** de la courbe de court terme (la pente $-a$ ne change pas, seule l'inflation anticipée $\pi^a$ augmente, ce qui relève la courbe de 3 points à chaque niveau de $u$). La droite verticale de long terme, elle, **ne bouge pas** : $u^n$ est indépendant du niveau d'inflation anticipée.
+
+**c3.** Le graphique illustre qu'à long terme, quel que soit le niveau d'inflation anticipée (scénario A ou B), le chômage revient systématiquement à $u^n$ : une politique monétaire qui ne fait que déplacer les anticipations d'inflation ne modifie donc pas durablement l'emploi : elle n'a d'effet que sur les prix.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Erreur de signe dans le calcul : $-a\,(u-u^n)$ est **négatif** quand $u>u^n$ (chômage élevé $\Rightarrow$ inflation plus faible que $\pi^a$), vérifiez le signe avant de calculer.
+- Croire que $u^n$ se déplace avec les anticipations : c'est la courbe de **court terme** qui se déplace, la droite de **long terme** reste fixe en $u^n$ tant que la production potentielle ne change pas.
+- Mal mesurer le déplacement de la courbe : le passage de A à B est une translation de $4 - 1 = 3$ points **vers le haut**. Comme la pente est constante ($-0{,}9$), elle équivaut à une translation de $3 / 0{,}9 \approx 3{,}3$ points vers la droite, et non de 3 points. La lecture naturelle est verticale, car seul $\pi^a$ change.
+:::
+
+---
+
+## Corrigé de l'exercice 4 (Question de réflexion) · /4
+
+**Éléments de correction attendus** (réponse modèle, 15-20 lignes) :
+
+> **Introduction.** Baisser les salaires est souvent présenté comme le moyen le plus direct de créer des emplois. Or le salaire est à la fois un coût pour l'entreprise et un revenu pour les ménages : la réponse dépend donc du canal qui l'emporte. On présentera d'abord la lecture néoclassique, puis la critique keynésienne, avant de préciser à quelle échelle chacune s'applique.
+>
+> Dans le modèle néoclassique du marché du travail, une baisse des salaires réduit le coût du travail pour l'entreprise et, toutes choses égales par ailleurs, augmente la quantité de travail demandée : l'ajustement se fait par les prix (le salaire réel) jusqu'au retour au plein emploi. Cette lecture repose sur une hypothèse implicite forte : la baisse de salaire n'a aucun effet sur la demande adressée à l'entreprise.
+>
+> Keynes conteste précisément cette hypothèse. Pour lui, le salaire n'est pas seulement un coût de production, c'est aussi le **revenu** des ménages salariés, source de leur consommation. Une baisse générale des salaires réduit donc la **demande effective** (la demande anticipée par les entreprises sur le marché des biens), ce qui les conduit à réduire, et non augmenter, leurs embauches. Le chômage qui en résulte est **involontaire** : les travailleurs souhaitent travailler au salaire en vigueur mais n'y parviennent pas, faute de débouchés suffisants pour les entreprises. La **loi d'Okun** ($\Delta u = -\beta(g-\bar g)$) est cohérente avec ce lien : les variations du chômage suivent de près celles de l'activité, ce qui souligne le rôle de la demande et de la conjoncture (une corrélation, qui ne suffit pas à exclure tout rôle du coût du travail).
+>
+> Ces deux lectures ne sont pas nécessairement incompatibles : elles opèrent à des échelles différentes. Le raisonnement néoclassique reste pertinent en **équilibre partiel**, pour une entreprise isolée dont la baisse de salaire n'affecte pas la demande globale (effet marginal, économie ouverte, faible poids de l'entreprise). Le raisonnement keynésien vaut en **équilibre général**, lorsque la baisse des salaires est généralisée à l'ensemble de l'économie et affecte la demande globale : c'est le niveau d'analyse pertinent pour une politique macroéconomique. Même pour une entreprise isolée, la baisse de salaire n'augmente d'ailleurs pas nécessairement l'emploi : chez Keynes, l'entreprise embauche selon ses débouchés anticipés ; si la demande qui lui est adressée est contrainte, un coût du travail plus faible améliore sa marge sans accroître sa production ni ses embauches.
+>
+> **Conclusion.** Une entreprise qui réduit ses salaires n'augmente donc pas nécessairement l'emploi : elle ne le fait que si ses débouchés le permettent. Et si toutes les entreprises baissent leurs salaires, la baisse de la demande effective peut même aggraver le chômage. Au niveau macroéconomique, la lecture keynésienne invite plutôt à soutenir la demande effective qu'à baisser les salaires.
+
+**Barème** : structure introduction/développement/conclusion (1 point) · mobilisation correcte de demande effective et chômage involontaire (1,5 point) · référence à la loi d'Okun (0,5 point) · mise en perspective équilibre partiel/équilibre général et confrontation aux deux lectures (1 point).
+
+::: {.callout-warning}
+## Pièges fréquents
+- Réponse binaire (« Keynes a raison, les néoclassiques ont tort ») sans nuance sur les échelles d'analyse (partiel/général) : cela prive la copie du point de mise en perspective.
+- Oublier de citer la loi d'Okun, qui est explicitement demandée dans la consigne.
+- Confondre la baisse des salaires **d'une entreprise isolée** (peu d'effet macro) et une baisse **généralisée** dans l'économie (effet keynésien plein) : c'est la distinction qui fait la qualité de la copie.
+:::

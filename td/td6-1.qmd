@@ -4,6 +4,13 @@ subtitle: "Croissance et chômage, arbitrage inflation-chômage, anticipations a
 description: "Dossier de TD complémentaire : calculs sur la loi d'Okun, courbe de Phillips initiale, accélération de l'inflation et coût de la désinflation chez Friedman, efficacité de la politique monétaire selon la Nouvelle Économie Classique (NEC) et la Nouvelle Économie Keynésienne (NEK)."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 6.1](corrections/td6-1-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 **Objectifs de la séance**
 

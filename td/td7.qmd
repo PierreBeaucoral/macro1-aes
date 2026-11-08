@@ -4,6 +4,13 @@ subtitle: "Courbe de Beveridge, tension du marché du travail et incitations au 
 description: "Dossier de TD : théorie de l'appariement (Beveridge, modèle DMP, tension θ), puis exercice sur la trappe à inactivité : du RSA à la prime d'activité."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 7](corrections/td7-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 **Objectifs de la séance**
 
@@ -59,38 +66,38 @@ d) la tension $\theta$ est maximale.
 
 **3.** Toutes choses égales par ailleurs, une hausse de $\theta = v/u$ signifie :
 
-a) qu'il devient plus facile pour une entreprise de pourvoir un poste vacant.
-b) qu'il devient plus facile pour un chômeur de retrouver un emploi.
+a) qu'il devient plus facile pour un chômeur de retrouver un emploi.
+b) qu'il devient plus facile pour une entreprise de pourvoir un poste vacant.
 c) que le taux de chômage augmente nécessairement.
 d) que le salaire réel baisse nécessairement.
 
 **4.** Un choc de demande **positif**, à courbe de Beveridge inchangée, se traduit par :
 
 a) un déplacement le long de la courbe vers le bas-droite (moins d'emplois vacants, plus de chômage).
-b) un déplacement le long de la courbe vers le haut-gauche (plus d'emplois vacants, moins de chômage).
-c) un déplacement de la courbe elle-même vers l'extérieur.
-d) aucun effet sur $u$ ni sur $v$.
+b) un déplacement de la courbe elle-même vers l'extérieur.
+c) aucun effet sur $u$ ni sur $v$.
+d) un déplacement le long de la courbe vers le haut-gauche (plus d'emplois vacants, moins de chômage).
 
 **5.** Un déplacement de la courbe de Beveridge **vers l'extérieur** (il faut désormais davantage d'emplois vacants pour atteindre un même taux de chômage) traduit le plus souvent :
 
 a) une amélioration du processus d'appariement.
-b) une détérioration du processus d'appariement (inadéquation des qualifications, hystérèse).
-c) une baisse du taux de chômage structurel.
+b) une baisse du taux de chômage structurel.
+c) une détérioration du processus d'appariement (inadéquation des qualifications, hystérèse).
 d) une hausse de la demande agrégée.
 
 **6.** Dans le modèle DMP, la courbe des salaires est **croissante** en $\theta$ parce que :
 
-a) les entreprises fixent librement le salaire nominal.
-b) une probabilité plus élevée de retrouver un emploi renforce le pouvoir de négociation des travailleurs, qui exigent un salaire réel plus élevé.
+a) une probabilité plus élevée de retrouver un emploi renforce le pouvoir de négociation des travailleurs, qui exigent un salaire réel plus élevé.
+b) les entreprises fixent librement le salaire nominal.
 c) la productivité du travail diminue quand $\theta$ augmente.
 d) le taux de marge des entreprises est constant.
 
 **7.** Selon les conclusions des modèles d'appariement, deux leviers de politique de l'emploi permettent d'agir sur le chômage. Lesquels ?
 
 a) La baisse des impôts sur les sociétés et la hausse du SMIC.
-b) La flexibilisation des créations/destructions d'emplois et l'amélioration de l'efficacité de l'appariement (accompagnement, incitations, mobilité).
-c) L'indexation des salaires sur les prix et la baisse des taux d'intérêt.
-d) La relance budgétaire et la dévaluation monétaire.
+b) L'indexation des salaires sur les prix et la baisse des taux d'intérêt.
+c) La relance budgétaire et la dévaluation monétaire.
+d) La flexibilisation des créations/destructions d'emplois et l'amélioration de l'efficacité de l'appariement (accompagnement, incitations, mobilité).
 
 ---
 
@@ -241,7 +248,7 @@ Représentez la nouvelle courbe des salaires sur un même graphique que la quest
 
 ## 4.1 Le barème du RSA (formule simplifiée)
 
-La formule officielle du RSA s'écrit :
+La formule du RSA en vigueur de 2009 à 2015 (RSA-socle + RSA-activité) s'écrivait :
 $$
 \text{RSA} = \big(\text{Montant forfaitaire} + 0{,}62 \times \text{revenus d'activité du foyer}\big) - \text{ressources du foyer}
 $$

@@ -1,0 +1,160 @@
+---
+title: "Corrigé du TD 6.1 : Okun, Phillips, Friedman, NEC et NEK"
+subtitle: "Croissance et chômage, arbitrage inflation-chômage, anticipations adaptatives et rationnelles, prix rigides"
+description: "Corrigé détaillé du dossier de TD 6.1 : calculs complets, réponses rédigées, barème indicatif et pièges fréquents."
+---
+
+**Barème indicatif** : Exercice 1 : /4 · Exercice 2 : /2 · Exercice 3 : /6 · Exercice 4 : /5 · Exercice 5 : /3 · **Total : /20**.
+
+---
+
+## Corrigé de l'exercice 1 (La loi d'Okun en calculs) · /4
+
+**a)** (0,5 point) Même sans hausse du chômage, la population active augmente et la productivité du travail progresse : chaque année, il faut produire davantage simplement pour employer les nouveaux actifs et compenser les gains de productivité (on produit autant avec moins de travailleurs). $\bar g$ est cette croissance « de maintien » ; en dessous, le chômage augmente.
+
+**b)** (1 point)
+
+| Croissance du PIB $g$ (%) | −1,0 | 0,5 | 1,5 | 3,0 |
+|---|---:|---:|---:|---:|
+| $g - \bar g$ (points) | −2,5 | −1,0 | 0 | +1,5 |
+| $\Delta u$ (points) | +0,75 | +0,3 | 0 | −0,45 |
+
+Calculs avec $\Delta u = -0{,}3 \times (g - \bar g)$ et $\bar g = 1{,}5$ :
+
+- $g = -1$ : $g - \bar g = -1 - 1{,}5 = -2{,}5$ ; $\Delta u = -0{,}3 \times (-2{,}5) = +0{,}75$ point.
+- $g = 0{,}5$ : $g - \bar g = 0{,}5 - 1{,}5 = -1{,}0$ ; $\Delta u = -0{,}3 \times (-1{,}0) = +0{,}3$ point.
+- $g = 1{,}5$ : $g - \bar g = 1{,}5 - 1{,}5 = 0$ ; $\Delta u = -0{,}3 \times 0 = 0$ : le chômage est stable.
+- $g = 3$ : $g - \bar g = 3 - 1{,}5 = +1{,}5$ ; $\Delta u = -0{,}3 \times 1{,}5 = -0{,}45$ point.
+
+**c)** (1 point) Il faut $\Delta u = -1$, soit $g - \bar g = 1/0{,}3 \approx 3{,}33$ points, donc $g \approx 1{,}5 + 3{,}33 = \mathbf{4{,}8\,\%}$. C'est irréaliste pour la France (croissance moyenne de l'ordre de 1 à 2 % depuis les années 2000). Avec $g = 2{,}5\,\%$ : $\Delta u = -0{,}3 \times 1 = -0{,}3$ point par an ; il faut $1/0{,}3 \approx \mathbf{3{,}3}$ **ans** (le chômage est encore à 6,6 % au bout de 3 ans, l'objectif est atteint au cours de la 4^e^ année).
+
+**d)** (0,5 point) France : $\Delta u = -0{,}3 \times (-2) = \mathbf{+0{,}6}$ point. États-Unis : $\Delta u = -0{,}45 \times (-2) = \mathbf{+0{,}9}$ point. Pour une même récession, le chômage réagit une fois et demie plus aux États-Unis : $\beta$ y est plus élevé, car la protection de l'emploi y est faible et les entreprises ajustent rapidement leurs effectifs (licenciements en récession, embauches en reprise). En France, la protection de l'emploi amortit l'ajustement : les entreprises ajustent d'abord les heures (chômage partiel) plutôt que les effectifs.
+
+**e)** (1 point) Prévision : $\Delta u = -0{,}3 \times (-8 - 1{,}5) = -0{,}3 \times (-9{,}5) = +2{,}85 \approx \mathbf{+2{,}9}$ **points**. Or le chômage BIT a baissé d'environ 0,4 point. Deux explications :
+
+1. **Le chômage partiel** : l'État a pris en charge l'essentiel de la rémunération des salariés dont l'activité était suspendue. Les entreprises ont réduit les **heures** travaillées au lieu de licencier : l'emploi a été préservé.
+2. **La définition du chômage au sens du BIT** : pour être chômeur, il faut rechercher activement un emploi et être disponible. Pendant le confinement, beaucoup de personnes sans emploi ne pouvaient pas chercher : elles ont été classées **inactives** (halo du chômage) et non chômeuses, ce qui a fait baisser mécaniquement le taux de chômage.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Oublier de retrancher $\bar g$ : calculer $-0{,}3 \times (-1) = +0{,}3$ au lieu de $-0{,}3 \times (-2{,}5) = +0{,}75$.
+- Interpréter la baisse du chômage en 2020 comme une amélioration du marché du travail : les heures travaillées se sont effondrées.
+:::
+
+---
+
+## Corrigé de l'exercice 2 (La courbe de Phillips initiale) · /2
+
+**a)** (0,5 point)
+
+| Taux de chômage $u$ (%) | 3 | 4 | 5 | 6 | 7 |
+|---|---:|---:|---:|---:|---:|
+| Inflation $\pi$ (%) | 6,0 | 4,5 | 3,0 | 1,5 | 0,0 |
+
+Calculs avec $\pi = 10{,}5 - 1{,}5\,u$ :
+
+- $u = 3$ : $\pi = 10{,}5 - 1{,}5 \times 3 = 10{,}5 - 4{,}5 = 6{,}0$.
+- $u = 4$ : $\pi = 10{,}5 - 1{,}5 \times 4 = 10{,}5 - 6{,}0 = 4{,}5$.
+- $u = 5$ : $\pi = 10{,}5 - 1{,}5 \times 5 = 10{,}5 - 7{,}5 = 3{,}0$.
+- $u = 6$ : $\pi = 10{,}5 - 1{,}5 \times 6 = 10{,}5 - 9{,}0 = 1{,}5$.
+- $u = 7$ : $\pi = 10{,}5 - 1{,}5 \times 7 = 10{,}5 - 10{,}5 = 0{,}0$.
+
+**b)** (0,5 point) Chaque point de chômage en moins « coûte » **1,5 point d'inflation**. Option $u = 3\,\%$ : quasi plein emploi, mais 6 % d'inflation. Option $u = 7\,\%$ : stabilité des prix ($\pi = 0$), mais chômage élevé. On parle d'**arbitrage** car on ne peut améliorer un objectif qu'en dégradant l'autre : le gouvernement choisit un point du « menu » selon ses préférences.
+
+**c)** (1 point) Entre 1969 et 1975, le chômage passe de 3,5 % à 8,5 % **et** l'inflation de 5,5 % à 9,1 % : les deux augmentent ensemble, contrairement à la relation inverse prévue par la courbe de Phillips initiale. C'est la **stagflation** (stagnation + inflation). Elle s'explique en partie par le **premier choc pétrolier** (1973-1974), choc d'offre qui augmente à la fois les coûts (donc les prix) et réduit la production (donc l'emploi), et par la hausse des anticipations d'inflation.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Lire la pente à l'envers, comme « 1,5 point de chômage par point d'inflation » : dans $\pi = 10{,}5 - 1{,}5\,u$, c'est **1 point de chômage en moins** qui coûte **1,5 point d'inflation** en plus.
+- Croire que la stagflation invalide toute relation entre inflation et chômage : elle invalide la **stabilité** de la courbe (qui se déplace sous l'effet des anticipations et du choc d'offre), pas l'arbitrage de court terme.
+:::
+
+---
+
+## Corrigé de l'exercice 3 (La critique de Friedman) · /6
+
+**a) L'illusion monétaire** (1,5 point)
+
+1. Les salariés **croient** que leur salaire réel augmente de $4 - 2 = +2\,\%$. **En réalité**, il varie de $4 - 6 = -2\,\%$.
+2. Les salariés offrent davantage de travail car ils pensent que leur salaire réel a augmenté (illusion monétaire). Les entreprises embauchent davantage car le salaire réel qu'elles paient, lui, a **baissé** (leurs prix de vente augmentent plus vite que les salaires). L'emploi augmente et le chômage passe sous le NAIRU.
+3. L'année suivante, les salariés constatent que les prix ont augmenté de 6 % : ils révisent leurs anticipations et réclament des hausses de salaire nominal pour rattraper leur perte de pouvoir d'achat. Le salaire réel remonte, l'emploi revient à son niveau initial et le chômage au NAIRU, mais avec des prix plus élevés.
+
+**b) L'accélération** (2 points)
+
+| Date $t$ | 0 | 1 | 2 | 3 | 4 |
+|---|---:|---:|---:|---:|---:|
+| Chômage $u_t$ (%) | 8 | 6 | 6 | 6 | 6 |
+| Inflation anticipée $\pi^a_t$ (%) | 2 | 2 | 3 | 4 | 5 |
+| Inflation observée $\pi_t$ (%) | 2 | 3 | 4 | 5 | 6 |
+
+Calculs avec $\pi^a_t = \pi_{t-1}$ et $\pi_t = \pi^a_t - 0{,}5\,(u_t - 8)$, où $-0{,}5 \times (6 - 8) = -0{,}5 \times (-2) = +1$ à chaque date :
+
+- $t = 1$ : $\pi^a_1 = \pi_0 = 2$ ; $\pi_1 = 2 + 1 = 3$.
+- $t = 2$ : $\pi^a_2 = \pi_1 = 3$ ; $\pi_2 = 3 + 1 = 4$.
+- $t = 3$ : $\pi^a_3 = \pi_2 = 4$ ; $\pi_3 = 4 + 1 = 5$.
+- $t = 4$ : $\pi^a_4 = \pi_3 = 5$ ; $\pi_4 = 5 + 1 = 6$.
+
+1. L'inflation augmente de **1 point par an** : à chaque date, les agents anticipent l'inflation de l'année passée et la politique de relance doit les surprendre à nouveau. Maintenir le chômage sous le NAIRU coûte une inflation qui **accélère** sans fin, pas seulement un niveau d'inflation plus élevé : c'est la thèse accélérationniste.
+2. $\pi_5 = \pi_4 - 0{,}5 \times (8 - 8) = \mathbf{6\,\%}$. L'inflation **ne revient pas** à 2 % : elle se stabilise au niveau atteint.
+3. À long terme, quand les anticipations ont rattrapé l'inflation ($\pi^a = \pi$), le chômage est égal à $u^n$ quel que soit le niveau d'inflation : la courbe de Phillips de long terme est **verticale** en $u^n = 8\,\%$. Le « menu » de l'exercice 2 n'existe plus qu'à court terme, tant que les anticipations sont fausses.
+
+**c) Le coût de la désinflation** (2,5 points)
+
+1. Baisse de 1 point par an : $-1 = -0{,}5 \times (u - 8)$, donc $u = \mathbf{10\,\%}$ pendant 4 ans.
+2. Baisse de 2 points par an : $-2 = -0{,}5 \times (u - 8)$, donc $u = \mathbf{12\,\%}$ pendant 2 ans.
+3. Stratégie progressive : $4 \times (10 - 8) = 8$ points-années. Stratégie brutale : $2 \times (12 - 8) = 8$ points-années. Le coût total est **identique** ; seule sa répartition dans le temps change. Ratio de sacrifice : $8/4 = \mathbf{2}$ points-années de chômage par point d'inflation gagné.
+4. Oui : la désinflation Volcker s'accompagne d'une forte hausse du chômage, qui atteint 9,7 % en moyenne en 1982 (10,8 % en décembre), bien au-dessus du chômage naturel américain (de l'ordre de 6 %). Avec des anticipations qui s'ajustent lentement, réduire l'inflation exige de maintenir le chômage au-dessus du NAIRU pendant plusieurs années, comme le prévoit l'analyse de Friedman.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Croire qu'en arrêtant la relance l'inflation revient d'elle-même à son niveau initial : avec des anticipations adaptatives, elle reste au niveau atteint.
+- Confondre « inflation élevée » et « inflation qui accélère » : c'est la **variation** de l'inflation qui dépend de l'écart du chômage au NAIRU.
+:::
+
+---
+
+## Corrigé de l'exercice 4 (NEC et NEK) · /5
+
+**a) NEC, politique annoncée** (0,5 point) L'annonce est crédible et les anticipations rationnelles : $\pi^a = 4\,\%$. Alors $4 = 4 - 0{,}5\,(u - 8)$, donc $u = \mathbf{8\,\%}$. La politique **n'a aucun effet réel**, même à court terme : seule l'inflation augmente.
+
+**b) NEC, politique surprise** (1 point) $3 = 2 - 0{,}5\,(u - 8)$, donc $u - 8 = -2$ et $u = \mathbf{6\,\%}$. La surprise a un effet réel, mais seulement **transitoire** : les agents rationnels comprennent que la banque centrale a intérêt à les surprendre et intègrent ce comportement dans leurs anticipations. Une surprise répétée devient prévisible, donc anticipée, donc sans effet ; et la banque centrale perd sa **crédibilité**.
+
+**c) NEK : des prix rigides** (2 points)
+
+1. Inflation de l'année 1, en plus de l'inflation tendancielle de 2 % : $0{,}6 \times 5 + 0{,}4 \times 0 = \mathbf{3}$ **points** (soit 5 % d'inflation observée).
+2. Croissance réelle supplémentaire : $5 - 3 = \mathbf{+2}$ **points** par rapport à la tendance.
+3. $\Delta u = -0{,}3 \times 2 = \mathbf{-0{,}6}$ **point** de chômage.
+4. Année 2 : les 40 % d'entreprises restantes augmentent leurs prix de 5 %, soit une inflation supplémentaire de $0{,}4 \times 5 = 2\,\%$ alors que la dépense nominale ne croît plus. La production réelle diminue de 2 points par rapport à l'année 1 et revient à sa **tendance** ; le chômage remonte de 0,6 point et revient à son **niveau initial**. Au total, les prix ont augmenté de 5 %, la production et l'emploi n'ont pas changé : effet réel transitoire, neutralité à long terme.
+
+**d)** (1 point) Si toutes les entreprises ajustent leurs prix : inflation de **5 %** dès l'année 1, croissance réelle supplémentaire $5 - 5 = 0$, $\Delta u = 0$. C'est le résultat de la NEC. Ce qui redonne un effet réel de court terme dans la NEK, ce n'est pas une erreur d'anticipation (tout le monde a anticipé la politique), c'est la **rigidité des prix** : une partie des entreprises ne peut pas ajuster immédiatement ses prix, donc la hausse de la dépense nominale se traduit en partie par une hausse de la production.
+
+**e)** (0,5 point) Dans la courbe de Phillips, l'inflation dépend de l'inflation **anticipée**. Si la banque centrale est crédible et que les anticipations restent ancrées à 2 %, une poussée d'inflation temporaire ne s'auto-entretient pas, et une désinflation coûte peu de chômage (le ratio de sacrifice de l'exercice 3 venait d'anticipations qui s'ajustent lentement). Annoncer une cible et communiquer sur les taux futurs permet donc d'agir sur l'inflation **par les anticipations**, avant même de modifier les taux.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Croire que NEC et NEK s'opposent sur les anticipations : les deux supposent des anticipations **rationnelles** ; elles s'opposent sur la **flexibilité des prix**.
+- Conclure que la NEK donne un effet réel durable à la politique monétaire : à long terme, la courbe de Phillips reste verticale.
+:::
+
+---
+
+## Corrigé de l'exercice 5 (Synthèse) · /3
+
+| | Keynésiens (années 1960) | Friedman-Phelps (anticipations adaptatives) | NEC (Lucas, Sargent) | NEK (Taylor, Calvo, Woodford) |
+|---|---|---|---|---|
+| Anticipations | Non prises en compte | Adaptatives (fondées sur l'inflation passée) | Rationnelles | Rationnelles |
+| Prix et salaires | Rigides | Flexibles, mais anticipations en retard | Parfaitement flexibles | Rigides à court terme |
+| Courbe de Phillips de court terme | Décroissante (arbitrage) | Décroissante (pour $\pi^a$ donné) | Verticale pour une politique anticipée ; décroissante seulement pour une surprise | Décroissante |
+| Courbe de Phillips de long terme | Décroissante (arbitrage durable) | Verticale en $u^n$ | Verticale en $u^n$ | Verticale en $u^n$ |
+| Effet réel d'une politique monétaire annoncée, à court terme | Oui | Oui (les anticipations adaptatives ignorent l'annonce) | Non | Oui (prix rigides) |
+| Effet réel à long terme | Oui | Non | Non | Non |
+
+(2 points pour le tableau ; 1 point pour la question de réflexion.)
+
+**Question de réflexion : éléments attendus.** Introduction : définir la politique monétaire, le chômage naturel (NAIRU) et poser l'enjeu (effet de court terme contre effet durable). Développement : (i) la courbe de Phillips initiale laissait croire à un arbitrage durable ; (ii) avec Friedman, l'effet n'est que transitoire et le maintien du chômage sous le NAIRU fait accélérer l'inflation (exercice 3 b) ; (iii) la NEC supprime même l'effet de court terme d'une politique anticipée, la NEK le rétablit grâce aux prix rigides, mais il disparaît quand les prix s'ajustent (exercice 4) ; (iv) la loi d'Okun relie ces effets transitoires de production au chômage (exercice 4 c). Conclusion : la politique monétaire stabilise le chômage autour de $u^n$ mais ne peut pas le réduire durablement ; seules des politiques **structurelles** (institutions du marché du travail, formation, appariement) peuvent abaisser $u^n$ lui-même (modèle WS-PS, CM 8).
+
+::: {.callout-warning}
+## Pièges fréquents
+- Attribuer la courbe de Phillips décroissante de long terme à Friedman : c'est précisément ce qu'il réfute.
+- Oublier que l'inefficacité de long terme fait consensus depuis Friedman : les débats portent sur le **court terme**.
+:::

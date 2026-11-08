@@ -34,6 +34,13 @@ td/*_files*
 !/td/corrections/td1-corrige.qmd
 !/td/corrections/td2-corrige.qmd
 !/td/corrections/td3-corrige.qmd
+!/td/corrections/td4-corrige.qmd
+!/td/corrections/td5-corrige.qmd
+!/td/corrections/td5-1-corrige.qmd
+!/td/corrections/td6-corrige.qmd
+!/td/corrections/td6-1-corrige.qmd
+!/td/corrections/td7-corrige.qmd
+!/td/corrections/td8-corrige.qmd
 
 # --- Banques de questions Wooclap : contiennent la colonne des bonnes
 # réponses. Exclues pour les mêmes raisons que td/corrections/. ---

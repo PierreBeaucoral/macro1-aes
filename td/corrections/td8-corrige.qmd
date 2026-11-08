@@ -1,0 +1,66 @@
+---
+title: "Corrigé du TD 8 : Contrôle continu blanc 2 (entraînement)"
+subtitle: "Flexisécurité, coût du travail et réformes du marché du travail en France"
+description: "Barème détaillé de l'entraînement CC2 : les réponses exemples rédigées se trouvent directement dans le sujet, sous chaque question."
+---
+
+::: {.callout-important}
+Ce corrigé accompagne le [sujet d'entraînement TD 8](../td8.qmd), qui n'est **pas** le sujet du contrôle continu noté (voir l'encadré en tête du sujet).
+:::
+
+::: {.callout-note}
+Les **réponses exemples rédigées**, avec justification complète et pièges fréquents, sont intégrées directement dans le sujet, dans un encadré repliable « Réponse exemple » après chaque question ou groupe de questions : voir [TD 8](../td8.qmd). Ce document ne reprend que le **barème détaillé**, pour vous permettre de vous auto-évaluer une fois votre réponse rédigée.
+:::
+
+## Exercice 1 : QCM (4 points ; 0,5 point par question)
+
+| Question | Thème | Réponse |
+|---|---|---:|
+| 1 | Le triangle d'or danois | d |
+| 2 | Flexibilité fonctionnelle | c |
+| 3 | WS-PS : hausse du pouvoir de négociation syndicale | a |
+| 4 | Ordonnances Macron (2017) : axe de réforme | b |
+| 5 | Trappe à inactivité | a |
+| 6 | Bassanini et Duval (2006) : effet différencié selon l'âge | b |
+| 7 | RSA-activité vers prime d'activité | c |
+| 8 | Sécurité de l'employabilité | a |
+
+: Grille de correction du QCM. Justifications complètes : voir le [sujet, exercice 1](../td8.qmd). {.striped}
+
+## Exercice 2 : Lecture de graphique, la trappe à inactivité (4 points)
+
+Barème détaillé : description et comparaison des deux courbes, pente et écart croissant, avec un calcul à l'appui, par exemple à 700 € de revenu d'activité : 740 € contre 1 055 €, soit 315 € d'écart (1 point) + calcul du taux marginal de prélèvement implicite (TMPI = 80 % pour le dispositif ancien, 35 % pour le dispositif réformé) et explication du lien avec la trappe à inactivité (1,5 point) + identification de l'axe « activation » et discussion du rôle du taux de non-recours (1,5 point). Réponse exemple rédigée complète : voir le [sujet, exercice 2](../td8.qmd).
+
+## Exercice 3 : Exercice analytique, modèle WS-PS (7 points)
+
+Résultats numériques attendus (à partir de $\lambda = 1$, $m = 0{,}60$, WS$_0$ : $0{,}95 - 0{,}025u$, WS$_1$ : $0{,}85 - 0{,}025u$) :
+
+| Grandeur | Valeur initiale | Valeur après la mesure |
+|---|---:|---:|
+| $PS = \lambda/(1+m)$ | 0,625 | 0,625 (inchangé) |
+| Taux de chômage d'équilibre $u^\ast$ | 13 | 9 |
+| Coût réel du travail d'équilibre $(W/P)^\ast$ | 0,625 | 0,625 (inchangé) |
+| Salaire perçu par les salariés, WS$_0(u^\ast)$ | 0,625 | 0,725 (+0,10) |
+
+: Résultats attendus de l'exercice analytique. {.striped}
+
+Barème détaillé : a) calcul de PS et de $u^{*}_0$ (1,5) ; b) représentation graphique correcte des deux courbes et de l'équilibre initial (1) ; c) calcul de $u^{*}_1$ et du nouveau salaire réel (1,5) ; d) interprétation correcte (le coût réel du travail est fixé par PS et reste à 0,625 ; pas de gain de marge pour les entreprises ; gain de salaire perçu pour les salariés en poste, $0{,}95 - 0{,}025 \times 9 = 0{,}725$, soit +0,10 ; bénéfice pour les chômeurs via la baisse de $u^{*}$ de 13 à 9) (1,5) ; e) discussion du canal de financement comme choc de demande négatif dans le cadre OA-DA (1,5). Corrigé rédigé complet, avec figure et piège fréquent : voir le [sujet, exercice 3](../td8.qmd).
+
+## Exercice 4 : Question de réflexion (5 points)
+
+| Critère | Points |
+|---|---|
+| Introduction problématisée et plan apparent (2 parties + conclusion) | 1 |
+| Mobilisation correcte de la typologie des trois modèles et du triangle d'or | 1,5 |
+| Éléments de comparaison chiffrée France/Danemark (protection de l'emploi, dépenses ALMP) | 1 |
+| Bilan critique des réformes françaises récentes au regard des trois axes | 1 |
+| Qualité rédactionnelle (syntaxe, paragraphes, absence de style télégraphique) | 0,5 |
+
+: Barème indicatif de la question de réflexion. {.striped}
+
+Élément de corrigé rédigé complet (introduction, deux parties, conclusion) : voir le [sujet, exercice 4](../td8.qmd).
+
+::: {.callout-tip}
+## Pour progresser
+Si votre score global est inférieur à 14/20, relisez en priorité le [chapitre III](../../cours/chap3.qmd) (flexisécurité, trois modèles, trois axes de réforme) et la section §2.3 du [chapitre II](../../cours/chap2.qmd) (modèle WS-PS), puis refaites cet entraînement une seconde fois sans consulter les réponses exemples avant d'avoir rédigé une réponse complète.
+:::

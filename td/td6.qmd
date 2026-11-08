@@ -4,6 +4,13 @@ subtitle: "Demande effective, chômage involontaire, loi d'Okun et courbe de Phi
 description: "Dossier de TD : critique keynésienne du marché du travail, calcul du coefficient d'Okun et lecture de la courbe de Phillips augmentée des anticipations (NAIRU)."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 6](corrections/td6-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 **Objectifs de la séance**
 
@@ -33,20 +40,20 @@ description: "Dossier de TD : critique keynésienne du marché du travail, calcu
 **b)** QCM : une seule bonne réponse par question.
 
 7. Selon Keynes, ce qui gouverne les décisions d'embauche des entreprises est :
-   a) le salaire réel d'équilibre b) la **demande effective** anticipée sur le marché des biens c) le taux d'intérêt réel d) la productivité marginale du travail
+   a) le salaire réel d'équilibre b) le taux d'intérêt réel c) la demande effective anticipée sur le marché des biens d) la productivité marginale du travail
 
 8. Le NAIRU correspond :
-   a) au taux de chômage qui fait accélérer l'inflation b) au taux de chômage compatible avec une inflation **stable** c) à un taux de chômage strictement conjoncturel d) à la différence entre chômage observé et chômage structurel
+   a) au taux de chômage compatible avec une inflation stable b) au taux de chômage qui fait accélérer l'inflation c) à un taux de chômage strictement conjoncturel d) à la différence entre chômage observé et chômage structurel
 
 9. Selon la théorie des anticipations rationnelles :
-   a) l'arbitrage inflation-chômage subsiste indéfiniment, même annoncé b) l'arbitrage disparaît **même à court terme** si la politique est anticipée c) les politiques monétaires expansives stimulent durablement l'emploi d) l'inflation anticipée est toujours inférieure à l'inflation observée
+   a) l'arbitrage inflation-chômage subsiste indéfiniment, même annoncé b) les politiques monétaires expansives stimulent durablement l'emploi c) l'inflation anticipée est toujours inférieure à l'inflation observée d) l'arbitrage disparaît même à court terme si la politique est anticipée
 
 10. Le coefficient d'Okun mesure :
-    a) le niveau du taux de chômage naturel b) la **sensibilité** de la variation du chômage à un point de croissance supplémentaire c) l'écart entre chômage volontaire et involontaire d) la pente de la courbe de Phillips de long terme
+    a) le niveau du taux de chômage naturel b) la sensibilité de la variation du chômage à un point de croissance supplémentaire c) l'écart entre chômage volontaire et involontaire d) la pente de la courbe de Phillips de long terme
 
 ::: {.callout-tip collapse="true"}
 ## Indice
-Pour les questions 1 à 6, repartez de l'encadré « quatre ruptures avec l'analyse néoclassique » du CM 6 et de l'équation $\pi = \pi^a - a(u-u^n)$ du CM 7 : le signe de chaque relation (positive/négative) est la clé de la plupart des pièges.
+Pour les questions 1 à 10, repartez du cours (chap. 2, §2.2) : la définition de la **demande effective**, le paragraphe « Implication de politique économique » (et celui qui le suit sur la hausse des salaires) pour le CM 6, les définitions de la **loi d'Okun** et du **NAIRU** et l'équation $\pi = \pi^a - a(u-u^n)$ pour le CM 7. Le signe de chaque relation (positive/négative) est la clé de la plupart des pièges.
 :::
 
 ---
@@ -63,7 +70,7 @@ Le tableau suivant reporte le coefficient d'Okun $\beta$ estimé pour cinq pays,
 | Allemagne | 0,20 | 0,20 |
 | Japon | 0,02 | 0,07 |
 
-*Source : Blanchard et Cohen (2017), d'après CORE (2018).*
+*Source : Blanchard et Cohen (2017), Macroéconomie.*
 
 **Questions.**
 
@@ -112,32 +119,41 @@ pi_B <- pi_a_B - a * (u - un)
 df_phil <- data.frame(
   u = rep(u, 2),
   pi = c(pi_A, pi_B),
-  scenario = rep(c("Scénario A : anticipations ancrées (pi_a = 1 %)",
-                    "Scénario B : anticipations élevées (pi_a = 4 %)"), each = length(u))
+  scenario = rep(c("A", "B"), each = length(u))
+)
+
+# Libellés en plotmath : pi^a et u^n s'affichent en exposant
+lab_scenarios <- c(
+  expression("Scénario A : anticipations ancrées (" * pi^a * " = 1 %)"),
+  expression("Scénario B : anticipations élevées (" * pi^a * " = 4 %)")
 )
 
 ggplot() +
   geom_line(data = df_phil, aes(x = u, y = pi, color = scenario), linewidth = 1.1) +
   geom_vline(xintercept = un, linetype = "dashed", color = macro_pal[["vert"]], linewidth = 0.7) +
-  annotate("text", x = un + 0.15, y = 6.5, label = "Long terme :\nu = un = 8 %",
+  annotate("text", x = un + 0.15, y = 7.2, label = "Long terme :",
            hjust = 0, size = 3.4, color = macro_pal[["vert"]]) +
-  scale_color_manual(values = c(
-    "Scénario A : anticipations ancrées (pi_a = 1 %)" = macro_pal[["bleu"]],
-    "Scénario B : anticipations élevées (pi_a = 4 %)" = macro_pal[["rouge"]])) +
+  annotate("text", x = un + 0.15, y = 6.4, label = "u == u^n * ' = 8 %'", parse = TRUE,
+           hjust = 0, size = 3.4, color = macro_pal[["vert"]]) +
+  scale_color_manual(values = c(A = macro_pal[["bleu"]], B = macro_pal[["rouge"]]),
+                     breaks = c("A", "B"), labels = lab_scenarios) +
+  guides(color = guide_legend(nrow = 2)) +
   coord_cartesian(xlim = c(4, 12), ylim = c(-3, 9), expand = FALSE) +
-  labs(x = "Taux de chômage (u, %)", y = "Taux d'inflation (pi, %)") +
+  labs(x = "Taux de chômage (u, %)", y = expression(bold("Taux d'inflation (" * pi * ", %)"))) +
   theme_macro()
 ```
 
 **Questions sur la figure.**
 
-5. Un gouvernement du scénario A souhaite ramener durablement le chômage à 6 %. D'après la figure, que doit-il accepter à court terme ? Que se passe-t-il ensuite si les agents révisent leurs anticipations à la hausse ?
-6. Représentez (mentalement ou sur brouillon) le passage du scénario A au scénario B sur le graphique : dans quel sens la courbe de court terme se déplace-t-elle ? Ce déplacement modifie-t-il la position de la droite de long terme ?
-7. En une phrase, expliquez pourquoi ce graphique illustre l'idée que « la politique monétaire n'a pas d'effet réel durable ».
+**c1.** Un gouvernement du scénario A souhaite ramener durablement le chômage à 6 %. D'après la figure, que doit-il accepter à court terme ? Que se passe-t-il ensuite si les agents révisent leurs anticipations à la hausse ?
+
+**c2.** Représentez (mentalement ou sur brouillon) le passage du scénario A au scénario B sur le graphique : dans quel sens la courbe de court terme se déplace-t-elle ? Ce déplacement modifie-t-il la position de la droite de long terme ?
+
+**c3.** En une phrase, expliquez pourquoi ce graphique illustre l'idée que « la politique monétaire n'a pas d'effet réel durable ».
 
 ::: {.callout-tip collapse="true"}
 ## Indice
-Pour la question 5, repérez le point d'intersection entre $u=6\,\%$ et la droite du scénario A avant de raisonner sur le déplacement de la courbe.
+Pour la question c1, repérez le point d'intersection entre $u=6\,\%$ et la droite du scénario A avant de raisonner sur le déplacement de la courbe.
 :::
 
 ---
@@ -162,7 +178,7 @@ Une bonne copie : (i) pose le raisonnement néoclassique de départ (baisse du c
 ::: {.callout-tip}
 ## Ressources complémentaires
 - Blanchard et Cohen (2017), *Macroéconomie*, chapitre sur la relation croissance-chômage : pour l'estimation détaillée des coefficients d'Okun par pays.
-- Article : *« La reprise sans emplois remet-elle en cause la loi d'Okun ? »*, blog Illusio : lecture courte sur les limites de la loi d'Okun après les récessions récentes.
+- Ball, Leigh et Loungani (2013), [*Okun's Law: Fit at 50?*](https://www.imf.org/external/pubs/ft/wp/2013/wp1310.pdf), document de travail du FMI n° 13/10 (en anglais) : la loi d'Okun testée sur les États-Unis depuis 1948 et sur vingt pays avancés depuis 1980 ; la relation résiste à la Grande Récession et les « reprises sans emplois » ne la remettent pas en cause.
 - Vidéo : rechercher « courbe de Phillips expliquée » sur une chaîne d'économie grand public (Heu?reka, Osons Causer) pour une explication visuelle du passage court terme/long terme.
-- Pour réviser le CC1 avant sa correction en séance : reprenez vos réponses aux trois sujets d'examen distribués en séance 4 et notez vos points de blocage.
+- Pour réviser le CC1 avant sa correction en séance : reprenez vos réponses au sujet du CC1 (séance 4) et notez vos points de blocage.
 :::

@@ -1,0 +1,136 @@
+---
+title: "Corrigé du TD 7 : Appariement & trappe à inactivité"
+subtitle: "Éléments de correction et barème indicatif"
+description: "Corrigé détaillé du TD 7 : courbe de Beveridge, tension θ, équilibre du modèle DMP, barème du RSA et taux marginal de prélèvement implicite."
+---
+
+::: {.callout-note}
+## Usage
+Corrigé destiné à l'enseignant et distribué après la séance. Les barèmes sont indicatifs (sur 20).
+:::
+
+# Exercice 1 : Définitions et QCM *(5 points)*
+
+## 1.1 Définitions courtes *(2 pts, 0,5 chacune)*
+
+1. **Courbe de Beveridge** : relation empirique **décroissante** entre le taux de chômage $u$ et le taux d'emplois vacants $v$ : quand la conjoncture se dégrade, le chômage augmente et les emplois vacants diminuent.
+2. **Tension du marché du travail** $\theta = v/u$ : nombre d'emplois vacants par chômeur ; elle mesure la facilité, pour un chômeur, de retrouver un emploi (et la difficulté, pour une entreprise, de pourvoir un poste).
+3. **Plein emploi au sens de Beveridge** : situation où le nombre de chômeurs égale le nombre d'emplois vacants ($u = v$, soit $\theta = 1$) ; le chômage qui subsiste ne relève pas d'une insuffisance de la demande globale mais d'un problème d'appariement (chômage frictionnel et/ou d'inadéquation).
+4. **Chômage frictionnel** : chômage de courte durée lié au temps de recherche et d'appariement entre offres et demandes d'emploi, dans un marché par ailleurs équilibré. Il diffère du **chômage d'inadéquation** (*mismatch*), qui provient d'un décalage durable de qualifications ou de localisation entre les emplois offerts et les chômeurs, et déplace la courbe de Beveridge vers l'extérieur.
+
+## 1.2 QCM *(3 pts, ~0,43 par question)*
+
+| Q | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| **Réponse** | **b** | **c** | **a** | **d** | **c** | **a** | **d** |
+
+Justifications express : **(1) b** : relation décroissante entre $u$ et $v$ par définition ; (c) porte sur le salaire réel, pas sur les emplois vacants. **(2) c** : $u=v$ (soit $\theta = 1$) = plein emploi de Beveridge, sans tension particulière ; (a) est faux, le chômage n'y est pas nul (il reste du chômage frictionnel et d'inadéquation). **(3) a** : $\theta$ élevé = beaucoup de vacants par chômeur → il est plus facile pour un chômeur de retrouver un emploi ; (b) est faux, pour une entreprise il devient au contraire plus difficile de pourvoir un poste. **(4) d** : un choc de demande positif fait glisser l'économie *le long* de la courbe vers le haut-gauche (plus de vacants, moins de chômage) ; (a) décrit un choc de demande négatif et (b) une dégradation structurelle de l'appariement. **(5) c** : un déplacement *vers l'extérieur* traduit une dégradation de l'appariement (inadéquation, hystérèse) ; (b) est faux, le chômage structurel augmente au lieu de baisser. **(6) a** : un $\theta$ élevé renforce le pouvoir de négociation des salariés → salaire réel plus élevé (courbe des salaires croissante). **(7) d** : les deux leviers issus des modèles d'appariement : flexibiliser les créations/destructions et améliorer l'efficacité de l'appariement ; (a), (b) et (c) relèvent d'autres cadres (fiscalité, indexation, politique monétaire et budgétaire).
+
+::: {.callout-warning}
+## Pièges fréquents
+Confondre un déplacement **le long** de la courbe (choc conjoncturel de demande, Q4) avec un déplacement **de** la courbe (dégradation structurelle de l'appariement, Q5). Le taux de chômage peut augmenter dans les deux cas, mais le diagnostic, et la politique à mener, sont opposés.
+:::
+
+---
+
+# Exercice 2 : Lecture de données et de graphique *(4 points)*
+
+## 2.1 Courbe de Beveridge *(2 pts)*
+
+Points : $A(u=6,\;v=4)$, $B(u=9{,}6,\;v=2{,}5)$, $C(u=9{,}6,\;v=4)$. La courbe est $v = 24/u$.
+
+1. $\theta_A = v/u = 4/6 = 0{,}666\ldots \approx \mathbf{0{,}67}$ ; $\theta_B = 2{,}5/9{,}6 = 0{,}2604\ldots \approx \mathbf{0{,}26}$. **A** correspond à la conjoncture la plus favorable : tension plus forte (davantage de vacants par chômeur) et chômage plus faible.
+2. Oui : $24/6 = 4$ (point A) et $24/9{,}6 = 2{,}5$ (point B) vérifient tous deux $v = 24/u$. Le passage de A à B est un **déplacement le long** de la même courbe (vers le bas-droite) : une **dégradation conjoncturelle** (choc de demande négatif), sans modification du processus d'appariement.
+3. En C, il faut désormais $v = 4$ emplois vacants pour un chômage de $9{,}6\,\%$, alors que la courbe n'en « demandait » que $2{,}5$ : la courbe s'est **déplacée vers l'extérieur**. Le processus d'appariement s'est **détérioré**. Deux causes possibles : (i) inadéquation croissante des qualifications ou de la localisation (*mismatch*) ; (ii) hystérèse / perte d'employabilité des chômeurs de longue durée (baisse de l'intensité de recherche).
+
+## 2.2 Données DARES *(2 pts)*
+
+1. La part des demandeurs d'emploi **sans aucune couverture ni RSA** est de **21 %** pour l'ensemble ; **39 %** chez les moins de 25 ans contre **17 %** chez les 50 ans ou plus, soit un écart de $39 - 17 = 22$ points (une part $39/17 \approx 2{,}3$ fois plus élevée). Les jeunes sont surexposés car ils n'ont pas cotisé assez longtemps pour ouvrir des droits à l'assurance chômage (condition d'affiliation minimale), et le RSA leur est en principe fermé avant 25 ans (sauf charge de famille ou activité antérieure suffisante, cours, chapitre III) : d'où seulement 3 % de bénéficiaires du RSA chez les moins de 25 ans.
+2. Part des non-indemnisables percevant le RSA : $12/39 = 0{,}3077\ldots \approx 30{,}8\,\% \approx \mathbf{31\,\%}$.
+3. Effet **ambigu** : l'absence totale de revenu peut *accélérer* le retour à l'emploi (pression financière forte → baisse du salaire de réserve → acceptation plus rapide d'un emploi) ; mais elle peut aussi le *freiner* (manque de ressources pour rechercher : transport, garde d'enfants, découragement, exclusion des dispositifs d'accompagnement liés à l'indemnisation).
+
+::: {.callout-note}
+## Note de barème (2.2, question 1)
+Réponse attendue : **21 %** (ligne « non bénéficiaires du RSA »). Accepter **27 %** ($21 + 6$) uniquement si la copie justifie explicitement qu'elle compte aussi les inscrits en catégorie D ou E comme non couverts. Les sous-lignes ne somment pas toujours exactement au total, à cause des arrondis (moins de 25 ans : $3 + 39 + 6 = 48$ pour 49 ; colonne 25-49 ans : $52 + 8 + 39 = 99$) : ne pas pénaliser une copie qui le relève.
+:::
+
+::: {.callout-warning}
+## Pièges fréquents
+- Confondre les 12 % de l'**ensemble** des demandeurs d'emploi qui perçoivent le RSA avec la part des **non-indemnisables** qui le perçoivent : $12/39 \approx 31\,\%$, et non 12 %.
+- Lire le passage de B à C comme un déplacement le long de la courbe parce que C a le même chômage que B : à $u = 9{,}6\,\%$, la courbe initiale donne $v = 24/9{,}6 = 2{,}5$ ; C, avec $v = 4$, est au-dessus de la courbe, donc sur une **autre** courbe de Beveridge (déplacement vers l'extérieur).
+:::
+
+---
+
+# Exercice 3 : Équilibre du modèle DMP *(5 points)*
+
+## 3.1 *(3 pts)*
+
+1. **Signes des pentes.** La **demande de travail** est décroissante en $\theta$ : un salaire réel élevé réduit la rentabilité d'un poste, donc le nombre de postes vacants créés par les entreprises, donc la tension $\theta$ (lu dans l'autre sens : les entreprises n'ouvrent beaucoup de postes, $\theta$ élevé, que si le salaire réel est bas). On peut ajouter que, sur un marché tendu, un poste vacant met plus de temps à être pourvu, ce qui renchérit encore le coût d'une embauche. La **courbe des salaires** est croissante en $\theta$ : une tension élevée augmente la probabilité pour un chômeur de retrouver un emploi, ce qui renforce son pouvoir de négociation et pousse le salaire réel à la hausse.
+2. **Résolution.** On égalise les deux relations :
+$$1 - 0{,}2\,\theta = 0{,}2 + 0{,}2\,\theta \;\Longrightarrow\; 1 - 0{,}2 = 0{,}2\,\theta + 0{,}2\,\theta \;\Longrightarrow\; 0{,}8 = 0{,}4\,\theta \;\Longrightarrow\; \theta^{*} = \frac{0{,}8}{0{,}4} = \boxed{2}$$
+d'où $(W/P)^{*} = 1 - 0{,}2 \times 2 = 1 - 0{,}4 = \boxed{0{,}6}$ (vérification : $0{,}2 + 0{,}2 \times 2 = 0{,}6$ ✓).
+3. Le point $E(\theta^{*}=2,\;(W/P)^{*}=0{,}6)$ est bien à l'intersection des deux droites sur le graphique de l'énoncé.
+
+## 3.2 Choc sur les revenus de remplacement *(2 pts)*
+
+1. C'est la **courbe des salaires** qui se déplace **vers le haut** : une indemnisation plus généreuse relève le salaire de réserve, donc le salaire négocié à chaque niveau de $\theta$. La demande de travail est inchangée.
+2. Nouvel équilibre : $1 - 0{,}2\,\theta = 0{,}35 + 0{,}2\,\theta \Rightarrow 1 - 0{,}35 = 0{,}4\,\theta \Rightarrow 0{,}65 = 0{,}4\,\theta \Rightarrow \theta^{*\prime} = 0{,}65/0{,}4 = \mathbf{1{,}625}$ et $(W/P)^{*\prime} = 1 - 0{,}2 \times 1{,}625 = 1 - 0{,}325 = \mathbf{0{,}675}$ (vérification : $0{,}35 + 0{,}325 = 0{,}675$ ✓).
+3. La tension **baisse** ($2 \to 1{,}625$). Comme $\theta = v/u$, à emplois vacants $v$ inchangés, une baisse de $\theta$ implique une **hausse du taux de chômage** $u$. Chiffrage : $u = v/\theta$, donc à $v$ constant $u'/u = \theta^{*}/\theta^{*\prime} = 2/1{,}625 = 1{,}2307\ldots \approx 1{,}23$ : le taux de chômage augmente d'environ **23 %** (en proportion de son niveau initial). Interprétation : des revenus de remplacement plus généreux relèvent le coût salarial et réduisent la création d'emplois → le **chômage d'équilibre augmente**. Dans le modèle complet (cours, chapitre II, bouclage par la courbe de Beveridge), $v$ ne reste d'ailleurs pas constant : la baisse de $\theta$ fait pivoter le rayon $v = \theta u$ vers le bas, et l'économie glisse le long de la courbe de Beveridge vers le bas-droite : le chômage augmente **et** les emplois vacants diminuent.
+
+::: {.callout-warning}
+## Pièges fréquents
+Écrire que « le salaire baisse » : ici le salaire réel d'équilibre **augmente** ($0{,}6 \to 0{,}675$) tandis que l'emploi diminue. Le déplacement de la seule courbe des salaires fait remonter l'équilibre le long de la courbe de demande (décroissante).
+:::
+
+---
+
+# Exercice 4 : Trappe à inactivité *(6 points)*
+
+## 4.1 Barème du RSA *(3 pts)*
+
+1. $\text{RSA} = (M + 0{,}62\,y) - y = M - (1 - 0{,}62)\,y = M - 0{,}38\,y$, borné à zéro, soit $\text{RSA}(y) = \max(0\,;\,600 - 0{,}38\,y)$.
+2. Revenu disponible $= y + \text{RSA}(y)$. Calcul pour chaque colonne (le RSA reste positif sur toute la plage, le plancher à zéro ne joue pas) :
+    - $y = 0$ : $\text{RSA} = 600 - 0{,}38 \times 0 = 600$ € ; revenu disponible $= 0 + 600 = 600$ €.
+    - $y = 300$ : $\text{RSA} = 600 - 0{,}38 \times 300 = 600 - 114 = 486$ € ; revenu disponible $= 300 + 486 = 786$ €.
+    - $y = 600$ : $\text{RSA} = 600 - 0{,}38 \times 600 = 600 - 228 = 372$ € ; revenu disponible $= 600 + 372 = 972$ €.
+    - $y = 900$ : $\text{RSA} = 600 - 0{,}38 \times 900 = 600 - 342 = 258$ € ; revenu disponible $= 900 + 258 = 1\,158$ €.
+
+| $y$ | 0 € | 300 € | 600 € | 900 € |
+|---|---|---|---|---|
+| RSA$(y)$ | 600 | 486 | 372 | 258 |
+| Revenu disponible | 600 | 786 | 972 | 1 158 |
+
+3. **Taux marginal de prélèvement implicite.** Palier par palier, le RSA baisse de : $486 - 600 = -114$ € (de 0 à 300 €), $372 - 486 = -114$ € (de 300 à 600 €), $258 - 372 = -114$ € (de 600 à 900 €). Le taux marginal implicite est donc, sur chaque palier, $114/300 = 0{,}38 = \mathbf{38\,\%}$. De façon équivalente, le revenu disponible progresse de $786 - 600 = 972 - 786 = 1\,158 - 972 = 186$ € par palier : le ménage conserve $186/300 = 0{,}62 = 62\,\%$ de chaque euro gagné, soit un taux implicite de $1 - 0{,}62 = 0{,}38$. C'est la part de chaque euro d'activité supplémentaire « reprise » par la baisse du RSA.
+4. Le RSA s'annule pour $600 - 0{,}38\,y = 0 \Rightarrow 0{,}38\,y = 600 \Rightarrow y = 600/0{,}38 = 1\,578{,}9\ldots \approx \mathbf{1\,579\ \text{€}}$.
+
+## 4.2 Comparaison avec un retrait à 100 % *(2 pts)*
+
+1. $\text{RMI}(y) = \max(0\,;\,600 - y)$, donc revenu disponible $= y + \text{RMI}(y) = 600$ tant que $y \le 600$, puis $= y$ ensuite. Calcul pour chaque colonne :
+    - $y = 0$ : $\text{RMI} = 600 - 0 = 600$ € ; revenu disponible $= 0 + 600 = 600$ €.
+    - $y = 300$ : $\text{RMI} = 600 - 300 = 300$ € ; revenu disponible $= 300 + 300 = 600$ €.
+    - $y = 600$ : $\text{RMI} = 600 - 600 = 0$ € ; revenu disponible $= 600 + 0 = 600$ €.
+    - $y = 900$ : $\text{RMI} = \max(0\,;\,600 - 900) = \max(0\,;\,-300) = 0$ € ; revenu disponible $= 900 + 0 = 900$ €.
+
+| $y$ | 0 € | 300 € | 600 € | 900 € |
+|---|---|---|---|---|
+| RMI$(y)$ | 600 | 300 | 0 | 0 |
+| Revenu disponible (RMI) | 600 | 600 | 600 | 900 |
+
+2. Gain net d'un passage de $y=0$ à $y=300$ € : sous le RMI, $600 - 600 = 0$ € (le RMI baisse de $600 - 300 = 300$ €, d'où un taux marginal implicite de $300/300 = 1$, soit **100 %**) ; sous le RSA, $786 - 600 = 186$ €, soit **+186 €** (taux implicite de 38 %, question 4.1.3). Le RSA rétablit une incitation financière au retour à l'emploi que le barème RMI annulait.
+3. Les trois courbes **convergent** au-delà du point où l'allocation s'éteint (RMI à $y=600$, RSA à $y\approx1\,579$) : sans plus aucune prestation, le revenu disponible se confond avec le revenu d'activité (droite « sans prestation » à 45°).
+
+## 4.3 Question de réflexion *(1 pt ; grille)*
+
+Attendus : la copie doit **distinguer deux mécanismes**.
+
+- **(i) Incitations financières / salaire de réserve.** En abaissant le taux marginal implicite (de 100 % type-RMI à 38 %), le RSA-activité puis la prime d'activité réduisent le salaire de réserve et rendent la reprise d'emploi plus rémunératrice : c'est l'argument théorique issu de la théorie de la recherche d'emploi (Exercice 3).
+- **(ii) Non-recours.** Une incitation bien conçue ne produit ses effets que si les ayants droit la perçoivent effectivement. Le RSA-activité affichait un taux de non-recours de **60 à 70 %** (complexité, stigmatisation) : son effet réel était donc très en deçà de son effet théorique. La prime d'activité (2016), plus simple et mieux acceptée, a nettement relevé le taux de recours : d'où un effet anti-trappe potentiellement supérieur, **indépendamment** du barème.
+- **Lien Exercice 2.2** : la forte proportion de demandeurs d'emploi sans aucune couverture (21 %, dont beaucoup de jeunes) rappelle qu'une partie du public visé échappe de toute façon aux dispositifs : le problème d'accès aux droits redouble celui des incitations.
+
+Une très bonne copie conclut que la réforme de 2016 agit surtout sur le canal (ii) (le recours) plus que sur le barème lui-même, déjà favorable depuis 2009 : le taux de cumul de la prime d'activité reste proche de celui du RSA (62 % à sa création en 2016, très légèrement abaissé depuis), la bonification individuelle de la prime d'activité ne relevant la pente que sur une plage de bas salaires.
+
+::: {.callout-warning}
+## Pièges fréquents
+Réduire la trappe à inactivité à une question de « paresse » ou de montant d'allocation. Le cœur du problème est le **taux marginal de prélèvement implicite** (interaction entre prestations et revenus d'activité) et le **non-recours**, pas le niveau absolu de l'allocation.
+:::

@@ -4,6 +4,13 @@ subtitle: "Arbitrage travail-loisir, décision d'embauche, loi psychologique fon
 description: "Dossier de TD complémentaire : décision de participation et salaire de réserve, effet de substitution et effet de revenu en chiffres, demande de travail à partir d'un tableau de production, calculs sur la fonction de consommation keynésienne, multiplicateur et chômage involontaire. Aucun calcul de dérivée ni modèle d'utilité."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 5.1](corrections/td5-1-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 **Objectifs de la séance**
 

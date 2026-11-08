@@ -4,6 +4,13 @@ subtitle: "Synthèse Chapitre I et Chapitre II (partie 1), entrée dans la théo
 description: "Sujet d'entraînement (2h) : QCM, lecture de graphique OA-DA, exercice de calcul d'indicateurs du marché du travail, questions de réflexion. Barème indicatif sur 20 points, réponses exemples incluses."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir rédigé vos réponses : [corrigé du TD 4](corrections/td4-corrige.qmd) (barème détaillé pour vous auto-évaluer ; les réponses exemples se trouvent dans les encadrés repliables de ce sujet).
+:::
+:::
+
 ::: {.callout-important}
 ## Ce sujet est un entraînement
 
@@ -53,13 +60,19 @@ Cet entraînement porte sur le **Chapitre I** (Introduction à la politique éco
 **1.** Un pays enregistre les taux de croissance trimestriels suivants : T1 : +0,2 % ; T2 : -0,1 % ; T3 : +0,3 % ; T4 : -0,4 %. Peut-on parler de récession sur cette année ?
 
 A) Oui, car deux trimestres affichent une croissance négative.
-B) Non, car il n'existe aucun couple de trimestres **consécutifs** affichant tous deux une croissance négative.
+B) Non, car il n'existe aucun couple de trimestres consécutifs affichant tous deux une croissance négative.
 C) Oui, car la croissance moyenne annuelle est négative.
 D) Non, car le PIB en niveau reste toujours positif.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : B.** La récession se définit comme au moins **deux trimestres consécutifs** de croissance négative. Ici, T2 (-0,1 %) et T4 (-0,4 %) sont négatifs mais séparés par T3 (positif) : ils ne sont pas consécutifs. Il n'y a donc pas de récession technique sur cette année, même si deux trimestres sur quatre affichent une croissance négative. A confond « deux trimestres négatifs » et « deux trimestres négatifs consécutifs » ; C invoque un critère (moyenne annuelle) qui n'est pas celui de la définition ; D est vrai mais n'est pas le bon argument (un pays peut être en récession avec un PIB en niveau toujours positif, seul le *rythme de variation* compte).
+**Réponse : B.** La récession se définit comme au moins **deux trimestres consécutifs** de croissance négative. Ici, T2 (-0,1 %) et T4 (-0,4 %) sont négatifs mais séparés par T3 (positif) : ils ne sont pas consécutifs. Il n'y a donc pas de récession technique sur cette année, même si deux trimestres sur quatre affichent une croissance négative. A confond « deux trimestres négatifs » et « deux trimestres négatifs consécutifs » ; C invoque un critère (moyenne annuelle) qui n'est pas celui de la définition ; D est vrai mais n'est pas le bon argument (un pays peut être en récession avec un PIB en niveau toujours positif : seul le **signe** de la variation trimestrielle du PIB compte, une variation négative sur deux trimestres consécutifs).
+
+::: {.callout-warning}
+## Pièges fréquents
+- Compter les trimestres négatifs sans vérifier qu'ils se suivent : deux trimestres négatifs non consécutifs ne font pas une récession.
+- Confondre ralentissement et récession : une croissance qui passe de +0,3 % à +0,1 % reste positive, le PIB continue d'augmenter.
+:::
 :::
 
 **2.** Le PIB par habitant de la France vaut environ 3,2 fois celui de la Chine en dollars courants (2022), mais seulement 2,6 fois en parité de pouvoir d'achat (PPA). Que traduit cette correction ?
@@ -77,25 +90,25 @@ D) La PPA n'a de sens que pour les pays de la zone euro.
 **3.** Un gouvernement poursuit simultanément deux objectifs, la stabilité des prix et le plein emploi, mais ne dispose que d'un seul instrument indépendant : le taux directeur de la banque centrale. Que prédit la règle de Tinbergen dans cette situation ?
 
 A) Les deux objectifs seront atteints simultanément, car le taux directeur agit sur l'ensemble de l'économie.
-B) Il est structurellement impossible d'atteindre les deux objectifs simultanément avec un seul instrument indépendant ; il faudrait un second instrument (par exemple budgétaire).
-C) Il suffit d'augmenter fortement le taux directeur pour atteindre les deux objectifs.
-D) La règle de Tinbergen ne s'applique qu'aux politiques budgétaires, pas aux politiques monétaires.
+B) Il suffit d'augmenter fortement le taux directeur pour atteindre les deux objectifs.
+C) La règle de Tinbergen ne s'applique qu'aux politiques budgétaires, pas aux politiques monétaires.
+D) On ne peut pas garantir d'atteindre simultanément les deux objectifs avec un seul instrument indépendant dès qu'ils entrent en conflit (par exemple face à un choc d'offre) ; il faudrait un second instrument (par exemple budgétaire).
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : B.** La règle de Tinbergen impose de disposer d'au moins autant d'instruments indépendants que d'objectifs poursuivis simultanément. Avec un seul instrument (le taux directeur) pour deux objectifs (prix et emploi), l'un des deux objectifs sera nécessairement sacrifié en cas de conflit entre eux ; il faut un second instrument indépendant (par exemple la politique budgétaire) pour espérer atteindre les deux. La règle s'applique à toute politique économique, pas seulement budgétaire (D).
+**Réponse : D.** La règle de Tinbergen impose de disposer d'au moins autant d'instruments indépendants que d'objectifs poursuivis simultanément. Avec un seul instrument (le taux directeur) pour deux objectifs (prix et emploi), l'un des deux objectifs sera sacrifié en cas de conflit entre eux ; il faut un second instrument indépendant (par exemple la politique budgétaire) pour être sûr d'atteindre les deux. Face à un choc de demande, les deux objectifs ne sont pas en conflit et un seul instrument peut suffire (voir partie IV, question 2) ; la règle mord lorsque les objectifs divergent, comme lors d'un choc d'offre. A est donc faux (rien ne garantit d'atteindre les deux objectifs), B aussi (une forte hausse du taux freine l'inflation mais aussi l'activité et l'emploi), et la règle s'applique à toute politique économique, pas seulement budgétaire (C est faux).
 :::
 
 **4.** L'État finance par l'impôt un phare maritime, dont l'usage par un navire ne réduit en rien la possibilité pour d'autres navires de s'en servir également (bien non rival et non exclusif). De quelle fonction de Musgrave relève principalement cette intervention ?
 
 A) La fonction de stabilisation.
-B) La fonction d'allocation.
-C) La fonction de redistribution.
+B) La fonction de redistribution.
+C) La fonction d'allocation.
 D) La fonction de régulation monétaire.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : B.** La fonction d'**allocation** vise à corriger les défaillances de marché (biens publics, externalités) en assurant une production optimale de biens que le marché seul ne fournirait pas, ou pas en quantité suffisante : un phare, non rival et non exclusif, en est l'exemple canonique. La stabilisation vise les fluctuations conjoncturelles (A), la redistribution corrige les inégalités de revenus (C) ; la « fonction de régulation monétaire » (D) n'existe pas dans la typologie de Musgrave.
+**Réponse : C.** La fonction d'**allocation** vise à corriger les défaillances de marché (biens publics, externalités) en assurant une production optimale de biens que le marché seul ne fournirait pas, ou pas en quantité suffisante : un phare, non rival et non exclusif, en est l'exemple canonique. La stabilisation vise les fluctuations conjoncturelles (A), la redistribution corrige les inégalités de revenus (B) ; la « fonction de régulation monétaire » (D) n'existe pas dans la typologie de Musgrave.
 :::
 
 **5.** Dans le modèle OA-DA, ce qui explique la pente **croissante** de la courbe d'offre agrégée de **court terme** est :
@@ -107,19 +120,19 @@ D) La hausse mécanique de la productivité du travail avec le niveau des prix.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : A.** À court terme, les salaires nominaux ($W$) sont rigides : ils ne s'ajustent pas immédiatement aux variations de prix. Une hausse du niveau des prix $P$, à $W$ donné, réduit donc le salaire réel $W/P$, ce qui abaisse le coût réel du travail pour les entreprises et les incite à produire davantage : la relation entre $P$ et $Y$ est croissante. B et C décrivent au contraire les hypothèses du long terme (flexibilité totale) ou une absence totale de lien, qui contredisent la pente croissante de court terme.
+**Réponse : A.** À court terme, les salaires nominaux ($W$) sont rigides : ils ne s'ajustent pas immédiatement aux variations de prix. Une hausse du niveau des prix $P$, à $W$ donné, réduit donc le salaire réel $W/P$, ce qui abaisse le coût réel du travail pour les entreprises et les incite à produire davantage : la relation entre $P$ et $Y$ est croissante. B et C décrivent au contraire les hypothèses du long terme (flexibilité totale) ou une absence totale de lien, qui contredisent la pente croissante de court terme. D est faux : la productivité du travail dépend des facteurs d'offre (capital, technologie), pas du niveau des prix.
 :::
 
 **6.** Le PIB potentiel $Y^\ast$, autour duquel la courbe d'offre agrégée de long terme est verticale, est déterminé par :
 
 A) Le seul niveau général des prix.
-B) Les facteurs d'offre disponibles : stock de capital, quantité et qualité du travail, technologie.
-C) Le niveau de la demande agrégée anticipée par les entreprises.
-D) Le taux d'intérêt directeur de la banque centrale.
+B) Le niveau de la demande agrégée anticipée par les entreprises.
+C) Le taux d'intérêt directeur de la banque centrale.
+D) Les facteurs d'offre disponibles : stock de capital, quantité et qualité du travail, technologie.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : B.** À long terme, prix et salaires s'ajustent pleinement : la production se cale sur son niveau **potentiel** $Y^\ast$, déterminé par les capacités productives de l'économie (capital, travail, technologie), indépendamment du niveau des prix. C'est pourquoi la courbe d'offre agrégée de long terme est verticale en $Y^\ast$ : aucune variation de $P$ ne peut, à elle seule, déplacer $Y^\ast$ (A, C et D relèvent tous de déterminants de court terme ou de la demande, pas de l'offre potentielle).
+**Réponse : D.** À long terme, prix et salaires s'ajustent pleinement : la production se cale sur son niveau **potentiel** $Y^\ast$, déterminé par les capacités productives de l'économie (capital, travail, technologie), indépendamment du niveau des prix. C'est pourquoi la courbe d'offre agrégée de long terme est verticale en $Y^\ast$ : aucune variation de $P$ ne peut, à elle seule, déplacer $Y^\ast$ (A, B et C relèvent tous de déterminants de court terme ou de la demande, pas de l'offre potentielle).
 :::
 
 **7.** Une économie initialement à l'équilibre $E_0$ (en $Y^\ast$) connaît un choc conduisant à un nouvel équilibre $E_1$ où, par rapport à $E_0$, **la production $Y$ et le niveau des prix $P$ augmentent tous les deux**. De quel type de choc s'agit-il le plus probablement ?
@@ -131,19 +144,25 @@ D) Il est impossible de le déterminer sans connaître la nature exacte du choc.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : B.** La signature d'un choc de **demande** est que $Y$ et $P$ varient **dans le même sens** (la courbe DA se déplace le long d'une courbe OA_CT inchangée) ; à l'inverse, un choc d'offre fait varier $Y$ et $P$ **en sens opposé** (stagflation pour un choc d'offre négatif, l'inverse pour un choc d'offre positif). Ici $Y$ et $P$ augmentent tous les deux : c'est la signature d'un choc de **demande positif** (déplacement de DA vers la droite), pas d'un choc d'offre (A et C sont donc à exclure), et la question est ici parfaitement identifiable (D est faux).
+**Réponse : B.** La signature d'un choc de **demande** est que $Y$ et $P$ varient **dans le même sens** (la courbe DA se déplace le long d'une courbe $OA_{CT}$ inchangée) ; à l'inverse, un choc d'offre fait varier $Y$ et $P$ **en sens opposé** (stagflation pour un choc d'offre négatif, l'inverse pour un choc d'offre positif). Ici $Y$ et $P$ augmentent tous les deux : c'est la signature d'un choc de **demande positif** (déplacement de DA vers la droite), pas d'un choc d'offre (A et C sont donc à exclure), et le choc est ici parfaitement identifiable (D est faux).
 :::
 
 **8.** Parmi les quatre personnes suivantes, laquelle est comptabilisée comme **chômeur au sens du BIT** (INSEE) ?
 
-A) Claire, en congé maladie depuis six mois, qui conserve son contrat de travail.
+A) Emma, sans emploi, disponible pour travailler sous quinze jours, ayant envoyé cinq candidatures la semaine dernière.
 B) David, qui ne travaille pas, ne recherche pas d'emploi et a cessé toute démarche depuis un an, découragé.
-C) Emma, sans emploi, disponible pour travailler sous quinze jours, ayant envoyé cinq candidatures la semaine dernière.
+C) Claire, en congé maladie depuis six mois, qui conserve son contrat de travail.
 D) Farid, étudiant à temps plein, qui ne recherche pas d'emploi.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : C.** Emma remplit les trois critères cumulatifs du BIT : sans emploi, disponible pour travailler dans les deux semaines, recherche active récente (candidatures envoyées). Claire est en emploi (son contrat est actif malgré l'arrêt maladie) : A est donc fausse. David ne remplit pas le critère de recherche active : il relève du **halo autour du chômage** (personne proche du marché du travail mais non comptée comme chômeur BIT), pas du chômage au sens strict. Farid est inactif (étudiant, ne recherche pas) : D est fausse.
+**Réponse : A.** Emma remplit les trois critères cumulatifs du BIT : sans emploi, disponible pour travailler dans les deux semaines, recherche active récente (candidatures envoyées). David ne remplit pas le critère de recherche active : il relève du **halo autour du chômage** (personne proche du marché du travail mais non comptée comme chômeur BIT), pas du chômage au sens strict, B est donc fausse. Claire est en emploi (son contrat est actif malgré l'arrêt maladie) : C est fausse. Farid est inactif (étudiant, ne recherche pas) : D est fausse.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Compter les personnes du halo (découragés, personnes non disponibles rapidement) comme chômeurs BIT : il manque au moins un des trois critères, elles sont inactives au sens du BIT.
+- Considérer qu'une personne en arrêt maladie ou en congé « ne travaille pas » : tant que le contrat de travail court, elle est en emploi.
+:::
 :::
 
 **9.** Léa est inscrite à France Travail. Elle exerce une activité réduite de **plus de 78 heures par mois** tout en continuant à rechercher un emploi à temps plein. Dans quelle catégorie de France Travail est-elle enregistrée ?
@@ -155,19 +174,19 @@ D) Catégorie D.
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : C.** Les catégories B et C regroupent les demandeurs d'emploi en **activité réduite**, tenus de continuer à rechercher un emploi : la catégorie B correspond à une activité réduite **courte**, la catégorie C à une activité réduite **longue** (au-delà d'un seuil horaire mensuel, ici dépassé). La catégorie A regroupe les personnes **sans aucune activité** (A est donc fausse), la catégorie D les personnes non tenues de rechercher un emploi (formation, maladie...), ce qui ne correspond pas au cas de Léa.
+**Réponse : C.** Les catégories B et C regroupent les demandeurs d'emploi en **activité réduite**, tenus de continuer à rechercher un emploi : la catégorie B correspond à une activité réduite **courte**, la catégorie C à une activité réduite **longue** (plus de 78 heures par mois pour la catégorie C, 78 heures ou moins pour la B ; Léa dépasse ce seuil). La catégorie A regroupe les personnes **sans aucune activité** (A est donc fausse), la catégorie D les personnes non tenues de rechercher un emploi (formation, maladie...), ce qui ne correspond pas au cas de Léa.
 :::
 
 **10.** Une usine textile automatise sa chaîne de production et supprime durablement 300 postes peu qualifiés, qui ne seront pas recréés dans le secteur. De quel type de chômage relève principalement cette situation ?
 
 A) Chômage frictionnel.
 B) Chômage technique.
-C) Chômage technologique (structurel).
-D) Chômage keynésien.
+C) Chômage keynésien.
+D) Chômage technologique (structurel).
 
 ::: {.callout-note collapse="true"}
 ## Réponse exemple
-**Réponse : C.** La substitution durable du capital (les machines) au travail dans un objectif de hausse de la productivité définit le chômage **technologique**, une composante du chômage **structurel** (horizon de long terme, lié aux mutations durables des structures de l'économie). Le chômage frictionnel (A) correspond au temps de transition normal entre deux emplois ; le chômage technique (B) est une baisse **momentanée** de l'activité sans rupture du contrat de travail ; le chômage keynésien (D) résulte d'une insuffisance conjoncturelle de la demande, pas d'une automatisation durable.
+**Réponse : D.** La substitution durable du capital (les machines) au travail dans un objectif de hausse de la productivité définit le chômage **technologique**, une composante du chômage **structurel** (horizon de long terme, lié aux mutations durables des structures de l'économie). Le chômage frictionnel (A) correspond au temps de transition normal entre deux emplois ; le chômage technique (B) est une baisse **momentanée** de l'activité sans rupture du contrat de travail ; le chômage keynésien (C) résulte d'une insuffisance conjoncturelle de la demande, pas d'une automatisation durable.
 :::
 
 ## Partie II : Lecture de graphique : un choc dans le modèle OA-DA (3 points)
@@ -240,11 +259,24 @@ ggplot(df_courbes, aes(x = Y, y = P, color = courbe)) +
 
 **1. *(1,5 point)*** Le graphique représente un **choc de demande positif**. C'est la courbe de demande agrégée qui se déplace (de $DA_0$ vers $DA_1$, vers la droite), tandis que la courbe d'offre agrégée de court terme $OA_{CT}$ reste inchangée. La signature de ce type de choc est la variation de $Y$ et $P$ **dans le même sens** entre $E_0$ et $E_1$ : la production augmente ($Y_1 = 120 > Y^\ast = 100$) et le niveau des prix augmente également ($P_1 = 140 > P_0 = 130$). Cette combinaison (hausse simultanée de la production et des prix) caractérise un choc de demande, à l'opposé de la stagflation associée à un choc d'offre négatif.
 
+Les valeurs se lisent sur le graphique. Pour vérification, les courbes tracées ont pour équations $OA_{CT}$ : $P = 80 + 0{,}5Y$, $DA_0$ : $P = 230 - Y$ et $DA_1$ : $P = 260 - Y$.
+
+- En $E_0$ : $80 + 0{,}5Y = 230 - Y$, soit $1{,}5Y = 150$, donc $Y_0 = 100 = Y^\ast$ et $P_0 = 230 - 100 = 130$.
+- En $E_1$ : $80 + 0{,}5Y = 260 - Y$, soit $1{,}5Y = 180$, donc $Y_1 = 120$ et $P_1 = 260 - 120 = 140$.
+- Variations : $\Delta Y = 120 - 100 = +20$ et $\Delta P = 140 - 130 = +10$, deux variations de même signe.
+
 Barème : identification du choc de demande positif (0,5) + courbe déplacée et sens correctement identifiés (0,5) + justification par les mouvements de même sens de $Y$ et $P$ (0,5).
 
 **2. *(0,5 point)*** Exemple du cours : une forte hausse du prix des actifs financiers (effet de richesse). Autres exemples acceptés : un plan de relance budgétaire massif (hausse des dépenses publiques ou baisse d'impôts financée par le déficit), une forte hausse de la confiance des ménages et des entreprises, ou un boom des exportations. Tout exemple correctement justifié d'un déplacement exogène de la demande agrégée vers la droite est accepté.
 
-**3. *(1 point)*** Lorsque $Y_1 > Y^\ast$, le marché du travail est en tension (chômage en dessous de son niveau structurel) : les salaires nominaux, rigides à court terme, finissent par s'ajuster **à la hausse** pour attirer et retenir la main-d'œuvre. Cette hausse des coûts salariaux déplace progressivement la courbe d'offre agrégée de court terme vers le **haut/la gauche**, ce qui fait remonter les prix et ramène la production vers $Y^\ast$. À long terme, l'économie revient donc sur la verticale $Y = Y^\ast$, mais à un niveau de prix **plus élevé** qu'initialement : le supplément de production n'est que **temporaire**, seule l'inflation s'avère durable.
+**3. *(1 point)*** Lorsque $Y_1 > Y^\ast$, le marché du travail est en tension (chômage en dessous de son niveau structurel) : les salaires nominaux, rigides à court terme, finissent par s'ajuster **à la hausse** pour attirer et retenir la main-d'œuvre. Cette hausse des coûts salariaux déplace progressivement la courbe d'offre agrégée de court terme vers le **haut/la gauche**, ce qui fait remonter les prix et ramène la production vers $Y^\ast$. À long terme, l'économie revient donc sur la verticale $Y = Y^\ast$, mais à un niveau de prix **plus élevé** qu'initialement : le supplément de production n'est que **temporaire**, seule l'inflation s'avère durable. Dans l'exemple chiffré, l'économie revient en $Y^\ast = 100$ sur $DA_1$, au niveau de prix $P = 260 - 100 = 160$, supérieur à $P_1 = 140$ et à $P_0 = 130$.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Prendre ce choc pour un choc d'offre parce que les prix augmentent : c'est le **co-mouvement** de $Y$ et $P$ (même sens) qui signe un choc de demande ; un choc d'offre négatif ferait baisser $Y$ en faisant monter $P$.
+- Affirmer que le supplément de production ($Y_1 = 120$) se maintient à long terme : seule la hausse des prix est durable, la production revient en $Y^\ast = 100$.
+- Faire glisser la courbe $DA$ pendant l'ajustement de long terme : c'est l'$OA_{CT}$ qui se déplace (hausse des salaires nominaux), la $DA_1$ reste en place.
+:::
 :::
 
 ## Partie III : Exercice : indicateurs du marché du travail (6 points)
@@ -304,6 +336,13 @@ $$
 **2. *(1,5 point)*** Le nombre absolu de chômeurs est identique (280 000), mais les populations actives diffèrent fortement : Austral compte beaucoup moins de personnes en emploi (3,36 millions contre 4,48 millions), donc une population active plus restreinte (3,64 millions contre 4,76 millions). Le taux de chômage rapportant le nombre de chômeurs à la population active, un même effectif de chômeurs rapporté à une population active plus petite donne mécaniquement un taux plus élevé (7,69 % contre 5,88 %). Le taux de chômage n'est donc pas seulement affecté par le nombre absolu de personnes sans emploi, mais aussi par la taille de la population active de référence, elle-même liée au taux d'activité.
 
 **3. *(1,5 point)*** L'écart de taux de chômage (1,81 point) masque un écart bien plus large de **taux d'emploi** (20 points : 80 % contre 60 %), qui révèle qu'Austral mobilise beaucoup moins sa population en âge de travailler. Une partie de cet écart peut correspondre à des personnes qui, à Austral, ont renoncé à chercher un emploi (découragement) et sortent ainsi du champ du chômage au sens du BIT sans être en emploi : elles relèvent du **halo autour du chômage**. Le taux de chômage, en rapportant les chômeurs à la seule population active, est donc sensible aux mouvements d'entrée/sortie de l'activité et peut sous-estimer la gravité de la situation de l'emploi d'un pays à faible taux d'activité. Le taux d'emploi, rapporté à l'ensemble de la population en âge de travailler, est à cet égard un indicateur complémentaire indispensable.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Diviser les chômeurs par la population en âge de travailler (ici $280\,000 / 5\,600\,000 = 5{,}00\ \%$ dans les deux pays) ou par la population totale : le dénominateur du taux de chômage est **toujours** la population active (emploi + chômeurs).
+- Rapporter l'emploi ou la population active à la population totale (9 000 000) au lieu de la population en âge de travailler.
+- Exprimer l'écart de taux de chômage en pourcentage : $7{,}69 - 5{,}88 = 1{,}81$ **point** de pourcentage, et non 1,81 %.
+:::
 :::
 
 ## Partie IV : Questions de réflexion (3,5 points)
@@ -327,9 +366,16 @@ Barème indicatif : premier mécanisme correctement développé (0,75) + second 
 
 *Élément de corrigé.*
 
-Un choc de demande négatif déplace la courbe $DA$ vers la gauche le long d'une courbe d'offre agrégée de court terme inchangée : $Y$ et $P$ baissent tous les deux. Une politique de relance de la demande (budgétaire et/ou monétaire) peut alors ramener simultanément la production vers $Y^\ast$ **et** les prix vers leur niveau initial : la réponse de politique économique est directe, sans arbitrage majeur. Un choc d'offre négatif, en revanche, déplace la courbe $OA_{CT}$ vers le haut/la gauche : $Y$ baisse **et** $P$ augmente (stagflation). Face à ce choc, une relance de la demande ramènerait $Y$ vers $Y^\ast$ mais au prix d'une **hausse supplémentaire des prix**, puisque l'économie se trouve déjà sur une courbe d'offre dégradée ; à l'inverse, une politique restrictive limiterait l'inflation mais aggraverait la baisse de production. Aucune politique de demande ne peut, face à un choc d'offre, ramener *simultanément* $Y$ à $Y^\ast$ et $P$ à son niveau initial : c'est cet arbitrage inévitable, absent du cas d'un choc de demande, qui rend le choc d'offre négatif plus difficile à gérer pour les pouvoirs publics.
+Un choc de demande négatif déplace la courbe $DA$ vers la gauche le long d'une courbe d'offre agrégée de court terme inchangée : $Y$ et $P$ baissent tous les deux. Une politique de relance de la demande (budgétaire et/ou monétaire) peut alors ramener simultanément la production vers $Y^\ast$ **et** les prix vers leur niveau initial : la réponse de politique économique est directe, sans arbitrage majeur. Un choc d'offre négatif, en revanche, déplace la courbe $OA_{CT}$ vers le haut/la gauche : $Y$ baisse **et** $P$ augmente (stagflation). Face à ce choc, une relance de la demande ramènerait $Y$ vers $Y^\ast$ mais au prix d'une **hausse supplémentaire des prix**, puisque l'économie se trouve déjà sur une courbe d'offre dégradée ; à l'inverse, une politique restrictive limiterait l'inflation mais aggraverait la baisse de production. Aucune politique de demande ne peut, face à un choc d'offre, ramener *simultanément* $Y$ à $Y^\ast$ et $P$ à son niveau initial : c'est cet arbitrage inévitable, absent du cas d'un choc de demande, qui rend le choc d'offre négatif plus difficile à gérer pour les pouvoirs publics. Le remède adapté relève alors plutôt d'une **politique d'offre** (réduire les coûts de production, diversifier les sources d'énergie), qui agit sur l'$OA$ plutôt que sur la $DA$.
 
 Barème indicatif : mécanisme du choc de demande négatif et absence d'arbitrage correctement décrits (0,5) + mécanisme du choc d'offre négatif et arbitrage inflation/production correctement décrits (0,75) + formulation claire de la comparaison (0,25).
+
+::: {.callout-warning}
+## Pièges fréquents
+- Croire qu'une baisse du taux de chômage signifie toujours davantage d'emplois : elle peut venir de sorties de la population active (découragement), sans aucune création d'emploi.
+- Oublier qu'un découragé quitte **à la fois** le numérateur et le dénominateur du taux de chômage : c'est ce double effet qui fait baisser le taux.
+- Proposer une relance de la demande comme réponse « sans coût » à un choc d'offre négatif : elle soutient $Y$ mais ajoute de l'inflation.
+:::
 :::
 
 ## Pour aller plus loin
@@ -337,8 +383,8 @@ Barème indicatif : mécanisme du choc de demande négatif et absence d'arbitrag
 ::: {.callout-tip}
 ## Pour préparer et compléter cet entraînement
 - Relisez les résumés de cours [Chapitre I](../cours/chap1.qmd) et [Chapitre II](../cours/chap2.qmd), en particulier les encarts de définitions et la figure OA-DA.
-- INSEE, [définitions : emploi, chômage, activité au sens du BIT](https://www.insee.fr/fr/metadonnees/definition/c1132), pour réviser précisément les critères de la définition BIT.
-- France Travail (ex-Pôle emploi), [comprendre les catégories de demandeurs d'emploi (A, B, C, D, E)](https://www.francetravail.org), utile pour la question 9 du QCM.
+- INSEE, [définition du chômeur au sens du BIT](https://www.insee.fr/fr/metadonnees/definition/c1129), pour réviser précisément les critères de la définition BIT.
+- France Travail (ex-Pôle emploi), [site institutionnel de France Travail](https://www.francetravail.org) ; les catégories de demandeurs d'emploi (A, B, C, D, E), utiles pour la question 9 du QCM, sont récapitulées dans le [Chapitre II](../cours/chap2.qmd).
 - OCDE, *Perspectives de l'emploi* (édition annuelle), pour situer les ordres de grandeur français en comparaison internationale.
 - Les réponses exemples figurent directement sous chaque question (blocs « Réponse exemple » repliables). Le barème indicatif est rappelé au fil du sujet.
 :::

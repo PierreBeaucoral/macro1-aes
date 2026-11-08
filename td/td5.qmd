@@ -4,6 +4,13 @@ subtitle: "Offre et demande de travail, chômage volontaire, coût du travail, e
 description: "Dossier de TD : QCM et définitions, lecture de graphique (salaire minimum et chômage classique), application chiffrée du modèle WS-PS, question de réflexion sur l'efficacité d'une baisse du coût du travail."
 ---
 
+::: {.content-visible when-format="html"}
+::: {.callout-tip}
+## Corrigé disponible
+Après avoir cherché les exercices par vous-même : [corrigé du TD 5](corrections/td5-corrige.qmd) (réponses rédigées, barème indicatif, pièges fréquents).
+:::
+:::
+
 ::: {.objectifs}
 Objectifs de la séance
 
@@ -36,41 +43,41 @@ Objectifs de la séance
 
 **b) QCM.** Une seule réponse est correcte pour chaque question.
 
-1. Dans le modèle néoclassique, l'offre agrégée de travail est une fonction :
-   a) décroissante du salaire réel
-   b) croissante du salaire réel
-   c) indépendante du salaire réel
+1. Dans le modèle néoclassique, l'offre agrégée de travail est une fonction :\
+   a) croissante du salaire réel\
+   b) décroissante du salaire réel\
+   c) indépendante du salaire réel\
    d) croissante puis décroissante du salaire réel
 
-2. La demande de travail à court terme est déterminée par l'égalisation entre le salaire réel et :
-   a) le salaire de réserve
-   b) la productivité marginale du travail
-   c) le taux de marge des entreprises
-   d) le taux de chômage
+2. La demande de travail à court terme est déterminée par l'égalisation entre le salaire réel et :\
+   a) le salaire de réserve\
+   b) le taux de chômage\
+   c) le taux de marge des entreprises\
+   d) la productivité marginale du travail
 
-3. Selon l'analyse néoclassique, un individu au chômage dont le salaire de réserve est supérieur au salaire de marché est en situation de :
-   a) chômage conjoncturel
-   b) chômage involontaire
-   c) chômage volontaire
+3. Selon l'analyse néoclassique, un individu au chômage dont le salaire de réserve est supérieur au salaire de marché est en situation de :\
+   a) chômage conjoncturel\
+   b) chômage involontaire\
+   c) chômage volontaire\
    d) chômage frictionnel uniquement
 
-4. Un salaire minimum fixé au-dessus du salaire d'équilibre provoque, dans le cadre néoclassique :
-   a) une pénurie de travailleurs
-   b) un chômage classique (excédent d'offre de travail)
-   c) une baisse de la demande de travail à salaire inchangé
+4. Un salaire minimum fixé au-dessus du salaire d'équilibre provoque, dans le cadre néoclassique :\
+   a) une pénurie de travailleurs\
+   b) un chômage classique (excédent d'offre de travail)\
+   c) une baisse de la demande de travail à salaire inchangé\
    d) aucun effet, le marché s'ajuste par les quantités
 
-5. Dans le modèle WS-PS, la courbe PS (*price setting*) est :
-   a) croissante avec le taux de chômage
-   b) décroissante avec le taux de chômage
-   c) horizontale, indépendante du taux de chômage
+5. Dans le modèle WS-PS, la courbe PS (*price setting*) est :\
+   a) horizontale, indépendante du taux de chômage\
+   b) décroissante avec le taux de chômage\
+   c) croissante avec le taux de chômage\
    d) verticale au niveau du chômage naturel
 
-6. Une hausse du taux de marge $m$ des entreprises (baisse de la concurrence) déplace la courbe PS :
-   a) vers le haut, ce qui réduit $u^*$
-   b) vers le bas, ce qui augmente $u^*$
-   c) vers la droite, sans effet sur le salaire réel
-   d) elle ne déplace pas la courbe PS, seulement la courbe WS
+6. Une hausse du taux de marge $m$ des entreprises (baisse de la concurrence) déplace la courbe PS :\
+   a) vers le haut, ce qui réduit $u^*$\
+   b) elle ne déplace pas la courbe PS, seulement la courbe WS\
+   c) vers la droite, sans effet sur le salaire réel\
+   d) vers le bas, ce qui augmente $u^*$
 
 ## Exercice 2 : Lecture de graphique : salaire minimum et chômage classique
 
@@ -185,7 +192,7 @@ ggplot() +
 Vous répondrez à cette question sous forme de mini-dissertation structurée (introduction avec définitions et annonce de plan, deux parties courtes, conclusion). Vous devrez notamment :
 
 - rappeler pourquoi, dans le modèle **néoclassique**, une baisse du coût du travail réduit le chômage classique ;
-- discuter si ce résultat se transpose telle quelle dans le modèle **WS-PS**, en particulier, quels leviers de baisse du coût du travail agissent sur quelle courbe (WS ou PS) ;
+- discuter si ce résultat se transpose tel quel dans le modèle **WS-PS**, en particulier, quels leviers de baisse du coût du travail agissent sur quelle courbe (WS ou PS) ;
 - mobiliser la distinction entre chômage **volontaire**, **classique** et **d'équilibre (structurel)** vue en TD 3 ;
 - conclure sur les limites communes aux deux approches (rigidités institutionnelles, hétérogénéité du travail).
 

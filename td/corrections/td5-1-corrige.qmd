@@ -1,0 +1,187 @@
+---
+title: "Corrigé du TD 5.1 : Décisions et arbitrages : classiques et Keynes"
+subtitle: "Arbitrage travail-loisir, décision d'embauche, loi psychologique fondamentale et multiplicateur"
+description: "Corrigé détaillé du dossier de TD 5.1 : calculs complets, réponses rédigées, barème indicatif et pièges fréquents."
+---
+
+**Barème indicatif** : Exercice 1 : /3 · Exercice 2 : /3 · Exercice 3 : /4 · Exercice 4 : /4 · Exercice 5 : /4 · Exercice 6 : /2 · **Total : /20**.
+
+---
+
+## Corrigé de l'exercice 1 (Travailler ou non ? Le salaire de réserve) · /3
+
+**a)** (0,5 point) Le **salaire de réserve** $w_r$ est la rémunération minimale qu'un individu est prêt à accepter pour occuper un emploi ; en dessous, il préfère ne pas travailler. Règle de décision : la personne travaille si $w \geq w_r$, elle reste inactive si $w < w_r$.
+
+**b)** (1 point)
+
+| Salaire de marché $w$ (€/heure) | 10 | 12 | 15 | 18 | 22 |
+|---|---|---|---|---|---|
+| Personnes qui travaillent | Ana | Ana, Bilal | Ana, Bilal, Chloé | Ana, Bilal, Chloé, David | les cinq |
+| Nombre de personnes en emploi | 1 | 2 | 3 | 4 | 5 |
+| Heures offertes par semaine | 35 | 70 | 105 | 140 | 175 |
+
+**c)** (0,5 point) L'offre de travail est une courbe **en escalier croissante** : chaque fois que le salaire franchit un salaire de réserve, une personne de plus entre sur le marché du travail et 35 heures s'ajoutent. À l'échelle de l'économie, les salaires de réserve sont très nombreux et très variés : les marches deviennent minuscules et l'offre agrégée ressemble à une courbe croissante continue. Plus le salaire est élevé, plus il dépasse le salaire de réserve d'un grand nombre de personnes.
+
+**d)** (0,5 point) Pour Chloé, une heure de loisir coûte **12 €** : c'est le salaire auquel elle renonce en ne travaillant pas. Chloé, David et Emma sont des chômeurs **volontaires** au sens des classiques (au sens du BIT, ils seraient comptés comme **inactifs** s'ils ne recherchent pas activement un emploi) : un emploi leur est accessible à 12 €, mais ils le refusent car ce salaire est inférieur à leur salaire de réserve (13, 16 et 20 €).
+
+**e)** (0,5 point) La crèche gratuite supprime 7 € de frais par heure travaillée : le salaire de réserve d'Emma baisse de 20 € à **13 €**. Au salaire de 15 €, elle travaille désormais ($15 \geq 13$). Autres mesures agissant sur le salaire de réserve : prime d'activité (elle augmente le gain net du travail), baisse de l'impôt sur les revenus d'activité, aides au transport ; à l'inverse, une hausse des revenus de remplacement (allocations) élève le salaire de réserve.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Croire que le coût d'opportunité du loisir est le salaire de réserve : c'est le **salaire de marché** auquel on renonce.
+- Qualifier David ou Emma de chômeurs involontaires : chez les classiques, refuser un emploi disponible au salaire courant est par définition du chômage **volontaire**.
+:::
+
+---
+
+## Corrigé de l'exercice 2 (Effet de substitution et effet de revenu) · /3
+
+**a)** (1 point)
+
+| Salaire horaire $w$ (€) | 10 | 12 | 15 |
+|---|---:|---:|---:|
+| Heures d'Alex | 30 | 35 | 40 |
+| Revenu hebdomadaire d'Alex (€) | 300 | 420 | 600 |
+| Heures de Camille | 45 | 37,5 | 30 |
+| Revenu hebdomadaire de Camille (€) | 450 | 450 | 450 |
+
+Calculs : revenu d'Alex $=$ salaire horaire $\times$ heures : $10 \times 30 = 300$ ; $12 \times 35 = 420$ ; $15 \times 40 = 600$. Heures de Camille $= 450 / w$ : $450/10 = 45$ ; $450/12 = 37{,}5$ ; $450/15 = 30$.
+
+**b)** (0,5 point) De 12 € à 15 € : Alex passe de 35 à 40 heures (**+5 h**), l'**effet de substitution** l'emporte. Camille passe de 37,5 à 30 heures (**−7,5 h**), l'**effet de revenu** l'emporte : elle atteint le même niveau de vie en travaillant moins.
+
+**c)** (0,5 point) Alex correspond à l'hypothèse classique (offre de travail croissante du salaire). Camille illustre la critique de Keynes : les salariés qui n'ont que leur travail pour vivre peuvent travailler **davantage** quand le salaire baisse, pour maintenir leur revenu ; l'offre de travail est alors **décroissante**.
+
+**d)** (1 point) De 12 € à 10 €, Camille passe de 37,5 à 45 heures : **+7,5 heures**. Si beaucoup de salariés se comportent ainsi, la baisse des salaires **augmente** l'offre de travail au moment même où, chez les classiques, elle est censée résorber l'excédent d'offre : le chômage peut s'aggraver au lieu de se résorber.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Dire qu'Alex « gagne plus donc travaille plus » sans nommer l'effet : la réponse attendue est **effet de substitution** (le loisir devient plus cher).
+- Croire que le comportement de Camille est irrationnel : avec des dépenses contraintes (loyer), viser un revenu donné est un comportement tout à fait cohérent.
+:::
+
+---
+
+## Corrigé de l'exercice 3 (La décision d'embauche de l'entreprise classique) · /4
+
+**a)** (1 point)
+
+| Nombre de salariés $N$ | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---:|---:|---:|---:|---:|---:|
+| Production totale (pains/jour) | 20 | 38 | 54 | 67 | 77 | 84 |
+| Productivité marginale du travail (pains) | 20 | 18 | 16 | 13 | 10 | 7 |
+
+Calculs : PmL $=$ production avec $N$ salariés $-$ production avec $N - 1$ salariés : $20 - 0 = 20$ ; $38 - 20 = 18$ ; $54 - 38 = 16$ ; $67 - 54 = 13$ ; $77 - 67 = 10$ ; $84 - 77 = 7$.
+
+La PmL est **décroissante** : avec un seul four et un local donné (capital fixe), chaque salarié supplémentaire dispose de moins d'équipement et de place, et ajoute moins de production que le précédent.
+
+**b)** (1 point) Profit $=$ production $-$ $12 \times N$ :
+
+- $N = 3$ : $54 - 36 = 18$ pains ;
+- $N = 4$ : $67 - 48 = \mathbf{19}$ pains ;
+- $N = 5$ : $77 - 60 = 17$ pains.
+
+Le profit est maximal pour **4 salariés**.
+
+**c)** (0,5 point) Le 4^e^ salarié rapporte 13 pains et en coûte 12 : il est embauché (le profit augmente de 1). Le 5^e^ rapporte 10 et coûte 12 : il n'est pas embauché (le profit baisserait de 2). La règle « on embauche tant que PmL > salaire réel » donne bien 4 salariés.
+
+**d)** (1 point)
+
+| Salaire réel (pains/jour) | 17 | 12 | 8 |
+|---|---:|---:|---:|
+| Salariés embauchés | 2 | 4 | 5 |
+
+À 17 : le 2^e^ salarié rapporte 18 > 17, le 3^e^ rapporte 16 < 17, donc 2 salariés. À 8 : le 5^e^ rapporte 10 > 8, le 6^e^ rapporte 7 < 8, donc 5 salariés. La demande de travail est **décroissante** du salaire réel. Recommandation classique : laisser baisser le salaire réel (flexibilité, baisse du coût du travail) pour augmenter l'emploi.
+
+**e)** (0,5 point) Avec un salaire minimum de 17 pains au lieu de 12, la boulangerie passe de 4 à 2 salariés : elle **supprime 2 emplois**. Selon les classiques, le salaire minimum crée un **chômage classique** : au salaire imposé, l'offre de travail dépasse la demande.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Comparer le salaire à la production **moyenne** (production / $N$) au lieu de la production **supplémentaire** du dernier salarié.
+- Oublier qu'il s'agit d'un salaire **réel** (en pains) : c'est le rapport salaire nominal / prix qui compte pour l'entreprise.
+:::
+
+---
+
+## Corrigé de l'exercice 4 (La loi psychologique fondamentale) · /4
+
+**a)** (0,5 point) $C_0 = 100$ est la **consommation incompressible**, consommée même à revenu nul. $c = 0{,}75$ est la **propension marginale à consommer** : chaque euro de revenu supplémentaire est consommé à 75 centimes. C'est $c$, compris entre 0 et 1, qui traduit la phrase de Keynes : la consommation augmente avec le revenu, mais moins que lui.
+
+**b)** (1,5 point)
+
+| Revenu $Y$ | 200 | 400 | 1 000 | 1 600 | 2 000 |
+|---|---:|---:|---:|---:|---:|
+| Consommation $C$ | 250 | 400 | 850 | 1 300 | 1 600 |
+| Épargne $S = Y - C$ | −50 | 0 | 150 | 300 | 400 |
+| Propension moyenne à consommer $C/Y$ | 1,25 | 1,00 | 0,85 | 0,81 | 0,80 |
+| Propension moyenne à épargner $S/Y$ | −0,25 | 0,00 | 0,15 | 0,19 | 0,20 |
+
+Calculs, colonne par colonne, avec $C = 100 + 0{,}75\,Y$, puis $S = Y - C$ :
+
+- $Y = 200$ : $C = 100 + 0{,}75 \times 200 = 100 + 150 = 250$ ; $S = 200 - 250 = -50$ ; $C/Y = 250/200 = 1{,}25$ ; $S/Y = -50/200 = -0{,}25$.
+- $Y = 400$ : $C = 100 + 0{,}75 \times 400 = 100 + 300 = 400$ ; $S = 400 - 400 = 0$ ; $C/Y = 400/400 = 1{,}00$ ; $S/Y = 0/400 = 0{,}00$.
+- $Y = 1\,000$ : $C = 100 + 0{,}75 \times 1\,000 = 100 + 750 = 850$ ; $S = 1\,000 - 850 = 150$ ; $C/Y = 850/1\,000 = 0{,}85$ ; $S/Y = 150/1\,000 = 0{,}15$.
+- $Y = 1\,600$ : $C = 100 + 0{,}75 \times 1\,600 = 100 + 1\,200 = 1\,300$ ; $S = 1\,600 - 1\,300 = 300$ ; $C/Y = 1\,300/1\,600 = 0{,}8125 \approx 0{,}81$ ; $S/Y = 300/1\,600 = 0{,}1875 \approx 0{,}19$.
+- $Y = 2\,000$ : $C = 100 + 0{,}75 \times 2\,000 = 100 + 1\,500 = 1\,600$ ; $S = 2\,000 - 1\,600 = 400$ ; $C/Y = 1\,600/2\,000 = 0{,}80$ ; $S/Y = 400/2\,000 = 0{,}20$.
+
+Vérification : à chaque colonne, $C/Y + S/Y = 1$. En dessous de $Y = 400$, l'épargne et la propension moyenne à épargner sont **négatives**.
+
+**c)** (1 point) Entre 400 et 1 000 : $c = (850 - 400)/(1\,000 - 400) = 450/600 = 0{,}75$. Entre 1 600 et 2 000 : $c = (1\,600 - 1\,300)/(2\,000 - 1\,600) = 300/400 = 0{,}75$. La propension **marginale** est **constante** (0,75), alors que la propension **moyenne** **diminue** (de 1,25 à 0,80) : plus le revenu augmente, plus la part épargnée est importante, car la consommation incompressible pèse de moins en moins dans le revenu ($C/Y = 100/Y + 0{,}75$).
+
+**d)** (0,5 point) L'épargne est nulle pour $Y = 400$ ($-100 + 0{,}25\,Y = 0$). À $Y = 200$, les ménages consomment 250, soit 50 de plus que leur revenu : ils **désépargnent** (ils puisent dans leur épargne passée ou s'endettent).
+
+**e)** (0,5 point) Effet immédiat, hors multiplicateur. Ménages modestes : $+100 \times 0{,}9 = +90$. Ménages aisés : $-100 \times 0{,}5 = -50$. Consommation totale : **+40 milliards d'euros**. Les ménages modestes consomment une plus grande part de chaque euro supplémentaire : transférer du revenu des ménages aisés vers les ménages modestes augmente la consommation totale, donc la demande effective. C'est l'argument keynésien en faveur de la **redistribution** comme politique de soutien à l'activité.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Confondre la propension **moyenne** ($C/Y$) et la propension **marginale** ($\Delta C / \Delta Y$) : la première baisse, la seconde est constante.
+- Calculer la propension marginale sur un seul point ($C/Y$) au lieu d'un écart entre deux points.
+:::
+
+---
+
+## Corrigé de l'exercice 5 (De la demande effective au chômage involontaire) · /4
+
+**a)** (0,5 point) $Y^* = (100 + 150)/(1 - 0{,}75) = 250/0{,}25 = \mathbf{1\,000}$ milliards d'euros. À ce revenu, $C = 850$ et $S = 1\,000 - 850 = 150 = I$ : l'épargne des ménages est égale à l'investissement.
+
+**b)** (1 point) Emploi : $1\,000 \text{ Md€} / 50\,000 \text{ €} = \mathbf{20}$ **millions**. Chômeurs : $22 - 20 = 2$ millions. Taux de chômage : $2/22 \approx 0{,}0909$, soit $\mathbf{9{,}1\,\%}$.
+
+**c)** (0,5 point) Ces personnes veulent travailler au salaire en vigueur, mais les entreprises n'embauchent que ce qu'il faut pour produire ce qu'elles pensent vendre (la **demande effective**) : leur chômage ne résulte pas d'un refus du salaire, il est **involontaire**. La situation peut durer, car le marché des biens est à l'équilibre ($Y = C + I$) : aucune force de marché ne pousse les entreprises à produire davantage. C'est un **équilibre de sous-emploi**.
+
+**d)** (1 point) $k = 1/(1 - 0{,}75) = \mathbf{4}$ ; avec $Y = C + I + G$, le multiplicateur s'applique aussi à $G$. Production de plein emploi : $22 \text{ millions} \times 50\,000 \text{ €} = 1\,100$ milliards d'euros. Il manque $\Delta Y = 100$ milliards ; la dépense publique nécessaire est $\Delta G = \Delta Y / k = 100/4 = \mathbf{25}$ **milliards d'euros**.
+
+**e)** (1 point)
+
+1. $Y^* = (80 + 150)/0{,}25 = \mathbf{920}$ milliards d'euros. Emploi : $920 \text{ Md€} / 50\,000 \text{ €} = 18{,}4$ millions. Chômeurs : $22 - 18{,}4 = 3{,}6$ millions. Taux de chômage : $3{,}6/22 \approx 0{,}1636$, soit $\mathbf{16{,}4\,\%}$.
+2. $\Delta Y = 920 - 1\,000 = -80 = 4 \times (-20)$ : la baisse du revenu est bien égale à $k$ fois la baisse de la consommation incompressible.
+3. Dans l'exercice 3, une baisse du salaire réel fait **augmenter** l'emploi (de 2 à 4 salariés quand le salaire réel passe de 17 à 12 pains). Ici, la baisse des salaires fait **chuter** l'emploi de 1,6 million. L'analyse classique raisonne en **équilibre partiel**, du point de vue d'une entreprise pour qui le salaire est un **coût**. Keynes raisonne au niveau de **l'économie entière**, où le salaire est aussi un **revenu** dépensé en consommation : la baisse des salaires réduit la demande effective, donc la production et l'emploi.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Diviser 1 000 milliards par 50 000 sans convertir les unités : 1 000 milliards $= 10^{12}$ €, d'où $10^{12}/(5 \times 10^4) = 2 \times 10^7$, soit 20 millions.
+- Appliquer le multiplicateur à l'écart de revenu (100) au lieu de chercher la dépense **autonome** qui le produit : $\Delta G = \Delta Y / k$.
+:::
+
+---
+
+## Corrigé de l'exercice 6 (Synthèse) · /2
+
+| Question | Classiques (néoclassiques) | Keynes |
+|---|---|---|
+| Qui décide du volume d'emploi ? | La rencontre de l'offre (ménages) et de la demande de travail (entreprises) sur le marché du travail | Les entreprises, en fonction de la demande effective anticipée |
+| Variable qui ajuste le marché du travail | Le prix : le salaire réel, flexible | Les quantités : le volume d'emploi (salaire nominal rigide) |
+| De quoi dépend l'offre de travail ? | Du salaire réel (arbitrage travail-loisir), croissante par hypothèse | Peut être décroissante (besoin de revenu) ; elle ne détermine pas l'emploi |
+| De quoi dépend l'épargne des ménages ? | Du taux d'intérêt (arbitrage consommation présente / future) | Du revenu (loi psychologique fondamentale) |
+| Qu'est-ce qui égalise épargne et investissement ? | Le taux d'intérêt, sur le marché des fonds prêtables | L'ajustement du revenu (de la production) |
+| Nature du chômage | Volontaire, ou classique si le salaire est bloqué au-dessus de l'équilibre | Involontaire, par insuffisance de la demande effective |
+| Effet attendu d'une baisse des salaires sur l'emploi | Hausse de l'emploi (la quantité de travail demandée augmente, le long de la courbe de demande) | Baisse possible de l'emploi (la demande effective diminue) |
+| Politique recommandée contre le chômage | Flexibilité des salaires, baisse du coût du travail, incitations au travail | Relance de la demande : dépense publique, baisse des taux, redistribution |
+
+(1 point pour le tableau ; 1 point pour la question de réflexion.)
+
+**Question de réflexion : éléments attendus.** Pour l'entreprise prise isolément, le salaire est un **coût** : exercice 3, une baisse du salaire réel de 17 à 12 pains fait passer l'emploi de 2 à 4. Mais pour l'économie dans son ensemble, la masse salariale est aussi le **revenu** des ménages, qui en consomment une large part : exercice 5, une baisse de la consommation de 20 milliards liée aux salaires fait perdre 80 milliards de production et 1,6 million d'emplois (multiplicateur de 4). Conclusion attendue : le salaire est à la fois un coût et un revenu ; l'effet net d'une baisse des salaires dépend de l'état de la demande (sous-emploi ou non) et de la propension à consommer des salariés.
+
+::: {.callout-warning}
+## Pièges fréquents
+- Écrire que chez Keynes « le salaire réel est rigide » : c'est le salaire **nominal** qui est rigide à court terme.
+- Confondre « Keynes » et « hausse des salaires toujours favorable » : l'effet d'une hausse des salaires est ambigu (effet-revenu positif, effet-coût négatif).
+:::
