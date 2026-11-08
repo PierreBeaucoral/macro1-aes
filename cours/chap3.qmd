@@ -136,48 +136,11 @@ On résume cette logique par le **« triangle d'or »** danois, dont les trois s
 
 ```{r}
 #| label: fig-triangle-or
-#| fig-cap: "Le « triangle d'or » de la flexisécurité danoise : flexibilité, indemnisation généreuse et activation se renforcent mutuellement."
+#| fig-cap: "Le « triangle d'or » de la flexisécurité danoise : flexibilité, indemnisation généreuse et activation se renforcent mutuellement. Chaque flèche double relie deux piliers ; sa légende résume le mécanisme qui les lie. Schéma conceptuel."
 #| fig-width: 6.5
-#| fig-height: 6
-source(here::here("R/theme_macro.R"))
-library(ggplot2)
-
-sommets <- data.frame(
-  x = c(0, 1, 0.5),
-  y = c(0, 0, 0.87),
-  label = c("Flexibilité\n(licenciements aisés,\nmobilité élevée)",
-            "Indemnisation\ngénéreuse\n(niveau et durée)",
-            "Activation\n(accompagnement,\ncontrôle, formation)")
-)
-
-fleches <- data.frame(
-  x    = c(0.08, 0.92, 0.5),
-  y    = c(0.05, 0.10, 0.80),
-  xend = c(0.42, 0.58, 0.10),
-  yend = c(0.75, 0.75, 0.10)
-)
-
-ggplot() +
-  geom_polygon(data = sommets, aes(x, y), fill = macro_pal["bleu2"], alpha = 0.12,
-               color = macro_pal["bleu"], linewidth = 0.9) +
-  geom_curve(data = fleches[1, ], aes(x = x, y = y, xend = xend, yend = yend),
-             curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
-             color = macro_pal["gris"], linewidth = 0.6) +
-  geom_curve(data = fleches[2, ], aes(x = x, y = y, xend = xend, yend = yend),
-             curvature = -0.25, arrow = arrow(length = unit(0.22, "cm")),
-             color = macro_pal["gris"], linewidth = 0.6) +
-  geom_curve(data = fleches[3, ], aes(x = x, y = y, xend = xend, yend = yend),
-             curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
-             color = macro_pal["gris"], linewidth = 0.6) +
-  geom_point(data = sommets, aes(x, y), size = 4, color = macro_pal["bleu"]) +
-  geom_label(data = sommets, aes(x, y, label = label),
-             nudge_y = c(-0.09, -0.09, 0.11),
-             size = 3.5, fontface = "bold", color = "#1f4e79",
-             linewidth = 0, fill = "white") +
-  coord_fixed(clip = "off") +
-  xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
-  theme_void() +
-  theme(plot.margin = margin(10, 10, 10, 10))
+#| fig-height: 4.6
+source(here::here("R/fig_triangle_or.R"))
+fig_triangle_or()
 ```
 
 En une dizaine d'années, le Danemark a nettement réduit son chômage, restant durablement sous le niveau français (@fig-chomage-dk-fr-us). Son taux de pauvreté reste également inférieur à celui de la France. Attention à la mesure : le chiffre de 2,5-3 % parfois cité pour le Danemark est le taux **national** (« chômage net », Danmarks Statistik, demandeurs d'emploi immédiatement disponibles), non comparable à la mesure harmonisée BIT/OCDE ci-dessous, sur laquelle repose toute comparaison internationale.

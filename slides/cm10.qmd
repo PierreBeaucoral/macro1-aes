@@ -39,45 +39,8 @@ Le CM précédent a distingué trois modèles de marché du travail, **flexibili
 #| fig-cap: "Rappel : le « triangle d'or » de la flexisécurité danoise, référence pour juger les réformes françaises."
 #| fig-width: 6
 #| fig-height: 4.0
-source(here::here("R/theme_macro.R"))
-library(ggplot2)
-
-sommets <- data.frame(
-  x = c(0, 1, 0.5),
-  y = c(0, 0, 0.87),
-  label = c("Flexibilité\n(licenciements aisés,\nmobilité élevée)",
-            "Indemnisation\ngénéreuse\n(niveau et durée)",
-            "Activation\n(accompagnement,\ncontrôle, formation)")
-)
-
-fleches <- data.frame(
-  x    = c(0.08, 0.92, 0.5),
-  y    = c(0.05, 0.10, 0.80),
-  xend = c(0.42, 0.58, 0.10),
-  yend = c(0.75, 0.75, 0.10)
-)
-
-ggplot() +
-  geom_polygon(data = sommets, aes(x, y), fill = macro_pal["bleu2"], alpha = 0.12,
-               color = macro_pal["bleu"], linewidth = 0.9) +
-  geom_curve(data = fleches[1, ], aes(x = x, y = y, xend = xend, yend = yend),
-             curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
-             color = macro_pal["gris"], linewidth = 0.6) +
-  geom_curve(data = fleches[2, ], aes(x = x, y = y, xend = xend, yend = yend),
-             curvature = -0.25, arrow = arrow(length = unit(0.22, "cm")),
-             color = macro_pal["gris"], linewidth = 0.6) +
-  geom_curve(data = fleches[3, ], aes(x = x, y = y, xend = xend, yend = yend),
-             curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
-             color = macro_pal["gris"], linewidth = 0.6) +
-  geom_point(data = sommets, aes(x, y), size = 3.5, color = macro_pal["bleu"]) +
-  geom_label(data = sommets, aes(x, y, label = label),
-             nudge_y = c(-0.09, -0.09, 0.11),
-             size = 3, fontface = "bold", color = "#1f4e79",
-             linewidth = 0, fill = "white") +
-  coord_fixed(clip = "off") +
-  xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
-  theme_void() +
-  theme(plot.margin = margin(10, 10, 10, 10))
+source(here::here("R/fig_triangle_or.R"))
+fig_triangle_or(taille = 3)
 ```
 
 ## Les réformes françaises se lisent selon trois axes récurrents
@@ -285,17 +248,17 @@ Remplace le RSA-activité et la prime pour l'emploi (PPE) ; le non-recours au RS
 Ne pas confondre **RSA-socle** (devenu simplement « RSA » après 2016, équivalent du RMI) et **RSA-activité** (remplacé par la prime d'activité). Cette trajectoire ne supprime pas les minima sociaux : elle fait évoluer leur **architecture** pour réduire les effets de trappe tout en maintenant un filet de sécurité.
 :::
 
-## Ce que « trappe à inactivité » veut dire : la pente compte {.smaller}
+## Illustration d'une trappe à inactivité {.smaller}
 
-Cliquez pour faire apparaître chaque régime : plus la pente est forte, plus reprendre un emploi rapporte.
+**Lecture** : la **pente** de chaque courbe mesure ce que le ménage garde de chaque euro gagné en travaillant (1 − taux marginal de prélèvement implicite). Pente quasi nulle : reprendre un emploi ne rapporte presque rien, c'est la **trappe**. Les points comparent le gain d'un mi-temps au SMIC dans chaque régime.
 
 ::: {.r-stack}
 
 ::: {.fragment}
 ```{r}
-#| label: fig-trappe-cm10-1
+#| label: trappe-cm10-1
 #| fig-width: 7
-#| fig-height: 4.6
+#| fig-height: 4.2
 source(here::here("R/theme_macro.R"))
 library(ggplot2)
 
@@ -356,16 +319,36 @@ plot_trappe <- function(k) {
     geom_text(data = lab_trappe, aes(x = x, y = yfin, label = nom, color = regime),
               hjust = 0, nudge_x = 3, size = 3.2, fontface = "bold", show.legend = FALSE)
 
-  if (k >= 1) p <- p + annotate("text", x = 78, y = 100 + 0.05 * 78 + 4,
-                                 label = "quasi 0 % conservé", size = 3,
-                                 color = unname(macro_pal["rouge"]), fontface = "italic")
-  if (k >= 2) p <- p + annotate("text", x = 60, y = 100 + 0.62 * 60 + 6,
-                                 label = "62 centimes / euro", size = 3,
-                                 color = unname(macro_pal["or"]), fontface = "italic")
-  if (k >= 3) p <- p + annotate("text", x = 20, y = 100 + 0.85 * 20 + 9,
-                                 label = "bonification\nbas salaires", size = 3,
-                                 color = unname(macro_pal["vert"]), fontface = "italic",
-                                 lineheight = 0.85)
+  # Repère commun : mi-temps au SMIC (x = 50). Le gain de revenu disponible
+  # par rapport à l'allocation seule (base 100) se lit sur chaque courbe.
+  gain <- d[d$x == 50, ]
+  gain$txt <- paste0("+", format(round(gain$y - 100, 1), decimal.mark = ",",
+                                  trim = TRUE, drop0trailing = TRUE))
+  p <- p +
+    annotate("segment", x = 50, xend = 50, y = 100, yend = 178, linetype = "dashed",
+             color = "grey55", linewidth = 0.4) +
+    annotate("text", x = 50, y = 183, label = "mi-temps au SMIC",
+             size = 3, color = "grey35") +
+    geom_point(data = gain, aes(x = x, y = y, color = regime), size = 2.6) +
+    geom_label(data = gain, aes(x = x, y = y, label = txt, color = regime),
+               hjust = 1, nudge_x = -2.5, size = 3, fontface = "bold",
+               fill = "white", label.size = 0, label.padding = unit(0.1, "lines"))
+
+  if (k >= 1) p <- p + annotate("text", x = 82, y = 100 + 0.05 * 82 + 9,
+                                 label = "trappe : presque rien de\ngagné en travaillant",
+                                 size = 3, color = unname(macro_pal["rouge"]),
+                                 fontface = "italic", lineheight = 0.85)
+  if (k >= 2) p <- p + annotate("text", x = 80, y = 100 + 0.62 * 80 - 9,
+                                 label = "62 centimes gardés\npar euro gagné", size = 3,
+                                 color = unname(macro_pal["or"]), fontface = "italic",
+                                 hjust = 0, lineheight = 0.85)
+  if (k >= 3) p <- p +
+    annotate("curve", x = 22, y = 155, xend = 38.5, yend = 135.5, curvature = -0.25,
+             arrow = arrow(length = unit(0.15, "cm")),
+             color = unname(macro_pal["vert"]), linewidth = 0.4) +
+    annotate("text", x = 22, y = 158, label = "bonification ciblée\nsur les bas salaires",
+             size = 3, color = unname(macro_pal["vert"]), fontface = "italic",
+             vjust = 0, lineheight = 0.85)
 
   p +
     scale_color_manual(values = cols_trappe, name = NULL, limits = levels(df_trappe$regime),
@@ -385,18 +368,18 @@ plot_trappe(1)
 
 ::: {.fragment}
 ```{r}
-#| label: fig-trappe-cm10-2
+#| label: trappe-cm10-2
 #| fig-width: 7
-#| fig-height: 4.6
+#| fig-height: 4.2
 plot_trappe(2)
 ```
 :::
 
 ::: {.fragment}
 ```{r}
-#| label: fig-trappe-cm10-3
+#| label: trappe-cm10-3
 #| fig-width: 7
-#| fig-height: 4.6
+#| fig-height: 4.2
 plot_trappe(3)
 ```
 :::
@@ -650,7 +633,7 @@ Sources : DARES (2016) ; France Stratégie ; comité de suivi du CICE ; synthès
 
 . . .
 
-Le fil conducteur : un bon diagnostic théorique (chapitre II) est la condition d'une politique de l'emploi pertinente (chapitre III) ; toute politique s'inscrit par ailleurs dans les arbitrages généraux de politique économique (chapitre I).
+Le fil conducteur : une politique économique poursuit des **objectifs** et arbitre entre eux (chapitre I) ; pour lutter contre le chômage, elle doit s'appuyer sur un **diagnostic théorique** de ses causes (chapitre II) ; c'est ce diagnostic qui permet de choisir une **politique de l'emploi adaptée** (chapitre III).
 
 ## La progression du cours en un coup d'œil
 

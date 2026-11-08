@@ -226,68 +226,10 @@ Trois sommets qui se construisent, et se renforcent, ensemble : cliquez pour les
 #| label: fig-triangle-or-cm09-1
 #| fig-width: 6.5
 #| fig-height: 4.3
-source(here::here("R/theme_macro.R"))
-library(ggplot2)
-
-sommets <- data.frame(
-  x = c(0, 1, 0.5),
-  y = c(0, 0, 0.87),
-  label = c("Flexibilité\n(licenciements aisés,\nmobilité élevée)",
-            "Indemnisation\ngénéreuse\n(niveau et durée)",
-            "Activation\n(accompagnement,\ncontrôle, formation)")
-)
-
-fleches <- data.frame(
-  x    = c(0.08, 0.92, 0.5),
-  y    = c(0.05, 0.10, 0.80),
-  xend = c(0.42, 0.58, 0.10),
-  yend = c(0.75, 0.75, 0.10)
-)
-
-# Construit le triangle d'or sommet par sommet : k = 1 revele la seule
-# flexibilite ; k = 2 ajoute l'indemnisation, reliee par un simple trait
-# pointille (deux piliers, pas encore de renforcement mutuel) ; k = 3 ajoute
-# l'activation, le polygone plein et les trois fleches de renforcement qui
-# bouclent le triangle d'or.
-plot_triangle <- function(k) {
-
-  p <- ggplot()
-
-  if (k >= 3) {
-    p <- p +
-      geom_polygon(data = sommets, aes(x, y), fill = macro_pal["bleu2"], alpha = 0.12,
-                   color = macro_pal["bleu"], linewidth = 0.9) +
-      geom_curve(data = fleches[1, ], aes(x = x, y = y, xend = xend, yend = yend),
-                 curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
-                 color = macro_pal["gris"], linewidth = 0.6) +
-      geom_curve(data = fleches[2, ], aes(x = x, y = y, xend = xend, yend = yend),
-                 curvature = -0.25, arrow = arrow(length = unit(0.22, "cm")),
-                 color = macro_pal["gris"], linewidth = 0.6) +
-      geom_curve(data = fleches[3, ], aes(x = x, y = y, xend = xend, yend = yend),
-                 curvature = 0.25, arrow = arrow(length = unit(0.22, "cm")),
-                 color = macro_pal["gris"], linewidth = 0.6)
-  } else if (k == 2) {
-    p <- p +
-      geom_segment(aes(x = 0, y = 0, xend = 1, yend = 0), linetype = "dashed",
-                   color = macro_pal["gris"], linewidth = 0.5)
-  }
-
-  sommets_k <- sommets[seq_len(k), , drop = FALSE]
-  nudges    <- c(-0.09, -0.09, 0.11)[seq_len(k)]
-
-  p +
-    geom_point(data = sommets_k, aes(x, y), size = 3.5, color = macro_pal["bleu"]) +
-    geom_label(data = sommets_k, aes(x, y, label = label),
-               nudge_y = nudges,
-               size = 3, fontface = "bold", color = "#1f4e79",
-               linewidth = 0, fill = "white") +
-    coord_fixed(clip = "off") +
-    xlim(-0.35, 1.35) + ylim(-0.25, 1.05) +
-    theme_void() +
-    theme(plot.margin = margin(10, 10, 10, 10))
-}
-
-plot_triangle(1)
+# Construction progressive : un sommet, puis deux, puis le triangle complet
+# avec les trois renforcements mutuels (voir R/fig_triangle_or.R).
+source(here::here("R/fig_triangle_or.R"))
+fig_triangle_or(1, taille = 3)
 ```
 :::
 
@@ -296,7 +238,7 @@ plot_triangle(1)
 #| label: fig-triangle-or-cm09-2
 #| fig-width: 6.5
 #| fig-height: 4.3
-plot_triangle(2)
+fig_triangle_or(2, taille = 3)
 ```
 :::
 
@@ -305,7 +247,7 @@ plot_triangle(2)
 #| label: fig-triangle-or-cm09-3
 #| fig-width: 6.5
 #| fig-height: 4.3
-plot_triangle(3)
+fig_triangle_or(3, taille = 3)
 ```
 :::
 
